@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>J&amp;W Business Case</title>
+  <meta name="description" content="What each of the seven J&W Foods prototypes could add in revenue and gross profit, with a calculator you can feed your own figures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/site-tw.js"></script>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site-data.js"></script>
+  <link rel="icon" href="assets/img/jw-logo.jpg">
+  <style>
+    .num { font-variant-numeric: tabular-nums; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chev { transform: rotate(180deg); }
+    .seg button[aria-pressed="true"] { background: #0F1B2D; color: #fff; border-color: #0F1B2D; }
+  </style>
+</head>
+<body class="bg-page text-ink font-body antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg">Skip to the content</a>
+  <div class="jw-bar">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row md:items-center md:justify-between gap-x-6">
+      <p class="pt-3 pb-1 md:py-3 whitespace-nowrap">J&amp;W Foods · growth proposal</p>
+      <nav aria-label="Proposal pages">
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 md:gap-x-5 whitespace-nowrap pt-1 pb-2 md:py-2">
+          <li><a class="inline-block py-1" href="index.html">Prototypes</a></li>
+          <li><a class="inline-block py-1" href="agents.html">AI agents</a></li>
+          <li><a aria-current="page" class="inline-block py-1" href="roi.html">Business case</a></li>
+          <li><a class="inline-block py-1" href="million.html">The $1M plan</a></li>
+          <li><a class="inline-block py-1" href="research.html">Research</a></li>
+          <li><a class="inline-block py-1" href="proposal.html">Proposal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 pt-10 pb-10 md:pt-14 md:pb-12">
+      <p class="text-[11px] font-semibold tracking-[0.28em] uppercase text-brand">The business case</p>
+      <h1 class="font-display text-[34px] leading-[1.1] md:text-[56px] mt-3 max-w-4xl">What the seven prototypes could add</h1>
+      <p class="mt-5 text-[15px] md:text-[17px] leading-relaxed text-muted max-w-3xl" id="intro"></p>
+      <p class="mt-3 text-[15px] leading-relaxed text-muted max-w-3xl" id="baseline-note"></p>
+    </div>
+  </header>
+
+  <main id="main" class="max-w-6xl mx-auto px-5 py-10 md:py-14">
+    <noscript><p class="bg-white border border-line rounded-2xl p-6">This page needs JavaScript to work out the estimates. The same figures are in the <a class="underline" href="proposal.html">full proposal</a>.</p></noscript>
+
+    <section class="grid gap-6 lg:grid-cols-[1fr_1.15fr] lg:items-start" aria-label="Calculator">
+      <form id="inputs" class="bg-white border border-line rounded-2xl p-6 md:p-7" onsubmit="return false">
+        <div class="flex items-start justify-between gap-3">
+          <div><h2 class="font-display text-2xl md:text-3xl">Start with your numbers</h2>
+          <p class="mt-1 text-[13.5px] text-muted">Change any figure and every estimate updates. Saved on this device only.</p></div>
+          <button type="button" id="reset" class="shrink-0 rounded-lg border border-line px-3 py-2 text-[13px] font-semibold hover:border-brand">Reset</button>
+        </div>
+        <fieldset class="mt-5">
+          <legend class="text-[13px] font-semibold">Which case?</legend>
+          <div class="seg mt-2 grid grid-cols-3 gap-2 text-[13.5px] font-semibold" id="case">
+            <button type="button" data-c="low" class="rounded-lg border border-line py-2">Low</button>
+            <button type="button" data-c="mid" class="rounded-lg border border-line py-2">Expected</button>
+            <button type="button" data-c="high" class="rounded-lg border border-line py-2">High</button>
+          </div>
+        </fieldset>
+        <div class="mt-5 grid gap-4 sm:grid-cols-2">
+          <label class="block"><span class="text-[13px] font-semibold">J&amp;W sales today, a year</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><span class="pl-3 text-muted">$</span><input id="base" type="number" min="0" step="50000" inputmode="numeric" class="w-full rounded-lg px-2 py-2.5 outline-none num"></span></label>
+          <label class="block"><span class="text-[13px] font-semibold">Overlap between plays</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><input id="overlap" type="number" min="0" max="60" step="1" class="w-full rounded-lg px-3 py-2.5 outline-none num"><span class="pr-3 text-muted">%</span></span></label>
+          <label class="block"><span class="text-[13px] font-semibold">Margin adjustment</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><input id="madj" type="number" min="-20" max="20" step="1" class="w-full rounded-lg px-3 py-2.5 outline-none num"><span class="pr-3 text-muted whitespace-nowrap">pts</span></span>
+            <span class="block mt-1 text-[12px] text-muted">Added to every play’s gross margin.</span></label>
+          <label class="block"><span class="text-[13px] font-semibold">Ads and promotion, a month</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><span class="pl-3 text-muted">$</span><input id="ads" type="number" min="0" step="500" class="w-full rounded-lg px-2 py-2.5 outline-none num"></span></label>
+          <label class="block"><span class="text-[13px] font-semibold">Minastech fee, a month</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><span class="pl-3 text-muted">$</span><input id="fee" type="number" min="0" step="500" class="w-full rounded-lg px-2 py-2.5 outline-none num"></span></label>
+          <label class="block"><span class="text-[13px] font-semibold">One-time setup</span>
+            <span class="mt-1.5 flex items-center rounded-lg border border-line bg-white focus-within:ring-2 focus-within:ring-brand"><span class="pl-3 text-muted">$</span><input id="setup" type="number" min="0" step="500" class="w-full rounded-lg px-2 py-2.5 outline-none num"></span></label>
+        </div>
+        <fieldset class="mt-6">
+          <legend class="text-[13px] font-semibold">Plays in the plan</legend>
+          <div id="toggles" class="mt-2 grid gap-1.5"></div>
+        </fieldset>
+      </form>
+
+      <section class="bg-ink text-white rounded-2xl p-6 md:p-7 lg:sticky lg:top-4" aria-live="polite" aria-labelledby="out-h">
+        <h2 id="out-h" class="font-display text-2xl md:text-3xl">What the plan could add</h2>
+        <p class="mt-1 text-[13.5px] text-white/70" id="out-sub"></p>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <div class="rounded-xl bg-white/10 px-4 py-3.5"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/70">Added revenue · year 1</p><p class="font-display text-[34px] leading-tight mt-1 num" id="o-y1"></p><p class="text-[12.5px] text-white/70" id="o-y1n"></p></div>
+          <div class="rounded-xl bg-white/10 px-4 py-3.5"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/70">Added revenue · year 2</p><p class="font-display text-[34px] leading-tight mt-1 num" id="o-y2"></p><p class="text-[12.5px] text-white/70" id="o-y2n"></p></div>
+          <div class="rounded-xl bg-white/10 px-4 py-3.5"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/70">Gross profit · year 1</p><p class="font-display text-[28px] leading-tight mt-1 num" id="o-gp"></p><p class="text-[12.5px] text-white/70" id="o-gpn"></p></div>
+          <div class="rounded-xl bg-white/10 px-4 py-3.5"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/70">All-in cost · year 1</p><p class="font-display text-[28px] leading-tight mt-1 num" id="o-cost"></p><p class="text-[12.5px] text-white/70" id="o-costn"></p></div>
+        </div>
+        <div class="mt-3 rounded-xl bg-gain/90 px-4 py-3.5"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/85">Return</p><p class="mt-1 text-[15px] leading-snug" id="o-roi"></p></div>
+        <p class="mt-4 text-[12.5px] text-white/65 leading-relaxed">Gross profit is what J&amp;W keeps after food, packaging, delivery and card or platform fees, before overheads and tax. Year 2 uses each play’s yearly figure once running, with the same overlap taken off.</p>
+      </section>
+    </section>
+
+    <section class="mt-14" aria-labelledby="plays-h">
+      <h2 id="plays-h" class="font-display text-3xl md:text-4xl">Potential added revenue, by prototype</h2>
+      <p class="mt-2 text-muted text-[15px] max-w-3xl">What each play could add in its first year, on its own and before overlap. The bar runs from the low case to the high case on one shared scale; the dark mark is the expected case. Treat the order as a guide, not a league table.</p>
+      <div id="plays" class="mt-6 grid gap-4"></div>
+    </section>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-2" aria-label="Agents and next steps">
+      <div class="bg-deep text-white rounded-2xl p-6 md:p-7">
+        <h2 class="font-display text-2xl md:text-3xl">The AI agents behind the numbers</h2>
+        <p class="mt-2 text-white/80 text-[15px] leading-relaxed" id="agents-p"></p>
+        <a href="agents.html" class="mt-5 inline-block rounded-xl bg-white text-ink font-semibold px-5 py-3 hover:bg-soft">Meet the agents →</a>
+      </div>
+      <div class="bg-white border border-line rounded-2xl p-6 md:p-7">
+        <h2 class="font-display text-2xl md:text-3xl">Want a bigger number?</h2>
+        <p class="mt-2 text-muted text-[15px] leading-relaxed">A better website and better follow-up can add a lot. Adding a full $1 million a year means changing what J&amp;W sells and who it sells to. We graded every idea we found.</p>
+        <a href="million.html" class="mt-5 inline-block rounded-xl bg-ink text-white font-semibold px-5 py-3 hover:bg-deep">The $1M plan →</a>
+      </div>
+    </section>
+
+    <section class="mt-14 bg-white border border-line rounded-2xl p-6 md:p-8 prose-jw" aria-labelledby="how-h">
+      <h2 id="how-h" style="margin-top:0">How the model works</h2>
+      <div id="method"></div>
+      <p>Every figure traces back to the research files: <a href="research.html">see the research and sources</a>.</p>
+    </section>
+  </main>
+
+  <footer class="bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center gap-6 sm:justify-between text-center sm:text-left">
+      <p class="jw-wordmark" style="color:#fff">J&amp;W <span style="color:rgba(255,255,255,.72)">Foods · Meal Butler</span></p>
+      <div class="text-sm text-white/70 leading-relaxed sm:text-right">
+        <p>Prepared for J&amp;W Foods Inc · 2201 Brimley Rd, Unit 1, Scarborough, ON</p>
+        <p>Estimates by Minastech, not a forecast and not financial advice.</p>
+        <p class="mt-1"><a class="text-white underline underline-offset-2 hover:text-white/80" href="mailto:erwin.garcia@minastech.ca">erwin.garcia@minastech.ca</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var J = window.JW; if (!J || !J.plays) return;
+    var P = J.plays, B = J.baseline || {}, F = J.fee || {}, R = J.roi || {};
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function fm(v) {
+      var s = v < 0 ? '−' : ''; v = Math.abs(v);
+      if (v >= 999500) return s + '$' + (Math.round(v / 1e5) / 10) + 'M';
+      if (v >= 99950) return s + '$' + Math.round(v / 1000) + 'K';
+      if (v >= 1000) return s + '$' + (Math.round(v / 100) / 10) + 'K';
+      return s + '$' + Math.round(v);
+    }
+    var KEY = 'jwroi:v1';
+    var DEF = { c: 'mid', base: B.mid || 0, overlap: R.overlapPct != null ? R.overlapPct : 15, madj: 0, ads: R.adsMonthly || 0, fee: F.monthly || 0, setup: F.setup || 0, on: P.map(function (p) { return p.inPlan !== false; }) };
+    var S; try { S = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { S = {}; }
+    S = Object.assign({}, DEF, S); if (!S.on || S.on.length !== P.length) S.on = DEF.on.slice();
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+    document.getElementById('intro').textContent = R.intro || 'Each prototype earns in a different way. This page puts a number on each one: what it could add in its first year and once it is running, what that leaves after the cost of the food, and what the fee and promotion cost against it. These are estimates, not promises.';
+    document.getElementById('baseline-note').innerHTML = 'J&amp;W’s sales today are our estimate from public signals: about <b>' + fm(B.low || 0) + '–' + fm(B.high || 0) + '</b> a year, midpoint <b>' + fm(B.mid || 0) + '</b>' + (B.confidence ? ', ' + esc(B.confidence.toLowerCase()) + ' confidence' : '') + '. ' + esc(B.note || '') + ' Replace it with the real figure below.';
+    document.getElementById('agents-p').textContent = (J.tenX && J.tenX.summary) || '';
+    document.getElementById('method').innerHTML = (R.method || []).map(function (m) { return '<p><b>' + esc(m.t) + '.</b> ' + esc(m.d) + '</p>'; }).join('');
+
+    var $ = function (id) { return document.getElementById(id); };
+    ['base', 'overlap', 'madj', 'ads', 'fee', 'setup'].forEach(function (k) {
+      var i = $(k); i.value = S[k];
+      i.addEventListener('input', function () { var v = parseFloat(i.value); S[k] = isNaN(v) ? 0 : v; save(); calc(); });
+    });
+    $('case').querySelectorAll('button').forEach(function (b) { b.addEventListener('click', function () { S.c = b.dataset.c; save(); calc(); }); });
+    $('reset').addEventListener('click', function () { S = Object.assign({}, DEF, { on: DEF.on.slice() }); save(); ['base', 'overlap', 'madj', 'ads', 'fee', 'setup'].forEach(function (k) { $(k).value = S[k]; }); drawToggles(); calc(); });
+
+    function drawToggles() {
+      $('toggles').innerHTML = P.map(function (p, i) {
+        return '<label class="flex items-center gap-3 rounded-lg border border-line px-3 py-2 cursor-pointer hover:border-brand"><input type="checkbox" data-i="' + i + '"' + (S.on[i] ? ' checked' : '') + ' class="w-4 h-4 accent-[#154D8E]"><span class="flex-1 text-[14px]"><b>P' + p.n + '</b> ' + esc(p.name) + '</span><span class="text-[13px] text-muted num">' + fm((p.year1 || {})[S.c] || 0) + '</span></label>';
+      }).join('');
+      $('toggles').querySelectorAll('input').forEach(function (c) { c.addEventListener('change', function () { S.on[+c.dataset.i] = c.checked; save(); calc(); }); });
+    }
+
+    /* Year-2 cases come from each play's own math (runRateLow / runRateHigh) */
+    function runRateFor(p, c) { return c === 'mid' ? (p.runRate || 0) : ((c === 'low' ? p.runRateLow : p.runRateHigh) || p.runRate || 0); }
+
+    function calc() {
+      $('case').querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.c === S.c ? 'true' : 'false'); });
+      var ov = Math.max(0, Math.min(60, S.overlap)) / 100, y1 = 0, y2 = 0, gp = 0, gp2 = 0, own = 0, ownMonthly = 0, n = 0;
+      P.forEach(function (p, i) {
+        if (!S.on[i]) return; n++;
+        var a = (p.year1 || {})[S.c] || 0, b = runRateFor(p, S.c), m = Math.max(0, Math.min(95, (p.marginPct || 0) + S.madj)) / 100;
+        y1 += a; y2 += b; gp += a * m; gp2 += b * m;
+        var c = p.costs || {};
+        own += c.year1Total != null ? c.year1Total : (c.setup || 0) + (c.monthly || 0) * 12;          /* J&W's own running cost, year 1 (from each play's math) */
+        ownMonthly += c.year2Total != null ? c.year2Total : (c.monthly || 0) * 12;                     /* and a full year 2 */
+      });
+      y1 *= (1 - ov); y2 *= (1 - ov); gp *= (1 - ov); gp2 *= (1 - ov);
+      var cost = S.fee * 12 + S.setup + S.ads * 12 + own;
+      var blended = y1 ? gp / y1 : 0;
+      $('out-sub').textContent = n + ' of ' + P.length + ' plays · ' + ({ low: 'low', mid: 'expected', high: 'high' })[S.c] + ' case · ' + Math.round(ov * 100) + '% overlap removed';
+      $('o-y1').textContent = fm(y1);
+      $('o-y1n').textContent = S.base ? '+' + Math.round(y1 / S.base * 100) + '% on today’s ' + fm(S.base) : '';
+      $('o-y2').textContent = fm(y2);
+      $('o-y2n').textContent = S.base ? '+' + Math.round(y2 / S.base * 100) + '% on today’s sales' : '';
+      $('o-gp').textContent = fm(gp);
+      $('o-gpn').textContent = 'Blended margin ' + Math.round(blended * 100) + '% · year 2 ' + fm(gp2);
+      $('o-cost').textContent = fm(cost);
+      $('o-costn').textContent = 'Fee ' + fm(S.fee * 12) + ' + setup ' + fm(S.setup) + ' + ads ' + fm(S.ads * 12) + ' + running the plays ' + fm(own);
+      var roi = cost ? gp / cost : 0, be = blended ? cost / blended : 0, cost2 = S.fee * 12 + S.ads * 12 + ownMonthly;
+      $('o-roi').innerHTML = cost ? 'Year 1 gross profit is <b>' + roi.toFixed(1) + '×</b> the all-in cost' + (gp2 && cost2 ? '; in year 2, with no setup costs, about <b>' + (gp2 / cost2).toFixed(1) + '×</b>' : '') + '. Break-even takes about <b>' + fm(be) + '</b> of added revenue at a ' + Math.round(blended * 100) + '% margin.' : 'Enter a fee or costs to see the return.';
+      drawToggles(); drawPlays();
+    }
+
+    function drawPlays() {
+      var max = Math.max.apply(null, P.map(function (p) { return (p.year1 || {}).high || 0; })) || 1;
+      $('plays').innerHTML = P.map(function (p, i) {
+        var y = p.year1 || {}, n = pad(p.n), lo = (y.low || 0) / max * 100, hi = (y.high || 0) / max * 100, mid = (y.mid || 0) / max * 100;
+        var costs = p.costs || {};
+        return '<article id="p' + n + '" class="bg-white border border-line rounded-2xl p-5 md:p-6 scroll-mt-16' + (S.on[i] ? '' : ' opacity-60') + '">' +
+          '<div class="grid gap-4 md:grid-cols-[1.1fr_1fr] md:items-center">' +
+            '<div><p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-brand">Prototype ' + n + (p.modelledOn ? ' · modelled on ' + esc(p.modelledOn.name) : '') + '</p>' +
+            '<h3 class="font-display text-[26px] leading-tight mt-0.5"><a class="hover:underline" href="' + esc(p.file) + '">' + esc(p.name) + '</a></h3>' +
+            '<p class="mt-1 text-[14.5px] leading-snug text-muted">' + esc(p.headline || p.oneLiner || '') + '</p></div>' +
+            '<div><div class="flex items-baseline justify-between gap-3"><span class="font-display text-[32px] text-gain num">' + fm(y.mid || 0) + '</span><span class="text-[12.5px] text-muted">expected, year 1</span></div>' +
+            '<div class="bar-track mt-2" role="img" aria-label="Range ' + fm(y.low || 0) + ' to ' + fm(y.high || 0) + ', expected ' + fm(y.mid || 0) + '"><span class="bar-range" style="left:' + lo + '%;width:' + Math.max(1, hi - lo) + '%"></span><span class="bar-mid" style="left:calc(' + mid + '% - 1px)"></span></div>' +
+            '<p class="mt-2 text-[12.5px] text-muted num">Low ' + fm(y.low || 0) + ' · high ' + fm(y.high || 0) + ' · ' + (p.marginPct || 0) + '% margin · ' + fm(p.runRate || 0) + ' a year once running (' + fm(p.runRateLow || p.runRate || 0) + '–' + fm(p.runRateHigh || p.runRate || 0) + ')' + (p.inPlan === false ? ' · backup, not in the year-one plan' : '') + '</p></div>' +
+          '</div>' +
+          '<details class="mt-4 border-t border-line pt-3"><summary class="flex items-center justify-between gap-3 text-[14px] font-semibold text-brand">How it adds up <span class="chev transition-transform" aria-hidden="true">▾</span></summary>' +
+            '<div class="mt-3 grid gap-4 md:grid-cols-2 text-[14px] leading-relaxed">' +
+              '<div>' + (p.mathYear1 ? '<p class="rounded-xl bg-page border border-line px-3.5 py-2.5 font-mono text-[13px]">' + esc(p.mathYear1) + '</p>' : '') + (p.mathRunRate ? '<p class="mt-2 rounded-xl bg-page border border-line px-3.5 py-2.5 font-mono text-[13px]">' + esc(p.mathRunRate) + '</p>' : '') +
+              (p.mathNotes || []).map(function (m) { return '<p class="mt-2">' + esc(m) + '</p>'; }).join('') + '</div>' +
+              '<div><p class="font-semibold">Assumptions</p><ul class="list-disc pl-5 mt-1 space-y-1">' + (p.assumptions || []).map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul>' +
+              '<p class="font-semibold mt-3">Risks</p><ul class="list-disc pl-5 mt-1 space-y-1">' + (p.risks || []).map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul>' +
+              ((costs.setup || costs.monthly) ? '<p class="mt-3"><b>J&amp;W’s own cost to run it:</b> ' + (costs.year1Total ? 'about ' + fm(costs.year1Total) + ' in year 1 and ' + fm(costs.year2Total || 0) + ' a year after that' : (costs.setup ? fm(costs.setup) + ' to set up' : '') + (costs.setup && costs.monthly ? ', ' : '') + (costs.monthly ? fm(costs.monthly) + ' a month' : '')) + (costs.note ? ' (' + esc(costs.note) + ')' : '') + '</p>' : '') +
+              (p.who ? '<p class="mt-2"><b>Who does the work:</b> ' + esc(p.who) + '</p>' : '') + '</div>' +
+            '</div>' +
+            '<div class="mt-3 flex flex-wrap gap-2 text-[13px] font-semibold"><a class="rounded-lg bg-ink text-white px-3 py-2 hover:bg-deep" href="' + esc(p.file) + '">Open the prototype →</a><a class="rounded-lg border border-line px-3 py-2 hover:border-brand" href="' + esc(p.file) + '#team-view">JW team view</a><a class="rounded-lg border border-line px-3 py-2 hover:border-brand" href="agents.html#play-' + n + '">Its AI agents</a></div>' +
+          '</details></article>';
+      }).join('');
+    }
+    calc();
+    if (location.hash) { var t = document.querySelector(location.hash); if (t) { var d = t.querySelector('details'); if (d) d.open = true; setTimeout(function () { t.scrollIntoView(); }, 60); } }
+  })();
+  </script>
+</body>
+</html>

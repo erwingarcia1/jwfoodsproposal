@@ -1,0 +1,1764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Goal Plan Builder · J&amp;W Foods concept</title>
+<meta name="description" content="Concept: six goal plans built from real J&amp;W Meal Butler meals, matched by a 60-second quiz and sold as a skip-anytime subscription with a monthly Freezer Fill.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { jnavy: '#154D8E', jink: '#0E1B4D', jslate: '#5B5A8C', jsky: '#7FB3D5', jtint: '#E6F0F8', jcream: '#F7F3EC', jkraft: '#D9C7A7', jred: '#A23B2A', jgreen: '#0F7B4F', jamber: '#B7791F', jmuted: '#566072', jline: '#E8DFD0' },
+  fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
+  maxWidth: { page: '1200px' }
+} } };
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<style>
+:root { --navy:#154D8E; --ink:#0E1B4D; --slate:#5B5A8C; --sky:#7FB3D5; --tint:#E6F0F8; --cream:#F7F3EC; --kraft:#D9C7A7; --red:#A23B2A; --green:#0F7B4F; --amber:#B7791F; --muted:#566072; --line:#E8DFD0; }
+/* section jumps clear the shared concept bar only while it is sticky (concept.js sets --jwc-barh; 0 on phones) */
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--jwc-barh, 0px) + 16px); }
+body { background: var(--cream); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.gp-dark :focus-visible, .gp-hero :focus-visible, .gp-trust :focus-visible { outline-color: #fff; }
+a.skip-link.gp-skip:focus { position: fixed; left: 8px; top: 8px; z-index: 100; width: auto; height: auto; margin: 0; clip: auto; overflow: visible; white-space: nowrap; background: #fff; color: var(--ink); padding: 10px 14px; border-radius: 10px; font-weight: 600; box-shadow: 0 8px 24px -8px rgba(14,27,77,.45); }
+.gp-eyebrow { font: 700 11.5px/1.25 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.gp-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 20px; border-radius: 12px; font: 600 15px/1.2 Inter, sans-serif; border: 1.5px solid transparent; cursor: pointer; text-decoration: none; text-align: center; transition: background-color .15s, border-color .15s, transform .1s; }
+.gp-btn:active { transform: translateY(1px); }
+.gp-btn-navy { background: var(--navy); color: #fff; } .gp-btn-navy:hover { background: #0F3C70; }
+.gp-btn-ink { background: var(--ink); color: #fff; } .gp-btn-ink:hover { background: #1B2C68; }
+.gp-btn-slate { background: var(--slate); color: #fff; } .gp-btn-slate:hover { background: #4A4979; }
+.gp-btn-green { background: var(--green); color: #fff; } .gp-btn-green:hover { background: #0B6440; }
+.gp-btn-line { background: #fff; color: var(--ink); border-color: #D6C9B3; } .gp-btn-line:hover { border-color: var(--navy); }
+.gp-btn-white { background: #fff; color: var(--ink); } .gp-btn-white:hover { background: var(--tint); }
+.gp-btn-glass { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.55); } .gp-btn-glass:hover { background: rgba(255,255,255,.16); }
+.gp-btn-sm { min-height: 40px; padding: 8px 14px; font-size: 14px; border-radius: 10px; }
+.gp-btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+.gp-link { display: inline-flex; align-items: center; min-height: 40px; color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; padding: 0 2px; cursor: pointer; font-size: inherit; }
+.gp-concept { display: inline-flex; align-items: center; font: 700 10px/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; background: #FBF1DC; color: #774709; border: 1px solid #E8C98F; border-radius: 999px; padding: 4px 8px; vertical-align: middle; white-space: nowrap; }
+.gp-est { display: inline-flex; align-items: center; font: 700 10px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #4B5466; background: #EDE6DA; border-radius: 6px; padding: 4px 6px; vertical-align: middle; }
+.gp-mac { display: inline-flex; align-items: baseline; gap: 3px; border-radius: 999px; padding: 5px 9px; font: 500 12px/1 Inter, sans-serif; background: var(--tint); color: var(--ink); white-space: nowrap; }
+.gp-mac b { font-weight: 700; }
+.gp-chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 6px 10px; font: 600 12.5px/1.1 Inter, sans-serif; background: var(--tint); color: var(--ink); }
+.gp-samp { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; font: 700 10.5px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; background: #FFF6D6; color: #5B4300; border: 1px solid #F0DE9C; }
+.gp-card { background: #fff; border-radius: 16px; box-shadow: 0 1px 2px rgba(14,27,77,.05), 0 18px 40px -24px rgba(14,27,77,.30); }
+.gp-label { display: block; font: 600 13px/1.3 Inter, sans-serif; color: var(--ink); margin-bottom: 6px; }
+.gp-input, .gp-select { width: 100%; min-height: 46px; border: 1.5px solid #D6C9B3; border-radius: 12px; padding: 10px 12px; font: 400 15.5px/1.3 Inter, sans-serif; background: #fff; color: var(--ink); }
+.gp-input:focus, .gp-select:focus { outline: 3px solid var(--sky); outline-offset: 0; border-color: var(--navy); }
+.gp-input.is-bad { border-color: var(--red); }
+
+/* cut-off bar + header */
+.gp-cutbar { background: var(--ink); color: #fff; }
+.gp-cdpill { display: inline-flex; align-items: center; gap: 6px; background: var(--red); color: #fff; border-radius: 999px; padding: 5px 11px; font: 600 12.5px/1 Inter, sans-serif; white-space: nowrap; }
+.gp-header { background: #fff; border-bottom: 1px solid var(--line); }
+.gp-nav { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 10px; color: var(--ink); font: 500 15px/1 Inter, sans-serif; text-decoration: none; }
+.gp-nav:hover { background: var(--cream); }
+.gp-cartbtn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--ink); color: #fff; font: 600 14px/1 Inter, sans-serif; border: 0; cursor: pointer; }
+.gp-cartbtn b { background: #fff; color: var(--ink); border-radius: 999px; min-width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; padding: 0 6px; }
+.gp-menubtn { min-height: 44px; min-width: 44px; padding: 0 12px; border-radius: 12px; border: 1.5px solid #D6C9B3; background: #fff; font: 600 14px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; }
+.gp-navm { border-top: 1px solid var(--line); background: #fff; padding: 6px 16px 12px; }
+.gp-navm a { display: flex; align-items: center; min-height: 46px; border-bottom: 1px solid #F1EBE1; color: var(--ink); font-weight: 600; text-decoration: none; }
+
+/* hero */
+.gp-hero { position: relative; overflow: hidden; background: var(--ink); }
+.gp-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.gp-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,27,77,.88) 0%, rgba(14,27,77,.80) 60%, rgba(14,27,77,.93) 100%); }
+@media (min-width: 1024px) { .gp-hero-shade { background: linear-gradient(90deg, rgba(14,27,77,.95) 0%, rgba(14,27,77,.84) 40%, rgba(14,27,77,.30) 72%, rgba(14,27,77,.10) 100%); } }
+.gp-trustchip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 7px 12px; font: 500 13px/1.2 Inter, sans-serif; background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.22); }
+.gp-trustchip svg { flex: none; }
+.gp-pricecard { background: #fff; border-radius: 18px; padding: 20px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+.gp-range { position: relative; height: 34px; margin-top: 6px; }
+.gp-range .track { position: absolute; left: 0; right: 0; top: 14px; height: 6px; border-radius: 99px; background: #EFE8DC; }
+.gp-range .band { position: absolute; top: 10px; height: 14px; border-radius: 99px; }
+
+/* how it works */
+.gp-stepnum { width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; background: var(--ink); color: #fff; font: 600 17px/1 Fraunces, Georgia, serif; flex: none; }
+
+/* quiz */
+.gp-quiz { max-width: 720px; margin: 0 auto; overflow: hidden; }
+.gp-track { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; }
+.gp-track li { display: flex; align-items: center; flex: 1; }
+.gp-track li:last-child { flex: none; }
+.gp-track .dot { width: 12px; height: 12px; border-radius: 999px; background: #E4DACB; flex: none; transition: background-color .2s, box-shadow .2s; }
+.gp-track .dot.done { background: var(--sky); }
+.gp-track .dot.cur { background: #fff; box-shadow: 0 0 0 3px var(--sky); }
+.gp-track .bar { flex: 1; height: 3px; margin: 0 4px; border-radius: 2px; background: #E4DACB; }
+.gp-track .bar.done { background: var(--sky); }
+.gp-opt { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 10px 18px 10px 14px; border: 1.5px solid #E2D8C8; border-radius: 999px; background: #fff; text-align: left; font: 500 15.5px/1.3 Inter, sans-serif; color: var(--ink); cursor: pointer; transition: border-color .15s, background-color .15s; }
+.gp-opt:hover { border-color: var(--sky); }
+.gp-opt[aria-pressed="true"] { border-color: var(--sky); background: var(--tint); box-shadow: inset 0 0 0 1px var(--sky); }
+.gp-opt .tick { width: 22px; height: 22px; border-radius: 999px; border: 1.5px solid #CFC3AF; flex: none; display: grid; place-items: center; background: #fff; }
+.gp-opt.sq .tick { border-radius: 6px; }
+.gp-opt[aria-pressed="true"] .tick { background: var(--navy); border-color: var(--navy); }
+.gp-opt[aria-pressed="true"] .tick::after { content: ''; width: 10px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: translateY(-1px) rotate(-45deg); }
+.gp-opt .pop { margin-left: auto; font: 600 11px/1 Inter, sans-serif; color: var(--navy); background: var(--tint); border: 1px solid #C7DCEC; border-radius: 999px; padding: 4px 8px; white-space: nowrap; }
+.gp-note { display: flex; gap: 10px; align-items: flex-start; background: #F4EFE6; border-radius: 12px; padding: 11px 14px; font-size: 14.5px; line-height: 1.45; color: var(--ink); }
+.gp-note::before { content: ''; width: 8px; height: 8px; margin-top: 6px; border-radius: 99px; background: var(--slate); flex: none; }
+.gp-spin { width: 34px; height: 34px; border-radius: 999px; border: 3px solid var(--tint); border-top-color: var(--navy); animation: gp-spin .8s linear infinite; }
+@keyframes gp-spin { to { transform: rotate(360deg); } }
+.gp-agentlbl { display: inline-flex; align-items: center; gap: 6px; font: 600 11.5px/1.2 Inter, sans-serif; color: var(--slate); background: #EEEDF6; border-radius: 999px; padding: 5px 10px; }
+.gp-offer { border-radius: 16px; padding: 18px; display: flex; flex-direction: column; border: 1.5px solid var(--line); background: #fff; }
+.gp-offer.rec { background: var(--slate); color: #fff; border-color: var(--slate); box-shadow: 0 24px 40px -24px rgba(91,90,140,.9); }
+.gp-offer ul { margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.45; }
+.gp-offer li { position: relative; padding: 3px 0 3px 14px; }
+.gp-offer li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 99px; background: currentColor; opacity: .55; }
+.gp-rec { display: inline-flex; align-items: center; font: 700 10px/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; background: #fff; color: var(--slate); border-radius: 999px; padding: 5px 9px; white-space: nowrap; }
+
+/* plan cards */
+.gp-plan { position: relative; background: #fff; border-radius: 16px; padding: 20px 20px 20px 22px; border-left: 4px solid var(--acc); display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(14,27,77,.05), 0 18px 40px -26px rgba(14,27,77,.32); }
+.gp-ph { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.gp-ph img { width: 100%; min-width: 0; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: #F3EEE4; overflow: hidden; }
+.gp-bullets { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.45; }
+.gp-bullets li { display: flex; gap: 9px; padding: 3px 0; }
+.gp-bullets li::before { content: ''; width: 7px; height: 7px; border-radius: 2px; background: var(--acc); margin-top: 6px; flex: none; }
+
+/* builder */
+.gp-step { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 1px 2px rgba(14,27,77,.04), 0 12px 30px -24px rgba(14,27,77,.3); }
+.gp-step h3 { font: 600 19px/1.25 Fraunces, Georgia, serif; }
+.gp-seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.gp-seg button { min-height: 44px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid #E2D8C8; background: #fff; font: 600 14.5px/1.2 Inter, sans-serif; color: var(--ink); cursor: pointer; }
+.gp-seg button:hover { border-color: var(--navy); }
+.gp-seg button[aria-pressed="true"] { border-color: var(--navy); background: var(--navy); color: #fff; }
+.gp-seg.plans button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); }
+.gp-row { display: grid; grid-template-columns: 60px minmax(0,1fr); gap: 12px; padding: 14px 0; border-top: 1px solid #EFE8DC; }
+.gp-row:first-child { border-top: 0; }
+.gp-row img { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; background: #F3EEE4; }
+.gp-row.is-zero img, .gp-row.is-zero .gp-rowtxt { opacity: .55; }
+.gp-rowctl { grid-column: 2; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+@media (min-width: 640px) { .gp-row { grid-template-columns: 60px minmax(0,1fr) auto; } .gp-rowctl { grid-column: 3; } }
+.gp-qty { display: inline-flex; align-items: center; border: 1.5px solid #E2D8C8; border-radius: 999px; background: #fff; }
+.gp-qty button { width: 40px; height: 40px; border: 0; background: transparent; border-radius: 999px; font: 600 19px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; }
+.gp-qty button:hover { background: var(--tint); }
+.gp-qty output { min-width: 26px; text-align: center; font-weight: 700; font-size: 15px; }
+.gp-bag { background: #fff; border-radius: 18px; padding: 18px; box-shadow: 0 1px 2px rgba(14,27,77,.05), 0 24px 50px -28px rgba(14,27,77,.38); }
+@media (min-width: 1024px) { .gp-bagwrap { position: sticky; top: calc(var(--jwc-barh, 0px) + 16px); } .gp-sheetx { display: none !important; } }
+@media (max-width: 1023px) {
+  .gp-bag { position: fixed; left: 0; right: 0; bottom: 0; z-index: 86; border-radius: 22px 22px 0 0; max-height: 88vh; overflow-y: auto; transform: translateY(105%); visibility: hidden; transition: transform .28s ease, visibility 0s linear .28s; box-shadow: 0 -24px 60px -20px rgba(0,0,0,.45); }
+  .gp-bag.open { transform: none; visibility: visible; transition: transform .28s ease; }
+}
+.gp-scrim { position: fixed; inset: 0; background: rgba(11,18,32,.45); z-index: 85; }
+.gp-sheetx { width: 40px; height: 40px; border-radius: 999px; border: 0; background: #F3EEE4; font: 600 20px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; flex: none; }
+.gp-meter { height: 6px; border-radius: 99px; background: #EFE8DC; overflow: hidden; }
+.gp-meter span { display: block; height: 100%; background: var(--navy); border-radius: 99px; transition: width .3s ease; }
+.gp-meter.over span { background: var(--red); }
+.gp-stack { display: flex; flex-wrap: wrap-reverse; align-content: flex-start; gap: 5px; padding: 12px; border-radius: 14px; background: linear-gradient(180deg, #F7F1E6 0%, #EEE4D2 100%); box-shadow: inset 0 -3px 0 #E2D4BC; }
+.gp-fb { width: calc((100% - 45px) / 10); aspect-ratio: 3 / 4; border-radius: 3px 3px 6px 6px; background: linear-gradient(165deg, #E9DCC3 0%, #D9C7A7 55%, #CBB58F 100%); position: relative; box-shadow: inset 0 0 0 1px rgba(90,70,40,.14), 0 2px 3px -1px rgba(60,40,10,.3); }
+.gp-fb::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 17%; border-radius: 3px 3px 0 0; background: repeating-linear-gradient(90deg, rgba(60,40,10,.16) 0 1.5px, transparent 1.5px 3.5px); }
+.gp-fb::after { content: ''; position: absolute; left: 20%; right: 20%; top: 42%; height: 24%; border-radius: 2px; background: var(--c, #154D8E); }
+.gp-fb.empty { background: rgba(255,255,255,.45); box-shadow: none; border: 1.5px dashed #C6B593; }
+.gp-fb.empty::before, .gp-fb.empty::after { display: none; }
+.gp-fb.over { box-shadow: 0 0 0 2px var(--red); }
+.gp-fb.drop { animation: gp-drop .5s cubic-bezier(.2,.9,.3,1.25) both; }
+@keyframes gp-drop { from { transform: translateY(-30px) rotate(-8deg); opacity: 0; } 60% { opacity: 1; } to { transform: none; opacity: 1; } }
+.gp-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--muted); }
+.gp-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.gp-sum .r { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; font-size: 14.5px; }
+.gp-sum .r.save { color: var(--green); font-weight: 600; }
+.gp-sum .r.tot { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 10px; font-weight: 700; font-size: 16px; }
+.gp-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px; border-radius: 14px; background: #F3EEE4; }
+.gp-toggle button { min-height: 42px; border-radius: 10px; border: 0; background: transparent; font: 600 13.5px/1.2 Inter, sans-serif; color: var(--ink); cursor: pointer; padding: 6px 8px; }
+.gp-toggle button[aria-pressed="true"] { background: #fff; box-shadow: 0 2px 8px -3px rgba(14,27,77,.3); }
+.gp-warn { background: #FBF1DC; color: #5E3B07; border: 1px solid #EBD3A4; border-radius: 12px; padding: 10px 12px; font-size: 13.5px; line-height: 1.45; }
+.gp-ok { background: #E3F4EC; color: #0B5A3A; border-radius: 12px; padding: 10px 12px; font-size: 13.5px; line-height: 1.45; }
+.gp-sbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 74; display: none; align-items: center; gap: 12px; background: var(--ink); color: #fff; padding: 10px 16px; box-shadow: 0 -12px 30px -16px rgba(0,0,0,.5); }
+body.gp-bar-on .gp-sbar { display: flex; }
+body.gp-bar-on .jwc-chat-fab { bottom: 82px; }
+body.gp-bar-on .jwc-cart-fab { bottom: 144px; }
+body.gp-bar-on .jwc-toasts { bottom: 88px; }
+@media (min-width: 1024px) { .gp-sbar { display: none !important; } }
+.gp-swapopt { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 10px; align-items: center; width: 100%; text-align: left; border: 1.5px solid #E2D8C8; border-radius: 12px; background: #fff; padding: 8px 10px; cursor: pointer; min-height: 56px; color: var(--ink); font: 400 14px/1.35 Inter, sans-serif; }
+.gp-swapopt:hover { border-color: var(--navy); background: var(--tint); }
+.gp-swapopt img { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; background: #F3EEE4; }
+.gp-swapopt small { display: block; color: var(--muted); font-size: 12.5px; }
+
+/* bands */
+.gp-stat { border-radius: 14px; padding: 14px; background: #fff; border: 1.5px solid var(--line); }
+.gp-stat.good { background: #E3F4EC; border-color: #BFE3D0; }
+.gp-ffcard { position: absolute; left: 14px; right: 14px; bottom: 14px; background: rgba(255,255,255,.96); border-radius: 16px; padding: 14px; box-shadow: 0 20px 40px -20px rgba(0,0,0,.5); }
+@media (min-width: 640px) { .gp-ffcard { right: auto; width: 320px; } }
+.gp-person { display: flex; gap: 12px; align-items: flex-start; border: 1.5px solid var(--line); border-radius: 14px; padding: 12px; background: #fff; }
+.gp-ptag { width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; background: var(--slate); color: #fff; font-weight: 700; font-size: 14px; flex: none; margin-top: 26px; }
+.gp-x { width: 40px; height: 40px; border-radius: 999px; border: 0; background: #F3EEE4; font: 600 18px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; flex: none; margin-top: 24px; }
+.gp-nametag { display: inline-flex; align-items: center; gap: 6px; font: 700 12.5px/1.2 Inter, sans-serif; background: var(--ink); color: #fff; border-radius: 6px; padding: 5px 9px; }
+.gp-nametag::before { content: ''; width: 6px; height: 6px; border-radius: 99px; background: var(--kraft); }
+
+/* My Plan */
+.gp-mphead { background: var(--slate); color: #fff; }
+.gp-status { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 7px 12px; font: 700 12.5px/1 Inter, sans-serif; background: #fff; color: var(--ink); white-space: nowrap; }
+.gp-status::before { content: ''; width: 8px; height: 8px; border-radius: 99px; background: var(--green); }
+.gp-status.paused::before { background: var(--amber); }
+.gp-status.cancelled::before { background: var(--red); }
+.gp-sms { background: #EEF0F5; border-radius: 18px; padding: 16px; }
+.gp-bubble { background: #fff; border-radius: 18px 18px 18px 6px; padding: 12px 14px; font-size: 14.5px; line-height: 1.5; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+
+/* trust + faq */
+.gp-trust { background: var(--ink); color: #fff; border-radius: 28px; }
+.gp-tile { border-radius: 16px; padding: 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); }
+.gp-faq details { border-bottom: 1px solid var(--line); }
+.gp-faq summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 12px 2px; cursor: pointer; font: 600 16.5px/1.35 Inter, sans-serif; color: var(--ink); }
+.gp-faq summary::-webkit-details-marker { display: none; }
+.gp-faq summary::after { content: '+'; font: 400 24px/1 Inter, sans-serif; color: var(--navy); flex: none; transition: transform .2s; }
+.gp-faq details[open] summary::after { transform: rotate(45deg); }
+.gp-faq details p { margin: 0 0 16px; color: var(--muted); font-size: 15.5px; line-height: 1.6; max-width: 70ch; }
+
+/* team view */
+.gp-team { background: #F2EEE7; min-height: 60vh; }
+.gp-panel { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 1px 2px rgba(14,27,77,.05), 0 14px 34px -26px rgba(14,27,77,.3); min-width: 0; }
+.gp-panel h2 { font: 600 19px/1.25 Fraunces, Georgia, serif; }
+.gp-kpi { background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 1px 2px rgba(14,27,77,.05); border: 1px solid #EAE2D4; }
+.gp-kpi small { display: block; font: 600 11.5px/1.3 Inter, sans-serif; color: var(--muted); }
+.gp-kpi b { display: block; font: 600 26px/1.15 Fraunces, Georgia, serif; color: var(--ink); margin-top: 4px; }
+.gp-kpi span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.gp-barrow { display: grid; grid-template-columns: minmax(96px, 34%) minmax(0,1fr) auto; gap: 10px; align-items: center; padding: 5px 0; font-size: 13.5px; }
+.gp-bar { position: relative; height: 12px; border-radius: 99px; background: #EFE8DC; overflow: hidden; }
+.gp-bar > span { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 99px; background: var(--navy); }
+.gp-bar > span.demo { background: var(--green); }
+.gp-bar > span.bench { background: rgba(183,121,31,.35); border-radius: 0; }
+.gp-appr { border: 1px solid #EAE2D4; border-left: 4px solid var(--acc, var(--navy)); border-radius: 12px; padding: 14px; }
+.gp-appr.flag { background: #FFFAF0; --acc: #B7791F; }
+.gp-appr pre { white-space: pre-wrap; font: 400 13.5px/1.5 Inter, sans-serif; margin: 8px 0 0; color: #2B3446; background: #F7F3EC; border-radius: 10px; padding: 10px 12px; }
+.gp-st { display: inline-flex; align-items: center; border-radius: 999px; padding: 4px 9px; font: 700 11px/1 Inter, sans-serif; letter-spacing: .04em; white-space: nowrap; }
+.gp-st.pending { background: #E6F0F8; color: #154D8E; }
+.gp-st.approved { background: #E3F4EC; color: #0B5A3A; }
+.gp-st.edited { background: #EEEDF6; color: #4A4979; }
+.gp-st.rejected { background: #F8E4E0; color: #8A2F20; }
+.gp-st.review { background: #FBF1DC; color: #774709; }
+.gp-tbl td.num, .gp-tbl th.num { text-align: right; white-space: nowrap; }
+.gp-tbl tr.tot td { font-weight: 700; border-top: 1px solid var(--ink); }
+.gp-tbl tr.live td { background: #F1F9F5; }
+.gp-confirm { margin-top: 12px; border-radius: 12px; background: #EEEDF6; padding: 12px 14px; font-size: 14px; color: var(--ink); }
+
+/* closed shared drawers (cart, "Why this makes money") sit off-screen at right: hide their shadow and keep them out of the tab order */
+.jwc-panel:not(.on) { box-shadow: none; visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; }
+.jwc-panel.on { visibility: visible; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body class="bg-jcream text-jink font-sans antialiased">
+<a href="#main" class="skip-link sr-only focus:not-sr-only gp-skip">Skip to content</a>
+<noscript><p style="padding:16px;background:#FFF6D6">This concept needs JavaScript to run the quiz, builder and demo checkout.</p></noscript>
+
+<div data-customer id="top">
+  <!-- Cut-off bar -->
+  <div class="gp-cutbar">
+    <div class="max-w-page mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5">
+      <p class="text-[13px] leading-snug">Change or order your plan by Sunday night for next week's route. Pickup at 2201 Brimley Rd is always free.</p>
+      <p class="gp-cdpill"><span>Cut-off in</span> <span id="cut-cd">–</span></p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="gp-header">
+    <div class="max-w-page mx-auto px-4 h-[74px] flex items-center gap-2 sm:gap-3">
+      <a href="#" class="flex items-center gap-2 sm:gap-3 min-w-0 no-underline">
+        <img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods, established 1995" width="54" height="50" class="h-[38px] sm:h-[50px] w-auto flex-none">
+        <span class="leading-tight min-w-0"><span class="block font-display text-[16px] sm:text-[21px] font-semibold text-jink truncate">Meal Butler Plans</span><span class="hidden sm:block text-[12px] text-jmuted">by J&amp;W Foods, Scarborough</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-1 ml-auto" aria-label="Main">
+        <a class="gp-nav" href="#plans">Plans</a><a class="gp-nav" href="#how">How it works</a><a class="gp-nav" href="#quiz">Find my plan</a><a class="gp-nav" href="#myplan">My Plan</a>
+      </nav>
+      <button type="button" class="gp-cartbtn ml-auto lg:ml-3" id="hdr-cart"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8h14l-1.2 11.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="hidden sm:inline">Order</span><b id="hdr-count">0</b></button>
+      <button type="button" class="gp-menubtn lg:hidden" id="hdr-menu" aria-expanded="false" aria-controls="nav-m">Menu</button>
+    </div>
+    <nav id="nav-m" class="gp-navm lg:hidden" aria-label="Main, mobile" hidden>
+      <a href="#plans">Plans</a><a href="#how">How it works</a><a href="#quiz">Find my plan</a><a href="#myplan">My Plan</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="gp-hero" aria-labelledby="hero-h">
+      <img class="gp-hero-img" src="../assets/img/meals.jpg" alt="Meal Butler meals: salmon with quinoa, chicken with broccoli, flank steak with green beans" width="1500" height="1200">
+      <div class="gp-hero-shade" aria-hidden="true"></div>
+      <div class="relative max-w-page mx-auto px-4 pt-12 pb-12 sm:pt-16 lg:pt-24 lg:pb-24 grid lg:grid-cols-12 gap-8 lg:items-end">
+        <div class="lg:col-span-7 text-white">
+          <p class="gp-eyebrow text-[#C9DFF0]">Goal plans by J&amp;W Meal Butler</p>
+          <h1 id="hero-h" class="font-display font-semibold text-[40px] leading-[1.04] sm:text-[54px] lg:text-[64px] mt-3">Pick your goal. We'll cook the plan.</h1>
+          <p class="mt-5 text-[17px] sm:text-[18px] leading-relaxed text-white/90 max-w-xl">Six goal plans made from Meal Butler meals we already cook, portion and freeze at our Ontario-inspected plant in Scarborough. Ingredients on every pack. Skip or swap any week.</p>
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <a href="#quiz" class="gp-btn gp-btn-white" id="hero-quiz">Find my plan (about 60 seconds)</a>
+            <a href="#plans" class="gp-btn gp-btn-glass">See the six plans</a>
+          </div>
+          <ul class="mt-7 flex flex-wrap gap-2" aria-label="Why people trust J&amp;W">
+            <li class="gp-trustchip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5C451" aria-hidden="true"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.1l1.4-7L2 9.3l7-.8L12 2Z"/></svg>4.8 on Google · 611 reviews</li>
+            <li class="gp-trustchip">Butchers since 1995</li>
+            <li class="gp-trustchip">Ontario-inspected plant since 2008</li>
+            <li class="gp-trustchip">30K on Instagram</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 lg:justify-self-end w-full max-w-md">
+          <div class="gp-pricecard" id="hero-price"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="max-w-page mx-auto px-4 py-16 sm:py-20" aria-labelledby="how-h">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative rounded-[22px] overflow-hidden aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] bg-jink">
+            <img src="../assets/img/arm.jpg" alt="Overhead dumbbell press in a gym" width="1100" height="734" class="absolute inset-0 w-full h-full object-cover object-[60%_30%]" loading="lazy">
+            <div class="absolute left-3 right-3 bottom-3 sm:left-4 sm:right-auto sm:bottom-4 bg-white/95 rounded-2xl px-4 py-3 max-w-xs">
+              <p class="text-[13px] text-jmuted">Plans for the days you train</p>
+              <p class="font-display text-[19px] leading-snug">Real portions, weighed in our kitchen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7 order-1 lg:order-2">
+          <p class="gp-eyebrow text-jnavy">Four steps</p>
+          <h2 id="how-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">How it works</h2>
+          <ol class="grid sm:grid-cols-2 gap-4 mt-8">
+            <li class="gp-card p-5 flex gap-4"><span class="gp-stepnum" aria-hidden="true">1</span><div><p class="font-semibold text-[17px]">Take the quiz.</p><p class="text-jmuted mt-1">Goal, training, who's eating.</p></div></li>
+            <li class="gp-card p-5 flex gap-4"><span class="gp-stepnum" aria-hidden="true">2</span><div><p class="font-semibold text-[17px]">Get your plan.</p><p class="text-jmuted mt-1">Meals, est. macros and a price per meal.</p></div></li>
+            <li class="gp-card p-5 flex gap-4"><span class="gp-stepnum" aria-hidden="true">3</span><div><p class="font-semibold text-[17px]">Pick a rhythm.</p><p class="text-jmuted mt-1">Weekly, every 2 weeks, or a monthly Freezer Fill.</p></div></li>
+            <li class="gp-card p-5 flex gap-4"><span class="gp-stepnum" aria-hidden="true">4</span><div><p class="font-semibold text-[17px]">Stay in control.</p><p class="text-jmuted mt-1">Skip, swap or pause until Sunday night.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz + result -->
+    <section id="quiz" class="bg-[#EFE7DA] py-16 sm:py-20" aria-labelledby="quiz-h">
+      <div class="max-w-page mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <p class="gp-eyebrow text-jslate">8 questions · about 60 seconds</p>
+          <h2 id="quiz-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">Find my plan</h2>
+          <p class="text-jmuted mt-3">Tell us your goal and who's eating. We'll match you to one of six plans, priced from this week's Meal Butler menu.</p>
+        </div>
+        <div id="quiz-box" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Six plans -->
+    <section id="plans" class="max-w-page mx-auto px-4 py-16 sm:py-20" aria-labelledby="plans-h">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="gp-eyebrow text-jnavy">Goal plans <span class="gp-concept ml-1">Concept</span></p>
+          <h2 id="plans-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">Six plans. One butcher.</h2>
+        </div>
+        <p class="text-jmuted max-w-md text-[15px]">Every plan is built from Meal Butler items we sell today, priced as the sum of their real prices, then 10% off with Subscribe &amp; Save. Macros are estimates.</p>
+      </div>
+      <div id="plan-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8"></div>
+      <div class="gp-card p-5 sm:p-6 mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
+        <span class="gp-stepnum" aria-hidden="true" style="background:var(--slate)">B</span>
+        <p class="text-[15.5px] leading-relaxed"><b>Don't want to choose? Do nothing.</b> If your box hasn't changed by Sunday night, we send the Butcher's Pick for your plan, with flavours rotating through Greek Lemon, Korean BBQ, Arabic 7 Spice, Teriyaki, BBQ and Jerk.</p>
+      </div>
+    </section>
+
+    <!-- Builder -->
+    <section id="builder" class="bg-[#EFE7DA] py-16 sm:py-20" aria-labelledby="b-h">
+      <div class="max-w-page mx-auto px-4">
+        <p class="gp-eyebrow text-jnavy">Plan builder <span class="gp-concept ml-1">Concept</span></p>
+        <h2 id="b-h" class="font-display text-[32px] sm:text-[42px] leading-tight mt-2">Build your <span id="b-name">Lean</span> box</h2>
+        <p class="text-jmuted mt-2 max-w-2xl">Pre-filled with the Butcher's Pick. Change the size, the rhythm or any meal, and watch the freezer bags stack up.</p>
+        <div class="mt-5" role="group" aria-label="Choose a plan"><div class="gp-seg plans" id="b-plans"></div></div>
+        <div id="b-avoid" class="mt-3"></div>
+        <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 mt-6 items-start">
+          <div class="lg:col-span-7 space-y-5 min-w-0">
+            <div class="gp-step">
+              <h3>A. Meals per box</h3>
+              <div class="gp-seg mt-3" id="b-size" role="group" aria-label="Meals per box"></div>
+              <p class="text-[13.5px] text-jmuted mt-2" id="b-size-note"></p>
+            </div>
+            <div class="gp-step">
+              <h3>B. How often</h3>
+              <div class="gp-seg mt-3" id="b-rhythm" role="group" aria-label="Delivery rhythm"></div>
+              <p class="text-[13.5px] text-jmuted mt-2" id="b-rhythm-note"></p>
+            </div>
+            <div class="gp-step">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3>C. Your meals</h3>
+                <button type="button" class="gp-link text-[14px]" id="b-repick">Reset to Butcher's Pick</button>
+              </div>
+              <p class="text-[13.5px] text-jmuted mt-1">Each meal's parts and real prices are shown. Macros are est. per meal.</p>
+              <div id="b-lines" class="mt-2"></div>
+            </div>
+            <div class="gp-step">
+              <h3>D. Add-ons</h3>
+              <div id="b-addons" class="mt-2"></div>
+            </div>
+            <div class="gp-step">
+              <h3>E. Delivery or pickup</h3>
+              <label class="gp-label mt-3" for="b-city">Where should it go?</label>
+              <select id="b-city" class="gp-select"></select>
+              <p id="b-route" class="text-[14px] mt-2"></p>
+            </div>
+          </div>
+          <div class="lg:col-span-5 min-w-0">
+            <div class="gp-bagwrap">
+              <aside id="bag" class="gp-bag" aria-labelledby="bag-h">
+                <div id="bag-head"></div>
+                <div class="gp-stack mt-3" id="bag-stack" aria-hidden="true"></div>
+                <div id="bag-legend" class="gp-legend mt-2"></div>
+                <div id="bag-body"></div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Freezer Fill -->
+    <section id="freezer" class="max-w-page mx-auto px-4 py-16 sm:py-20" aria-labelledby="ff-h">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div class="lg:col-span-6">
+          <p class="gp-eyebrow text-jnavy">Only from a freezer-first kitchen</p>
+          <h2 id="ff-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">Fill the freezer once a month.</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-jmuted">Every Meal Butler meal is cooked, weighed, portioned and flash-frozen in a vacuum-sealed bag. So you can take a month at once: one delivery, one route fee, one Sunday reminder. Fresh-only services can't stretch that far.</p>
+          <div class="grid grid-cols-2 gap-3 mt-6">
+            <div class="gp-stat"><p class="text-[13px] font-semibold text-jmuted">Weekly box</p><p class="font-display text-[28px] leading-tight mt-1">4 route fees</p><p class="text-[13.5px] text-jmuted mt-1">a month ($80 on the Wednesday route)</p></div>
+            <div class="gp-stat good"><p class="text-[13px] font-semibold text-jgreen">Freezer Fill</p><p class="font-display text-[28px] leading-tight mt-1">1 route fee</p><p class="text-[13.5px] text-[#0B5A3A] mt-1">a month ($20)</p></div>
+          </div>
+          <p class="mt-5 text-[15.5px]" id="ff-example"></p>
+          <button type="button" class="gp-btn gp-btn-navy mt-6" id="ff-go">Make mine monthly</button>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="relative rounded-[22px] overflow-hidden aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5] bg-jink">
+            <img src="../assets/img/souvlaki.jpg" alt="Chicken souvlaki skewers on a platter with lemon and oregano" width="1066" height="1597" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="gp-ffcard">
+              <p class="text-[13px] font-semibold">One delivery, a month of meals</p>
+              <div class="gp-stack mt-2" id="ff-stack" aria-hidden="true"></div>
+              <p class="text-[12.5px] text-jmuted mt-2">20 vacuum-sealed bags, one per meal. They keep in the freezer for months.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Household -->
+    <section id="household" class="bg-[#E9E0D0] py-16 sm:py-20" aria-labelledby="hh-h">
+      <div class="max-w-page mx-auto px-4">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6">
+            <p class="gp-eyebrow text-jslate">Household box <span class="gp-concept ml-1">Concept</span></p>
+            <h2 id="hh-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">One box. Everyone's goals.</h2>
+            <p class="mt-4 text-[17px] leading-relaxed text-[#3F4859]">Add each person in your home, pick their plan, and we pack it all in one box with name tags on the packing list. One delivery, one fee.</p>
+            <button type="button" class="gp-btn gp-btn-slate mt-6" id="hh-open">Build a household box</button>
+          </div>
+          <div class="lg:col-span-6"><div class="gp-card p-5 sm:p-6" id="hh-example"></div></div>
+        </div>
+        <div id="hh-builder" class="gp-card p-5 sm:p-7 mt-10" hidden>
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div><h3 class="font-display text-[26px]">Your household box</h3><p class="text-jmuted text-[14.5px] mt-1">Each person gets their own plan and a name tag. Demo: nothing is sent.</p></div>
+            <button type="button" class="gp-link" id="hh-close">Hide</button>
+          </div>
+          <div class="grid lg:grid-cols-12 gap-6 mt-5">
+            <div class="lg:col-span-7 min-w-0">
+              <div id="hh-people" class="space-y-3"></div>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <button type="button" class="gp-btn gp-btn-line gp-btn-sm" id="hh-add">Add a person</button>
+                <button type="button" class="gp-btn gp-btn-line gp-btn-sm" id="hh-kids-btn">Add kids' plates</button>
+              </div>
+              <div id="hh-kids" class="mt-3"></div>
+              <p class="font-semibold mt-5">How often</p>
+              <div class="gp-seg mt-2" id="hh-rhythm" role="group" aria-label="Household delivery rhythm"></div>
+              <label class="gp-label mt-4" for="hh-city">Where should it go?</label>
+              <select id="hh-city" class="gp-select"></select>
+              <p id="hh-route" class="text-[14px] mt-2"></p>
+            </div>
+            <div class="lg:col-span-5 min-w-0"><div id="hh-sum" class="rounded-2xl bg-[#F7F3EC] p-4 sm:p-5"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Plan -->
+    <section id="myplan" class="max-w-page mx-auto px-4 py-16 sm:py-20" aria-labelledby="mp-h">
+      <div id="mp-box"></div>
+    </section>
+
+    <!-- Trust -->
+    <section class="max-w-page mx-auto px-4 pb-16" aria-labelledby="trust-h">
+      <div class="gp-trust p-6 sm:p-10 lg:p-12">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <p class="gp-eyebrow text-[#C9DFF0]">Family butchers</p>
+            <h2 id="trust-h" class="font-display text-[34px] sm:text-[42px] leading-tight mt-2">Butchers first. Since 1995.</h2>
+            <p class="mt-4 text-[17px] leading-relaxed text-white/85">J&amp;W started as a family butcher and distributor in 1995 and became an Ontario-inspected meat plant in 2008. We cut, cook, portion and freeze every Meal Butler meal ourselves.</p>
+            <p class="mt-3 text-[15px] text-white/75">Questions about a plan? The Meal Butler counter team can walk you through it: <a class="underline underline-offset-2 text-white whitespace-nowrap" href="tel:+14162981350">(416) 298-1350</a>.</p>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl p-4 max-w-sm lg:ml-auto"><img src="../assets/img/jw-logo2.jpg" alt="J&amp;W Meal Butler logo" width="600" height="391" class="w-full h-auto"></div>
+          </div>
+        </div>
+        <ul class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-8">
+          <li class="gp-tile"><p class="font-display text-[30px] leading-none">4.8</p><p class="text-[14px] text-white/80 mt-2">on Google from 611 reviews</p></li>
+          <li class="gp-tile"><p class="font-display text-[30px] leading-none">30K</p><p class="text-[14px] text-white/80 mt-2">on Instagram</p></li>
+          <li class="gp-tile"><p class="font-semibold text-[16px] leading-snug">Ontario chicken</p><p class="text-[14px] text-white/80 mt-1">air-chilled, no hormones or antibiotics</p></li>
+          <li class="gp-tile"><p class="font-semibold text-[16px] leading-snug">Ingredients on every pack</p><p class="text-[14px] text-white/80 mt-1">plain portions cooked with no added salt, sugar or oil</p></li>
+        </ul>
+        <p class="mt-6 text-[14px] text-white/75 leading-relaxed">What customers mention most (themes from public Google and Yelp reviews): hands-on advice at the counter · meat quality · boil-in-bag convenience.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-3xl mx-auto px-4 pb-20" aria-labelledby="faq-h">
+      <h2 id="faq-h" class="font-display text-[32px] sm:text-[38px] leading-tight">Questions, answered</h2>
+      <div class="gp-faq mt-6">
+        <details><summary>Are the macros exact?</summary><p>Not yet. They're estimates from standard nutrition data until our panels are checked by a nutrition professional. We'll mark verified meals.</p></details>
+        <details><summary>When can I change my box?</summary><p>Any time before Sunday night for the next week's route. After that, your box is being cooked.</p></details>
+        <details><summary>Can I skip or pause?</summary><p>Yes. Skip any delivery or pause for 1 to 8 weeks from My Plan. Skipped weeks are never charged.</p></details>
+        <details><summary>How do I store and heat the meals?</summary><p>Keep them frozen and follow the date and heating steps on each bag.</p></details>
+        <details><summary>Do you deliver to me?</summary><p>We run weekly routes Tuesday to Friday across the GTA and some of Ontario for $20 to $35, with a $100 minimum. Pickup at Brimley Rd is free.</p></details>
+        <details><summary>Is the GLP-1 Companion medical advice?</summary><p>No. It's smaller, protein-first meals. Follow your prescriber's advice.</p></details>
+        <details><summary>Can I cancel?</summary><p>Yes, from My Plan, before the Sunday cut-off, with no fee.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-jink text-white">
+    <div class="max-w-page mx-auto px-4 py-10">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <p class="font-display text-[22px]">Meal Butler Plans</p>
+        <p class="text-[14.5px] text-white/85 leading-relaxed">J&amp;W Foods · Meal Butler · 2201 Brimley Rd, Unit 1, Scarborough · <a class="underline underline-offset-2 py-2.5" href="tel:+14162981350">(416) 298-1350</a> · Mon–Fri 9–6, Sat 10–4</p>
+      </div>
+      <p class="text-[13px] text-white/65 mt-5 leading-relaxed"><span class="gp-concept">Concept</span> The goal plans, prices per meal, the Breakfast 5-pack, the switch credit, the household box and the 6-Week Reset are concepts priced from J&amp;W's real Oct 2026 prices. Macros are estimates (est.). Demo: nothing is sent or charged.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky bag bar + sheet scrim -->
+  <div class="gp-sbar" id="sbar" role="region" aria-label="Box summary">
+    <p class="flex-1 min-w-0 text-[14.5px] leading-tight"><b id="sbar-count">0 of 10 meals</b><br><span class="text-white/80 text-[13px]" id="sbar-total"></span></p>
+    <button type="button" class="gp-btn gp-btn-white gp-btn-sm" id="sbar-open">View box</button>
+  </div>
+  <div class="gp-scrim" id="scrim" hidden></div>
+</div>
+
+<!-- ======================= JW TEAM VIEW ======================= -->
+<section data-team class="gp-team" aria-labelledby="team-h">
+  <div class="max-w-page mx-auto px-4 py-8 lg:py-10">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="min-w-0">
+        <p class="gp-eyebrow text-jslate">Meal Butler Plans · team console</p>
+        <h1 id="team-h" class="font-display text-[30px] sm:text-[38px] leading-tight mt-1">Goal plans this week</h1>
+        <p class="mt-3 flex flex-wrap gap-2 items-center"><span class="gp-chip">Sample week: Mar 22, 2027 (month 5 of the plan)</span><span class="gp-samp">Sample data, for illustration</span></p>
+      </div>
+      <button type="button" class="gp-btn gp-btn-line gp-btn-sm" id="t-money">Why this makes money</button>
+    </div>
+    <div id="t-kpis" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-6"></div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-8 gp-panel" id="t-approvals"></div>
+      <div class="lg:col-span-4 space-y-5 min-w-0"><div class="gp-panel" id="t-live"></div><div class="gp-panel" id="t-agents"></div></div>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-7 gp-panel" id="t-prep"></div>
+      <div class="lg:col-span-5 space-y-5 min-w-0"><div class="gp-panel" id="t-routes"></div><div class="gp-panel" id="t-quiz"></div></div>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-7 gp-panel" id="t-mix"></div>
+      <div class="lg:col-span-5 gp-panel" id="t-ret"></div>
+    </div>
+    <div class="gp-panel mt-5" id="t-subs"></div>
+  </div>
+</section>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+(function () {
+'use strict';
+
+/* ---------- AI agents: rename them here only (names from research/ai-agents-roster.md, Play 1) ---------- */
+const AGENTS = {
+  macro: 'Macro Butler',
+  nutrition: 'Nutrition & Safety',
+  reorder: 'Reorder & Save',
+  planner: 'Production Planner',
+  lifecycle: 'Lifecycle Marketing',
+  reviews: 'Reviews & UGC',
+  concierge: 'Butler Concierge'   /* the "Ask the Butler" chat on every prototype */
+};
+
+/* ---------- helpers ---------- */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
+const esc = JWC.esc;
+const r2 = v => Math.round(v * 100) / 100;
+const m2 = v => JWC.money(v, 2);
+const m0 = v => JWC.money(v, 0);
+/* 10% Subscribe & Save on the raw item sum, rounded to the cent exactly as JWC.checkout totals it, so the bag and checkout agree */
+const ssRaw = raw => Math.round((raw - raw * 10 / 100) * 100) / 100;
+const clone = o => JSON.parse(JSON.stringify(o));
+const RM = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+const store = { get: (k, d) => JWC.store.get('p1:' + k, d), set: (k, v) => JWC.store.set('p1:' + k, v) };
+function go(id, focusSel) {
+  const el = document.getElementById(id); if (!el) return;
+  el.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' });
+  if (focusSel) setTimeout(() => { const f = $(focusSel); if (f) f.focus({ preventScroll: true }); }, RM ? 0 : 450);
+}
+
+/* ---------- real JW products, plates and plans ---------- */
+const P = id => JWC.product(id);
+function vIdx(p, label) {
+  const L = String(label).replace(/\s/g, '').toLowerCase();
+  for (let i = 0; i < p.variants.length; i++) if (p.variants[i].label.replace(/\s/g, '').toLowerCase() === L) return i;
+  return 0;
+}
+const MEALS = {};
+function def(id, name, parts, type, tags, extra) { MEALS[id] = Object.assign({ id: id, name: name, parts: parts, type: type, tags: tags || [] }, extra || {}); }
+/* Meal Butler pre-set meals */
+def('turkey-rice', 'Turkey, Spinach & Rice', [['turkey-spinach-white-rice', '4oz']], 'turkey', ['rice'], { preset: 1 });
+def('tilapia-rice', 'Tilapia, Asparagus & Brown Rice', [['tilapia-asparagus-brown-rice', '4oz']], 'fish', ['fish', 'rice'], { preset: 1 });
+def('jerk-sweet', 'Jerk Chicken, Green Beans & Sweet Potato', [['jerk-chicken-broccoli-sweet-potato-chunks', '4oz']], 'chicken', ['spicy'], { preset: 1 });
+def('tenders-sweet', 'Tenders, Broccoli & Sweet Potato', [['chicken-broccoli-sweet-potato-fries', '4oz']], 'chicken', [], { preset: 1 });
+def('teriyaki-rice', 'Teriyaki Chicken, Green Beans & Rice', [['pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white', '4oz']], 'chicken', ['rice'], { preset: 1 });
+def('souv-greek6', 'Souvlaki, Broccoli & Greek Potatoes', [['chicken-souvlaki-broccoli-sweet-potato-chunks', '6oz']], 'chicken', [], { preset: 1 });
+def('souv-greek4', 'Souvlaki, Broccoli & Greek Potatoes', [['chicken-souvlaki-broccoli-sweet-potato-chunks', '4oz']], 'chicken', [], { preset: 1 });
+def('flank-potato6', 'Flank Steak, Green Beans & Potato', [['copy-of-chicken-broccoli-sweet-potato-fries', '6oz']], 'beef', ['red'], { preset: 1 });
+def('salmon-quinoa6', 'Salmon, Brussels & Quinoa', [['salmon-brussel-sprouts-quinoa', '6oz']], 'fish', ['fish'], { preset: 1 });
+/* plates built from cooked & portioned components */
+def('arabic-plate', 'Arabic 7 Spice plate', [['chicken-breast-tenders-cooked-portioned-copy', '4oz'], ['rice-brown-basmati', '3oz'], ['broccoli', '4oz']], 'chicken', ['rice'], { flav: 1 });
+def('jerk-power', 'Jerk power plate', [['jerk-chicken-breast', '6oz'], ['rice-white-basmati', '6oz'], ['broccoli', '4oz']], 'chicken', ['spicy', 'rice'], { flav: 1 });
+def('sirloin-plate', 'Sirloin plate', [['1lb-of-extra-lean-ground-sirloin', '6oz'], ['sweet-potato-chunks-peeled', '6oz'], ['green-beans', '4oz']], 'beef', ['red']);
+def('souv-lime', 'Souvlaki cilantro-lime plate', [['chicken-breast-souvlaki', '6oz'], ['cilantro-lime-basmati-rice-cooked-portioned', '4oz'], ['mixed-veggies-cooked-portioned', '4oz']], 'chicken', ['rice'], { flav: 1 });
+def('beef-wrap', 'Beef Flank Fajita Wrap', [['wrap-beef-fajitas-flank-red-peppers-onions-spices', 'Single']], 'beef', ['red'], { wrap: 1 });
+def('chicken-wrap', 'Chicken Fajita Wrap', [['wrap-beef-flank-fajitas-copy-1', 'Single']], 'chicken', [], { wrap: 1 });
+def('souv-rice', 'Souvlaki rice plate', [['chicken-breast-souvlaki', '6oz'], ['rice-white-basmati', '6oz'], ['broccoli', '4oz']], 'chicken', ['rice'], { flav: 1 });
+def('souv-cauli', 'Souvlaki & cauliflower rice', [['chicken-breast-souvlaki', '6oz'], ['copy-of-teriyaki-mix-cooked-portioned', '4oz'], ['broccoli', '4oz']], 'chicken', [], { flav: 1 });
+def('salmon-asp', 'Salmon & asparagus', [['salmon', '6oz'], ['asparagus', '4oz'], ['copy-of-teriyaki-mix-cooked-portioned', '4oz']], 'fish', ['fish']);
+def('kbbq-flank', 'Korean BBQ flank & green beans', [['beef-korean-bbq-flank-steak-cooked-portioned', '4oz'], ['copy-of-teriyaki-mix-cooked-portioned', '4oz'], ['green-beans', '4oz']], 'beef', ['red']);
+def('turkey-greens', 'Turkey & spinach', [['turkey-breast', '6oz'], ['spinach-chopped', '4oz'], ['copy-of-california-mix-cooked-portioned', '4oz']], 'turkey', []);
+def('haddock-asp', 'Haddock & asparagus', [['haddock', '6oz'], ['asparagus', '4oz'], ['copy-of-teriyaki-mix-cooked-portioned', '4oz']], 'fish', ['fish']);
+def('kbbq-chicken', 'Korean BBQ chicken & sprouts', [['chicken-breast-greek-lemon-cooked-portioned-copy', '4oz'], ['copy-of-california-mix-cooked-portioned', '4oz'], ['brussel-sprouts', '4oz']], 'chicken', [], { flav: 1 });
+def('g-tenders', 'Small tenders, quinoa & sprouts', [['chicken-breast-tenders', '3oz'], ['quinoa', '3oz'], ['brussel-sprouts', '4oz']], 'chicken', []);
+def('g-soup', 'Lemon Chicken Rice Soup', [['soup-chicken-lemon-soup', '10oz']], 'soup', ['rice'], { bowl: 1 });
+def('g-salmon', 'Small salmon, broccoli & quinoa', [['salmon', '4oz'], ['broccoli', '4oz'], ['quinoa', '3oz']], 'fish', ['fish']);
+def('g-turkey', 'Small turkey, spinach & brown rice', [['turkey-breast', '4oz'], ['spinach-chopped', '4oz'], ['rice-brown-basmati', '3oz']], 'turkey', ['rice']);
+def('chili', 'Chicken Chili', [['chicken-ground-chilli', '10oz']], 'soup', ['spicy'], { bowl: 1 });
+def('egg-bites', 'Egg White Bites, Spinach & Feta', [['copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 'Single']], 'egg', ['egg'], { bites: 1 });
+def('kid-meatball', "Kids' meatball plate", [['6oz-fully-cooked-meatballs', '4oz'], ['rice-white-basmati', '4oz'], ['mixed-veggies-cooked-portioned', '4oz']], 'beef', ['red', 'rice'], { kid: 1 });
+def('kid-tenders', "Kids' tenders plate", [['chicken-breast-tenders', '3oz'], ['sweet-potato-chunks-peeled', '4oz'], ['broccoli', '4oz']], 'chicken', [], { kid: 1 });
+
+const FLAVOURS = [
+  { id: 'chicken-breast-souvlaki', short: 'Souvlaki' },
+  { id: 'chicken-breast-souvlaki-cooked-portioned-copy', short: 'Greek Lemon' },
+  { id: 'chicken-breast-greek-lemon-cooked-portioned-copy', short: 'Korean BBQ' },
+  { id: 'chicken-breast-teriyaki-cooked-portion', short: 'Teriyaki' },
+  { id: 'chicken-breast-tenders-cooked-portioned-copy', short: 'Arabic 7 Spice' },
+  { id: 'chicken-breast-jerk-cooked-portioned-copy', short: 'BBQ' },
+  { id: 'jerk-chicken-breast', short: 'Jerk', spicy: 1 }
+];
+/* a flavour-swapped plate is "<base>~<flavour product id>" */
+function getMeal(mid) {
+  if (MEALS[mid]) return MEALS[mid];
+  const bits = String(mid).split('~'), base = MEALS[bits[0]], fl = FLAVOURS.find(f => f.id === bits[1]);
+  if (!base || !fl || !P(fl.id)) return null;
+  const pr = P(fl.id), want = base.parts[0][1];
+  const lab = pr.variants.some(v => v.label.replace(/\s/g, '') === want) ? want : pr.variants[0].label;
+  const m = { id: mid, name: fl.short + ' chicken plate', parts: [[fl.id, lab]].concat(base.parts.slice(1)), type: 'chicken', tags: base.tags.filter(t => t !== 'spicy').concat(fl.spicy ? ['spicy'] : []), flav: 1, base: bits[0] };
+  MEALS[mid] = m; return m;
+}
+const baseOf = mid => { const m = getMeal(mid); return (m && m.base) || mid; };
+const INFO = {};
+function info(mid) {
+  if (INFO[mid]) return INFO[mid];
+  const m = getMeal(mid); if (!m) return null;
+  let price = 0; const mac = { kcal: 0, p: 0, c: 0, f: 0 }, parts = [];
+  m.parts.forEach(pt => {
+    const p = P(pt[0]); if (!p) return;
+    const i = vIdx(p, pt[1]), v = p.variants[i], mm = JWC.macros(p, i);
+    price += v.price;
+    if (mm) { mac.kcal += mm.kcal; mac.p += mm.p; mac.c += mm.c; mac.f += mm.f; }
+    parts.push({ p: p, i: i, oz: v.label.replace(/\s/g, ''), price: v.price });
+  });
+  price = r2(price);
+  const f = parts[0];
+  let line;
+  if (parts.length > 1) line = parts.map(x => x.p.name + ' ' + x.oz + ' ' + m2(x.price)).join(' + ') + ' = ' + m2(price);
+  else if (m.preset) line = 'Pre-set meal, ' + f.oz + ' protein · ' + m2(price);
+  else if (m.wrap) line = 'Cooked wrap · ' + m2(price);
+  else if (m.bowl) line = f.oz + ' bowl · ' + m2(price);
+  else if (m.bites) line = 'Egg bites, cooked and portioned · ' + m2(price);
+  else line = f.oz + ' · ' + m2(price);
+  return (INFO[mid] = { m: m, price: price, mac: mac, parts: parts, line: line, img: JWC.img(f.p, 200), prod: f.p });
+}
+
+const PLANS = [
+  { k: 'lean', name: 'Lean', eyebrow: 'Fat loss', acc: '#7FB3D5', accText: '#1F5A88', size: 10,
+    promise: 'Lighter plates, lean protein in every meal.', bullets: ['Turkey, tilapia and chicken meals', 'Rice or sweet potato, measured'],
+    meals: ['turkey-rice', 'tilapia-rice', 'jerk-sweet', 'tenders-sweet', 'teriyaki-rice', 'arabic-plate'],
+    photos: ['turkey-spinach-white-rice', 'tilapia-asparagus-brown-rice', 'jerk-chicken-broccoli-sweet-potato-chunks'] },
+  { k: 'bulk', name: 'Lean Bulk', eyebrow: 'Muscle gain', acc: '#154D8E', accText: '#154D8E', size: 10,
+    promise: '6oz proteins and a proper serving of carbs.', bullets: ['Souvlaki, flank steak, salmon, sirloin', 'Rice or potatoes in every meal'],
+    meals: ['souv-greek6', 'flank-potato6', 'salmon-quinoa6', 'jerk-power', 'sirloin-plate', 'souv-lime'],
+    photos: ['chicken-souvlaki-broccoli-sweet-potato-chunks', 'copy-of-chicken-broccoli-sweet-potato-fries', 'salmon-brussel-sprouts-quinoa'] },
+  { k: 'ath', name: 'Athlete', eyebrow: 'Train 5+ days', acc: '#A23B2A', accText: '#A23B2A', size: 10,
+    promise: 'Grab-and-go wraps plus big plates for heavy weeks.', bullets: ['Beef and chicken fajita wraps', 'Add the Breakfast 5-pack'],
+    meals: ['beef-wrap', 'chicken-wrap', 'salmon-quinoa6', 'souv-rice', 'flank-potato6', 'teriyaki-rice'],
+    photos: ['wrap-beef-fajitas-flank-red-peppers-onions-spices', 'wrap-beef-flank-fajitas-copy-1', 'pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white'] },
+  { k: 'pg', name: 'Protein & Greens', eyebrow: 'Fewer starches', acc: '#0F7B4F', accText: '#0F7B4F', size: 14,
+    promise: 'Rice and potatoes swapped for cauliflower rice and green veg.', bullets: ['Salmon, haddock, turkey, Korean BBQ flank', 'Cauliflower rice, asparagus, spinach'],
+    meals: ['souv-cauli', 'salmon-asp', 'kbbq-flank', 'turkey-greens', 'haddock-asp', 'kbbq-chicken'],
+    photos: ['salmon', 'haddock', 'beef-korean-bbq-flank-steak-cooked-portioned'] },
+  { k: 'glp', name: 'GLP-1 Companion', eyebrow: 'Smaller appetite', acc: '#5B5A8C', accText: '#5B5A8C', size: 14, small: 1,
+    promise: 'Smaller portions, protein first, fibre-rich sides.', bullets: ['3–4oz proteins with quinoa and Brussels sprouts', 'Soups and egg bites for light days'],
+    meals: ['g-tenders', 'g-soup', 'g-salmon', 'g-turkey', 'chili', 'egg-bites'],
+    photos: ['soup-chicken-lemon-soup', 'chicken-ground-chilli', 'copy-of-feta-omelette-cups-cooked-portioned-2-pkg'],
+    fine: "Food, not medical advice. Follow your prescriber's advice on protein and calories." },
+  { k: 'fam', name: 'Busy Family', eyebrow: 'Household', acc: '#B7791F', accText: '#8A5A12', size: 20, plates: 1,
+    promise: 'Grown-up plates and kid-sized plates in one box.', bullets: ['Souvlaki and teriyaki for adults', 'Meatball and tender plates for kids'],
+    meals: ['souv-greek4', 'teriyaki-rice', 'kid-meatball', 'kid-tenders', 'chili', 'tenders-sweet'],
+    photos: ['chicken-souvlaki-broccoli-sweet-potato-chunks', '6oz-fully-cooked-meatballs', 'chicken-broccoli-sweet-potato-fries'] }
+];
+const PLAN = {}; PLANS.forEach(p => { PLAN[p.k] = p; });
+const unit = (k, n) => { const pl = PLAN[k] || {}; const one = n === 1; return pl.plates ? (one ? 'plate' : 'plates') : pl.small ? (one ? 'small meal' : 'small meals') : (one ? 'meal' : 'meals'); };
+const SIZES = [10, 14, 20, 28, 40];
+const RHY = {
+  w: { label: 'Every week', short: 'every week', weeks: 1, perMonth: 4, perYear: 52 },
+  '2w': { label: 'Every 2 weeks', short: 'every 2 weeks', weeks: 2, perMonth: 2, perYear: 26 },
+  m: { label: 'Monthly Freezer Fill', short: 'once a month', weeks: 4, perMonth: 1, perYear: 12 }
+};
+const snapUp = x => SIZES.find(s => s >= x) || 40;
+const AVOID = { fish: 'fish', red: 'red meat', egg: 'eggs and dairy', spicy: 'spicy meals', rice: 'rice' };
+const TYPE_COL = { chicken: '#154D8E', fish: '#7FB3D5', beef: '#A23B2A', turkey: '#B7791F', soup: '#5B5A8C', egg: '#0F7B4F' };
+const TYPE_LBL = { chicken: 'Chicken', fish: 'Fish', beef: 'Beef', turkey: 'Turkey', soup: 'Soup & chili', egg: 'Egg bites' };
+const BFAST = { id: 'concept-breakfast-5', name: 'Breakfast 5-pack (Concept)', variant: '3 Egg White Bites + 2 Steel Cut Oats', price: r2(3 * P('copy-of-feta-omelette-cups-cooked-portioned-2-pkg').price + 2 * P('steel-cut-oats').price), img: JWC.img(P('copy-of-feta-omelette-cups-cooked-portioned-2-pkg'), 200) };
+const SOUV = { id: 'chicken-breast-souvlaki', name: 'Extra Chicken Breast Souvlaki', variant: '6oz', price: P('chicken-breast-souvlaki').variants[1].price, img: JWC.img(P('chicken-breast-souvlaki'), 200) };
+
+function rotation(k, avoid) {
+  const all = PLAN[k].meals, ok = all.filter(id => !getMeal(id).tags.some(t => (avoid || []).indexOf(t) > -1));
+  return ok.length >= 2 ? ok : all;
+}
+function pick(k, size, avoid) {
+  const rot = rotation(k, avoid), lines = PLAN[k].meals.map(mid => ({ mid: mid, qty: 0 }));
+  for (let i = 0; i < size; i++) lines.find(l => l.mid === rot[i % rot.length]).qty++;
+  return lines;
+}
+function sumLines(lines) {
+  let count = 0, sub = 0; const mac = { kcal: 0, p: 0, c: 0, f: 0 };
+  lines.forEach(l => { if (!l.qty) return; const f = info(l.mid); if (!f) return; count += l.qty; sub += f.price * l.qty; Object.keys(mac).forEach(x => { mac[x] += f.mac[x] * l.qty; }); });
+  return { count: count, sub: r2(sub), raw: sub, avg: count ? { kcal: Math.round(mac.kcal / count), p: Math.round(mac.p / count), c: Math.round(mac.c / count), f: Math.round(mac.f / count) } : null };
+}
+function quote(k, size, avoid) {
+  size = size || PLAN[k].size;
+  const t = sumLines(pick(k, size, avoid)), s = ssRaw(t.raw);
+  return { k: k, size: size, oneOff: t.sub, ss: s, per: r2(s / size), avg: t.avg };
+}
+const macroChips = a => a ? `<span class="gp-mac"><b>${a.kcal}</b> kcal</span><span class="gp-mac"><b>${a.p}g</b> protein</span><span class="gp-mac"><b>${a.c}g</b> carbs</span><span class="gp-mac"><b>${a.f}g</b> fat</span><span class="gp-est" title="Estimate from standard nutrition data">est.</span>` : '';
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+/* ---------- routes and dates (JW's real routes) ---------- */
+function mainRoute(city) {
+  if (!city || city === 'pickup') return { pickup: true, name: 'Pick up at the Brimley Rd store', day: 'Wednesday', fee: 0, min: 0, label: 'pickup', line: 'Free pickup at 2201 Brimley Rd (Mon–Fri 9–6, Sat 10–4)' };
+  const all = JWC.routesFor(city).filter(r => r.id !== 'pickup');
+  const r = all.filter(x => x.id !== 'express')[0] || all[0];
+  if (!r) return mainRoute('pickup');
+  const gta = (r.name.match(/GTA \d/) || [])[0];
+  return { pickup: false, id: r.id, name: r.name, day: r.day, fee: r.fee, min: r.min, label: gta || 'long route',
+    line: gta ? `${city}: ${r.day} route (${gta}), ${m0(r.fee)}, ${m0(r.min)} minimum` : `${city}: ${r.day} long route, ${m0(r.fee)}, ${m0(r.min)} minimum` };
+}
+function cityOptions(sel, withBlank) {
+  return (withBlank ? `<option value=""${!sel ? ' selected' : ''}>Choose your city</option>` : '') +
+    `<option value="pickup"${sel === 'pickup' ? ' selected' : ''}>I'll pick up at Brimley Rd (free)</option>` +
+    JWC.cities().map(c => `<option${c === sel ? ' selected' : ''}>${esc(c)}</option>`).join('');
+}
+const DOW = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const fmtD = d => `${DOW[d.getDay()].slice(0, 3)}, ${MON[d.getMonth()]} ${d.getDate()}`;
+const fmtL = d => `${DOW[d.getDay()]}, ${MON[d.getMonth()]} ${d.getDate()}`;
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+function cutoff() { const now = new Date(), d = new Date(now); d.setDate(d.getDate() + ((7 - d.getDay()) % 7)); d.setHours(23, 59, 0, 0); if (d < now) d.setDate(d.getDate() + 7); return d; }
+const DAY_OFF = { Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5 };
+const dayName = s => ((String(s || '').match(/Tuesday|Wednesday|Thursday|Friday/) || [])[0]) || 'Wednesday';
+function firstBox(day) { const d = addDays(cutoff(), DAY_OFF[dayName(day)] || 3); d.setHours(12, 0, 0, 0); return d; }
+function countdown() { const ms = Math.max(0, cutoff() - new Date()), h = Math.floor(ms / 36e5), d = Math.floor(h / 24); return d >= 1 ? `${d}d ${h % 24}h` : `${h}h ${Math.floor(ms / 6e4) % 60}m`; }
+
+/* ---------- chat ("Ask the Butler") ---------- */
+const Q_LEAN = quote('lean'), Q_BULK = quote('bulk'), Q_ATH = quote('ath'), Q_PG = quote('pg'), Q_GLP = quote('glp'), Q_FAM = quote('fam');
+const Q_LEAN20 = quote('lean', 20);
+const HH_EX = (() => { const kl = [{ mid: 'kid-meatball', qty: 3 }, { mid: 'kid-tenders', qty: 3 }], a = quote('bulk', 10), s = quote('glp', 10), kids = sumLines(kl), all = sumLines(pick('bulk', 10).filter(l => l.qty).concat(pick('glp', 10).filter(l => l.qty), kl)); return { a: a, s: s, kids: kids, one: all.sub, ss: ssRaw(all.raw) }; })();
+const ALLQ = [Q_LEAN, Q_BULK, Q_ATH, Q_PG, Q_GLP, Q_FAM];
+const MIN_PER = Math.min.apply(null, ALLQ.map(q => q.per)), MAX_PER = Math.max.apply(null, ALLQ.map(q => q.per));
+const CORE = [Q_LEAN, Q_BULK, Q_ATH, Q_PG];
+const CORE_MIN = Math.min.apply(null, CORE.map(q => q.per)), CORE_MAX = Math.max.apply(null, CORE.map(q => q.per));
+const CHAT_RULES = [
+  /* safety first: allergy or medical questions go to a person, never to a scripted answer */
+  { match: "allerg|gluten|celiac|coeliac|\\bnuts?\\b|peanut|lactose|dairy.free|shellfish|diabet|pregnan|kidney|eating disorder", reply: "That needs a person, not a chat answer. Please call the Meal Butler counter at (416) 298-1350 (Mon–Fri 9–6, Sat 10–4) before you order, and we'll check the recipes for you. In the quiz you can also leave out fish, red meat, eggs and dairy, spicy meals or rice." },
+  { match: 'skip|pause|holiday|vacation|away', reply: 'Skip any delivery or pause for 1 to 8 weeks from My Plan, any time before Sunday night. Skipped weeks are never charged.', act: ['Open My Plan', () => { JWC.chat.close(); go('myplan'); }] },
+  { match: 'cancel|stop my plan|unsubscribe', reply: "You can cancel from My Plan with no fee before the Sunday cut-off. If it's too much food or too much money, a smaller box or a monthly Freezer Fill might fit better.", act: ['Open My Plan', () => { JWC.chat.close(); go('myplan'); }] },
+  { match: 'glp|ozempic|wegovy|semaglutide|mounjaro|tirzepatide|zepbound', reply: `The GLP-1 Companion plan has smaller 3–4oz protein portions with fibre-rich sides like quinoa and Brussels sprouts: about ${Q_GLP.avg.kcal} kcal and ${Q_GLP.avg.p}g protein a meal (est.). 14 small meals are ${m2(Q_GLP.ss)} with Subscribe & Save. It's food, not medical advice, so follow your prescriber's guidance.`, act: ['Build GLP-1 Companion', () => { JWC.chat.close(); buildPlan('glp'); }] },
+  { match: 'which plan|best plan|recommend|lose weight|fat loss|bulk|muscle|gain', reply: `The quiz above takes about a minute. Quick guide (est. per meal): Lean ${Q_LEAN.avg.kcal} kcal / ${Q_LEAN.avg.p}g protein, Lean Bulk ${Q_BULK.avg.kcal} / ${Q_BULK.avg.p}g, Athlete ${Q_ATH.avg.kcal} / ${Q_ATH.avg.p}g, Protein & Greens ${Q_PG.avg.kcal} / ${Q_PG.avg.p}g with about ${Q_PG.avg.c}g carbs, GLP-1 Companion ${Q_GLP.avg.kcal} / ${Q_GLP.avg.p}g, and Busy Family for households.`, act: ['Start the quiz', () => { JWC.chat.close(); go('quiz', '#q-title'); }] },
+  { match: 'freezer|monthly|once a month|how long|keep|frozen', reply: `Every Meal Butler meal is cooked, portioned and flash-frozen in a vacuum-sealed bag, so a monthly Freezer Fill works: one delivery and one route fee a month. Keep the bags frozen and follow the date on each. A Lean Freezer Fill of 20 meals is ${m2(Q_LEAN20.ss)} with Subscribe & Save.`, act: ['Make mine monthly', () => { JWC.chat.close(); makeMonthly(); }] },
+  { match: 'family|kids|household|partner|wife|husband|share', reply: `A household box puts everyone's plan in one delivery with name tags on the packing list. Example: Lean Bulk for one adult, GLP-1 Companion for another, plus 6 kids' plates, ${m2(HH_EX.ss)} every 2 weeks with Subscribe & Save.`, act: ['Build a household box', () => { JWC.chat.close(); openHousehold(); }] },
+  { match: 'switch|goodfood|factor|livefit|power kitchen|hellofresh|other service', reply: `Welcome. Tell the quiz which service you used and we'll take $25 off your first subscribed box (concept offer). Plan meals here run ${m2(MIN_PER)} to ${m2(MAX_PER)} with Subscribe & Save.` },
+  { match: 'price|cost|how much|per meal|cheap|expensive', reply: `With 10% Subscribe & Save, plan meals are ${m2(MIN_PER)} to ${m2(MAX_PER)} each (est. from our current prices). Most boxes run about $100 to $260, depending on plan and size. Route delivery is $20–$35 with a $100 minimum, or free pickup at Brimley Rd.` },
+  { match: "swap|change meal|don'?t like|substitut|replace", reply: 'Swap any meal for another one in your plan until Sunday night. Chicken plates can switch flavour too: Greek Lemon, Korean BBQ, Teriyaki, Arabic 7 Spice or BBQ.' },
+  { match: "butcher'?s pick|choose for me|default|don'?t want to choose", reply: "If you don't change your box by Sunday night, we send the Butcher's Pick for your plan. The kitchen rotates flavours so the weeks don't feel the same." }
+];
+JWC.init({
+  n: 1,
+  teamNote: "The JW team sees subscribers, Monday's prep sheet, route impact, and AI drafts (menus, reminders, save offers) waiting for approval.",
+  checkout: { title: 'Your Meal Butler order' },
+  chat: {
+    name: 'Ask the Butler',
+    role: AGENTS.concierge + ' · answers from J&W’s plan sheets',
+    greeting: "Hi, I'm the Butler. I can help you pick a plan, explain Subscribe & Save, or skip a week. What's your goal?",
+    suggestions: ['Which plan fits me?', 'How do skip and pause work?', "I'm on a GLP-1 medicine", 'Can my family share one box?', 'What does a Freezer Fill cost?'],
+    rules: CHAT_RULES.map(r => ({ match: new RegExp(r.match, 'i'), reply: r.act ? () => ({ text: r.reply, action: { label: r.act[0], run: r.act[1] } }) : r.reply }))
+  }
+});
+
+/* ---------- static renders: hero price card, plan cards, bands ---------- */
+function renderHeroPrice() {
+  const pct = v => (v / 30 * 100).toFixed(1) + '%';
+  $('#hero-price').innerHTML = `
+    <div class="flex items-center justify-between gap-2"><p class="gp-eyebrow text-jslate">Price per meal</p><span class="gp-concept">Concept</span></div>
+    <p class="mt-3 text-jink"><span class="text-[15px] text-jmuted">From</span> <span class="font-display text-[46px] leading-none font-semibold">${m2(MIN_PER)}</span> <span class="text-[15px] text-jmuted">a meal</span></p>
+    <p class="text-[15px] mt-2 text-jink">with Subscribe &amp; Save. Most plans ${m2(CORE_MIN)} to ${m2(CORE_MAX)} a meal.</p>
+    <div class="gp-range mt-4" role="img" aria-label="J&W plans ${m2(MIN_PER)} to ${m2(MAX_PER)} a meal, premium GTA goal plans about $16 to $27 a meal">
+      <span class="track"></span>
+      <span class="band" style="left:${pct(MIN_PER)};width:calc(${pct(MAX_PER)} - ${pct(MIN_PER)});background:var(--navy)"></span>
+      <span class="band" style="left:${pct(16)};width:calc(${pct(27)} - ${pct(16)});background:#C9B999"></span>
+    </div>
+    <div class="flex justify-between text-[12px] mt-1"><span class="font-semibold text-jnavy">J&amp;W plans</span><span class="font-semibold text-[#6B5A35]">Premium GTA plans</span></div>
+    <p class="text-[12.5px] text-jmuted mt-3 leading-snug">Premium GTA goal plans list at about $16 to $27 a meal (public prices, Oct 2026).</p>`;
+}
+function renderPlans() {
+  $('#plan-grid').innerHTML = PLANS.map(pl => {
+    const q = quote(pl.k);
+    return `<article class="gp-plan" style="--acc:${pl.acc}" aria-labelledby="pl-${pl.k}">
+      <div class="flex items-start justify-between gap-2"><p class="gp-eyebrow" style="color:${pl.accText}">${esc(pl.name.toUpperCase())} · ${esc(pl.eyebrow)}</p><span class="gp-concept">Concept</span></div>
+      <h3 id="pl-${pl.k}" class="font-display text-[26px] leading-tight mt-1">${esc(pl.name)}</h3>
+      <p class="text-jmuted mt-1 text-[15px]">${esc(pl.promise)}</p>
+      <div class="gp-ph mt-4">${pl.photos.map(id => { const p = P(id); return `<img src="${esc(JWC.img(p, 300))}" alt="${esc(p.name)}" width="150" height="150" loading="lazy">`; }).join('')}</div>
+      <div class="flex flex-wrap gap-1.5 mt-4" aria-label="Average per meal, estimated">${macroChips(q.avg)}</div>
+      <div class="mt-4 flex items-end justify-between gap-3">
+        <div><p class="font-display text-[34px] leading-none font-semibold">${m2(q.per)}<span class="font-sans text-[14px] font-normal text-jmuted"> a ${unit(pl.k, 1)}</span></p><p class="text-[13px] font-semibold text-jgreen mt-1.5">with Subscribe &amp; Save</p></div>
+        <p class="text-right text-[13px] text-jmuted leading-snug">One-off box<br><b class="text-jink text-[14px]">${m2(q.oneOff)}</b></p>
+      </div>
+      <ul class="gp-bullets mt-4">${pl.bullets.map(b => `<li>${esc(b)}</li>`).join('')}<li>${q.size} ${unit(pl.k, q.size)} ${m2(q.ss)} with Subscribe &amp; Save</li></ul>
+      ${pl.fine ? `<p class="text-[12.5px] text-jmuted mt-3 leading-snug">${esc(pl.fine)}</p>` : ''}
+      <div class="mt-auto pt-5"><button type="button" class="gp-btn gp-btn-navy w-full" data-build="${pl.k}">Build this plan</button></div>
+    </article>`;
+  }).join('');
+  $$('[data-build]').forEach(b => b.addEventListener('click', () => buildPlan(b.dataset.build)));
+}
+function renderBands() {
+  $('#ff-example').innerHTML = `<b>Lean Freezer Fill, 20 meals:</b> ${m2(Q_LEAN20.ss)} a month with Subscribe &amp; Save (${m2(Q_LEAN20.per)} a meal). <span class="gp-concept">Concept</span>`;
+  const colors = []; pick('lean', 20).forEach(l => { for (let i = 0; i < l.qty; i++) colors.push(TYPE_COL[getMeal(l.mid).type]); });
+  renderBags($('#ff-stack'), colors, 20, false);
+  $('#hh-example').innerHTML = `
+    <p class="gp-eyebrow text-jslate">Example box</p>
+    <ul class="mt-3 space-y-2.5">
+      <li class="flex items-center justify-between gap-3"><span class="gp-nametag">Alex · Lean Bulk</span><span class="text-[14px] text-jmuted">10 meals · ${m2(HH_EX.a.oneOff)}</span></li>
+      <li class="flex items-center justify-between gap-3"><span class="gp-nametag">Sam · GLP-1 Companion</span><span class="text-[14px] text-jmuted">10 small meals · ${m2(HH_EX.s.oneOff)}</span></li>
+      <li class="flex items-center justify-between gap-3"><span class="gp-nametag">Kids</span><span class="text-[14px] text-jmuted">6 plates · ${m2(HH_EX.kids.sub)}</span></li>
+    </ul>
+    <div class="border-t border-jline mt-4 pt-4 flex flex-wrap items-end justify-between gap-2">
+      <p class="text-[14px] text-jmuted">One box, one route fee<br><s>${m2(HH_EX.one)}</s> one-off</p>
+      <p class="text-right"><span class="font-display text-[30px] font-semibold leading-none">${m2(HH_EX.ss)}</span><br><span class="text-[13px] font-semibold text-jgreen">every 2 weeks with Subscribe &amp; Save</span></p>
+    </div>`;
+}
+
+/* ---------- freezer-bag stack (the "wow") ---------- */
+function renderBags(el, colors, size, animate) {
+  if (!el) return;
+  const slots = Math.max(size, colors.length), prev = +(el.dataset.filled || 0);
+  while (el.children.length > slots) el.lastElementChild.remove();
+  for (let i = 0; i < slots; i++) {
+    let b = el.children[i];
+    if (!b) { b = document.createElement('span'); el.appendChild(b); }
+    const filled = i < colors.length;
+    let cls = 'gp-fb' + (filled ? '' : ' empty') + (i >= size ? ' over' : '');
+    if (filled && animate && !RM && i >= prev) { b.className = cls; void b.offsetWidth; cls += ' drop'; b.style.animationDelay = Math.min(i - prev, 40) * 32 + 'ms'; }
+    b.className = cls;
+    b.style.setProperty('--c', colors[i] || 'transparent');
+  }
+  el.dataset.filled = colors.length;
+}
+const bagColors = lines => { const c = []; lines.forEach(l => { for (let i = 0; i < l.qty; i++) c.push(TYPE_COL[getMeal(l.mid).type] || '#154D8E'); }); return c; };
+
+/* ---------- quiz ---------- */
+const QS = [
+  { k: 'goal', q: "What's your main goal?", cols: 'sm:grid-cols-2', opts: [['fat', 'Lose fat'], ['muscle', 'Build muscle'], ['train', 'Train hard (5+ days)'], ['starch', 'Eat fewer starches'], ['glp', "I'm eating less on a GLP-1 medicine"], ['family', 'Feed the whole family']],
+    note: v => v === 'glp' ? "Good. We'll build around that. Our plans are food, not medical advice." : "Good. We'll build around that." },
+  { k: 'days', q: 'How many days a week do you train?', cols: 'grid-cols-3 sm:grid-cols-5', opts: [['0', '0'], ['1-2', '1–2'], ['3-4', '3–4'], ['5-6', '5–6'], ['7', '7']],
+    note: v => ({ '0': 'No problem. Plenty of our customers just want to eat well.', '1-2': "Nice. We'll keep portions sensible.", '3-4': 'Solid. Protein in every meal will help.', '5-6': "That's a lot of training. We'll keep you fed.", '7': "Every day. We'll keep you fed." })[v] },
+  { k: 'who', q: "Who's eating?", cols: 'sm:grid-cols-3', opts: [['me', 'Just me'], ['two', 'Two adults'], ['family', 'A family with kids']],
+    note: v => v === 'me' ? 'Got it, one plan.' : "We can pack everyone's plan in one box." },
+  { k: 'mpw', q: 'How many lunches and dinners should we cover each week?', cols: 'grid-cols-2 sm:grid-cols-4', opts: [['5', '5'], ['7', '7'], ['10', '10', 'Most popular'], ['14', '14']],
+    note: v => ({ '5': '5 a week covers your weekday lunches.', '7': '7 a week is one meal a day.', '10': '10 a week covers lunch and dinner, Monday to Friday.', '14': '14 a week is lunch and dinner every day.' })[v] },
+  { k: 'rhythm', q: 'How often should we deliver?', cols: 'sm:grid-cols-3', opts: [['w', 'Every week'], ['2w', 'Every 2 weeks', 'Most popular'], ['m', 'Once a month (Freezer Fill)']],
+    note: () => 'Our meals are frozen in vacuum packs, so a month at once works.' },
+  { k: 'avoid', q: 'Anything to leave out?', multi: 1, cols: 'grid-cols-2 sm:grid-cols-3', opts: [['fish', 'Fish'], ['red', 'Red meat'], ['egg', 'Eggs and dairy'], ['spicy', 'Spicy'], ['rice', 'Rice']],
+    note: () => 'Allergies? Call us at (416) 298-1350 before you order.' },
+  { k: 'sw', q: 'Are you switching from another meal service?', cols: 'sm:grid-cols-2', opts: [['no', 'No'], ['goodfood', 'Goodfood'], ['factor', 'Factor'], ['livefit', 'LiveFit'], ['other', 'Another meal-prep service']],
+    note: v => v === 'no' ? 'Welcome to J&W.' : "Welcome. We'll take $25 off your first subscribed box (concept offer)." },
+  { k: 'city', q: 'Where should we deliver?', type: 'city' }
+];
+let Q = store.get('quiz', null);
+if (!Q || !Q.a) Q = { step: 0, a: { avoid: [] }, done: false };
+const saveQ = () => store.set('quiz', Q);
+const answered = (s, v) => s.multi ? true : !!v;
+function renderQuiz(focus) {
+  const box = $('#quiz-box');
+  if (Q.done) { renderResult(focus); return; }
+  const s = QS[Q.step], v = Q.a[s.k], last = Q.step === QS.length - 1;
+  const opts = s.type === 'city'
+    ? `<label class="gp-label" for="q-city">Your city</label><select id="q-city" class="gp-select">${cityOptions(v, true)}</select><p id="q-route" class="mt-3 text-[15px] font-semibold text-jnavy min-h-[24px]"></p>`
+    : `<div class="grid grid-cols-1 ${s.cols} gap-2.5">${s.opts.map(o => {
+        const on = s.multi ? (v || []).indexOf(o[0]) > -1 : v === o[0];
+        return `<button type="button" class="gp-opt${s.multi ? ' sq' : ''}" aria-pressed="${on}" data-v="${o[0]}"><span class="tick" aria-hidden="true"></span><span>${esc(o[1])}</span>${o[2] ? `<span class="pop">${esc(o[2])}</span>` : ''}</button>`;
+      }).join('')}</div>`;
+  box.innerHTML = `<div class="gp-card gp-quiz">
+    <div class="px-5 sm:px-8 pt-6">
+      <div class="flex items-center justify-between gap-3"><p class="text-[13px] font-semibold text-jmuted">Question ${Q.step + 1} of ${QS.length}</p>${Q.step ? `<button type="button" class="gp-link text-[13px]" id="q-restart">Start over</button>` : ''}</div>
+      <ol class="gp-track mt-3" aria-hidden="true">${QS.map((_, i) => `<li><span class="dot ${i < Q.step ? 'done' : i === Q.step ? 'cur' : ''}"></span>${i < QS.length - 1 ? `<span class="bar ${i < Q.step ? 'done' : ''}"></span>` : ''}</li>`).join('')}</ol>
+    </div>
+    <div class="px-5 sm:px-8 py-6" role="group" aria-labelledby="q-title">
+      <h3 id="q-title" tabindex="-1" class="font-display text-[25px] sm:text-[29px] leading-tight mb-5">${esc(s.q)}</h3>
+      ${s.multi ? '<p class="text-[14px] text-jmuted -mt-3 mb-4">Pick any that apply, or none.</p>' : ''}
+      ${opts}
+      <div id="q-note" class="mt-4" aria-live="polite"></div>
+    </div>
+    <div class="px-5 sm:px-8 pb-6 flex items-center justify-between gap-3">
+      <button type="button" class="gp-btn gp-btn-line" id="q-back"${Q.step ? '' : ' disabled'}>Back</button>
+      <button type="button" class="gp-btn gp-btn-navy min-w-[140px]" id="q-next"${answered(s, v) ? '' : ' disabled'}>${last ? 'See my plan' : 'Next'}</button>
+    </div>
+  </div>`;
+  const note = () => {
+    const val = Q.a[s.k], n = $('#q-note');
+    if (s.type === 'city') {
+      const rt = mainRoute(val); $('#q-route').textContent = val ? (rt.pickup ? 'Free pickup at 2201 Brimley Rd. Ready Mon–Fri 9–6, Sat 10–4.' : rt.line) : '';
+      n.innerHTML = val ? '' : `<div class="gp-note">We deliver on weekly routes, Tuesday to Friday. Pickup at Brimley Rd is always free.</div>`;
+    } else {
+      const t = s.multi || val ? s.note(val) : '';
+      n.innerHTML = t ? `<div class="gp-note">${esc(t)}</div>` : '';
+    }
+    $('#q-next').disabled = !answered(s, Q.a[s.k]);
+  };
+  note();
+  $$('.gp-opt', box).forEach(b => b.addEventListener('click', () => {
+    if (s.multi) {
+      const arr = Q.a[s.k] || []; const i = arr.indexOf(b.dataset.v);
+      if (i > -1) arr.splice(i, 1); else arr.push(b.dataset.v);
+      Q.a[s.k] = arr; b.setAttribute('aria-pressed', i < 0 ? 'true' : 'false');
+    } else {
+      Q.a[s.k] = b.dataset.v;
+      $$('.gp-opt', box).forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+    }
+    saveQ(); note();
+  }));
+  const sel = $('#q-city'); if (sel) sel.addEventListener('change', () => { Q.a.city = sel.value; saveQ(); note(); });
+  $('#q-back').addEventListener('click', () => { if (Q.step) { Q.step--; saveQ(); renderQuiz(true); } });
+  $('#q-next').addEventListener('click', () => {
+    if (!answered(s, Q.a[s.k])) return;
+    if (!last) { Q.step++; saveQ(); renderQuiz(true); return; }
+    box.innerHTML = `<div class="gp-card gp-quiz px-6 py-14 flex flex-col items-center text-center gap-4" role="status"><div class="gp-spin" aria-hidden="true"></div><p class="font-display text-[22px]">Building your plan from this week's Meal Butler menu…</p><p class="text-jmuted text-[14px]">${esc(AGENTS.macro)} is matching your answers to six plans.</p></div>`;
+    setTimeout(() => {
+      Q.done = true; saveQ();
+      store.set('quizCount', (store.get('quizCount', 0) || 0) + 1);
+      store.set('lastPlan', decide(Q.a).k);
+      renderResult(true); drawTeam();
+    }, 1200);
+  });
+  const rs = $('#q-restart'); if (rs) rs.addEventListener('click', restartQuiz);
+  if (focus) { const t = $('#q-title'); if (t) t.focus({ preventScroll: true }); }
+}
+function restartQuiz() { Q = { step: 0, a: { avoid: [] }, done: false }; saveQ(); renderQuiz(true); go('quiz'); }
+function decide(a) {
+  let k;
+  if (a.goal === 'glp') k = 'glp';
+  else if (a.who === 'family' || a.goal === 'family') k = 'fam';
+  else if (a.goal === 'starch') k = 'pg';
+  else if (a.goal === 'train' || (a.goal === 'muscle' && (a.days === '5-6' || a.days === '7'))) k = 'ath';
+  else if (a.goal === 'muscle') k = 'bulk';
+  else k = 'lean';
+  const rhythm = RHY[a.rhythm] ? a.rhythm : '2w', want = (+a.mpw || 5) * RHY[rhythm].weeks;
+  let size = snapUp(want), sizeNote = '';
+  if (k === 'fam' && size < 20) { size = 20; sizeNote = 'Family boxes start at 20 plates.'; }
+  else if (want < 10) sizeNote = 'Our smallest box is 10 meals, so we rounded up.';
+  else if (want > 40) sizeNote = 'Our biggest box is 40 meals, so we capped it there.';
+  else if (size !== want) sizeNote = `You asked for ${want}; the nearest box is ${size}.`;
+  return { k: k, rhythm: rhythm, size: size, want: want, sizeNote: sizeNote, avoid: (a.avoid || []).slice(), credit: !!a.sw && a.sw !== 'no', city: a.city || '' };
+}
+/* Lean note names only what the (filtered) Butcher's Pick really contains */
+function leanWords(avoid) {
+  const rot = rotation('lean', avoid).map(getMeal), has = t => rot.some(m => m.type === t);
+  const pr = [['turkey', 'turkey'], ['fish', 'tilapia'], ['chicken', 'chicken']].filter(x => has(x[0])).map(x => x[1]);
+  const list = pr.length > 1 ? pr.slice(0, -1).join(', ') + ' and ' + pr[pr.length - 1] : pr.join('');
+  return list + ', and a measured serving of ' + (rot.some(m => m.tags.indexOf('rice') > -1) ? 'rice or sweet potato' : 'sweet potato');
+}
+function whyText(d, a) {
+  const dl = (a.days || '').replace('-', '–');
+  const subj = a.days && a.days !== '0' ? `You train ${dl} days a week and want` : 'You want';
+  let t = {
+    bulk: `${subj} to build muscle, so every meal has a 6oz protein and a proper serving of rice, potatoes or quinoa.`,
+    ath: a.goal === 'train' ? `You train ${dl || '5+'} days a week, so we lead with grab-and-go fajita wraps and big plates, and suggest the Breakfast 5-pack for heavy weeks.` : `You train ${dl} days a week and want to build muscle, so you get grab-and-go wraps plus big plates, with the Breakfast 5-pack for heavy weeks.`,
+    lean: `${subj} to lose fat, so we picked lighter 4oz plates with lean ${leanWords(d.avoid)}.`,
+    pg: `${subj} to eat fewer starches, so rice and potatoes make way for cauliflower rice and green veg, with a 4–6oz protein in every meal.`,
+    glp: "You're eating less on a GLP-1 medicine, so portions are smaller and protein comes first, with fibre-rich sides like quinoa and Brussels sprouts. It's food, not medical advice: follow your prescriber's guidance.",
+    fam: "You're feeding a family, so the box mixes grown-up plates with kid-sized meatball and tender plates, all in one delivery."
+  }[d.k];
+  if (d.avoid.length) {
+    const names = d.avoid.map(x => AVOID[x]); const all = rotation(d.k, d.avoid).length === PLAN[d.k].meals.length && PLAN[d.k].meals.some(id => getMeal(id).tags.some(tg => d.avoid.indexOf(tg) > -1));
+    t += all ? ` Most meals in this plan include ${names.join(' or ')}, so call us and we'll adjust it by hand.` : ` We left out ${names.join(', ').replace(/, ([^,]*)$/, ' and $1')}.`;
+  }
+  return t;
+}
+function renderResult(focus) {
+  const a = Q.a, d = decide(a), pl = PLAN[d.k], q = quote(d.k, d.size, d.avoid), R = RHY[d.rhythm], rt = mainRoute(d.city);
+  const monthly = Math.round(q.ss * R.perYear / 12);
+  const rsize = d.k === 'fam' ? Math.max(20, snapUp(+a.mpw || 5)) : snapUp(+a.mpw || 5), rq = rsize === d.size ? q : quote(d.k, rsize, d.avoid);
+  const full = r2(rq.oneOff * 6), rsave = r2(full * 0.12), rpay = r2(full - rsave);
+  const u = unit(d.k, d.size);
+  $('#quiz-box').innerHTML = `<div class="gp-card max-w-[960px] mx-auto overflow-hidden" style="border-top:6px solid var(--slate)">
+    <div class="p-5 sm:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-2"><p class="gp-eyebrow text-jslate">Your match</p><button type="button" class="gp-link text-[14px]" id="r-retake">Retake the quiz</button></div>
+      <h3 id="r-title" tabindex="-1" class="font-display text-[32px] sm:text-[40px] leading-tight mt-1">Your plan: ${esc(pl.name)}</h3>
+      <div class="mt-4 rounded-2xl bg-[#F6F5FA] p-4 sm:p-5">
+        <p class="gp-agentlbl"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.2 6.6L21 11l-6.8 2.4L12 20l-2.2-6.6L3 11l6.8-2.4z"/></svg>Drafted by ${esc(AGENTS.macro)} from your answers</p>
+        <p class="font-semibold mt-3">Why this plan</p>
+        <p class="mt-1 text-[16px] leading-relaxed">${esc(whyText(d, a))}</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-5">
+        <div><p class="text-[13px] font-semibold text-jmuted">Per ${unit(d.k, 1)}, on average</p><div class="flex flex-wrap gap-1.5 mt-2">${macroChips(q.avg)}</div></div>
+        <div><p class="text-[13px] font-semibold text-jmuted">Your box</p><p class="mt-1 text-[16px]"><b>${d.size} ${u} ${R.short}</b> · ${m2(q.ss)} with Subscribe &amp; Save (${m2(q.per)} a ${unit(d.k, 1)})</p>${d.sizeNote ? `<p class="text-[13px] text-jmuted mt-1">${esc(d.sizeNote)}</p>` : ''}</div>
+        <div><p class="text-[13px] font-semibold text-jmuted">Delivery</p><p class="mt-1 text-[16px]">${d.city ? esc(rt.line) : 'Choose your route at checkout'}</p></div>
+        <div><p class="text-[13px] font-semibold text-jmuted">Monthly cost</p><p class="mt-1 text-[16px]">About ${m0(monthly)} a month on average (${R.perYear} boxes a year)${rt.pickup || !d.city ? '' : ', plus route fees'}</p></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-3 mt-7">
+        <div class="gp-offer">
+          <p class="font-display text-[20px]">Try one box</p>
+          <p class="text-[13.5px] text-jmuted">No subscription</p>
+          <p class="font-display text-[30px] font-semibold mt-3">${m2(q.oneOff)}</p>
+          <ul class="text-jmuted"><li>${d.size} ${u}, Butcher's Pick</li><li>Add it to your order and check out</li></ul>
+          <div class="mt-auto pt-4"><button type="button" class="gp-btn gp-btn-line w-full" id="r-try">Try one box</button></div>
+        </div>
+        <div class="gp-offer rec">
+          <p><span class="gp-rec">Recommended</span></p><p class="font-display text-[20px] mt-2">Subscribe &amp; Save</p>
+          <p class="text-[13.5px] text-white/85">${R.label}</p>
+          <p class="font-display text-[30px] font-semibold mt-3">${m2(q.ss)} <span class="font-sans text-[14px] font-normal text-white/85">(${m2(q.per)} a ${unit(d.k, 1)})</span></p>
+          <ul><li>10% off every box</li><li>Skip, swap or pause until Sunday night</li><li>Butcher's Pick if you don't choose</li>${d.credit ? '<li><b>$25 switch credit applied</b> to your first box</li>' : ''}</ul>
+          <div class="mt-auto pt-4"><button type="button" class="gp-btn gp-btn-white w-full" id="r-sub">Subscribe &amp; Save</button></div>
+        </div>
+        <div class="gp-offer">
+          <div class="flex items-center justify-between gap-2"><p class="font-display text-[20px]">6-Week Reset</p><span class="gp-concept">Concept</span></div>
+          <p class="text-[13.5px] text-jmuted">6 weekly boxes, prepaid, 12% off. Starts the week you choose.</p>
+          <p class="font-display text-[30px] font-semibold mt-3">${m2(rpay)}</p>
+          <p class="text-[13.5px] text-jmuted">${esc(pl.name)}: ${m2(rpay)} for ${rsize * 6} ${unit(d.k, rsize * 6)}</p>
+          <div class="mt-auto pt-4"><button type="button" class="gp-btn gp-btn-line w-full" id="r-reset">6-Week Reset</button></div>
+        </div>
+      </div>
+      ${a.who && a.who !== 'me' && d.k !== 'fam' ? `<p class="mt-5 text-[15px]">Feeding more than one person? <button type="button" class="gp-link" id="r-hh">Build a household box instead</button></p>` : ''}
+      ${d.k === 'glp' ? `<p class="text-[13px] text-jmuted mt-4">${esc(PLAN.glp.fine)}</p>` : ''}
+    </div>
+  </div>`;
+  $('#r-retake').addEventListener('click', restartQuiz);
+  $('#r-try').addEventListener('click', () => loadBuilder(d, false));
+  $('#r-sub').addEventListener('click', () => loadBuilder(d, true));
+  $('#r-reset').addEventListener('click', () => openReset(d.k, rsize, d.city, d.avoid));
+  const hh = $('#r-hh'); if (hh) hh.addEventListener('click', () => openHousehold(d.k, d.city));
+  if (focus) $('#r-title').focus({ preventScroll: true });
+}
+
+/* ---------- builder ---------- */
+function defaultB(k) { return { plan: k || 'lean', size: PLAN[k || 'lean'].size, rhythm: '2w', lines: pick(k || 'lean', PLAN[k || 'lean'].size), add: { bfast: 0, souv: 0 }, sub: true, city: 'Toronto', credit: false, avoid: [] }; }
+let B = store.get('builder', null);
+if (!B || !PLAN[B.plan] || !Array.isArray(B.lines) || B.lines.some(l => !getMeal(l.mid))) B = defaultB('lean');
+const saveB = () => store.set('builder', B);
+function totalsB() {
+  const t = sumLines(B.lines), addSub = r2(B.add.bfast * BFAST.price + B.add.souv * SOUV.price), raw = t.raw + B.add.bfast * BFAST.price + B.add.souv * SOUV.price, oneOff = r2(raw);
+  const box = B.sub ? ssRaw(raw) : oneOff, disc = r2(oneOff - box);
+  const perMeal = t.count ? r2((B.sub ? ssRaw(t.raw) : t.sub) / t.count) : 0;
+  const rt = mainRoute(B.city), R = RHY[B.rhythm], credit = B.sub && B.credit ? 25 : 0;
+  return Object.assign({}, t, { addSub: addSub, oneOff: oneOff, disc: disc, box: box, perMeal: perMeal, rt: rt, R: R, credit: credit, below: !rt.pickup && box < rt.min, need: r2(rt.min - box) });
+}
+function fillTo(size) {
+  const rot = rotation(B.plan, B.avoid); let t = sumLines(B.lines).count, i = t;
+  while (t < size) { const id = rot[i % rot.length]; let l = B.lines.find(x => x.mid === id); if (!l) { l = { mid: id, qty: 0 }; B.lines.push(l); } l.qty++; t++; i++; }
+}
+function trimTo(size) {
+  let t = sumLines(B.lines).count;
+  while (t > size) { let best = null; B.lines.forEach(l => { if (l.qty && (!best || l.qty >= best.qty)) best = l; }); if (!best) break; best.qty--; t--; }
+}
+function samePick(lines, k, size, avoid) {
+  const a = {}, b = {}; lines.forEach(l => { if (l.qty) a[l.mid] = (a[l.mid] || 0) + l.qty; }); pick(k, size, avoid).forEach(l => { if (l.qty) b[l.mid] = l.qty; });
+  const ka = Object.keys(a), kb = Object.keys(b); return ka.length === kb.length && ka.every(x => a[x] === b[x]);
+}
+function setSize(n, quiet) {
+  const old = B.size, untouched = samePick(B.lines, B.plan, old, B.avoid); B.size = n;
+  const t = sumLines(B.lines).count;
+  if (untouched) B.lines = pick(B.plan, n, B.avoid);
+  else if (t < n) fillTo(n); else if (t > n) trimTo(n);
+  if (!quiet && n !== old) JWC.toast(`${n} ${unit(B.plan, n)} a box. Bag ${n > old ? 'topped up' : 'trimmed'} with the Butcher's Pick.`);
+}
+function setRhythm(r) {
+  if (r === B.rhythm) return;
+  const from = B.rhythm, f = RHY[r].weeks / RHY[from].weeks; let note = '';
+  B.rhythm = r;
+  if (r === 'm' || from === 'm') {
+    const target = r === 'm' ? snapUp(Math.min(40, B.size * f)) : Math.max(10, SIZES.filter(s => s <= Math.max(10, B.size * f)).pop() || 10);
+    if (target !== B.size) {
+      const k = target / B.size;
+      if (samePick(B.lines, B.plan, B.size, B.avoid)) B.lines = pick(B.plan, target, B.avoid);
+      else if (Number.isInteger(k)) B.lines.forEach(l => { l.qty *= k; });
+      else if (Number.isInteger(1 / k) && B.lines.every(l => l.qty % (1 / k) === 0)) B.lines.forEach(l => { l.qty = l.qty * k; });
+      else { if (target > B.size) fillTo(target); else trimTo(target); }
+      B.size = target;
+      note = r === 'm' ? ` Your box is now a month of ${unit(B.plan, 2)}: ${target}.` : ` Box back to ${target} ${unit(B.plan, target)}.`;
+    }
+  }
+  JWC.toast(RHY[r].label + '.' + note);
+}
+const quizCredit = () => !!(Q && Q.done && Q.a.sw && Q.a.sw !== 'no');
+const restack = () => { const st = $('#bag-stack'); if (st) st.dataset.filled = 0; };
+function buildPlan(k) {
+  B = Object.assign(defaultB(k), { city: B.city, credit: quizCredit(), avoid: [] });
+  restack(); saveB(); renderBuilder(true); go('builder');
+}
+function loadBuilder(d, sub) {
+  B = { plan: d.k, size: d.size, rhythm: d.rhythm, lines: pick(d.k, d.size, d.avoid), add: { bfast: 0, souv: 0 }, sub: sub, city: d.city || B.city || 'Toronto', credit: d.credit, avoid: d.avoid };
+  restack(); saveB(); renderBuilder(true); go('builder');
+  JWC.toast(sub ? `Your ${PLAN[d.k].name} plan is pre-filled with the Butcher's Pick.` : `One ${PLAN[d.k].name} box, pre-filled with the Butcher's Pick.`);
+}
+function makeMonthly() { setRhythm('m'); saveB(); renderBuilder(true); go('builder'); }
+function renderBuilder(anim) {
+  const pl = PLAN[B.plan];
+  $('#b-name').textContent = pl.name;
+  $('#b-plans').innerHTML = PLANS.map(p => `<button type="button" aria-pressed="${p.k === B.plan}" data-plan="${p.k}">${esc(p.name)}</button>`).join('');
+  $('#b-avoid').innerHTML = B.avoid && B.avoid.length ? `<p class="gp-chip">Leaving out ${esc(B.avoid.map(x => AVOID[x]).join(', '))} (from your quiz) <button type="button" class="gp-link text-[13px]" id="b-avoid-x">Clear</button></p>` : '';
+  $('#b-size').innerHTML = SIZES.map(n => `<button type="button" aria-pressed="${n === B.size}" data-size="${n}">${n} ${unit(B.plan, n)}</button>`).join('');
+  $('#b-size-note').textContent = B.size >= 28 ? 'Big boxes suit a monthly Freezer Fill or a household.' : `About ${m2(r2(quote(B.plan, B.size).oneOff / B.size))} a ${unit(B.plan, 1)} before Subscribe & Save.`;
+  $('#b-rhythm').innerHTML = Object.keys(RHY).map(r => `<button type="button" aria-pressed="${r === B.rhythm}" data-r="${r}">${RHY[r].label}</button>`).join('');
+  $('#b-rhythm-note').textContent = B.rhythm === 'm' ? 'One delivery and one route fee a month. Your meals stay frozen in their vacuum bags.' : B.rhythm === 'w' ? 'A box every week on your route day.' : 'Most popular: one delivery covers two weeks.';
+  renderLines(); renderAddons();
+  $('#b-city').innerHTML = cityOptions(B.city, false);
+  renderRoute(); renderBag(anim); saveB();
+}
+function renderRoute() { const rt = mainRoute(B.city); $('#b-route').innerHTML = `<span class="font-semibold ${rt.pickup ? 'text-jgreen' : 'text-jnavy'}">${esc(rt.line)}</span>`; }
+function lineHTML(l) {
+  const f = info(l.mid), m = f.m, avoided = (B.avoid || []).filter(t => m.tags.indexOf(t) > -1);
+  return `<div class="gp-row${l.qty ? '' : ' is-zero'}" data-row="${esc(l.mid)}">
+    <img src="${esc(f.img)}" alt="" width="60" height="60" loading="lazy">
+    <div class="gp-rowtxt min-w-0">
+      <p class="font-semibold text-[15px] leading-snug">${esc(m.name)}${m.base ? ' <span class="gp-chip" style="padding:3px 7px;font-size:11px">Flavour swap</span>' : ''}</p>
+      <p class="text-[13px] text-jmuted leading-snug mt-0.5">${esc(f.line)}</p>
+      <p class="mt-1.5 text-[12.5px] text-jmuted">${f.mac.kcal} kcal · ${f.mac.p}g protein · ${f.mac.c}g carbs · ${f.mac.f}g fat <span class="gp-est">est.</span>${avoided.length ? ` · <span class="text-[#774709] font-semibold">Has ${esc(avoided.map(x => AVOID[x]).join(', '))}</span>` : ''}</p>
+    </div>
+    <div class="gp-rowctl">
+      <div class="gp-qty"><button type="button" data-q="-1" aria-label="One less ${esc(m.name)}">−</button><output aria-live="polite">${l.qty}</output><button type="button" data-q="1" aria-label="One more ${esc(m.name)}">+</button></div>
+      <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-swap aria-label="Swap one ${esc(m.name)}"${l.qty ? '' : ' disabled'}>Swap</button>
+    </div>
+  </div>`;
+}
+function renderLines() { $('#b-lines').innerHTML = B.lines.filter(l => l.qty || !getMeal(l.mid).base).map(lineHTML).join(''); }
+function renderAddons() {
+  const row = (key, o, desc) => `<div class="gp-row" data-add="${key}">
+    <img src="${esc(o.img)}" alt="" width="60" height="60" loading="lazy">
+    <div class="min-w-0"><p class="font-semibold text-[15px] leading-snug">${esc(o.name.replace(' (Concept)', ''))} ${key === 'bfast' ? '<span class="gp-concept">Concept</span>' : ''}</p><p class="text-[13px] text-jmuted mt-0.5">${esc(desc)}</p></div>
+    <div class="gp-rowctl"><div class="gp-qty"><button type="button" data-aq="-1" aria-label="One less ${esc(o.name)}">−</button><output>${B.add[key]}</output><button type="button" data-aq="1" aria-label="One more ${esc(o.name)}">+</button></div></div>
+  </div>`;
+  $('#b-addons').innerHTML = row('bfast', BFAST, `3 x Egg White Bites, Spinach & Feta (${m2(P('copy-of-feta-omelette-cups-cooked-portioned-2-pkg').price)} each) + 2 x Steel Cut Oats (${m2(P('steel-cut-oats').price)} each) = ${m2(BFAST.price)}`) + row('souv', SOUV, `Chicken Breast Souvlaki 6oz, cooked and portioned · ${m2(SOUV.price)}`);
+}
+function renderBag(anim) {
+  const t = totalsB(), pl = PLAN[B.plan], u = unit(B.plan, B.size), diff = B.size - t.count;
+  $('#bag-head').innerHTML = `<div class="flex items-start justify-between gap-3">
+      <div class="min-w-0"><p class="gp-eyebrow" style="color:${pl.accText}">Your box</p><h3 id="bag-h" class="font-display text-[22px] leading-tight mt-1">${esc(pl.name)} · ${B.size} ${u}</h3><p class="text-[13.5px] text-jmuted">${RHY[B.rhythm].label}${B.sub ? ' · Subscribe &amp; Save' : ' · one box'}</p></div>
+      <button type="button" class="gp-sheetx" id="bag-x" aria-label="Close box summary">×</button>
+    </div>
+    <p class="mt-3 text-[15px]"><b>${t.count} of ${B.size}</b> ${u} chosen</p>
+    <div class="gp-meter mt-2${t.count > B.size ? ' over' : ''}"><span style="width:${Math.min(100, t.count / B.size * 100)}%"></span></div>`;
+  renderBags($('#bag-stack'), bagColors(B.lines), B.size, anim !== false);
+  const types = {}; B.lines.forEach(l => { if (l.qty) types[getMeal(l.mid).type] = 1; });
+  $('#bag-legend').innerHTML = Object.keys(types).map(k => `<span><i style="background:${TYPE_COL[k]}"></i>${TYPE_LBL[k]}</span>`).join('') + '<span>One vacuum-sealed bag per meal</span>';
+  const fees = t.rt.pickup ? 'Free pickup' : B.sub ? `${t.R.perMonth} x ${m0(t.rt.fee)}` : `${m0(t.rt.fee)} for this box`;
+  const monthly = Math.round(t.box * t.R.perYear / 12);
+  $('#bag-body').innerHTML = `
+    ${t.avg ? `<p class="text-[13px] font-semibold text-jmuted mt-4">Average per ${unit(B.plan, 1)}</p><div class="flex flex-wrap gap-1.5 mt-1.5">${macroChips(t.avg)}</div>` : ''}
+    <div class="gp-toggle mt-4" role="group" aria-label="How to buy">
+      <button type="button" aria-pressed="${B.sub}" data-sub="1">Subscribe &amp; Save 10%</button>
+      <button type="button" aria-pressed="${!B.sub}" data-sub="0">One box only</button>
+    </div>
+    <div class="gp-sum mt-3">
+      <div class="r"><span>Meals (${t.count})</span><span>${m2(t.sub)}</span></div>
+      ${t.addSub ? `<div class="r"><span>Add-ons</span><span>${m2(t.addSub)}</span></div>` : ''}
+      <div class="r"><span>One-off subtotal</span><span>${m2(t.oneOff)}</span></div>
+      ${B.sub ? `<div class="r save"><span>Subscribe &amp; Save 10%</span><span>−${m2(t.disc)}</span></div>` : ''}
+      <div class="r tot"><span>${B.sub ? 'Each box' : 'Box total'}</span><span>${m2(t.box)}</span></div>
+      <div class="r"><span>Price per ${unit(B.plan, 1)}</span><span class="font-semibold">${m2(t.perMeal)}</span></div>
+      ${t.credit ? `<div class="r save"><span>Switch credit, first box <span class="gp-concept">Concept</span></span><span>−${m2(t.credit)}</span></div>` : ''}
+      <div class="r"><span>${B.sub ? 'Route fees a month' : 'Route fee'}</span><span class="font-semibold">${fees}</span></div>
+      ${B.sub ? `<p class="text-[12.5px] text-jmuted mt-1">${t.rt.pickup ? 'Pickup at 2201 Brimley Rd' : esc(t.rt.line)} · about ${m0(monthly)} a month before route fees (${t.R.perYear} boxes a year)</p>` : ''}
+    </div>
+    <div class="mt-3 space-y-2" id="bag-msgs">
+      ${diff > 0 ? `<p class="gp-warn">Add ${diff} more ${unit(B.plan, diff)} to fill your ${B.size}-${unit(B.plan, 1)} box, or tap Smart-fill.</p>` : ''}
+      ${diff < 0 ? `<p class="gp-warn">You have ${-diff} too many. Remove ${-diff} or pick a bigger box.</p>` : ''}
+      ${t.below && diff === 0 ? `<div class="gp-warn">Add ${m2(t.need)}, e.g. the Breakfast 5-pack, to reach the ${m0(t.rt.min)} route minimum, or pick up for free.<div class="flex flex-wrap gap-2 mt-2"><button type="button" class="gp-btn gp-btn-line gp-btn-sm" id="bag-addbf">Add the Breakfast 5-pack</button><button type="button" class="gp-btn gp-btn-line gp-btn-sm" id="bag-pickup">Pick up instead</button></div></div>` : ''}
+      ${diff === 0 && !t.below ? `<p class="gp-ok">Box full. ${B.sub ? 'You can change it until Sunday 11:59 pm.' : 'Ready to add to your order.'}</p>` : ''}
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mt-4">
+      <button type="button" class="gp-btn gp-btn-line" id="bag-fill">Smart-fill my box</button>
+      <button type="button" class="gp-btn gp-btn-navy" id="bag-go"${diff === 0 ? '' : ' disabled'}>${B.sub ? 'Start my plan' : 'Add box to order'}</button>
+    </div>
+    <p class="text-[12px] text-jmuted mt-3">Demo: nothing is sent or charged. Macros are estimates (est.).</p>`;
+  $('#sbar-count').textContent = `${t.count} of ${B.size} ${u} · ${m2(t.box)}`;
+  $('#sbar-total').textContent = B.sub ? `${RHY[B.rhythm].label} · Subscribe & Save` : 'One box, no subscription';
+}
+/* builder events (delegated once) */
+function bindBuilder() {
+  $('#b-plans').addEventListener('click', e => {
+    const b = e.target.closest('[data-plan]'); if (!b || b.dataset.plan === B.plan) return;
+    B.plan = b.dataset.plan; B.lines = pick(B.plan, B.size, B.avoid);
+    restack(); renderBuilder(true);
+  });
+  $('#b-avoid').addEventListener('click', e => { if (e.target.id === 'b-avoid-x') { B.avoid = []; renderBuilder(); JWC.toast('Showing every meal in the plan'); } });
+  $('#b-size').addEventListener('click', e => { const b = e.target.closest('[data-size]'); if (!b) return; setSize(+b.dataset.size); renderBuilder(true); });
+  $('#b-rhythm').addEventListener('click', e => { const b = e.target.closest('[data-r]'); if (!b) return; setRhythm(b.dataset.r); renderBuilder(true); });
+  $('#b-repick').addEventListener('click', () => { B.lines = pick(B.plan, B.size, B.avoid); renderBuilder(true); JWC.toast("Back to the Butcher's Pick"); });
+  $('#b-lines').addEventListener('click', e => {
+    const row = e.target.closest('[data-row]'); if (!row) return;
+    const l = B.lines.find(x => x.mid === row.dataset.row); if (!l) return;
+    const q = e.target.closest('[data-q]');
+    if (q) {
+      l.qty = Math.max(0, l.qty + (+q.dataset.q));
+      row.querySelector('output').textContent = l.qty;
+      row.classList.toggle('is-zero', !l.qty);
+      row.querySelector('[data-swap]').disabled = !l.qty;
+      renderBag(true); saveB(); return;
+    }
+    if (e.target.closest('[data-swap]')) openSwap(l.mid, PLAN[B.plan].meals, (to) => { JWC.toast(moveOne(B.lines, l.mid, to) + '. Bag re-priced.'); renderLines(); renderBag(false); saveB(); const nb = $(`[data-row="${CSS.escape(to)}"] [data-swap]`); if (nb) nb.focus(); });
+  });
+  $('#b-addons').addEventListener('click', e => {
+    const b = e.target.closest('[data-aq]'), row = e.target.closest('[data-add]'); if (!b || !row) return;
+    const k = row.dataset.add; B.add[k] = Math.max(0, B.add[k] + (+b.dataset.aq));
+    row.querySelector('output').textContent = B.add[k]; renderBag(false); saveB();
+  });
+  $('#b-city').addEventListener('change', e => { B.city = e.target.value; renderRoute(); renderBag(false); saveB(); });
+  $('#bag').addEventListener('click', e => {
+    const t = e.target.closest('button'); if (!t) return;
+    if (t.dataset.sub != null) { B.sub = t.dataset.sub === '1'; renderBag(false); saveB(); }
+    else if (t.id === 'bag-x') closeSheet();
+    else if (t.id === 'bag-fill') {
+      const c = sumLines(B.lines).count;
+      if (c === B.size) JWC.toast('Your box is already full. Pick a bigger size to add more.');
+      else { if (c < B.size) fillTo(B.size); else trimTo(B.size); renderLines(); renderBag(true); saveB(); JWC.toast(`Smart-filled: ${B.size} ${unit(B.plan, B.size)} from the Butcher's Pick`); }
+    }
+    else if (t.id === 'bag-addbf') { B.add.bfast++; renderAddons(); renderBag(false); saveB(); JWC.toast('Added: Breakfast 5-pack'); }
+    else if (t.id === 'bag-pickup') { B.city = 'pickup'; $('#b-city').value = 'pickup'; renderRoute(); renderBag(false); saveB(); }
+    else if (t.id === 'bag-go') startBox();
+  });
+}
+function moveOne(lines, from, to) {
+  const a = lines.find(x => x.mid === from); if (!a || !a.qty) return;
+  a.qty--;
+  let b = lines.find(x => x.mid === to);
+  if (!b) { b = { mid: to, qty: 0 }; const i = lines.indexOf(a); lines.splice(i + 1, 0, b); }
+  b.qty++;
+  return `Swapped 1 ${getMeal(from).name} for ${getMeal(to).name}`;
+}
+function openSwap(mid, planMeals, done) {
+  const cur = info(mid), base = baseOf(mid), bm = getMeal(base);
+  const others = planMeals.filter(x => x !== mid);
+  const opt = (to, label) => { const f = info(to), d = r2(f.price - cur.price); return `<button type="button" class="gp-swapopt" data-to="${esc(to)}"><img src="${esc(f.img)}" alt="" width="48" height="48"><span><b>${esc(label || f.m.name)}</b><small>${m2(f.price)} (${d === 0 ? 'same price' : (d > 0 ? '+' : '−') + m2(Math.abs(d))}) · ${f.mac.kcal} kcal · ${f.mac.p}g protein est.</small></span></button>`; };
+  let flav = '';
+  if (bm && bm.flav) {
+    const curFl = getMeal(mid).parts[0][0];
+    flav = `<p class="font-semibold mt-5 mb-2">Or change the chicken flavour</p><div class="space-y-2">${FLAVOURS.filter(fl => fl.id !== curFl && P(fl.id)).map(fl => {
+      const to = fl.id === bm.parts[0][0] ? base : base + '~' + fl.id; const f = info(to);
+      return opt(to, `${fl.short}: ${f.parts.map(x => x.p.name + ' ' + x.oz).join(' + ')}`);
+    }).join('')}</div>`;
+  }
+  JWC.modal(`<h3>Swap one meal</h3><p style="color:var(--jwc-muted);margin:0 0 12px;font-size:14px">Replacing 1 x ${esc(cur.m.name)} (${m2(cur.price)}). Pick another meal from the plan.</p>
+    <div class="space-y-2">${others.map(x => opt(x)).join('')}</div>${flav}
+    <div style="margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line jwc-btn-block" data-close>Keep it</button></div>`, root => {
+    $$('[data-to]', root).forEach(b => b.addEventListener('click', () => { JWC.closeAll(true); done(b.dataset.to); }));
+  });
+}
+function itemsFor(lines, note, tag) {
+  return lines.filter(l => l.qty).map(l => { const f = info(l.mid); return { id: 'gp:' + l.mid, name: f.m.name, variant: tag || (f.parts.length > 1 ? 'plate' : f.parts[0].oz), price: f.price, qty: l.qty, img: f.img, note: note }; });
+}
+function startBox() {
+  const t = totalsB(), pl = PLAN[B.plan], R = RHY[B.rhythm];
+  if (t.count !== B.size) return;
+  const items = itemsFor(B.lines, pl.name + (B.sub ? ' plan' : ' box'));
+  if (B.add.bfast) items.push({ id: BFAST.id, name: BFAST.name, variant: BFAST.variant, price: BFAST.price, qty: B.add.bfast, img: BFAST.img, note: pl.name + ' add-on' });
+  if (B.add.souv) items.push({ id: SOUV.id, name: 'Chicken Breast Souvlaki', variant: '6oz', price: SOUV.price, qty: B.add.souv, img: SOUV.img, note: pl.name + ' add-on' });
+  closeSheet();
+  if (!B.sub) {
+    items.forEach(it => JWC.cart.add(it, true));
+    JWC.toast(`${pl.name} box added to your order`);
+    JWC.cart.open(); return;
+  }
+  const snap = { kind: 'plan', plan: B.plan, size: B.size, rhythm: B.rhythm, credit: !!t.credit, add: clone(B.add), groups: [{ tag: pl.name, plan: B.plan, lines: clone(B.lines.filter(l => l.qty)) }] };
+  planCheckout({
+    title: `Start your ${pl.name} plan`, items: items,
+    subscription: { label: `${R.label} · ${pl.name} plan`, discountPct: 10 },
+    extraRows: t.credit ? [{ label: 'Switch credit, first box', amount: -t.credit }] : [],
+    city: B.city === 'pickup' ? '' : B.city,
+    note: `${B.size} ${unit(B.plan, B.size)} ${R.short}; changes allowed until Sunday 11:59 pm`,
+    onPlaced: o => adoptOrder(o, snap)
+  });
+}
+/* mobile bottom sheet */
+const scrim = $('#scrim');
+function openSheet() { const b = $('#bag'); b.classList.add('open'); scrim.hidden = false; restack(); renderBags($('#bag-stack'), bagColors(B.lines), B.size, true); setTimeout(() => { const x = $('#bag-x'); if (x) x.focus(); }, 60); }
+function closeSheet() { const b = $('#bag'); if (!b.classList.contains('open')) return; b.classList.remove('open'); scrim.hidden = true; const o = $('#sbar-open'); if (o && document.body.classList.contains('gp-bar-on')) o.focus(); }
+$('#sbar-open').addEventListener('click', openSheet);
+scrim.addEventListener('click', closeSheet);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+function watchBar() {
+  const sec = $('#builder'); let inView = false;
+  const upd = () => { const on = inView && window.innerWidth < 1024 && document.body.dataset.view !== 'team'; document.body.classList.toggle('gp-bar-on', on); if (!on) closeSheet(); };
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { inView = es[0].isIntersecting; upd(); }, { rootMargin: '-120px 0px -160px 0px' }).observe(sec);
+  window.addEventListener('resize', upd);
+  document.addEventListener('jwc:view', upd);
+}
+
+/* Plans ride the scheduled weekly route: after the shared checkout opens, pre-select the route day instead of express (the customer can still pick express). */
+function planCheckout(opts) {
+  JWC.checkout(opts);
+  const m = document.querySelector('.jwc-modal.on'); if (!m) return;
+  /* shared checkout prints credits as "$-25.00": show them as "−$25.00" (reported as a framework bug) */
+  const sum = m.querySelector('#jwc-sum'), fixNeg = () => { sum.querySelectorAll('.jwc-row span:last-child').forEach(x => { if (/^\$-/.test(x.textContent)) x.textContent = '−$' + x.textContent.slice(2); }); };
+  if (sum) { fixNeg(); new MutationObserver(fixNeg).observe(sum, { childList: true }); }
+  const prefer = () => { const r = [].slice.call(m.querySelectorAll('input[name="jwc-route"]')).find(x => !/Express/i.test(x.parentElement.textContent)); if (r && !r.checked) { r.checked = true; r.dispatchEvent(new Event('change')); } };
+  prefer();
+  const sel = m.querySelector('#jwc-city'); if (sel) sel.addEventListener('change', prefer);
+}
+
+/* ---------- 6-Week Reset ---------- */
+function openReset(k, size, city, avoid) {
+  const pl = PLAN[k], q = quote(k, size, avoid), full = r2(q.oneOff * 6), save = r2(full * 0.12), pay = r2(full - save), u = unit(k, size);
+  const weeks = [0, 1, 2, 3].map(i => addDays(cutoff(), 7 * i + 1));
+  JWC.modal(`<p class="gp-eyebrow" style="color:var(--slate)">6-Week Reset <span class="gp-concept">Concept</span></p>
+    <h3 style="margin-top:6px">${esc(pl.name)}, ${size} ${u} x 6 weekly boxes</h3>
+    <p style="margin:0 0 10px;font-size:15px">${m2(full)} less 12% = <b>${m2(pay)}</b>, prepaid. One box a week for 6 weeks.</p>
+    <div class="jwc-row"><span>6 boxes x ${m2(q.oneOff)}</span><span>${m2(full)}</span></div>
+    <div class="jwc-row" style="color:var(--jwc-gain);font-weight:600"><span>Prepaid saving (12%)</span><span>−${m2(save)}</span></div>
+    <div class="jwc-row total"><span>Prepaid today</span><span>${m2(pay)}</span></div>
+    <label class="jwc-field"><span>Start the week of</span><select id="rs-week">${weeks.map((d, i) => `<option value="${i}">${fmtL(d)}${i ? '' : ' (next week)'}</option>`).join('')}</select></label>
+    <p style="font-size:13px;color:var(--jwc-muted);margin:4px 0 0">Route fee applies to each of the 6 deliveries. Each box is the Butcher's Pick for your plan, and you can swap meals until each Sunday night.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="rs-go">Prepay 6 weeks</button></div>`, root => {
+    $('#rs-go', root).addEventListener('click', () => {
+      const wk = weeks[+$('#rs-week', root).value];
+      planCheckout({
+        title: '6-Week Reset (prepaid)',
+        items: [{ id: 'concept-reset-' + slug(pl.name), name: `6-Week Reset: ${pl.name}, ${size} ${u} x 6 weekly boxes (Concept)`, price: q.oneOff, qty: 6, img: JWC.img(P(pl.photos[0]), 200), plan: k, size: size }],
+        extraRows: [{ label: 'Prepaid saving (12%)', amount: -save }],
+        city: city && city !== 'pickup' ? city : '',
+        note: `Route fee applies to each of the 6 deliveries; the demo shows one. Starts the week of ${fmtL(wk)}.`,
+        onPlaced: o => adoptOrder(o, { kind: 'reset', plan: k, size: size, rhythm: 'w', credit: false, add: { bfast: 0, souv: 0 }, left: 6, start: wk.toISOString(), groups: [{ tag: pl.name, plan: k, lines: pick(k, size, avoid).filter(l => l.qty) }] })
+      });
+    });
+  });
+}
+
+/* ---------- household box ---------- */
+let H = store.get('hh', null);
+if (!H || !Array.isArray(H.people)) H = { people: [{ name: '', plan: 'bulk', size: 10 }], kids: { on: false, meat: 3, tend: 3 }, rhythm: '2w', city: 'Toronto', open: false };
+const saveH = () => store.set('hh', H);
+function hhGroups() {
+  const gs = H.people.map((p, i) => { const lines = pick(p.plan, p.size).filter(l => l.qty); return { tag: `${p.name.trim() || 'Person ' + (i + 1)} · ${PLAN[p.plan].name}`, plan: p.plan, size: p.size, lines: lines, t: sumLines(lines) }; });
+  if (H.kids.on && H.kids.meat + H.kids.tend > 0) { const lines = [{ mid: 'kid-meatball', qty: H.kids.meat }, { mid: 'kid-tenders', qty: H.kids.tend }].filter(l => l.qty); gs.push({ tag: 'Kids', plan: 'kids', size: H.kids.meat + H.kids.tend, lines: lines, t: sumLines(lines) }); }
+  return gs;
+}
+function openHousehold(firstPlan, city) {
+  if (firstPlan && !H.people[0].name && PLAN[firstPlan]) { H.people[0].plan = firstPlan; H.people[0].size = firstPlan === 'fam' ? 20 : 10; }
+  if (city) H.city = city;
+  H.open = true; saveH(); renderHH(); $('#hh-builder').hidden = false;
+  go('hh-builder', '#hh-n-0');
+}
+function renderHH() {
+  $('#hh-builder').hidden = !H.open;
+  $('#hh-people').innerHTML = H.people.map((p, i) => `<div class="gp-person" data-i="${i}">
+      <span class="gp-ptag" aria-hidden="true">${i + 1}</span>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 flex-1 min-w-0">
+        <label class="block min-w-0"><span class="gp-label">Name</span><input id="hh-n-${i}" class="gp-input" data-f="name" value="${esc(p.name)}" placeholder="${i ? 'e.g. Sam' : 'e.g. Alex'}" autocomplete="off" maxlength="24"></label>
+        <label class="block min-w-0"><span class="gp-label">Plan</span><select class="gp-select" data-f="plan">${PLANS.filter(x => x.k !== 'fam').map(x => `<option value="${x.k}"${x.k === p.plan ? ' selected' : ''}>${esc(x.name)}</option>`).join('')}</select></label>
+        <label class="block min-w-0"><span class="gp-label">Meals per box</span><select class="gp-select" data-f="size">${[10, 14, 20].map(n => `<option value="${n}"${n === p.size ? ' selected' : ''}>${n} ${unit(p.plan, n)}</option>`).join('')}</select></label>
+      </div>
+      ${i ? `<button type="button" class="gp-x" data-rm="${i}" aria-label="Remove person ${i + 1}">×</button>` : ''}
+    </div>`).join('');
+  $('#hh-add').disabled = H.people.length >= 5;
+  $('#hh-kids-btn').textContent = H.kids.on ? "Remove kids' plates" : "Add kids' plates";
+  $('#hh-kids').innerHTML = H.kids.on ? ['kid-meatball', 'kid-tenders'].map(mid => { const f = info(mid), key = mid === 'kid-meatball' ? 'meat' : 'tend'; return `<div class="gp-row" data-kid="${key}"><img src="${esc(f.img)}" alt="" width="60" height="60"><div class="min-w-0"><p class="font-semibold text-[15px]">${esc(f.m.name)}</p><p class="text-[13px] text-jmuted">${esc(f.line)}</p></div><div class="gp-rowctl"><div class="gp-qty"><button type="button" data-kq="-1" aria-label="One less ${esc(f.m.name)}">−</button><output>${H.kids[key]}</output><button type="button" data-kq="1" aria-label="One more ${esc(f.m.name)}">+</button></div></div></div>`; }).join('') : '';
+  $('#hh-rhythm').innerHTML = Object.keys(RHY).map(r => `<button type="button" aria-pressed="${r === H.rhythm}" data-r="${r}">${RHY[r].label}</button>`).join('');
+  $('#hh-city').innerHTML = cityOptions(H.city, false);
+  renderHHSum();
+}
+function renderHHSum(err) {
+  const gs = hhGroups(), all = sumLines([].concat.apply([], gs.map(g => g.lines))), one = all.sub, box = ssRaw(all.raw), disc = r2(one - box), rt = mainRoute(H.city), R = RHY[H.rhythm];
+  $('#hh-route').innerHTML = `<span class="font-semibold ${rt.pickup ? 'text-jgreen' : 'text-jnavy'}">${esc(rt.line)}</span>`;
+  $('#hh-sum').innerHTML = `<p class="gp-eyebrow text-jslate">Packing list</p>
+    <ul class="mt-3 space-y-3">${gs.map(g => `<li><div class="flex items-center justify-between gap-2"><span class="gp-nametag">${esc(g.tag)}</span><span class="text-[14px] font-semibold">${m2(g.t.sub)}</span></div><p class="text-[12.5px] text-jmuted mt-1.5 leading-snug">${g.t.count} ${g.plan === 'kids' ? 'plates' : unit(g.plan, g.t.count)}: ${esc(g.lines.map(l => getMeal(l.mid).name + ' x' + l.qty).join(' · '))}</p></li>`).join('')}</ul>
+    <div class="gp-sum mt-4 border-t border-jline pt-3">
+      <div class="r"><span>One-off total</span><span>${m2(one)}</span></div>
+      <div class="r save"><span>Subscribe &amp; Save 10%</span><span>−${m2(disc)}</span></div>
+      <div class="r tot"><span>${esc(R.label)}</span><span>${m2(box)}</span></div>
+      <div class="r"><span>Route fee</span><span>${rt.pickup ? 'Free pickup' : 'One fee, ' + m0(rt.fee)}</span></div>
+    </div>
+    ${err ? `<p class="gp-warn mt-3" role="alert">${esc(err)}</p>` : ''}
+    <button type="button" class="gp-btn gp-btn-slate w-full mt-4" id="hh-go">Start my household box</button>
+    <p class="text-[12px] text-jmuted mt-2">Demo: nothing is sent or charged.</p>`;
+  $('#hh-go').addEventListener('click', startHH);
+}
+function bindHH() {
+  $('#hh-open').addEventListener('click', () => openHousehold());
+  $('#hh-close').addEventListener('click', () => { H.open = false; saveH(); $('#hh-builder').hidden = true; $('#hh-open').focus(); });
+  $('#hh-people').addEventListener('input', e => { const f = e.target.dataset.f, row = e.target.closest('[data-i]'); if (f !== 'name' || !row) return; H.people[+row.dataset.i].name = e.target.value; e.target.classList.remove('is-bad'); saveH(); renderHHSum(); });
+  $('#hh-people').addEventListener('change', e => {
+    const f = e.target.dataset.f, row = e.target.closest('[data-i]'); if (!row || f === 'name') return;
+    const p = H.people[+row.dataset.i]; if (f === 'plan') p.plan = e.target.value; else if (f === 'size') p.size = +e.target.value;
+    saveH(); renderHH(); const el = $(`[data-i="${row.dataset.i}"] [data-f="${f}"]`); if (el) el.focus();
+  });
+  $('#hh-people').addEventListener('click', e => { const b = e.target.closest('[data-rm]'); if (!b) return; H.people.splice(+b.dataset.rm, 1); saveH(); renderHH(); $('#hh-add').focus(); });
+  $('#hh-add').addEventListener('click', () => { if (H.people.length >= 5) return; H.people.push({ name: '', plan: H.people.length === 1 ? 'glp' : 'lean', size: 10 }); saveH(); renderHH(); const i = H.people.length - 1; $('#hh-n-' + i).focus(); });
+  $('#hh-kids-btn').addEventListener('click', () => { H.kids.on = !H.kids.on; if (H.kids.on && !H.kids.meat && !H.kids.tend) { H.kids.meat = 3; H.kids.tend = 3; } saveH(); renderHH(); $('#hh-kids-btn').focus(); });
+  $('#hh-kids').addEventListener('click', e => { const b = e.target.closest('[data-kq]'), row = e.target.closest('[data-kid]'); if (!b || !row) return; const k = row.dataset.kid; H.kids[k] = Math.max(0, Math.min(20, H.kids[k] + (+b.dataset.kq))); row.querySelector('output').textContent = H.kids[k]; saveH(); renderHHSum(); });
+  $('#hh-rhythm').addEventListener('click', e => { const b = e.target.closest('[data-r]'); if (!b) return; H.rhythm = b.dataset.r; saveH(); $$('#hh-rhythm button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); renderHHSum(); });
+  $('#hh-city').addEventListener('change', e => { H.city = e.target.value; saveH(); renderHHSum(); });
+}
+function startHH() {
+  const miss = H.people.findIndex(p => !p.name.trim());
+  if (miss > -1) { renderHHSum(`Add a name for person ${miss + 1}, so we can tag their bags.`); const inp = $('#hh-n-' + miss); inp.classList.add('is-bad'); inp.focus(); return; }
+  const gs = hhGroups(), R = RHY[H.rhythm];
+  const items = [].concat.apply([], gs.map(g => itemsFor(g.lines, g.tag, g.tag)));
+  planCheckout({
+    title: 'Start your household box', items: items,
+    subscription: { label: `${R.label} · Household box`, discountPct: 10 },
+    city: H.city === 'pickup' ? '' : H.city,
+    note: 'Name tags: ' + gs.map(g => g.tag).join(', '),
+    onPlaced: o => adoptOrder(o, { kind: 'household', plan: 'household', size: gs.reduce((a, g) => a + g.t.count, 0), rhythm: H.rhythm, credit: false, add: { bfast: 0, souv: 0 }, groups: gs.map(g => ({ tag: g.tag, plan: g.plan, lines: g.lines })) }, `<p style="margin:8px 0 0"><b>Name tags on the packing list:</b></p><ul style="margin:6px 0 0;padding-left:18px">${gs.map(g => `<li>${esc(g.tag)} (${g.t.count})</li>`).join('')}</ul>`)
+  });
+}
+
+/* ---------- My Plan (demo portal) ---------- */
+function sampleMP() { return { sample: true, who: 'Alex', kind: 'plan', plan: 'bulk', size: 10, rhythm: '2w', city: 'Toronto', route: 'GTA 2 · Wednesday route', day: 'Wednesday', next: firstBox('Wednesday').toISOString(), status: 'active', credit: true, points: 312, add: { bfast: 0, souv: 0 }, groups: [{ tag: 'Lean Bulk', plan: 'bulk', lines: pick('bulk', 10).filter(l => l.qty) }] }; }
+let MP = store.get('myplan', null);
+if (!MP || !MP.groups) MP = sampleMP();
+(function rollForward() { /* keep stored dates in the future */
+  const min = firstBox(MP.day), wk = (RHY[MP.rhythm] || RHY['2w']).weeks;
+  let n = new Date(MP.next); let guard = 0;
+  while (n < min && guard++ < 200) n = addDays(n, 7 * wk);
+  MP.next = n.toISOString();
+  if (MP.status === 'paused' && new Date(MP.until) < new Date()) MP.status = 'active';
+})();
+const saveMP = () => store.set('myplan', MP);
+function adoptOrder(o, snap, extraHtml) {
+  const day = /Tuesday|Wednesday|Thursday|Friday/.test(o.day || '') ? dayName(o.day) : 'Wednesday';
+  MP = Object.assign({ sample: false, who: '', city: o.city, route: o.route, day: day, next: (snap.start ? addDays(new Date(snap.start), (DAY_OFF[day] || 3) - 1) : firstBox(day)).toISOString(), status: 'active', points: Math.round(o.total), orderNo: o.no, pickup: !o.route || /Pick up/.test(o.route) }, clone(snap));
+  saveMP(); renderMP();
+  const inner = document.querySelector('.jwc-modal.on .jwc-modal-in');
+  if (inner) {
+    const box = JWC.el(`<div class="gp-confirm"><b>My Plan is ready.</b> ${esc(mpTitle())}: first ${MP.pickup ? 'pickup' : 'delivery'} ${esc(fmtL(new Date(MP.next)))}. Skip, swap or pause any time before the Sunday cut-off.${extraHtml || ''}<div style="margin-top:10px"><button type="button" class="jwc-btn jwc-btn-line" id="go-myplan" style="min-height:40px">Open My Plan</button></div></div>`);
+    inner.insertBefore(box, inner.lastElementChild);
+    $('#go-myplan', box).addEventListener('click', () => { JWC.closeAll(true); go('myplan', '#mp-h'); });
+  }
+}
+function mpTitle() { return MP.kind === 'household' ? 'Household box' : MP.kind === 'reset' ? `6-Week Reset: ${PLAN[MP.plan].name}` : PLAN[MP.plan].name; }
+function mpTotals() {
+  const all = []; MP.groups.forEach(g => g.lines.forEach(l => all.push(l)));
+  const t = sumLines(all), raw = t.raw + (MP.add.bfast || 0) * BFAST.price + (MP.add.souv || 0) * SOUV.price, one = r2(raw);
+  const box = MP.kind === 'reset' ? r2(one * 0.88) : ssRaw(raw), rt = MP.pickup ? mainRoute('pickup') : mainRoute(MP.city);
+  return { count: t.count, one: one, box: box, fee: rt.fee, rt: rt };
+}
+function renderMP(focus) {
+  const t = mpTotals(), R = RHY[MP.rhythm] || RHY['2w'], next = new Date(MP.next), st = MP.status;
+  const u = MP.kind === 'household' ? 'meals and plates' : unit(MP.plan, t.count);
+  const statusTxt = st === 'paused' ? `Paused until ${fmtD(new Date(MP.until))}` : st === 'cancelled' ? 'Cancelled' : MP.kind === 'reset' ? `Prepaid · ${MP.left} of 6 boxes left` : 'Active';
+  const name = MP.sample ? 'Alex' : 'there';
+  const routeLbl = t.rt.pickup ? 'pickup at Brimley Rd' : String(MP.route || t.rt.name).replace(/ · \w+day route$/, ' route').replace(/^\w+day long route$/, 'long route');
+  const sms = st === 'cancelled' ? 'No reminders while your plan is cancelled.'
+    : st === 'paused' ? `J&W Meal Butler: Hi ${name}, your ${mpTitle()} plan is paused until ${fmtD(new Date(MP.until))}. Reply RESUME to restart early. Reply STOP to opt out.`
+    : `J&W Meal Butler: Hi ${name}, your ${mpTitle()} box (${t.count} ${u}, ${m2(r2(t.box + t.fee))}${t.fee ? ' with delivery' : ''}) ${t.rt.pickup ? 'is ready for pickup' : 'rides'} ${MP.day}. Reply OK, SKIP or SWAP by Sunday night. Reply STOP to opt out.`;
+  $('#mp-box').innerHTML = `<div class="gp-card overflow-hidden">
+    <div class="gp-mphead px-5 sm:px-8 py-6 flex flex-wrap items-start justify-between gap-4">
+      <div class="min-w-0"><p class="gp-eyebrow text-white/80">Demo portal</p><h2 id="mp-h" tabindex="-1" class="font-display text-[34px] sm:text-[40px] leading-tight mt-1">My Plan</h2>
+        <p class="text-white/90 mt-1 text-[15px]">${MP.sample ? 'Sample subscriber: Alex. Place a plan order above and this switches to yours.' : `Your plan from demo order ${esc(MP.orderNo || '')}. Saved on this device only.`}</p></div>
+      <span class="gp-status ${st}">${esc(statusTxt)}</span>
+    </div>
+    <div class="p-5 sm:p-8 grid lg:grid-cols-12 gap-6 lg:gap-8">
+      <div class="lg:col-span-7 min-w-0">
+        <div class="rounded-2xl border-2 border-[#DCDBEA] p-4 sm:p-5">
+          <p class="gp-eyebrow text-jslate">${st === 'cancelled' ? 'No upcoming box' : 'Next box'}</p>
+          <p class="font-display text-[21px] sm:text-[23px] leading-snug mt-1">${esc(mpTitle())} · ${t.count} ${u} · ${st === 'cancelled' ? 'cancelled' : esc(fmtL(next))} · ${esc(routeLbl)}</p>
+          <p class="text-[14px] text-jmuted mt-2">${st === 'cancelled' ? 'Restart any time; your points stay.' : `Changes close Sunday 11:59 pm · <b class="text-jred" id="mp-cd">in ${countdown()}</b>`}</p>
+        </div>
+        <h3 class="font-display text-[20px] mt-6">In your box</h3>
+        <div class="mt-1">${MP.groups.map((g, gi) => `${MP.groups.length > 1 || MP.kind === 'household' ? `<p class="mt-4"><span class="gp-nametag">${esc(g.tag)}</span></p>` : ''}${g.lines.filter(l => l.qty).map(l => { const f = info(l.mid); return `<div class="gp-row"><img src="${esc(f.img)}" alt="" width="60" height="60" loading="lazy"><div class="min-w-0"><p class="font-semibold text-[15px] leading-snug">${esc(f.m.name)} <span class="text-jmuted font-normal">x ${l.qty}</span></p><p class="text-[12.5px] text-jmuted mt-0.5">${f.mac.kcal} kcal · ${f.mac.p}g protein <span class="gp-est">est.</span></p></div><div class="gp-rowctl"><button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-mpswap="${gi}|${esc(l.mid)}"${st === 'cancelled' ? ' disabled' : ''} aria-label="Swap one ${esc(f.m.name)}">Swap</button></div></div>`; }).join('')}`).join('')}
+        ${MP.add.bfast ? `<p class="text-[14px] mt-3">Plus Breakfast 5-pack x ${MP.add.bfast}</p>` : ''}</div>
+        <div class="flex flex-wrap gap-2 mt-6">${st === 'cancelled'
+          ? '<button type="button" class="gp-btn gp-btn-slate" data-act="restart">Restart my plan</button>'
+          : `<button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-act="skip"${st === 'paused' ? ' disabled' : ''}>Skip this delivery</button>
+             ${st === 'paused' ? '<button type="button" class="gp-btn gp-btn-slate gp-btn-sm" data-act="resume">Resume</button>' : '<button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-act="pause">Pause (1–8 weeks)</button>'}
+             <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-act="rhythm"${MP.kind === 'reset' ? ' disabled' : ''}>Change rhythm</button>
+             <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-act="plan">${MP.kind === 'household' ? 'Edit household' : 'Change plan'}</button>
+             <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-act="cancel" style="color:var(--red)">Cancel plan</button>`}</div>
+      </div>
+      <div class="lg:col-span-5 min-w-0 space-y-4">
+        <div class="rounded-2xl bg-[#F6F5FA] p-4">
+          <p class="text-[13px] font-semibold text-jmuted">Each delivery</p>
+          <p class="mt-1 text-[15px]">${t.count} ${u} ${m2(t.box)}${MP.kind === 'reset' ? ' (prepaid)' : ' with Subscribe &amp; Save'} + ${t.fee ? m0(t.fee) + ' ' + esc(MP.day) + ' route' : 'free pickup'} = <b>${m2(r2(t.box + t.fee))}</b></p>
+          <p class="text-[13px] text-jmuted mt-1">${esc(R.label)}${MP.kind === 'reset' ? ' for 6 weeks' : ''}</p>
+        </div>
+        <div class="rounded-2xl bg-[#E3F4EC] p-4 text-[14.5px] text-[#0B5A3A]">${MP.credit ? '<b>$25 switch credit</b> applied automatically · ' : ''}<b>${MP.points}</b> Smile.io points</div>
+        <div class="gp-sms">
+          <p class="text-[12.5px] font-semibold text-jmuted">Saturday reminder, drafted by ${esc(AGENTS.reorder)}</p>
+          <div class="gp-bubble mt-2">${esc(sms)}</div>
+          <p class="text-[12px] text-jmuted mt-2">Demo: nothing is sent.</p>
+        </div>
+      </div>
+    </div>
+  </div>`;
+  if (focus) $('#mp-h').focus({ preventScroll: true });
+}
+function scaleGroups(f) {
+  MP.groups.forEach(g => {
+    const cnt = sumLines(g.lines).count;
+    if (g.plan === 'kids' || !PLAN[g.plan]) { g.lines.forEach(l => { l.qty = Math.max(1, Math.round(l.qty * f)); }); return; }
+    const target = f > 1 ? snapUp(Math.min(40, cnt * f)) : Math.max(10, SIZES.filter(s => s <= Math.max(10, cnt * f)).pop() || 10);
+    const k = target / cnt;
+    if (samePick(g.lines, g.plan, cnt)) g.lines = pick(g.plan, target).filter(l => l.qty);
+    else if (Number.isInteger(k)) g.lines.forEach(l => { l.qty *= k; });
+    else if (Number.isInteger(1 / k) && g.lines.every(l => l.qty % (1 / k) === 0)) g.lines.forEach(l => { l.qty *= k; });
+    else g.lines = pick(g.plan, target).filter(l => l.qty);
+  });
+  MP.size = MP.groups.reduce((a, g) => a + sumLines(g.lines).count, 0);
+}
+function mpSetRhythm(r) { const f = RHY[r].weeks / (RHY[MP.rhythm] || RHY['2w']).weeks; if (r === 'm' || MP.rhythm === 'm') scaleGroups(f); MP.rhythm = r; }
+function mpAction(act) {
+  const R = RHY[MP.rhythm] || RHY['2w'];
+  if (act === 'skip') { MP.next = addDays(new Date(MP.next), 7 * R.weeks).toISOString(); saveMP(); renderMP(); JWC.toast(`Skipped. Your next box is ${fmtL(new Date(MP.next))}`); }
+  else if (act === 'pause') {
+    JWC.modal(`<h3>Pause your plan</h3><p style="color:var(--jwc-muted);margin:0 0 6px;font-size:14px">Nothing ships or charges while you're paused. Demo: nothing is sent.</p>
+      <label class="jwc-field"><span>How long?</span><select id="pz-w">${[1, 2, 3, 4, 5, 6, 7, 8].map(n => `<option value="${n}"${n === 2 ? ' selected' : ''}>${n} week${n > 1 ? 's' : ''}</option>`).join('')}</select></label>
+      <p id="pz-until" style="font-size:14px;margin:0"></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="pz-go">Pause</button></div>`, root => {
+      const sel = $('#pz-w', root), until = () => addDays(new Date(MP.next), 7 * +sel.value);
+      const upd = () => { $('#pz-until', root).textContent = 'Paused until ' + fmtL(until()) + '.'; };
+      sel.addEventListener('change', upd); upd();
+      $('#pz-go', root).addEventListener('click', () => { MP.status = 'paused'; MP.until = until().toISOString(); MP.next = MP.until; saveMP(); JWC.closeAll(true); renderMP(); JWC.toast(`Paused until ${fmtL(new Date(MP.until))}`); const r = $('[data-act="resume"]'); if (r) r.focus(); });
+    });
+  }
+  else if (act === 'resume') { MP.status = 'active'; MP.next = firstBox(MP.day).toISOString(); saveMP(); renderMP(); JWC.toast(`Welcome back. Next box: ${fmtL(new Date(MP.next))}`); }
+  else if (act === 'restart') { MP.status = 'active'; MP.next = firstBox(MP.day).toISOString(); saveMP(); renderMP(); JWC.toast(`Restarted. Next box: ${fmtL(new Date(MP.next))}`); }
+  else if (act === 'rhythm') {
+    JWC.modal(`<h3>Change rhythm</h3><p style="color:var(--jwc-muted);margin:0 0 6px;font-size:14px">Monthly Freezer Fill turns your box into a month of meals with one route fee.</p>
+      ${Object.keys(RHY).map(r => `<label class="jwc-choice"><input type="radio" name="mp-r" value="${r}"${r === MP.rhythm ? ' checked' : ''}><span><b>${RHY[r].label}</b><br><small style="color:var(--jwc-muted)">${RHY[r].perMonth} route fee${RHY[r].perMonth > 1 ? 's' : ''} a month</small></span></label>`).join('')}
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="mr-go">Save</button></div>`, root => {
+      $('#mr-go', root).addEventListener('click', () => { const v = ($('input[name="mp-r"]:checked', root) || {}).value; if (!v) return; mpSetRhythm(v); saveMP(); JWC.closeAll(true); renderMP(); JWC.toast(`Now ${RHY[v].label.toLowerCase()}. Next box: ${fmtL(new Date(MP.next))}`); });
+    });
+  }
+  else if (act === 'plan') {
+    if (MP.kind === 'household') { openHousehold(); return; }
+    JWC.modal(`<h3>Change plan</h3><p style="color:var(--jwc-muted);margin:0 0 6px;font-size:14px">Your next box becomes the Butcher's Pick for the new plan. Same size and rhythm.</p>
+      ${PLANS.map(p => { const q = quote(p.k, Math.max(10, Math.min(40, sumLines(MP.groups[0].lines).count))); return `<label class="jwc-choice"><input type="radio" name="mp-p" value="${p.k}"${p.k === MP.plan ? ' checked' : ''}><span><b>${esc(p.name)}</b> · ${esc(p.eyebrow)}<br><small style="color:var(--jwc-muted)">${m2(q.per)} a ${unit(p.k, 1)} with Subscribe &amp; Save · ${q.avg.kcal} kcal, ${q.avg.p}g protein est.</small></span></label>`; }).join('')}
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="mpl-go">Save</button></div>`, root => {
+      $('#mpl-go', root).addEventListener('click', () => {
+        const v = ($('input[name="mp-p"]:checked', root) || {}).value; if (!v) return;
+        const size = sumLines(MP.groups[0].lines).count;
+        MP.plan = v; MP.groups = [{ tag: PLAN[v].name, plan: v, lines: pick(v, Math.max(10, Math.min(40, size))).filter(l => l.qty) }];
+        saveMP(); JWC.closeAll(true); renderMP(); JWC.toast(`Switched to ${PLAN[v].name}. Next box: ${fmtL(new Date(MP.next))}`);
+      });
+    });
+  }
+  else if (act === 'cancel') {
+    const t = mpTotals(), smaller = SIZES.filter(s => s < t.count).pop(), canSmall = MP.kind === 'plan' && smaller;
+    const smallBox = canSmall ? ssRaw(sumLines(pick(MP.plan, smaller)).raw) : 0;
+    const saved = R.perMonth - 1;
+    JWC.modal(`<h3>Before you go, would one of these help?</h3><p style="color:var(--jwc-muted);margin:0 0 10px;font-size:14px">Offers are within the limits the J&amp;W team set. Demo only: nothing is sent.</p>
+      <div style="display:grid;gap:8px">
+        <button type="button" class="gp-swapopt" style="grid-template-columns:1fr" data-o="skip2"><span><b>Skip the next 2 boxes</b><small>Nothing ships or charges until ${fmtL(addDays(new Date(MP.next), 14 * R.weeks))}.</small></span></button>
+        ${MP.rhythm !== 'm' && MP.kind !== 'reset' ? `<button type="button" class="gp-swapopt" style="grid-template-columns:1fr" data-o="monthly"><span><b>Switch to a monthly Freezer Fill (saves ${saved} route fee${saved > 1 ? 's' : ''} a month)</b><small>One delivery a month, the same meals, all frozen.</small></span></button>` : ''}
+        ${canSmall ? `<button type="button" class="gp-swapopt" style="grid-template-columns:1fr" data-o="smaller"><span><b>Make my box smaller (${t.count} → ${smaller} ${unit(MP.plan, smaller)})</b><small>${m2(t.box)} → ${m2(smallBox)} a box with Subscribe &amp; Save.</small></span></button>` : ''}
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap"><button type="button" class="gp-link" data-o="cancel">Cancel anyway</button><button type="button" class="jwc-btn jwc-btn-dark" data-close>Keep my plan</button></div>`, root => {
+      $$('[data-o]', root).forEach(b => b.addEventListener('click', () => {
+        const o = b.dataset.o; JWC.closeAll(true);
+        if (o === 'skip2') { MP.next = addDays(new Date(MP.next), 14 * R.weeks).toISOString(); JWC.toast(`Done. Next 2 boxes skipped. Next box: ${fmtL(new Date(MP.next))}.`); }
+        else if (o === 'monthly') { mpSetRhythm('m'); JWC.toast(`Done. Your plan is now a monthly Freezer Fill of ${MP.size} ${MP.kind === 'household' ? 'meals and plates' : unit(MP.plan, MP.size)}. Next box: ${fmtL(new Date(MP.next))}.`); }
+        else if (o === 'smaller') { MP.groups[0].lines = pick(MP.plan, smaller).filter(l => l.qty); MP.size = smaller; JWC.toast(`Done. Your box is now ${smaller} ${unit(MP.plan, smaller)}. Next box: ${fmtL(new Date(MP.next))}.`); }
+        else { MP.status = 'cancelled'; JWC.toast('Cancelled. No fee. Your points stay. Demo only: nothing is sent.'); }
+        saveMP(); renderMP(); const f = $('#mp-h'); if (f) f.focus({ preventScroll: true });
+      }));
+    });
+  }
+}
+function bindMP() {
+  $('#mp-box').addEventListener('click', e => {
+    const a = e.target.closest('[data-act]'); if (a) { mpAction(a.dataset.act); return; }
+    const s = e.target.closest('[data-mpswap]'); if (!s) return;
+    const parts = s.dataset.mpswap.split('|'), g = MP.groups[+parts[0]], mid = parts[1];
+    const pool = g.plan === 'kids' ? ['kid-meatball', 'kid-tenders'] : PLAN[g.plan].meals;
+    openSwap(mid, pool, to => { const msg = moveOne(g.lines, mid, to); g.lines = g.lines.filter(l => l.qty); saveMP(); renderMP(); JWC.toast(`${msg} in your ${fmtD(new Date(MP.next))} box`); });
+  });
+}
+
+/* ---------- JW team view ---------- */
+const KPIS = [['Active subscribers', '145', '+12 this week'], ['Quiz completions', '214', 'this week'], ['Quiz → plan order', '7.4%', 'target 7%'], ['Took Subscribe & Save', '63%', 'target 60%+'], ['Monthly churn', '8.6%', 'target 10% or lower'], ['Skips', '9 of 74', '12% of scheduled boxes'], ['Avg box after discount', '$127.40', 'target $125+'], ['Boxes this week', '70', '65 subscription + 5 one-off'], ['Revenue this week', '$8,918', 'sample week, all plans'], ['Route fees collected', '$1,321', 'customer-paid']];
+const MIX = [['Lean', 40, 112, 19, 851, '#7FB3D5'], ['Lean Bulk', 32, 139, 15, 834, '#154D8E'], ['Athlete', 14, 121, 6, 290, '#A23B2A'], ['Protein & Greens', 15, 134, 7, 375, '#0F7B4F'], ['GLP-1 Companion', 24, 104, 11, 458, '#5B5A8C'], ['Busy Family', 20, 171, 7, 479, '#B7791F']];
+const PREP = [['chicken-breast-souvlaki', 'Chicken Breast Souvlaki', '6oz', 96], ['pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white', 'Teriyaki Chicken, Green Beans & Rice (pre-set)', '4oz', 72], ['chicken-broccoli-sweet-potato-fries', 'Tenders, Broccoli & Sweet Potato (pre-set)', '4oz', 61], ['salmon', 'Salmon Fillet', '4oz / 6oz', 58], ['jerk-chicken-breast', 'Jerk Chicken Breast', '6oz', 52], ['turkey-breast', 'Roasted Turkey Breast', '4oz / 6oz', 49], ['chicken-ground-chilli', 'Chicken Chili', '10oz', 46], ['chicken-breast-tenders-cooked-portioned-copy', 'Arabic 7 Spice Chicken', '4oz', 44], ['turkey-spinach-white-rice', 'Turkey, Spinach & Rice (pre-set)', '4oz', 38], ['soup-chicken-lemon-soup', 'Lemon Chicken Rice Soup', '10oz', 34], ['salmon-brussel-sprouts-quinoa', 'Salmon, Brussels & Quinoa (pre-set)', '6oz', 34], ['copy-of-chicken-broccoli-sweet-potato-fries', 'Flank Steak, Green Beans & Potato (pre-set)', '6oz', 30], ['6oz-fully-cooked-meatballs', 'Beef Meatballs', '4oz', 30], ['1lb-of-extra-lean-ground-sirloin', 'Ground Top Sirloin', '6oz', 28], ['copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 'Egg White Bites', '2-pack', 62], ['steel-cut-oats', 'Steel Cut Oats', '6oz', 30], ['broccoli', 'Broccoli', '4oz', 210], ['rice-white-basmati', 'White Basmati', '6oz', 80], ['quinoa', 'Quinoa', '3oz', 70], ['copy-of-teriyaki-mix-cooked-portioned', 'Cauliflower Rice', '4oz', 50]];
+const ROUTE_ROWS = [['gta1', 'Tue · GTA 1', 11], ['gta2', 'Wed · GTA 2', 24], ['gta3', 'Thu · GTA 3', 8], ['gta4', 'Fri · GTA 4', 15], ['gta4x', 'Fri · long-haul (Freezer Fills)', 3], ['pickup', 'Pickup at Brimley Rd', 9]];
+const SUBS = [['Alex M.', 'Lean Bulk', 10, 'every 2 weeks', 'Toronto, Wed', 'Mar 31', 'Active', 520.72], ['Priya K.', 'GLP-1 Companion', 14, 'weekly', 'Markham, Fri', 'Apr 23', 'Paused', 613.56], ['Osei household', 'Household box', 26, 'every 2 weeks', 'Ajax, Tue', 'Mar 30', 'Active', 934.40], ['Jen L.', 'Protein & Greens', 28, 'monthly', 'Barrie, Fri', 'Apr 9', 'At risk (price)', 267.58], ['Marco D.', 'Athlete', 14, 'weekly', 'Mississauga, Wed', 'Mar 31', 'Cancel requested', 750.35], ['Sarah T.', 'Lean', 14, 'every 2 weeks', 'Pickup', 'Apr 6', 'Skipped this week', 418.44]];
+const RET = [['Month 1', 92, 78, 88], ['Month 3', 72, 40, 55], ['Month 6', 58, 28, 42], ['Month 12', 45, 15, 28]];
+const AGENT_JOBS = {
+  macro: 'Scores quiz answers into a plan, box size and rhythm, writes the "why this plan" note and splits households. Medical or allergy answers go to a person.',
+  nutrition: 'Est. macros for plan SKUs, queued for partner dietitian sign-off; blocks unapproved claims such as GLP-1 wording.',
+  reorder: 'Saturday text and email before the cut-off; OK, SKIP, SWAP and PAUSE replies; save offers within your limits.',
+  planner: "Drafts the Butcher's Pick per plan, then turns Sunday's cut-off into Monday's prep sheet and boxes by route day.",
+  lifecycle: 'Quiz-abandon, plan welcome, 6-Week Reset and switch campaigns. The Meal Butler lead approves every send.',
+  reviews: 'Asks for a review after box 2 and drafts replies. Bill or the store lead approves every 1–3 star reply.'
+};
+const PANEL_AGENTS = ['macro', 'nutrition', 'reorder', 'planner', 'lifecycle', 'reviews'];
+const APPR = [
+  { id: 'a1', who: 'Meal Butler lead', agent: 'planner', title: "Butcher's Pick, week of Mar 29", body: 'Lean box swaps the Tilapia pre-set for the Haddock plate (tilapia 2 cases below par). Margin +$0.40 a box.', meta: 'Affects 40 Lean subscribers · within plan macros' },
+  { id: 'a2', who: 'Meal Butler lead', agent: 'reorder', title: 'Saturday 10 am reminder to 74 subscribers with a box due', body: 'J&W Meal Butler: Hi {first name}, your {plan} box ({meals} meals, {total} with delivery) rides {route day}. Reply OK, SKIP or SWAP by Sunday night. Reply STOP to opt out.', meta: 'SMS + email · CASL consent checked for 74 of 74' },
+  { id: 'a3', who: 'Meal Butler lead', agent: 'reorder', title: '3 save offers for cancel requests', body: 'Priya K., travelling → 3-week pause\nMarco D., too much food → 10-meal box\nJen L., price → monthly Freezer Fill (saves 3 route fees)', meta: 'All within owner limits: pause up to 8 weeks, smaller box, monthly rhythm' },
+  { id: 'a4', who: 'Meal Butler lead', agent: 'lifecycle', title: 'Quiz-abandon email to 48 people', body: `Subject: Your Lean Bulk plan is saved\n\nHi {first name}, your plan is waiting: 10 meals every 2 weeks at ${m2(Q_BULK.per)} a meal with Subscribe & Save. Finish in one tap, and change anything until Sunday night.`, meta: '48 people stopped at question 6 this week' },
+  { id: 'a5', who: 'Bill and the labelling consultant', agent: 'lifecycle', flag: 1, title: 'GLP-1 welcome email: needs review', body: 'GLP-1 welcome email contains health wording. Owner and labelling review needed.', meta: 'Flagged: regulated or sensitive claim wording' },
+  { id: 'a6', who: 'the partner dietitian', agent: 'nutrition', title: 'Macro sign-off: 9 of 31 plan SKUs verified', body: 'Next: 6 salmon and turkey meals with the dietitian Friday.', meta: 'Until verified, every macro shows "est."', progress: 9 / 31 },
+  { id: 'a7', who: 'Store lead', agent: 'reviews', title: '2 reply drafts for new Google reviews (5 stars, 4 stars)', body: "5 stars: Thank you for the five stars. We're glad the plan is making your weeks easier. See you at the counter. The J&W Meal Butler team\n\n4 stars: Thanks for taking the time to review us. If anything about your box could be better, call (416) 298-1350 and ask for the Meal Butler counter. The J&W Meal Butler team", meta: 'No incentives offered for reviews' }
+];
+let AST = store.get('approvals', {}) || {};
+const demoOrders = () => JWC.orders().filter(o => o.proto === 1);
+const resetItem = o => (o.items || []).find(i => String(i.id).indexOf('concept-reset-') === 0);
+const orderLabel = o => o.subscription ? o.subscription.label : resetItem(o) ? '6-Week Reset, prepaid' : 'One-off order';
+function orderMeals(o) { return (o.items || []).reduce((a, i) => a + (String(i.id).indexOf('gp:') === 0 ? i.qty : 0), 0); }
+function orderSkus(o) {
+  const out = {}; const add = (id, n) => { out[id] = (out[id] || 0) + n; };
+  (o.items || []).forEach(i => {
+    const id = String(i.id);
+    if (id.indexOf('gp:') === 0) { const m = getMeal(id.slice(3)); if (m) m.parts.forEach(pt => add(pt[0], i.qty)); }
+    else if (id === BFAST.id) { add('copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 3 * i.qty); add('steel-cut-oats', 2 * i.qty); }
+    else if (id.indexOf('concept-reset-') === 0 && i.plan) pick(i.plan, i.size || 10).forEach(l => { if (l.qty) getMeal(l.mid).parts.forEach(pt => add(pt[0], l.qty)); });
+    else if (P(id)) add(id, i.qty);
+  });
+  return out;
+}
+function routeIdOf(o) { const r = JWC.routes.find(x => x.name === o.route); return r ? (r.id === 'gta4g' ? 'gta4' : r.id) : 'pickup'; }
+const stChip = s => ({ pending: '<span class="gp-st pending">Waiting</span>', approved: '<span class="gp-st approved">Approved</span>', edited: '<span class="gp-st edited">Edited, approved</span>', rejected: '<span class="gp-st rejected">Rejected</span>', review: '<span class="gp-st review">Sent to review</span>' })[s] || '';
+function drawApprovals() {
+  const waiting = APPR.filter(a => !AST[a.id] || AST[a.id].s === 'pending').length;
+  $('#t-approvals').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Approvals queue</h2><span class="gp-chip">${waiting} waiting · AI drafts</span></div>
+    <p class="text-[13.5px] text-jmuted mt-1">Nothing reaches a customer or changes a menu until someone at J&amp;W approves it.</p>
+    <div class="space-y-3 mt-4">${APPR.map(a => {
+      const st = (AST[a.id] && AST[a.id].s) || 'pending', body = (AST[a.id] && AST[a.id].body) || a.body, done = st !== 'pending';
+      const col = { planner: '#B7791F', reorder: '#5B5A8C', lifecycle: '#154D8E', nutrition: '#0F7B4F', reviews: '#A23B2A' }[a.agent];
+      return `<div class="gp-appr${a.flag ? ' flag' : ''}" style="${a.flag ? '' : '--acc:' + col}" data-ap="${a.id}">
+        <div class="flex flex-wrap items-center justify-between gap-2"><p class="text-[12px] font-semibold text-jmuted">Drafted by ${esc(AGENTS[a.agent])}</p>${stChip(st)}</div>
+        <p class="font-semibold text-[15.5px] mt-1">${a.flag ? '<span class="gp-concept" style="margin-right:6px">Flagged</span>' : ''}${esc(a.title)}</p>
+        <pre>${esc(body)}</pre>
+        ${a.progress ? `<div class="gp-meter mt-2"><span style="width:${Math.round(a.progress * 100)}%;background:var(--green)"></span></div>` : ''}
+        <p class="text-[12.5px] text-jmuted mt-2">${esc(a.meta)} · Approver: ${esc(a.who)}</p>
+        <div class="flex flex-wrap gap-2 mt-3">${done ? `<button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-do="undo">Undo</button>` : `
+          <button type="button" class="gp-btn gp-btn-green gp-btn-sm" data-do="approve">${a.flag ? 'Send to labelling review' : 'Approve'}</button>
+          <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-do="edit">Edit</button>
+          <button type="button" class="gp-btn gp-btn-line gp-btn-sm" data-do="reject" style="color:var(--red)">Reject</button>`}</div>
+      </div>`;
+    }).join('')}</div>`;
+}
+function bindApprovals() {
+  $('#t-approvals').addEventListener('click', e => {
+    const b = e.target.closest('[data-do]'), card = e.target.closest('[data-ap]'); if (!b || !card) return;
+    const a = APPR.find(x => x.id === card.dataset.ap), cur = AST[a.id] || {};
+    const set = (s, msg) => { AST[a.id] = Object.assign({}, cur, { s: s }); store.set('approvals', AST); drawApprovals(); JWC.toast(msg); const nc = $(`[data-ap="${a.id}"] button`); if (nc) nc.focus(); };
+    if (b.dataset.do === 'approve') set(a.flag ? 'review' : 'approved', a.flag ? 'Sent to the owner and labelling review' : `Approved: ${a.title}`);
+    else if (b.dataset.do === 'reject') set('rejected', `Rejected. ${AGENTS[a.agent]} will redraft.`);
+    else if (b.dataset.do === 'undo') set('pending', 'Back in the queue');
+    else if (b.dataset.do === 'edit') {
+      JWC.modal(`<h3>Edit draft</h3><p style="color:var(--jwc-muted);margin:0 0 4px;font-size:13.5px">${esc(AGENTS[a.agent])} · ${esc(a.title)}</p>
+        <label class="jwc-field"><span>Draft text</span><textarea id="ed-txt" rows="7">${esc(cur.body || a.body)}</textarea></label>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Cancel</button><button type="button" class="jwc-btn jwc-btn-dark" id="ed-go">Save and approve</button></div>`, root => {
+        $('#ed-go', root).addEventListener('click', () => { const v = $('#ed-txt', root).value.trim(); if (!v) { JWC.toast('The draft is empty. Add text or press Cancel.'); $('#ed-txt', root).focus(); return; } AST[a.id] = { s: a.flag ? 'review' : 'edited', body: v }; store.set('approvals', AST); JWC.closeAll(true); drawApprovals(); JWC.toast(a.flag ? 'Edited and sent to review' : 'Edited and approved'); });
+      });
+    }
+  });
+}
+function drawTeam() {
+  const orders = demoOrders();
+  $('#t-kpis').innerHTML = KPIS.map(k => `<div class="gp-kpi"><small>${esc(k[0])}</small><b>${esc(k[1])}</b><span>${esc(k[2])}</span></div>`).join('');
+  /* live panel */
+  const meals = orders.reduce((a, o) => a + orderMeals(o), 0), tot = orders.reduce((a, o) => a + (o.total || 0), 0);
+  $('#t-live').innerHTML = `<div class="flex items-center justify-between gap-2"><h2>Live from this demo</h2><span class="gp-st approved">${orders.length} order${orders.length === 1 ? '' : 's'}</span></div>
+    <p class="text-[13px] text-jmuted mt-1">Orders placed on this page, on this device.</p>
+    ${orders.length ? `<p class="text-[14px] mt-3"><b>${m2(tot)}</b> · ${meals} plan meals · ${(n => n + (n === 1 ? ' plan' : ' plans'))(orders.filter(o => o.subscription || resetItem(o)).length)}</p>
+    <ul class="mt-3 divide-y divide-[#EFE8DC]">${orders.slice(0, 8).map(o => `<li class="py-2.5 text-[13.5px]"><div class="flex justify-between gap-2"><b>${esc(o.no)}</b><span class="font-semibold">${m2(o.total)}</span></div><p class="text-jmuted mt-0.5">${esc(orderLabel(o))} · ${resetItem(o) ? '6 weekly boxes' : (o.items || []).reduce((a, i) => a + i.qty, 0) + ' items'}</p><p class="text-jmuted">${esc(o.city)}${o.day ? ' · ' + esc(o.day) : ''} · ${new Date(o.when).toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' })}</p></li>`).join('')}</ul>`
+    : `<p class="gp-note mt-3">No orders yet. Switch to Customer, take the quiz and start a plan. It lands here, on the prep sheet and on the route board.</p>`}`;
+  $('#t-agents').innerHTML = `<h2>AI agents on this play</h2><ul class="mt-3 space-y-2.5">${PANEL_AGENTS.map(k => `<li class="text-[13.5px]"><b>${esc(AGENTS[k])}</b><br><span class="text-jmuted">${esc(AGENT_JOBS[k])}</span></li>`).join('')}</ul>`;
+  /* prep sheet */
+  const demo = {}; orders.forEach(o => { const s = orderSkus(o); Object.keys(s).forEach(id => { demo[id] = (demo[id] || 0) + s[id]; }); });
+  const rows = PREP.map(r => ({ id: r[0], name: r[1], v: r[2], n: r[3], d: demo[r[0]] || 0 }));
+  Object.keys(demo).forEach(id => { if (!rows.some(r => r.id === id) && P(id)) rows.push({ id: id, name: P(id).name, v: '–', n: 0, d: demo[id] }); });
+  const prepOk = store.get('prepOk', null), dSum = rows.reduce((a, r) => a + r.d, 0);
+  $('#t-prep').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Monday prep sheet</h2><span class="gp-samp">Sample</span></div>
+    <p class="text-[13px] text-jmuted mt-1">Drafted by ${esc(AGENTS.planner)} after the Sunday cut-off.${dSum ? ` <b class="text-jgreen">+${dSum} portions from demo orders.</b>` : ''}</p>
+    <div class="jwc-scroll-x mt-3"><table class="jwc-table gp-tbl"><thead><tr><th>SKU</th><th>Size</th><th class="num">Portions</th><th class="num">+ Demo</th><th class="num">Total</th></tr></thead><tbody>
+    ${rows.map(r => `<tr${r.d ? ' class="live"' : ''}><td>${esc(r.name)}</td><td>${esc(r.v)}</td><td class="num">${r.n}</td><td class="num">${r.d ? '+' + r.d : '–'}</td><td class="num"><b>${r.n + r.d}</b></td></tr>`).join('')}
+    </tbody></table></div>
+    <div class="flex flex-wrap items-center gap-3 mt-4"><button type="button" class="gp-btn gp-btn-green gp-btn-sm" id="t-prep-ok">${prepOk ? 'Approved · send again' : 'Approve prep sheet'}</button>${prepOk ? `<span class="gp-st approved">Sent ${esc(prepOk)}</span>` : ''}</div>`;
+  $('#t-prep-ok').addEventListener('click', () => { store.set('prepOk', new Date().toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' })); JWC.toast('Sent to the kitchen tablet'); drawTeam(); $('#t-prep-ok').focus(); });
+  /* routes */
+  const rd = {}; let fees = 0; orders.forEach(o => { const id = routeIdOf(o); rd[id] = (rd[id] || 0) + 1; fees += o.fee || 0; });
+  const rrows = ROUTE_ROWS.map(r => ({ id: r[0], name: r[1], n: r[2], d: rd[r[0]] || 0 }));
+  Object.keys(rd).forEach(id => { if (!rrows.some(r => r.id === id)) { const rr = JWC.routes.find(x => x.id === id); rrows.push({ id: id, name: rr ? rr.name : id, n: 0, d: rd[id] }); } });
+  const max = Math.max.apply(null, rrows.map(r => r.n + r.d));
+  $('#t-routes').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Route impact</h2><span class="gp-samp">Sample</span></div>
+    <p class="text-[13px] text-jmuted mt-1">Boxes by route day${orders.length ? ' · <span class="text-jgreen font-semibold">green = this demo</span>' : ''}</p>
+    <div class="mt-3">${rrows.map(r => `<div class="gp-barrow"><span class="min-w-0">${esc(r.name)}</span><span class="gp-bar" aria-hidden="true"><span style="width:${r.n / max * 100}%"></span>${r.d ? `<span class="demo" style="left:${r.n / max * 100}%;width:${r.d / max * 100}%"></span>` : ''}</span><b>${r.n + r.d}</b></div>`).join('')}</div>
+    <p class="text-[13px] text-jmuted mt-3">Route fees collected ${m0(1321 + fees)}${fees ? ` (incl. ${m0(fees)} from this demo)` : ''}. Owned-route cost est. $8–14 a stop, so fees cover the extra stops. No new route days needed.</p>`;
+  /* quiz insights */
+  const qc = store.get('quizCount', 0) || 0, lp = store.get('lastPlan', null);
+  const bars = (arr, unitS, col) => { const mx = Math.max.apply(null, arr.map(x => x[1])); return arr.map(x => `<div class="gp-barrow"><span>${esc(x[0])}</span><span class="gp-bar" aria-hidden="true"><span style="width:${x[1] / mx * 100}%;background:${col}"></span></span><b>${x[1]}${unitS}</b></div>`).join(''); };
+  $('#t-quiz').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Quiz insights</h2><span class="gp-samp">Sample</span></div>
+    <p class="text-[13px] font-semibold text-jmuted mt-3">Goals this week</p>${bars([['Lose fat', 38], ['Build muscle', 27], ['Family', 12], ['GLP-1', 11], ['Fewer starches', 7], ['Train hard', 5]], '%', 'var(--slate)')}
+    <p class="text-[13px] font-semibold text-jmuted mt-4">Switching from (switch intelligence)</p>${bars([['Goodfood', 19], ['Factor', 11], ['LiveFit', 7], ['Another service', 14]], '', 'var(--navy)')}
+    <p class="gp-warn mt-4">Drop-off: 48 people stopped at question 6. ${esc(AGENTS.lifecycle)} drafted a quiz-abandon email (in the queue).</p>
+    ${qc ? `<p class="text-[13px] text-jgreen font-semibold mt-3">This device: ${qc} quiz completion${qc > 1 ? 's' : ''}${lp ? ', last match ' + esc(PLAN[lp].name) : ''}.</p>` : ''}`;
+  /* plan mix */
+  const T = MIX.reduce((a, r) => [a[0] + r[1], a[1] + r[3], a[2] + r[4]], [0, 0, 0]);
+  $('#t-mix').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Plan mix</h2><span class="gp-samp">Sample</span></div>
+    <div class="jwc-scroll-x mt-3"><table class="jwc-table gp-tbl"><thead><tr><th>Plan</th><th class="num">Active</th><th class="num">Avg box</th><th class="num">Boxes this week</th><th class="num">Est. GP/week at 40%</th></tr></thead><tbody>
+    ${MIX.map(r => `<tr><td><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${r[5]};margin-right:8px;vertical-align:-1px"></span>${esc(r[0])}</td><td class="num">${r[1]}</td><td class="num">${m0(r[2])}</td><td class="num">${r[3]}</td><td class="num">${m0(r[4])}</td></tr>`).join('')}
+    <tr class="tot"><td>Total</td><td class="num">${T[0]}</td><td class="num"></td><td class="num">${T[1]}</td><td class="num">${JWC.money(T[2], 0)}</td></tr></tbody></table></div>`;
+  /* retention */
+  $('#t-ret').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Retention</h2><span class="gp-samp">Target vs benchmark</span></div>
+    <div class="mt-3">${RET.map(r => `<div class="gp-barrow"><span>${r[0]}</span><span class="gp-bar" style="height:16px" aria-hidden="true"><span class="bench" style="left:${r[2]}%;width:${r[3] - r[2]}%"></span><span style="width:${r[1]}%;height:6px;top:5px;background:var(--navy)"></span></span><b>${r[1]}%</b></div><p class="text-[12px] text-jmuted -mt-1 mb-1" style="padding-left:calc(34% + 10px)">Meal kits ${r[2]}–${r[3]}%</p>`).join('')}</div>
+    <p class="gp-legend mt-3"><span><i style="background:var(--navy)"></i>Plan target</span><span><i style="background:rgba(183,121,31,.35)"></i>Meal-kit benchmark range</span></p>
+    <p class="text-[12.5px] text-jmuted mt-2">Benchmarks: Eightx 2026.</p>`;
+  /* subscribers */
+  const live = orders.filter(o => o.subscription || resetItem(o));
+  $('#t-subs').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Subscribers</h2><span class="gp-samp">Sample rows + this demo</span></div>
+    <div class="jwc-scroll-x mt-3"><table class="jwc-table gp-tbl"><thead><tr><th>Name</th><th>Plan</th><th class="num">Size</th><th>Rhythm</th><th>Route</th><th>Next box</th><th>Status</th><th class="num">Spend to date</th></tr></thead><tbody>
+    ${SUBS.map(s => `<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td><td class="num">${s[2]}</td><td>${esc(s[3])}</td><td>${esc(s[4])}</td><td>${esc(s[5])}</td><td><span class="gp-st ${/Active/.test(s[6]) ? 'approved' : /Paused|Skipped/.test(s[6]) ? 'review' : 'rejected'}">${esc(s[6])}</span></td><td class="num">${m2(s[7])}</td></tr>`).join('')}
+    <tr><td colspan="8" style="background:#F7F3EC;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">New this session</td></tr>
+    ${live.length ? live.map(o => { const ri = resetItem(o), lbl = o.subscription ? o.subscription.label.split(' · ') : ['6 weekly boxes (prepaid)', '6-Week Reset: ' + ((PLAN[ri.plan] || {}).name || '')]; return `<tr class="live"><td>You (demo ${esc(o.no)})</td><td>${esc((lbl[1] || '').replace(/ plan$/, ''))}</td><td class="num">${ri ? ri.size || '' : orderMeals(o)}</td><td>${esc((lbl[0] || '').toLowerCase())}</td><td>${esc(o.city)}${o.day && /day/.test(o.day) ? ', ' + esc(o.day.slice(0, 3)) : ''}</td><td>${esc(fmtD(firstBox(o.day)))}</td><td><span class="gp-st approved">Active</span></td><td class="num">${m2(o.total)}</td></tr>`; }).join('')
+      : '<tr><td colspan="8" class="text-jmuted">No demo subscriptions yet. Start a plan in the customer view.</td></tr>'}
+    </tbody></table></div>`;
+}
+
+/* ---------- header, countdown, nav ---------- */
+function tick() { const c = countdown(); $('#cut-cd').textContent = c; const m = $('#mp-cd'); if (m) m.textContent = 'in ' + c; }
+function updCart() { const n = JWC.cart.count(); $('#hdr-count').textContent = n; $('#hdr-cart').setAttribute('aria-label', `Open your order, ${n} item${n === 1 ? '' : 's'}`); }
+$('#hdr-cart').addEventListener('click', () => JWC.cart.open());
+JWC.cart.onChange(updCart);
+$('#hdr-menu').addEventListener('click', () => { const m = $('#nav-m'), open = m.hidden; m.hidden = !open; $('#hdr-menu').setAttribute('aria-expanded', open ? 'true' : 'false'); });
+$$('#nav-m a').forEach(a => a.addEventListener('click', () => { $('#nav-m').hidden = true; $('#hdr-menu').setAttribute('aria-expanded', 'false'); }));
+$('#hero-quiz').addEventListener('click', e => { e.preventDefault(); go('quiz', Q.done ? '#r-title' : '#q-title'); });
+$('#ff-go').addEventListener('click', makeMonthly);
+$('#t-money').addEventListener('click', () => JWC.openMoney());
+document.addEventListener('jwc:order', () => { drawTeam(); updCart(); });
+document.addEventListener('jwc:view', e => { if (e.detail === 'team') drawTeam(); });
+
+/* ---------- boot ---------- */
+renderHeroPrice(); renderPlans(); renderBands();
+renderQuiz(false);
+bindBuilder(); renderBuilder(false);
+bindHH(); renderHH();
+bindMP(); renderMP();
+bindApprovals(); drawApprovals(); drawTeam();
+updCart(); tick(); setInterval(tick, 30000);
+watchBar();
+})();
+</script>
+</body>
+</html>

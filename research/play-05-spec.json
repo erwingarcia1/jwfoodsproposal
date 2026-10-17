@@ -1,0 +1,575 @@
+{
+ "n": 5,
+ "slug": "corporate-gift-studio",
+ "name": "Corporate Gift Studio",
+ "oneLiner": "A self-serve gift studio where GTA employers, realtors, brokers and clinics send J&W boxes with their logo to a whole list, or a Pick-a-Box certificate each person redeems on J&W's own delivery routes.",
+ "headline": "Corporate gifting sells J&W's existing $85 to $200 boxes 20 at a time at about 40% gross margin, brings in holiday cash, and puts J&W in front of hundreds of new households each season.",
+ "focus": "Holiday and year-round corporate gifts on JW routes",
+ "mechanism": "J&W adds a Corporate Gift Studio with four levels built on boxes it already sells. Thank You ($90) offers the Ultimate BBQ Dad Pack ($84.99) or Girls Night Box ($89.99). Well Done ($130) offers the Gentleman's Box ($129.99), A Taste of Greece Box ($130) or Steak Mania Combo ($120). Big Thanks ($200) offers the Long Weekend Box ($199), and a new Concept J&W Reserve Box ($349) is priced from Wagyu, AAA and Ontario lamb at J&W's regular prices. A buyer adds a logo and message, uploads a list, and picks one of three deliveries: one office drop, home delivery on J&W's own route days at its usual $20/$27/$35 fees, or a Pick-a-Box certificate. With the certificate, each person picks any gift at their level, including Concept Meal Butler meal boxes, then books delivery (+$20) or free pickup at Brimley Rd. Volume pricing runs from 5% at 10 gifts to 10% at 100, approved accounts can pay by invoice (Net 30), and programs of 100+ certificates can pay only for codes that get redeemed. A year-round occasion calendar (Lunar New Year, Employee Appreciation Day, Greek Easter, realtor closings, work anniversaries), plus AI agents for quotes, list checks, messages and reminders, turns one holiday order into a year-round account.",
+ "modelledOn": {
+  "name": "Omaha Steaks Business Gifts",
+  "url": "https://www.omahasteaks.com/business-gifts",
+  "scope": "Global (Omaha, Nebraska, USA)",
+  "short": "US family butcher's B2B arm: certificates, volume programs, rewards tiers",
+  "what": "A dedicated business-gifting program from a family butcher founded in 1917. It offers curated gift boxes (US$81 to $212) and 'Choice' certificates, where each recipient picks from a curated level and redeems online, by phone or by mail. Qualifying programs get logo and message branding. Multi-recipient orders go on one order form with a single invoice. It also offers pay-on-redemption for large programs, a month-by-month holiday planning calendar, and Business Rewards tiers by annual spend.",
+  "proof": "Company claims of 5,000+ business clients, 350,000+ custom gift certificates and 700,000+ coolers to business recipients since 2020 (Omaha Steaks internal data, 2025; verified on the live page Oct 16, 2026). The 2026 holiday business guide runs US$100 to $180. Lead-form spend buckets run from under $100 to over $250. Business Rewards tiers sit at US$5K / $20K / $50K a year.",
+  "jwEdge": "Omaha does not ship to Canada. J&W already delivers across the GTA and Ontario on its own weekly routes for $20 to $35, with free pickup in Scarborough. It cuts in its own Ontario-inspected plant and has a Greek-Canadian family story going back to the 1960s. It can also gift clean cooked Meal Butler meals, a wellness gift Omaha cannot offer. Omaha's B2B ordering still runs on an emailed Excel form. J&W's studio is self-serve and sorts the recipient list onto route days live."
+ },
+ "year1": {
+  "low": 56000,
+  "mid": 123500,
+  "high": 269000
+ },
+ "runRate": 340000,
+ "marginPct": 40,
+ "startMonth": 1,
+ "mathYear1": "Lean launch Nov 9, 2026; full studio Feb 1, 2027. Five lines: (1) Holiday 2026 sprint (partial season): 25 accounts x 20 gifts x $120 = $60,000. (2) Realtor and broker closing gifts from Jan, ramping 0 -> 35 agents: avg 15 active x 10 months x 1.2 gifts x $95 = $17,100. (3) Occasion campaigns, Lunar New Year to Thanksgiving: 25 accounts x 15 gifts x $110 = $41,250. (4) Always-on milestone certificates from Mar: 8 accounts x 3 gifts/month x 8 months x $100 = $19,200. (5) Follow-on one-time orders from new-to-J&W recipients: 1,247 gifts x 60% new x 8% x $130 = $7,781. Gross = $145,331 x 0.85 incrementality = $123,532 (about $124K). Low: $74,963 x 0.75 = $56K. High: $316,941 x 0.85 = $269K.",
+ "mathRunRate": "Year 2 has a full Holiday 2027 season (planning emails Sep 14, pre-booking in Oct). (1) Holiday 2027: 70 accounts (about 17 retained at 70% + 53 new) x 24 gifts x $122 = $204,960. (2) Closings: 40 agents x 12 months x 1.2 x $95 = $54,720. (3) Occasions: 40 accounts x 15 x $110 = $66,000. (4) Milestones: 15 accounts x 3 x 12 x $100 = $54,000. (5) Follow-on: 3,396 gifts x 60% x 8% x $130 = $21,191. Gross = $400,871 x 0.85 = $340,740 (about $340K a year). Gross profit at 40% is about $136K.",
+ "mathNotes": [
+  "Year 1 includes only a partial first holiday season, because the lean version goes live Nov 9, 2026 and many firms choose gifts in October. Holiday 2027 lands in year 2.",
+  "Year-1 monthly shape (gross, booked): Nov $21K, Dec $39K, Jan $3K, Feb $6K, Mar $10K, Apr $12K, May $14K, Jun $9K, Jul $6K, Aug $4K, Sep $7K, Oct $14K = $145K. Nov-Dec is 41% of year 1 and about 51% of the run-rate.",
+  "The $120 average gift already nets out volume pricing (5% / 8% / 10%). The 40% margin is the model assumption for gift boxes. On a box that earns 40% at list, an 8% discount brings margin to about 35%, so big orders earn less per box.",
+  "No certificate breakage is counted. Prepaid Pick-a-Box certificates carry no expiry date, and pay-on-redemption programs bill only redeemed codes.",
+  "The follow-on line counts one-time orders only. Subscriptions are not counted here, so this does not double count Play 1, 3 or 6. Office meal programs (Play 4), wholesale (Play 2) and fundraisers (Play 7) are excluded.",
+  "Sanity check: year 1 is about 5% of J&W's ~$2.5M mid-case revenue and the run-rate is about 14%. Year 2 uses about 70 accounts. The market-benchmarks.md upside of 115 firms x 60 boxes x $120 (about $830K) would need 1% of the ~11-14K GTA locations with 50+ staff.",
+  "Capacity: Holiday 2026 is about 500 gifts over 5 weeks, peaking near 280 in the week of Dec 14. Holiday 2027 is about 1,700 gifts over 7 weeks, so it needs one seasonal packer and an extra Wednesday van in December.",
+  "Contribution after JW's own costs, before Minastech's fee: year 1 is about $49K gross profit less $29K running costs and $5.5K setup, leaving about $15K. Year 2 is about $136K less about $45K, leaving about $90K."
+ ],
+ "kpis": [
+  {
+   "label": "Corporate accounts, Holiday 2026",
+   "target": "25 by Dec 18, 2026"
+  },
+  {
+   "label": "Gifts delivered, Holiday 2026",
+   "target": "500"
+  },
+  {
+   "label": "Average gift after volume pricing",
+   "target": "$115-$125"
+  },
+  {
+   "label": "Quote-to-order rate",
+   "target": "40%+"
+  },
+  {
+   "label": "Pick-a-Box certificates redeemed within 90 days",
+   "target": "80%+"
+  },
+  {
+   "label": "Holiday 2026 accounts back for Holiday 2027",
+   "target": "70%+"
+  },
+  {
+   "label": "Active realtor and broker closing accounts",
+   "target": "35 by Oct 2027"
+  },
+  {
+   "label": "Redeemers who opt in to J&W email",
+   "target": "30%+"
+  },
+  {
+   "label": "December on-time route delivery",
+   "target": "98%+"
+  }
+ ],
+ "agentNeeds": [
+  {
+   "name": "Gift Concierge (quotes and orders)",
+   "job": "Answers corporate buyers in chat and email. Turns two-tap answers and notes into a quote with level mix, volume pricing, delivery and terms. Drafts the Shopify draft order or invoice for the Gift Desk to approve.",
+   "onScreen": "Gift Desk chat; the 'Your price in two taps' result; team view 'AI drafts waiting for you' (quote for Steeles Precision Machining)"
+  },
+  {
+   "name": "Recipient List Checker",
+   "job": "Cleans an uploaded recipient list (duplicates, postal codes). Maps each address to J&W's real route day and fee. Flags out-of-Ontario addresses, PO boxes and missing addresses, and suggests Pick-a-Box certificates for missing ones.",
+   "onScreen": "Step 3 route-sorted table with per-day chips and terracotta flags; team view 'List check' draft for Hellenic Home Builders"
+  },
+  {
+   "name": "Card and Message Writer",
+   "job": "Drafts gift-card and certificate messages by occasion in the buyer's voice, checks length (240 characters) and prepares the print proof.",
+   "onScreen": "'Write it for me' in Step 2 with live card preview; team view card proof to approve (Maple Ridge Dental)"
+  },
+  {
+   "name": "Occasion and Renewal agent",
+   "job": "Builds each account's gifting calendar. Sends reminders three weeks before each occasion with last year's list pre-filled. Runs last-call emails (CASL-checked) and the Holiday 2027 renewal on Sep 14, 2027.",
+   "onScreen": "'Plan the year once' planner; team view last-call email draft (142 contacts) and renewal note"
+  },
+  {
+   "name": "B2B Prospecting agent (shared)",
+   "job": "Builds lead lists of GTA employers, realtors, mortgage brokers and clinics along J&W's route corridors. Drafts CASL-checked outreach sequences and books tastings.",
+   "onScreen": "Team view draft: 24 realtor and broker leads on the Friday route with step-1 emails to approve"
+  },
+  {
+   "name": "Production and Route Planner (shared)",
+   "job": "Turns booked gifts into a weekly box count, cut list, packing hours and added stops per route day. Flags van capacity and when to order extra primals.",
+   "onScreen": "Team view 'Production and route impact' table (weeks of Dec 7/14/21, cut list, Wednesday van at 94%)"
+  },
+  {
+   "name": "Certificate and Redemption agent",
+   "job": "Issues unique Pick-a-Box codes per level. Answers recipient questions and sends day-14 and day-45 nudges to unredeemed codes. Reconciles pay-on-redemption invoices and hands opted-in redeemers to the welcome flow.",
+   "onScreen": "'What your people see' redemption phone mock; team view certificate ledger and day-14 reminder draft"
+  }
+ ],
+ "assumptions": [
+  "A lean Holiday version is live by Mon Nov 9, 2026. It has a landing page, two-tap price, four levels and logo cards. Office drops and home delivery run as Shopify draft orders, and certificates are bulk Shopify gift-card codes with a branded email. The self-serve studio with list upload and the redemption page go live Feb 1, 2027.",
+  "Holiday 2026 is a partial season of 25 accounts x 20 gifts. Buyers come mostly from existing J&W customers who run businesses, the 30K Instagram following, and outreach along the route corridors.",
+  "The average gift is $120 after volume pricing (mix of $85 to $350 levels). That fits the $50-150 per-box estimate (market-benchmarks.md) and Omaha's $100-$250 lead buckets.",
+  "Gross margin is 40% (model-assumptions.md, premium gift boxes and corporate gifting). Logo cards, sleeves and insulated liners (about $3 a gift) are counted in JW's monthly costs.",
+  "Incrementality is 0.85, because some existing customers already buy boxes for clients.",
+  "60% of recipients are new to J&W, and 8% of those place one $130 order within the year.",
+  "No breakage revenue is counted. Prepaid certificates do not expire.",
+  "70% of Holiday 2026 accounts return for Holiday 2027.",
+  "J&W's real route fees apply ($20 GTA, $27 Halton/Hamilton, $35 long routes, $30 express). J&W waives the $100 route minimum for gift deliveries and redemptions.",
+  "Recipients must be in Ontario, because the plant is provincially inspected.",
+  "Holiday 2026 deadlines: logo-card orders by Sun Dec 6 for route delivery Dec 14-18. Plain orders by Sun Dec 13. Certificates go out by email until Dec 24."
+ ],
+ "risks": [
+  "Late start for Holiday 2026: many firms pick gifts in October, so season 1 will be small. Certificates (no lead time) and existing customers are the fastest wins.",
+  "December capacity: gift volume collides with J&W's own holiday retail. Cap gifts per week (about 150 in Dec 2026) and use certificates to move redemptions into January, while watching the January Meal Butler peak.",
+  "Ontario-only sales (provincial inspection): national employers can't include out-of-province staff. The studio must screen addresses before payment.",
+  "Cold chain at office drops: boxes left in a lobby can thaw. Require a named receiver, a delivery window and a freezer or cooler, and pack in insulated liners with ice packs.",
+  "Credit risk on invoices: offer Net 30 only to approved accounts, with a 50% deposit on first orders.",
+  "Gift card and tax rules: J&W confirms certificate terms with its accountant or lawyer. Buyers own their CRA treatment, and J&W gives a gift record, not tax advice.",
+  "Product copy: the A Taste of Greece Box description contains pasted voice-dictation text and an outdated 'only until Thursday' line. Gendered names (Gentleman's, Girls Night, Dad Pack) need neutral level names for corporate buyers.",
+  "Seasonality: about half of the run-rate lands in Nov-Dec.",
+  "Reputation: corporate buyers read reviews. Put the 4.8-star Google rating (611 reviews) on the page and keep a professional Gift Desk face."
+ ],
+ "who": "A named Gift Desk lead at J&W (for example Lucas or Tasia) handles quotes, proofs, buyer calls and approving AI drafts: 20 h/week in Nov-Dec and 6 h/week otherwise. Butchery and packing: +25-40 h/week in December, including one seasonal packer, and +2-3 h/week otherwise. Drivers: office drops and home deliveries ride the existing route days, plus one extra Wednesday run a week in December. Owner (Bill or Steve): about 1 h/week approving quotes over $5,000, invoice terms and the Reserve Box spec. Minastech builds the studio and agents.",
+ "costs": {
+  "setup": 5500,
+  "monthly": 2400,
+  "note": "Setup: branded sleeves, insulated liners and card stock for the first 1,000 gifts ($2,400); photos of the levels and certificate design ($700); 20 tasting boxes for prospects at cost ($1,200); card and label printer ($400); 20 h of setup time ($800). Monthly average, about $29K in year 1: ads on LinkedIn, Meta and Google $730 (peaks at $1,500 in Nov-Dec and Sep-Oct, $350 otherwise); Gift Desk hours $900 (20 h/week in Nov-Dec, 6 h/week otherwise, at $25/h loaded); logo cards and sleeves at about $3 a gift ($310); extra December van runs ($200); seasonal packer ($150); software and AI ($125: bulk certificate app, invoicing, shared prospecting data, Claude API). Year 2 is about $45K/yr. Excludes Minastech's fee."
+ },
+ "sources": [
+  {
+   "title": "Omaha Steaks Business Gifts (live, Oct 16, 2026)",
+   "url": "https://www.omahasteaks.com/business-gifts"
+  },
+  {
+   "title": "Omaha Steaks corporate gift certificates",
+   "url": "https://business.omahasteaks.com/resources/corporate-gift-certificates"
+  },
+  {
+   "title": "Omaha Steaks large business gifts",
+   "url": "https://business.omahasteaks.com/resources/large-business-gifts"
+  },
+  {
+   "title": "Omaha Steaks how to order corporate gifts",
+   "url": "https://business.omahasteaks.com/resources/how-to-order-corporate-gifts"
+  },
+  {
+   "title": "Omaha Steaks holiday business gifts planning",
+   "url": "https://business.omahasteaks.com/resources/holiday-business-gifts"
+  },
+  {
+   "title": "Omaha Steaks Business Rewards",
+   "url": "https://business.omahasteaks.com/resources/business-rewards"
+  },
+  {
+   "title": "Omaha Steaks shipping (does not ship to Canada)",
+   "url": "https://www.omahasteaks.com/info/Shipping-Information"
+  },
+  {
+   "title": "Omaha Steaks Customize Your Box builder",
+   "url": "https://www.omahasteaks.com/servlet/OnlineShopping?Dsp=8500&sku=81977"
+  },
+  {
+   "title": "CRA gifts, awards and long-service awards",
+   "url": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/benefits-allowances/gifts-awards-social-events/gifts-awards-long-service-awards.html"
+  },
+  {
+   "title": "J&W Gentleman's Box",
+   "url": "https://www.jwfoods.com/products/gentlemans-box-special-1"
+  },
+  {
+   "title": "J&W A Taste of Greece Box",
+   "url": "https://www.jwfoods.com/products/a-taste-of-greece-box-special"
+  },
+  {
+   "title": "J&W Long Weekend Box",
+   "url": "https://www.jwfoods.com/products/summer-bbq-box-special"
+  },
+  {
+   "title": "J&W Girls Night Box",
+   "url": "https://www.jwfoods.com/products/girls-night-box-special"
+  },
+  {
+   "title": "J&W Ultimate BBQ Dad Pack",
+   "url": "https://www.jwfoods.com/products/ultimate-bbq-dad-pack"
+  },
+  {
+   "title": "J&W delivery routes",
+   "url": "https://www.jwfoods.com/pages/home"
+  },
+  {
+   "title": "J&W About Us",
+   "url": "https://www.jwfoods.com/pages/about-us"
+  },
+  {
+   "title": "J&W Google rating 4.8 / 611 (Yably)",
+   "url": "https://yably.ca/reviews/toronto/j-w-foods-2201-brimley-road"
+  },
+  {
+   "title": "York Region business counts 2025 (GTA 50+ staff estimate)",
+   "url": "https://yorklink.ca/2025-york-region-business-counts-factsheet/"
+  },
+  {
+   "title": "truLOCAL corporate gifting (tiered discounts from 10 gifts)",
+   "url": "https://trulocal.ca/gifts/"
+  },
+  {
+   "title": "Play file with full spec",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-05.md"
+  }
+ ],
+ "prototype": {
+  "concept": "A premium, self-serve corporate gifting page for J&W. A buyer gets a price in two taps, picks a level and a real J&W box, and adds a logo and message with a live card preview. They upload a recipient list that sorts itself onto J&W's real route days, flags anyone outside Ontario, and turns missing addresses into Pick-a-Box certificates. They pay by demo card through JWC.checkout or request an invoice, and can see the page each recipient uses to redeem. The JW team view shows the Gift Desk pipeline, AI-drafted quotes, list checks and messages waiting for approval, a certificate ledger, and the December cut list and route impact.",
+  "wow": "The buyer taps 'Use our sample list (25 people)', and the list visibly sorts itself into route-day groups: Tue Durham 4, Wed Toronto/Mississauga 7, Wed long 1, Thu Halton/Hamilton 3, Fri York/Peel 6, Fri long 1. Calgary and Montreal are flagged in terracotta ('We can only sell meat in Ontario. Removed, you won't be charged.') and the one person with no address becomes a Pick-a-Box certificate. Meanwhile the branded card preview shows the buyer's logo and message, and the sticky bar total updates to $3,351.50.",
+  "design": {
+   "inspiredBy": "Omaha Steaks Business Gifts: a dark full-bleed photo hero with a left headline, one pill CTA and an 'at a glance' card; a thin promo strip; a big-number proof band; three program cards; tier cards; numbered steps; a box builder with a sticky footer (points, price, Continue); an FAQ accordion; an inline lead form; a sticky action row. Burgundy is swapped for J&W laurel navy, with Mediterranean olive and terracotta, and the American heritage story becomes the J&W family story.",
+   "palette": [
+    {
+     "hex": "#0B2340",
+     "role": "Midnight: hero overlay, dark bands, sticky studio bar"
+    },
+    {
+     "hex": "#154D8E",
+     "role": "Laurel Navy (JW logo): primary buttons, links, active step, focus rings"
+    },
+    {
+     "hex": "#FAF7F2",
+     "role": "Linen: page background"
+    },
+    {
+     "hex": "#FFFFFF",
+     "role": "Paper: cards, table rows, card preview"
+    },
+    {
+     "hex": "#1C2430",
+     "role": "Ink: body text (14.6:1 on Linen)"
+    },
+    {
+     "hex": "#5E6672",
+     "role": "Muted: secondary text (5.4:1 on Linen)"
+    },
+    {
+     "hex": "#E6E0D7",
+     "role": "Stone: hairlines, borders, section rules"
+    },
+    {
+     "hex": "#B4532F",
+     "role": "Terracotta: holiday strip, deadlines, list flags (white text 5.0:1)"
+    },
+    {
+     "hex": "#5F6B2E",
+     "role": "Olive: 'on route' chips, Greek items, success states"
+    },
+    {
+     "hex": "#B08D57",
+     "role": "Brass: Reserve level accents and laurel line art (decorative and large numerals only)"
+    },
+    {
+     "hex": "#D9C29A",
+     "role": "Champagne: proof-band numerals on Midnight"
+    },
+    {
+     "hex": "#5B5A8C",
+     "role": "Meal Butler slate: Meal Butler box badges and options"
+    },
+    {
+     "hex": "#7FB3D5",
+     "role": "Sky: eyebrow text and small highlights on Midnight"
+    }
+   ],
+   "displayFont": "Fraunces",
+   "bodyFont": "Inter",
+   "layout": "Mobile-first single column at 375px with 16px gutters, scaling to a desktop max width of 1200px. The hero splits 7/5 with the 'Corporate gifts at a glance' card on the right; on mobile the card stacks under the headline. The proof band is 4 columns on desktop and 2x2 on mobile, with Fraunces numerals. Tier cards sit in a 4-across row on desktop and a horizontal snap scroller on mobile with the next card visible. The studio is a 4-step card with a progress bar and a sticky bottom bar (gifts, box, total, Continue) that only shows while the studio is in view. The redemption demo sits in a phone frame. The FAQ is an accordion. A sticky mobile action row (Call, Start, Pricing, Ask) has 44px+ targets. Section h2s are centred between hairline rules.",
+   "tone": "Warm, plain and confident, like a family butcher who has done this for decades. Short sentences, Canadian spelling, real prices and real dates, no hype words. Quantified like Omaha, but the proof is J&W's own: since the 1960s, 1995, 2008, 4.8 stars."
+  },
+  "sections": [
+   {
+    "name": "Holiday strip",
+    "purpose": "Create honest urgency with the real Holiday 2026 deadlines",
+    "content": "Terracotta strip, white text: 'Holiday 2026: order by Sunday, Dec 6 for logo cards and delivery the week of Dec 14. Pick-a-Box certificates can go out by email until Dec 24.'"
+   },
+   {
+    "name": "Hero",
+    "purpose": "Say what it is and who it is for, with one clear CTA",
+    "content": "Background: Gentleman's Box photo (JWC.img) under a midnight gradient. Eyebrow: 'J&W Corporate Gift Studio'. H1: 'Gifts your people will actually cook.' Sub: 'Ontario meat and clean Meal Butler meals, cut and packed by our family in Scarborough. Your logo on the card. We deliver on our own routes, or each person picks their own box with a J&W Pick-a-Box certificate.' Primary pill CTA: 'Start a gift order' (scrolls to the studio). Secondary link: 'Get your price in two taps'. 'Corporate gifts at a glance' card rows: 'From $84.99 a gift' / 'Volume pricing from 10 gifts' / 'Your logo and message, free' / 'Office drop, home delivery or Pick-a-Box certificate' / 'Pay by card, or by invoice for approved businesses' / 'Ontario recipients (our plant is provincially inspected)'."
+   },
+   {
+    "name": "Your price in two taps",
+    "purpose": "Omaha's two-tap lead qualifier, but it returns a real price at once",
+    "content": "H2 'Your price in two taps'. Q1 'How many gifts?' pills: Under 10 / 10-49 / 50-99 / 100-249 / 250+ (midpoints 5/25/60/150/300; discount 0/5/8/10/12%). Q2 'About how much per gift?' pills: $90 / $130 / $200 / $350 (anchors: Ultimate BBQ Dad Pack $84.99, Gentleman's Box $129.99, Long Weekend Box $199, J&W Reserve Box $349 Concept). Result line, e.g. 'About $123.49 a gift after 5% volume pricing. 25 gifts = about $3,087.' Buttons: 'Build this order' (preloads the studio) and 'Send to our Gift Desk' (prefills the form). For 250+: 'Big programs can pay only for the certificates people redeem. Let's talk.' Small print: 'Volume pricing is a concept. Delivery is extra.'"
+   },
+   {
+    "name": "Proof band",
+    "purpose": "Heritage and trust using J&W's own facts",
+    "content": "H2 'A Toronto butcher family since the 1960s'. Four numerals: '1960s - George Trougakos opens a butcher and grocery downtown' / '1995 - J&W Foods opens in Scarborough' / '2008 - Our own Ontario-inspected plant' / '4.8 stars - from 611 Google reviews'."
+   },
+   {
+    "name": "Who it's for",
+    "purpose": "Omaha's three program cards, rewritten for GTA buyers",
+    "content": "H2 'One studio, every kind of thank-you'. Card 'Employees': 'Holiday gifts, work anniversaries, safety milestones and welcome-aboard boxes. Send to the office or to each home.' Card 'Clients': 'Closing gifts for realtors and brokers. Thank-yous from accountants, contractors and clinics. Your name on the card, our steaks in the box.' Card 'Team moments': 'Employee Appreciation Day, Lunar New Year, Greek Easter, the summer long weekends. Plan them once and we'll remind you.' Simple line icons."
+   },
+   {
+    "name": "Pick a level",
+    "purpose": "The gift ladder on real J&W boxes, every level under the CRA limit",
+    "content": "H2 'Pick a level'. Sub: 'Every level stays under the CRA's $500 yearly limit for non-cash gifts. Send one box to everyone, or give a Pick-a-Box certificate and let each person choose at their level.' THANK YOU $90: Ultimate BBQ Dad Pack $84.99 ('AAA T-bone, AAA tenderloin, teriyaki salmon and a 2 kg bag of Korean BBQ chicken tenders'); Girls Night Box $89.99 ('Chicken, pork and shrimp souvlaki, 4 top sirloin steaks, spanakopita and party bites'); Meal Butler Taster $87.93 [Concept] ('7 cooked, portioned meals. Salt and sugar free, no added oils'). WELL DONE $130 (badge 'Our pick for most teams'): Gentleman's Box $129.99 ('2 AAA ribeyes, brisket bacon, hot Italian sausage, lean ground beef and 6 lamb chops'); A Taste of Greece Box $130 ('Gyro, four kinds of souvlaki, Greek and Macedonian sausage, pita, tzatziki and 32 mini spanakopita'); Steak Mania Combo $120 ('8 steaks: baseball, tenderloin, AAA striploin and ribeye'); Meal Butler Clean Week $130 [Concept] ('10 cooked meals plus egg bites, ready in minutes'). BIG THANKS $200: Long Weekend Box $199 ('8 AAA striploins, back ribs, sausages, burgers, sliders, buns and fries'); Greek Easter Table $199 [Concept, Mar 1 to May 1] ('Ontario lamb chops and a frenched rack, souvlaki, lemon potatoes and lemon chicken rice soup'). RESERVE $350 (brass accent): J&W Reserve Box $349 [Concept] ('2 Wagyu striploins, 2 AAA bone-in ribeyes, 4 AAA tenderloins, bacon-wrapped tenderloin, a frenched lamb rack and 8 Ontario lamb chops'). Each card has buttons 'Send this box' and 'Give as a certificate'. Extra real products not in catalog.js, copied from jw-catalog.json: steak-mania-combo 'STEAK MANIA COMBO' $120, img https://cdn.shopify.com/s/files/1/1156/0176/products/image_c1ab53ef-31ae-4c90-8330-4b39cc856b10.jpg?v=1648064567; bacon-wrapped-beef-tenderloin-4pack 'BEEF TENDERLOIN - BACON WRAPPED - 4x4oz PACK' $45, img https://cdn.shopify.com/s/files/1/1156/0176/products/images_1.jpg?v=1749578078."
+   },
+   {
+    "name": "Three ways to deliver",
+    "purpose": "Show J&W's route advantage and the certificate option",
+    "content": "H2 'Three ways to deliver'. 1 'One drop at your office': 'Every box arrives on your route day in one stop, for one route fee. Please name someone to receive it, with a freezer or cooler nearby.' 2 'Straight to each home': 'We sort your list onto our weekly routes: Tuesday Durham, Wednesday Toronto and Mississauga, Thursday Halton and Hamilton, Friday York and Peel, plus long routes to Ottawa, London and more. Our usual route fee applies per address: $20, $27 or $35.' 3 'A Pick-a-Box certificate': 'Each person gets a code by email or a printed card. They choose a gift at their level and book their own route day, or pick up at 2201 Brimley Rd. Add delivery for $20 a certificate.' Footnote: 'Need it sooner? Express delivery in Scarborough, North York, Toronto, East York, Etobicoke, Richmond Hill, Markham and Vaughan: 1-2 business days, $30.'"
+   },
+   {
+    "name": "Build your order (studio)",
+    "purpose": "The self-serve builder: gift, card, people, review, ending in checkout or invoice",
+    "content": "H2 'Build your order'. Progress: '1 Gift / 2 Card / 3 People / 4 Review'. STEP 1 'What are you giving?': level tabs, product tiles with photo and price, a 'Send a box / Give a certificate' toggle and a quantity stepper. STEP 2 'Make it yours': fields Company name; Logo (optional, stays on your device) or 'Use a monogram'; Message (240-character counter); Signed. Button 'Write it for me', with occasion chips Holiday / Client thank-you / Milestone / Greek Easter and 3 suggestions. Holiday suggestions: 'Thank you for everything you gave this year. Enjoy a great meal at home with the people you love. Happy holidays from all of us at {Company}.' / 'A year like this deserves a proper steak night. Thank you, and happy holidays. {Signed}' / 'From our team to your table: thank you for a great 2026. {Signed}'. Client: 'Thank you for trusting us this year. Dinner's on us. {Signed}' / 'Congratulations on your new home. Here's your first dinner in it. {Signed}'. Milestone: 'Five years! Thank you for all of it. Enjoy this one on us. {Signed}'. Greek Easter: 'Kalo Pascha! Wishing you and your family a happy Easter table. {Signed}'. Live preview: card with J&W laurel mark, the buyer's logo or monogram, the message, and 'Cut and packed for you by J&W Foods, Scarborough.' The certificate preview adds code JW-MRD-130-7Q4K and 'Choose your gift at jwfoods.com/pick'. STEP 3 'Who's it for?': three options, 'One office drop' (city select from JWC.cities() + receiver name), 'Upload a list' (CSV file input + 'Use our sample list (25 people)'), 'Email certificates' (paste emails + 'Use sample (40)'). Table columns: Name / City / Route day / Fee / Status. Per-day chips. Sample list: Tue GTA 1 Pickering, Ajax, Whitby, Oshawa ($20 each); Wed GTA 2 Scarborough x2, Toronto, Mississauga, North York, Etobicoke, East York ($20); Wed long Guelph ($35); Thu GTA 3 Oakville, Hamilton, Burlington ($27); Fri GTA 4 Markham x2, Richmond Hill, Brampton, Vaughan, Newmarket ($20); Fri long Ottawa ($35); flags: Calgary AB and Montreal QC ('Outside Ontario. Removed, you won't be charged.') and Wei J. with no address ('Switched to a Pick-a-Box certificate'). Route fees total $491. STEP 4 'Review': lines for gifts, volume pricing, logo cards (Free), delivery and total. Checkbox 'Send a gift record for our payroll team (name, date, value)'. Buttons 'Pay by card' (JWC.checkout) and 'Pay by invoice' (demo confirmation). Sticky bar: '{n} gifts / {box} / {total} / Continue ->'."
+   },
+   {
+    "name": "What your people see",
+    "purpose": "Show the recipient's redemption experience end to end",
+    "content": "H2 'What your people see'. Copy: 'A short note from you, a code, and a page with only the gifts at their level. They choose, book a route day or pickup, and that's it.' A phone frame shows the buyer's logo and message, code field prefilled JW-MRD-130-7Q4K, button 'Open my gift', the Well Done menu (Gentleman's Box, A Taste of Greece Box, Steak Mania Combo, Meal Butler Clean Week [Concept]), a city select, the real route day from JWC.routesFor, 'Delivery included' or 'Pick up free at 2201 Brimley Rd', an unchecked checkbox 'Send me J&W recipes and offers (you can unsubscribe any time)', and button 'Confirm my gift'."
+   },
+   {
+    "name": "Plan the year once",
+    "purpose": "Turn one holiday order into a year-round account",
+    "content": "H2 'Plan the year once'. Sub: 'Pick your occasions and head count. We'll send a reminder three weeks before each one, with last year's list ready.' Toggle rows: Holiday gifts (delivered Dec 14-18, 2026) / Lunar New Year (Sat Feb 6, 2027) / Employee Appreciation Day (Fri Mar 5) / Easter (Sun Mar 28) / Administrative Professionals Day (Wed Apr 21) / Greek Easter (Sun May 2) / Victoria Day long weekend (Mon May 24) / Father's Day (Sun Jun 20) / Canada Day (Thu Jul 1) / Labour Day (Mon Sep 6) / Thanksgiving (Mon Oct 11) / Work anniversaries and closings (any time, by certificate). Inputs: head count and level. Output: 'Your year: {k} occasions / about {gifts} gifts / about {total} before volume pricing.' Button 'Save my gifting calendar'."
+   },
+   {
+    "name": "Gift Desk Rewards",
+    "purpose": "Omaha-style annual spend tiers that lock in repeat programs",
+    "content": "H2 'The more you gift, the more we do' [Concept]. Partner ($2,500+ a year): 'Priority December route slots, and your list saved for next year.' Preferred ($7,500+ a year): 'Everything in Partner, a J&W Reserve Box for you ($349 value), and one named contact.' Patron ($15,000+ a year): 'Everything in Preferred, pay only for certificates people redeem, and a team tasting night at Brimley Rd.'"
+   },
+   {
+    "name": "Cut, packed and delivered by us",
+    "purpose": "Family story and food quality proof",
+    "content": "H2 'Cut, packed and delivered by us'. 'George Trougakos ran a butcher and grocery in downtown Toronto from the early 1960s. His family started Advance Food Products in 1973 and J&W Foods in 1995. Since 2008 we've run our own Ontario-inspected plant at 2201 Brimley Rd. Our chicken is air-chilled, grain-fed and raised in Ontario with no hormones or antibiotics. Every gift is cut, vacuum-sealed and packed here, then driven by our own team.'"
+   },
+   {
+    "name": "FAQ",
+    "purpose": "Answer the buyer's real objections honestly",
+    "content": "Accordion. 'Can people outside Ontario get a gift?' 'Not yet. Our plant is Ontario-inspected, so we can only sell meat within Ontario. We flag those addresses before you pay.' / 'Do certificates expire?' 'Prepaid Pick-a-Box certificates don't expire.' / 'Is a gift a taxable benefit?' 'The CRA allows up to $500 a year in non-cash gifts per employee, tax included. We'll send a gift record for your payroll team. Please check with your accountant.' / 'What if someone doesn't eat beef or pork?' 'A certificate lets them pick a Meal Butler box of chicken, salmon and egg bites. For allergies, call us first.' / 'How cold does it stay?' 'Boxes leave frozen in insulated liners with ice packs. For office drops, please have someone receive them and a freezer or cooler ready.' / 'Can we pay by invoice?' 'Yes, Net 30 for approved businesses, with a 50% deposit on a first order.' / 'Is there a minimum?' 'No. Volume pricing starts at 10 gifts.' / 'Can we pick up?' 'Yes, free at 2201 Brimley Rd, Mon-Fri 9-6, Sat 10-4.'"
+   },
+   {
+    "name": "Talk to our Gift Desk",
+    "purpose": "Inline lead form (Omaha's), honest demo",
+    "content": "H2 'Talk to our Gift Desk'. Labelled fields: Name, Company, Work email, Phone, gift-count pills, per-gift pills, Occasion and date, Notes. Button 'Send to the Gift Desk'. Under it: 'Demo: nothing is sent. We reply within one business day, Mon-Fri 9am-6pm, or call (416) 298-1350.'"
+   },
+   {
+    "name": "Sticky action row (mobile)",
+    "purpose": "Always-reachable actions",
+    "content": "Four buttons: 'Call' (tel:4162981350), 'Start an order' (studio), 'Pricing' (two-tap), 'Ask' (JWC.chat.open())."
+   }
+  ],
+  "customerFlows": [
+   {
+    "name": "Holiday office drop, card payment",
+    "steps": [
+     "Tap 'Start a gift order' in the hero; the page scrolls to the studio.",
+     "Step 1: choose Well Done $130, then Gentleman's Box $129.99; set quantity to 25.",
+     "Step 2: type 'Maple Ridge Dental', tap 'Use a monogram', tap 'Write it for me', choose Holiday, pick message 1; the card preview updates.",
+     "Step 3: choose 'One office drop', city Markham, receiver 'Front desk'. Route shown: Friday GTA 4.",
+     "Step 4: review 25 x $129.99 = $3,249.75, Volume pricing (5%) -$162.49, Logo cards Free.",
+     "Tap 'Pay by card': JWC.checkout({ title: 'Corporate gift order', items: [{ id: 'gentlemans-box-special-1', name: \"Gentleman's Box - logo card\", variant: 'Well Done $130', price: 129.99, qty: 25, img }], extraRows: [{ label: 'Volume pricing, 25 gifts (5%)', amount: -162.49 }, { label: 'Logo cards and message', amount: 0 }], city: 'Markham', note: 'Office drop, receiver: Front desk' }). The Friday route fee is $20, for a total of $3,107.26.",
+     "Place the demo order; the confirmation appears and the order shows in the team-view pipeline."
+    ]
+   },
+   {
+    "name": "Certificates by email, pay by invoice",
+    "steps": [
+     "On the Well Done tier card, tap 'Give as a certificate'; the studio opens with the certificate toggle on.",
+     "Set quantity to 40 and keep 'Delivery included (+$20)' on.",
+     "Step 2: add a logo (local file preview) and a message; the certificate preview shows code JW-ACM-130-7Q4K.",
+     "Step 3: choose 'Email certificates', then 'Use sample (40)'.",
+     "Step 4: review 40 x $130 = $5,200, Volume pricing (5%) -$260, Delivery included 40 x $20 = $800, Total $5,740.",
+     "Tap 'Pay by invoice': JWC.modal demo confirmation 'Invoice request Q-2026-0118 is with our Gift Desk. We'll confirm terms within one business day. Demo: nothing is sent.' The order is logged with JWC.addOrder({ proto: 5, ... }) and appears in the team view."
+    ]
+   },
+   {
+    "name": "Upload a list, home delivery, card payment",
+    "steps": [
+     "In the studio choose Well Done, then A Taste of Greece Box.",
+     "Step 2: type a company name and pick a message.",
+     "Step 3: choose 'Upload a list', then tap 'Use our sample list (25 people)'. Rows animate into route-day groups (Tue 4, Wed 7, Wed long 1, Thu 3, Fri 6, Fri long 1).",
+     "Calgary and Montreal are flagged 'Outside Ontario. Removed, you won't be charged.' Wei J. (no address) shows 'Switched to a Pick-a-Box certificate'.",
+     "Step 4: review 23 gifts x $130 = $2,990, Volume pricing (5%) -$149.50, Home delivery to 22 addresses $491, Certificate delivery $20, Total $3,351.50.",
+     "Tap 'Pay by card': JWC.checkout with items [22 x A Taste of Greece Box $130, 1 x 'J&W Pick-a-Box certificate - $130 level (Concept)' $130] and extraRows for the discount and delivery. City is left on pickup, note 'Each box goes to its own address; delivery is itemised above.'",
+     "Place the demo order."
+    ]
+   },
+   {
+    "name": "Recipient redeems a Pick-a-Box certificate",
+    "steps": [
+     "Scroll to 'What your people see'; the phone frame shows the buyer's message and code JW-MRD-130-7Q4K.",
+     "Tap 'Open my gift'; the Well Done menu appears (Gentleman's Box, A Taste of Greece Box, Steak Mania Combo, Meal Butler Clean Week [Concept]).",
+     "Choose Gentleman's Box.",
+     "Pick a city (e.g. Toronto); the real route day appears from JWC.routesFor ('Wednesday, GTA 2, delivery included'), or choose 'Pick up free at Brimley Rd'.",
+     "Leave or tick the unchecked email opt-in; tap 'Confirm my gift'.",
+     "Demo confirmation via JWC.modal: 'Booked: your Gentleman's Box arrives Wednesday on our GTA 2 route. Demo: nothing is sent.' It is logged with JWC.addOrder (total $0, note 'Pick-a-Box redemption'). Do not use JWC.checkout here, because redemptions skip the $100 minimum."
+    ]
+   },
+   {
+    "name": "Two-tap price, then talk to the Gift Desk",
+    "steps": [
+     "In 'Your price in two taps', tap '50-99' and then '$130'.",
+     "Result: 'About $119.59 a gift after 8% volume pricing. 60 gifts = about $7,175.'",
+     "Tap 'Send to our Gift Desk'; the form scrolls into view with gifts and per-gift pills prefilled.",
+     "Fill Name, Company, Work email; tap 'Send to the Gift Desk'.",
+     "Demo confirmation: 'Thanks. Our Gift Desk will reply within one business day. Demo: nothing is sent.' The lead appears in the team-view pipeline as 'New lead'."
+    ]
+   },
+   {
+    "name": "Plan the year",
+    "steps": [
+     "In 'Plan the year once', toggle Holiday gifts, Lunar New Year, Greek Easter, Administrative Professionals Day and Father's Day.",
+     "Set head count 30 and level Thank You $90.",
+     "Output updates: 'Your year: 5 occasions / about 150 gifts / about $12,749 before volume pricing.'",
+     "Tap 'Save my gifting calendar'.",
+     "Demo confirmation lists reminder dates three weeks before each occasion and saves the plan with JWC.store.set('p5-plan', ...)."
+    ]
+   }
+  ],
+  "teamView": [
+   {
+    "name": "Gift Desk: Holiday 2026 season to date (sample data, week of Dec 7)",
+    "content": "KPI tiles: Quotes sent 38 / Orders won 17 (45%) / Gifts booked 412 / Booked revenue $49,860 / Average gift $121 / Certificates 140 issued, 52 redeemed. Label 'Sample data, fictional accounts'."
+   },
+   {
+    "name": "Pipeline",
+    "content": "Columns: Account / Type / Gifts / Level / Delivery / Value / Stage / Next step. Rows: Maple Ridge Dental (Markham), Employees, 25, Well Done, Office drop Fri Dec 18, $3,107, Won (card), 'Print logo cards by Dec 9'. Steeles Precision Machining (Scarborough), Employees + safety award, 60, Well Done, Office drop Wed Dec 16, $7,195, Quote sent, 'Concierge follow-up drafted'. Northcrest Realty Team (Richmond Hill), Client closings, 18, Thank You certificates + delivery, $1,899, Won (invoice Net 30), 'Certificates go out Dec 1'. Hellenic Home Builders (Danforth), Clients, 38, Taste of Greece, Home on 4 routes, $5,481, Won, 'List check: 2 removed, 2 to certificates'. Pinecrest Logistics (Mississauga), Employees, 120, Thank You certificates, pay on redemption, up to $12,120, Negotiating, 'Owner approval (over $10K)'. Cedarbrae Physio, Clients, 8, Reserve, Home, $2,952, New lead, 'Two-tap: 10-49, $350'. Demo orders and leads from this page are prepended live on jwc:order."
+   },
+   {
+    "name": "AI drafts waiting for you",
+    "content": "Approve / Edit / Skip on each; Approve shows a toast and moves the draft to 'Approved today'. 1) Gift Concierge, quote for Steeles Precision Machining: '60 Gentleman's Boxes, logo cards, one drop Wed Dec 16 on GTA 2. 8% volume pricing: $7,175.45 + $20 route fee. 50% deposit, balance Net 30.' 2) Recipient List Checker, Hellenic Home Builders: '40 names: 36 sorted onto routes (Tue 6, Wed 21, Thu 4, Fri 5). 2 outside Ontario removed, with a note to the buyer. 2 missing addresses switched to certificates.' 3) Card and Message Writer, Maple Ridge Dental proof: 'Thank you for a year of great smiles. Enjoy a steak night on us. Dr. Lee and the Maple Ridge team.' 4) Occasion agent, last-call email to 142 past buyers and warm leads, subject 'Holiday gifts: last day for logo cards is Sunday, Dec 6'. CASL consent check passed. 5) B2B Prospecting agent: 24 new realtor and mortgage-broker leads on the Friday route (Markham, Richmond Hill, Vaughan); step-1 emails drafted, CASL check passed, sends over 3 days once approved. 6) Certificate agent: day-14 reminder to 11 unredeemed Northcrest recipients, 'Your J&W gift is waiting. Pick it in two minutes.'"
+   },
+   {
+    "name": "Production and route impact",
+    "content": "Boxes by week (Dec 7 / Dec 14 / Dec 21): Gentleman's 96/140/30; Taste of Greece 40/56/10; Long Weekend 12/22/4; BBQ Dad Pack 30/48/8; Reserve (Concept) 4/8/2; Meal Butler Clean Week redemptions (Concept) 0/10/18. Cut list, week of Dec 14: AAA boneless ribeye 9-10 oz, 280 steaks (about 14 ribeye rolls); lamb chops, 840 pieces; AAA striploin 8 oz, 176; AAA tenderloin 6-8 oz, 80; packing about 38 h. Route impact: Tue +6 homes / Wed +3 office drops, +21 homes (van at 94%, add a second Wednesday van) / Thu +4 / Fri +2 drops, +9 homes. Planner note, drafted by the Production and Route Planner: 'Order about 14 AAA ribeye rolls and 840 lamb chops by Wed Dec 9.'"
+   },
+   {
+    "name": "Certificate ledger",
+    "content": "Columns: Code / Account / Level / Status / Choice / Route. Rows: JW-NCR-090-4F2K / Northcrest / $90 / Redeemed / Ultimate BBQ Dad Pack / Fri GTA 4. JW-NCR-090-8M1Q / Northcrest / $90 / Issued, day-14 reminder / - / -. JW-MRD-130-7Q4K / Maple Ridge / $130 / Redeemed / Meal Butler Clean Week / Pickup. JW-HHB-130-2D9X / Hellenic / $130 / Booked / A Taste of Greece Box / Wed GTA 2. JW-PCL-090-5T7A / Pinecrest / $90 + delivery / Pay on redemption / - / -. Stats: redemption 37% after 9 days; 61% of redeemers new to J&W; 34% opted in to email (handed to the welcome flow). Redemptions from the customer demo are added live."
+   },
+   {
+    "name": "Rewards and renewals",
+    "content": "Accounts by Gift Desk Rewards tier: Partner 9 / Preferred 3 / Patron 1. Note from the Occasion and Renewal agent: 'Holiday 2027 renewal: each account gets last year's list to review on Sep 14, 2027.'"
+   }
+  ],
+  "chat": {
+   "name": "Gift Desk",
+   "greeting": "Hi, I'm the J&W Gift Desk assistant. I can price a gift order, explain Pick-a-Box certificates, or check delivery days for your list. How many people are you gifting?",
+   "suggestions": [
+    "What's the price for 50 gifts?",
+    "How do Pick-a-Box certificates work?",
+    "Can we pay by invoice?",
+    "When's the last day for Christmas delivery?"
+   ],
+   "rules": [
+    {
+     "match": "\\b(cra|taxable|tax|benefits?)\\b|\\$500|500 (limit|cap)",
+     "reply": "The CRA lets employers give non-cash gifts worth up to $500 a year per employee, tax included, without a taxable benefit. Every J&W level is under that: $90, $130, $200 and $350. Pick-a-Box certificates can only be used at J&W and can't be cashed out. We can send a gift record (name, date, value) for your payroll team. Please check how the rules apply to you with your accountant."
+    },
+    {
+     "match": "(outside (of )?ontario|other provinces?|out of province|across canada|calgary|alberta|vancouver|british columbia|montr[eé]al|qu[eé]bec|halifax|nova scotia|winnipeg|manitoba)",
+     "reply": "Our plant is Ontario-inspected, so we can only sell meat within Ontario. That goes for boxes and Pick-a-Box certificates. When you upload your list, we flag anyone outside Ontario before you pay, so you're never charged for a gift we can't deliver."
+    },
+    {
+     "match": "(pick-?a-?box|certificates?|gift ?cards?|gift code|redeem|redemption|(don.?t|do not) (have|know) (their )?address|let them (pick|choose)|choose their own)",
+     "reply": "A J&W Pick-a-Box certificate (concept) is a code at one level: $90, $130, $200 or $350. Each person opens it, sees only the gifts at their level, and books their own route day or picks up free at Brimley Rd. Add delivery for $20 a certificate. Prepaid certificates don't expire, and programs of 100+ can pay only for the ones people redeem."
+    },
+    {
+     "match": "(invoice|net ?(15|30)|purchase order|\\bp\\.?o\\.?\\b|pay later|payment terms|cheque|\\beft\\b|deposit|pay(ing)? by card|credit card)",
+     "reply": "You can pay by card at checkout for any order. Approved businesses can also pay by invoice, Net 30. For a first order we ask for a 50% deposit and the balance on delivery. Tap 'Pay by invoice' at the last step and our Gift Desk will confirm within one business day."
+    },
+    {
+     "match": "(deadline|christmas|holiday|last day|by when|in time|order by|december|before the break)",
+     "reply": "For Holiday 2026, order by Sunday, Dec 6 for logo cards and route delivery the week of Dec 14-18. Without logo cards, order by Sunday, Dec 13. Pick-a-Box certificates go out by email right up to Dec 24, and people can redeem them in January."
+    },
+    {
+     "match": "(logo|branding|branded|\\bcards?\\b|message|note|personali[sz]e|proof)",
+     "reply": "Your logo and message go on a printed card in every box, or on the Pick-a-Box certificate. It's free on every order. Add your logo in step 2 and tap 'Write it for me' for a few message ideas. We send you a proof before we print anything."
+    },
+    {
+     "match": "(vegetarian|vegan|(don.?t|do not) eat (beef|meat|pork|red meat)|no pork|pescatarian|halal|kosher|allerg|gluten|dietary|healthy|clean eating|diabet)",
+     "reply": "We're butchers, so most gifts are meat. For mixed teams, a Pick-a-Box certificate lets people choose a Meal Butler box at the $90 or $130 level: chicken, salmon and egg bites, all salt and sugar free with no added oils, and no pork. For vegetarians, a J&W gift card works across our Greek pantry and snacks. For allergies, halal or kosher needs, please call us at (416) 298-1350 before you order."
+    },
+    {
+     "match": "(realtor|real estate|closings?|mortgage|broker|new home|homebuyer|clients?)",
+     "reply": "Plenty of realtors and brokers like a closing gift that gets used. Set up your account once with your logo and message. Then each time a deal closes, send a $90 or $130 Pick-a-Box certificate from your phone, and your client books delivery on their own route day."
+    },
+    {
+     "match": "(reserve|wagyu|executive|\\bvip\\b|top clients?|premium|most expensive|best box)",
+     "reply": "The J&W Reserve Box (concept, $349) is our top level. It holds 2 Wagyu striploins, 2 AAA bone-in ribeyes, 4 AAA tenderloins, a 4-pack of bacon-wrapped tenderloin, a frenched lamb rack and 8 Ontario lamb chops. That's $343 at our regular prices, packed in a keepsake box."
+    },
+    {
+     "match": "(volume|discount|bulk|how much|price|pricing|cost|quote|\\b\\d{1,4}\\s*(gifts|people|employees|staff|boxes)\\b)",
+     "reply": "Volume pricing (concept): 10-49 gifts save 5%, 50-99 save 8%, 100-249 save 10%, and for 250+ we'll quote. For example, 50 Gentleman's Boxes at $129.99 less 8% come to $5,979.54 before delivery. Logo cards and your message are free. Try 'Your price in two taps' above for your own numbers."
+    }
+   ]
+  },
+  "productIds": [
+   "ultimate-bbq-dad-pack",
+   "girls-night-box-special",
+   "gentlemans-box-special-1",
+   "a-taste-of-greece-box-special",
+   "summer-bbq-box-special",
+   "wagyu-striploin-cut-into-steaks-any-size-your-choice",
+   "beef-ribeye-bone-in-aaa",
+   "tenderloin",
+   "french-lamb-rack",
+   "ontario-lamb-chops-raised-here-in-southern-ontario",
+   "chicken-souvlaki-broccoli-sweet-potato-chunks",
+   "salmon-brussel-sprouts-quinoa",
+   "pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white",
+   "copy-of-feta-omelette-cups-cooked-portioned-2-pkg",
+   "chicken-breast-souvlaki",
+   "potato-baked",
+   "soup-chicken-lemon-soup",
+   "chicken-breast-souvlaki-cooked-portioned-copy"
+  ],
+  "conceptProducts": [
+   {
+    "name": "J&W Pick-a-Box certificate (Concept)",
+    "price": "$90 / $130 / $200 / $350 levels; +$20 delivery included",
+    "basis": "The face value equals the real J&W boxes on each level's menu: $90 = Ultimate BBQ Dad Pack $84.99 or Girls Night Box $89.99; $130 = Gentleman's Box $129.99, A Taste of Greece Box $130 or Steak Mania Combo $120; $200 = Long Weekend Box $199; $350 = J&W Reserve Box $349. The $20 is J&W's GTA route fee."
+   },
+   {
+    "name": "J&W Reserve Box (Concept)",
+    "price": "$349",
+    "basis": "2 x Wagyu Striploin 8-9oz $35 + 2 x AAA Bone-In Ribeye 16-18oz $32 + 4 x AAA Beef Tenderloin 6-8oz $19 + Bacon-Wrapped Tenderloin 4x4oz $45 + Frenched Lamb Rack $36 + Ontario Lamb Chops 8 pack $52 = $343 at J&W prices, + $6 keepsake insulated box and card."
+   },
+   {
+    "name": "Meal Butler Clean Week (Concept)",
+    "price": "$130",
+    "basis": "4 x Souvlaki, Broccoli & Greek Potatoes 4oz $13.99 + 3 x Salmon, Brussels & Quinoa 4oz $12.99 + 3 x Teriyaki Chicken, Green Beans & Rice 4oz $9.99 + 1 x Egg White Bites, Spinach & Feta $5.25 = $130.15, rounded down to $130."
+   },
+   {
+    "name": "Meal Butler Taster (Concept)",
+    "price": "$87.93",
+    "basis": "3 x Souvlaki, Broccoli & Greek Potatoes 4oz $13.99 + 2 x Salmon, Brussels & Quinoa 4oz $12.99 + 2 x Teriyaki Chicken, Green Beans & Rice 4oz $9.99 = $87.93, at J&W's own prices."
+   },
+   {
+    "name": "Greek Easter Table (Concept, Mar 1 to May 1, 2027)",
+    "price": "$199",
+    "basis": "Ontario Lamb Chops 8 pack $52 + Frenched Lamb Rack $36 + 6 x Chicken Breast Souvlaki 6oz $6.93 + 4 x Greek Lemon Potatoes 6oz $4.47 + 4 x Lemon Chicken Rice Soup 10oz $8.99 + 2 x Greek Lemon Chicken Breast 4oz $4.99 = $193.40, + $5.60 gift packaging."
+   },
+   {
+    "name": "Volume pricing (Concept)",
+    "price": "5% (10-49) / 8% (50-99) / 10% (100-249) / quote (250+)",
+    "basis": "Applied to gift prices only, never to J&W's route fees. Example: 25 Gentleman's Boxes = $3,249.75 - $162.49 = $3,087.26."
+   },
+   {
+    "name": "Gift Desk Rewards (Concept)",
+    "price": "Partner $2,500+/yr / Preferred $7,500+/yr / Patron $15,000+/yr",
+    "basis": "Perks cost J&W about 3% of the tier's spend. A Reserve Box ($343 at J&W prices) is about $206 at cost on $7,500+ of gifts."
+   },
+   {
+    "name": "Logo card and message (Concept)",
+    "price": "Free on every order",
+    "basis": "About $1-3 a gift in printing and sleeve, carried in J&W's monthly running costs."
+   }
+  ]
+ }
+}

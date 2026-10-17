@@ -1,0 +1,30 @@
+/* Shared styles for the proposal pages. Tailwind handles layout; these are the pieces Tailwind can't express cleanly. */
+.jw-bar { background: #0B1220; color: #fff; font: 600 12px/1 Inter, system-ui, sans-serif; }
+.jw-bar a { color: rgba(255,255,255,.8); text-decoration: none; }
+.jw-bar a:hover, .jw-bar a[aria-current="page"] { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.jw-wordmark { font: 600 13px/1 Inter, system-ui, sans-serif; letter-spacing: .32em; text-transform: uppercase; color: #0F1B2D; }
+.jw-wordmark span { font-weight: 400; color: #566072; }
+.shot { aspect-ratio: 390 / 560; overflow: hidden; }
+.shot img { width: 100%; height: auto; display: block; transition: transform .35s ease; }
+.card:hover .shot img { transform: scale(1.02); }
+.shot-wide { aspect-ratio: 16 / 10; overflow: hidden; }
+.shot-wide img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+:focus-visible { outline: 2px solid #154D8E; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+.prose-jw h1 { font-family: Marcellus, Georgia, serif; font-size: 2.1rem; line-height: 1.15; margin: 0 0 .75rem; }
+.prose-jw h2 { font-family: Marcellus, Georgia, serif; font-size: 1.65rem; line-height: 1.2; margin: 2.4rem 0 .6rem; scroll-margin-top: 80px; }
+.prose-jw h3 { font-weight: 600; font-size: 1.08rem; margin: 1.6rem 0 .4rem; }
+.prose-jw p, .prose-jw li { font-size: 15.5px; line-height: 1.65; color: #26303F; }
+.prose-jw ul, .prose-jw ol { padding-left: 1.25rem; margin: .5rem 0 1rem; } .prose-jw ul { list-style: disc; } .prose-jw ol { list-style: decimal; }
+.prose-jw a { color: #154D8E; text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
+.prose-jw table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 1rem 0 1.5rem; display: block; overflow-x: auto; }
+.prose-jw th { text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #566072; border-bottom: 1px solid #0F1B2D; padding: 8px 10px; white-space: nowrap; }
+.prose-jw td { border-bottom: 1px solid #E1E5EC; padding: 8px 10px; vertical-align: top; }
+.prose-jw code { background: #EEF1F5; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+.prose-jw blockquote { border-left: 3px solid #154D8E; background: #E7EEF8; padding: .6rem 1rem; margin: 1rem 0; }
+.bar-track { position: relative; height: 10px; border-radius: 999px; background: #EDF0F4; }
+.bar-range { position: absolute; top: 0; height: 10px; border-radius: 999px; background: #A9D9C1; }
+.bar-mid { position: absolute; top: -4px; width: 3px; height: 18px; border-radius: 2px; background: #0F7B4F; }
+.grade { display: inline-flex; align-items: center; justify-content: center; min-width: 52px; height: 52px; border-radius: 14px; font: 700 22px/1 Inter, system-ui, sans-serif; }
+input[type=range] { accent-color: #154D8E; }
+@media print { .jw-bar, .no-print { display: none !important; } body { background: #fff !important; } }

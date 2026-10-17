@@ -1,0 +1,665 @@
+{
+ "n": 3,
+ "slug": "butcher-club",
+ "name": "J&W Butcher Club",
+ "oneLiner": "A raw-meat membership for GTA households: pick your cuts with points, get them on your J&W route day every 2 to 8 weeks, with free delivery and a free Meal Butler cooked chicken pack in every box.",
+ "headline": "It turns occasional freezer stock-ups into a recurring box on routes J&W already drives, at butcher-counter prices well below Toronto's premium shops, and uses a free cooked pack to move raw buyers into the higher-margin Meal Butler line.",
+ "focus": "Recurring raw-meat boxes plus beef and lamb shares",
+ "mechanism": "J&W sells three Concept box sizes, Starter $139 (28 points), Family $239 (48) and Freezer Fill $319 (66), delivered every 2, 4, 6 or 8 weeks. A point is about $5 of J&W's own shelf price, so members spend points on real cuts: the 4 kg portioned chicken breast case ($85, 17 pts), AAA top sirloin 7-8 oz ($10, 2 pts), Wagyu/Kobe AAA ground 1 lb ($14.99, 3 pts) or the AAA ribeye 10 x 11-12 oz pack ($175, 35 pts), with steaks cut to the thickness they choose. Every box rides free on the member's normal route day (normally $20-35) and includes one free-for-life item, by default a Meal Butler cooked chicken 4 x 4 oz pack. Boxes lock at the Sunday cut-off, and members can skip, swap or pause online. The top of the range is beef and lamb shares, 1/16 ($325), 1/8 ($625) and the existing $1,200 quarter, each with a cut sheet, planning weight and deposit and pooled into whole quarters before cutting. The launch targets shoppers from Wild Fork's closing Whitby, Oakville, Ancaster and Newmarket stores.",
+ "modelledOn": {
+  "name": "truLOCAL",
+  "url": "https://trulocal.ca",
+  "scope": "Canada (Kitchener, ON)",
+  "short": "Points-built meat subscription boxes with a free item for life",
+  "what": "Subscription meat boxes in three serving-sized tiers (Starter $155 up to 36 servings, Family $279 up to 80, Mega $349 up to 104). Members spend a points budget on cuts, can buy extra points, get a reminder 48 h before billing, and can skip, pause or cancel online. New members pick one free item for every box for life. One-time curated and value boxes, a comparison table against grocery and other boxes, and a corporate gifting funnel round it out.",
+  "proof": "70,100+ customers and 511,000+ boxes since 2016 (company claim). About $19.8M revenue in 2020, then acquired by EMERGE Commerce for up to $16.8M. 2025 AOV about $240, CLTV approaching $2,000, CAC $100-175 (EMERGE, Jan 21, 2026). Net new subscriptions +193% YoY in Feb 2025. Weak spot: Trustpilot 3.2/5 from 68 reviews, with thawed-box and price-per-lb complaints.",
+  "jwEdge": "J&W cuts, portions and vacuum-seals in its own Ontario-inspected plant. It sells AAA ribeye at about $23-25/lb in the 10-pack vs $39-60/lb at Toronto premium butchers, and offers Wagyu, bison, venison, Ontario lamb and cut-to-thickness steaks truLOCAL does not. It delivers on its own weekly GTA routes instead of by courier, has a cooked Meal Butler line to use as the free item, and holds Google 4.8 stars from 611 reviews."
+ },
+ "year1": {
+  "low": 169000,
+  "mid": 322000,
+  "high": 484000
+ },
+ "runRate": 612000,
+ "marginPct": 30,
+ "startMonth": 2,
+ "mathYear1": "Members ramp 0->247 from Dec 2026 (Nov = build + waitlist): 415 joins (55 Dec, then 30-40/mo), 11% monthly churn -> 1,772 member-months x 0.95 boxes = 1,683 boxes x $235 avg order ($220 box + $15 add-ons) = $395.5K; + shares $34.0K (30 x 1/16 at $325 + 15 x 1/8 at $625 + 8 x 1/4 at $1,200 + 8 whole lamb at $475 + 6 half lamb at $250) = $429.6K gross x 0.75 incremental = $322K new revenue (low $169K: 249 joins, 13% churn, $215 AOV; high $484K: 540 joins, 9.5% churn, $245 AOV, 0.80 incremental)",
+ "mathRunRate": "Year 2: 36 joins/month at 11% churn -> average 287 active members (steady state ~327) x 0.95 boxes x 12 = 3,268 boxes x $235 = $768.0K + shares $47.6K (1.4 x year 1) = $815.6K gross x 0.75 incremental = $612K a year (low $305K, high $957K)",
+ "mathNotes": [
+  "Churn check: truLOCAL's CLTV (~$2,000) / AOV (~$240) implies ~8 lifetime orders; our 0.95 boxes/month / 11% churn = 8.6 lifetime boxes. 11% sits between replenishment (5-8%) and meal-kit (8-15%) churn.",
+  "0.95 boxes per active member per month = cadence mix (15% every 2 wks, 60% every 4, 15% every 6, 10% every 8 = 1.14 scheduled) less 12-15% skips.",
+  "Average box $220 = tier mix 35% Starter $139 / 45% Family $239 / 20% Freezer Fill $319; plus $15 of extra points and Meal Butler add-ons = $235, just under truLOCAL's ~$240 AOV.",
+  "Margin 30% blended (model-assumptions raw boxes 25-35%). Build-up: ~35% shelf margin on portioned raw, less the free item (~4.5 pts), tote and liner (~1.4 pts) and Freezer Fill bonus points (~0.6 pts) = ~28.5% on the box; $15 add-ons at 45% lift the blend to ~30%.",
+  "Incrementality 0.75 (low end) because some existing J&W raw buyers will simply join.",
+  "Cannibalisation not covered by the factor: ~25% of boxes x ($20 route fee forgone + ~$10 free item) = ~$12.6K in year 1 and ~$24.5K in year 2, deducted in contribution.",
+  "No separate Wild Fork line: the earlier $225K switcher estimate is not added. Those households are counted inside the 415 joins to avoid double counting.",
+  "Contribution (est.): year 1 = $322K x 30% = $96.6K - ~$60.4K operating - $11K setup - ~$12.6K cannibalisation = ~+$12.6K. Year 2 = $183.6K - ~$76.8K - ~$24.5K = ~+$82K/yr. This is a low-margin, steady play.",
+  "Sanity check vs J&W's ~$2.5M: year-1 gross Club revenue is ~17% of revenue and new revenue is +13%; run-rate is +24%. That is ~63 boxes and ~1,250 lb of frozen raw a week in year 2.",
+  "Acquisition year 1 ~$25.3K (ads $18K + founding credits $2.7K + referral credits $4.6K) = ~$61 blended, ~$82 per paid member (model range $60-120)."
+ ],
+ "kpis": [
+  {
+   "label": "Active members",
+   "target": "120 by Mar 31 2027; 245 by Oct 31 2027; ~300 by Oct 2028"
+  },
+  {
+   "label": "Joins per month",
+   "target": "30-40 (55 in launch month)"
+  },
+  {
+   "label": "Monthly churn",
+   "target": "11% or lower (stretch 8%)"
+  },
+  {
+   "label": "Boxes per active member per month",
+   "target": "0.95 or more"
+  },
+  {
+   "label": "Average order incl. add-ons",
+   "target": "$235 or more"
+  },
+  {
+   "label": "Paid CAC / blended CAC",
+   "target": "$90 or less / $65 or less"
+  },
+  {
+   "label": "Members buying Meal Butler cooked items within 60 days of first free pack",
+   "target": "15% or more"
+  },
+  {
+   "label": "Beef and lamb shares reserved, year 1",
+   "target": "67 (53 beef, 14 lamb)"
+  },
+  {
+   "label": "Members in Wild Fork towns (Whitby, Oakville, Ancaster, Newmarket)",
+   "target": "40+ by Mar 31 2027"
+  },
+  {
+   "label": "Thawed or quality complaints",
+   "target": "Under 1% of boxes"
+  }
+ ],
+ "agentNeeds": [
+  {
+   "name": "Box Reminder & Save agent (shared: Auto-reorder and subscription agent)",
+   "job": "Texts each member 3 days before the Sunday cut-off with their picks (reply YES, SKIP or SWAP), handles swaps in plain language within the points budget, runs the cancel-save flow (skip, slower cadence, smaller box, pause) inside owner rules, and chases failed payments.",
+   "onScreen": "Team view: Thursday reminder SMS in Approvals and the Retention queue. Customer view: My Club skip, pause and cancel flow."
+  },
+  {
+   "name": "Butler Concierge",
+   "job": "Answers members on chat, SMS and Instagram about points, delivery day by town, shares and thawed packs. Sends refunds, allergy questions and out-of-Ontario requests to staff.",
+   "onScreen": "Ask the Butler chat; Concierge log with a $9.99 thawed-pack credit awaiting approval."
+  },
+  {
+   "name": "Production forecast & pick-list agent",
+   "job": "After the Sunday cut-off, totals every Club box and free item into Monday's pick list: cases to pull, steaks to cut by thickness, cooked chicken packs to pull from Meal Butler stock.",
+   "onScreen": "Team view: Monday pick list table with Approve button."
+  },
+  {
+   "name": "Carcass & share-pooling agent (shared: Carcass and cut-yield optimiser)",
+   "job": "Pools 1/16 and 1/8 share orders into full quarters before a cut date, suggests Cut of the month point deals for overstocked cuts, and logs yield per quarter so planning weights become real weights.",
+   "onScreen": "Team view: Beef share board and the short-rib Cut of the month proposal in Approvals."
+  },
+  {
+   "name": "Route & delivery agent",
+   "job": "Slots Club boxes into existing route days, shows new stops and added minutes per route, adds dry ice to long-haul boxes and sends delivery-window texts the day before.",
+   "onScreen": "Team view: Route impact table by day."
+  },
+  {
+   "name": "Lifecycle marketing agent",
+   "job": "Drafts waitlist, welcome, Wild Fork-town, share-season (BBQ, Greek Easter May 2 2027, fall freezer fill) and win-back emails in J&W's voice for owner approval.",
+   "onScreen": "Team view: spring email to 412 Wild Fork-town waitlist sign-ups in Approvals."
+  },
+  {
+   "name": "Paid ads optimiser",
+   "job": "Runs geo-targeted Meta and Google ads in Club towns (Whitby, Oakville, Ancaster, Newmarket first), reads CAC by town weekly and proposes budget moves under a monthly cap.",
+   "onScreen": "Team view: 'Move $10/day from Mississauga to Newmarket' proposal in Approvals."
+  }
+ ],
+ "assumptions": [
+  "Soft launch Tue Dec 1 2026 (cut-off Sun Nov 29); November is build and waitlist with no revenue.",
+  "415 joins in year 1 (55 in December, 30-40 a month after); 36 a month in year 2.",
+  "11% monthly churn and 0.95 boxes per active member per month.",
+  "$235 average order: $220 box (35/45/20 tier mix) plus $15 extra points and Meal Butler add-ons.",
+  "30% blended gross margin and 0.75 incrementality (model-assumptions.md).",
+  "A box point is about $5 of J&W shelf price; J&W's raw shelf prices hold through year 1.",
+  "Route stop cost $10 (model range $8-14); 70% of Club boxes are new stops.",
+  "Share planning weights (quarter ~100-120 lb take-home) are estimates until J&W weighs a test quarter.",
+  "Year-1 shares: 30 x 1/16, 15 x 1/8, 8 x 1/4, 8 whole lamb, 6 half lamb; year 2 is 1.4x.",
+  "Wild Fork switchers are inside the join numbers, not a separate revenue line.",
+  "J&W's vans and route times keep boxes frozen; long-haul boxes get an insulated tote with gel or dry ice.",
+  "Shopify Subscriptions (or Recharge/Loop) plus a bundle app can run the points builder; custom code is the fallback.",
+  "Gift memberships, if offered, are sold and counted in Play 5, not here."
+ ],
+ "risks": [
+  "Thin margin: raw is ~30%. The free item and free delivery can push a Starter box under 25% if J&W's real shelf margin is below 35%. Confirm SKU costs before launch and cut bonus points first.",
+  "Cannibalisation: existing raw buyers join and stop paying $20-35 route fees. Track each member's spend before joining; the $139 minimum box protects order size.",
+  "Churn above 11% (meal kits run 8-15%). Mitigate with skip and pause, slower cadences, the Thursday reminder and payment retries (failed payments cause about half of subscription churn).",
+  "Cold chain and capacity: year 2 adds ~1,250 lb a week of frozen volume. Check van and Brimley freezer space and route times, especially Friday long-haul.",
+  "Share weights are unpublished today; weigh a test quarter and sell with a guaranteed minimum take-home weight to avoid disputes.",
+  "Using the Wild Fork name in ads raises trademark and ad-platform policy issues. Use factual town and date messaging after a legal review.",
+  "Ontario-only: J&W is provincially inspected, so Club boxes cannot leave Ontario.",
+  "Meat cost inflation (truLOCAL's parent cited higher meat COGS in Q1 2026). Review point values quarterly.",
+  "A points-budget builder may need a paid bundle app or custom Shopify work.",
+  "Overlap with Play 1 (cooked plans) and Play 5 (gifting): keep the Club raw-only plus shares."
+ ],
+ "who": "Club lead (an existing online or counter staffer): ~8 h/week at launch rising to ~15 h/week by year 2 (packing ~10 min a box, member messages the agents can't close, approving drafts). Head butcher: ~3 h/week (cut-to-thickness steaks, share cut sheets, pooled-quarter cutting, yield log). Owner: ~1 h/week approving offers, ad budgets and save-flow rules. Drivers: ~22 extra stops a week by Apr 2027 and ~44 by year 2, on existing route days.",
+ "costs": {
+  "setup": 11000,
+  "monthly": 6400,
+  "note": "Setup: 500 reusable insulated Club totes ~$5,000, photography of cuts and boxes $2,500, printed cut sheets, inserts and labels $1,000, subscription/bundle app setup and testing (~40 staff h) $1,000, test-quarter weigh and yield test $500, launch landing page and ad creative by staff $1,000. Monthly at run-rate (year-1 average ~$5,000): paid geo ads $1,400, first-box and referral credits ~$460, route stops ~$1,900 (272 boxes x 70% new stops x $10), Club lead ~15 h/wk ~$1,690, head butcher ~3 h/wk ~$390, apps, SMS, Klaviyo share and AI tokens ~$450, tote replacement ~$150. Packaging liners and the free item sit inside the 30% gross margin. Excludes the Minastech fee."
+ },
+ "sources": [
+  {
+   "title": "truLOCAL homepage",
+   "url": "https://trulocal.ca/"
+  },
+  {
+   "title": "truLOCAL pricing",
+   "url": "https://trulocal.ca/pricing/"
+  },
+  {
+   "title": "truLOCAL FAQ (points, extra points, skip/pause, 48 h reminder)",
+   "url": "https://trulocal.ca/faq"
+  },
+  {
+   "title": "truLOCAL get started flow",
+   "url": "https://trulocal.ca/get-started/"
+  },
+  {
+   "title": "truLOCAL Free Meat for Life",
+   "url": "https://trulocal.ca/free-life/"
+  },
+  {
+   "title": "truLOCAL curated boxes",
+   "url": "https://trulocal.ca/curated-boxes/"
+  },
+  {
+   "title": "truLOCAL value boxes",
+   "url": "https://trulocal.ca/value-boxes/"
+  },
+  {
+   "title": "truLOCAL 10-year page (70,100+ customers, 511,000+ boxes)",
+   "url": "https://trulocal.ca/10-year"
+  },
+  {
+   "title": "truLOCAL Trustpilot reviews",
+   "url": "https://ca.trustpilot.com/review/trulocal.ca"
+  },
+  {
+   "title": "EMERGE corporate update on truLOCAL (AOV, CLTV, CAC), Jan 21 2026",
+   "url": "https://www.emerge-commerce.com/news/News/news-details/2026/EMERGE-Provides-Corporate-Update-on-truLOCAL-as-the-Brand-Celebrates-its-10th-Anniversary"
+  },
+  {
+   "title": "EMERGE acquires truLOCAL for up to $16.8M (2021)",
+   "url": "https://www.emerge-commerce.com/news/News/news-details/2021/EMERGE-Acquires-truLOCAL-the-Market-Leader-in-Direct-to-Consumer-Meat-Subscriptions-for-up-to-16.8M"
+  },
+  {
+   "title": "EMERGE: truLOCAL +193% net new subscriptions, Feb 2025",
+   "url": "https://www.emerge-commerce.com/news/News/news-details/2025/EMERGE-Brand-truLOCAL-Sees-a-193-Increase-in-Net-New-Subscriptions-in-February-2025-as-Support-Local-Movement-Grows"
+  },
+  {
+   "title": "Retail Insider: Wild Fork exits Canada (Oct 2026)",
+   "url": "https://retail-insider.com/retail-insider/2026/10/wild-fork-exits-canada-abandoning-ambitious-ontario-expansion-plans/"
+  },
+  {
+   "title": "J&W Foods store",
+   "url": "https://www.jwfoods.com"
+  },
+  {
+   "title": "J&W delivery routes and fees",
+   "url": "https://www.jwfoods.com/pages/home"
+  },
+  {
+   "title": "J&W Quarter Cow listing",
+   "url": "https://www.jwfoods.com/products/quarter-cow-purchase"
+  },
+  {
+   "title": "J&W AAA Ribeye Steak Special 10x11-12oz",
+   "url": "https://www.jwfoods.com/products/aaa-beef-ribeye-steak-special-10x10oz"
+  },
+  {
+   "title": "J&W case of portioned chicken breasts",
+   "url": "https://www.jwfoods.com/products/portioned-4kg-cases-of-frozen-chicken-breasts"
+  },
+  {
+   "title": "J&W Ontario whole lamb",
+   "url": "https://www.jwfoods.com/products/untitled-mar22_05-40"
+  },
+  {
+   "title": "J&W Canadian Prime ribeye deposit",
+   "url": "https://www.jwfoods.com/products/canadian-prime-rib-deposit"
+  },
+  {
+   "title": "J&W reviews aggregate (Google 4.8 / 611)",
+   "url": "https://yably.ca/reviews/toronto/j-w-foods-2201-brimley-road"
+  },
+  {
+   "title": "Sanagan's product feed (ribeye $/lb)",
+   "url": "https://sanagansmeatlocker.com/products.json"
+  },
+  {
+   "title": "Rowe Farms product feed (ribeye, beef shares)",
+   "url": "https://rowefarmsonline.ca/products.json"
+  },
+  {
+   "title": "VG Meats Farm to City product feed (shares, chicken)",
+   "url": "https://vgfarmtocity.ca/products.json"
+  },
+  {
+   "title": "Olliffe product feed",
+   "url": "https://olliffe.ca/products.json"
+  },
+  {
+   "title": "ButcherBox.ca",
+   "url": "https://butcherbox.ca/"
+  },
+  {
+   "title": "ButcherBox (free chicken for life hook)",
+   "url": "https://www.butcherbox.com/"
+  },
+  {
+   "title": "ButcherBox cadence 2/4/6/8 weeks",
+   "url": "https://hip2keto.com/butcher-box-price/"
+  },
+  {
+   "title": "Eightx subscription churn benchmarks",
+   "url": "https://www.eightx.co/blog/average-subscription-churn-rate-by-category"
+  },
+  {
+   "title": "Full play write-up",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-03.md"
+  }
+ ],
+ "prototype": {
+  "concept": "A clickable, mobile-first J&W Butcher Club page that does truLOCAL's best ideas (tier picker, points-budget box builder, free-for-life item, tap-to-explain comparison table, self-serve membership) the J&W way: real J&W cuts and prices, $/lb on every card, cut-to-thickness steaks, route-day delivery and Meal Butler cooked chicken as the free item. It adds beef and lamb shares with real cut sheets and deposits, plus a Wild Fork-town route finder. The JW team view shows a modelled week in April 2027: KPIs, the Monday pick list, route impact, agent drafts to approve, a retention queue, the share board and a monthly P&L.",
+  "wow": "The box fills as you shop. A top-down freezer box fills with a tile for each pack (real J&W photo and name, sized by weight). A sky-blue points meter fills and a live line updates ('21.3 lb · about 68 servings · $11.22/lb'). The slate-purple free-for-life tile is pinned in a corner from the start. When points hit the budget, the lid closes with a navy laurel seal reading 'Packed at 2201 Brimley Rd' and the button changes to 'Join with this box'.",
+  "design": {
+   "inspiredBy": "truLOCAL's page structure (offer hero, value pillars, 3 steps, plan picker, points builder, tap-to-explain comparison table, social proof, story cards, closing CTA, floating order button), rebuilt with J&W's own identity: navy laurel, butcher-paper cream, oxblood buttons and heritage serif type. No truLOCAL green, copy, logos or photos.",
+   "palette": [
+    {
+     "hex": "#154D8E",
+     "role": "J&W laurel navy: brand, links, selected states"
+    },
+    {
+     "hex": "#0F2E52",
+     "role": "Deep navy: hero, comparison and closing bands"
+    },
+    {
+     "hex": "#F6F0E4",
+     "role": "Butcher-paper cream: page background"
+    },
+    {
+     "hex": "#FFFFFF",
+     "role": "Card white"
+    },
+    {
+     "hex": "#1F2328",
+     "role": "Charcoal ink: body text"
+    },
+    {
+     "hex": "#8A2E2A",
+     "role": "Oxblood: primary buttons and Club prices (white text, 8.4:1)"
+    },
+    {
+     "hex": "#C8A15A",
+     "role": "Brass: laurel ring, 'Free for life' ribbon, on dark backgrounds only"
+    },
+    {
+     "hex": "#5B5A8C",
+     "role": "Meal Butler slate purple: free cooked-chicken tile and cooked add-ons"
+    },
+    {
+     "hex": "#7FB3D5",
+     "role": "Meal Butler sky: frozen cues and points meter fill on dark"
+    },
+    {
+     "hex": "#E2D8C4",
+     "role": "Hairline borders and dividers"
+    },
+    {
+     "hex": "#2E7D4F",
+     "role": "Success ticks in the comparison table"
+    }
+   ],
+   "displayFont": "Fraunces",
+   "bodyFont": "Inter",
+   "layout": "Mobile-first single column with 16 px gutters; desktop 12-column grid where the builder is a menu (8 cols) beside a sticky box panel (4 cols). Bands alternate cream and white, with two deep-navy bands (hero, price comparison) and a navy closing CTA. Card radius 14 px, pill buttons 48 px tall, Barlow Condensed 600 uppercase for badges, point chips and $/lb tags. Sticky bottom box bar on mobile once a box size is chosen.",
+   "tone": "Plain, warm, proud family butcher speaking as 'we'. Short sentences, specific numbers, Canadian spelling, no hype. Every concept price is labelled Concept and every weight or serving count est."
+  },
+  "sections": [
+   {
+    "name": "Header",
+    "purpose": "Brand and navigation",
+    "content": "'J&W Foods' laurel wordmark in navy plus 'Butcher Club' in Fraunces. Links: How it works · Boxes · Build · Shares · FAQ · My Club (demo). Framework cart icon."
+   },
+   {
+    "name": "Hero (deep navy)",
+    "purpose": "The offer plus an instant route-day check",
+    "content": "Eyebrow 'J&W Butcher Club · Concept'. H1 'Your butcher, on a schedule.' Sub: 'Pick your cuts from our Scarborough counter. We cut, vacuum-seal and freeze them, and bring them on your J&W route day. Every box comes with a free Meal Butler cooked chicken pack, for as long as you're a member.' Route check: label 'Where do you live?', placeholder 'Town or city, e.g. Whitby', button 'Check my day' -> uses JWC.findCity/JWC.routesFor: 'Whitby is on our Tuesday route. Club delivery is free (non-members pay $20).' Map 'Ancaster' to Hamilton (Thursday). Unknown town: 'We don't have a route there yet. Pick up free at 2201 Brimley Rd.' Buttons 'Build my box' (scroll to box sizes) and 'See beef shares'. Trust strip: '4.8★ on Google · 611 reviews' · 'Ontario-inspected plant since 2008' · 'Scarborough family butcher since 1995'. Small print 'Concept prices for discussion with J&W.' Image: three real J&W photos via JWC.img (aaa-beef-ribeye-steak-special-10x10oz, portioned chicken case, chicken-breast-teriyaki-cooked-portion) in a brass laurel ring, with a 'Free for life' tag on the cooked chicken."
+   },
+   {
+    "name": "Founding ribbon (oxblood)",
+    "purpose": "Time-limited launch hook",
+    "content": "'Founding members: $30 off your first box when you join by January 31, 2027.' Link: 'Wild Fork closing near you? See your route day' (scrolls to the Wild Fork band)."
+   },
+   {
+    "name": "Why a butcher's club",
+    "purpose": "Four value pillars, J&W's edge",
+    "content": "H2 'Why a butcher's club'. Cards: 'Cut in our own plant': 'We cut, portion and vacuum-seal at 2201 Brimley Rd, in an Ontario-inspected plant.' · 'Cut to your thickness': 'Tell us 1, 1¼ or 1½ inch. We cut your steaks before they're frozen.' · 'Brought on your route day': 'Your box comes with your normal J&W delivery, not by courier. Free for members.' · 'Skip any time': 'Skip, swap or pause online until Sunday night. No contract.'"
+   },
+   {
+    "name": "How it works",
+    "purpose": "Three steps",
+    "content": "H2 'Three steps, then it repeats'. 1 'Choose a box and how often': 'Starter, Family or Freezer Fill. Every 2, 4, 6 or 8 weeks.' 2 'Spend your points on real cuts': 'A point is about $5 of our shelf price. Mix chicken, steaks, ground, pork, lamb and fish.' 3 'We pack it, you put it away': 'Order by Sunday 11:59 pm. Your box arrives frozen on your route day that week.'"
+   },
+   {
+    "name": "Pick a box size",
+    "purpose": "Tier and cadence picker (Concept)",
+    "content": "H2 'Pick a box size'. Sub 'Concept prices. Delivery on your route day is included.' Frequency chips: Every 2 weeks · Every 4 weeks (default) · Every 6 weeks · Every 8 weeks. Cards: Starter '$139 a box · 28 points · Up to 45 servings · about 10–14 lb · Good for 1–2 people'; Family '$239 a box · 48 points · Up to 80 servings · about 17–25 lb · Good for 3–4 people', badge 'Our pick for families'; Freezer Fill '$319 a box · 66 points (2 bonus) · Up to 110 servings · about 25–34 lb · For big families and athletes', badge 'Best value per point'. Each card lists 'Free route delivery ($20–35 value)' and 'Free-for-life item', with button 'Choose Starter' / 'Choose Family' / 'Choose Freezer Fill'. Note: 'Servings est. at 5 oz raw. Steak-heavy boxes weigh less.'"
+   },
+   {
+    "name": "Pick your free-for-life item",
+    "purpose": "The hook and the cooked cross-sell",
+    "content": "H2 'Pick your free-for-life item'. Sub 'It comes free in every box while you're a member.' Options (radio cards): 'Meal Butler cooked chicken, 4 x 4 oz' (default, slate-purple card; flavour select Teriyaki · Souvlaki · BBQ · Jerk · Greek Lemon · Korean BBQ mapped to JWCAT ids; line 'Fully cooked and portioned. Heat and eat.'; '$16.80–19.96 value') · 'Wagyu/Kobe AAA ground, 1 lb' ('$14.99 value') · 'Wild sockeye fillet, 5–7 oz' ('$10.50 value')."
+   },
+   {
+    "name": "Build your box (the wow)",
+    "purpose": "Points-budget builder with live box visual",
+    "content": "H2 'Build your box'. Sub 'Tap to add. Your box fills as you go.' Presets row 'Start from a ready box:' Lean & simple (Starter: half case chicken, ground chicken x3, ground turkey, top sirloin x2, sockeye x2 = 27 pts, $134.96, ~10.1 lb) · Wild Fork switcher (Family: 4 kg case 6 oz, Wagyu/Kobe ground x2, ground beef 5 lb, top sirloin x4, sockeye x3, pork tenderloin = 48 pts, $241.48, ~21.3 lb, ~68 servings) · Greek Sunday (Family: Ontario lamb chops, Spartan Loukaniko x2, ground lamb, pork tenderloin, half case chicken, top sirloin x4, ground chicken x2, bacon, Wagyu/Kobe ground = 47 pts) · Steak night (Freezer Fill: ribeye 10-pack, NY striploin x4, Wagyu striploin, picanha x2, Wagyu/Kobe ground x2 = 66 pts, $328.98, ~13 lb) · Start empty. Filters: All · Chicken · Beef · Pork · Lamb & game · Fish. Points = round(price/5): 4 kg chicken case $85 = 17; half case $48 = 10; ground chicken $9.99 = 2; thighs $18.99 = 4; drumsticks $9.99 = 2; wings $14.99 = 3; chicken burgers 25-pack $35.50 = 7; marinated chicken case $100 = 20; ground turkey $15.99 = 3; top sirloin $10 = 2; NY striploin single $15 = 3 (case 8 x 8-9 oz $110 = 22); ribeye single 11-12 oz $24.50 = 5; ribeye 10-pack $175 = 35; tenderloin $19 = 4; picanha $14.50 = 3; Wagyu striploin $35 = 7; Wagyu/Kobe ground $14.99 = 3; ground brisket $10.99 = 2; ground beef 5 lb $40 = 8; short ribs $35 = 7; pork tenderloin $15 = 3; pork chop case $36 = 7; Spartan Loukaniko $11.50 = 2; bacon 1 lb $9 = 2; lamb chops $52 = 10; ground lamb $14.99 = 3; bison ribeye 6 oz $18.50 = 4; ground bison $16 = 3; venison 6 oz $19.99 = 4; wild sockeye $10.50 = 2. Card: photo, short name with J&W listing title in small grey, pack, price, '$/lb' tag, point chip, Add button that becomes a +/- stepper. Steak cards: thickness segmented control 1\" · 1¼\" · 1½\" (default 1¼\", saved as the cart note). Box panel: CSS-grid tiles, meter '32 of 48 points', 'Weight 14.2 lb (est.)', 'About 45 servings', 'Shelf value $158.47', 'Your price $239 a box', 'Free for life: Teriyaki cooked chicken 4 x 4 oz', 'Delivery: free on your route day'. Over budget: 'You're 4 points over. Extra points are $5 each ($20), or remove something.' Under: '16 points left. Up to 5 roll to your next box.' Full: lid closes with the laurel seal 'Packed at 2201 Brimley Rd', toast 'Box full. Nice work.' Button 'Review my box'. Below: 'Add Meal Butler extras (regular prices, outside your points)': chicken-breast-souvlaki 4 oz $4.62, 6oz-fully-cooked-meatballs 4 oz $2.19, copy-of-feta-omelette-cups-cooked-portioned-2-pkg $5.25, soup-chicken-lemon-soup $8.99, chicken-souvlaki-broccoli-sweet-potato-chunks 4 oz $13.99. EXTRA ITEMS not in JWCAT (copy exactly from research/jw-catalog.json): portioned-4kg-cases-of-frozen-chicken-breasts 'CASE of  PORTIONED CHICKEN BREASTS' 6oz Portions $85 / HALF CASE (2KG BAG - Random Portions) $48 img https://cdn.shopify.com/s/files/1/1156/0176/products/breast.png?v=1475243729 ; 1lb-ground-chicken 'GROUND - CHICKEN BREAST - 1LB BAG' $9.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/image_459dce90-49e5-4403-af41-2fbcc922916d.jpg?v=1624982451 ; chicken-boneless-leg-meat 'CHICKEN THIGHS - BONELESS SKINLESS' REGULAR 1BG $18.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/bonelesslegsmeat.jpg?v=1585160704 ; 2-5-3-lb-bag-chicken-drumsticks 'CHICKEN DRUMSTICKS' 2-3.0 lbs Bag $9.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/23e9fef7-d8b6-4494-a54b-e4c534d6406d.jpg?v=1585161980 ; chicken-wings 'CHICKEN WINGS' 2LB BAG - DRUMS & FLATS $14.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/wings.png?v=1475243586 ; chicken-burgers-1 'Premium Chicken Burgers — 25 Pack (6 oz each)' $35.50 img https://cdn.shopify.com/s/files/1/1156/0176/files/chicken-burger-on-cutting-board.png?v=1782841639 ; ground-turkey 'ONTARIO GROUND TURKEY BREAST -1LB BAG' $15.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/1Ground-Turkey-5038914.jpg?v=1469735301 ; aaa-beef-sirloin-steaks-6oz 'AAA BEEF TOP SIRLOIN STEAKS - 7-8oz' $10 img https://cdn.shopify.com/s/files/1/1156/0176/products/image_bd351dbd-b82b-4a4f-854c-e816aac01b19.jpg?v=1650905510 ; aaa-beef-ribeye-steak-special-10x10oz 'AAA BEEF RIBEYE STEAK SPECIAL 10x11-12oz' $175 img https://cdn.shopify.com/s/files/1/1156/0176/files/911DAB1D-8B3D-44B3-B0D1-3598CFDA3F76.png?v=1779739674 ; beef-tenderloin-aaa-ground 'GROUND - BEEF WAGYU KOBE GROUND AAA - 1 LB BAG' $14.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/top-sirloin-ground.jpg?v=1466823983 ; ground-chuck-brisket 'GROUND - BEEF BRISKET - 1LB BAG' $10.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/BRISKETGROUND.jpg?v=1622413145 ; ground-beef-10lb-bulk-mix-special 'GROUND BEEF - BULK MIX SPECIAL - 5lb' $40 img https://cdn.shopify.com/s/files/1/1156/0176/products/GROUNDPORK.jpg?v=1613490076 ; beef-short-ribs-korean-style 'BEEF SHORT RIBS - KOREAN STYLE CUT - PLAIN NOT MARINATED' $35 img https://cdn.shopify.com/s/files/1/1156/0176/products/KOREANSHORTRIBS.jpg?v=1622413634 ; pork-tenderloin 'PORK TENDERLOIN - 2 LOINS/PKG' $15 img https://cdn.shopify.com/s/files/1/1156/0176/products/PORKTENDERLOIN.jpg?v=1587067204 ; boneless-porkchop-case-special 'BONELESS PORKCHOP CASE SPECIAL 10x6oz' $36 img https://cdn.shopify.com/s/files/1/1156/0176/files/215FEC18-9A98-4257-9B75-3F8B62D8B0F6.jpg?v=1732980970 ; greek-pork-sausages-3-pk 'SAUSAGES - PORK - SPARTAN \"LOUKANIKO\" - 4/PK' $11.50 img https://cdn.shopify.com/s/files/1/1156/0176/products/SPARTANSAUSAGES.jpg?v=1622938308 ; bacon-sliced-centre-cut 'PORK BACON - SLICED/CENTRE CUT' 1LB BAG $9 img https://cdn.shopify.com/s/files/1/1156/0176/products/BACON-SLICED.jpg?v=1587067298 ; lean-ground-lamb-454g 'GROUND - LAMB - 1LB BAG' $14.99 img https://cdn.shopify.com/s/files/1/1156/0176/products/LAMBGROUND.jpg?v=1613489972 ; copy-of-bison-striploin-steaks-6oz-portions 'GROUND - BISON - 1LB BG' $16 img https://cdn.shopify.com/s/files/1/1156/0176/products/BISON.jpg?v=1588193762 ; copy-of-salmon-fillets-5-6oz-portion-canadian-atlantic 'SALMON SOCKEYE - SKIN-ON, Canadian WILD' $10.50 img https://cdn.shopify.com/s/files/1/1156/0176/products/image_0aea0c6d-5b87-4eef-b8e4-6ee2ac91e53b.jpg?v=1637100436 ; half-lamb-ontario 'HALF LAMB ONTARIO' $250 (no image; reuse whole-lamb photo labelled 'Half lamb'). Pack weights (lb, est.) for the counter: 4 kg case 8.82; half case 4.41; 1 lb bags 1.0; thighs 2.75; drumsticks 2.5; wings 2.0; chicken burgers 9.38; marinated case 8.82; top sirloin 0.47; striploin 0.53 (case 4.25); ribeye single 0.72; ribeye 10-pack 7.19; tenderloin 0.44; picanha 0.59; Wagyu striploin 0.53; ground beef bulk 5.0; short ribs 2.0; pork tenderloin 2.5; pork chop case 3.75; sausages ~1.0; bacon 1.0; lamb chops ~1.5; bison/venison 0.375; sockeye 0.375. Servings = lb x 16 / 5."
+   },
+   {
+    "name": "Review sheet (modal)",
+    "purpose": "Confirm the box before checkout",
+    "content": "Title 'Your Family box, every 4 weeks'. List of picks with thickness notes and the free item. 'Next box: Tuesday, Dec 1 · Whitby (GTA 1)', worked out as the member's route weekday after the next Sunday cut-off. 'Founding member credit −$30' (until Jan 31 2027). 'Box locks Sunday 11:59 pm. Skip, swap or pause online until then.' Buttons 'Edit' · 'Join and check out'."
+   },
+   {
+    "name": "Price per pound, side by side (deep navy)",
+    "purpose": "Honest comparison table with tap-to-explain",
+    "content": "H2 'Price per pound, side by side'. Sub 'We priced our counter against public online prices in Toronto on Oct 16, 2026. Tap a row to see how.' Columns: J&W Butcher Club | Toronto premium butchers | Mail-order meat boxes. Rows: 'AAA ribeye': '$23–25/lb in the 10-pack ($175). $33–36/lb as a single.' | '$39–60/lb' | '$31–37/lb (grass-fed)' · 'Boneless chicken breast': '$9.64/lb (4 kg case, $85)' | '$13.68–16.75/lb' | 'Usually not shown per lb' · 'Cut to your thickness': 'Yes, 1–1½ inch' | 'Yes, at the counter' | 'Fixed portions' · 'Who brings it': 'J&W, on your route day' | 'Pickup or local delivery' | 'Usually a courier' · 'Skip or pause online': 'Yes, until Sunday night' | 'No subscription' | 'Yes' · 'Free item in every box': 'Yes, for life' | 'No' | 'Some offer one' · 'Wagyu, bison, Ontario lamb': 'Yes' | 'Some' | 'Rarely'. Tapping a row opens a sheet with J&W's working, e.g. 'AAA Beef Ribeye Steak Special, 10 x 11–12 oz for $175 = $23.33–25.45/lb', and 'Based on five Toronto butchers and two Ontario meat-box services. Ranges, not quotes. Prices change.' No competitor names on the customer page."
+   },
+   {
+    "name": "Beef and lamb shares",
+    "purpose": "Packaged whole-animal sales with cut sheet and deposit",
+    "content": "H2 'Beef and lamb shares'. Sub 'Fill a chest freezer for the season. We pool shares into whole quarters, then cut to your sheet.' Cards: '1/16 beef · Concept · $325 · about 25–30 lb (planning est.) · about $11–13/lb · $100 deposit' · '1/8 beef · Concept · $625 · about 50–60 lb · about $10–13/lb · $150 deposit' · '1/4 beef · $1,200 (J&W's current price) · about 100–120 lb (planning est.) · about $10–12/lb · $300 deposit' (img from quarter-cow-purchase) · 'Ontario whole lamb · $475 ($400 deposit, $75 at pickup)' (untitled-mar22_05-40) · 'Ontario half lamb · $250'. Each card has 'See cut sheet'. Note 'Weights are planning estimates until we weigh a test quarter. Members get first pick of cut dates and free route delivery on shares.' Cut sheet modal 'Your 1/8 beef cut sheet': Steaks (ribeye, striploin, top sirloin, tenderloin): thickness 1\" / 1¼\" / 1½\", pack 2 or 4 · Roasts: 2–3 lb / 3–4 lb / grind them · Ground: 1 lb or 2 lb bags · Extras toggles: short ribs, brisket, shank, soup bones · Flank and skirt: keep whole / grind · 'Next pooled quarter: Wed, Dec 9 · 1 of 2 eighths reserved'. Button 'Reserve with $150 deposit' (deposit matches share size)."
+   },
+   {
+    "name": "Wild Fork closing near you?",
+    "purpose": "Time-sensitive switcher campaign",
+    "content": "H2 'Wild Fork closing near you?' Body 'Wild Fork's Ontario stores close by December 14. J&W already delivers frozen, vacuum-sealed meat to these towns every week.' Chips: Whitby (Tuesday, normally $20) · Oakville (Thursday, $27) · Ancaster (Thursday via Hamilton, $27) · Newmarket (Friday, $20) · Somewhere else (input using JWC.findCity). Result card e.g. 'Oakville: Thursday route. Join by Sunday, Nov 29 and your first box comes Thu, Dec 3. Club delivery is free (normally $27).' (dates computed). Button 'Start with the Switcher box' (selects Family and loads the Wild Fork switcher preset). Small print 'Wild Fork is a trademark of its owner. J&W is not connected to Wild Fork.'"
+   },
+   {
+    "name": "What J&W customers say",
+    "purpose": "Real social proof without fabricated quotes",
+    "content": "H2 'What J&W customers say'. Big line '4.8★ from 611 Google reviews.' Theme cards: 'An owner who teaches you': 'Reviewers often mention Bill explaining cuts and cooking.' · 'Better than supermarket meat': 'Steaks, brisket bacon, bison and venison come up again and again.' · 'Value for the quality': 'People say the prices are fair for what you get.' Caption 'Themes from public Google and Yelp reviews, not quotes.'"
+   },
+   {
+    "name": "From a 1960s Toronto butcher shop to Brimley Rd",
+    "purpose": "Heritage story in place of farm cards",
+    "content": "Timeline: '1960s · George Trougakos runs a butcher and grocery in downtown Toronto.' · '1973 · The family starts Advance Food Products in Scarborough.' · '1995 · Stavros Trougakos and William Fehr open J&W Foods.' · '2008 · J&W becomes an Ontario-inspected meat plant.' · 'Next · The Butcher Club (concept).'"
+   },
+   {
+    "name": "Questions (FAQ accordion)",
+    "purpose": "Remove doubts",
+    "content": "'How do points work?': 'Each cut has a point price, about $5 of our shelf price per point. Your box size sets your points. Extra points are $5 each. Up to 5 unused points roll to your next box.' · 'When can I change my box?': 'Until Sunday 11:59 pm before your route day. After that we start cutting and packing.' · 'Can I skip or cancel?': 'Yes. Skip, swap, change how often, pause or cancel online. No contract, no fee.' · 'How does delivery work?': 'On your normal J&W route day, frozen and vacuum-sealed. Members don't pay the route fee. We text your window the day before.' · 'Where's the meat from?': 'Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics. Our beef is graded AAA, with Wagyu and Canadian Prime available. Lamb chops and whole lamb are Ontario-raised.' · 'Can you ship outside Ontario?': 'No. We're an Ontario-inspected plant, so our meat stays in Ontario. Our Friday long-haul route reaches Ottawa, Kingston, London and Windsor.' · 'What if something arrives thawed?': 'Text us a photo the same day and we'll replace it in your next box.'"
+   },
+   {
+    "name": "Closing CTA (deep navy)",
+    "purpose": "Final push",
+    "content": "H2 'Fill your freezer the butcher's way.' Body 'Starter from $139. Free delivery on your route day. Free cooked chicken in every box.' Button 'Build my box'."
+   },
+   {
+    "name": "Sticky box bar (mobile)",
+    "purpose": "Always-visible progress, like a floating order button",
+    "content": "Appears once a box size is chosen: 'Family · 32/48 pts · $239' + button 'Review'. Hidden on desktop, where the box panel is sticky."
+   },
+   {
+    "name": "My Club (demo) drawer",
+    "purpose": "Self-serve membership and save flow",
+    "content": "Opened from the nav or after joining. If nobody has joined on this device, show a demo member. Status card 'Family box · every 4 weeks · next box Tue, Dec 1 · Whitby'. Buttons: Edit picks · Skip this box · Change how often · Swap free item · Pause · Cancel membership. Cancel -> 'Before you go. What's the reason?' Freezer's full / Too expensive / Moving / Quality / Other -> offers: 'Every 8 weeks instead' / 'Switch to Starter ($139)' or 'Pause one month' / route check for the new town / 'Talk to the butcher' (opens chat) -> Accept or 'Cancel anyway' -> toast. Saved in JWC.store('club')."
+   }
+  ],
+  "customerFlows": [
+   {
+    "name": "A. Join with a Family box (Whitby)",
+    "steps": [
+     "In the hero type 'Whitby' and tap Check my day: 'Tuesday route. Club delivery is free (non-members pay $20).'",
+     "Tap Build my box, choose Family and keep Every 4 weeks.",
+     "In Free-for-life keep Meal Butler cooked chicken and pick Teriyaki.",
+     "In Build your box tap the Greek Sunday preset (47 pts) and add one ground chicken breast: the meter hits 48/48 and the lid closes with the Brimley Rd seal.",
+     "Add Lemon Chicken Rice Soup ($8.99) from Meal Butler extras.",
+     "Tap Review my box: picks, thickness notes, 'Next box: Tuesday, Dec 1 · Whitby', founding credit −$30.",
+     "Tap Join and check out: JWC.checkout({title:'Join the J&W Butcher Club · Family box', city:'Whitby', items:[Family box $239 with picks as note, free item $0, soup $8.99], subscription:{label:'Butcher Club · every 4 weeks', discountPct:0}, extraRows:[{label:'Club delivery credit', amount:-20}, {label:'Founding member credit', amount:-30}], note:'Box locks Sunday 11:59 pm before your route day.'}).",
+     "Place demo order: onPlaced saves the membership to JWC.store('club'), toast 'Welcome to the Butcher Club', My Club shows the next box, and the team view lists the new member."
+    ]
+   },
+   {
+    "name": "B. Wild Fork switcher (Oakville)",
+    "steps": [
+     "Tap the founding ribbon link 'Wild Fork closing near you?'.",
+     "Tap the Oakville chip: 'Thursday route. Join by Sunday, Nov 29 and your first box comes Thu, Dec 3. Club delivery is free (normally $27).'",
+     "Tap Start with the Switcher box: Family selected and preset loaded (48 pts, ~21.3 lb, ~68 servings, ~$11.22/lb).",
+     "Optionally switch the free item to Wagyu/Kobe AAA ground.",
+     "Tap Review my box, then Join and check out: JWC.checkout with city 'Oakville', 'Club delivery credit' −$27 and 'Founding member credit' −$30.",
+     "Place demo order and see the confirmation."
+    ]
+   },
+   {
+    "name": "C. Reserve a 1/8 beef share",
+    "steps": [
+     "Tap See beef shares in the hero.",
+     "On the 1/8 beef card tap See cut sheet.",
+     "Choose steaks 1¼\" in packs of 2, roasts 3–4 lb, ground in 1 lb bags, keep short ribs and brisket, grind flank and skirt.",
+     "See 'Next pooled quarter: Wed, Dec 9 · 1 of 2 eighths reserved'.",
+     "Tap Reserve with $150 deposit: JWC.checkout({title:'Reserve your 1/8 beef share', items:[{id:'share-eighth-deposit', name:'1/8 beef share deposit (Concept)', price:150, qty:1, note:<cut sheet summary>}], extraRows:[{label:'Club delivery credit', amount:-fee}], note:'Balance $475 due on delivery or pickup, by the cut date.'}).",
+     "Place demo order and see the confirmation; the share board in team view shows Q pool 2 of 2 eighths."
+    ]
+   },
+   {
+    "name": "D. Manage my membership",
+    "steps": [
+     "Tap My Club (demo) in the nav (a demo member is loaded if none exists).",
+     "Tap Skip this box: confirm, the next date moves one cycle, toast 'Skipped. Next box Tue, Dec 29.'",
+     "Tap Cancel membership and choose 'Freezer's full'.",
+     "See the offer 'Every 8 weeks instead' and tap Accept.",
+     "Demo confirmation toast: 'Done. You're now every 8 weeks. Next box Tue, Jan 26.' and the status card updates."
+    ]
+   },
+   {
+    "name": "E. Ask the Butler",
+    "steps": [
+     "Open the chat and tap the suggestion 'How do points work?' to get the points reply.",
+     "Type 'What's in a 1/8 share?': the reply offers an 'Open 1/8 cut sheet' action.",
+     "Tap the action to open the cut sheet modal, then continue as flow C to the deposit checkout."
+    ]
+   }
+  ],
+  "teamView": [
+   {
+    "name": "KPI tiles (modelled sample week: Apr 12, 2027, mid case)",
+    "content": "Active members 145 (plan 145) · Boxes this week 32 · Avg order $236 · Churn, last 30 days 10.6% (limit 11%) · Skips this cycle 12% · Members in Wild Fork towns 38 · Free pack -> cooked reorder 17% · Shares reserved YTD: 1/16 x14, 1/8 x7, 1/4 x4."
+   },
+   {
+    "name": "Member ramp chart",
+    "content": "Bars of active members at month end, Dec 2026 to Oct 2027: 55, 84, 105, 123, 145, 169, 190, 204, 217, 233, 247. Label 'Modelled, mid case'. Year-1 new revenue $322K; run-rate $612K."
+   },
+   {
+    "name": "Monday pick list (drafted by Production forecast & pick-list agent)",
+    "content": "Table Item | Pull/cut | Notes: 4 kg chicken cases x9 (6 oz x5, 4 oz x2, 8 oz x2) · 2 kg half cases x7 · ground chicken breast 1 lb x41 · AAA NY striploin 8–9 oz x38 (1\" x14, 1¼\" x18, 1½\" x6; cut from 3 whole AAA striploins Mon 7 am) · AAA boneless ribeye 11–12 oz x24 · AAA top sirloin 7–8 oz x30 · Wagyu striploin x7 · Wagyu/Kobe ground x33 (6 free items) · pork tenderloin x11 · Spartan Loukaniko x14 · Ontario lamb chops x5 · wild sockeye x16 (4 free) · free cooked chicken 4 x 4 oz x22 (Teriyaki 7, Souvlaki 6, BBQ 4, Jerk 3, Greek Lemon 2; pull 88 x 4 oz portions from cooked stock). Button 'Approve pick list'."
+   },
+   {
+    "name": "Route impact (Route & delivery agent)",
+    "content": "Tue GTA 1 Durham: 9 boxes, 6 new stops, +24 min (Whitby 4) · Wed GTA 2 Toronto core: 11, 7, +28 min · Thu GTA 3 Halton/Hamilton: 7, 5, +25 min (Oakville 3, Ancaster 1) · Fri GTA 4 York/Peel: 4, 3, +12 min (Newmarket 2) · Fri long-haul: 1 box, Kingston, add dry ice · Total 32 boxes, 22 new stops, about $220 at $10/stop. Button 'Approve routes'."
+   },
+   {
+    "name": "Approvals (agent drafts)",
+    "content": "Cards with Approve / Edit / Reject (approve -> toast 'Approved. Queued (demo).'): 1) Box Reminder agent: Thursday 10 am SMS to 32 members: 'J&W here. Your Family box ships Tuesday. Same picks as last time? Reply YES, SKIP or SWAP. You can edit until Sunday 11:59 pm.' 2) Lifecycle agent: email to 412 waitlist sign-ups in Whitby, Oakville, Ancaster and Newmarket, subject 'BBQ season is on your route day', $25 off the first box until Apr 30. 3) Paid ads optimiser: 'Move $10/day from Mississauga to Newmarket. Last 28 days: Newmarket CAC $68, Mississauga $97. Monthly cap stays $1,400.' 4) Carcass & share-pooling agent: 'Korean-style short ribs are 14 kg over par. Offer them at 6 points instead of 7 in April boxes (cost about $5 a pack).' 5) Carcass & share-pooling agent: 'Quarter Q-0419 has 3 of 4 sixteenths reserved, cut Apr 23. Offer the last 1/16 to 37 members who viewed shares this month?' 6) Butler Concierge: 'Member #M-1102 (Markham) sent a photo of a thawed ground chicken bag. Credit $9.99 on the next box?'"
+   },
+   {
+    "name": "Concierge log",
+    "content": "'23 member chats this week. 19 closed by the agent (skips, swaps, delivery day, points). 4 sent to staff: 2 allergy questions, 1 thawed pack, 1 Calgary address (we can't ship outside Ontario).'"
+   },
+   {
+    "name": "Retention queue (Box Reminder & Save agent)",
+    "content": "Member | Box | Reason | Agent's offer | Status: #M-1187 Family/4 wks, freezer's full, every 8 weeks, Accepted · #M-0932 Starter/4 wks, moving to Ottawa, Friday long-haul (fee normally $35), Needs owner [Keep free] [Charge $15] · #M-1210 Freezer Fill/6 wks, card declined twice, SMS payment link + retry Fri, Waiting · #M-1046 Family/2 wks, too much beef, chicken-heavy preset, Waiting reply · #M-0871 Starter/4 wks, price, pause 1 month (no discount per owner rule), Paused to May 10."
+   },
+   {
+    "name": "Beef share board (Carcass & share-pooling agent)",
+    "content": "Pool | Cut date | Reserved | Status: Q-0418 Apr 16, 1/4 x1, Full, cut sheet received · Q-0419 Apr 23, 1/16 3 of 4, Needs one (offer drafted) · Q-0420 Apr 30, 1/8 x1 + 1/16 1 of 2, Needs one 1/16 · Greek Easter lamb (May 2), whole x2 + half x1, Deposits paid. Line: 'Last 3 quarters averaged 112 lb take-home (sample).' Deposits placed in the demo appear here."
+   },
+   {
+    "name": "Club P&L, April 2027 (est.)",
+    "content": "Box revenue $32.3K + shares $3.4K = $35.7K · new revenue at 0.75 = $26.8K · gross profit at 30% $10.7K · route stops −$1.0K · ads and credits −$1.9K · staff −$1.6K · apps, SMS, AI −$0.45K · cannibalisation −$1.0K · contribution ≈ $4.8K."
+   },
+   {
+    "name": "New members from this demo",
+    "content": "Table built from JWC.orders() where proto === 3: order no., town, route day, box, total. Empty state: 'Join in customer view to see a member land here.'"
+   }
+  ],
+  "chat": {
+   "name": "Ask the Butler",
+   "greeting": "Hi, I'm the Butler. Ask me about Club boxes, points, beef shares or your delivery day.",
+   "suggestions": [
+    "How do points work?",
+    "Can I skip a box?",
+    "What's in a 1/8 share?",
+    "Wild Fork closed. Do you deliver to Oakville?"
+   ],
+   "rules": [
+    {
+     "match": "point|how many pts|extra point",
+     "reply": "Each cut has a point price, about $5 of our shelf price per point. An 11–12 oz AAA ribeye is 5 points, an 8–9 oz Wagyu striploin is 7, a 1 lb bag of ground chicken breast is 2. Extra points are $5. Up to 5 unused points roll to your next box."
+    },
+    {
+     "match": "skip|pause|cancel|change my box",
+     "reply": "Skip, swap, pause or cancel online until Sunday 11:59 pm before your route day. No contract, no fee. Try it in My Club (demo)."
+    },
+    {
+     "match": "free|for life|chicken pack",
+     "reply": "Every box includes one free item while you're a member: Meal Butler cooked chicken 4 x 4 oz in your flavour, 1 lb Wagyu/Kobe AAA ground, or a wild sockeye fillet."
+    },
+    {
+     "match": "share|quarter|cow|1/8|1/16|eighth|sixteenth|side of beef",
+     "reply": "Beef shares come as 1/16 ($325), 1/8 ($625) and 1/4 ($1,200, our current price). The 1/16 and 1/8 are concept prices built from the quarter. Weights are planning estimates until we weigh a test quarter. Reserve with a deposit and pick your cuts on the cut sheet."
+    },
+    {
+     "match": "wild ?fork",
+     "reply": "Sorry your store is closing. We deliver frozen, vacuum-sealed meat to Whitby on Tuesdays, Oakville and Ancaster on Thursdays, and Newmarket on Fridays. Club delivery is free."
+    },
+    {
+     "match": "thick|thickness|cut to|inch",
+     "reply": "Pick 1, 1¼ or 1½ inch on any steak. We cut it before it's vacuum-sealed and frozen."
+    },
+    {
+     "match": "servings|how much meat|pounds|\\blb\\b|weigh",
+     "reply": "Starter is up to 45 servings (about 10–14 lb on a mixed box), Family up to 80 (17–25 lb) and Freezer Fill up to 110 (25–34 lb). These are estimates at 5 oz raw per serving. Steak-heavy boxes weigh less."
+    },
+    {
+     "match": "grass|organic|hormone|antibiotic",
+     "reply": "Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics. Our beef is graded AAA, with Wagyu and Canadian Prime available. We don't make grass-fed claims on the Club menu. Ask the counter about a specific cut."
+    },
+    {
+     "match": "outside ontario|other province|calgary|vancouver|montreal|ship to",
+     "reply": "We're an Ontario-inspected plant, so our meat stays in Ontario. Our Friday long-haul route reaches Ottawa, Kingston, London, Windsor and more."
+    },
+    {
+     "match": "price per|per lb|cheaper|compare|trulocal|butcherbox",
+     "reply": "Our AAA ribeye is about $23–25/lb in the 10-pack, and our 4 kg chicken breast case works out to $9.64/lb. Toronto premium butchers were at $39–60/lb for ribeye on Oct 16, 2026. See 'Price per pound, side by side' on this page."
+    }
+   ]
+  },
+  "productIds": [
+   "wagyu-striploin-cut-into-steaks-any-size-your-choice",
+   "beef-ribeye-boneless-aaa",
+   "new-york-striploin",
+   "tenderloin",
+   "picanha-top-sirloin-cap-grilling-steak",
+   "ontario-lamb-chops-raised-here-in-southern-ontario",
+   "bison-ribeye-steaks-6oz-portions",
+   "venison-steaks",
+   "chicken-breast-marinated-korean-4kg",
+   "quarter-cow-purchase",
+   "untitled-mar22_05-40",
+   "aaa-whole-striploin-cut-any-size-and-vacumed",
+   "chicken-breast-teriyaki-cooked-portion",
+   "chicken-breast-souvlaki",
+   "chicken-breast-jerk-cooked-portioned-copy",
+   "jerk-chicken-breast",
+   "chicken-breast-souvlaki-cooked-portioned-copy",
+   "chicken-breast-greek-lemon-cooked-portioned-copy",
+   "6oz-fully-cooked-meatballs",
+   "copy-of-feta-omelette-cups-cooked-portioned-2-pkg",
+   "soup-chicken-lemon-soup",
+   "chicken-souvlaki-broccoli-sweet-potato-chunks",
+   "jw-catalog.json:portioned-4kg-cases-of-frozen-chicken-breasts",
+   "jw-catalog.json:1lb-ground-chicken",
+   "jw-catalog.json:chicken-boneless-leg-meat",
+   "jw-catalog.json:2-5-3-lb-bag-chicken-drumsticks",
+   "jw-catalog.json:chicken-wings",
+   "jw-catalog.json:chicken-burgers-1",
+   "jw-catalog.json:ground-turkey",
+   "jw-catalog.json:aaa-beef-sirloin-steaks-6oz",
+   "jw-catalog.json:aaa-beef-ribeye-steak-special-10x10oz",
+   "jw-catalog.json:beef-tenderloin-aaa-ground",
+   "jw-catalog.json:ground-chuck-brisket",
+   "jw-catalog.json:ground-beef-10lb-bulk-mix-special",
+   "jw-catalog.json:beef-short-ribs-korean-style",
+   "jw-catalog.json:pork-tenderloin",
+   "jw-catalog.json:boneless-porkchop-case-special",
+   "jw-catalog.json:greek-pork-sausages-3-pk",
+   "jw-catalog.json:bacon-sliced-centre-cut",
+   "jw-catalog.json:lean-ground-lamb-454g",
+   "jw-catalog.json:copy-of-bison-striploin-steaks-6oz-portions",
+   "jw-catalog.json:copy-of-salmon-fillets-5-6oz-portion-canadian-atlantic",
+   "jw-catalog.json:half-lamb-ontario",
+   "jw-catalog.json:canadian-prime-rib-deposit"
+  ],
+  "conceptProducts": [
+   {
+    "name": "Butcher Club Starter box (Concept)",
+    "price": "$139 a box",
+    "basis": "28 points x ~$5 of J&W shelf price (~$140 of real items), plus free route delivery ($20–35) and one free-for-life item"
+   },
+   {
+    "name": "Butcher Club Family box (Concept)",
+    "price": "$239 a box",
+    "basis": "48 points (~$240 of J&W shelf price), free route delivery, free-for-life item"
+   },
+   {
+    "name": "Butcher Club Freezer Fill box (Concept)",
+    "price": "$319 a box",
+    "basis": "66 points (64 + 2 bonus, ~$330 of J&W shelf price), free route delivery, free-for-life item"
+   },
+   {
+    "name": "Extra box points (Concept)",
+    "price": "$5 each",
+    "basis": "Same ~$5 shelf value per point as the boxes"
+   },
+   {
+    "name": "Free-for-life item (Concept)",
+    "price": "$0 to members",
+    "basis": "Meal Butler cooked chicken 4 x 4 oz from J&W's $4.20–4.99 4 oz portions ($16.80–19.96), or Wagyu/Kobe AAA ground 1 lb ($14.99), or wild sockeye fillet ($10.50)"
+   },
+   {
+    "name": "1/16 beef share (Concept)",
+    "price": "$325 ($100 deposit)",
+    "basis": "J&W's real $1,200 Quarter Cow ÷ 4 + $25 split-and-wrap; ~25–30 lb planning estimate"
+   },
+   {
+    "name": "1/8 beef share (Concept)",
+    "price": "$625 ($150 deposit)",
+    "basis": "$1,200 ÷ 2 + $25 split-and-wrap; ~50–60 lb planning estimate"
+   },
+   {
+    "name": "Quarter beef share with cut sheet (Concept packaging)",
+    "price": "$1,200 ($300 deposit)",
+    "basis": "J&W's real Quarter Cow listing plus a planning weight (~100–120 lb) and cut sheet from its own cut list"
+   },
+   {
+    "name": "Founding member credit (Concept)",
+    "price": "−$30 on the first box",
+    "basis": "Joins by Jan 31, 2027; counted as acquisition cost in the model"
+   }
+  ]
+ }
+}

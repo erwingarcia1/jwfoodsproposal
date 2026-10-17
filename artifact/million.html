@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>The $1M Plan</title>
+  <meta name="description" content="How J&W Foods could add $1 million a year: every idea we found, scored out of 100, with what is good about it, what is not, and a recommended path.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/site-tw.js"></script>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site-data.js"></script>
+  <link rel="icon" href="assets/img/jw-logo.jpg">
+  <style>
+    .num { font-variant-numeric: tabular-nums; }
+    .g-a { background: #E3F4EC; color: #0F7B4F; } .g-b { background: #E7EEF8; color: #154D8E; } .g-c { background: #FBF1DC; color: #8A5A00; }
+    .g-d, .g-f { background: #F1F2F4; color: #566072; }
+    .ramp-bar { background: linear-gradient(180deg, #2E9A6C, #0F7B4F); border-radius: 8px 8px 2px 2px; }
+  </style>
+</head>
+<body class="bg-page text-ink font-body antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg">Skip to the content</a>
+  <div class="jw-bar">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row md:items-center md:justify-between gap-x-6">
+      <p class="pt-3 pb-1 md:py-3 whitespace-nowrap">J&amp;W Foods · growth proposal</p>
+      <nav aria-label="Proposal pages">
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 md:gap-x-5 whitespace-nowrap pt-1 pb-2 md:py-2">
+          <li><a class="inline-block py-1" href="index.html">Prototypes</a></li>
+          <li><a class="inline-block py-1" href="agents.html">AI agents</a></li>
+          <li><a class="inline-block py-1" href="roi.html">Business case</a></li>
+          <li><a aria-current="page" class="inline-block py-1" href="million.html">The $1M plan</a></li>
+          <li><a class="inline-block py-1" href="research.html">Research</a></li>
+          <li><a class="inline-block py-1" href="proposal.html">Proposal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 pt-10 pb-10 md:pt-14 md:pb-12">
+      <p class="text-[11px] font-semibold tracking-[0.28em] uppercase text-gain">A bigger question · prepared for J&amp;W Foods</p>
+      <h1 class="font-display text-[34px] leading-[1.1] md:text-[56px] mt-3 max-w-4xl">How J&amp;W adds $1&nbsp;million a year</h1>
+      <p class="mt-5 text-[15px] md:text-[17px] leading-relaxed text-muted max-w-3xl" id="intro"></p>
+    </div>
+  </header>
+
+  <main id="main" class="max-w-6xl mx-auto px-5 py-10 md:py-14">
+    <noscript><p class="bg-white border border-line rounded-2xl p-6">This page builds its cards with JavaScript. The same ideas are in the <a class="underline" href="proposal.html">full proposal</a>.</p></noscript>
+
+    <section class="grid gap-6 lg:grid-cols-[1.2fr_1fr]" aria-label="The short version">
+      <div class="bg-ink text-white rounded-3xl p-6 md:p-8 min-w-0">
+        <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-white/70">The short version</p>
+        <h2 class="font-display text-[30px] md:text-[38px] leading-[1.1] mt-2" id="path-h">Our recommended path</h2>
+        <p class="mt-3 text-white/80 text-[15px] leading-relaxed" id="path-p"></p>
+        <ol id="path-list" class="mt-5 grid gap-2.5"></ol>
+        <div class="mt-5 rounded-xl bg-white/10 px-4 py-3.5 flex flex-wrap items-baseline justify-between gap-2"><span class="text-[12px] font-semibold tracking-[0.12em] uppercase text-white/70">Expected, once running</span><span class="font-display text-[34px] leading-none num" id="path-total"></span></div>
+      </div>
+      <div class="bg-white border border-line rounded-3xl p-6 md:p-8 min-w-0">
+        <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-gain">How it ramps</p>
+        <h2 class="font-display text-[26px] md:text-[30px] leading-tight mt-2">Added revenue by quarter</h2>
+        <p class="mt-1 text-[13.5px] text-muted" id="ramp-note">The recommended path, expected case, annualised run-rate at the end of each quarter.</p>
+        <div id="ramp" class="mt-6 h-[220px] flex items-end gap-1 sm:gap-2" role="img"></div>
+        <div id="ramp-labels" class="mt-2 flex gap-1 sm:gap-2 text-[10px] sm:text-[11px] text-muted"></div>
+      </div>
+    </section>
+
+    <section class="mt-14" aria-labelledby="how-h">
+      <h2 id="how-h" class="font-display text-3xl md:text-4xl">How the grades work</h2>
+      <p class="mt-2 text-muted text-[15px] max-w-3xl">Each idea is scored on four tests that add up to 100, the same way for every idea. 80 and up reads “Strongest”, 70s “Strong”, 60s “Worth a test”, 50s “Later” and below 50 “Not now”. A lower score is not a no: the order on the path comes from timing (gifts sell in Q4, wellness budgets reset in January).</p>
+      <div id="tests" class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <section class="mt-14" aria-labelledby="ideas-h">
+      <h2 id="ideas-h" class="font-display text-3xl md:text-4xl">Every idea, best first</h2>
+      <p class="mt-2 text-muted text-[15px] max-w-3xl">“Sales” are what customers would pay in a year, on top of what J&amp;W sells today, once the idea is running. They are estimates and they are not profit: “you keep” is our estimate of gross profit after food, packaging, delivery and fees, before set-up costs, overheads and tax. Do not add them all up: several share the same customers, the same plant hours and the same team.</p>
+      <div id="ideas" class="mt-6 grid gap-5"></div>
+    </section>
+
+    <section class="mt-14 bg-white border border-line rounded-3xl p-6 md:p-8" aria-labelledby="build-h">
+      <div class="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
+        <div>
+          <h2 id="build-h" class="font-display text-3xl md:text-4xl">Build your own path to $1 million</h2>
+          <p class="mt-2 text-muted text-[15px] max-w-2xl">Tick the ideas you would actually run. The total uses each idea’s expected case and takes overlap off where two ideas sell to the same customers.</p>
+          <div id="picker" class="mt-5 grid gap-2"></div>
+        </div>
+        <div class="lg:sticky lg:top-4 rounded-2xl bg-page border border-line p-5" aria-live="polite">
+          <p class="text-[11px] font-semibold tracking-[0.14em] uppercase text-muted">Your path, expected</p>
+          <p class="font-display text-[44px] leading-none mt-2 num" id="pick-total">$0</p>
+          <div class="bar-track mt-4" aria-hidden="true"><span class="bar-range" id="pick-bar" style="left:0;width:0"></span></div>
+          <p class="mt-2 text-[13px] text-muted" id="pick-note"></p>
+          <p class="mt-3 text-[13px]" id="pick-keep"></p>
+          <p class="mt-2 text-[13px] text-warn" id="pick-warn"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-2" aria-label="Tests and rules">
+      <div class="bg-white border border-line rounded-2xl p-6 md:p-7">
+        <h2 class="font-display text-2xl md:text-3xl">What we would test first</h2>
+        <p class="mt-1 text-[14px] text-muted">Cheap ways to find out, in one quarter, which ideas customers will really pay for.</p>
+        <ul id="first" class="mt-4 space-y-3 text-[14.5px] leading-snug"></ul>
+      </div>
+      <div class="bg-white border border-line rounded-2xl p-6 md:p-7">
+        <h2 class="font-display text-2xl md:text-3xl">Rules to check before spending</h2>
+        <p class="mt-1 text-[14px] text-muted">We are not lawyers or accountants. These are the questions to ask, and who to ask.</p>
+        <ul id="rules" class="mt-4 space-y-3 text-[14.5px] leading-snug"></ul>
+      </div>
+    </section>
+
+    <p class="mt-12 text-sm text-muted">The prototypes show how a few of these would look. <a class="font-semibold text-brand underline underline-offset-2" href="index.html">Open the prototypes →</a> · <a class="font-semibold text-brand underline underline-offset-2" href="roi.html">See the business case →</a></p>
+  </main>
+
+  <footer class="bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center gap-6 sm:justify-between text-center sm:text-left">
+      <p class="jw-wordmark" style="color:#fff">J&amp;W <span style="color:rgba(255,255,255,.72)">Foods · Meal Butler</span></p>
+      <div class="text-sm text-white/70 leading-relaxed sm:text-right">
+        <p>Prepared for J&amp;W Foods Inc · 2201 Brimley Rd, Unit 1, Scarborough, ON</p>
+        <p>Ideas and estimates for discussion. Not a forecast, and not financial, legal or tax advice.</p>
+        <p class="mt-1"><a class="text-white underline underline-offset-2 hover:text-white/80" href="mailto:erwin.garcia@minastech.ca">erwin.garcia@minastech.ca</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var J = window.JW, M = J && J.million; if (!M || !M.ideas) return;
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function fm(v) { var s = v < 0 ? '−' : ''; v = Math.abs(v || 0); if (v >= 999500) return s + '$' + (Math.round(v / 1e5) / 10) + 'M'; if (v >= 99950) return s + '$' + Math.round(v / 1000) + 'K'; if (v >= 1000) return s + '$' + (Math.round(v / 100) / 10) + 'K'; return s + '$' + Math.round(v); }
+    var TESTS = [
+      { id: 'money', name: 'Money', max: 35, what: 'How far the sales the idea adds on its own, once running, go toward $1M a year. Full marks at $1M, curved so $500K earns about 24 and $250K about 15.' },
+      { id: 'fit', name: 'Fit', max: 20, what: 'Does it suit a family butcher with an Ontario-inspected plant in Scarborough, its staff, its routes and its customers?' },
+      { id: 'evidence', name: 'Evidence', max: 20, what: 'Are others already doing it, with published prices, revenue or results we could check?' },
+      { id: 'risk', name: 'Low cost and risk', max: 25, what: 'Money up front, staff time, food-safety and licensing risk, and how easily J&W could stop. More points means cheaper and safer.' }
+    ];
+    function moneyScore(r) { if (!(r > 0)) return 0; var R = r / 1e6; return Math.min(35, Math.round(35 * 1.85 * R / (R + 0.85))); }
+    /* Plain verdicts instead of school letters: the score decides the word, timing decides the order */
+    var SCALE = [[80, 'Strongest', 'a'], [70, 'Strong', 'a'], [60, 'Worth a test', 'b'], [50, 'Later', 'c'], [0, 'Not now', 'd']];
+    function letter(s) { for (var i = 0; i < SCALE.length; i++) if (s >= SCALE[i][0]) return SCALE[i][1]; return 'Not now'; }
+    function tone(s) { for (var i = 0; i < SCALE.length; i++) if (s >= SCALE[i][0]) return SCALE[i][2]; return 'd'; }
+    var STARTS = ['Nov 2026', 'Dec 2026', 'Jan 2027'];
+    var ideas = M.ideas.map(function (d) {
+      var t = d.tests || {}, money = moneyScore((d.sales || {}).mid);
+      var score = money + (t.fit || 0) + (t.evidence || 0) + (t.risk || 0);
+      return Object.assign({}, d, { score: score, money: money, grade: letter(score) });
+    }).sort(function (a, b) { return b.score - a.score; });
+    function byN(n) { return ideas.filter(function (x) { return x.n === n; })[0]; }
+
+    document.getElementById('intro').textContent = M.intro || '';
+    document.getElementById('tests').innerHTML = TESTS.map(function (t) { return '<div class="bg-white border border-line rounded-2xl p-5"><p class="flex items-baseline justify-between"><b class="text-[15px]">' + esc(t.name) + '</b><span class="text-[13px] text-muted">up to ' + t.max + '</span></p><p class="mt-1.5 text-[13.5px] leading-snug text-muted">' + esc(t.what) + '</p></div>'; }).join('');
+
+    var path = M.path || {};
+    if (path.title) document.getElementById('path-h').textContent = path.title;
+    document.getElementById('path-p').textContent = path.summary || '';
+    var pTotal = 0;
+    document.getElementById('path-list').innerHTML = (path.ideas || []).map(function (n, i) {
+      var d = byN(n); if (!d) return ''; pTotal += (d.sales || {}).mid || 0;
+      return '<li class="flex items-baseline gap-3 rounded-xl bg-white/10 px-4 py-3"><span class="font-bold text-sky" aria-hidden="true">' + (i + 1) + '</span><span class="flex-1"><a href="#idea-' + d.n + '" class="font-semibold hover:underline">' + esc(d.name) + '</a><span class="block text-[13px] text-white/70">' + esc(d.short || '') + '</span></span><span class="font-semibold num whitespace-nowrap">' + fm((d.sales || {}).mid) + '</span></li>';
+    }).join('');
+    var pathOverlap = path.overlapPct != null ? path.overlapPct : 10;
+    document.getElementById('path-total').textContent = fm(path.total || pTotal * (1 - pathOverlap / 100));
+
+    var ramp = path.ramp || [], rmax = Math.max.apply(null, ramp.map(function (r) { return r.value; }).concat([1000000]));
+    document.getElementById('ramp').setAttribute('aria-label', 'Run-rate by quarter: ' + ramp.map(function (r) { return r.q + ' ' + fm(r.value); }).join(', '));
+    document.getElementById('ramp').innerHTML = ramp.map(function (r) { return '<div class="flex-1 min-w-0 flex flex-col items-center justify-end h-full"><span class="text-[9.5px] sm:text-[11px] font-semibold num mb-1 whitespace-nowrap">' + fm(r.value) + '</span><span class="ramp-bar w-full" style="height:' + Math.max(2, r.value / rmax * 100) + '%"></span></div>'; }).join('') +
+      '';
+    document.getElementById('ramp-labels').innerHTML = ramp.map(function (r) { return '<span class="flex-1 min-w-0 text-center leading-tight">' + esc(r.q).replace(' ', '<br class="sm:hidden"> ') + '</span>'; }).join('');
+    if (path.rampNote) document.getElementById('ramp-note').textContent = path.rampNote + ' The headline figure is the year-two average; the bars keep rising into 2028 because subscribers keep adding up.';
+
+    document.getElementById('ideas').innerHTML = ideas.map(function (d, i) {
+      var s = d.sales || {}, t = d.tests || {}, g = tone(d.score), pi = (path.ideas || []).indexOf(d.n);
+      var plays = (d.plays || []).map(function (n) { var p = (J.plays || []).filter(function (q) { return q.n === n; })[0]; return p ? '<a class="rounded-full border border-line px-3 py-1.5 text-[12.5px] font-semibold hover:border-brand" href="' + esc(p.file) + '">Prototype ' + p.n + ': ' + esc(p.name) + ' →</a>' : ''; }).join('');
+      return '<article id="idea-' + d.n + '" class="bg-white border border-line rounded-2xl p-5 md:p-7 scroll-mt-16">' +
+        '<div class="flex flex-wrap items-start gap-4">' +
+          '<span class="grade g-' + g + '" style="flex-direction:column;min-width:64px;height:64px" aria-label="Score ' + d.score + ' out of 100: ' + esc(d.grade) + '"><span>' + d.score + '</span><small style="font-size:10px;font-weight:600">/100</small></span>' +
+          '<div class="flex-1 min-w-[220px]"><p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-muted">#' + (i + 1) + ' · ' + esc(d.grade) + (pi > -1 ? ' · <span class="text-gain">on the path: start ' + STARTS[pi] + '</span>' : '') + '</p><h3 class="font-display text-[28px] leading-tight mt-0.5">' + esc(d.name) + '</h3><p class="mt-1 text-[15px] leading-snug">' + esc(d.idea || d.short || '') + '</p></div>' +
+          '<div class="rounded-xl bg-gainsoft px-4 py-3 min-w-[200px]"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-gain">Sales a year, once running</p><p class="font-display text-[30px] leading-tight text-gain num">' + fm(s.mid) + '</p><p class="text-[12.5px] text-ink/75 num">Range ' + fm(s.low) + '–' + fm(s.high) + ' · you keep about ' + (d.keepPct || 0) + '% (' + fm((s.mid || 0) * (d.keepPct || 0) / 100) + ')</p></div>' +
+        '</div>' +
+        '<div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[12.5px]">' + TESTS.map(function (T) { var v = T.id === 'money' ? d.money : (t[T.id] || 0); return '<div class="rounded-lg bg-page border border-line px-3 py-2"><span class="text-muted">' + esc(T.name) + '</span><span class="float-right font-semibold num">' + v + '/' + T.max + '</span><div class="bar-track mt-1.5" style="height:6px"><span class="bar-range" style="height:6px;left:0;width:' + (v / T.max * 100) + '%;background:#154D8E"></span></div></div>'; }).join('') + '</div>' +
+        (d.how ? '<p class="mt-4 text-[14.5px] leading-relaxed"><b>How it works:</b> ' + esc(d.how) + '</p>' : '') +
+        '<div class="mt-4 grid gap-4 md:grid-cols-2 text-[14px] leading-snug">' +
+          '<div><p class="font-semibold text-gain">What is good</p><ul class="mt-1.5 space-y-1.5">' + (d.pros || []).map(function (x) { return '<li class="flex gap-2"><span class="text-gain font-bold" aria-hidden="true">+</span><span>' + esc(x) + '</span></li>'; }).join('') + '</ul></div>' +
+          '<div><p class="font-semibold text-bad">What is not</p><ul class="mt-1.5 space-y-1.5">' + (d.cons || []).map(function (x) { return '<li class="flex gap-2"><span class="text-bad font-bold" aria-hidden="true">−</span><span>' + esc(x) + '</span></li>'; }).join('') + '</ul></div>' +
+        '</div>' +
+        '<dl class="mt-4 grid gap-2 text-[14px] leading-snug">' +
+          (d.math ? '<div><dt class="inline font-semibold">The math: </dt><dd class="inline text-muted">' + esc(d.math) + '</dd></div>' : '') +
+          (d.takes ? '<div><dt class="inline font-semibold">What it takes: </dt><dd class="inline text-muted">' + esc(d.takes) + '</dd></div>' : '') +
+          (d.firstTest ? '<div><dt class="inline font-semibold">First step: </dt><dd class="inline text-muted">' + esc(d.firstTest) + '</dd></div>' : '') +
+          (d.worth ? '<div><dt class="inline font-semibold">Worth it? </dt><dd class="inline">' + esc(d.worth) + '</dd></div>' : '') +
+          ((d.seen || []).length ? '<div><dt class="inline font-semibold">Seen at: </dt><dd class="inline text-muted">' + d.seen.map(function (x) { return '<a class="underline underline-offset-2 text-brand" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.label) + '</a>'; }).join(', ') + '</dd></div>' : '') +
+        '</dl>' + (plays ? '<div class="mt-4 flex flex-wrap gap-2">' + plays + '</div>' : '') +
+      '</article>';
+    }).join('');
+
+    var KEY = 'jwmil:v1', picks; try { picks = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+    if (!Array.isArray(picks)) picks = (path.ideas || []).slice();
+    var pk = document.getElementById('picker');
+    pk.innerHTML = ideas.map(function (d) {
+      return '<label class="flex items-center gap-3 rounded-xl border border-line px-3.5 py-2.5 cursor-pointer hover:border-brand"><input type="checkbox" class="w-4 h-4 accent-[#154D8E]" data-n="' + d.n + '"' + (picks.indexOf(d.n) > -1 ? ' checked' : '') + '><span class="grade g-' + tone(d.score) + '" style="min-width:38px;height:30px;font-size:13px;border-radius:8px" aria-label="Score ' + d.score + '">' + d.score + '</span><span class="flex-1 text-[14.5px]"><b>' + esc(d.name) + '</b></span><span class="text-[13.5px] font-semibold num">' + fm((d.sales || {}).mid) + '</span></label>';
+    }).join('');
+    function pickCalc() {
+      var sel = ideas.filter(function (d) { return picks.indexOf(d.n) > -1; });
+      var sum = sel.reduce(function (a, d) { return a + ((d.sales || {}).mid || 0); }, 0);
+      var keep = sel.reduce(function (a, d) { return a + ((d.sales || {}).mid || 0) * (d.keepPct || 0) / 100; }, 0);
+      var ov = 0; sel.forEach(function (d) { (d.overlapsWith || []).forEach(function (n) { if (picks.indexOf(n) > -1) ov += 0.05; }); });
+      ov = Math.min(0.3, ov / 2);
+      if (sel.length > 1) ov = Math.min(0.45, ov + 0.20);   /* the CFO's stretch for running several launches at once */
+      var total = sum * (1 - ov);
+      document.getElementById('pick-total').textContent = fm(total);
+      document.getElementById('pick-bar').style.width = Math.min(100, total / 1e6 * 100) + '%';
+      document.getElementById('pick-note').textContent = sel.length + ' idea' + (sel.length === 1 ? '' : 's') + (ov ? ' · ' + Math.round(ov * 100) + '% taken off for shared customers and running launches together' : '') + ' · ' + (total >= 1e6 ? 'clears $1M a year' : fm(1e6 - total) + ' short of $1M');
+      document.getElementById('pick-keep').innerHTML = sel.length ? 'You keep about <b>' + fm(keep * (1 - ov)) + '</b> a year in gross profit.' : '';
+      var hard = sel.filter(function (d) { return d.capacityHeavy; });
+      document.getElementById('pick-warn').textContent = hard.length > 2 ? 'Three or more of these need extra plant hours or a second shift. Check cook and pack capacity first.' : '';
+    }
+    pk.addEventListener('change', function (e) { var n = +e.target.dataset.n; if (!n) return; if (e.target.checked) { if (picks.indexOf(n) < 0) picks.push(n); } else picks = picks.filter(function (x) { return x !== n; }); try { localStorage.setItem(KEY, JSON.stringify(picks)); } catch (er) {} pickCalc(); });
+    pickCalc();
+
+    document.getElementById('first').innerHTML = (M.firstTests || []).map(function (f) { var d = f.idea ? byN(f.idea) : null; return '<li class="flex gap-3"><span class="mt-[7px] w-1.5 h-1.5 shrink-0 rounded-full bg-gain" aria-hidden="true"></span><span><b>' + esc(f.name || (d ? d.name : '')) + ':</b> ' + esc(f.test) + (f.cost ? ' <span class="text-muted">Cost: ' + esc(f.cost) + '.</span>' : '') + (f.signal ? ' <span class="text-muted">Go if: ' + esc(f.signal) + '.</span>' : '') + '</span></li>'; }).join('');
+    document.getElementById('rules').innerHTML = (M.rules || []).map(function (r) { return '<li class="flex gap-3"><span class="mt-[7px] w-1.5 h-1.5 shrink-0 rounded-full bg-warn" aria-hidden="true"></span><span><b>' + esc(r.q) + '</b>' + (r.why ? ' <span class="text-muted">' + esc(r.why) + '</span>' : '') + (r.who ? ' <span class="block text-[13px] text-brand mt-0.5">Ask: ' + esc(r.who) + '</span>' : '') + '</span></li>'; }).join('');
+    if (location.hash) { var tg = document.querySelector(location.hash); if (tg) setTimeout(function () { tg.scrollIntoView(); }, 60); }
+  })();
+  </script>
+</body>
+</html>

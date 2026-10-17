@@ -1,0 +1,1890 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pro Partner Portal · J&amp;W Foods concept</title>
+<meta name="description" content="J&amp;W Pro Partners: case pricing, standing weekly drops and a loaned freezer for GTA gyms, trainers, clinics, shops and teams. A concept prototype by Minastech.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { navy: '#154D8E', ink: '#0E2340', canvas: '#F4F6F9', sky: '#7FB3D5', slate: '#5B5A8C', brass: '#C8963E', brassdk: '#8C6420', body: '#1E2733', muted: '#5E6878', line: '#DDE3EA', ok: '#2E7D4F', alert: '#A63D2F' },
+  fontFamily: { display: ['"Barlow Condensed"', '"Arial Narrow"', 'sans-serif'], sans: ['Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'] },
+  maxWidth: { site: '1160px' }
+} } };
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<style>
+:root{--navy:#154D8E;--ink:#0E2340;--canvas:#F4F6F9;--sky:#7FB3D5;--slate:#5B5A8C;--brass:#C8963E;--brassdk:#8C6420;--body:#1E2733;--muted:#5E6878;--line:#DDE3EA;--ok:#2E7D4F;--alert:#A63D2F;--pp-subh:63px;--disp:"Barlow Condensed","Arial Narrow",sans-serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--body);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-left:16px;padding-right:16px}
+@media(min-width:768px){.wrap{padding-left:24px;padding-right:24px}}
+.disp{font-family:var(--disp);text-transform:uppercase;letter-spacing:.04em}
+.eyebrow{font:600 13px/1.2 var(--disp);letter-spacing:.22em;text-transform:uppercase;color:var(--navy);margin:0 0 8px}
+.on-dark .eyebrow{color:var(--sky)}
+.on-dark .ccard .eyebrow{color:var(--navy)}
+.nw{white-space:nowrap}
+.h2{font:700 clamp(34px,6vw,50px)/.96 var(--disp);text-transform:uppercase;letter-spacing:.025em;color:var(--ink);margin:0}
+.h3{font:700 22px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--ink);margin:0}
+.on-dark .h2,.on-dark .h3{color:#fff}
+.lede{font-size:17px;line-height:1.55;color:var(--muted);max-width:660px;margin:12px 0 0}
+.on-dark .lede{color:#C9D6E6}
+.sec{padding:60px 0;scroll-margin-top:calc(var(--jwc-barh, 0px) + var(--pp-subh))}
+@media(min-width:1024px){.sec{padding:84px 0}}
+.band{background:var(--ink);color:#fff}
+.bg-white2{background:#fff}
+.ccard{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 2px rgba(14,35,64,.05),0 14px 34px -22px rgba(14,35,64,.35)}
+.muted{color:var(--muted)}
+.small{font-size:13px;line-height:1.45}
+.ok{color:var(--ok)}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:12px;font:600 15px/1.15 var(--sans);cursor:pointer;border:1.5px solid transparent;text-decoration:none;transition:background-color .15s,border-color .15s,transform .15s;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:#0F3D73}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#071628}
+.btn-ow{border-color:rgba(255,255,255,.8);color:#fff;background:transparent}.btn-ow:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-line{background:#fff;border-color:#C9D2DD;color:var(--ink)}.btn-line:hover{border-color:var(--navy)}
+.btn-sky{background:var(--sky);color:var(--ink)}.btn-sky:hover{background:#99C4E0}
+.btn-ok{background:var(--ok);color:#fff}.btn-ok:hover{background:#246740}
+.btn-warn{background:#fff;border-color:#E3C3BE;color:var(--alert)}.btn-warn:hover{border-color:var(--alert)}
+.btn-sm{min-height:40px;padding:0 14px;font-size:14px;border-radius:10px}
+.btn-block{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.hero .btn-navy{box-shadow:0 0 0 1.5px rgba(127,179,213,.65),0 14px 30px -14px rgba(0,0,0,.7)}
+.chip{display:inline-block;border-radius:999px;padding:5px 10px;font:600 12px/1.2 var(--sans);white-space:nowrap}
+.chip-navy{background:#E3ECF7;color:var(--navy)}
+.chip-ok{background:#E2F1E8;color:#24663F}
+.chip-alert{background:#F8E5E2;color:var(--alert)}
+.chip-brass{background:#F6EBD6;color:var(--brassdk)}
+.chip-slate{background:#ECEBF5;color:#4A4977}
+.chip-concept{background:var(--ink);color:#fff;letter-spacing:.04em}
+.chip-muted{background:#EEF1F5;color:var(--muted)}
+.ai{display:inline-block;background:var(--slate);color:#fff;border-radius:12px;padding:5px 11px 5px 8px;font:600 12px/1.35 var(--sans)}
+.ai i{font-style:normal;display:inline-grid;place-items:center;width:16px;height:16px;border-radius:5px;background:rgba(255,255,255,.18);font-size:10px;vertical-align:-3px;margin-right:6px}
+.tc{display:inline-flex;align-items:center;border-radius:999px;padding:4px 10px;font:700 12px/1.1 var(--sans);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.tc-web{background:#E9EDF2;color:var(--ink)}
+.tc-partner{background:var(--sky);color:var(--ink)}
+.tc-pro{background:var(--navy);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.tc-elite{background:var(--brass);color:var(--ink)}
+.pbtn{border:1.5px solid #C9D2DD;background:#fff;color:var(--body);border-radius:999px;min-height:42px;padding:0 15px;font:600 14px/1 var(--sans);cursor:pointer;white-space:nowrap}
+.pbtn:hover{border-color:var(--navy)}
+.pbtn[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.on-dark .pbtn{background:transparent;border-color:rgba(255,255,255,.35);color:#fff}
+.on-dark .pbtn[aria-pressed=true]{background:var(--sky);border-color:var(--sky);color:var(--ink)}
+.seg{display:flex;background:var(--canvas);border:1px solid var(--line);border-radius:12px;padding:3px;gap:3px}
+.seg button{flex:1;min-height:40px;border:0;background:transparent;border-radius:9px;font:600 13px/1.1 var(--sans);color:var(--muted);cursor:pointer;padding:0 6px}
+.seg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(14,35,64,.18)}
+.step{display:inline-flex;align-items:center;border:1px solid #C9D2DD;border-radius:999px;background:#fff}
+.step button{width:42px;height:42px;border:0;background:transparent;border-radius:999px;font:700 19px/1 var(--sans);color:var(--ink);cursor:pointer}
+.step button:hover{background:var(--canvas)}
+.step button[disabled]{opacity:.35;cursor:not-allowed}
+.step output{min-width:30px;text-align:center;font:700 15px/1 var(--sans);color:var(--ink)}
+/* forms */
+.fld{display:block;min-width:0;border:0;padding:0;margin:0}
+.fld>label,.fld>legend,.lab{display:block;font:600 14px/1.3 var(--sans);color:var(--ink);margin-bottom:6px}
+.on-dark .fld>label,.on-dark .fld>legend,.on-dark .lab{color:#fff}
+.opt{font-weight:400;color:var(--muted)}
+.inp{display:block;width:100%;min-height:46px;border:1px solid #BFC9D6;border-radius:10px;padding:10px 12px;font:400 16px/1.3 var(--sans);background:#fff;color:var(--body);box-sizing:border-box}
+.inp:focus{outline:3px solid rgba(21,77,142,.3);outline-offset:0;border-color:var(--navy)}
+.inp[aria-invalid=true]{border-color:var(--alert);box-shadow:0 0 0 1px var(--alert)}
+.err{color:var(--alert);font-size:13px;margin:6px 0 0}
+.err:empty{display:none}
+input[type=range]{width:100%;height:44px;accent-color:var(--navy);cursor:pointer}
+.on-dark input[type=range]{accent-color:var(--sky)}
+.ck{position:relative;display:inline-flex}
+.ck input{position:absolute;opacity:0;width:1px;height:1px;left:12px;top:12px}
+.ck span{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 15px;border:1.5px solid #BFC9D6;border-radius:999px;font:600 14px/1.2 var(--sans);color:var(--body);background:#fff;cursor:pointer}
+.ck input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.ck input:checked+span::before{content:"\2713"}
+.ck input:focus-visible+span{outline:3px solid var(--sky);outline-offset:2px}
+.fld>.agree,.agree{display:flex;gap:10px;align-items:center;font:500 15px/1.4 var(--sans);color:var(--ink);cursor:pointer}
+.agree input{width:22px;height:22px;margin:0;accent-color:var(--navy);flex:none}
+/* sub-header */
+.pp-sub{position:sticky;top:var(--jwc-barh, 0px);z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 8px 20px -18px rgba(14,35,64,.6)}
+.pp-sub-in{display:flex;align-items:center;gap:10px;min-height:62px}
+.pp-brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);flex:none;min-height:44px}
+.pp-brand img{width:42px;height:39px;object-fit:contain}
+.pp-brand span{font:700 19px/1 var(--disp);letter-spacing:.16em;text-transform:uppercase}
+.pp-nav{display:none;gap:2px;margin-left:10px}
+.pp-nav a{color:var(--body);text-decoration:none;font:500 14px/1 var(--sans);padding:14px 10px;border-radius:8px}
+.pp-nav a:hover{color:var(--navy);background:var(--canvas)}
+.pp-switch{margin-left:auto;display:inline-flex;background:var(--canvas);border:1px solid var(--line);border-radius:999px;padding:3px;flex:none}
+.pp-switch button{border:0;background:transparent;border-radius:999px;min-height:40px;padding:0 13px;font:600 13px/1 var(--sans);color:var(--muted);cursor:pointer;white-space:nowrap}
+.pp-switch button[aria-pressed=true]{background:var(--ink);color:#fff}
+.pp-apply{display:none}
+@media(max-width:519px){.pp-brand span{display:none}.pp-switch button{padding:0 10px;font-size:12.5px}.pp-sub-in{gap:6px}}
+@media(min-width:860px){.pp-apply{display:inline-flex}}
+@media(min-width:1100px){.pp-nav{display:flex}}
+/* phones, tablets and small laptops: the same sections as a scrolling strip under the header row */
+.pp-nav-m{border-top:1px solid var(--line);scrollbar-width:none}
+.pp-nav-m::-webkit-scrollbar{display:none}
+.pp-nav-m-in{display:flex;gap:2px;white-space:nowrap}
+.pp-nav-m a{flex:none;display:inline-flex;align-items:center;min-height:42px;padding:0 11px;color:var(--body);text-decoration:none;font:500 14px/1 var(--sans);border-radius:8px}
+.pp-nav-m a:first-child{margin-left:-11px}
+.pp-nav-m a:hover{color:var(--navy);background:var(--canvas)}
+@media(max-width:1099px){:root{--pp-subh:106px}}
+@media(min-width:1100px){.pp-nav-m{display:none}}
+body.mode-portal .pp-nav,body.mode-portal .pp-nav-m,body.mode-portal .pp-apply{display:none}
+/* hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--ink)}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(14,35,64,.94) 0%,rgba(14,35,64,.8) 48%,rgba(14,35,64,.62) 100%)}
+.hero-in{position:relative;z-index:2;padding-top:52px;padding-bottom:60px;display:grid;gap:40px;align-items:center}
+@media(min-width:1024px){.hero-in{grid-template-columns:1.12fr .88fr;padding-top:84px;padding-bottom:92px}}
+.hero h1{font:700 clamp(50px,12vw,100px)/.88 var(--disp);text-transform:uppercase;letter-spacing:.005em;margin:4px 0 20px}
+.hero-sub{font-size:18px;line-height:1.55;color:#DCE6F2;max-width:560px;margin:0 0 26px}
+.hero-small{font-size:14px;line-height:1.5;color:#BCCADB;margin:20px 0 0;max-width:520px}
+.teaser{max-width:380px;width:100%;margin:0 auto;position:relative}
+.teaser-cap{margin:-18px 14px 0;position:relative;z-index:3;padding:14px 16px;color:var(--body)}
+.teaser-cap p{margin:0;font-size:14.5px;line-height:1.45}
+/* proof */
+.proof{background:#fff;border-bottom:1px solid var(--line)}
+.proof ul{display:grid;grid-template-columns:1fr;gap:10px;padding:18px 0;margin:0;list-style:none}
+@media(min-width:640px){.proof ul{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.proof ul{grid-template-columns:repeat(4,1fr)}}
+.proof li{display:flex;align-items:center;gap:10px;font:600 14px/1.3 var(--sans);color:var(--ink);padding:6px 0}
+.proof li b{display:inline-grid;place-items:center;flex:none;width:34px;height:34px;border-radius:10px;background:#E3ECF7;color:var(--navy);font:700 15px/1 var(--sans)}
+/* segments */
+.seg-card{display:flex;flex-direction:column;overflow:hidden}
+.seg-card .ph{position:relative;aspect-ratio:16/9;background:#E9EEF4;overflow:hidden}
+.seg-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.seg-card:hover .ph img{transform:scale(1.04)}
+.seg-card .ph span{position:absolute;left:12px;bottom:12px}
+.seg-card .bd{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1;gap:10px}
+.seg-card .bd p{margin:0}
+.starter{background:var(--canvas);border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.45}
+.starter b{color:var(--ink)}
+/* freezer */
+.fz{position:relative;margin:0 auto;width:100%;max-width:420px;border-radius:18px 18px 10px 10px;background:linear-gradient(180deg,#EEF2F7,#C5CFDB);padding:10px 10px 0;box-shadow:0 34px 60px -30px rgba(0,0,0,.75),inset 0 1px 0 #fff}
+.fz-head{background:var(--ink);border-radius:10px;padding:10px 12px;text-align:center;font:700 16px/1.1 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--sky);text-shadow:0 0 14px rgba(127,179,213,.6);overflow-wrap:anywhere;min-height:38px}
+.fz-head small{display:block;font:600 10px/1.2 var(--sans);letter-spacing:.18em;color:#9FB6CC;text-shadow:none;margin-bottom:3px}
+.fz-door{position:relative;margin-top:10px;border-radius:8px;border:8px solid #2A3B55;background:linear-gradient(180deg,#123257,#0E2847 60%,#0B2240);box-shadow:inset 0 0 46px rgba(127,179,213,.38);padding:8px 8px 2px;overflow:hidden}
+.fz-door::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.05) 26%,transparent 27%,transparent 62%,rgba(255,255,255,.08) 63%,transparent 76%)}
+.fz-handle{position:absolute;right:16px;top:34%;width:7px;height:26%;border-radius:6px;background:linear-gradient(90deg,#B9C5D3,#8392A6);z-index:2;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.fz-shelf{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:6px 18px 8px 2px;border-bottom:4px solid rgba(190,207,226,.5);align-items:end}
+.fz-tile{position:relative;aspect-ratio:1/1;border-radius:7px;overflow:hidden;background:#fff;box-shadow:0 5px 12px -5px rgba(0,0,0,.7);animation:fzIn .38s cubic-bezier(.2,.9,.3,1.2) both}
+.fz-tile[data-still]{animation:none}
+.fz-tile img{width:100%;height:100%;object-fit:cover}
+.fz-tile b{position:absolute;right:3px;bottom:3px;background:rgba(14,35,64,.88);color:#fff;font:700 10px/1 var(--sans);padding:3px 4px;border-radius:4px}
+.fz-slot{aspect-ratio:1/1;border-radius:7px;border:1px dashed rgba(127,179,213,.32)}
+.fz-base{height:24px;margin:10px -10px 0;background:repeating-linear-gradient(90deg,#3A4A62 0 4px,#2A3B55 4px 8px);border-radius:0 0 10px 10px}
+.fz.mini{max-width:330px}
+.fz.mini .fz-head{font-size:14px}
+.fz.mini .fz-shelf{grid-template-columns:repeat(4,minmax(0,1fr))}
+@keyframes fzIn{from{opacity:0;transform:translateY(10px) scale(.8)}to{opacity:1;transform:none}}
+.fz-grid{display:grid;gap:22px;margin-top:34px;align-items:start}
+@media(min-width:768px){.fz-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"box form" "box rc"}.fz-form{grid-area:form}#fzFig{grid-area:box}#fzReceipt{grid-area:rc}}
+@media(min-width:1180px){.fz-grid{grid-template-columns:290px minmax(0,1fr) 340px;grid-template-areas:"form box rc"}}
+.fz-form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:20px;display:grid;gap:18px}
+.fz-meals{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.fz-meals output{font:700 30px/1 var(--disp);color:var(--sky);letter-spacing:.03em}
+.rc{padding:20px;color:var(--body)}
+.rc-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px dashed #CDD5DF;font-size:14.5px;line-height:1.35}
+.rc-row>span:first-child{color:var(--muted);flex:none;max-width:48%}
+.rc-row>b,.rc-row>span:last-child{color:var(--ink);text-align:right;min-width:0}
+.rc-keep b{color:var(--ok)}
+.rc-big{font:700 34px/1 var(--disp);color:var(--ink);letter-spacing:.02em}
+/* steps */
+.stepcard{padding:22px;position:relative}
+.stepcard .n{font:700 54px/.9 var(--disp);color:#D3DEEB}
+.stepcard h3{margin:8px 0 6px}
+.stepcard p{margin:0;color:var(--muted);line-height:1.5}
+/* pricing */
+.tier{padding:24px;display:flex;flex-direction:column;gap:12px;position:relative}
+.tier ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.tier li{display:flex;gap:9px;font-size:15px;line-height:1.4}
+.tier li::before{content:"\2713";color:var(--ok);font-weight:700;flex:none}
+.tier .from{font:700 34px/1 var(--disp);letter-spacing:.02em;color:var(--ink)}
+.tier .disc{font:700 22px/1.1 var(--disp);letter-spacing:.03em;text-transform:uppercase;color:var(--navy)}
+.tier.pro{border:2px solid var(--navy)}
+.tier .ribbon{position:absolute;top:-13px;left:22px}
+.tier.elite{background:var(--ink);border-color:var(--ink);color:#E6EDF6}
+.tier.elite .h3,.tier.elite .from{color:#fff}
+.tier.elite .disc{color:var(--brass)}
+.tier.elite li::before{color:var(--brass)}
+.tier.elite .ex{background:rgba(255,255,255,.07);color:#E6EDF6}
+.tier .ex{background:var(--canvas);border-radius:10px;padding:9px 11px;font-size:13.5px}
+.founding{background:var(--ink);color:#fff;border-radius:16px;padding:18px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.founding .badge{background:var(--brass);color:var(--ink);font:700 13px/1 var(--disp);letter-spacing:.16em;text-transform:uppercase;padding:8px 12px;border-radius:999px}
+/* catalogue */
+.cat-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cat-tabs button{border:1.5px solid #C9D2DD;background:#fff;border-radius:999px;min-height:42px;padding:0 15px;font:600 14px/1 var(--sans);color:var(--body);cursor:pointer}
+.cat-tabs button[aria-selected=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.pc{display:flex;flex-direction:column;overflow:hidden}
+.pc-img{position:relative;aspect-ratio:4/3;background:#EEF2F6;overflow:hidden}
+.pc-img>img{width:100%;height:100%;object-fit:cover}
+.pc-img .badges{position:absolute;left:10px;top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;width:100%;height:100%}
+.mosaic img{width:100%;height:100%;object-fit:cover;min-height:0}
+.mosaic.m1 img{grid-column:1/3;grid-row:1/3}
+.mosaic.m2 img{grid-row:1/3}
+.mosaic.m3 img:first-child{grid-row:1/3}
+.pc-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pc-name{font:600 16px/1.3 var(--sans);color:var(--ink);margin:0}
+.pc-desc{margin:0;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.pc-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0}
+.pc-price .pw{font-size:13.5px;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(94,104,120,.5)}
+.pc-price .pp{font:700 20px/1 var(--sans);color:var(--ink)}
+.pc-price .pu{font-size:12.5px;color:var(--muted);flex-basis:100%}
+.pc-mac{margin:0;font-size:12.5px;color:var(--muted);background:var(--canvas);border-radius:8px;padding:6px 9px}
+.pc-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:4px}
+.pc-sel{display:grid;gap:4px;font:600 12.5px/1.2 var(--sans);color:var(--muted)}
+.pc-sel select{min-height:42px;border:1px solid #BFC9D6;border-radius:10px;padding:0 10px;font:500 14.5px/1 var(--sans);color:var(--ink);background:#fff;width:100%}
+.prev{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px}
+.obar{position:sticky;bottom:0;z-index:40;margin-top:26px;background:var(--ink);color:#fff;border-radius:16px 16px 0 0;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;box-shadow:0 -14px 30px -18px rgba(0,0,0,.6)}
+@media(min-width:768px){.obar{border-radius:16px;bottom:12px;padding:14px 18px}}
+.obar p{margin:0}
+.ob-main{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font:600 15px/1.2 var(--sans)}
+.ob-main b{font:700 24px/1 var(--disp);letter-spacing:.03em}
+.ob-sub{font-size:13px;color:#B9C8DB;margin-top:4px!important}
+.ob-r{display:flex;gap:8px;flex-wrap:wrap}
+body.cat-in .jwc-cart-fab,body[data-view=team] .jwc-cart-fab{display:none!important}
+body.cat-in .jwc-chat-fab{bottom:calc(var(--obH,140px) + 12px)}
+@media(min-width:768px){body.cat-in .jwc-chat-fab{bottom:calc(var(--obH,72px) + 24px)}}
+/* framework concept bar: let the long prototype name wrap on phones instead of running off-screen */
+@media (max-width: 640px){.jwc-bar-label{white-space:normal;line-height:1.35}}
+/* framework drawers keep a shadow while parked off-screen; hide it until they open */
+.jwc-panel:not(.on){box-shadow:none}
+/* label studio */
+.pack{position:relative;max-width:430px;margin:0 auto;border-radius:30px;overflow:hidden;padding:150px 18px 22px;background:#D9E1EA;box-shadow:0 30px 60px -32px rgba(14,35,64,.6)}
+.pack>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pack::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.08) 30%,rgba(255,255,255,0) 50%,rgba(255,255,255,.18) 80%),linear-gradient(180deg,rgba(14,35,64,0) 30%,rgba(14,35,64,.35))}
+.pack::after{content:"";position:absolute;left:0;right:0;top:0;height:16px;z-index:1;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 3px,rgba(255,255,255,.2) 3px 6px)}
+.lbl{position:relative;z-index:2;background:#fff;border-radius:12px;padding:14px 15px;color:var(--ink);box-shadow:0 10px 24px -12px rgba(0,0,0,.55);font-size:12.5px;line-height:1.4}
+.lbl-top{display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:8px}
+.lbl-top img{width:40px;height:37px;object-fit:contain;flex:none}
+.lbl-brand{font:700 18px/1.02 var(--disp);letter-spacing:.06em;text-transform:uppercase;overflow-wrap:anywhere}
+.lbl-prod{font:700 14px/1.25 var(--sans);margin:0 0 6px}
+.lbl p{margin:0 0 4px}
+.lbl .ph{color:#6B7482;font-style:italic}
+.lbl-foot{display:flex;gap:10px;align-items:center;border-top:1px solid #D5DBE3;margin-top:8px;padding-top:8px}
+.lbl-foot svg{width:64px;height:64px;flex:none}
+.claims{border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.45}
+/* plant */
+.plant{display:grid;gap:22px;align-items:stretch}
+@media(min-width:900px){.plant{grid-template-columns:.85fr 1.15fr}}
+.plant-img{border-radius:18px;overflow:hidden;min-height:300px;position:relative}
+.plant-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stat b{display:block;font:700 34px/1 var(--disp);letter-spacing:.02em;color:var(--navy)}
+.stat span{display:block;font-size:13.5px;color:var(--muted);margin-top:4px;line-height:1.35}
+/* apply */
+.ap-wrap{display:grid;gap:24px}
+@media(min-width:1024px){.ap-wrap{grid-template-columns:1fr 340px;align-items:start}}
+.pc-check li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45}
+.pc-check li>b:first-child{color:var(--ok);flex:none}
+.spin{width:22px;height:22px;border-radius:50%;border:3px solid #CFDAE7;border-top-color:var(--navy);animation:sp 1s linear infinite;flex:none}
+@keyframes sp{to{transform:rotate(360deg)}}
+/* faq */
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:12px 2px;font:600 16.5px/1.35 var(--sans);color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 26px/1 var(--sans);color:var(--navy);flex:none;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 16px;color:var(--muted);line-height:1.6;max-width:760px}
+.pp-foot{background:#fff;border-top:1px solid var(--line);padding:22px 0;font-size:14px;color:var(--muted)}
+/* tables */
+.tt{width:100%;border-collapse:collapse;font-size:14px;line-height:1.4}
+.tt th{text-align:left;font:600 11px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1.5px solid var(--ink);padding:9px 10px;white-space:nowrap}
+.tt td{border-bottom:1px solid var(--line);padding:11px 10px;vertical-align:top}
+.tt .num{text-align:right;white-space:nowrap}
+.tt tr:last-child td{border-bottom:0}
+@media(min-width:640px){.tt td.wide{min-width:230px}}
+.acts{display:flex;flex-wrap:wrap;gap:6px}
+.app-acts{display:grid;grid-template-columns:1fr 1fr;gap:6px;min-width:220px}
+.app-acts .btn{padding:0 10px}
+.app-acts .btn:first-child{grid-column:1/3}
+@media(max-width:639px){
+  .stk thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .stk,.stk tbody,.stk tr,.stk td{display:block;width:100%;box-sizing:border-box}
+  .stk tr{border:1px solid var(--line);border-radius:12px;padding:8px 12px;margin-bottom:10px;background:#fff}
+  .stk td{border:0!important;padding:5px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:right}
+  .stk td.num{text-align:right}
+  .stk td::before{content:attr(data-label);font:600 11px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;flex:none;max-width:42%}
+  .stk td.full{display:block;text-align:left}
+  .stk td.full::before{display:block;max-width:none;margin-bottom:4px}
+  .stk td.first{font-weight:600;color:var(--ink)}
+}
+/* portal */
+.pt-banner{background:var(--slate);color:#fff;font-size:14px}
+.pt-banner .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding-top:10px;padding-bottom:10px}
+.pt-banner button{background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;border-radius:999px;min-height:40px;padding:0 14px;font:600 13px/1 var(--sans);cursor:pointer}
+.pt-grid{display:grid;gap:20px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:1200px){.pt-grid{grid-template-columns:minmax(0,1fr) 340px;align-items:start}}
+@media(min-width:640px){#ptTable td.wide{min-width:200px}}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.kv:last-child{border-bottom:0}
+/* team */
+.team{padding:28px 0 70px;background:#EEF1F6}
+.team section{margin-top:26px;scroll-margin-top:calc(var(--jwc-barh, 0px) + 50px)}
+.tpanel{padding:20px}
+@media(min-width:768px){.tpanel{padding:24px}}
+.tp-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;margin-bottom:14px}
+.tp-head h2{font:700 24px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--ink);margin:0}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:768px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.kpis{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi small{display:block;font:600 11px/1.25 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi b{display:block;font:700 30px/1 var(--disp);letter-spacing:.02em;color:var(--ink);margin-top:6px}
+.kpi span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.35}
+.kpi.alert b{color:var(--alert)}
+.bars{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px;align-items:end;height:170px;padding-top:30px;border-bottom:1px solid #B7C2D0;position:relative}
+.bcol{position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;outline-offset:2px;border-radius:6px}
+.bcol .bar{display:block;width:100%;max-width:30px;background:var(--sky);border-radius:4px 4px 0 0;min-height:4px}
+.bcol.here .bar{background:var(--navy)}
+.bcol .bv{font:600 12px/1 var(--sans);color:var(--ink);margin-bottom:5px}
+.bcol .tag{position:absolute;bottom:calc(100% + 2px);white-space:nowrap;font:600 11px/1.2 var(--sans);color:var(--navy);background:#E3ECF7;border-radius:6px;padding:3px 6px}
+.bcol:hover::after,.bcol:focus::after{content:attr(data-tip);position:absolute;bottom:105%;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font:600 12px/1.2 var(--sans);padding:6px 8px;border-radius:8px;white-space:nowrap;z-index:3;pointer-events:none}
+.blabels{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px;margin-top:6px}
+.blabels span{text-align:center;font-size:11.5px;color:var(--muted)}
+.draft{padding:18px;display:flex;flex-direction:column;gap:10px}
+.draft h3{font:600 16px/1.3 var(--sans);color:var(--ink);margin:0}
+.draft .body{white-space:pre-wrap;font-size:14px;line-height:1.55;background:var(--canvas);border-radius:10px;padding:12px;margin:0;color:var(--body)}
+.draft textarea{width:100%;min-height:150px;border:1px solid #BFC9D6;border-radius:10px;padding:10px;font:400 14.5px/1.5 var(--sans);box-sizing:border-box}
+.check{font-size:13px;color:#24663F;background:#E2F1E8;border-radius:10px;padding:8px 10px;margin:0}
+.meter{height:16px;border-radius:999px;background:#E3E9F0;position:relative;overflow:visible}
+.meter i{display:block;height:100%;border-radius:999px;background:var(--navy);transition:width .4s}
+.meter.hot i{background:var(--alert)}
+.meter .mk{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--alert)}
+.hbar{display:grid;grid-template-columns:112px 1fr;gap:10px;align-items:center;padding:7px 0;font-size:13.5px}
+@media(min-width:640px){.hbar{grid-template-columns:150px 1fr}}
+.hbar .tr{height:22px;border-radius:0 4px 4px 0;background:#E9EEF4;position:relative}
+.hbar .tr i{position:absolute;left:0;top:0;bottom:0;background:var(--sky);border-radius:0 4px 4px 0}
+.hbar .tr em{position:absolute;left:8px;top:50%;transform:translateY(-50%);font:600 12px/1 var(--sans);font-style:normal;color:var(--ink);white-space:nowrap}
+.plus{font:600 12px/1 var(--sans);color:#24663F;background:#E2F1E8;border-radius:999px;padding:3px 7px;white-space:nowrap}
+.log li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.log li:last-child{border-bottom:0}
+.empty{border:1.5px dashed #C3CDD9;border-radius:12px;padding:18px;text-align:center;color:var(--muted);font-size:14.5px}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:font-semibold focus:text-[#0E2340] focus:shadow-lg">Skip to content</a>
+
+<div data-customer id="cust">
+  <header class="pp-sub" id="ppSub">
+    <div class="wrap pp-sub-in">
+      <a href="#" class="pp-brand" aria-label="J&amp;W Pro Partners, back to top"><img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods, est. 1995" width="42" height="39"><span>Pro Partners</span></a>
+      <nav class="pp-nav" aria-label="Partner page sections">
+        <a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#catalogue">Catalogue</a><a href="#apply">Apply</a>
+      </nav>
+      <div class="pp-switch" role="group" aria-label="Which page">
+        <button type="button" data-mode="public" aria-pressed="true">Become a partner</button>
+        <button type="button" data-mode="portal" aria-pressed="false">Partner portal (demo)</button>
+      </div>
+      <a href="#apply" class="btn btn-navy btn-sm pp-apply">Apply in 2 minutes</a>
+    </div>
+    <nav class="pp-nav-m overflow-x-auto" aria-label="Partner page sections, mobile">
+      <div class="wrap pp-nav-m-in"><a href="#freezer">Freezer</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#catalogue">Catalogue</a><a href="#labels">Labels</a><a href="#apply">Apply</a><a href="#faq">FAQ</a></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- S1 HERO -->
+    <section id="top" class="hero" aria-labelledby="heroH">
+      <img class="hero-bg" src="../assets/img/meals.jpg" alt="" width="1500" height="1200">
+      <div class="wrap hero-in">
+        <div>
+          <p class="eyebrow" style="color:var(--sky)">J&amp;W Pro Partners</p>
+          <h1 id="heroH">Feed the people you train.</h1>
+          <p class="hero-sub">Cooked, weighed and vacuum-sealed in our Ontario-inspected plant in Scarborough. Partner pricing by the case, standing weekly drops on our own routes, and a freezer on loan once you’re rolling.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#apply" class="btn btn-navy">Apply in 2 minutes</a>
+            <a href="#freezer" class="btn btn-ow">Build your freezer</a>
+          </div>
+          <p class="hero-small">For gyms, CrossFit boxes, trainers, clinics, supplement shops and teams in Ontario.</p>
+        </div>
+        <div class="teaser">
+          <div class="fz mini" aria-hidden="true">
+            <div class="fz-head"><small>Reach-in freezer · on loan</small>Fuelled by J&amp;W at your gym</div>
+            <div class="fz-door"><span class="fz-handle"></span><div id="teaserShelves"></div></div>
+            <div class="fz-base"></div>
+          </div>
+          <div class="ccard teaser-cap">
+            <p class="eyebrow" style="margin-bottom:4px">48 meals a week · Pro tier</p>
+            <p id="teaserLine">Members pay our web price. You keep the difference.</p>
+            <a href="#freezer" class="btn btn-ink btn-sm" style="margin-top:10px">Put your name on it</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S2 PROOF -->
+    <div class="proof" role="region" aria-label="Why partners trust J&amp;W">
+      <ul class="wrap">
+        <li><b aria-hidden="true">★</b>4.8 · 611 Google reviews</li>
+        <li><b aria-hidden="true">✓</b>Ontario-inspected plant since 2008</li>
+        <li><b aria-hidden="true">oz</b>Cooked, weighed and portioned in our own plant · ingredients on every pack</li>
+        <li><b aria-hidden="true">95</b>Family butchers since 1995 · wholesale roots to 1973</li>
+      </ul>
+    </div>
+
+    <!-- S3 WHO WE SUPPLY -->
+    <section id="supply" class="sec" aria-labelledby="supplyH">
+      <div class="wrap">
+        <p class="eyebrow">Partners</p>
+        <h2 class="h2" id="supplyH">Who we supply</h2>
+        <p class="lede">Six kinds of partners, one kitchen. Pick yours and we’ll load a starter order.</p>
+        <div id="segGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" style="margin-top:30px"></div>
+      </div>
+    </section>
+
+    <!-- S4 BUILD YOUR FREEZER -->
+    <section id="freezer" class="sec band on-dark" aria-labelledby="fzH">
+      <div class="wrap">
+        <p class="eyebrow">Try it</p>
+        <h2 class="h2" id="fzH">Build your freezer</h2>
+        <p class="lede">Tell us who you are. We’ll fill a freezer, put your name on it and show you what it earns.</p>
+        <div class="fz-grid">
+          <form class="fz-form" id="fzForm" onsubmit="return false">
+            <div class="fld"><label for="fzName">Your business name</label><input class="inp" id="fzName" autocomplete="organization" placeholder="Brimley Barbell Club" maxlength="40"></div>
+            <div class="fld"><label for="fzCity">City</label><select class="inp" id="fzCity"></select></div>
+            <div class="fld">
+              <div class="fz-meals"><label for="fzMeals" class="lab" style="margin:0">Meals a week</label><output id="fzMealsOut" for="fzMeals">48</output></div>
+              <input type="range" id="fzMeals" min="12" max="120" step="12" value="48">
+              <div class="flex justify-between small" style="color:#9FB6CC"><span>12</span><span>120</span></div>
+            </div>
+            <fieldset class="fld"><legend>Mix</legend>
+              <div class="flex flex-wrap gap-2" id="fzMix"></div>
+              <p class="small" id="fzMixNote" style="color:#B9C8DB;margin:8px 0 0"></p>
+            </fieldset>
+          </form>
+          <figure style="margin:0" id="fzFig">
+            <div class="fz" id="fzBox">
+              <div class="fz-head" id="fzHead"><small>Glass-door reach-in · temp sensor</small><span id="fzHeadName">Fuelled by J&amp;W at your gym</span></div>
+              <div class="fz-door"><span class="fz-handle"></span><div id="fzShelves"></div></div>
+              <div class="fz-base"></div>
+            </div>
+            <figcaption class="small" id="fzCap" style="color:#B9C8DB;text-align:center;margin-top:12px"></figcaption>
+          </figure>
+          <div class="ccard rc" id="fzReceipt" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S5 HOW IT WORKS -->
+    <section id="how" class="sec bg-white2" aria-labelledby="howH">
+      <div class="wrap">
+        <p class="eyebrow">Four steps</p>
+        <h2 class="h2" id="howH">How it works</h2>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" style="margin-top:30px">
+          <div class="ccard stepcard"><div class="n" aria-hidden="true">01</div><h3 class="h3">Apply</h3><p>Two minutes. A real person replies within one business day.</p></div>
+          <div class="ccard stepcard"><div class="n" aria-hidden="true">02</div><h3 class="h3">Taste</h3><p>We drop a free tasting tray of 24 portions on your route day, so your members try before you buy.</p></div>
+          <div class="ccard stepcard"><div class="n" aria-hidden="true">03</div><h3 class="h3">Set your standing order</h3><p>Pick your products and your route day. Change it any time before Sunday night.</p></div>
+          <div class="ccard stepcard"><div class="n" aria-hidden="true">04</div><h3 class="h3">We drop it. You sell it.</h3><p>Standing orders of $150 or more drop free. Average $300 a week and the freezer is on us.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S6 PARTNER PRICING -->
+    <section id="pricing" class="sec" aria-labelledby="priceH">
+      <div class="wrap">
+        <p class="eyebrow">Published, not whispered</p>
+        <h2 class="h2" id="priceH">Partner pricing</h2>
+        <p class="lede">Simple tiers, set by your average weekly order over four weeks. Concept pricing for this proposal.</p>
+        <div class="flex flex-wrap items-center gap-2" style="margin-top:22px" role="group" aria-label="Show discounts for">
+          <button type="button" class="pbtn" data-pm="cooked" aria-pressed="true">Cooked meals</button>
+          <button type="button" class="pbtn" data-pm="cases" aria-pressed="false">Butcher cases</button>
+        </div>
+        <div id="tierGrid" class="grid gap-6 lg:grid-cols-3" style="margin-top:28px"></div>
+        <div class="founding" style="margin-top:22px"><span class="badge">Founding partners</span><p style="margin:0;flex:1;min-width:220px;line-height:1.5">The first 10 accounts get Pro pricing from their first order, for 12 months. <span style="color:var(--sky)" id="slotsLine">7 of 10 slots taken (sample).</span></p></div>
+        <div class="grid gap-4 md:grid-cols-2" style="margin-top:16px">
+          <div class="ccard" style="padding:18px"><p class="eyebrow" style="margin-bottom:6px">The one rule</p><p style="margin:0;line-height:1.5;color:var(--ink);font-weight:500">Sell at our web price or higher, never lower. Your members will never find it cheaper on jwfoods.com.</p></div>
+          <div class="ccard" style="padding:18px"><p class="eyebrow" style="margin-bottom:6px">Example</p><p style="margin:0;line-height:1.5;color:var(--ink);font-weight:500" id="priceEx"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S7 PARTNER CATALOGUE -->
+    <section id="catalogue" class="sec bg-white2" aria-labelledby="catH">
+      <div class="wrap">
+        <p class="eyebrow">Order by the case</p>
+        <h2 class="h2" id="catH">Partner catalogue</h2>
+        <p class="lede">Real J&amp;W products at your tier price. Order by Sunday for next week’s drop. Macros are estimates (est.).</p>
+        <div class="prev" role="group" aria-label="Preview prices as">
+          <span class="lab" style="margin:0">Preview prices as:</span>
+          <button type="button" class="pbtn" data-prev="partner">Partner</button>
+          <button type="button" class="pbtn" data-prev="pro">Pro</button>
+          <button type="button" class="pbtn" data-prev="elite">Elite</button>
+          <span class="small muted" id="prevNote"></span>
+        </div>
+        <div class="cat-tabs" role="tablist" aria-label="Catalogue sections" id="catTabs"></div>
+        <div id="catPanel" role="tabpanel" tabindex="-1" style="margin-top:20px">
+          <p class="small muted" id="catHint" style="margin:0 0 14px"></p>
+          <div id="catGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+        <div class="obar" id="obar" role="region" aria-label="Your partner order">
+          <div>
+            <p class="ob-main"><span id="obCount">0 meals · 0 cases</span><span class="tc tc-web" id="obTier">Web price</span><b id="obTotal">$0.00</b></p>
+            <p class="ob-sub" id="obSub" aria-live="polite">Minimum is 12 meals or 1 case.</p>
+          </div>
+          <div class="ob-r">
+            <button type="button" class="btn btn-ow btn-sm" id="obCart">View cart</button>
+            <button type="button" class="btn btn-sky btn-sm" id="obReview">Review order</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S8 YOUR NAME ON THE LABEL -->
+    <section id="labels" class="sec" aria-labelledby="lblH">
+      <div class="wrap">
+        <p class="eyebrow">Pro &amp; Elite</p>
+        <h2 class="h2" id="lblH">Your name on the label</h2>
+        <p class="lede">Pro and Elite partners get co-branded labels at no charge. Our plant details stay on every pack, so your members know exactly who made it.</p>
+        <div class="grid gap-8 lg:grid-cols-2" style="margin-top:30px;align-items:start">
+          <div class="ccard" style="padding:22px">
+            <div class="grid gap-4">
+              <div class="fld"><label for="lbName">Name on the label</label><input class="inp" id="lbName" maxlength="40" autocomplete="organization"></div>
+              <div class="fld"><label for="lbCode">Member code</label><input class="inp" id="lbCode" maxlength="14" autocapitalize="characters" spellcheck="false"><p class="small muted" style="margin:6px 0 0">Made from your name. Change it if you like.</p></div>
+              <div class="fld"><label for="lbProd">Product</label><select class="inp" id="lbProd"></select></div>
+            </div>
+            <div id="lbClaims" class="claims chip-ok" style="margin-top:16px"></div>
+            <div class="ccard" style="padding:14px 16px;margin-top:16px;box-shadow:none;background:var(--canvas)">
+              <p class="eyebrow" style="margin-bottom:6px">How the member code works</p>
+              <p style="margin:0;line-height:1.5">Your members get 10% off their first online order. You earn 5% of what they spend online, as J&amp;W credit, for 12 months.</p>
+            </div>
+            <div class="flex flex-wrap gap-3" style="margin-top:18px">
+              <button type="button" class="btn btn-line" id="lbCopy">Copy member code</button>
+              <button type="button" class="btn btn-navy" id="lbAdd">Add labels to my next order</button>
+            </div>
+            <p class="small" id="lbStatus" style="margin:12px 0 0" aria-live="polite"></p>
+          </div>
+          <div>
+            <div class="pack" id="lbPack"></div>
+            <p class="small muted" style="text-align:center;margin:12px 0 0"><span class="ai"><i aria-hidden="true">✦</i>Built by <span data-agent="label"></span> (AI)</span> · a person signs off every new label</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S9 THE PLANT -->
+    <section id="plant" class="sec band on-dark" aria-labelledby="plantH">
+      <div class="wrap">
+        <p class="eyebrow">One roof</p>
+        <h2 class="h2" id="plantH">The plant behind the partnership</h2>
+        <div class="plant" style="margin-top:30px">
+          <div class="plant-img"><img src="../assets/img/souvlaki.jpg" alt="Grilled chicken souvlaki skewers on a white platter with lemon and oregano" loading="lazy" width="1066" height="1597"></div>
+          <div class="ccard" style="padding:26px;color:var(--body)">
+            <p style="margin:0;font-size:17px;line-height:1.6;color:var(--ink)">We butcher, cook, weigh and vacuum-seal everything under one roof at 2201 Brimley Rd. We’ve been an Ontario-inspected plant since 2008, and our family has supplied restaurants since George Trougakos started Advance Food Products in 1973. Our chicken is air-chilled, grain-fed and raised in Ontario. Our plain portions are cooked with no added salt, sugar or oil, and every pack lists its ingredients.</p>
+            <div class="grid grid-cols-2 gap-5" style="margin-top:24px">
+              <div class="stat"><b>Since 1995</b><span>Co-founded by Stavros Trougakos and Bill Fehr</span></div>
+              <div class="stat"><b>6 weekly routes</b><span>Our own delivery routes across Ontario</span></div>
+              <div class="stat"><b>4.8★</b><span>from 611 Google reviews</span></div>
+              <div class="stat"><b>4 kg cases</b><span>in 4, 5, 6 or 8 oz portions</span></div>
+            </div>
+            <blockquote style="margin:24px 0 0;padding:16px 18px;border-left:4px solid var(--sky);background:var(--canvas);border-radius:0 12px 12px 0">
+              <p style="margin:0;font:600 20px/1.3 var(--sans);color:var(--ink)">“I recommend all of my clients.”</p>
+              <footer class="small muted" style="margin-top:6px">A personal trainer, Google review</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- S10 APPLY -->
+    <section id="apply" class="sec bg-white2" aria-labelledby="apH">
+      <div class="wrap">
+        <p class="eyebrow">Two minutes</p>
+        <h2 class="h2" id="apH">Apply in 2 minutes</h2>
+        <p class="lede">Demo: nothing is sent.</p>
+        <div class="ap-wrap" style="margin-top:28px">
+          <div>
+            <form id="apForm" class="ccard" style="padding:22px" novalidate>
+              <div class="grid gap-5 md:grid-cols-2">
+                <div class="fld"><label for="apBiz">Business name</label><input class="inp" id="apBiz" autocomplete="organization" required aria-describedby="apBizErr"><p class="err" id="apBizErr"></p></div>
+                <div class="fld"><label for="apType">What kind of business?</label><select class="inp" id="apType" required aria-describedby="apTypeErr"></select><p class="err" id="apTypeErr"></p></div>
+                <div class="fld"><label for="apName">Your name</label><input class="inp" id="apName" autocomplete="name" required aria-describedby="apNameErr"><p class="err" id="apNameErr"></p></div>
+                <div class="fld"><label for="apEmail">Email</label><input class="inp" id="apEmail" type="email" autocomplete="email" required aria-describedby="apEmailErr"><p class="err" id="apEmailErr"></p></div>
+                <div class="fld"><label for="apPhone">Phone <span class="opt">(optional)</span></label><input class="inp" id="apPhone" type="tel" autocomplete="tel"></div>
+                <div class="fld"><label for="apCity">City</label><select class="inp" id="apCity" required aria-describedby="apCityErr"></select><p class="err" id="apCityErr"></p></div>
+                <div class="fld md:col-span-2"><label for="apPeople">People you serve each week</label><select class="inp" id="apPeople"><option>Under 50</option><option selected>50-150</option><option>150-400</option><option>400+</option></select></div>
+                <fieldset class="fld md:col-span-2"><legend>What would you stock?</legend><div class="flex flex-wrap gap-2" id="apStock"></div></fieldset>
+                <fieldset class="fld md:col-span-2"><legend>Do you have a freezer?</legend><div class="flex flex-wrap gap-2" id="apFreezer"></div></fieldset>
+                <div class="fld md:col-span-2">
+                  <div class="flex items-baseline justify-between gap-3"><label for="apWeekly" class="lab" style="margin:0">Expected weekly order</label><output id="apWeeklyOut" for="apWeekly" style="font:700 26px/1 var(--disp);color:var(--navy)">$300</output></div>
+                  <input type="range" id="apWeekly" min="150" max="1000" step="10" value="300">
+                  <div class="flex justify-between small muted"><span>$150</span><span>$1,000</span></div>
+                </div>
+                <div class="fld md:col-span-2"><label class="agree" for="apAgree"><input type="checkbox" id="apAgree" aria-describedby="apAgreeErr"><span>I agree to sell at J&amp;W’s web price or higher.</span></label><p class="err" id="apAgreeErr"></p></div>
+              </div>
+              <div class="flex flex-wrap gap-3" style="margin-top:22px">
+                <button type="button" class="btn btn-line" id="apDemo">Fill with a demo gym</button>
+                <button type="submit" class="btn btn-navy" id="apSend">Send application</button>
+              </div>
+              <p class="small muted" style="margin:12px 0 0">Demo: nothing is sent. Your answers stay on this device.</p>
+            </form>
+            <div id="apChecking" class="ccard" style="padding:22px;display:none" role="status" aria-live="polite"><div class="flex items-center gap-3"><span class="spin" aria-hidden="true"></span><b style="color:var(--ink)">Checking your details...</b></div><p class="small muted" style="margin:10px 0 0">Route day, tier, freezer and starter order.</p></div>
+            <div id="apResult" class="ccard" style="padding:22px;display:none" tabindex="-1"></div>
+          </div>
+          <aside class="ccard" style="padding:20px;background:var(--canvas);box-shadow:none">
+            <p class="eyebrow" style="margin-bottom:8px">What you get back</p>
+            <ul style="margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14.5px;line-height:1.45">
+              <li>✓ Your route day and order cut-off</li>
+              <li>✓ Your suggested tier and starter order</li>
+              <li>✓ Whether a freezer comes with it</li>
+              <li>✓ A reply from a person at J&amp;W within one business day</li>
+            </ul>
+            <p class="small muted" style="margin:14px 0 0">Pre-checks are done by <span data-agent="checker"></span>, our AI assistant. A person approves every account, tier and term.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- S11 FAQ -->
+    <section id="faq" class="sec" aria-labelledby="faqH">
+      <div class="wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="h2" id="faqH">Trade questions, plain answers</h2>
+        <div class="faq ccard" style="padding:6px 20px;margin-top:26px">
+          <details><summary>What’s the minimum order?</summary><p>12 cooked meals or one butcher case. Standing orders of $150 or more drop free on your route day.</p></details>
+          <details><summary>When do you deliver?</summary><p>On our weekly routes: Tuesday Durham, Wednesday Toronto and Mississauga, Thursday Halton and Hamilton, Friday York and Peel. Order by Sunday for the next week. Pickup at Brimley Rd is always free.</p></details>
+          <details><summary>How do I pay?</summary><p>By card for your first four orders. After that, approved partners get net-15 invoices.</p></details>
+          <details><summary>How does the freezer loan work?</summary><p>Average $300 a week for eight weeks and we lend you a branded reach-in freezer with a temperature sensor. We own it and service it, and we take it back if you stop ordering. You supply the outlet.</p></details>
+          <details><summary>How long does the food keep?</summary><p>Everything is flash-frozen and vacuum-sealed, and each pack carries a best-before date. Keep it at −18°C or colder.</p></details>
+          <details><summary>Can I sell online?</summary><p>In person only. Your members can order from us online with your member code, and you earn credit.</p></details>
+          <details><summary>Do labels show allergens and nutrition?</summary><p>Every partner pack carries ingredients, allergens, net weight, best-before and our plant details. Nutrition facts are being added for partner products.</p></details>
+          <details><summary>Can you deliver outside Ontario?</summary><p>Not yet. Our plant is provincially inspected, so we sell within Ontario.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PARTNER PORTAL (DEMO) -->
+  <main id="portal" hidden>
+    <div class="pt-banner"><div class="wrap"><span>You’re signed in as a demo partner. Sample data.</span><button type="button" data-mode="public">Back to the partner page</button></div></div>
+    <div class="wrap" style="padding-top:26px;padding-bottom:60px">
+      <!-- P1 -->
+      <div class="ccard" style="padding:22px">
+        <p class="eyebrow" style="margin-bottom:6px">Partner portal</p>
+        <h1 class="h2" id="ptHello">Good morning, Brimley Barbell Club</h1>
+        <div class="flex flex-wrap gap-2" style="margin-top:14px">
+          <span class="tc tc-pro">Pro partner</span>
+          <span class="chip chip-navy">GTA 2 · Wednesday</span>
+          <span class="chip chip-brass">Order locks Sunday at 11:59 pm · <span id="ptCount">…</span></span>
+        </div>
+      </div>
+      <div class="pt-grid" style="margin-top:20px">
+        <!-- P2 -->
+        <section class="ccard tpanel" aria-labelledby="p2h">
+          <div class="tp-head"><h2 id="p2h" class="h3">Suggested order for Wednesday</h2><span class="ai"><i aria-hidden="true">✦</i>Drafted by <span data-agent="par"></span> (AI) · you approve</span></div>
+          <p class="small muted" style="margin:0 0 12px">Based on your Friday freezer count and the last 4 weeks of sales.</p>
+          <div id="ptTable"></div>
+          <div id="ptFoot" style="margin-top:14px"></div>
+        </section>
+        <div class="grid gap-5">
+          <!-- P3 -->
+          <section class="ccard tpanel" aria-labelledby="p3h">
+            <h2 id="p3h" class="h3" style="margin-bottom:10px">Your members this quarter</h2>
+            <div class="kv"><span class="muted">Member code</span><b style="color:var(--ink);letter-spacing:.06em">BRIMLEY10</b></div>
+            <div class="kv"><span class="muted">Online orders</span><b>9</b></div>
+            <div class="kv"><span class="muted">Members spent online</span><b>$1,170</b></div>
+            <div class="kv"><span class="muted">Credit earned (5%)</span><b class="ok">$58.50</b></div>
+            <button type="button" class="btn btn-line btn-sm btn-block" id="ptFlyer" style="margin-top:12px">Download member flyer (demo)</button>
+          </section>
+          <!-- P5 -->
+          <section class="ccard tpanel" aria-labelledby="p5h">
+            <div class="tp-head" style="margin-bottom:6px"><h2 id="p5h" class="h3">Freezer</h2><span class="chip chip-ok">✓ In range</span></div>
+            <p style="margin:0;line-height:1.5">Reach-in freezer <b>JW-F07</b> · <b id="ptTemp">−19°C</b> now · within range all week · next service April.</p>
+            <div id="ptSpark" style="margin-top:10px"></div>
+          </section>
+        </div>
+      </div>
+      <!-- P4 -->
+      <section class="ccard tpanel" style="margin-top:20px" aria-labelledby="p4h">
+        <div class="tp-head"><h2 id="p4h" class="h3">Invoices</h2><span class="chip chip-ok">Net-15 approved Feb 2027</span></div>
+        <div id="ptInv"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pp-foot"><div class="wrap">J&amp;W Foods · Meal Butler · 2201 Brimley Rd, Unit 1, Scarborough · <a href="tel:+14162981350">(416) 298-1350</a> · Mon-Fri 9-6, Sat 10-4.</div></footer>
+</div>
+
+<!-- ================= JW TEAM VIEW ================= -->
+<div data-team id="team" class="team">
+  <div class="wrap">
+    <header class="flex flex-wrap items-center gap-4">
+      <img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods" width="54" height="50" style="width:54px;height:50px;object-fit:contain;background:#fff;border-radius:12px;padding:4px">
+      <div style="min-width:0;flex:1">
+        <p class="eyebrow" style="margin-bottom:4px">JW team view</p>
+        <h1 class="h2">Pro Partners · team desk</h1>
+        <p class="small muted" style="margin:6px 0 0">Sample data for the week of March 15, 2027, as if partner accounts opened in Dec 2026. In the plan, Pro Partner is the backup play, opened only if J&amp;W at Work stalls by June 2027. Names are fictional. Orders you place on this page show up live.</p>
+      </div>
+    </header>
+
+    <section id="t1" aria-labelledby="t1h">
+      <h2 class="jwc-sr" id="t1h">Key numbers</h2>
+      <div class="kpis" id="tKpis"></div>
+      <div class="ccard tpanel" style="margin-top:14px">
+        <div class="tp-head"><h3 class="h3" style="font-size:19px">Plan: active partners by month</h3><span class="small muted">Dec 2026 to Oct 2027 · sample ramp if it opened in Dec 2026</span></div>
+        <div class="bars" id="tBars" role="list" aria-label="Plan: active partners by month"></div>
+        <div class="blabels" id="tBarLabels" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="t7" aria-labelledby="t7h">
+      <div class="ccard tpanel">
+        <div class="tp-head"><h2 id="t7h">Live from this demo</h2><span class="chip chip-ok" id="tLiveCount">0 orders</span></div>
+        <div id="tLive"></div>
+      </div>
+    </section>
+
+    <section id="t2" aria-labelledby="t2h">
+      <div class="ccard tpanel">
+        <div class="tp-head"><h2 id="t2h">Applications queue</h2><span class="ai"><i aria-hidden="true">✦</i>Pre-checked by <span data-agent="checker"></span> (AI)</span></div>
+        <div id="tApps"></div>
+        <div id="tAppsDone" style="margin-top:14px"></div>
+      </div>
+    </section>
+
+    <section id="t3" aria-labelledby="t3h">
+      <div class="tp-head"><h2 id="t3h">AI drafts awaiting approval</h2><span class="small muted">Nothing reaches a partner until someone at J&amp;W approves it.</span></div>
+      <div id="tDrafts" class="grid gap-4 lg:grid-cols-2"></div>
+      <div class="ccard tpanel" style="margin-top:14px"><h3 class="h3" style="font-size:18px;margin-bottom:6px">Decided today</h3><ul class="log" id="tLog" style="list-style:none;margin:0;padding:0"></ul></div>
+    </section>
+
+    <section id="t4" aria-labelledby="t4h">
+      <div class="ccard tpanel">
+        <div class="tp-head"><h2 id="t4h">Partner accounts</h2><span class="small muted">16 active · sample</span></div>
+        <div id="tAccounts"></div>
+        <p class="small muted" style="margin:10px 0 0">+ 8 more accounts ($1,346 this week, sample)</p>
+      </div>
+    </section>
+
+    <section id="t5" aria-labelledby="t5h">
+      <div class="ccard tpanel">
+        <div class="tp-head"><h2 id="t5h">Production &amp; route impact</h2><span class="ai"><i aria-hidden="true">✦</i>Rolled into Monday’s cook sheet by <span data-agent="planner"></span> (AI)</span></div>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div>
+            <h3 class="lab">Next week from partner standing orders</h3>
+            <div id="tProd"></div>
+            <div style="margin-top:18px">
+              <div class="flex justify-between gap-3 small" style="margin-bottom:8px"><b style="color:var(--ink)" id="tLoadTxt">Cook line 78% of planned capacity (est.)</b><span class="muted">alert at 90%</span></div>
+              <div class="meter" id="tMeter" role="meter" aria-label="Cook line load" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78"><i style="width:78%"></i><span class="mk" style="left:90%"></span></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2" style="margin-bottom:6px"><h3 class="lab" style="margin:0">Partner stops by route day</h3><span class="ai"><i aria-hidden="true">✦</i>Slotted by <span data-agent="route"></span> (AI)</span></div>
+            <div id="tRoutes"></div>
+            <p class="small muted" style="margin:12px 0 0">Adds about 3 h of driving a week (about 12 minutes a stop). Average partner stop about $240 vs $130 average home order (sample).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="t6" aria-labelledby="t6h">
+      <div class="ccard tpanel">
+        <div class="tp-head"><h2 id="t6h">Receivables</h2><span class="ai"><i aria-hidden="true">✦</i>Tracked by <span data-agent="ar"></span> (AI)</span></div>
+        <div class="kpis" id="tAging" style="margin-bottom:16px"></div>
+        <div id="tInv"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+/* Agent names from the shared roster (research/ai-agents-roster.md, play 2). Change them here only. */
+const AGENTS = {
+  scout: 'Account Scout',
+  checker: 'Business Desk',
+  par: 'Business Desk',
+  planner: 'Production Planner',
+  route: 'Route Planner',
+  label: 'Nutrition & Safety',
+  ar: 'Receivables Desk',
+  concierge: 'Butler Concierge',
+  desk: 'Ask the Butler · Partner desk'
+};
+
+(function () {
+  'use strict';
+  var esc = JWC.esc;
+  function money(v) { return JWC.money(v, 2); }
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return [].slice.call((r || document).querySelectorAll(s)); }
+  function r2(v) { return Math.round((v + 1e-7) * 100) / 100; }
+  function S(k, d) { return JWC.store.get('p2:' + k, d); }
+  function W(k, v) { JWC.store.set('p2:' + k, v); }
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function nowTime() { return new Date().toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' }); }
+
+  /* ---------------- tiers (Concept) ---------------- */
+  var TIERS = {
+    web: { name: 'Web price', cooked: 0, cases: 0, min: 0 },
+    partner: { name: 'Partner', cooked: 0.15, cases: 0.05, min: 150 },
+    pro: { name: 'Pro', cooked: 0.20, cases: 0.08, min: 300 },
+    elite: { name: 'Elite', cooked: 0.25, cases: 0.10, min: 600 }
+  };
+  var RANK = ['web', 'partner', 'pro', 'elite'];
+  function rank(t) { return RANK.indexOf(t); }
+  function pct(d) { return Math.round(d * 100); }
+  function tierPrice(web, kind, t) { if (t === 'web') return web; return r2(web * (1 - TIERS[t][kind === 'case' ? 'cases' : 'cooked'])); }
+  function tcChip(t) { return '<span class="tc tc-' + t + '">' + esc(TIERS[t].name) + '</span>'; }
+
+  /* ---------------- real J&W products ---------------- */
+  var ID = {
+    souv: 'chicken-souvlaki-broccoli-sweet-potato-chunks', jerk: 'jerk-chicken-broccoli-sweet-potato-chunks', turkey: 'turkey-spinach-white-rice',
+    salmon: 'salmon-brussel-sprouts-quinoa', tenders: 'chicken-broccoli-sweet-potato-fries', teri: 'pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white',
+    flank: 'copy-of-chicken-broccoli-sweet-potato-fries', tilapia: 'tilapia-asparagus-brown-rice', sirloin: 'sirloin-ground-green-beans-sweet-potato-chunks',
+    egg: 'copy-of-feta-omelette-cups-cooked-portioned-2-pkg', omelette: 'copy-of-egg-bites-omelette-w-peppers-onions-mushrooms-cooked-portioned-2-pkg', oats: 'steel-cut-oats', wrap: 'spinach-feta-egg-wrap',
+    cbCase: 'chicken-breast-portioned-4-5-6-8-oz-box-broken-down-and-pkg-in-vacuum-bags', marCase: 'chicken-breast-marinated-korean-4kg', turkeyCase: 'ontario-ground-turkey-10x1lb-case',
+    beefCase: 'aaa-ground-beef-tenderloin-case-special', noSalt: 'chicken-souvlaki-no-salt', burgers: 'chicken-burgers-1', salmonCase: 'canadian-atlantic-salmon'
+  };
+  var MEAL_KEYS = ['jerk', 'souv', 'tenders', 'turkey', 'salmon', 'teri', 'flank', 'tilapia', 'sirloin'];
+  var PORTION_IDS = ['chicken-breast-souvlaki', 'chicken-breast-tenders', 'jerk-chicken-breast', 'turkey-breast', 'salmon', 'cooked-flank-steak', 'rice-white-basmati', 'sweet-potato-chunks-peeled', 'broccoli', 'green-beans'];
+  var BFAST_KEYS = ['egg', 'omelette', 'oats', 'wrap'];
+  var CASE_KEYS = ['cbCase', 'marCase', 'turkeyCase', 'beefCase', 'noSalt', 'burgers', 'salmonCase'];
+  var CASE_NOTES = {
+    cbCase: '4 kg of chicken breast, portioned and vacuum-packed. Pick your portion size.',
+    marCase: '4 kg, marinated Korean BBQ or Teriyaki, portioned and vacuum-packed.',
+    turkeyCase: '10 × 1 lb bags of Ontario ground turkey breast.',
+    beefCase: '10 × 1 lb bags of extra lean AAA ground beef.',
+    noSalt: '5 kg of chicken breast souvlaki, made with no salt.',
+    burgers: '25 premium chicken burgers, 6 oz each.',
+    salmonCase: '10 lb of skin-off Atlantic salmon, 4-5 oz portions, individually vacuumed.'
+  };
+  function prod(k) { return JWC.product(ID[k] || k); }
+  function vIndex(p, oz) { if (!p || oz == null) return 0; for (var i = 0; i < p.variants.length; i++) if (p.variants[i].oz === oz) return i; return 0; }
+  function unitWeb(k, oz) { var p = prod(k); return p ? p.variants[vIndex(p, oz)].price : 0; }
+  function twoPack(k) { return k === 'egg' || k === 'omelette' || k === ID.egg || k === ID.omelette; }
+
+  /* Concept meal cases built from real portion prices */
+  var CASES = {
+    restock48: { name: '48-Meal Freezer Restock', lines: [['souv', 6, 6], ['jerk', 6, 6], ['turkey', 6, 6], ['salmon', 6, 6], ['tenders', 6, 6], ['teri', 4, 6], ['flank', 6, 6], ['tilapia', 6, 6]], desc: '6 each of 8 pre-set meals. Our front-desk freezer mix.' },
+    mixed24: { name: 'Mixed 24-Meal Case', lines: [['souv', 6, 6], ['jerk', 6, 6], ['turkey', 6, 6], ['tenders', 6, 6]], desc: '6 each of Souvlaki, Jerk, Turkey and Tenders, all 6 oz.' },
+    trainer: { name: 'Trainer Client Week', per: 'client', lines: [['souv', 6, 4], ['tenders', 6, 3], ['turkey', 6, 3], ['egg', null, 5]], desc: 'One client’s week: 4 Souvlaki, 3 Tenders, 3 Turkey (6 oz) and 5 Egg White Bites 2-packs. Step it up per client.' },
+    clinic12: { name: 'Clinic Small-Portion 12-Pack', lines: [['turkey', 4, 4], ['tilapia', 4, 4], ['salmon', 4, 4]], desc: '4 each of Turkey, Tilapia and Salmon, 4 oz. Smaller portions, ingredients on every pack.' },
+    fight12: { name: 'Fight Camp 12-Pack', lines: [['tenders', 4, 12]], desc: '12 × Tenders, Broccoli & Sweet Potato, 4 oz. Weighed to the ounce.' },
+    bfast24: { name: 'Breakfast Box of 24', lines: [['egg', null, 12], ['oats', 6, 12]], desc: '12 Egg White Bites 2-packs and 12 Steel Cut Oats.' }
+  };
+  function caseWeb(c) { return r2(c.lines.reduce(function (a, l) { return a + unitWeb(l[0], l[1]) * l[2]; }, 0)); }
+  function caseCount(c) { return c.lines.reduce(function (a, l) { return a + l[2]; }, 0); }
+  function caseMacro(c) {
+    var n = 0, k = 0, p = 0;
+    c.lines.forEach(function (l) { var pr = prod(l[0]), m = JWC.macros(pr, vIndex(pr, l[1])); if (m) { n += l[2]; k += m.kcal * l[2]; p += m.p * l[2]; } });
+    return n ? { kcal: Math.round(k / n), p: Math.round(p / n) } : null;
+  }
+
+  /* Freezer mixes */
+  var MIXES = {
+    balanced: { name: 'Balanced', lines: [['souv', 6], ['jerk', 6], ['turkey', 6], ['salmon', 6], ['tenders', 6], ['teri', 4], ['flank', 6], ['tilapia', 6]], note: 'Our 48-Meal Restock mix: eight pre-set meals, filled in sixes.' },
+    lean: { name: 'Lean', lines: [['turkey', 6], ['tilapia', 6], ['tenders', 6], ['souv', 6]], note: 'Turkey, Tilapia, Tenders and Souvlaki, 6 oz.' },
+    fighter: { name: 'Fighter', lines: [['tenders', 4], ['teri', 4]], note: 'Tenders and Teriyaki, 4 oz, for athletes making weight.' },
+    clinic: { name: 'Clinic', lines: [['turkey', 4], ['tilapia', 4], ['salmon', 4]], note: 'The three 4 oz meals. Smaller portions, high protein.' }
+  };
+  function mixTiles(mk, meals) {
+    var m = MIXES[mk] || MIXES.balanced, out = [], n = Math.round(meals / 6);
+    for (var i = 0; i < n; i++) { var l = m.lines[i % m.lines.length]; out.push({ k: l[0], oz: l[1], n: 6 }); }
+    return out;
+  }
+  function tilesWeb(tiles) { return r2(tiles.reduce(function (a, t) { return a + unitWeb(t.k, t.oz) * t.n; }, 0)); }
+
+  /* SKU ids used in the cart: cs:<case> fz:<mix>:<meals> pk:<meal>:<oz>:<pack> pt:<id>:<vi> bf:<key>:<vi> bc:<key>:<vi> */
+  function sku(id) {
+    var a = String(id).split(':'), t = a[0], p, v;
+    if (t === 'cs') { var c = CASES[a[1]]; if (!c) return null; return { kind: 'cooked', web: caseWeb(c), meals: caseCount(c), portions: 0, cases: 0, name: c.name + ' (Concept)', variant: c.per ? 'Per client · ' + caseCount(c) + ' items' : caseCount(c) + ' items', img: JWC.img(prod(c.lines[0][0]), 160) }; }
+    if (t === 'fz') { var mx = MIXES[a[1]], n = +a[2]; if (!mx || !n) return null; var tl = mixTiles(a[1], n); return { kind: 'cooked', web: tilesWeb(tl), meals: n, portions: 0, cases: 0, name: n + '-Meal Freezer Restock (Concept)', variant: mx.name + ' mix', img: JWC.img(prod(tl[0].k), 160) }; }
+    if (t === 'pk') { p = prod(a[1]); if (!p) return null; var oz = +a[2], pack = +a[3] || 1; return { kind: 'cooked', web: r2(unitWeb(a[1], oz) * pack), meals: pack, portions: 0, cases: 0, name: pack > 1 ? p.name + ' · ' + pack + '-pack (Concept)' : p.name, variant: oz + ' oz', img: JWC.img(p, 160) }; }
+    if (t === 'pt' || t === 'bf') { p = prod(a[1]); if (!p) return null; v = p.variants[+a[2] || 0] || p.variants[0]; return { kind: 'cooked', web: v.price, meals: t === 'bf' ? 1 : 0, portions: t === 'pt' && p.cat === 'protein' ? 1 : 0, sides: t === 'pt' && p.cat !== 'protein' ? 1 : 0, cases: 0, name: p.name, variant: twoPack(a[1]) ? '2-pack' : v.label, img: JWC.img(p, 160) }; }
+    if (t === 'bc') { p = prod(a[1]); if (!p) return null; v = p.variants[+a[2] || 0] || p.variants[0]; return { kind: 'case', web: v.price, meals: 0, portions: 0, cases: 1, name: p.name, variant: v.label === 'Single' ? 'Case' : v.label, img: JWC.img(p, 160) }; }
+    return null;
+  }
+  function makeItem(id, qty, t) { var k = sku(id); return { key: id + '|' + k.variant, id: id, name: k.name, variant: k.variant, price: tierPrice(k.web, k.kind, t || 'web'), qty: qty, img: k.img, note: '' }; }
+
+  /* ---------------- order math ---------------- */
+  function founding() { return !!S('founding', false); }
+  function orderTotal(items, t) { return r2(items.reduce(function (a, i) { var k = sku(i.id); return a + (k ? tierPrice(k.web, k.kind, t) : i.price) * i.qty; }, 0)); }
+  function tierFor(items, ignoreFounding) {
+    if (!items.length) return 'web';
+    var t = 'web';
+    if (orderTotal(items, 'elite') >= 600) t = 'elite'; else if (orderTotal(items, 'pro') >= 300) t = 'pro'; else if (orderTotal(items, 'partner') >= 150) t = 'partner';
+    if (!ignoreFounding && founding() && rank(t) < rank('pro')) t = 'pro';
+    return t;
+  }
+  function counts(items) {
+    var c = { meals: 0, portions: 0, sides: 0, cases: 0 };
+    items.forEach(function (i) { var k = sku(i.id); if (!k) return; c.meals += k.meals * i.qty; c.portions += k.portions * i.qty; c.sides += (k.sides || 0) * i.qty; c.cases += k.cases * i.qty; });
+    return c;
+  }
+  function meetsMin(c) { return c.meals + c.portions >= 12 || c.cases >= 1; }
+  function plural(n, a, b) { return n + ' ' + (n === 1 ? a : (b || a + 's')); }
+
+  /* routes */
+  function weeklyRoute(city) {
+    if (!city) return null;
+    return JWC.routesFor(city).filter(function (r) { return r.id !== 'pickup' && r.id !== 'express'; })[0] || null;
+  }
+  function routeShort(r) { return r ? (/^GTA/.test(r.name) ? r.name.replace(/ route$/, '') : r.name) : 'Pickup at Brimley Rd'; }
+  function routeLine(city) { var r = weeklyRoute(city); return r ? routeShort(r) + ' · order by Sunday' : 'Pickup at 2201 Brimley Rd · free'; }
+  function savedCity() { return S('city', 'Scarborough'); }
+
+  /* ---------------- checkout helpers ---------------- */
+  function preferRoute(m) {
+    var radios = $$('input[name="jwc-route"]', m);
+    if (radios.length < 2) return;
+    var cur = radios.filter(function (r) { return r.checked; })[0];
+    if (cur && /Express/i.test(cur.closest('label').textContent)) {
+      var alt = radios.filter(function (r) { return !/Express/i.test(r.closest('label').textContent); })[0];
+      if (alt) { alt.checked = true; alt.dispatchEvent(new Event('change', { bubbles: true })); }
+    }
+  }
+  /* The framework checkout prints credits as "$-20.00" and does not show opts.note: tidy both on this page. */
+  function polishCheckout(m, o) {
+    var sum = $('#jwc-sum', m); if (!sum) return;
+    function fix() { $$('.jwc-row span:last-child', sum).forEach(function (s) { if (/^\$-/.test(s.textContent)) s.textContent = '−$' + s.textContent.slice(2); }); }
+    fix(); new MutationObserver(fix).observe(sum, { childList: true });
+    if (o && o.note && !$('.pp-note', m)) {
+      var n = JWC.el('<div class="jwc-note pp-note" style="margin-top:10px"><span class="jwc-dot"></span><span style="color:var(--jwc-ink)"></span></div>');
+      n.lastChild.textContent = o.note; sum.parentNode.insertBefore(n, sum);
+    }
+  }
+  function hookCheckout(make, o) {
+    var m = document.querySelector('.jwc-modal.on'); if (!m) return;
+    var sel = $('#jwc-city', m); if (!sel || sel._pp) return; sel._pp = 1;
+    polishCheckout(m, o || make(sel.value));
+    preferRoute(m);
+    sel.addEventListener('change', function () { var c = sel.value; if (c) W('city', c); setTimeout(function () { runCheckout(make, c); }, 0); });
+  }
+  function runCheckout(make, city) { var o = make(city); JWC.checkout(o); hookCheckout(make, o); }
+  /* Labels print free from Pro; below Pro the request stays on file for the next qualifying order. */
+  function labelsNote(t) { var lb = S('labels', null); if (!lb) return ''; return rank(t) >= rank('pro') ? 'Co-branded labels: ' + lb.name : 'Co-branded labels requested: ' + lb.name + ' (printed once an order reaches Pro)'; }
+  function partnerOpts(city, standing) {
+    var items = JWC.cart.items(), t = tierFor(items), o = {
+      title: t === 'web' ? 'Order · web price' : 'Partner order · ' + TIERS[t].name + (t === 'partner' ? ' tier' : ''),
+      city: city, note: labelsNote(t), onPlaced: afterPartnerOrder
+    };
+    if (standing !== false) {
+      o.subscription = { label: 'Standing weekly order', discountPct: 0 };
+      var r = weeklyRoute(city);
+      if (t !== 'web' && r && orderTotal(items, t) >= 150) o.extraRows = [{ label: 'Free partner drop (route fee credited)', amount: -r.fee }];
+    }
+    return o;
+  }
+  function afterPartnerOrder(order) { if (order && /^Co-branded labels:/.test(order.note || '')) { JWC.store.del('p2:labels'); renderLabelStatus(); } }
+
+  /* ---------------- chat ---------------- */
+  function chatAct(label, fn) { return { label: label, run: function () { JWC.chat.close(); fn(); } }; }
+  var CHAT_SRC = [
+    ['\\b(minimum|min order|smallest|how little)\\b', 'The minimum is 12 cooked meals or one butcher case per order. Standing orders of $150 or more drop free on your route day.'],
+    ['\\b(tier|tiers|partner pric|pro pric|elite|wholesale pric|price list)', 'Three tiers, set by your average weekly order over four weeks. Partner from $150: 15% off cooked food, 5% off cases. Pro from $300: 20% and 8%, plus a loaned freezer and your name on the label. Elite from $600: 25% and 10%. Concept pricing for this demo.', function () { return chatAct('See the tiers', function () { goTo('#pricing'); }); }],
+    ['\\b(freezer|fridge|reach-in|cooler)\\b', 'Average $300 a week for eight weeks and we lend you a branded reach-in freezer with a temperature sensor. We own it and service it. You supply the outlet. Founding partners can get one from day one.', function () { return chatAct('Build your freezer', function () { goTo('#freezer'); }); }],
+    ['\\b(net ?15|net-15|invoice|invoices|payment terms|pay later)\\b', 'Your first four orders go on a card. After that, approved partners get net-15 invoices. We send a friendly reminder if one runs late.'],
+    ['\\b(label|labels|co-?brand|logo|our name)\\b', 'Pro and Elite partners get “Fuelled by J&W at [your name]” labels at no charge. Every label keeps our ingredients, allergens, best-before and plant details.', function () { return chatAct('Try the label studio', function () { goTo('#labels'); }); }],
+    ['\\b(member code|referral|promo code|commission|affiliate)\\b', 'Every partner gets a member code. Your members get 10% off their first online order, and you earn 5% of what they spend online, as J&W credit, for 12 months.'],
+    ['\\b(margin|markup|resell|shelf price|profit|make on)\\b', 'Sell at our web price or higher. Example: Jerk Chicken, Green Beans & Sweet Potato (6 oz) is $14.99 online. Pro partners pay $11.99 and keep $3.00 a meal. 48 meals a week is about $144 a week.', function () { return chatAct('Build your freezer', function () { goTo('#freezer'); }); }],
+    ['\\b(glp|ozempic|wegovy|clinic|patient|patients|dietitian|physio)', 'Clinics often stock our 4 oz pre-set meals and egg-white bites in smaller portions. We don’t make health or nutrition claims, so your dietitian chooses the menu, and we share full ingredient lists.', function () { return chatAct('Load the clinic starter order', function () { loadPreset('clinic'); }); }],
+    ['\\b(team|academy|varsity|travel day|camp|tournament|athletes)\\b', 'Teams order travel-day and camp meals, invoiced to the club and dropped on your route day or picked up at Brimley Rd. Raising money instead? Ask about our fundraiser program.', function () { return chatAct('Load the team starter order', function () { loadPreset('team'); }); }],
+    ['\\b(apply|application|sign up|signup|join|approval|approved)\\b', 'The application takes two minutes. We reply within one business day and drop a free tasting tray of 24 portions on your route day.', function () { return chatAct('Open the application', function () { goTo('#apply'); }); }],
+    ['\\b(outside ontario|out of province|out-of-province|other provinces?|quebec|montr[eé]al|vancouver|calgary|edmonton|winnipeg|halifax|across canada|nationwide)\\b', 'Not yet. Our plant is provincially inspected, so partner orders stay within Ontario. Inside Ontario we drop on our own weekly routes, from Durham to Hamilton, plus long routes to places like Ottawa, London and Kingston.'],
+    ['\\b(deliver|delivers|delivery|drop|drops|route|routes|ship|shipping)\\b', function (t) {
+      var c = JWC.findCity(t), r = c ? weeklyRoute(c) : null;
+      if (r) return c + ' is on our ' + routeShort(r) + (/route$/.test(routeShort(r)) ? '' : ' route') + '. Order by Sunday for the next drop. Partner standing orders of $150 or more drop free; smaller orders pay the ' + money(r.fee) + ' route fee (' + JWC.money(r.min, 0) + ' minimum). Pickup at Brimley Rd is always free.';
+      return 'We drop on our own weekly routes: Tuesday Durham, Wednesday Toronto and Mississauga, Thursday Halton and Hamilton, Friday York and Peel. Standing orders of $150 or more drop free, and pickup at Brimley Rd is always free. Which city is your business in?';
+    }],
+    ['^\\s*(hi|hello|hey|good (morning|afternoon|evening))\\b', 'Hi! This is the J&W partner desk. Ask me about minimums, tiers, the freezer loan, labels, invoices or your route day.']
+  ];
+  /* More partner-desk answers that must win over the shared base answers. */
+  var CHAT_FIRST = [
+    ['\\b(halal|kosher|zabiha)\\b', 'I can’t confirm halal or kosher certification from our approved product sheets, so I’ll pass that to our account lead to answer in writing. What I can confirm: our chicken is air-chilled, grain-fed and raised in Ontario without hormones or antibiotics.'],
+    ['\\b(nutrition|allergen|allergens|allergy|allergies|ingredients?)\\b', 'Every partner pack carries ingredients, allergens, net weight, best-before and our plant details. Nutrition facts are being added for partner products. The macros on this page are estimates (est.), and allergy questions always go to a person on our team.'],
+    ['\\b(lower price|better price|better deal|bigger discount|volume|custom (price|pricing|quote)|negotiat\\w*|\\d{3,} meals)\\b', 'Elite is our top published tier: 25% off cooked food and 10% off butcher cases from $600 a week. If you need more than that, our account lead prices it as a custom quote, so I’ll pass this to a person rather than guess.', function () { return chatAct('See the tiers', function () { goTo('#pricing'); }); }],
+    ['\\b(how much|price|prices|pricing|cost|costs|restock|per meal)\\b', function () {
+      return 'At Pro (20% off cooked food): the 48-Meal Freezer Restock is ' + money(tierPrice(caseWeb(CASES.restock48), 'cooked', 'pro')) + ' a week (web ' + money(caseWeb(CASES.restock48)) + '), the Mixed 24-Meal Case ' + money(tierPrice(caseWeb(CASES.mixed24), 'cooked', 'pro')) + ' and a 12-pack of Jerk Chicken (6 oz) ' + money(tierPrice(unitWeb('jerk', 6) * 12, 'cooked', 'pro')) + '. Partner is 15% off, Elite 25%, and butcher cases are 5 to 10% off. Concept pricing.';
+    }, function () { return chatAct('Open the catalogue', function () { goTo('#catalogue'); }); }]
+  ];
+  function chatRule(r) {
+    return { match: new RegExp(r[0], 'i'), reply: function (t) { var txt = typeof r[1] === 'function' ? r[1](t) : r[1]; return r[2] ? { text: txt, action: r[2]() } : txt; } };
+  }
+  /* Order: halal, nutrition, minimum ... margin, then volume and price, then clinic, team, apply, outside Ontario, delivery. */
+  var CHAT_RULES = CHAT_FIRST.slice(0, 2).concat(CHAT_SRC.slice(0, 7), CHAT_FIRST.slice(2), CHAT_SRC.slice(7)).map(chatRule);
+
+  var INIT = {
+    n: 2,
+    teamNote: 'The team side: applications pre-checked by AI, agent drafts to approve, partner accounts, and how partner orders land on Monday’s cook sheet and the route days.',
+    chat: {
+      name: AGENTS.desk, fabLabel: 'Partner desk', role: AGENTS.concierge + ' (AI) · partner mode · answers from the Concept price list and partner terms',
+      greeting: 'Hi, I’m the partner desk for J&W Pro Partners. Ask me about minimums, pricing tiers, the freezer loan or how drops work on your route day.',
+      suggestions: ['What’s the minimum order?', 'How does the freezer loan work?', 'What margin would my gym make?', 'Can my clinic patients use this?'],
+      rules: CHAT_RULES,
+      fallback: 'Good question for our account lead. In the live version I answer from the approved price list and partner agreement, and pass anything about custom pricing to a person. Try asking about minimums, tiers, the freezer loan, labels or invoices.'
+    }
+  };
+  /* The framework cart's Checkout button reads opts.checkout at click time: build it fresh each time. */
+  Object.defineProperty(INIT, 'checkout', { enumerable: true, get: function () {
+    var city = savedCity(), make = function (c) { return partnerOpts(c, true); };
+    setTimeout(function () { hookCheckout(make); }, 0);
+    return make(city);
+  } });
+  JWC.init(INIT);
+
+  $$('[data-agent]').forEach(function (e) { e.textContent = AGENTS[e.getAttribute('data-agent')] || ''; });
+
+  /* The framework cart's Checkout button skips the partner minimum: enforce it here too. */
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.jwc-cart-go')) return;
+    if (!meetsMin(counts(JWC.cart.items()))) { e.preventDefault(); e.stopPropagation(); JWC.toast('Minimum is 12 meals or 1 case. Add a little more first.'); }
+  }, true);
+
+  /* The header sits under var(--jwc-barh), set by concept.js. Only the order bar height is measured here (keeps the chat button above it). */
+  function measure() {
+    var ob = document.getElementById('obar');
+    if (ob && ob.offsetHeight) document.documentElement.style.setProperty('--obH', ob.offsetHeight + 'px');
+  }
+  measure(); window.addEventListener('resize', measure);
+
+  /* ---------------- mode switch (public page / portal) ---------------- */
+  var mode = S('mode', 'public');
+  function setMode(m, scroll) {
+    mode = m === 'portal' ? 'portal' : 'public'; W('mode', mode);
+    $('#main').hidden = mode !== 'public'; $('#portal').hidden = mode !== 'portal';
+    document.body.classList.toggle('mode-portal', mode === 'portal');
+    syncSkip();
+    $$('.pp-switch button').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mode') === mode ? 'true' : 'false'); });
+    if (mode === 'portal') renderPortal();
+    if (scroll) window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  /* Skip link: the public page, the portal or the team desk, whichever is showing. */
+  function syncSkip() {
+    var s = document.querySelector('a.skip-link'); if (!s) return;
+    s.setAttribute('href', document.body.dataset.view === 'team' ? '#team' : mode === 'portal' ? '#portal' : '#main');
+  }
+  document.addEventListener('jwc:view', syncSkip);
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-mode]'); if (b) { setMode(b.getAttribute('data-mode'), true); return; }
+    var sk = e.target.closest('a.skip-link');
+    if (sk) {
+      e.preventDefault(); syncSkip();
+      var tg = $(sk.getAttribute('href')); if (!tg) return;
+      if (!tg.hasAttribute('tabindex')) tg.setAttribute('tabindex', '-1');
+      tg.focus({ preventScroll: true }); tg.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      return;
+    }
+    var a = e.target.closest('a[href^="#"]');
+    if (!a || a.closest('.jwc-panel, .jwc-modal, .jwc-dock')) return;
+    if (a.getAttribute('href') === '#') { if (a.classList.contains('pp-brand')) { e.preventDefault(); goTo('#top'); } return; }
+    e.preventDefault(); goTo(a.getAttribute('href'));
+  });
+  function goTo(sel) {
+    if (document.body.dataset.view === 'team') JWC.setView('customer');
+    if (mode !== 'public') setMode('public');
+    if (sel === '#top') { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); return; }
+    var el = $(sel); if (!el) return;
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  /* ================= S1 hero teaser ================= */
+  function freezerHTML(tiles, shelves, per, from, imgW) {
+    var h = '';
+    for (var s = 0; s < shelves; s++) {
+      h += '<div class="fz-shelf">';
+      for (var j = 0; j < per; j++) {
+        var i = s * per + j, t = tiles[i];
+        if (t) {
+          var p = prod(t.k);
+          h += '<div class="fz-tile"' + (i >= from ? ' style="animation-delay:' + ((i - from) * 45) + 'ms"' : ' data-still') + '><img src="' + esc(JWC.img(p, imgW || 200)) + '" alt="' + esc(p.name + (t.oz ? ', ' + t.oz + ' oz' : '')) + '" loading="lazy"><b>×' + t.n + '</b></div>';
+        } else h += '<div class="fz-slot" aria-hidden="true"></div>';
+      }
+      h += '</div>';
+    }
+    return h;
+  }
+  (function teaser() {
+    var tiles = mixTiles('balanced', 48);
+    $('#teaserShelves').innerHTML = freezerHTML(tiles, 3, 4, 99, 160).replace(/alt="[^"]*"/g, 'alt=""');
+    var web = tilesWeb(tiles), pay = tierPrice(web, 'cooked', 'pro');
+    $('#teaserLine').innerHTML = 'Members pay <b>' + money(web) + '</b>. You pay ' + money(pay) + ' and keep <b class="ok">' + money(web - pay) + '</b> a week.';
+  })();
+
+  /* ================= S3 segments ================= */
+  var SEGMENTS = [
+    { key: 'gym', title: 'Gyms & CrossFit boxes', copy: 'A front-desk freezer of grab-and-go meals. Members buy after class. You keep the margin.', preset: [['cs:restock48', 1]], label: '48-Meal Freezer Restock', img: 'jerk' },
+    { key: 'trainer', title: 'Personal trainers & coaches', copy: 'Order your clients’ week in one case and hand it over at the session.', preset: [['cs:trainer', 3]], label: 'Trainer Client Week × 3', img: 'souv' },
+    { key: 'clinic', title: 'Physio, dietitian & weight-loss clinics', copy: 'Smaller portions, ingredients on every pack. Your dietitian picks the menu.', preset: [['cs:clinic12', 2], ['cs:bfast24', 1]], label: 'Clinic Small-Portion 12-Pack × 2 + Breakfast Box of 24', img: 'turkey' },
+    { key: 'shop', title: 'Supplement & health shops', copy: 'Put fast-moving protein next to the tubs. We restock every week.', preset: [['cs:mixed24', 1], ['cs:bfast24', 1]], label: 'Mixed 24-Meal Case + Breakfast Box of 24', img: 'egg' },
+    { key: 'fight', title: 'Boxing, MMA & fight gyms', copy: 'Portions weighed to the ounce, for athletes who count every gram.', preset: [['cs:fight12', 2], ['bc:cbCase:0', 1]], label: 'Fight Camp 12-Pack × 2 + 1 Case of Portioned Chicken Breast (4 kg, 4 oz)', img: 'tenders' },
+    { key: 'team', title: 'Teams & academies', copy: 'Travel-day and camp meals, invoiced to the club.', preset: [['cs:mixed24', 2], ['bc:burgers:0', 1]], label: 'Mixed 24-Meal Case × 2 + Premium Chicken Burgers 25-pack', img: 'burgers', small: 'Raising money for your team? Ask us about our fundraiser program.' }
+  ];
+  function presetItems(seg) { return seg.preset.map(function (p) { return makeItem(p[0], p[1]); }); }
+  function renderSegments() {
+    $('#segGrid').innerHTML = SEGMENTS.map(function (s) {
+      var items = presetItems(s), t = tierFor(items, true), tot = orderTotal(items, t), web = orderTotal(items, 'web'), p = prod(s.img);
+      return '<article class="ccard seg-card"><div class="ph"><img src="' + esc(JWC.img(p, 600)) + '" alt="' + esc(p.name) + '" loading="lazy"><span>' + tcChip(t) + '</span></div>' +
+        '<div class="bd"><h3 class="h3">' + esc(s.title) + '</h3><p class="muted" style="line-height:1.5">' + esc(s.copy) + '</p>' +
+        '<div class="starter"><b>Starter order:</b> ' + esc(s.label) + '<br><b>' + esc(TIERS[t].name) + ' ' + money(tot) + '</b> <span class="muted">· web ' + money(web) + '</span></div>' +
+        (s.small ? '<p class="small muted">' + esc(s.small) + '</p>' : '') +
+        '<button type="button" class="btn btn-navy btn-sm" style="margin-top:auto" data-preset="' + s.key + '">See starter order</button></div></article>';
+    }).join('');
+  }
+  var quiet = false;
+  function loadPreset(key) {
+    var s = SEGMENTS.filter(function (x) { return x.key === key; })[0]; if (!s) return;
+    var had = JWC.cart.count() > 0;
+    quiet = true; JWC.cart.save(presetItems(s)); quiet = false;
+    ui.tab = 'cases'; W('ui', ui); renderTabs();
+    goTo('#catalogue');
+    JWC.toast('Starter order for ' + s.title + ' loaded' + (had ? ' in place of your previous items' : '') + '. Change anything.');
+  }
+  $('#segGrid').addEventListener('click', function (e) { var b = e.target.closest('[data-preset]'); if (b) loadPreset(b.getAttribute('data-preset')); });
+
+  /* ================= S4 build your freezer ================= */
+  var fz = S('fz', { name: '', city: 'Scarborough', meals: 48, mix: 'balanced' });
+  var fzPrev = { n: 0, mix: null };
+  function cityOptions(sel, val, withPickup) {
+    sel.innerHTML = (withPickup ? '<option value="">Pick up at Brimley Rd</option>' : '') + JWC.cities().map(function (c) { return '<option' + (c === val ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('');
+  }
+  function fzCalc() {
+    var tiles = mixTiles(fz.mix, fz.meals), web = tilesWeb(tiles), id = 'fz:' + fz.mix + ':' + fz.meals;
+    var t = tierFor([{ id: id, qty: 1, price: web }], true), pay = tierPrice(web, 'cooked', t);
+    var next = 0;
+    if (t === 'web') for (var m = fz.meals + 12; m <= 120; m += 12) { if (tierFor([{ id: 'fz:' + fz.mix + ':' + m, qty: 1, price: 0 }], true) !== 'web') { next = m - fz.meals; break; } }
+    return { tiles: tiles, web: web, tier: t, pay: pay, keep: r2(web - pay), id: id, next: next };
+  }
+  function renderFreezer() {
+    var c = fzCalc(), name = (fz.name || '').trim();
+    $('#fzHeadName').textContent = 'Fuelled by J&W at ' + (name || 'your gym');
+    var from = fzPrev.mix === fz.mix ? Math.min(fzPrev.n, c.tiles.length) : 0;
+    $('#fzShelves').innerHTML = freezerHTML(c.tiles, 4, 5, from, 200);
+    fzPrev = { n: c.tiles.length, mix: fz.mix };
+    var shelves = Math.ceil(c.tiles.length / 5);
+    $('#fzCap').textContent = fz.meals + ' meals on ' + plural(shelves, 'shelf', 'shelves') + ' · each pack shows 6 meals of one recipe';
+    $('#fzMealsOut').textContent = fz.meals;
+    $('#fzMixNote').textContent = MIXES[fz.mix].note;
+    $$('#fzMix button').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mix') === fz.mix ? 'true' : 'false'); });
+    var t = c.tier, perMeal = c.pay / fz.meals;
+    $('#fzReceipt').innerHTML =
+      '<p class="eyebrow" style="margin-bottom:2px">Your weekly receipt</p><p class="small muted" style="margin:0 0 6px">' + esc(name || 'Your business') + ' · ' + esc(fz.city) + '</p>' +
+      '<div class="rc-row"><span>Your tier</span><span>' + (t === 'web' ? tcChip('web') + '<br><small class="muted">Partner pricing starts at $150 an order' + (c.next ? '. Add ' + c.next + ' meals to get there.' : '') + '</small>' : tcChip(t) + ' · ' + pct(TIERS[t].cooked) + '% off cooked food') + '</span></div>' +
+      '<div class="rc-row"><span>You pay</span><span><span class="rc-big">' + money(c.pay) + '</span> a week<br><small class="muted">' + money(perMeal) + ' a meal</small></span></div>' +
+      '<div class="rc-row"><span>Members pay (our web price)</span><b>' + money(c.web) + '</b></div>' +
+      (c.keep > 0 ? '<div class="rc-row rc-keep"><span>You keep</span><span><b style="font-size:17px">' + money(c.keep) + ' a week</b><br><small class="muted">about ' + JWC.money(Math.round(c.keep * 50), 0) + ' a year</small></span></div>'
+        : '<div class="rc-row"><span>You keep</span><span>Your margin starts at Partner pricing<br><small class="muted">15% off cooked food from $150 an order</small></span></div>') +
+      '<div class="rc-row"><span>Your drop</span><b>' + esc(routeLine(fz.city)) + '</b></div>' +
+      '<div class="rc-row" style="border-bottom:0"><span>Freezer</span><b>' + (c.pay >= 300 ? 'On loan from J&amp;W' : 'On loan once you average $300 a week') + '</b></div>' +
+      '<div class="grid gap-2" style="margin-top:12px"><button type="button" class="btn btn-navy" id="fzOrder">Order this freezer fill</button><button type="button" class="btn btn-line" id="fzApply">Apply with this plan</button></div>' +
+      '<p class="small muted" style="margin:12px 0 0">Web prices from jwfoods.com. Partner discounts are Concept pricing. Margins are estimates. Demo only.</p>';
+    W('fz', fz);
+  }
+  function initFreezer() {
+    cityOptions($('#fzCity'), fz.city);
+    $('#fzName').value = fz.name || '';
+    $('#fzMeals').value = fz.meals;
+    $('#fzMix').innerHTML = Object.keys(MIXES).map(function (k) { return '<button type="button" class="pbtn" data-mix="' + k + '" aria-pressed="false">' + MIXES[k].name + '</button>'; }).join('');
+    $('#fzName').addEventListener('input', function () { fz.name = this.value; $('#fzHeadName').textContent = 'Fuelled by J&W at ' + (fz.name.trim() || 'your gym'); clearTimeout(this._t); var me = this; me._t = setTimeout(renderFreezer, 250); });
+    $('#fzCity').addEventListener('change', function () { fz.city = this.value; W('city', fz.city); renderFreezer(); });
+    $('#fzMeals').addEventListener('input', function () { fz.meals = +this.value; renderFreezer(); });
+    $('#fzMix').addEventListener('click', function (e) { var b = e.target.closest('[data-mix]'); if (b) { fz.mix = b.getAttribute('data-mix'); renderFreezer(); } });
+    $('#fzReceipt').addEventListener('click', function (e) {
+      if (e.target.closest('#fzOrder')) {
+        var c = fzCalc(), k = sku(c.id), key = c.id + '|' + k.variant, have = JWC.cart.items().some(function (i) { return i.key === key; });
+        W('city', fz.city);
+        if (!have) JWC.cart.add({ id: c.id, name: k.name, variant: k.variant, price: c.pay, qty: 1, img: k.img });
+        else JWC.toast('Already in your order. Opening your cart.');
+        JWC.cart.open();
+      }
+      if (e.target.closest('#fzApply')) prefillFromFreezer();
+    });
+    renderFreezer();
+  }
+
+  /* ================= S6 pricing ================= */
+  var priceMode = 'cooked';
+  var TIER_CARDS = [
+    { t: 'partner', from: 'From $150 a week', perks: ['Free drop on your route day', 'Member code for your clients', 'Net-15 invoices after 4 paid orders'] },
+    { t: 'pro', from: 'From $300 a week', perks: ['Everything in Partner', 'Reach-in freezer on loan', 'Your name on the label'] },
+    { t: 'elite', from: 'From $600 a week', perks: ['Everything in Pro', 'First pick of production slots', 'Quarterly menu tasting with our kitchen'] }
+  ];
+  function renderPricing() {
+    var jerk = unitWeb('jerk', 6), cb = unitWeb('cbCase', 4);
+    $('#tierGrid').innerHTML = TIER_CARDS.map(function (c) {
+      var d = TIERS[c.t][priceMode === 'cooked' ? 'cooked' : 'cases'];
+      var ex = priceMode === 'cooked'
+        ? 'Jerk Chicken meal (6 oz): <b>' + money(tierPrice(jerk, 'cooked', c.t)) + '</b> <span class="nw" style="opacity:.75">(web ' + money(jerk) + ')</span>'
+        : '4 kg chicken breast case: <b>' + money(tierPrice(cb, 'case', c.t)) + '</b> <span class="nw" style="opacity:.75">(web ' + money(cb) + ')</span>';
+      return '<article class="ccard tier ' + c.t + '">' + (c.t === 'pro' ? '<span class="ribbon tc tc-pro">Founding partners start here</span>' : '') +
+        '<h3 class="h3" style="font-size:28px">' + esc(TIERS[c.t].name) + '</h3><div class="from">' + c.from + '</div>' +
+        '<div class="disc">' + pct(d) + '% off ' + (priceMode === 'cooked' ? 'Meal Butler cooked food' : 'butcher cases') + '</div>' +
+        '<ul>' + c.perks.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' +
+        '<div class="ex">' + ex + '</div></article>';
+    }).join('');
+    $('#priceEx').innerHTML = priceMode === 'cooked'
+      ? 'Jerk Chicken, Green Beans &amp; Sweet Potato (6 oz) is ' + money(jerk) + ' on our site. Pro partners pay ' + money(tierPrice(jerk, 'cooked', 'pro')) + ' and keep ' + money(jerk - tierPrice(jerk, 'cooked', 'pro')) + ' a meal.'
+      : 'A Case of Portioned Chicken Breast (4 kg) is ' + money(cb) + ' on our site. Pro partners pay ' + money(tierPrice(cb, 'case', 'pro')) + ', Elite partners ' + money(tierPrice(cb, 'case', 'elite')) + '.';
+    $$('[data-pm]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-pm') === priceMode ? 'true' : 'false'); });
+  }
+  $$('[data-pm]').forEach(function (b) { b.addEventListener('click', function () { priceMode = b.getAttribute('data-pm'); renderPricing(); }); });
+
+  /* ================= S7 catalogue ================= */
+  var ui = S('ui', { tab: 'cases', cards: {}, preview: null });
+  if (!ui.cards) ui.cards = {};
+  var TABS = [
+    { k: 'cases', label: 'Meal cases (Concept)', hint: 'Concept case packs built from our real per-meal web prices. One case counts toward your minimum.' },
+    { k: 'meals', label: 'Pre-set meals', hint: 'Every pre-set meal on jwfoods.com. Single, 12-pack or 24-pack (Concept packs).' },
+    { k: 'portions', label: 'Proteins by the portion', hint: 'Cooked, weighed and vacuum-sealed one portion at a time. Build your own plates. Protein portions count as meals toward your minimum; sides don’t.' },
+    { k: 'bfast', label: 'Breakfast', hint: 'Grab-and-go breakfast for the 6 am class.' },
+    { k: 'butcher', label: 'Butcher cases', hint: 'Raw butcher cases at 5 to 10% off. One case meets the minimum.' }
+  ];
+  var DEFS = {};
+  function defsFor(tab) {
+    if (tab === 'cases') return ['restock48', 'mixed24', 'trainer', 'clinic12', 'fight12', 'bfast24'].map(function (k) { return { ck: 'cs:' + k, type: 'cs', key: k }; });
+    if (tab === 'meals') return MEAL_KEYS.map(function (k) { return { ck: 'pk:' + k, type: 'pk', key: k }; });
+    if (tab === 'portions') return PORTION_IDS.map(function (k) { return { ck: 'pt:' + k, type: 'pt', key: k }; });
+    if (tab === 'bfast') return BFAST_KEYS.map(function (k) { return { ck: 'bf:' + k, type: 'bf', key: k }; });
+    return CASE_KEYS.map(function (k) { return { ck: 'bc:' + k, type: 'bc', key: k }; });
+  }
+  function cardState(def) {
+    var s = ui.cards[def.ck] || (ui.cards[def.ck] = {});
+    if (s.vi == null) { var p = def.type === 'cs' ? null : prod(def.key); s.vi = def.type === 'pk' ? vIndex(p, 6) : def.type === 'pt' ? vIndex(p, 4) : 0; }
+    if (!s.pack) s.pack = 1;
+    return s;
+  }
+  function skuOf(def) {
+    var st = cardState(def), p = def.type === 'cs' ? null : prod(def.key);
+    if (def.type === 'cs') return 'cs:' + def.key;
+    if (def.type === 'pk') return 'pk:' + def.key + ':' + (p.variants[st.vi] || p.variants[0]).oz + ':' + st.pack;
+    return def.type + ':' + def.key + ':' + st.vi;
+  }
+  function qtyOf(id) { var k = sku(id); if (!k) return 0; var key = id + '|' + k.variant; var it = JWC.cart.items().filter(function (i) { return i.key === key; })[0]; return it ? it.qty : 0; }
+  function bump(id, d) {
+    var k = sku(id); if (!k) return;
+    var key = id + '|' + k.variant, it = JWC.cart.items().filter(function (i) { return i.key === key; })[0];
+    if (d > 0 && !it) JWC.cart.add({ id: id, name: k.name, variant: k.variant, price: k.web, qty: d, img: k.img }, true);
+    else if (it) JWC.cart.setQty(key, it.qty + d);
+  }
+  function previewTier() { var t = tierFor(JWC.cart.items()); return ui.preview || (t === 'web' ? 'pro' : t); }
+  function renderTabs() {
+    $('#catTabs').innerHTML = TABS.map(function (t) { return '<button type="button" role="tab" id="tab-' + t.k + '" aria-controls="catPanel" aria-selected="' + (ui.tab === t.k) + '" tabindex="' + (ui.tab === t.k ? 0 : -1) + '" data-tab="' + t.k + '">' + esc(t.label) + '</button>'; }).join('');
+    $('#catPanel').setAttribute('aria-labelledby', 'tab-' + ui.tab);
+    $('#catHint').textContent = TABS.filter(function (t) { return t.k === ui.tab; })[0].hint;
+    renderGrid();
+  }
+  function cardHTML(def) {
+    var st = cardState(def), title, desc = '', imgs, ctrl = '';
+    if (def.type === 'cs') {
+      var c = CASES[def.key], ks = [];
+      c.lines.forEach(function (l) { if (ks.indexOf(l[0]) < 0) ks.push(l[0]); });
+      title = c.name; desc = c.desc.replace(/ oz\b/g, '\u00a0oz'); imgs = ks.slice(0, 4).map(prod);
+    } else {
+      var p = prod(def.key); title = p.name; imgs = [p];
+      if (def.type === 'bc') desc = CASE_NOTES[def.key] || '';
+      if (p.variants.length > 1) {
+        ctrl += '<label class="pc-sel">' + (def.type === 'bc' ? 'Portion / flavour' : 'Size') + '<select data-v>' + p.variants.map(function (v, i) { return '<option value="' + i + '"' + (i === st.vi ? ' selected' : '') + '>' + esc(v.label) + '</option>'; }).join('') + '</select></label>';
+      }
+      if (def.type === 'pk') {
+        ctrl += '<div><span class="pc-sel" style="margin-bottom:4px">Pack</span><div class="seg" role="group" aria-label="Pack size for ' + esc(title) + '">' +
+          [[1, 'Single'], [12, '12-pack'], [24, '24-pack']].map(function (o) { return '<button type="button" data-pack="' + o[0] + '" aria-pressed="' + (st.pack === o[0]) + '">' + o[1] + '</button>'; }).join('') + '</div></div>';
+      }
+    }
+    var mos = imgs.length > 1
+      ? '<div class="mosaic m' + imgs.length + '">' + imgs.map(function (p) { return '<img src="' + esc(JWC.img(p, 300)) + '" alt="' + esc(p.name) + '" loading="lazy">'; }).join('') + '</div>'
+      : '<img src="' + esc(JWC.img(imgs[0], 600)) + '" alt="' + esc(imgs[0].name) + '" loading="lazy">';
+    return '<article class="ccard pc" data-ck="' + esc(def.ck) + '"><div class="pc-img">' + mos + '<div class="badges" data-badges></div></div>' +
+      '<div class="pc-body"><h3 class="pc-name">' + esc(title) + '</h3>' + (desc ? '<p class="pc-desc">' + esc(desc) + '</p>' : '') + ctrl +
+      '<p class="pc-price" data-price></p><p class="pc-mac" data-mac></p>' +
+      '<div class="pc-foot"><span class="small muted" data-inorder></span><div class="step"><button type="button" data-step="-1" aria-label="One less ' + esc(title) + '">−</button><output data-qty aria-live="polite">0</output><button type="button" data-step="1" aria-label="One more ' + esc(title) + '">+</button></div></div></div></article>';
+  }
+  function renderGrid() {
+    var defs = defsFor(ui.tab); DEFS = {};
+    defs.forEach(function (d) { DEFS[d.ck] = d; });
+    $('#catGrid').innerHTML = defs.map(cardHTML).join('');
+    $$('#catGrid [data-ck]').forEach(updateCard);
+  }
+  function updateCard(card) {
+    var def = DEFS[card.getAttribute('data-ck')]; if (!def) return;
+    var id = skuOf(def), k = sku(id); if (!k) return;
+    var pt = previewTier(), tp = tierPrice(k.web, k.kind, pt), q = qtyOf(id), st = cardState(def), per = '';
+    if (def.type === 'cs' && CASES[def.key].per) per = 'per client · ' + caseCount(CASES[def.key]) + ' items';
+    else if (k.meals > 1 && def.key !== 'bfast24') per = money(tp / k.meals) + ' a meal · members pay ' + money(k.web / k.meals);
+    else if (k.kind === 'cooked' && k.meals <= 1 && def.type !== 'cs') per = 'You keep ' + money(k.web - tp) + ' at web price';
+    else if (def.key === 'bfast24') per = money(tp / 24) + ' a piece';
+    $('[data-price]', card).innerHTML = '<span class="pw">Web ' + money(k.web) + '</span><span class="pp">' + esc(TIERS[pt].name) + ' ' + money(tp) + '</span>' + (per ? '<span class="pu">' + per + '</span>' : '');
+    var mac = '';
+    if (def.type === 'cs') { var m = caseMacro(CASES[def.key]); if (m) mac = 'est. avg per item: ' + m.kcal + ' kcal · P ' + m.p + ' g'; }
+    else if (def.type !== 'bc') { var p = prod(def.key), mm = JWC.macros(p, st.vi); if (mm) mac = 'est. ' + mm.kcal + ' kcal · P ' + mm.p + ' g · C ' + mm.c + ' g · F ' + mm.f + ' g' + (def.type === 'pk' ? ' a meal' : ''); }
+    else mac = 'Raw · frozen · vacuum-packed';
+    $('[data-mac]', card).textContent = mac;
+    $('[data-qty]', card).textContent = q;
+    $('[data-step="-1"]', card).disabled = q === 0;
+    $('[data-inorder]', card).textContent = q ? 'In your order' : '';
+    var concept = def.type === 'cs' || (def.type === 'pk' && st.pack > 1);
+    $('[data-badges]', card).innerHTML = (concept ? '<span class="chip chip-concept">Concept</span>' : '') + (k.kind === 'cooked' ? '<span class="chip chip-navy">Cooked</span>' : '<span class="chip chip-brass">Butcher case</span>');
+    $$('[data-pack]', card).forEach(function (b) { b.setAttribute('aria-pressed', +b.getAttribute('data-pack') === st.pack ? 'true' : 'false'); });
+  }
+  $('#catTabs').addEventListener('click', function (e) { var b = e.target.closest('[data-tab]'); if (!b) return; ui.tab = b.getAttribute('data-tab'); W('ui', ui); renderTabs(); $('#tab-' + ui.tab).focus(); });
+  $('#catTabs').addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var i = TABS.map(function (t) { return t.k; }).indexOf(ui.tab); i = (i + (e.key === 'ArrowRight' ? 1 : TABS.length - 1)) % TABS.length;
+    ui.tab = TABS[i].k; W('ui', ui); renderTabs(); $('#tab-' + ui.tab).focus(); e.preventDefault();
+  });
+  $('#catGrid').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return; var card = b.closest('[data-ck]'); if (!card) return; var def = DEFS[card.getAttribute('data-ck')];
+    if (b.hasAttribute('data-step')) bump(skuOf(def), +b.getAttribute('data-step'));
+    else if (b.hasAttribute('data-pack')) { cardState(def).pack = +b.getAttribute('data-pack'); W('ui', ui); updateCard(card); }
+  });
+  $('#catGrid').addEventListener('change', function (e) {
+    if (!e.target.matches('select[data-v]')) return; var card = e.target.closest('[data-ck]'), def = DEFS[card.getAttribute('data-ck')];
+    cardState(def).vi = +e.target.value; W('ui', ui); updateCard(card);
+  });
+  $$('[data-prev]').forEach(function (b) { b.addEventListener('click', function () { var v = b.getAttribute('data-prev'); ui.preview = ui.preview === v ? null : v; W('ui', ui); renderOrder(); }); });
+  $('#prevNote').addEventListener('click', function (e) { if (e.target.closest('button')) { ui.preview = null; W('ui', ui); renderOrder(); } });
+
+  /* live re-pricing: the whole cart moves to the highest tier it qualifies for */
+  var syncing = false, lastTier = null;
+  function onCart() {
+    if (syncing) return;
+    var items = JWC.cart.items(), t = tierFor(items), changed = false;
+    items.forEach(function (i) { var k = sku(i.id); if (!k) return; var p = tierPrice(k.web, k.kind, t); if (Math.abs(p - i.price) > 0.001) { i.price = p; changed = true; } });
+    if (changed) { syncing = true; JWC.cart.save(items); syncing = false; }
+    if (lastTier !== null && !quiet && t !== 'web' && rank(t) > rank(lastTier)) JWC.toast('You’ve reached ' + TIERS[t].name + ' pricing: ' + pct(TIERS[t].cooked) + '% off cooked food.');
+    lastTier = t;
+    renderOrder();
+  }
+  JWC.cart.onChange(onCart);
+
+  function renderOrder() {
+    var items = JWC.cart.items(), t = tierFor(items), c = counts(items), tot = orderTotal(items, t), web = orderTotal(items, 'web'), ok = meetsMin(c);
+    $('#obCount').textContent = plural(c.meals + c.portions, 'meal') + ' · ' + plural(c.cases, 'case') + (c.portions ? ' (incl. ' + plural(c.portions, 'protein portion') + ')' : '') + (c.sides ? ' + ' + plural(c.sides, 'side') : '');
+    var tierEl = $('#obTier'); tierEl.className = 'tc tc-' + t; tierEl.textContent = TIERS[t].name;
+    $('#obTotal').textContent = money(tot);
+    var sub;
+    if (!items.length) sub = 'Add a case, or tap “See starter order” above. Minimum is 12 meals or 1 case.';
+    else if (!ok) sub = 'Minimum is 12 meals or 1 case' + (c.sides ? ' (sides add to an order but don’t count as meals).' : '.');
+    else if (t === 'web') sub = 'Partner pricing starts at $150 an order.';
+    else {
+      sub = 'Web value ' + money(web) + ' · you save ' + money(web - tot) + (founding() ? ' · founding partner' : '');
+      var nt = RANK[rank(t) + 1];
+      if (nt) { var need = TIERS[nt].min - orderTotal(items, nt); if (need > 0 && need < 250) sub += ' · add about ' + JWC.money(Math.ceil(need), 0) + ' for ' + TIERS[nt].name; }
+    }
+    $('#obSub').textContent = sub;
+    var rv = $('#obReview'); rv.disabled = !items.length || !ok;
+    $('#obCart').textContent = 'View cart (' + JWC.cart.count() + ')';
+    var pt = previewTier();
+    $$('[data-prev]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-prev') === pt ? 'true' : 'false'); });
+    $('#prevNote').innerHTML = ui.preview ? 'Previewing ' + esc(TIERS[ui.preview].name) + '. <button type="button" class="pbtn" style="min-height:40px">Match my order</button>' : (t === 'web' ? 'Showing Pro until your order qualifies.' : 'Matches your order.');
+    $$('#catGrid [data-ck]').forEach(updateCard);
+    measure();
+  }
+  $('#obCart').addEventListener('click', function () { JWC.cart.open(); });
+  $('#obReview').addEventListener('click', openReview);
+
+  function openReview() {
+    var items = JWC.cart.items(), t = tierFor(items), tot = orderTotal(items, t), web = orderTotal(items, 'web'), lb = S('labels', null);
+    if (!items.length || !meetsMin(counts(items))) { JWC.toast('Minimum is 12 meals or 1 case.'); return; }
+    var city = savedCity();
+    var html = '<h3>Review your partner order</h3><p style="margin:0 0 12px;color:var(--jwc-muted);font-size:13.5px">' + tcChip(t) + ' ' + (t === 'web' ? 'Partner pricing starts at $150 an order.' : pct(TIERS[t].cooked) + '% off cooked food, ' + pct(TIERS[t].cases) + '% off butcher cases (Concept).') + '</p>' +
+      items.map(function (i) { return '<div class="jwc-row"><span>' + i.qty + ' × ' + esc(i.name) + ' <small style="color:var(--jwc-muted)">' + esc(i.variant) + '</small></span><span>' + money(i.price * i.qty) + '</span></div>'; }).join('') +
+      '<div class="jwc-row" style="color:var(--jwc-muted)"><span>Web value</span><span>' + money(web) + '</span></div>' +
+      '<div class="jwc-row" style="color:var(--jwc-gain)"><span>Partner savings</span><span>−' + money(web - tot) + '</span></div>' +
+      '<div class="jwc-row total"><span>Your partner price</span><span>' + money(tot) + '</span></div>' +
+      (lb ? '<div class="jwc-note"><span class="jwc-dot"></span><span><b style="color:var(--jwc-ink)">Co-branded labels: ' + esc(lb.name) + '.</b> ' +
+        (rank(t) >= rank('pro') ? 'Printed with this order at no charge, member code ' + esc(lb.code) + '.'
+          : 'Labels are a Pro and Elite perk. Add about ' + JWC.money(Math.max(1, Math.ceil(TIERS.pro.min - orderTotal(items, 'pro'))), 0) + ' to reach Pro and we print them with this order at no charge; otherwise we keep them for your first Pro order.') + '</span></div>' : '') +
+      '<label class="jwc-choice" style="margin-top:14px"><input type="checkbox" id="rvStanding" checked><span><b>Make this my standing weekly order</b><br><small style="color:var(--jwc-muted)">Same order every week on your route day. Skip or change it before Sunday night. Standing orders of $150 or more drop free.</small></span></label>' +
+      '<label class="jwc-field"><span>Deliver to</span><select id="rvCity"><option value="">Pick up at 2201 Brimley Rd (free)</option>' + JWC.cities().map(function (c) { return '<option' + (c === city ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('') + '</select></label>' +
+      '<p id="rvRoute" style="margin:0;font-size:13.5px;color:var(--jwc-muted)"></p>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Keep shopping</button><button type="button" class="jwc-btn jwc-btn-dark" id="rvGo">Continue to demo checkout</button></div>';
+    JWC.modal(html, function (root) {
+      var sel = $('#rvCity', root), rt = $('#rvRoute', root);
+      function drawRoute() { rt.textContent = sel.value ? 'Your drop: ' + routeLine(sel.value) : 'Pickup is free, ready in 2-3 business days.'; }
+      sel.addEventListener('change', drawRoute); drawRoute();
+      $('#rvGo', root).addEventListener('click', function () {
+        var standing = $('#rvStanding', root).checked, c = sel.value; if (c) W('city', c);
+        runCheckout(function (cc) { return partnerOpts(cc, standing); }, c);
+      });
+    });
+  }
+
+  /* ================= S8 label studio ================= */
+  var LB_PRODUCTS = [['jerk', 6], ['souv', 6], ['egg', null]];
+  var lb = S('lb', { name: 'Brimley Barbell Club', code: 'BRIMLEY10', touched: false, prod: 'jerk' });
+  function codeFrom(name) { var w = String(name || '').trim().split(/\s+/)[0] || ''; w = w.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 10); return (w || 'GYM') + '10'; }
+  function qrSVG(text) {
+    var h = 2166136261 >>> 0, d = '', n = 21;
+    for (var i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+    h = h || 7;
+    function rnd() { h ^= h << 13; h >>>= 0; h ^= h >>> 17; h ^= h << 5; h >>>= 0; return h / 4294967296; }
+    function finder(x, y) { d += 'M' + x + ' ' + y + 'h7v7h-7z M' + (x + 1) + ' ' + (y + 1) + 'h5v5h-5z M' + (x + 2) + ' ' + (y + 2) + 'h3v3h-3z '; }
+    finder(0, 0); finder(14, 0); finder(0, 14);
+    for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) { if ((x < 8 && y < 8) || (x > 12 && y < 8) || (x < 8 && y > 12)) continue; if (rnd() < 0.47) d += 'M' + x + ' ' + y + 'h1v1h-1z'; }
+    return '<svg viewBox="-1 -1 23 23" role="img" aria-label="QR code for member code ' + esc(text) + ' (demo)"><rect x="-1" y="-1" width="23" height="23" fill="#fff"/><path d="' + d + '" fill="#0E2340" fill-rule="evenodd"/></svg>';
+  }
+  /* Health or disease claims are blocked; ordinary business words like "Health" or "Wellness" in a name are fine. */
+  var CLAIMS = /\b(glp|ozempic|wegovy|mounjaro|diabet\w*|cure[sd]?|curing|detox\w*|fat[- ]?burn\w*|medical|heal(?:s|ing|ed)?)\b/i;
+  function renderLabel() {
+    var lp = LB_PRODUCTS.filter(function (x) { return x[0] === lb.prod; })[0] || LB_PRODUCTS[0], p = prod(lp[0]);
+    var name = (lb.name || '').trim() || 'Your gym', code = lb.code || codeFrom(name);
+    $('#lbPack').innerHTML = '<img src="' + esc(JWC.img(p, 600)) + '" alt="' + esc(p.name) + ' in a vacuum pack (label mock-up)">' +
+      '<div class="lbl"><div class="lbl-top"><img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods"><div class="lbl-brand">Fuelled by J&amp;W at ' + esc(name) + '</div></div>' +
+      '<p class="lbl-prod">' + esc(p.name) + (lp[1] ? ' · ' + lp[1] + ' oz' : ' · 2-pack') + '</p>' +
+      '<p class="ph">Net weight and best-before print here</p><p class="ph">Ingredients and allergens print here from J&amp;W’s recipe file</p>' +
+      '<p>Keep frozen.</p><p class="ph">Heating steps print here from J&amp;W’s kitchen sheet</p>' +
+      '<p style="font-size:11.5px;color:#4A5463">Made by J&amp;W Foods Inc., 2201 Brimley Rd, Unit 1, Scarborough ON · Ontario-inspected plant</p>' +
+      '<div class="lbl-foot">' + qrSVG(code) + '<p style="margin:0;font-weight:600">Members: use <b style="letter-spacing:.05em">' + esc(code) + '</b> for 10% off your first order at jwfoods.com</p></div></div>';
+    var bad = CLAIMS.exec(name);
+    var box = $('#lbClaims');
+    box.className = 'claims ' + (bad ? 'chip-alert' : 'chip-ok');
+    box.innerHTML = bad ? '<b>' + esc(AGENTS.label) + ':</b> “' + esc(bad[0]) + '” reads as a health claim, so it can’t go on a food label. Try your business name only. A person signs off every label.'
+      : '✓ <b>' + esc(AGENTS.label) + ':</b> no health claims found. J&amp;W stays the named maker on every pack.';
+    W('lb', lb);
+  }
+  function renderLabelStatus() {
+    var q = S('labels', null);
+    $('#lbStatus').innerHTML = q ? '<span class="chip chip-ok" style="white-space:normal">✓ Labels for ' + esc(q.name) + ' are on your next order</span>' : '';
+  }
+  function initLabels() {
+    $('#lbName').value = lb.name; $('#lbCode').value = lb.code;
+    $('#lbProd').innerHTML = LB_PRODUCTS.map(function (x) { var p = prod(x[0]); return '<option value="' + x[0] + '"' + (x[0] === lb.prod ? ' selected' : '') + '>' + esc(p.name) + (x[1] ? ' (' + x[1] + ' oz)' : ' (2-pack)') + '</option>'; }).join('');
+    $('#lbName').addEventListener('input', function () { lb.name = this.value; if (!lb.touched) { lb.code = codeFrom(lb.name); $('#lbCode').value = lb.code; } renderLabel(); });
+    $('#lbCode').addEventListener('input', function () { var v = this.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 14); if (v !== this.value) this.value = v; lb.code = v; lb.touched = !!v; renderLabel(); });
+    $('#lbProd').addEventListener('change', function () { lb.prod = this.value; renderLabel(); });
+    $('#lbCopy').addEventListener('click', function () {
+      var code = lb.code || codeFrom(lb.name);
+      try { if (navigator.clipboard) navigator.clipboard.writeText(code).catch(function () {}); } catch (e) {}
+      JWC.toast('Copied ' + code + ' (demo)');
+    });
+    $('#lbAdd').addEventListener('click', function () {
+      var name = (lb.name || '').trim();
+      if (!name) { JWC.toast('Type the name for your label first.'); $('#lbName').focus(); return; }
+      if (CLAIMS.test(name)) { JWC.toast('Remove the health claim first. ' + AGENTS.label + ' blocked it.'); return; }
+      W('labels', { name: name, code: lb.code || codeFrom(name), at: Date.now() });
+      renderLabelStatus();
+      JWC.toast('Labels added. We print them with your next order.');
+    });
+    renderLabel(); renderLabelStatus();
+  }
+
+  /* ================= S10 apply ================= */
+  var TYPES = [['gym', 'Gym or CrossFit box'], ['trainer', 'Personal trainer or coach'], ['clinic', 'Physio, dietitian or weight-loss clinic'], ['shop', 'Supplement or health shop'], ['fight', 'Boxing, MMA or fight gym'], ['team', 'Team or academy']];
+  var STOCK = ['Pre-set meals', 'Proteins by the portion', 'Breakfast', 'Butcher cases'];
+  var FREEZER = [['yes', 'Yes'], ['want', 'No, we’d like one'], ['unsure', 'Not sure']];
+  var STARTERS = { gym: [['cs:mixed24', 1]], trainer: [['cs:trainer', 2]], clinic: [['cs:clinic12', 2]], shop: [['cs:mixed24', 1], ['cs:bfast24', 1]], fight: [['cs:fight12', 2]], team: [['cs:mixed24', 1]] };
+  function typeLabel(k) { var t = TYPES.filter(function (x) { return x[0] === k; })[0]; return t ? t[1] : k; }
+  function initApply() {
+    $('#apType').innerHTML = '<option value="">Choose one</option>' + TYPES.map(function (t) { return '<option value="' + t[0] + '">' + esc(t[1]) + '</option>'; }).join('');
+    cityOptions($('#apCity'), '', false); $('#apCity').insertAdjacentHTML('afterbegin', '<option value="" selected>Choose your city</option>'); $('#apCity').value = '';
+    $('#apStock').innerHTML = STOCK.map(function (s, i) { return '<label class="ck"><input type="checkbox" name="apStock" value="' + esc(s) + '" id="apS' + i + '"><span>' + esc(s) + '</span></label>'; }).join('');
+    $('#apFreezer').innerHTML = FREEZER.map(function (f) { return '<label class="ck"><input type="radio" name="apFreezer" value="' + f[0] + '" id="apF' + f[0] + '"><span>' + esc(f[1]) + '</span></label>'; }).join('');
+    $('#apWeekly').addEventListener('input', function () { $('#apWeeklyOut').textContent = JWC.money(+this.value, 0); });
+    $('#apDemo').addEventListener('click', fillDemo);
+    $('#apForm').addEventListener('submit', function (e) { e.preventDefault(); submitApp(); });
+    ['apBiz', 'apType', 'apName', 'apEmail', 'apCity'].forEach(function (id) { $('#' + id).addEventListener('input', function () { setErr(id, ''); }); $('#' + id).addEventListener('change', function () { setErr(id, ''); }); });
+    $('#apAgree').addEventListener('change', function () { setErr('apAgree', ''); });
+    $('#apResult').addEventListener('click', function (e) {
+      if (e.target.closest('#apOrder')) placeStarter();
+      if (e.target.closest('#apBack')) goTo('#top');
+      if (e.target.closest('#apEdit')) { $('#apResult').style.display = 'none'; $('#apForm').style.display = ''; $('#apBiz').focus(); }
+    });
+    var app = S('app', null);
+    if (app) { fillForm(app); showResult(app, false); }
+  }
+  function fillForm(a) {
+    $('#apBiz').value = a.biz || ''; $('#apType').value = a.type || ''; $('#apName').value = a.name || ''; $('#apEmail').value = a.email || ''; $('#apPhone').value = a.phone || '';
+    $('#apCity').value = a.city || ''; $('#apPeople').value = a.people || '50-150';
+    $$('input[name=apStock]').forEach(function (c) { c.checked = (a.stock || []).indexOf(c.value) > -1; });
+    $$('input[name=apFreezer]').forEach(function (r) { r.checked = r.value === a.freezer; });
+    $('#apWeekly').value = a.weekly || 300; $('#apWeeklyOut').textContent = JWC.money(+(a.weekly || 300), 0);
+    $('#apAgree').checked = !!a.agree;
+  }
+  function fillDemo() {
+    fillForm({ biz: 'Brimley Barbell Club', type: 'gym', name: 'Jordan Lee', email: 'jordan@example.com', phone: '(416) 555-0142', city: 'Scarborough', people: '150-400', stock: ['Pre-set meals', 'Breakfast'], freezer: 'want', weekly: 300, agree: true });
+    $$('#apForm .err').forEach(function (e) { e.textContent = ''; }); $$('#apForm [aria-invalid]').forEach(function (e) { e.removeAttribute('aria-invalid'); });
+    JWC.toast('Filled with a demo gym. Tap Send application.');
+  }
+  function prefillFromFreezer() {
+    var c = fzCalc();
+    if (!$('#apBiz').value && fz.name) $('#apBiz').value = fz.name.trim();
+    if (!$('#apType').value) $('#apType').value = fz.mix === 'clinic' ? 'clinic' : fz.mix === 'fighter' ? 'fight' : 'gym';
+    $('#apCity').value = fz.city;
+    var w = Math.max(150, Math.min(1000, Math.round(c.pay / 10) * 10)); $('#apWeekly').value = w; $('#apWeeklyOut').textContent = JWC.money(w, 0);
+    $$('input[name=apStock]').forEach(function (x) { if (x.value === 'Pre-set meals') x.checked = true; });
+    if (!$$('input[name=apFreezer]').some(function (r) { return r.checked; })) $('#apFwant').checked = true;
+    $('#apResult').style.display = 'none'; $('#apChecking').style.display = 'none'; $('#apForm').style.display = '';
+    goTo('#apply');
+    JWC.toast('Your freezer plan is in the application.');
+    setTimeout(function () { var f = ['apBiz', 'apName', 'apEmail'].map(function (i) { return $('#' + i); }).filter(function (x) { return !x.value; })[0]; if (f) f.focus({ preventScroll: true }); }, reduce ? 0 : 600);
+  }
+  function setErr(id, msg) { var f = $('#' + id), e = $('#' + id + 'Err'); if (e) e.textContent = msg; if (msg) f.setAttribute('aria-invalid', 'true'); else f.removeAttribute('aria-invalid'); }
+  function submitApp() {
+    var bad = [];
+    function need(id, msg, ok) { if (!ok) { setErr(id, msg); bad.push(id); } else setErr(id, ''); }
+    need('apBiz', 'Add your business name.', $('#apBiz').value.trim().length > 1);
+    need('apType', 'Pick the kind of business.', !!$('#apType').value);
+    need('apName', 'Add your name.', $('#apName').value.trim().length > 1);
+    need('apEmail', 'Add an email we can reply to, like name@yourgym.ca.', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($('#apEmail').value.trim()));
+    need('apCity', 'Pick your city so we can find your route day.', !!$('#apCity').value);
+    need('apAgree', 'Partners agree to sell at our web price or higher.', $('#apAgree').checked);
+    if (bad.length) { $('#' + bad[0]).focus(); JWC.toast('Check the ' + plural(bad.length, 'highlighted field') + '.'); return; }
+    var fr = $$('input[name=apFreezer]').filter(function (r) { return r.checked; })[0];
+    var a = {
+      biz: $('#apBiz').value.trim(), type: $('#apType').value, name: $('#apName').value.trim(), email: $('#apEmail').value.trim(), phone: $('#apPhone').value.trim(),
+      city: $('#apCity').value, people: $('#apPeople').value, stock: $$('input[name=apStock]').filter(function (c) { return c.checked; }).map(function (c) { return c.value; }),
+      freezer: fr ? fr.value : 'unsure', weekly: +$('#apWeekly').value, agree: true, at: Date.now()
+    };
+    a.tier = a.weekly >= 600 ? 'elite' : 'pro';
+    $('#apForm').style.display = 'none'; $('#apChecking').style.display = '';
+    setTimeout(function () {
+      W('app', a); W('founding', true); W('city', a.city);
+      $('#apChecking').style.display = 'none';
+      showResult(a, true);
+      quiet = true; onCart(); quiet = false;
+      renderSlots(); renderTeam();
+    }, 1200);
+  }
+  function renderSlots() { var a = S('app', null); $('#slotsLine').textContent = a ? '8 of 10 slots taken, including ' + a.biz + ' (sample).' : '7 of 10 slots taken (sample).'; }
+  function starterFor(a) { return (STARTERS[a.type] || STARTERS.gym).map(function (s) { return makeItem(s[0], s[1], a.tier); }); }
+  function showResult(a, focus) {
+    var r = weeklyRoute(a.city), items = starterFor(a), tot = orderTotal(items, a.tier), first = a.name.split(/\s+/)[0];
+    var tierTxt = a.tier === 'elite' ? 'Elite (25% off cooked food), based on about ' + JWC.money(a.weekly, 0) + ' a week' : 'Pro as a founding partner (20% off cooked food for 12 months), based on about ' + JWC.money(a.weekly, 0) + ' a week';
+    var frTxt = a.freezer === 'yes' ? 'Freezer: you have one. We’ll check it holds −18°C or colder on your tasting drop' : 'Freezer: you qualify after 8 weeks at $300+, or now as a founding partner';
+    var html = '<span class="ai"><i aria-hidden="true">✦</i>Pre-checked by ' + esc(AGENTS.checker) + ' (AI) · a person approves</span>' +
+      '<h3 class="h3" style="font-size:28px;margin-top:14px">Thanks, ' + esc(first) + '. Here’s what happens next.</h3>' +
+      '<ul class="pc-check" style="list-style:none;margin:12px 0 0;padding:0">' +
+      '<li><b>✓</b><span>Delivery: ' + (r ? esc(routeShort(r) + (/route$/.test(routeShort(r)) ? '' : ' route') + ' · order by Sunday') : 'Pickup at 2201 Brimley Rd, free · no weekly route to ' + esc(a.city) + ' yet') + '</span></li>' +
+      '<li><b>✓</b><span>Suggested tier: ' + esc(tierTxt) + '</span></li>' +
+      '<li><b>✓</b><span>' + esc(frTxt) + '</span></li>' +
+      '<li><b>✓</b><span>Payment: card for your first 4 orders, then net-15 invoices</span></li></ul>' +
+      '<div class="starter" style="margin-top:14px;font-size:15px"><b>Suggested starter order:</b> ' + items.map(function (i) { return esc(i.name.replace(' (Concept)', '')) + (i.qty > 1 ? ' × ' + i.qty : ''); }).join(' + ') + ' · ' + esc(TIERS[a.tier].name) + ' ' + money(tot) + ' · plus a free tasting tray</div>' +
+      '<p style="margin:14px 0 0;color:var(--ink)">A person on our partner team will confirm by the end of the next business day.</p>' +
+      '<div class="flex flex-wrap gap-3" style="margin-top:18px"><button type="button" class="btn btn-navy" id="apOrder">Place my starter order</button><button type="button" class="btn btn-line" id="apBack">Back to the page</button><button type="button" class="btn btn-line btn-sm" id="apEdit" style="min-height:46px">Edit application</button></div>' +
+      '<p class="small muted" style="margin:12px 0 0">Demo: nothing is sent. Your application is saved on this device and appears in the JW team view.</p>';
+    $('#apForm').style.display = 'none';
+    var box = $('#apResult'); box.innerHTML = html; box.style.display = '';
+    if (focus) box.focus({ preventScroll: false });
+  }
+  function placeStarter() {
+    var a = S('app', null); if (!a) return;
+    var items = starterFor(a), title = 'Starter partner order · ' + TIERS[a.tier].name + (a.tier === 'pro' ? ' (founding)' : '');
+    runCheckout(function (c) { return { title: title, items: items, city: c, extraRows: [{ label: 'Free tasting tray (24 portions)', amount: 0 }], note: 'Starter order · pending approval' }; }, a.city);
+  }
+
+  /* ================= PORTAL (demo partner) ================= */
+  var PAR = [
+    { k: 'jerk', oz: 6, onHand: 2, sold: 12, sug: 12, note: 'Sold out Thursday two weeks running', alert: true },
+    { k: 'souv', oz: 6, onHand: 4, sold: 9, sug: 8 },
+    { k: 'tenders', oz: 6, onHand: 3, sold: 7, sug: 6 },
+    { k: 'turkey', oz: 6, onHand: 5, sold: 4, sug: 3, note: 'Slower: trimmed by 2' },
+    { k: 'egg', oz: null, onHand: 6, sold: 14, sug: 12, pack: true }
+  ];
+  var po = S('portal', null);
+  if (!po || !po.qty) po = { qty: {}, status: 'draft', orderNo: '', paid: {} };
+  PAR.forEach(function (r) { if (po.qty[r.k] == null) po.qty[r.k] = r.sug; });
+  if (!po.paid) po.paid = {};
+  function savePo() { W('portal', po); }
+  function parItems() {
+    return PAR.filter(function (r) { return po.qty[r.k] > 0; }).map(function (r) {
+      var id = r.pack ? 'bf:egg:0' : 'pk:' + r.k + ':' + r.oz + ':1', k = sku(id);
+      return { key: id + '|' + k.variant, id: id, name: k.name + (r.oz ? ' (' + r.oz + ' oz)' : ' (2-pack)'), variant: 'Pro price', price: tierPrice(k.web, 'cooked', 'pro'), qty: po.qty[r.k], img: k.img, note: '' };
+    });
+  }
+  function renderPortal() {
+    var h = new Date().getHours();
+    $('#ptHello').textContent = (h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening') + ', Brimley Barbell Club';
+    var locked = po.status === 'locked';
+    var rows = PAR.map(function (r) {
+      var p = prod(r.k), u = tierPrice(unitWeb(r.k, r.oz), 'cooked', 'pro'), q = po.qty[r.k], changed = q !== r.sug;
+      return '<tr><td class="full first wide"><div class="flex gap-3 items-center"><img src="' + esc(JWC.img(p, 120)) + '" alt="" width="44" height="44" style="width:44px;height:44px;border-radius:10px;object-fit:cover;flex:none"><div><b style="color:var(--ink)">' + esc(p.name) + (r.oz ? ' (' + r.oz + ' oz)' : ' (2-pack)') + '</b>' +
+        (r.note ? '<br><span class="chip ' + (r.alert ? 'chip-alert' : 'chip-muted') + '" style="margin-top:4px;white-space:normal">' + esc(r.note) + '</span>' : '') + '</div></div></td>' +
+        '<td class="num" data-label="On hand">' + r.onHand + '</td><td class="num" data-label="Sold last week">' + r.sold + '</td>' +
+        '<td data-label="Suggested">' + (locked ? '<b>' + q + '</b>' : '<div class="step"><button type="button" data-pq="' + r.k + '" data-d="-1" aria-label="One less ' + esc(p.name) + '"' + (q <= 0 ? ' disabled' : '') + '>−</button><output aria-live="polite">' + q + '</output><button type="button" data-pq="' + r.k + '" data-d="1" aria-label="One more ' + esc(p.name) + '">+</button></div>') +
+        (changed ? '<br><small class="muted">AI said ' + r.sug + '</small>' : '') + '</td>' +
+        '<td class="num" data-label="Pro price">' + money(u) + '</td><td class="num" data-label="Line">' + money(u * q) + '</td></tr>';
+    }).join('');
+    $('#ptTable').innerHTML = '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Item</th><th scope="col" class="num">On hand</th><th scope="col" class="num">Sold last wk</th><th scope="col">Suggested</th><th scope="col" class="num">Pro price</th><th scope="col" class="num">Line</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+    var items = parItems(), tot = r2(items.reduce(function (a, i) { return a + i.price * i.qty; }, 0)), web = r2(items.reduce(function (a, i) { return a + sku(i.id).web * i.qty; }, 0));
+    var meals = PAR.filter(function (r) { return !r.pack; }).reduce(function (a, r) { return a + po.qty[r.k]; }, 0), eggs = po.qty.egg;
+    var foot = '<div class="flex flex-wrap items-end justify-between gap-3" style="border-top:1.5px solid var(--ink);padding-top:12px">' +
+      '<div><p style="margin:0;font-weight:600;color:var(--ink)">' + plural(meals, 'meal') + ' + ' + plural(eggs, 'egg-bite pack') + '</p><p class="small muted" style="margin:2px 0 0">Members pay ' + money(web) + ' at web price · you keep about ' + money(web - tot) + '</p></div>' +
+      '<div style="text-align:right"><small class="muted">Total at Pro</small><div class="rc-big" id="ptTotal">' + money(tot) + '</div></div></div>';
+    if (po.status === 'locked') foot += '<div class="check" style="margin-top:12px">✓ Locked for Wednesday · order ' + esc(po.orderNo || '') + '. Change it any time before Sunday at 11:59 pm.</div><div class="flex flex-wrap gap-2" style="margin-top:10px"><button type="button" class="btn btn-line btn-sm" id="ptUnlock">Change this order</button></div>';
+    else if (po.status === 'skipped') foot += '<div class="claims chip-muted" style="margin-top:12px">Skipped this week. We’ll remind you Friday.</div><div class="flex flex-wrap gap-2" style="margin-top:10px"><button type="button" class="btn btn-line btn-sm" id="ptUnskip">Undo skip</button></div>';
+    else foot += '<div class="flex flex-wrap gap-2" style="margin-top:14px"><button type="button" class="btn btn-navy" id="ptApprove"' + (meals + eggs < 12 ? ' disabled' : '') + '>Approve and lock for Wednesday</button><button type="button" class="btn btn-line" id="ptSkip">Skip this week</button>' + (PAR.some(function (r) { return po.qty[r.k] !== r.sug; }) ? '<button type="button" class="btn btn-line btn-sm" id="ptReset" style="min-height:46px">Back to suggested</button>' : '') + '</div>' + (meals + eggs < 12 ? '<p class="err">Minimum is 12 meals or 1 case.</p>' : '');
+    $('#ptFoot').innerHTML = foot;
+    renderInvoices(); renderSpark();
+  }
+  $('#ptTable').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-pq]'); if (!b) return; var k = b.getAttribute('data-pq');
+    po.qty[k] = Math.max(0, po.qty[k] + (+b.getAttribute('data-d'))); savePo(); renderPortal();
+    var again = $('[data-pq="' + k + '"][data-d="' + b.getAttribute('data-d') + '"]'); if (again && !again.disabled) again.focus();
+  });
+  $('#ptFoot').addEventListener('click', function (e) {
+    if (e.target.closest('#ptApprove')) {
+      var items = parItems();
+      runCheckout(function (c) {
+        var r = weeklyRoute(c);
+        return { title: 'Standing order · Wednesday drop', items: items, subscription: { label: 'Standing weekly order', discountPct: 0 }, city: c, extraRows: r ? [{ label: 'Free partner drop (route fee credited)', amount: -r.fee }] : [], note: 'Approved in the partner portal · drafted by ' + AGENTS.par,
+          onPlaced: function (o) { po.status = 'locked'; po.orderNo = o.no; savePo(); renderPortal(); } };
+      }, 'Scarborough');
+    }
+    if (e.target.closest('#ptSkip')) { po.status = 'skipped'; savePo(); renderPortal(); JWC.toast('Skipped. We’ll remind you Friday.'); }
+    if (e.target.closest('#ptUnskip') || e.target.closest('#ptUnlock')) { po.status = 'draft'; savePo(); renderPortal(); }
+    if (e.target.closest('#ptReset')) { PAR.forEach(function (r) { po.qty[r.k] = r.sug; }); savePo(); renderPortal(); }
+  });
+  $('#ptFlyer').addEventListener('click', function () { JWC.toast('Member flyer ready (demo). The live portal downloads a print-ready PDF with BRIMLEY10 and your QR code.'); });
+  function renderInvoices() {
+    var rows = [['JW-INV-2214', 'Mar 10', 412.00, 'Mar 25', !po.paid['2214']], ['JW-INV-2196', 'Mar 3', 398.40, 'Mar 18', false], ['JW-INV-2181', 'Feb 24', 405.10, 'Mar 11', false]];
+    $('#ptInv').innerHTML = '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Invoice</th><th scope="col">Date</th><th scope="col" class="num">Amount</th><th scope="col">Due</th><th scope="col">Status</th></tr></thead><tbody>' +
+      rows.map(function (r) { return '<tr><td class="first" data-label="Invoice">' + r[0] + '</td><td data-label="Date">' + r[1] + '</td><td class="num" data-label="Amount">' + money(r[2]) + '</td><td data-label="Due">' + r[3] + '</td><td data-label="Status">' +
+        (r[4] ? '<span class="chip chip-brass">Open</span> <button type="button" class="btn btn-line btn-sm" data-pay="2214" style="margin-left:6px">Pay by card (demo)</button>' : '<span class="chip chip-ok">Paid' + (r[0] === 'JW-INV-2214' ? ' (demo)' : '') + '</span>') + '</td></tr>'; }).join('') + '</tbody></table></div>';
+  }
+  $('#ptInv').addEventListener('click', function (e) { var b = e.target.closest('[data-pay]'); if (!b) return; po.paid['2214'] = Date.now(); savePo(); renderInvoices(); JWC.toast('Paid with DEMO •••• 4242. Nothing was charged.'); renderTeam(); });
+  function renderSpark() {
+    var t = [-19.4, -19.8, -19.1, -20.2, -19.6, -19.3, -19.0], days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    var W0 = 300, H = 90, x = function (i) { return 24 + i * ((W0 - 34) / 6); }, y = function (v) { return 8 + (-16 - v) / 6 * (H - 24); };
+    var pts = t.map(function (v, i) { return x(i).toFixed(1) + ',' + y(v).toFixed(1); }).join(' ');
+    $('#ptSpark').innerHTML = '<svg viewBox="0 0 ' + W0 + ' ' + H + '" width="100%" role="img" aria-label="Freezer temperature this week, between -20.2 and -19.0 °C, always below the -18 °C limit">' +
+      '<line x1="24" x2="' + (W0 - 8) + '" y1="' + y(-18) + '" y2="' + y(-18) + '" stroke="#A63D2F" stroke-dasharray="4 4" stroke-width="1.5"/><text x="' + (W0 - 8) + '" y="' + (y(-18) - 4) + '" text-anchor="end" font-size="10" fill="#A63D2F">−18°C limit</text>' +
+      '<polyline points="' + pts + '" fill="none" stroke="#154D8E" stroke-width="2" stroke-linejoin="round"/>' +
+      t.map(function (v, i) { return '<circle cx="' + x(i) + '" cy="' + y(v) + '" r="4" fill="#154D8E" stroke="#fff" stroke-width="2"><title>' + days[i] + ': ' + v + '°C</title></circle><text x="' + x(i) + '" y="' + (H - 2) + '" text-anchor="middle" font-size="10" fill="#5E6878">' + days[i] + '</text>'; }).join('') + '</svg>';
+  }
+  function countdown() {
+    var el = $('#ptCount'); if (!el) return;
+    var n = new Date(), t = new Date(n); t.setHours(23, 59, 0, 0); t.setDate(t.getDate() + ((7 - n.getDay()) % 7)); if (t < n) t.setDate(t.getDate() + 7);
+    var ms = t - n, d = Math.floor(ms / 864e5), hh = Math.floor(ms % 864e5 / 36e5), mm = Math.floor(ms % 36e5 / 6e4);
+    el.textContent = (d ? d + 'd ' : '') + hh + 'h ' + mm + 'm left';
+  }
+  countdown(); setInterval(countdown, 30000);
+  setInterval(function () { var e = $('#ptTemp'); if (e && mode === 'portal') e.textContent = '−' + (18.8 + Math.random() * 0.6).toFixed(1) + '°C'; }, 6000);
+
+  /* ================= TEAM VIEW ================= */
+  var tm = S('team', null) || {};
+  if (!tm.apps) tm.apps = {}; if (!tm.drafts) tm.drafts = {}; if (!tm.paid) tm.paid = {};
+  function saveTm() { W('team', tm); }
+  function demoOrders() { return JWC.orders().filter(function (o) { return o.proto === 2; }); }
+  function expand(it) {
+    var out = {}, a = String(it.id).split(':'), t = a[0], q = it.qty;
+    function add(k, n) { out[k] = (out[k] || 0) + n; }
+    function addKey(k, n) { if (k === 'egg') add('egg', n); else if (k === 'oats') add('oats', n); else if (MEAL_KEYS.indexOf(k) > -1) add('meals', n); else add('other', n); }
+    if (t === 'cs' && CASES[a[1]]) CASES[a[1]].lines.forEach(function (l) { addKey(l[0], l[2] * q); });
+    else if (t === 'fz') add('meals', (+a[2] || 0) * q);
+    else if (t === 'pk') add('meals', (+a[3] || 1) * q);
+    else if (t === 'pt') add(prod(a[1]) && prod(a[1]).cat === 'protein' ? 'portions' : 'other', q);
+    else if (t === 'bf') addKey(a[1], q);
+    else if (t === 'bc') add({ cbCase: 'cb', marCase: 'cb', turkeyCase: 'turkey', burgers: 'burgers', salmonCase: 'salmon' }[a[1]] || 'other', q);
+    else add('other', q);
+    return out;
+  }
+  function demoProd() {
+    var tot = {};
+    demoOrders().forEach(function (o) { (o.items || []).forEach(function (it) { var e = expand(it); Object.keys(e).forEach(function (k) { tot[k] = (tot[k] || 0) + e[k]; }); }); });
+    return tot;
+  }
+  function routeKey(o) {
+    var r = (o.route || '') + ' ' + (o.day || '');
+    if (/Pick up/i.test(r)) return 'pickup'; if (/Express/i.test(r)) return 'express';
+    if (/Tuesday/.test(r)) return 'tue'; if (/Wednesday/.test(r)) return 'wed'; if (/Thursday/.test(r)) return 'thu'; if (/Friday/.test(r)) return 'fri'; return 'pickup';
+  }
+  /* Applicants are new businesses; none of them is already in the partner accounts below. */
+  var APPS = [
+    { id: 'a1', biz: 'Birchmount Strength Co.', type: 'Gym', city: 'Scarborough, GTA 2 Wed', est: '$350', note: 'Website and Google listing found. 4 km from Brimley. Has a freezer.', tier: 'pro' },
+    { id: 'a2', biz: 'Meadowvale Movement Clinic', type: 'Clinic', city: 'Mississauga, GTA 2 Wed', est: '$220', note: 'Asked about GLP-1 patients. Welcome note drafted with no health claims. Dietitian menu card attached.', tier: 'partner' },
+    { id: 'a3', biz: 'Concord Boxing Club', type: 'Fight gym', city: 'Vaughan, GTA 4 Fri', est: '$180', note: 'Wants 4 oz portions. Suggest Fight Camp 12-Pack.', tier: 'partner' },
+    { id: 'a4', biz: 'Coach Marco T.', type: 'Trainer', city: 'Burlington, GTA 3 Thu', est: '$160', note: 'Already a retail customer (14 orders). Counted at 0.80 incrementality.', tier: 'partner' },
+    { id: 'a5', biz: 'Riverdale Supplement Bar', type: 'Supplement shop', city: 'Toronto, GTA 2 Wed', est: '$420', note: 'Needs a freezer. Founding partner slot 7 of 10.', tier: 'pro' },
+    { id: 'a6', biz: 'Duffins Creek Rowing Academy', type: 'Team', city: 'Pickering, GTA 1 Tue', est: '$300 in season', note: 'Seasonal, Apr-Oct. Invoice to the club.', tier: 'partner' }
+  ];
+  function allApps() {
+    var list = APPS.slice(), a = S('app', null);
+    if (a) {
+      var r = weeklyRoute(a.city);
+      list.unshift({ id: 'demo', demo: true, biz: a.biz, type: ({ gym: 'Gym', trainer: 'Trainer', clinic: 'Clinic', shop: 'Supplement shop', fight: 'Fight gym', team: 'Team' })[a.type] || 'Gym', city: a.city + ', ' + (r ? routeShort(r).replace(' · ', ' ').replace('Wednesday', 'Wed').replace('Tuesday', 'Tue').replace('Thursday', 'Thu').replace('Friday', 'Fri') : 'pickup'),
+        est: JWC.money(a.weekly, 0), note: 'Applied from this page just now. ' + (ACCOUNTS.some(function (x) { return x[0].toLowerCase() === a.biz.trim().toLowerCase(); }) ? 'Same name as an existing partner account: confirm it is a second location before approving. ' : 'Business listing still to verify. ') + (a.freezer === 'yes' ? 'Has a freezer.' : 'Needs a freezer.') + ' Founding partner slot 8 of 10. Starter order suggested.', tier: a.tier });
+    }
+    return list;
+  }
+  function nextTier(t) { return t === 'partner' ? 'pro' : t === 'pro' ? 'elite' : 'partner'; }
+  function renderApps() {
+    var list = allApps(), pending = list.filter(function (a) { var s = tm.apps[a.id]; return !s || !s.status; });
+    var rows = pending.map(function (a) {
+      var s = tm.apps[a.id] || {}, t = s.tier || a.tier;
+      return '<tr><td class="first" data-label="Business">' + esc(a.biz) + (a.demo ? ' <span class="chip chip-ok">New · from this demo</span>' : '') + '</td><td data-label="Type">' + esc(a.type) + '</td><td data-label="City and route">' + esc(a.city) + '</td><td class="num" data-label="Est. weekly">' + esc(a.est) + '</td>' +
+        '<td class="full" data-label="AI note">' + esc(a.note) + '</td><td data-label="Suggested tier">' + tcChip(t) + (s.tier && s.tier !== a.tier ? '<br><small class="muted">AI said ' + esc(TIERS[a.tier].name) + '</small>' : '') + '</td>' +
+        '<td class="full" data-label="Actions"><div class="app-acts"><button type="button" class="btn btn-ok btn-sm" data-app="approve" data-id="' + a.id + '">Approve as ' + esc(TIERS[t].name) + '</button><button type="button" class="btn btn-line btn-sm" data-app="tier" data-id="' + a.id + '">Change tier</button><button type="button" class="btn btn-warn btn-sm" data-app="decline" data-id="' + a.id + '">Decline</button></div></td></tr>';
+    }).join('');
+    $('#tApps').innerHTML = pending.length ? '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Business</th><th scope="col">Type</th><th scope="col">City and route</th><th scope="col" class="num">Est. weekly</th><th scope="col">AI note</th><th scope="col">Suggested tier</th><th scope="col">Actions</th></tr></thead><tbody>' + rows + '</tbody></table></div>'
+      : '<div class="empty">Queue clear. New applications land here with an AI pre-check.</div>';
+    var done = list.filter(function (a) { return tm.apps[a.id] && tm.apps[a.id].status; });
+    $('#tAppsDone').innerHTML = done.length ? '<h3 class="lab">Decided today</h3><ul class="log" style="list-style:none;margin:0;padding:0">' + done.map(function (a) {
+      var s = tm.apps[a.id]; return '<li><b style="color:var(--ink)">' + esc(a.biz) + '</b>' + (s.status === 'approved' ? tcChip(s.tier || a.tier) + '<span class="muted">approved ' + esc(s.at) + ' · welcome email and price list sent (demo)</span>' : '<span class="chip chip-muted">Declined</span><span class="muted">' + esc(s.at) + ' · polite note sent (demo)</span>') + ' <button type="button" class="pbtn" data-app="undo" data-id="' + a.id + '" style="min-height:40px">Undo</button></li>';
+    }).join('') + '</ul>' : '';
+  }
+  $('#t2').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-app]'); if (!b) return;
+    var id = b.getAttribute('data-id'), act = b.getAttribute('data-app'), a = allApps().filter(function (x) { return x.id === id; })[0]; if (!a) return;
+    var s = tm.apps[id] || (tm.apps[id] = {});
+    if (act === 'approve') { s.status = 'approved'; s.at = nowTime(); s.tier = s.tier || a.tier; JWC.toast('Approved. Welcome email and price list sent (demo).'); }
+    if (act === 'tier') { s.tier = nextTier(s.tier || a.tier); JWC.toast(a.biz + ': tier set to ' + TIERS[s.tier].name + '. Approve to send.'); }
+    if (act === 'decline') { s.status = 'declined'; s.at = nowTime(); JWC.toast('Declined. A polite note is drafted for ' + a.biz + ' (demo).'); }
+    if (act === 'undo') { delete s.status; }
+    saveTm(); renderApps(); renderKpis();
+  });
+
+  var DRAFTS = [
+    { id: 'd1', agent: 'scout', title: 'Outreach email to Birchmount Strength Co.', meta: 'Subject: Cooked meals for your front desk, made 4 km away',
+      body: 'Hi Sam, this is the partner team at J&W Foods on Brimley Rd. We already run a Wednesday route past your gym. We’re opening partner accounts for gyms: case pricing, a free tasting tray on your route day, and a freezer on loan once you’re rolling. Could we drop off a tray next Wednesday?\n\nJ&W Foods partner team, (416) 298-1350\nReply STOP to opt out.',
+      check: 'CASL: business email published on their website, message relates to their business, sender ID and unsubscribe included ✓', ok: 'Approved. Email queued from the account lead (demo).' },
+    { id: 'd2', agent: 'par', title: 'Par change for Brimley Barbell Club', meta: 'Partner approves by Sunday',
+      body: 'Raise Brimley Barbell Club’s Jerk Chicken par from 10 to 12. Sold out Thursday two weeks running.', ok: 'Par updated to 12. It shows in Friday’s suggested order (demo).' },
+    { id: 'd3', agent: 'ar', title: 'Friendly reminder to Harbour & Hill Nutrition', meta: 'Invoice JW-INV-2207 · $486.20 · 6 days overdue',
+      body: 'Hi there, a friendly reminder that invoice JW-INV-2207 for $486.20 was due on March 9. If it’s already on its way, thank you. If anything looks off, call our partner team at (416) 298-1350 and we’ll sort it out.', ok: 'Reminder sent (demo).' },
+    { id: 'd4', agent: 'label', title: 'Label check: Lakeview Movement Clinic', meta: 'Co-branded label · needs sign-off',
+      body: 'Removed “great for GLP-1 patients” (health claim).\nKept: “4 oz turkey · rice · spinach. Keep frozen.”', check: 'Plant details, ingredients and allergens fields kept ✓', ok: 'Label approved for print (demo).' },
+    { id: 'd5', agent: 'route', title: 'Wednesday GTA 2 load plan', meta: 'Driver sheet · dispatcher approves',
+      body: 'Wednesday GTA 2 has 7 partner stops. Load partner cases first. Adds about 1.4 h; the route stays under 9 h.', ok: 'Load plan sent to the driver sheet (demo).' }
+  ];
+  var editing = null;
+  function renderDrafts() {
+    var open = DRAFTS.filter(function (d) { var s = tm.drafts[d.id]; return !s || !s.status; });
+    $('#tDrafts').innerHTML = open.length ? open.map(function (d) {
+      var s = tm.drafts[d.id] || {}, body = s.body || d.body, ed = editing === d.id;
+      return '<article class="ccard draft" data-draft="' + d.id + '"><div class="flex flex-wrap items-center gap-2"><span class="ai"><i aria-hidden="true">✦</i>Drafted by ' + esc(AGENTS[d.agent]) + ' (AI)</span>' + (s.body ? '<span class="chip chip-navy">Edited</span>' : '') + '</div>' +
+        '<h3>' + esc(d.title) + '</h3><p class="small muted" style="margin:0">' + esc(d.meta) + '</p>' +
+        (ed ? '<label class="jwc-sr" for="ed-' + d.id + '">Edit draft: ' + esc(d.title) + '</label><textarea id="ed-' + d.id + '">' + esc(body) + '</textarea>' : '<p class="body">' + esc(body) + '</p>') +
+        (d.check ? '<p class="check">' + esc(d.check) + '</p>' : '') +
+        '<div class="acts">' + (ed ? '<button type="button" class="btn btn-navy btn-sm" data-dr="save">Save edit</button><button type="button" class="btn btn-line btn-sm" data-dr="cancel">Cancel</button>'
+          : '<button type="button" class="btn btn-ok btn-sm" data-dr="approve">Approve</button><button type="button" class="btn btn-line btn-sm" data-dr="edit">Edit</button><button type="button" class="btn btn-warn btn-sm" data-dr="reject">Reject</button>') + '</div></article>';
+    }).join('') : '<div class="empty lg:col-span-2">All caught up. New drafts appear here every morning.</div>';
+    var done = DRAFTS.filter(function (d) { return tm.drafts[d.id] && tm.drafts[d.id].status; });
+    $('#tLog').innerHTML = done.length ? done.map(function (d) {
+      var s = tm.drafts[d.id];
+      return '<li><span class="muted">' + esc(s.at) + '</span><b style="color:var(--ink)">' + esc(d.title) + '</b><span class="chip ' + (s.status === 'approved' ? 'chip-ok">' + (s.body ? 'Edited and approved' : 'Approved') : 'chip-muted">Rejected') + '</span><span class="small muted">' + esc(AGENTS[d.agent]) + '</span> <button type="button" class="pbtn" data-undo="' + d.id + '" style="min-height:40px">Undo</button></li>';
+    }).join('') : '<li class="muted">Nothing decided yet today. Approve or reject a draft above and it lands here with the time.</li>';
+  }
+  $('#t3').addEventListener('click', function (e) {
+    var u = e.target.closest('[data-undo]');
+    if (u) { var su = tm.drafts[u.getAttribute('data-undo')]; if (su) delete su.status; saveTm(); renderDrafts(); renderReceivables(); return; }
+    var b = e.target.closest('[data-dr]'); if (!b) return;
+    var card = b.closest('[data-draft]'), id = card.getAttribute('data-draft'), d = DRAFTS.filter(function (x) { return x.id === id; })[0], s = tm.drafts[id] || (tm.drafts[id] = {}), act = b.getAttribute('data-dr');
+    if (act === 'approve') { s.status = 'approved'; s.at = nowTime(); JWC.toast(d.ok); }
+    if (act === 'reject') { s.status = 'rejected'; s.at = nowTime(); JWC.toast('Rejected. ' + AGENTS[d.agent] + ' will not send it.'); }
+    if (act === 'edit') { editing = id; renderDrafts(); var ta = $('#ed-' + id); if (ta) ta.focus(); return; }
+    if (act === 'cancel') { editing = null; renderDrafts(); return; }
+    if (act === 'save') { var v = $('#ed-' + id).value.trim(); if (v && v !== d.body) s.body = v; else delete s.body; editing = null; JWC.toast('Edit saved. Approve when ready.'); }
+    saveTm(); renderDrafts(); renderReceivables();
+  });
+
+  var ACCOUNTS = [
+    ['Brimley Barbell Club', 'Gym', 'pro', 'GTA 2 Wed', 412, 'Mar 10', 'JW-F07 −19°C', 9, ['ok', 'Healthy']],
+    ['Agincourt Strength Lab', 'Gym', 'elite', 'Pickup, Brimley', 640, 'Mar 12', 'JW-F03 −20°C', 14, ['ok', 'Healthy']],
+    ['Harbour & Hill Nutrition', 'Shop', 'pro', 'GTA 2 Wed', 356, 'Mar 10', 'JW-F05 −18°C', 6, ['brass', 'Watch: invoice overdue']],
+    ['Lakeview Movement Clinic', 'Clinic', 'partner', 'GTA 2 Wed', 228, 'Mar 10', 'Own', 4, ['ok', 'Healthy']],
+    ['Coach Dani R.', 'Trainer', 'partner', 'GTA 3 Thu', 164, 'Mar 11', 'None', 11, ['ok', 'Healthy']],
+    ['Northline Boxing Club', 'Fight gym', 'partner', 'GTA 4 Fri', 186, 'Feb 26', 'None', 2, ['brass', 'Watch: skipped last week, check-in drafted']],
+    ['Unionville Metabolic Clinic', 'Clinic', 'partner', 'GTA 4 Fri', 198, 'Mar 12', 'Own', 5, ['alert', 'At risk: orders down 40% in 3 weeks, suggest Clinic 12-Pack']],
+    ['Bayfront Rowing Academy', 'Team', 'partner', 'GTA 1 Tue', '310 in season', 'Mar 9', 'None', 3, ['navy', 'Seasonal']]
+  ];
+  function renderAccounts() {
+    $('#tAccounts').innerHTML = '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Partner</th><th scope="col">Type</th><th scope="col">Tier</th><th scope="col">Route</th><th scope="col" class="num">Avg weekly</th><th scope="col">Last order</th><th scope="col">Freezer</th><th scope="col" class="num">Member orders (qtr)</th><th scope="col">Health</th></tr></thead><tbody>' +
+      ACCOUNTS.map(function (a) {
+        var paidHH = a[0] === 'Harbour & Hill Nutrition' && tm.paid['2207'];
+        var hl = paidHH ? ['ok', 'Healthy: invoice paid today'] : a[8];
+        return '<tr><td class="first" data-label="Partner">' + esc(a[0]) + '</td><td data-label="Type">' + esc(a[1]) + '</td><td data-label="Tier">' + tcChip(a[2]) + '</td><td data-label="Route">' + esc(a[3]) + '</td><td class="num" data-label="Avg weekly">' + (typeof a[4] === 'number' ? JWC.money(a[4], 0) : '$' + esc(a[4])) + '</td><td data-label="Last order">' + esc(a[5]) + '</td><td data-label="Freezer">' + esc(a[6]) + '</td><td class="num" data-label="Member orders">' + a[7] + '</td><td class="full" data-label="Health"><span class="chip chip-' + hl[0] + '" style="white-space:normal">' + esc(hl[1]) + '</span></td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+
+  var PROD = [
+    { k: 'meals', label: 'Pre-set meals', base: 180 }, { k: 'portions', label: 'Cooked proteins by the portion', base: 120, note: 'about 45 lb cooked' },
+    { k: 'egg', label: 'Egg White Bites 2-packs', base: 72 }, { k: 'oats', label: 'Steel Cut Oats', base: 24 },
+    { k: 'cb', label: 'Chicken breast 4 kg cases', base: 8 }, { k: 'turkey', label: 'Ontario ground turkey cases', base: 3 },
+    { k: 'burgers', label: 'Chicken burger 25-packs', base: 2 }, { k: 'salmon', label: 'Atlantic salmon 10 lb case', base: 1 }, { k: 'other', label: 'Other items', base: 0 }
+  ];
+  var ROUTES_T = [
+    { k: 'pickup', label: 'Pickup', stops: 1, amt: 640 }, { k: 'tue', label: 'Tue GTA 1', stops: 2, amt: 520 }, { k: 'wed', label: 'Wed GTA 2', stops: 7, amt: 1600 },
+    { k: 'thu', label: 'Thu GTA 3', stops: 2, amt: 380 }, { k: 'fri', label: 'Fri GTA 4', stops: 4, amt: 700 }, { k: 'express', label: 'Express', stops: 0, amt: 0 }
+  ];
+  function renderProduction() {
+    var d = demoProd();
+    $('#tProd').innerHTML = '<div class="jwc-scroll-x"><table class="tt"><tbody>' + PROD.filter(function (p) { return p.base || d[p.k]; }).map(function (p) {
+      return '<tr><td>' + esc(p.label) + (p.note ? ' <span class="small muted">(' + p.note + ')</span>' : '') + '</td><td class="num"><b style="color:var(--ink)">' + (p.base + (d[p.k] || 0)) + '</b>' + (d[p.k] ? ' <span class="plus">+' + d[p.k] + ' from this demo</span>' : '') + '</td></tr>';
+    }).join('') + '</tbody></table></div>';
+    var cooked = (d.meals || 0) + (d.portions || 0) + (d.egg || 0) + (d.oats || 0), load = Math.min(100, Math.round(78 + cooked / 24));
+    var mt = $('#tMeter'); mt.setAttribute('aria-valuenow', load); mt.classList.toggle('hot', load >= 90); $('i', mt).style.width = load + '%';
+    $('#tLoadTxt').textContent = 'Cook line ' + load + '% of planned capacity (est.)' + (load >= 90 ? ' · over the alert line, flagged for Bill' : '');
+    var add = {}; demoOrders().forEach(function (o) { var k = routeKey(o); add[k] = add[k] || { s: 0, a: 0 }; add[k].s += 1; add[k].a += o.total || 0; });
+    var rows = ROUTES_T.map(function (r) { var x = add[r.k] || { s: 0, a: 0 }; return { label: r.label, stops: r.stops + x.s, amt: r.amt + x.a, plus: x.s }; }).filter(function (r) { return r.stops; });
+    var max = Math.max.apply(null, rows.map(function (r) { return r.amt; }));
+    $('#tRoutes').innerHTML = rows.map(function (r) {
+      return '<div class="hbar"><span style="color:var(--ink);font-weight:600">' + esc(r.label) + '</span><div class="tr" title="' + esc(r.label + ': ' + plural(r.stops, 'stop') + ', ' + JWC.money(r.amt, 0)) + '"><i style="width:' + Math.max(4, r.amt / max * 100) + '%"></i><em>' + plural(r.stops, 'stop') + ' · ' + JWC.money(Math.round(r.amt), 0) + (r.plus ? ' · +' + r.plus + ' demo' : '') + '</em></div></div>';
+    }).join('');
+  }
+
+  function renderReceivables() {
+    var remind = tm.drafts.d3 && tm.drafts.d3.status === 'approved' ? tm.drafts.d3.at : null, p2207 = tm.paid['2207'], p2214 = po.paid['2214'];
+    var cur = 2806 - (p2214 ? 412 : 0), od = p2207 ? 0 : 486.20;
+    $('#tAging').innerHTML = [['Current', money(cur), ''], ['1-15 days', money(od), od ? 'alert' : ''], ['16-30 days', '$0.00', ''], ['30+ days', '$0.00', ''], ['DSO', (p2207 ? 15 : 17) + ' days', ''], ['Terms', 'Net-15', '']].map(function (k) {
+      return '<div class="kpi ' + k[2] + '"><small>' + k[0] + '</small><b>' + k[1] + '</b></div>';
+    }).join('');
+    var rows = [
+      ['JW-INV-2207', 'Harbour & Hill Nutrition', 486.20, 'Mar 9', p2207 ? '<span class="chip chip-ok">Paid today (demo)</span>' : '<span class="chip chip-alert">6 days overdue</span> ' + (remind ? '<span class="chip chip-ok">Reminder sent ' + esc(remind) + '</span>' : '<span class="chip chip-slate">Reminder drafted</span>'), p2207 ? '' : '<div class="acts">' + (remind ? '' : '<a class="btn btn-line btn-sm" href="#t3">Review draft</a>') + '<button type="button" class="btn btn-line btn-sm" data-paid="2207">Record payment</button></div>'],
+      ['JW-INV-2214', 'Brimley Barbell Club', 412.00, 'Mar 25', p2214 ? '<span class="chip chip-ok">Paid by card in the portal (demo)</span>' : '<span class="chip chip-navy">Current</span>', ''],
+      ['JW-INV-2211', 'Agincourt Strength Lab', 640.00, 'Mar 12', '<span class="chip chip-ok">Paid Mar 12</span>', '']
+    ];
+    $('#tInv').innerHTML = '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Invoice</th><th scope="col">Partner</th><th scope="col" class="num">Amount</th><th scope="col">Due</th><th scope="col">Status</th><th scope="col">Action</th></tr></thead><tbody>' +
+      rows.map(function (r) { return '<tr><td class="first" data-label="Invoice">' + r[0] + '</td><td data-label="Partner">' + esc(r[1]) + '</td><td class="num" data-label="Amount">' + money(r[2]) + '</td><td data-label="Due">' + r[3] + '</td><td class="full" data-label="Status">' + r[4] + '</td><td class="full" data-label="Action">' + (r[5] || '<span class="muted">-</span>') + '</td></tr>'; }).join('') + '</tbody></table></div>';
+  }
+  $('#t6').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-paid]'); if (b) { tm.paid[b.getAttribute('data-paid')] = nowTime(); saveTm(); JWC.toast('Payment recorded for JW-INV-2207 (demo).'); renderReceivables(); renderKpis(); renderAccounts(); }
+    var a = e.target.closest('a[href="#t3"]'); if (a) { e.preventDefault(); e.stopPropagation(); $('#t3').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }
+  }, true);
+
+  function renderKpis() {
+    var orders = demoOrders(), add = orders.reduce(function (a, o) { return a + (o.total || 0); }, 0), approved = Object.keys(tm.apps).filter(function (k) { return tm.apps[k].status === 'approved'; }).length;
+    var standing = orders.filter(function (o) { return o.subscription; }).length, od = tm.paid['2207'] ? 0 : 486.20;
+    var K = [
+      ['Active partners', String(16 + approved), approved ? 'plan 16 · +' + approved + ' approved today' : 'plan 16', ''],
+      ['Partner orders this week', JWC.money(Math.round(3840 + add), 0), add ? '+' + money(add) + ' from this demo' : 'sample', ''],
+      ['Average per account', '$240', 'sample · new accounts start near $180', ''],
+      ['Standing orders', Math.min(12 + standing, 16 + approved) + ' of ' + (16 + approved), standing ? '+' + standing + ' from this demo' : '75% on standing', ''],
+      ['Freezers on loan', '5', 'temperature sensors all in range', ''],
+      ['Overdue', money(od), od ? '1 invoice' : 'none', od ? 'alert' : '']
+    ];
+    $('#tKpis').innerHTML = K.map(function (k) { return '<div class="kpi ' + k[3] + '"><small>' + k[0] + '</small><b>' + k[1] + '</b><span>' + esc(k[2]) + '</span></div>'; }).join('');
+    var M = ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'], V = [4, 8, 12, 16, 19, 22, 24, 26, 28, 31, 34];
+    $('#tBars').innerHTML = V.map(function (v, i) {
+      var here = i === 3;
+      return '<div class="bcol' + (here ? ' here' : '') + '" role="listitem" tabindex="0" aria-label="' + M[i] + ': ' + v + ' active partners (plan)' + (here ? ', you are here' : '') + '" data-tip="' + M[i] + ' · ' + v + ' partners">' +
+        (here ? '<span class="tag">You are here (sample)</span>' : '') + (here || i === V.length - 1 ? '<span class="bv">' + v + '</span>' : '') + '<span class="bar" style="height:' + (v / 34 * 100 * 0.82) + '%"></span></div>';
+    }).join('');
+    $('#tBarLabels').innerHTML = M.map(function (m) { return '<span>' + m + '</span>'; }).join('');
+  }
+  function renderLive() {
+    var orders = demoOrders();
+    $('#tLiveCount').textContent = plural(orders.length, 'order');
+    $('#tLive').innerHTML = orders.length ? '<div class="jwc-scroll-x"><table class="tt stk"><thead><tr><th scope="col">Order</th><th scope="col" class="num">Items</th><th scope="col" class="num">Total</th><th scope="col">Route and day</th><th scope="col">Type</th><th scope="col">Note</th></tr></thead><tbody>' +
+      orders.map(function (o) {
+        var n = (o.items || []).reduce(function (a, i) { return a + i.qty; }, 0), when = new Date(o.when);
+        return '<tr><td class="first" data-label="Order">' + esc(o.no) + '<br><small class="muted">' + esc(when.toLocaleString('en-CA', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })) + '</small></td><td class="num" data-label="Items">' + n + '</td><td class="num" data-label="Total"><b>' + money(o.total) + '</b></td>' +
+          '<td data-label="Route and day">' + esc(o.route || 'Pickup') + (o.city && o.city !== 'Pickup' ? '<br><small class="muted">' + esc(o.city) + '</small>' : '') + '</td><td data-label="Type">' + (o.subscription ? '<span class="chip chip-navy">Standing weekly</span>' : '<span class="chip chip-muted">One-time</span>') + '</td><td class="full" data-label="Note">' + esc(o.note || '') + '</td></tr>';
+      }).join('') + '</tbody></table></div>' : '<div class="empty">Place an order in Customer view and it lands here.</div>';
+  }
+  function renderTeam() { renderKpis(); renderLive(); renderApps(); renderDrafts(); renderAccounts(); renderProduction(); renderReceivables(); }
+
+  document.addEventListener('jwc:order', function () { renderTeam(); });
+  document.addEventListener('jwc:view', function (e) { measure(); if (e.detail === 'team') renderTeam(); });
+
+  /* catalogue in view: hide the floating cart button and lift the chat button above the order bar */
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) { document.body.classList.toggle('cat-in', en[0].isIntersecting); }, { rootMargin: '0px 0px -40% 0px' }).observe($('#catalogue'));
+  }
+
+  /* ---------------- boot ---------------- */
+  renderSegments(); initFreezer(); renderPricing(); renderTabs(); initLabels(); initApply(); renderSlots();
+  lastTier = tierFor(JWC.cart.items()); quiet = true; onCart(); quiet = false;
+  setMode(mode, false);
+  renderTeam();
+})();
+</script>
+</body>
+</html>

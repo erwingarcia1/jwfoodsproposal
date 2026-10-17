@@ -1,0 +1,511 @@
+################# links | 14 findings
+
+[1] HIGH | million.html; research.html (also research.html Full reports) | million.html: idea-6 'AI Coach Macro Plans' card, 'Seen at:' link 'Fresh Fitness Food (City Matters)'. research.html: 'Everyone we checked' table, row 'Fresh Fitness Food'. Full reports: doc-ai, doc-g
+ISSUE: https://citymatters.london/counting-macros-fresh-fitness-food-math now redirects to www.citymatters.london, which serves a gambling spam site. Its page title is 'Page not found - Casino Sites UK' and the page text reads 'Casino Sites UK Non GamStop Casinos'. A client-facing proposal is linking to a casino spam domain.
+FIX: In assets/site-data.js, change the url at lines 1389, 2629 and 3764 to "https://www.cbinsights.com/company/fresh-fitness-food/financials". That URL returns 200 and research.html already cites it. At line 2629, also change the label from "Fresh Fitness Food (City Matters)" to "Fresh Fitness Food (CB Insights)". In assets/research-docs.js, replace all 4 occurrences of the citymatters URL with the same CB Insights URL, or remove the link.
+
+[2] MEDIUM | prototypes/01–07 (assets/concept.js); reached from index.html, roi.html, agents.html | concept.js, JWC.init lines 435–436 (view chosen from localStorage) and JWC.setView line 357 (JWC.store.set('view:' + state.n, v)).
+ISSUE: Following any 'Team view' or 'JW team view' link (?view=team) saves the team view in localStorage. After that, every plain link to the same prototype opens the back-office team view instead of the customer page. This affects 'Open the flagship →' and 'Open prototype →' on index.html, the dock cards, and the links on proposal.html, roi.html, million.html and research.html. Adding ?view=customer is ignored, so a link cannot force the customer view.
+FIX: Make the URL decide the view instead of localStorage.
+1. Replace lines 435–436 with: var v = /[?&]view=team/.test(location.search) ? 'team' : 'customer';
+2. In JWC.setView, replace JWC.store.set('view:' + state.n, v); with: try { var u = new URL(location.href); if (v === 'team') u.searchParams.set('view', 'team'); else u.searchParams.delete('view'); history.replaceState(null, '', u); } catch (e) {}
+A reload then keeps the current view, but plain links always open the customer page.
+
+[3] MEDIUM | research.html | Full reports, panel 'competitor-06.md' (details#doc-dive-06, the Calo deep dive): the inline links 'jw-facts.md' and 'jw-catalog.json'.
+ISSUE: The report contains [jw-facts.md](./jw-facts.md) and [jw-catalog.json](./jw-catalog.json), so they render as relative links. On the site they resolve to /jw-facts.md and /jw-catalog.json, and both return 404: the real files are in /research, which is not deployed.
+FIX: 1. In assets/research-docs.js (doc key "dive-06"), change [jw-facts.md](./jw-facts.md) to [jw-facts.md](#doc-jw-facts) and change [jw-catalog.json](./jw-catalog.json) to plain text jw-catalog.json.
+2. So that an in-page #doc-* link opens its panel, replace research.html line 159 with: function openHash(){ if(!location.hash) return; var t=document.getElementById(decodeURIComponent(location.hash.slice(1))); if(t){ if(t.tagName==='DETAILS') t.open=true; setTimeout(function(){ t.scrollIntoView(); },60); } } openHash(); window.addEventListener('hashchange', openHash);
+3. As a safeguard, after the DOMPurify line in the toggle handler add: box.querySelectorAll('a[href]:not([href^="http"]):not([href^="#"]):not([href^="mailto:"])').forEach(function(a){ a.replaceWith(document.createTextNode(a.textContent)); });
+
+[4] MEDIUM | prototypes/01–07 (assets/concept.js) | Bottom dock 'Seven prototypes for J&W Foods', link row (concept.js line 428). Also the agents tab of the 'Why this makes money' drawer (line 336).
+ISSUE: - The dock link 'Business case & AI agents' goes to ../roi.html, but the AI agents are on their own top-nav page, agents.html.
+- No prototype links to agents.html anywhere, so the agents page cannot be reached from a prototype.
+- 'The $1M question' does not match the top-nav label 'The $1M plan'.
+- The drawer's 'AI agents' tab names agents but does not link to them.
+FIX: 1. Replace the dock-links string with: '<div class="jwc-dock-links"><a href="' + esc(hub) + '">All prototypes</a><a href="../agents.html#play-' + String(state.n).padStart(2,'0') + '">AI agents</a><a href="../roi.html#p' + String(state.n).padStart(2,'0') + '">Business case</a><a href="../million.html">The $1M plan</a><a href="../research.html">Research</a><a href="../proposal.html">Full proposal</a></div>'
+2. At the end of the agents tabpanel (line 336), add: '<p><a href="../agents.html#play-' + String(p.n).padStart(2,'0') + '">All agents for this play →</a></p>'
+
+[5] MEDIUM | agents.html; research.html | agents.html roster: the 'Macro Butler' evidence link ('Octane AI quiz case (Wicked Edge)…') and the 'Carcass Balancer' evidence link ('Völur cut planning at JBS…'). research.html 'AI evidence' cards '
+ISSUE: Two source links behind the AI-agent evidence are dead:
+- https://octaneai.com/customers/wicked-edge returns 404 ('Page Not Found - Octane AI').
+- https://www.volur.ai/solutions returns HTTP 404.
+FIX: In assets/site-data.js:
+- Lines 1743 and 4090: url → "https://octaneai.com/case-studies/wicked-edge". Verified 200; the page shows the $727 and 3.6% figures.
+- Lines 2064 and 4102: url → "https://www.volur.ai/". Verified 200; the homepage shows '2-6 hours' and '15-30 seconds'.
+Make the same replacements in assets/research-docs.js (doc-ai).
+
+[6] MEDIUM | proposal.html | Left 'Contents' nav: line 48, <nav class="toc no-print hidden lg:block">, which is filled at line 164.
+ISSUE: Below 1024px (every phone and tablet) the proposal has no contents navigation at all. Its 10 sections are reachable only by scrolling; '7. Our fee' sits about 23,150px down even at desktop width, and further on a phone.
+FIX: 1. Inside <main>, right after <p class="text-muted" id="sub"></p>, add: <details class="lg:hidden no-print mt-6 border border-line rounded-xl px-4 py-3"><summary class="font-semibold text-[14px]">Contents</summary><ol id="toc-m" class="mt-3 space-y-1.5 text-[14px]"></ol></details>
+2. After line 164, add: document.getElementById('toc-m').innerHTML = document.getElementById('toc').innerHTML;
+
+[7] LOW | research.html | 'AI evidence' card 'The Foodery (Routific)', link labelled 'v2.iotone.com' (site-data.js line 4060). The same URL is in Full reports > doc-ai.
+ISSUE: https://v2.iotone.com/case-study/the-foodery-saves-28-on-delivery-costs-with-routific/c17543 is gone (410). It redirects to asiagrowthpartners.com, which says 'Content no longer available'. The '28% lower delivery costs' claim has no working source.
+FIX: In site-data.js line 4060, remove the "url" field so link() renders nothing, and change the result text to '28% lower delivery costs than manual routing (vendor figure; source page retired)'. Alternatively, replace it with a live Routific source. Do the same in research-docs.js (doc-ai).
+
+[8] LOW | prototypes/02-pro-partner-portal.html; prototypes/05-corporate-gift-studio.html | 02: header nav 'Partner page sections' (.pp-nav, CSS lines 113 and 122). 05: header nav 'On this page' (line 251, class 'hidden lg:flex').
+ISSUE: These two prototypes have no section navigation on smaller screens:
+- 02 shows How it works / Pricing / Catalogue / Apply only at 1100px and wider, and has no menu button. Phones, tablets and 1024px laptops get no section nav.
+- 05 hides Levels / Delivery / Certificates / FAQ below 1024px; its phone bottom bar offers only Call / Start an order / Pricing / Ask.
+The other prototypes (01, 03, 04, 06, 07) all have a mobile menu or a visible section strip.
+FIX: 02: either change line 113 to .pp-nav{display:flex;gap:2px;margin-left:10px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0} and delete @media(min-width:1100px){.pp-nav{display:flex}}, or add a second <nav aria-label="Partner page sections, mobile"> strip under the header for widths below 1100px, like 04's 'Page sections (mobile)'.
+05: after line 257, add <nav class="lg:hidden flex gap-1 overflow-x-auto px-4 pb-2 text-[14px]" aria-label="On this page, mobile"> containing the same five links.
+
+[9] LOW | prototypes/05-corporate-gift-studio.html (also the brand links in 03 and 04) | 05: 'See the four levels' (#levels) at phone width; CSS line 22: main [id], section[id] { scroll-margin-top: 84px; }. Brand 'back to top' links (href="#top") in 03, 04 and 05.
+ISSUE: - 05: on phones the sticky concept bar wraps to 112px tall, but scroll-margin is fixed at 84px. Tapping 'See the four levels' lands the 'Pick a level' heading under the bar; a screenshot confirms the heading is not visible.
+- 03, 04, 05: the brand links point at <main id="top">, not the top of the page. On phones they stop 177–253px down, with the hero heading under the bar.
+FIX: 1. In concept.js, after line 400, add: function setBarVar(){ document.documentElement.style.setProperty('--jwc-barh', bar.offsetHeight + 'px'); } setBarVar(); window.addEventListener('resize', setBarVar);
+2. In 05 line 22, use: scroll-margin-top: calc(var(--jwc-barh, 44px) + 40px);
+3. Change the brand links in 03, 04 and 05 from href="#top" to href="#", which scrolls to the real top of the page.
+
+[10] LOW | prototypes/01–07 | Start of <body> and the first tab stops (concept.js line 400: document.body.insertBefore(bar, document.body.firstChild)).
+ISSUE: - 02, 03, 04 and 05 have no 'Skip to content' link and no id="main".
+- On 01, 06 and 07, JWC.init puts the concept bar in front of the skip link. The skip link becomes the 6th tab stop, after Customer, JW team, Why this makes money, Reset demo and All prototypes.
+- In team view (?view=team) on 01, 06 and 07, the skip link points to <main id="main">, which is hidden, so it goes nowhere.
+FIX: 1. In concept.js line 400, use: var skip = document.querySelector('body > a[href="#main"]'); document.body.insertBefore(bar, skip ? skip.nextSibling : document.body.firstChild);
+2. In 02–05, add <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a> as the first child of <body>, and give the customer <main> id="main" (change any #top links to href="#").
+3. In JWC.setView, point the skip link at the first visible [data-team] element when v === 'team'.
+
+[11] LOW | research.html | Full reports: play-04.md (priya@northline.example twice, sam@gmail.com) and play-07.md (dana@example.com).
+ISSUE: marked automatically turns these sample addresses into clickable mailto: links. sam@gmail.com is on a real mail domain, so a click opens an email to a stranger.
+FIX: In research.html's toggle handler, after the DOMPurify line, add: box.querySelectorAll('a[href^="mailto:"]').forEach(function(a){ a.replaceWith(document.createTextNode(a.textContent)); });
+Alternatively, wrap the sample addresses in backticks in research-docs.js.
+
+[12] LOW | prototypes/05-corporate-gift-studio.html | tel links at lines 258 (header), 650 (contact list), 679 (footer) and 685 (mobile 'Call').
+ISSUE: These use href="tel:4162981350" with no country code. Prototypes 01, 04 and 07 use tel:+14162981350. Without +1 the number can misdial from softphones or from phones set outside North America.
+FIX: Replace all 4 href="tel:4162981350" with href="tel:+14162981350".
+
+[13] LOW | prototypes/02-pro-partner-portal.html, 03-butcher-club.html, 05-corporate-gift-studio.html | <head>
+ISSUE: These three pages declare no <link rel="icon">; every other page uses jw-logo.jpg. They fall back to /favicon.ico at the domain root, which 404s if the site is deployed under a subpath (for example a GitHub Pages project URL).
+FIX: Add <link rel="icon" href="../assets/img/jw-logo.jpg"> after the concept.css link: line 19 in 02, line 21 in 03, line 18 in 05.
+
+[14] LOW | research.html | Full reports (opened panels) and the 'Everyone we checked' table.
+ISSUE: Dead links inside the reports:
+- doc-global: blog.revgear.com/megafit-meals-review/ (404)
+- doc-market: three worktrucksolutions.com Ford Transit listings (404)
+- doc-ai: careers.cookunity.com/jobs/7507651003, octaneai.com/platform, expre.co.uk/?p=30658, tenten.co/shopify/ai-product-photography-shopify/ (all 404)
+- doc-dive-04: wecookmeals.ca/api/menus/422/meals/steak-spiced-turkey-protein-power-bowl/details (404)
+- doc-ai and doc-play-02: aiagentrank.io/blog/apollo-io-review-2026 (Cloudflare 526)
+Separately, www.vincesmarket.com (the 'Organic Garage, Vince's Market, Healthy Planet' row) retur
+FIX: In assets/research-docs.js, keep the citation text for these URLs but remove the link: change [text](url) to text (listing, Oct 2026, expired). Use https://octaneai.com/ in place of octaneai.com/platform. Recheck www.vincesmarket.com, and if it is still down, drop the url in site-data.js line 3700.
+################# numbers | 24 findings
+
+[15] HIGH | prototypes/01-goal-plan-builder.html (drawer), roi.html (P1 Assumptions), proposal.html §4 (P1 KPIs) | "Why this makes money" > KPIs and Assumptions tabs; roi.html P1 'Assumptions' list; proposal P1 'KPIs.' paragraph; team console KPI tile
+ISSUE: Play 1 still shows pre-CFO churn and subscriber counts that contradict its own math in the same drawer. The math says 10% churn in year 1 and 9% in year 2, avg 136 active, ~239 by Oct 2027 and ~299 avg in year 2. The KPIs say 'Active subscribers: 140 avg in year 1; 250 by Oct 2027; 310 avg in year 2' and 'Monthly churn: 9% or lower in year 1; 8.5% in year 2'. The Assumptions say 'Monthly churn is 9% in year 1 and 8.5% in year 2'. The team tile says 'Monthly churn 8.6% target 9% or lower'. The proposal's own risk table says 'Modelled at 10% monthly churn'. The CFO values (10%/9%, 136/239/299) a
+FIX: site-data.js line 170: "136 avg in year 1; ~239 by Oct 2027; ~299 avg in year 2". Line 174: "10% or lower in year 1; 9% in year 2". Line 200: "Monthly churn is 10% in year 1 and 9% in year 2 (Eightx: replenishment 5-8%, meal kits 8-15%)." prototypes/01-goal-plan-builder.html line 1603: change 'target 9% or lower' to 'target 10% or lower'.
+
+[16] HIGH | prototypes/05-corporate-gift-studio.html (drawer), roi.html P5, proposal.html §4 P5 | Play 5 headline, KPIs tab, Assumptions tab
+ISSUE: Gift Studio text still carries the pre-CFO model. The headline says 'at about 40% gross margin' directly above the drawer's '38% gross margin'. The KPIs say 'Corporate accounts, Holiday 2026: 25 by Dec 18, 2026' and 'Gifts delivered, Holiday 2026: 500'. The Assumptions say 'partial season of 25 accounts x 20 gifts', 'Gross margin is 40%' and 'Incrementality is 0.85'. The math uses 18 accounts x 20 gifts (360 gifts), 38% margin and 0.80 in year 1. Proposal 'What we measure at day 90' says 'about 18 corporate accounts', which contradicts the same proposal's P5 KPI line (25). The CFO values (18 a
+FIX: site-data.js line 1043: 'at about 38% gross margin'. Line 1077: "18 by Dec 18, 2026". Line 1081: "360". Line 1114: 'Holiday 2026 is a partial season of 18 accounts x 20 gifts (about 360 gifts).' Line 1116: 'Gross margin is 38%: the model's 40% for gift boxes, less the volume tiers most accounts use.' Line 1117: 'Incrementality is 0.80 in year 1 (first-season buyers are mostly existing customers) and 0.85 in year 2.'
+
+[17] HIGH | million.html | 'Build your own path to $1 million' widget (default selection = the path ideas 5, 1, 4)
+ISSUE: The builder ticks the same three ideas as the path card but shows '$1.6M · 3 ideas · 5% taken off for shared customers' and 'You keep about $626K a year'. A few cards above, the path card shows 'Expected, once running $1.2M' (25% overlap and stretch). The proposal says ~$1.25M and ~$494K of gross profit. pickCalc only applies 5% per shared-customer pair, halved, and drops the 20% execution stretch the CFO added. The right values are $1.25M and $494K.
+FIX: million.html line 205: after `ov = Math.min(0.3, ov / 2);` add the stretch, e.g. `if (sel.length >= 3) ov = Math.min(0.45, ov + 0.20);`. For the default 5+1+4 selection this gives 25%, so $1.663M x 0.75 = $1.25M and GP $659K x 0.75 = $494K. Change the note to '...% taken off for shared customers and the stretch of running several launches'.
+
+[18] HIGH | million.html (intro) and proposal.html §6 | Opening paragraph 'Below are 11 ideas... a three-idea path that reaches about $1.3M a year by 2028 in the mid case'
+ISSUE: $1.3M is the pre-CFO path total ($1.29M). The corrected total is $1.247M. The same million page shows '$1.2M' on the path card. Proposal §1 says 'averages about $1.25M in year 2' and its tile says '$1.2M', but proposal §6 repeats '$1.3M'. The million page also never states the CFO-required caveats that year-1 path sales are only ~$0.45M and the low case is ~$0.62M (proposal §1 has them).
+FIX: site-data.js line 2279: replace '...and a three-idea path that reaches about $1.3M a year by 2028 in the mid case.' with '...and a three-idea path that reaches about $1.0M a year (annualised) at the end of 2027 and averages about $1.25M in year 2 (Nov 2027 to Oct 2028) in the mid case. Its first-year sales are only about $0.45M, and the low case is about $0.62M.' Optionally show the path card total as '$1.25M' instead of fm()'s '$1.2M'.
+
+[19] MEDIUM | prototypes/02-pro-partner-portal.html (drawer + team view), roi.html P2, proposal.html §4 P2 | P2 KPIs, Assumptions, last Risk item, team-desk 'Average per account' tile and applications queue
+ISSUE: Pro Partner shows corrected math ($240 average order, 0.80 incrementality, about -$26K year-1 and +$50K year-2 contribution) next to stale text. The KPI says 'Average weekly order per account: $260 in year 1'. The Assumptions say 'Average weekly order $260 in year 1' and 'incremental factor 0.85'. The Risk says 'Year 1 is roughly break-even to slightly negative (~-$18K)... ~$58K/year contribution from year 2'. The team tile says 'Average per account $260'. The queue row says 'Counted at 0.85 incrementality'. The CFO values are the right ones.
+FIX: site-data.js line 405: "$240 in year 1; $330 in year 2". Line 443: 'Average weekly order $240 in year 1 (young accounts start near $180) and $330 in year 2; 50 ordering weeks a year.' Line 446: 'incremental factor 0.80 (trimmed from 0.85 in the CFO review)'. Line 464: 'Year 1 is about -$26K after freezer capex... for a ~$50K/year contribution from year 2'. prototypes/02 line 1818: '$240' (sample total $3,840). Line 1664: 'Counted at 0.80 incrementality'.
+
+[20] MEDIUM | index.html ('Your turn' card) and proposal.html (summary KPI tiles) | 'The plan, each sale counted once: $400K–$1.0M added revenue in year one'; proposal tiles 'Added revenue, year 1 $400K–$1.0M' and 'year 2 $900K–$2.3M'
+ISSUE: These ranges are not the plan's low–high and cannot be traced from any page. tools/build_data.py builds them as floor(low) to ceil(mid x 1.15). The year-1 low–high after 28% is $411K–$1.36M, and the roi.html 'High' case shows $1.36M, above the hub's '$1.0M' ceiling. The year-2 low–high is $0.98M–$3.41M as computed, or $1.03M–$2.98M from the plays' own year-2 ranges.
+FIX: tools/build_data.py lines 91-92 (or site-data.js lines 60/66): use the real low and high, e.g. year1.plan = "$411K–$1.36M" and year2.plan = "$1.0M–$3.0M" (sum of in-plan year-2 lows $1,425K and highs $4,146K x 0.72). If a narrower band is wanted, label it explicitly, e.g. 'low case to expected +15%'.
+
+[21] MEDIUM | roi.html (case toggle Low/High) and site-data portfolio.year2 | runRateFor() in roi.html; portfolio.year2.low/high (978K / 3,414K)
+ISSUE: Year-2 low/high per play are synthesised as runRate x (year1 case / year1 mid) instead of each play's own stated year-2 low/high, which every play's math and the million page give. Examples: At Work high year 2 = 622 x 323/162 = $1.24M vs the stated $980K. Gift Studio high = $769K vs $500K. AI Coach low = $247K vs $299K. At Work low = $261K vs $310K. The calculator's High-case year-2 total ($3.41M) and the data's $978K low therefore disagree with the million page ranges for the same plays (sum after 28%: $1.03M–$2.98M).
+FIX: Add runRateLow/runRateHigh to each play in build_data.py from the play math (P1 371/1174K, P2 315/836K, P3 305/957K, P4 310/980K, P5 140/500K, P6 299/535K, P7 113/480K). In roi.html replace runRateFor with `return c==='mid' ? p.runRate : (c==='low' ? p.runRateLow : p.runRateHigh) || p.runRate;`. Apply the same change to y2 in build_data.py line 74.
+
+[22] MEDIUM | roi.html (All-in cost / Return tiles), proposal.html §7, site-data portfolio | 'All-in cost · year 1 $376K: ... running the plays $322K'; 'in year 2, with no setup costs, about 2.3×'; proposal 'Return: ... 0.8x ...; 2.3x in year 2'
+ISSUE: The calculator costs every play at setup + monthly x 12. That ignores start months (plays begin in month 2 or 3) and the plays' own lower year-1 averages, so it disagrees with each play's own cost line: P1 $96.4K vs ~$89K stated, P3 $87.8K vs ~$71.4K, P4 $58.2K vs ~$54.5K, P6 $45.4K vs ~$36K. In-plan play costs come to $322K vs ~$285K, so the year-1 return is ~0.9x, not 0.8x. Year 2 reuses monthly x 12 ($278K), while the plays state higher year-2 running costs (P1 ~$120K, P3 ~$76.8K, P4 ~$80K, P5 ~$45K, P6 ~$42K = ~$364K). That makes the headline 2.3x, against 742/(48+364) = 1.8x. The roi meth
+FIX: Add costs.year1Total and costs.year2Total per play in build_data.py (P1 88.9K/120K, P2 63.4K/78K, P3 71.4K/76.8K, P4 54.5K/80K, P5 34.5K/45K, P6 36K/42K, P7 25.3K/40K). In roi.html lines 190-191 use `own += costs.year1Total; ownMonthly += costs.year2Total;`. Set portfolio.roiYear2 to "1.8x" and the proposal sentence to '...is about 0.9x the all-in year-1 cost of about $339K; about 1.8x in year 2'.
+
+[23] MEDIUM | million.html | 'What we would test first' list
+ISSUE: Each first test is labelled with the wrong idea, because firstTests[].n is a sequence number (1–6) but the code looks it up as an idea number. The page shows 'Goal Plan Subscriptions: Gift Studio call list...', 'Pro Partner Wholesale: Plant capacity and licence check...', 'Butcher Club and Wild Fork: Goal Plan pre-sale...', 'J&W at Work: Wild Fork switch campaign...', 'Corporate Gift Studio: J&W at Work pilot...' and 'AI Coach Macro Plans: Clinic and dietitian referral pilot...'. The costs and pass marks are attributed to the wrong ideas.
+FIX: Add an idea field to each firstTests entry in site-data (1→5, 2→none 'Capacity', 3→1, 4→3, 5→4, 6→10). In million.html line 217 use `var d = f.idea ? byN(f.idea) : null; ... esc(d ? d.name : (f.label || 'Test ' + f.n))`.
+
+[24] MEDIUM | million.html (idea 5) and prototypes/05-corporate-gift-studio.html (team view) | Idea 5 'What is not': 'a peak near 280 gifts in one week'; prototype team header 'Holiday 2026, season to date: Gifts booked 412, Booked revenue $49,860'; production panel 'Packing about 38 h for 284 
+ISSUE: These are pre-CFO figures from the old 500-gift Holiday 2026 (play-05.md line 118: '500 gifts... peak near 280'). The corrected model has the whole Holiday 2026 season at ~360 gifts and $43.2K (18 x 20 x $120), and Play 5's own risk caps December at 'about 150 a week'. The sample's season-to-date bookings (412 gifts, $49.9K) exceed the full-season plan, and one week shows 284 boxes.
+FIX: site-data.js line 2557: 'Seasonal: most sales land in Nov-Dec, with about 360 gifts in Holiday 2026 and a cap of about 150 a week'. prototypes/05 line 1628: base values e.g. `won = 15, gifts = 300, rev = 36000` (avg $120). Scale the PROD week-of-Dec-14 counts so the total is ≤150 boxes (cut list then ~140 ribeyes, ~420 lamb chops).
+
+[25] MEDIUM | prototypes/03-butcher-club.html (team view) | 'Club P&L, April 2027 (est.)' panel
+ISSUE: Gross profit is taken on gross Club revenue, not on new revenue: 'Gross Club revenue $35.7K', 'New revenue at 0.75 incrementality $26.8K', 'Gross profit at 30% $10.7K' (= 35.7 x 0.30). The play's own method applies 30% to new revenue ($322K x 30% = $96.6K). On that basis April GP is $8.0K and contribution is about $2.1K, not '≈ $4.8K'. $4.8K a month would also be out of line with the play's ~+$12.6K for the whole of year 1.
+FIX: prototypes/03-butcher-club.html line 1840: change ['Gross profit at 30%', '$10.7K'] to '$8.0K' and the contribution row from '≈ $4.8K' to '≈ $2.1K' (8.0 − 1.0 − 1.9 − 1.6 − 0.45 − 1.0).
+
+[26] MEDIUM | agents.html and proposal.html §5 vs proposal.html §2, research.html, roi.html | agents stat 'People added: ... not 10x the 15-25 today'; thesis paragraph 'the same 15-25 person team' (repeated in proposal §5); vs proposal §2 'a family business of about 10 to 18 people', research 
+ISSUE: The headcount is given two ways, sometimes within the same proposal. CFO issue 15 says client-facing pages should say 'about 15 people' or '10 to 18'. 15-25 comes from the superseded model-assumptions.md figure.
+FIX: site-data.js line 2114: '...not 10x the 10 to 18 today'. Line 2130: 'the same team of about 10 to 18 people can handle...'.
+
+[27] MEDIUM | agents.html (10x levers) and agents.html Reorder & Save card | Lever 'Repeat orders confirmed per staff hour' note; lever 'Business accounts per account lead' note; Reorder & Save impact
+ISSUE: (a) 'Standing-order customers go from 0 today to about 500 by Oct 2027 (Goal Plans 251, Butcher Club 247, mid)': 251 is the pre-CFO figure; the corrected count is ~239, for a total of ~486. (b) 'Plays 2, 4, 5 and 7 bring about 150 business relationships by Oct 2027 (34 partners, 16 employers, about 60 gift buyers, about 38 groups)': Plays 2 and 7 are out of the year-1 plan, so the in-plan count is ~76 (16 employers + ~60 gift buyers) and the '7-8 account leads by hand' math is overstated. (c) Reorder & Save is 'worth an estimated $40-65K a year at 250 subscribers', which also uses the old 250.
+FIX: site-data.js line 2164: '...to about 485 by Oct 2027 (Goal Plans ~239, Butcher Club 247, mid)'. Line 2188: 'Plays 4 and 5 bring about 75 business relationships by Oct 2027 (16 employers, about 60 gift buyers, mid); with the backup Plays 2 and 7 it would be about 150'. Line 1761: 'at about 240 subscribers'. Line 2109: 'the five-play plan fills about 700-1,100 by year 2'.
+
+[28] MEDIUM | million.html (idea 7) vs Play 7 (roi.html, prototype 07 drawer, proposal §4) | Idea 7 'What is not', 'What it takes' and 'First step'; also listed in the proposal §6 table
+ISSUE: Idea 7 is still not synced to play-07 (CFO issue 6). (a) The card says 'About 17% margin after the group's share', while the same card's header says 'you keep about 20%' and Play 7 margin is 20%. (b) It says 'About $8K setup', while Play 7 costs show $3.2K setup. (c) It says 'Five pilot fundraisers in January 2027', while Play 7's KPI is 'Pilot groups live by Dec 6, 2026: 4' and prototype 07 runs a 4-group Holiday 2026 pilot.
+FIX: site-data.js line 2678: 'About 20% margin after the group's share...'. Line 2663: 'About $3.2K setup (pack photos and team kit, totes and coolers, tasting trays, Shopify setup, label printer)...'. Line 2664: 'A four-group pilot with Scarborough and Durham hockey and school groups, one drop per group...', with the timing aligned to the plan (see the backup-plays finding).
+
+[29] MEDIUM | million.html (idea 3 and idea 5 'How it works') | Idea 3: 'in Concept tiers of $129, $229 and $299'; Idea 5: 'Four levels are built on existing boxes: $85 BBQ Dad Pack, $130..., $200..., and a $350 Concept J&W Reserve'
+ISSUE: The tier prices on the million page differ from the prototypes and play math. Prototype 03 sells Starter $139, Family $239 and Freezer Fill $319, and Play 3's $220 average box is built from those (35/45/20 mix of $139/$239/$319). The proposal and the hub use the same. Prototype 05's first level is 'Thank You $90' (Dad Pack $84.99 or Girls Night $89.99) and the Reserve box is $349.
+FIX: site-data.js line 2409: 'in Concept tiers of $139, $239 and $319'. Idea 5 'how': 'Four levels built on existing boxes: Thank You $90 (Ultimate BBQ Dad Pack $84.99 or Girls Night $89.99), Well Done $130, Big Thanks $200, and a $349 Concept J&W Reserve.'
+
+[30] LOW | index.html (prototype cards), prototypes/02 and 07, agents.html phases | Hub cards 'J&W Pro Partner Portal ... $179K in year one' and 'Team Fuel Fundraiser ... $129K in year one'; prototype 07 banner 'Holiday freezer fundraiser: sign up by Sun Nov 22'; agents phase 2 'Part
+ISSUE: Year-1 vs plan timing mix-up. Both backup plays' year-1 figures assume a Dec 2026 start: Play 2 ramps from 4 accounts in Dec 2026, and Play 7 counts campaigns from Dec 2026, including a 4-group December pilot. The plan (proposal, roi 'switched off by default', CFO §4) holds Pro Partner back until At Work stalls by June 2027 and starts Team Fuel with the fall 2027 season. If J&W follows the plan, the '$179K / $129K in year one' shown on the hub cannot land in year 1, and the 07 prototype and agents phase describe launches the plan defers.
+FIX: On the hub cards for P2 and P7 add 'Backup, not in the year-1 plan: figure assumes a Dec 2026 start' (index.html card renderer, using p.inPlan===false). Change agents phase 2 text (site-data line ~2232) to 'At Work pilots in January through the Business Desk; partner drops only if At Work stalls by June 2027'. Re-date the 07 pilot banner to the fall 2027 season, or label it 'optional pilot if capacity allows'.
+
+[31] LOW | index.html | 'How J&W adds $1 million a year' panel list
+ISSUE: The panel lists 'Corporate Gift Studio $315K', 'Goal Plan Subscriptions $726K' and 'J&W at Work $622K' with no label and no total. These are year-2 run-rates, while the prototype cards just above on the same page show the same plays as year-one figures ($95K, $341K, $162K). Nothing tells the reader that the $1M is a year-2 run-rate, and the path's year-1 revenue of ~$0.45M is not shown.
+FIX: index.html line 272: append ' a year once running' after money(idea.sales.mid). After the list add a total line: 'About $1.25M a year in year 2 after 25% overlap; about $0.45M in year 1'.
+
+[32] LOW | index.html ('Your turn' fee card), proposal.html §7, roi.html method | 'Break-even on the fee alone: about $111K of added revenue at a 38% blended margin'
+ISSUE: $111K covers only 12 months of the monthly fee ($42K / 0.38). It leaves out the $6,000 setup that the same card and the roi 'All-in cost' (Fee $42K + setup $6K) count as part of the fee. Fee plus setup is $48K / 0.378, which is about $127K. The roi tile on the same page uses a different 'Break-even' ($995K, all-in), so the label is ambiguous.
+FIX: build_data.py line 93: `be_fee = (fee['monthly']*12 + fee['setup']) / blend`. Text: 'Break-even on our fee and setup: about $127K of added revenue in year 1 at a 38% blended margin'.
+
+[33] LOW | roi.html, prototypes/04 drawer, proposal.html §4 P4 | P4 math 'Team Table packs: 96 x 0.4 a month x $150' and year 2 '22 accounts x 5 packs x $150' vs the P4 mechanism and prototype packs
+ISSUE: The math prices Team Table packs at $150, but the published packs are $115.80 (Breakfast Meeting), $134.95 (Team BBQ) and $147.88 (Lunch & Learn), about $133 on average. The proposal prints the range '($115.80-$147.88)' right above the $150 math. CFO §2 Play 4 says the figure is immaterial (~-$0.6K) but the text should match.
+FIX: Use $133 in both lines: year 1 '96 x 0.4 a month x $133 = $5,107' (gross $190,207 x 0.85 = $162K), year 2 '22 x 5 x $133 = $14,630' (gross $730,430 x 0.85 = ~$621K). Or keep $150 and say 'packs average about $133; $150 includes add-ons'.
+
+[34] LOW | roi.html / prototype 01 drawer (P1 notes and assumptions), million.html idea 1 | P1 note 'Volume: ~68 extra boxes a week (~850 meals)... ~146 a week (~1,800 meals) in year 2'; assumption 'The plant can absorb ~850... and ~1,800 in year 2'; idea 1 con 'Year 2 adds ~1,800 meals a we
+ISSUE: The year-2 volume is pre-CFO (old 310 average subscribers). With the corrected 299 average, the play gives 299 x 26 x 0.9 / 52 + 240/52 ≈ 139 boxes a week, and CFO §6 states ~1,650 plan meals a week.
+FIX: site-data.js lines 151 and 206: '~139 a week (~1,650 meals) in year 2'. Line 2311: 'Year 2 adds ~1,650 meals a week...'.
+
+[35] LOW | prototypes/04-jw-at-work.html (team view) | 'At Work desk · week of Oct 19' and 'Northline Logistics · October 2026 (sample)' report
+ISSUE: The team-view dates come from today's date (TODAY / MONTH_LABEL), so it shows 14 live employer accounts, 648 items a week and '$24,900 this month' in October 2026. At Work only launches in January 2027 with 3 pilots, and the model reaches 14–16 accounts in Sep–Oct 2027. The other prototypes pin their samples to 2027 dates (Mar 15, Mar 22, Apr 12, 2027).
+FIX: prototypes/04 lines 1040-1042: pin the team sample to a 2027 date, e.g. `var TEAM_DATE = new Date(2027, 9, 18);` and use it for MONTH_LABEL and t-week ('week of Oct 18, 2027', 'October 2027 (sample)').
+
+[36] LOW | agents.html | Nutrition & Safety card impact vs thesis paragraph on the same page
+ISSUE: The card says 'Meal Butler SKUs with numeric macros go from about 6 of 265 to all 265'. The thesis on the same page, the hub, research and proposal all say 'about 292 cooked and portioned' Meal Butler items.
+FIX: site-data.js line 1909: '...from about 6 of ~292 to all ~292 (the 31 plan SKUs first)', or say why 265 differs (e.g. 'the 265 currently available').
+
+[37] LOW | prototypes/01-goal-plan-builder.html (team view) | Approvals queue 'Saturday 10 am reminder to 136 subscribers with a box due' vs KPI tile 'Skips 9 of 74 12% of scheduled boxes' / 'Boxes this week 70'
+ISSUE: The same sample week has 74 scheduled boxes (145 active, mostly every 2 weeks) but drafts a reminder to 136 subscribers 'with a box due'. 136 is the year-1 average active count, not the boxes due.
+FIX: prototypes/01 line 1620: 'Saturday 10 am reminder to 74 subscribers with a box due' and 'CASL consent checked for 74 of 74'.
+
+[38] LOW | agents.html (Macro Butler) vs Play 6 KPIs (prototype 06 drawer, proposal §4) | Macro Butler impact 'Aims for 8-12% of finished quizzes and coach chats to become a cart or plan' vs P6 KPI 'Conversation to cart or plan: 12–15%'
+ISSUE: The conversion target for the same funnel differs between pages. The prototype 06 sample week converts 22 of 186 (12%), which is at the top of one target and the bottom of the other.
+FIX: Use one target. Since Play 6's revenue is built on its KPI, change the agents card (site-data Macro Butler impact) to 'Aims for 12-15%... At 1,500 sessions a month, that is 180-225 orders a month', or change the P6 KPI to 8-12%.
+################# copy | 29 findings
+
+[39] HIGH | million.html | "Tests and rules" section, "What we would test first" list. Rendered at million.html line 217 from JW.million.firstTests (site-data.js lines 3007-3044).
+ISSUE: Every test is labelled with the wrong idea. The renderer looks up byN(f.n), but firstTests[].n is just a 1-6 sequence number, not an idea id. The client sees, for example, "Goal Plan Subscriptions: Gift Studio call list...", "Butcher Club and Wild Fork: Goal Plan pre-sale...", "J&W at Work: Wild Fork switch campaign...", "Corporate Gift Studio: J&W at Work pilot..." and "AI Coach Macro Plans: Clinic and dietitian referral pilot...".
+FIX: In site-data.js, add a "name" to each firstTests entry, in order: "Corporate Gift Studio", "Before any play: capacity and licence", "Goal Plan Subscriptions", "Butcher Club and Wild Fork", "J&W at Work", "Meal Butler Clinical". In million.html line 217, change esc(d ? d.name : f.name || '') to esc(f.name || (d ? d.name : '')). Alternative: set n to the real idea ids (5, -, 1, 3, 4, 10).
+
+[40] HIGH | All pages: index, research, proposal, million, prototypes 01-07, concept.js chat | Hub "What is real" box (site-data.js:14). Proposal short version (4116) and strengths (3345, also on research.html). Million pros (2493, 2675, 2853, 2681/2791 "no-salt promise"). P01 hero line 290 and
+ISSUE: "Salt and sugar free, no added oils" / "no added salt, sugar or oil" is presented as verified fact and as a customer promise. J&W's own listings contradict it. The site itself says so (ROI P4 and P7 risks) and says the Nutrition & Safety agent blocks this exact claim. The worst cases:
+- P05 sells a "Meal Butler Taster ... Salt and sugar free, no added oils" made of 3x Souvlaki, whose listed ingredients include salt and oil.
+- P06 answers a customer who mentions type 2 diabetes and metformin with "Our portions have no added salt, sugar or oil".
+- P07 makes the claim on the fundraiser page, alth
+FIX: - **Hub Real box:** "...about 292 cooked and portioned Meal Butler items. J&W markets the line as salt and sugar free with no added oils; some ingredient lists (Chicken Breast Souvlaki, Beef Chili) list salt, oil or sugar, so this is reconciled before it is used in marketing."
+- **Proposal/research strength:** "A clean-eating cooked line, marketed as salt and sugar free (to be reconciled with ingredient lists)." Make the same change in site-data.js 4116.
+- **Prototypes:** replace every instance with "Cooked, weighed and portioned in our own plant. Ingredients on every pack."
+- **P06 line 1257:** delete "Our portions have no added salt, sugar or oil, but".
+- **P02 line 975:** "Clinics often stock our 4 oz pre-set meals and egg-white bites in smaller portions. We don't make health or nutrition claims, so your dietitian chooses the menu, and we share full ingredient lists."
+- **concept.js:2
+
+[41] MEDIUM | roi.html P1, proposal.html §4.1, million.html #1, prototype 01 "Why this makes money", agents.html | Goal Plan math (site-data.js:144) vs Assumptions (200), KPIs (170, 174), million con (2309) and agents 10x table note (2164).
+ISSUE: Pre-CFO numbers were left next to the revised math:
+- **Churn:** the math uses "10% monthly churn" in year 1 and "churn 9%" in year 2. The Assumptions say "Monthly churn is 9% in year 1 and 8.5% in year 2", the KPI says "9% or lower in year 1; 8.5% in year 2", and the million card con says "At 9% monthly churn" directly above its math "(play-01.md, churn 10% in year 1 and 9% in year 2)". The proposal risk table says "Modelled at 10%".
+- **Subscribers:** the math gives "about 239 by Oct 2027" (avg 136). The KPI gives "140 avg in year 1; 250 by Oct 2027; 310 avg in year 2", and agents gives "Goa
+FIX: - Assumption: "Monthly churn is 10% in year 1 and 9% in year 2 (Eightx: replenishment 5-8%, meal kits 8-15%)."
+- KPI churn: "10% or lower in year 1; 9% in year 2".
+- KPI subscribers: "136 avg in year 1; 239 by Oct 2027; ~299 avg in year 2".
+- Million con: "At 9-10% monthly churn J&W must win about 24-27 new subscribers a month just to stand still".
+- Agents note: "...to about 490 by Oct 2027 (Goal Plans 239, Butcher Club 247, mid)".
+
+[42] MEDIUM | roi.html P2, proposal.html §4.2, prototype 02 "Why this makes money" | Pro Partner math vs Assumptions, KPIs and Risks (site-data.js 443, 446, 464).
+ISSUE: The page contradicts itself on three inputs:
+- **Average weekly order:** the math uses "$240"; the assumption and KPI say "$260 in year 1".
+- **Incrementality:** the math says "0.80 (trimmed from 0.85 in the CFO review)"; the assumption still says "incremental factor 0.85".
+- **Contribution:** the cost line says "about -$26,000 in year 1 ... about +$50,000" in year 2; the last risk says "~-$18K ... a ~$58K/year contribution from year 2".
+FIX: - Assumption: "Average weekly order $240 in year 1 and $330 in year 2; 50 ordering weeks in year 2." Make the same change to the KPI ("$240 in year 1; $330 in year 2").
+- Assumption: "Blended gross margin 22%; incremental factor 0.80 (model range 0.75-0.85)."
+- Risk: "Year 1 is about -$26K after freezer capex. The owners must be comfortable investing for a ~$50K/year contribution from year 2 plus the plant-utilisation benefit."
+
+[43] MEDIUM | roi.html P5, proposal.html §4.5, prototype 05, million.html #5 | Gift Studio Assumptions (site-data.js 1114, 1116, 1117), KPIs, play headline (1043), million "Worth it" (2544).
+ISSUE: The page contradicts itself on three inputs:
+- **Holiday 2026 size:** the math uses "18 accounts x 20 gifts" (about 360 gifts). The assumption says "25 accounts x 20 gifts", and the KPIs say "25 by Dec 18, 2026" and "Gifts delivered, Holiday 2026: 500".
+- **Margin:** the plan uses 38%, but the assumption says "Gross margin is 40%", and both the headline ("about 40% gross margin") and the million card ("Do it now: fast cash at 40% margin") say 40%.
+- **Incrementality:** the year-1 math uses 0.80, but the assumption says "Incrementality is 0.85".
+FIX: - Assumption: "Holiday 2026 is a partial season of 18 accounts x 20 gifts (about 360 gifts)."
+- KPIs: "18 by Dec 18, 2026" and "360".
+- Assumption: "Gross margin is 38%: the model's 40% for gift boxes, less the volume tiers most accounts use."
+- Headline and million: "about 38%".
+- Assumption: "Incrementality is 0.80 in year 1 and 0.85 in year 2, because some existing customers already buy boxes for clients."
+
+[44] MEDIUM | million.html (also proposal.html §6 table) | Idea cards #2 Butcher Club (site-data.js:2409), #7 Team Fuel (2663, 2664, 2678) and #5 Gift Studio "How it works".
+ISSUE: The $1M cards disagree with the prototypes and the business case:
+- **Butcher Club:** tiers are "$129, $229 and $299" here, but the prototype and ROI use $139/$239/$319.
+- **Team Fuel margin:** the con says "About 17% margin after the group's share", but the same card says "you keep about 20%".
+- **Team Fuel setup:** "About $8K setup" here vs "$3.2K to set up" in the ROI.
+- **Team Fuel first step:** "Five pilot fundraisers in January 2027" here vs 4 pilot groups with December 2026 drops in the ROI and the prototype.
+- **Gift Studio:** levels are "$85 BBQ Dad Pack ... $350 Concept J&W Reserve",
+FIX: - Butcher Club: "...in Concept tiers of $139, $239 and $319."
+- Team Fuel con: "About 20% margin after the group's share and displacement: this wins customers, not profit."
+- Team Fuel takes: "About $3.2K setup (pack photos and team kit, totes and coolers, tasting trays, Shopify setup, label printer) plus a part-time coordinator."
+- Team Fuel first step: "Four pilot fundraisers with December 2026 drops, recruited from J&W customers who coach or sit on parent councils..."
+- Gift Studio: "$90 Thank You (BBQ Dad Pack $84.99), $130 Well Done, $200 Big Thanks, and a $349 Concept J&W Reserve."
+
+[45] MEDIUM | million.html | Intro paragraph, "The short version" path card, ramp chart note, and "Build your own path" picker (pickCalc in million.html).
+ISSUE: The same three-idea path (Gift Studio, Goal Plans, At Work) is given three different totals on one page:
+- the intro says "reaches about $1.3M a year by 2028";
+- the path card says "Expected, once running $1.2M" (path.total 1,247,000, after 25% off);
+- the picker, which defaults to the same three ideas, says "$1.6M · 3 ideas · 5% taken off for shared customers".
+
+The chart says "25% overlap" and the ROI uses 28%.
+FIX: - **million.html pickCalc:** change ov = Math.min(0.3, ov / 2); to ov = Math.min(0.3, ov / 2) + (sel.length > 1 ? 0.20 : 0); and change the note to '% taken off for shared customers and for running launches together'. The default path then shows about $1.2M.
+- **Intro (site-data.js million.intro):** "...and a three-idea path that reaches about $1.2M a year once running (about $1.0M run-rate by the end of 2027) in the mid case."
+
+[46] MEDIUM | agents.html, roi.html, proposal.html, prototypes 02, 03, 05, 07 | Approval lines and owner names: site-data.js lines 466, 1136, 1348, 1576, 1784, 1810, 1933, 1962, 1986, 2033, 2056, 2079, 2263; prototypes/02-pro-partner-portal.html:567; prototypes/07-team-fuel-fundr
+ISSUE: The co-founder appears under three names:
+- "Stavros": index ("Bill, Stavros:"), proposal cover, fee text, 90-day plan, P03 timeline.
+- "Steven": "Bill or Steven approve...", 9 times on agents and 8 in the proposal.
+- "Steve": "Owner (Bill or Steve)" in the ROI, and "Co-founded by Steve Trougakos and Bill Fehr" in P02.
+
+The proposal uses both Stavros and Steven. J&W's own About page uses Stavros.
+FIX: Use "Stavros" everywhere: replace "Bill or Steven" and "Bill or Steve" with "Bill or Stavros", "Bill and Steven" with "Bill and Stavros", and P02 line 567 "Co-founded by Steve Trougakos and Bill Fehr" with "Co-founded by Stavros Trougakos and Bill Fehr". If the owners prefer "Steve", apply it everywhere instead.
+
+[47] MEDIUM | agents.html, proposal.html §5 | Stat tile "People added" (site-data.js:2114) and "So the 10x is capacity" paragraph (2130).
+ISSUE: The agents page says "not 10x the 15-25 today" and "the same 15-25 person team". The business case, proposal and research all say "a family business of about 10 to 18 people" and "a 10-to-18-person butcher", which is jw-audit's estimate (15 staff in 2018; estimate 10–18 today). The proposal states both figures.
+FIX: site-data.js:2114: "packing, coach desk, account lead, coordinators; not 10x the estimated 10-18 people today". 2130: "...the same team of about 10-18 people (our estimate) can handle about ten times..."
+
+[48] MEDIUM | roi.html, million.html, proposal.html, prototypes 01-07 ("Why this makes money" panels) | site-data.js:
+- 1488 (P7 math)
+- 441 (P2 assumption)
+- 625 (P3 math)
+- 1493 (P7 math)
+- million math strings at 2287, 2349, 2535 and siblings
+- the many "(model-assumptions.md)" and "market-benchmarks
+ISSUE: Internal working notes and code variable names show in client copy:
+- "...year 2 $62,168 (20%), hence marginPct 20."
+- "first drops in December 2026 (startMonth 2)."
+- "No separate Wild Fork line: the earlier $225K switcher estimate is not added." The client never saw an earlier estimate.
+- "Trimmed from the selection's year-2 idea (...), as competitor-07.md advised".
+- "(play-02.md, corrected)" and "(play-05.md, corrected)".
+- Raw file names such as "(model-assumptions.md)" about 10 times on roi.html.
+FIX: - 1488: "...year 2 $62,168 (20%), so we plan on a 20% margin."
+- 441: delete " (startMonth 2)".
+- 625: "Wild Fork switchers are not a separate revenue line: those households are counted inside the 415 joins."
+- 1493: "We kept the follow-on tail small (about $55K in year 2) because only two buyer cohorts exist by then."
+- Million: replace "(play-0N.md, corrected)" with "(Play N business case)".
+- Replace "(model-assumptions.md)" with "(shared model assumptions)" and "market-benchmarks.md section 11" with "our market benchmarks".
+
+[49] MEDIUM | research.html (Full reports, rendered from assets/research-docs.js) | Reports opened from "The full reports":
+- local paths: competitor-01.md, 02, 03, 04, 05 and 07 "Sources" sections
+- "Prototype spec" sections: play-01 §9, play-02 §11, play-03 §10, play-04 §11, play-0
+ISSUE: The page presents these as "The working files exactly as our researchers wrote them", and they expose three things:
+- Local machine paths, e.g. "J&W comparison data: /Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/jw-catalog.json, jw-facts.md, model-assumptions.md".
+- Front-end build specs, e.g. "## 9. Prototype spec (for the front-end builder) File: `site/prototypes/01-goal-plan-builder.html` ... `JWC.init({ n: 1, ... })`", with catalogue ids.
+- A heading written about the client's own business: "## Weak spots to exploit in the proposal".
+FIX: In tools/build_docs.py (the generator named at the top of research-docs.js), or directly in research-docs.js:
+- drop every "## N. Prototype spec..." section through to the next "## " heading;
+- delete the "/Users/..." source lines (or replace them with "J&W catalogue and facts (jwfoods.com, crawled Oct 16, 2026)");
+- rename the jw-facts heading to "## Gaps the proposal addresses".
+
+[50] MEDIUM | Prototypes 01, 02, 05, 06 (customer view); agents.html, roi.html, proposal.html | - P01 line 491
+- P02 line 622
+- P05 line 623
+- P06 lines 334, 548 and the chat greeting at line 1455
+- the agents and ROI "Who approves" / "Who does the work" lines
+ISSUE: Customer-facing copy names Tasia and Lucas and promises the public that they will do jobs that have not been agreed:
+- "Questions about a plan? Tasia and Lucas at the Meal Butler counter can walk you through it."
+- "✓ A real reply from Lucas within one business day"
+- "You may know Bill, Tasia or Lucas from the counter."
+- "Lucas and Tasia approve every Personal Macro Plan"
+
+The research identifies them only from customer reviews (Tasia, Bill's wife; Lucas, his son). The internal pages also make Lucas the approver for about ten areas (plans, campaigns, accounts, prices, save offers, Butcher's 
+FIX: - P01: "Questions about a plan? The Meal Butler counter team can walk you through it: (416) 298-1350."
+- P02: "✓ A reply from a person at J&W within one business day".
+- P05: "You may already know our family from the counter."
+- P06 line 334: "A person on our coach desk approves every Personal Macro Plan..."; line 548: "Our coach desk helps with food, orders and your plan."; greeting: "...a person at J&W and our partner dietitian check anything personal or medical."
+- Proposal, ROI and agents: use role names ("coach-desk lead", "account lead") with "(for example Lucas, to confirm with Bill and Stavros)".
+
+[51] MEDIUM | roi.html P7 and proposal.html §4.7 risks; research.html full reports (jw-audit.md, play-02.md, play-07.md) | - site-data.js:1573
+- play-07.md risks ("Owner-led brand")
+- play-02.md risk 10
+- jw-audit.md §11 item 6 inside research-docs.js
+ISSUE: The Yelp/COVID passage itself is correctly gone from research-docs.js (I diffed it against the source). But wording that only makes sense because of it is still client-facing, and it reads as a hint about Bill:
+- "Owner-led brand risk: schools and faith groups will look J&W up; show the 4.8 star Google rating (611 reviews) and keep the coordinator as the program's face."
+- "Owner-brand risk. Partners see the brand daily. Make Lucas and the team the face of the program."
+- "Brand-risk management: shift the brand from founder-dependent to team-and-product-driven (Lucas as next-gen face)."
+
+The p
+FIX: - site-data.js:1573 and play-07.md: "Trust: schools and faith groups check reviews before they partner. Show the 4.8-star Google rating (611 reviews) and give each group one named coordinator."
+- play-02.md: "One contact: give every partner a named account lead."
+- jw-audit.md §11.6: "Team-led brand: show the wider J&W team and the product alongside the founders, and set up a review-response playbook, since the AI agents can draft replies."
+- Remove the "(jw-audit.md §2)" citations.
+
+[52] MEDIUM | Prototypes 02, 04, 06; roi.html P4 assumption | - P02 label mock line 1403
+- P04 FAQ line 687 and order confirmation line 1435
+- P06 personal label line 1026
+- site-data.js:934
+ISSUE: Heating instructions are invented and presented as J&W's own: "Keep frozen. Thaw overnight in the fridge, then microwave 60-90 seconds.", "Meals heat in 60 to 90 seconds once thawed", "Keep frozen. Thaw overnight, reheat 60–90 s.", and in the ROI "Current guidance: thaw overnight, then heat 60-90 seconds." J&W publishes no heating times: there are none in jw-catalog.json, and reviews describe boil-in-bag. The shared Concierge contradicts it: "heat in the bag in simmering water, or in the microwave or air fryer. Each bag has its own heating steps."
+FIX: - P02 and P06 labels: "Heating steps print here from J&W's kitchen sheet."
+- P04 FAQ: "You need a microwave and some freezer space. Each bag shows its own heating steps."
+- P04 confirmation: "Thaw tomorrow's lunch in the fridge overnight, then follow the heating steps on the bag."
+- site-data.js:934: "J&W supplies thawed and from-frozen heating times for each At Work item before launch (not yet published)."
+
+[53] MEDIUM | prototypes/07-team-fuel-fundraiser.html; roi.html P7 | "Coming next" block, P07 lines 503-505; Team Fuel Desk chat rule, line 744; site-data.js:1494
+ISSUE: The block says J&W is already developing a product: tag "Concept · in development", and "We're working on a J&W-made jerky that players could sell by hand." The ROI says "Team Fuel Jerky (in development)". Nothing shows J&W is doing this. It is Minastech's idea, and the proposal itself calls it a 2027 project needing a recipe, shelf-life work and licence approval.
+FIX: - Tag: "Concept · idea for 2027".
+- Text: "An idea for 2027: a J&W-made jerky that players could sell by hand. It would need a tested recipe, shelf-life testing and approval under J&W's provincial licence." Apply the same wording to the chat reply at line 744.
+- site-data.js:1494: "Not counted: a possible Team Fuel Jerky (a 2027 idea), and any later..."
+
+[54] MEDIUM | million.html (also the proposal's 'graded' wording) | Grade badges and the picker. SCALE in million.html (around line 139) maps scores below 60 to F+/F/F−.
+ISSUE: The letter grades fight the recommendations and read as harsh to the owners. The Corporate Gift Studio, which the plan says to "Start ... this month", is graded "C−". Meal Butler Clinical is "F+" while its card says "The best of the new moves". Ideas that pass most tests get "F" or "F−".
+FIX: Show the score instead of a letter. In million.html, replace the badge content esc(d.grade) with d.score, and change aria-label to 'Score ' + d.score + ' out of 100'; do the same in the picker. Or re-map SCALE to [[85,'A'],[75,'B+'],[70,'B'],[60,'C'],[50,'D'],[0,'E']]. Change "each graded honestly" (intro, proposal §6) to "each scored the same way".
+
+[55] LOW | index.html, proposal.html | Hub hero button (index.html:60); proposal contents and section title (proposal.html:134)
+ISSUE: Hype that the site itself contradicts: "The AI agents that 10x the business →" and "5. The AI agents that 10x the business". The agents page says "Revenue does not 10x overnight ... online and B2B revenue roughly doubles to triples" and "10x the desk capacity, not 10x the staff".
+FIX: - index.html:60: "16 AI agents: 10x the desk capacity →".
+- proposal.html:134: sec('agents', 'The AI agents: ten times the desk capacity', ...). Update the contents entry to match.
+
+[56] LOW | prototype 06, research.html (Calo card) | "Where JW wins" (site-data.js:1258 and 3255); P06 label note line 416
+ISSUE: Two statements are not true today:
+- "...has a store where customers can get scanned". J&W has no InBody scanner; it is a Concept that needs an estimated $300/month lease.
+- P06 says "Macros are estimates from our recipes and Health Canada nutrient data", but the hub says prototype macros "are estimates from USDA reference values", and no J&W recipes were used.
+FIX: - site-data.js 1258 and 3255: "...and has a store where an InBody scan could be offered (Concept)..."
+- P06 line 416: "Macros are estimates from standard nutrition data until J&W's recipes are analysed."
+
+[57] LOW | prototype 04, research.html (WeCook card) | "Where JW wins" (site-data.js:863)
+ISSUE: "...with macro-exact à la carte portions" is an overclaim. Every macro on the site is marked "est." pending dietitian sign-off.
+FIX: Replace with "...with weighed à la carte portions (macros est.)".
+
+[58] LOW | proposal.html §2, research.html strengths | site-data.js:3344 and 4123
+ISSUE: "AAA ribeye at about $23 to $25/lb against $31 to $60/lb at premium GTA butchers / Toronto's premium butchers" is inaccurate. The $31 low end is ButcherBox.ca's mail-order grass-fed ribeye. The Toronto butchers checked run $38.55–$59.92/lb, and the Butcher Club prototype and the truLOCAL card both say "$39–60/lb".
+FIX: "AAA ribeye at about $23 to $25/lb against $39 to $60/lb at Toronto premium butchers ($31 to $37/lb grass-fed by mail order)".
+
+[59] LOW | proposal.html §7 "Our fee and how we work" | Fee paragraph built at proposal.html:148 from site-data.js fee.term and fee.includes
+ISSUE: Broken punctuation in the fee terms: "6-month first term, then month to month, with a day-90 KPI review Includes: Priced for a build year. Covers: ... dietitian and lab fees).." There is no period after "review", the word "Includes:" is redundant, and the paragraph ends with a double period.
+FIX: In proposal.html:148, replace esc(F.term || '') + (F.includes ? ' Includes: ' + esc(F.includes) + '.' : '') with esc(F.term || '') + '. ' + (F.includes ? esc(F.includes) : '').
+
+[60] LOW | index.html | Featured and prototype cards, "Modelled on" line (index.html:199)
+ISSUE: Nested parentheses: "Modelled on: Power Kitchen (GTA (East York, Toronto))" and "Icon Meals (Global (Dallas, Texas))".
+FIX: index.html:199: change (m.scope ? ' <span class="text-muted">(' + esc(m.scope) + ')</span>' : '') to (m.scope ? ' <span class="text-muted">· ' + esc(m.scope) + '</span>' : '').
+
+[61] LOW | prototype 02 | Trust strip, prototypes/02-pro-partner-portal.html:411
+ISSUE: The star is doubled: an icon star followed by text "4.8★", which renders as "★4.8★ · 611 Google reviews".
+FIX: Change the text to <li><b aria-hidden="true">★</b>4.8 · 611 Google reviews</li>.
+
+[62] LOW | All prototypes (shared Ask the Butler chat) | assets/concept.js:241, the delivery reply when no city is given
+ISSUE: "plus $30 express in the 416" is inaccurate. J&W's express zone also covers Richmond Hill, Markham and Vaughan, which are 905 numbers.
+FIX: "...plus $30 express (1–2 business days) in Toronto, Scarborough, North York, East York, Etobicoke, Richmond Hill, Markham and Vaughan."
+
+[63] LOW | prototype 06; index, roi, million, proposal, research | P06 line 334; British -ise spellings in rendered copy
+ISSUE: - "The coach does the maths." Canadian usage is "math".
+- Spelling is mixed on the same pages. Canadian style uses -ize, yet "Employer-subsidised", "Subsidised meals", "annualised", "personalised", "Cannibalisation", "utilisation" and "productised" sit beside "Personalized", "Optimized", "normalizes" and "organizers". The -our/-re spellings (flavour, centre, labour, cheque) are already correct.
+FIX: - P06: "The coach does the math."
+- Standardise on -ize: "Employer-subsidized", "Subsidized meals", "annualized", "personalized", "cannibalization", "utilization", "productized".
+
+[64] LOW | prototypes 03 and 01 | assets/catalog.js, about line 1320: variant label for id copy-of-feta-omelette-cups-cooked-portioned-2-pkg
+ISSUE: J&W sells Egg White Bites, Spinach & Feta as a 2-pack ("...Cooked & Portioned - 2/Pkg", $5.25). The catalogue variant is labelled "Single", so P03 shows "Egg White Bites, Spinach & Feta · Single · $5.25" and the P01 prep sheet lists the size as "single".
+FIX: In catalog.js, change that variant's "label": "Single" to "label": "2-pack".
+
+[65] LOW | prototype 04 (JW team view and HR section) | Monthly report header (line 657, js-month) and split-invoice heading (line 862 "October 2026"); team desk "week of Oct 19"
+ISSUE: The sample is dated before the play exists. It shows "Northline Logistics · October 2026 (sample)" with 470 meals delivered, and the team desk says "week of Oct 19 ... a typical week about 9 months in". J&W at Work launches in January 2027, so October 2026 is impossible.
+FIX: Use "October 2027 (sample)" for the report and invoice, and "Week of Oct 18, 2027" for the team desk.
+
+[66] LOW | prototypes 01, 05; roi.html P1; proposal.html | - P01 team view, Butcher's Pick card
+- P05 team view line 707 and pipeline line 1590
+- site-data.js:212 and 4148
+ISSUE: Approver roles and names are inconsistent:
+- **Butcher's Pick:** P01 says "Approver: Bill"; agents says "Lucas approves the Butcher's Pick boxes".
+- **Gift Desk lead:** P05 says "Gift Desk lead (for example Tasia)"; the proposal's 90-day plan says "Lucas as Gift Desk lead".
+- **Owner-approval threshold:** P05 pipeline says "Owner approval (over $10K)"; the rule everywhere else is $5,000.
+- **Agent name:** the ROI P1 risk says "Production Forecast Agent"; the agent is called "Production Planner".
+- **Title:** P01 says "Approver: the partner nutritionist"; elsewhere it is "partner dietitian", an
+FIX: - P01: "Approver: Lucas" (or the agreed plans lead).
+- Pick one Gift Desk lead and use it in both places.
+- P05: "Owner approval (over $5,000)".
+- site-data.js:212: "Mitigation: Production Planner par levels..."
+- P01: "Approver: the partner dietitian".
+
+[67] LOW | index.html, roi.html P5, research.html, proposal.html | index.html:116 and 119; site-data.js:1121; research.html:51 and proposal.html:115 vs site-data.js:3364 and 4117
+ISSUE: Three small copy issues:
+- **Wording:** the hub heading "What is real, what is placeholder" and the label "Placeholder" read like build notes in client copy.
+- **Policy stated as current:** "J&W waives the $100 route minimum for gift deliveries" is a proposed policy written as if it already applies.
+- **Count:** "checked more than forty competitors" / "more than forty operators" conflicts with "We looked at about 60 businesses" / "We studied about 60 businesses".
+FIX: - index.html:116: "What is real, what is sample or concept"; line 119 label: "Sample or concept".
+- site-data.js:1121: "J&W would waive the $100 route minimum for gift deliveries and redemptions."
+- Use one count everywhere: "about 60 businesses (the full field is listed on the research page)".
+################# owner | 15 findings
+
+[68] HIGH | index.html (hub) | Hero H1, first thing on screen; iPhone 390px and desktop 1440px
+ISSUE: On iPhone the headline reads "Seven ways to turn Scarborough's 4.8-star butcherinto the GTA's protein brand": the words run together. On desktop the forced line break leaves "star butcher" alone on line 2 ("4.8-" / "star butcher" / "into the GTA's protein brand"). The title was made longer but the hard break was kept.
+FIX: Remove the forced break and let the browser balance the lines. In index.html:182 change it to: document.getElementById('hero-h').textContent = H.title.replace(/\|/g, ' '); and add style="text-wrap:balance" to the h1#hero-h. If the break must stay, at least use .replace(/\|/g, ' <br class="hidden lg:block">'), with a space before the <br>.
+
+[69] HIGH | index.html (hub) | Whole page; the 'Your turn' card's 'Email us your shortlist' link (index.html:245); every prototype's concept bar
+ISSUE: The whole site asks Bill to pick 3 or 4 prototypes, but there is no way to mark one. He has to open 7 prototypes on his phone, remember their names, scroll about 10 screens back down the hub and type an email from scratch. The mailto has a subject line only, with no body and no list. Nothing in any prototype lets him say "I like this one".
+FIX: 1) concept.js bar actions: add '<button type="button" class="jwc-pill jwc-pick" aria-pressed="false">☆ Shortlist this</button>'. On click, toggle the play number n in localStorage key 'jw-picks' (a JSON array, wrapped in try/catch), set the label to '★ On my shortlist' and show JWC.toast('Added. Send your shortlist from the hub.'). 2) Hub cards: add the same toggle under each 'Open prototype' button. 3) Build the 'Your turn' link from the picks: 'mailto:...?subject=' + encodeURIComponent('J&W Foods: our shortlist') + '&body=' + encodeURIComponent('Our picks:\n' + picks.map(n => '- ' + J.plays[n-1].name).join('\n') + '\n\nNotes:'). Change the button text to 'Email our shortlist (' + picks.length + ') →'.
+
+[70] HIGH | index.html (hub) + roi.html + million.html | Hub intro ('a plan that starts with three'), the 'Your turn' card, the '$1M question' box; business case header; $1M 'short version'
+ISSUE: Bill cannot tell what plan he is being sold:
+- The hub says "a plan that starts with three" but never says which three, and the flagship 'start here' card is Goal Plans.
+- The $1M box says start the Corporate Gift Studio this month. On the hub it is card #5, with no badge.
+- The business case opens on a different '5 of 7 plays' plan (P1, P3, P4, P5, P6). The hub's $400K–$1.0M (central $800K) figure comes from that plan.
+- The hub's $1M box lists Gift Studio $315K, Goal Plans $726K and J&W at Work $622K with no label. The same plays' cards a few screens up say $95K, $341K and $162K 'in year one
+FIX: Choose one recommended start and say it the same way everywhere.
+- Hero intro: replace '...and a plan that starts with three.' with '...We recommend starting with three: the Corporate Gift Studio now, Goal Plans in December and J&W at Work in January.'
+- Add a 'Recommended first' badge on cards 01, 04 and 05.
+- index.html:270: render money((idea.sales||{}).mid) + '<span class="text-[12px] font-normal">/yr once running</span>', and append a total row: 'Together, once running: about $1.2M a year (overlap removed)'.
+- Make roi.html open on the same three plays (inPlan true only for 1, 4 and 5). If the five-play plan stays, rename its hub label from 'The plan, each sale counted once' to 'If you run five of the seven' and name the five.
+
+[71] HIGH | million.html | 'Every idea, best first' cards: the letter badges (million.html:174)
+ISSUE: The ideas Bill is asked to pick get school report-card grades: Goal Plans 'B', Butcher Club 'C+', J&W at Work 'C', Pro Partner 'C', Corporate Gift Studio 'C−', AI Coach 'D', Team Fuel 'D'. The best idea is only a B. The one the page tells him to 'start this month' is a C−. Two of the seven prototypes on the hub carry a D. To an owner, a D means 'don't'. Nothing on the page explains how scores turn into letters.
+FIX: Remove the letter badge. In million.html:174 render the score and a plain verdict instead, e.g. '<span class="grade">86<small>/100</small></span>' plus a word: 80+ 'Strongest', 70–79 'Strong', 60–69 'Worth a test', 50–59 'Later', under 50 'Not now'. For the three ideas on the path, add a 'Start: Nov 2026 / Dec 2026 / Jan 2027' tag so timing, not grade, explains the order.
+
+[72] HIGH | index.html (hub) | First iPhone screen: hero intro and the three pills under it; flagship button label
+ISSUE: Bill's first screen on an iPhone has a logo, the headline and 12 lines of grey centred text. No prototype is visible and there is no clear first tap. 'All 7 prototypes are ready to explore' looks like the first of three buttons but is a plain <p> and does nothing when tapped. The two real buttons send him away from the prototypes (to AI agents and the $1M page). The 'Try this in every prototype' guide, which explains the Customer/JW team toggle and 'Why this makes money', sits about 16 screens down, after he would already have opened the prototypes. 'Open the flagship' is agency talk.
+FIX: Replace the <p> pill with a primary link: <a href="#featured" class="... bg-ink text-white">Start with Prototype 1 ↓</a>, and keep the AI/$1M links as secondary text links. Shorten the hero intro to: 'Bill, Stavros: you already have the plant, the butchers and 611 five-star reviews. Below are seven working prototypes of new ways to sell what you already make. Open a few on your phone and tell us which feel like J&W.' Move the 4-step 'Try this' list into a compact strip right under the hero. Rename 'Open the flagship →' to 'Try it: Goal Plan Builder →'.
+
+[73] MEDIUM | million.html | Intro paragraph, 'The short version' box and 'How it ramps' chart, all on the first desktop screen
+ISSUE: One screen gives three different totals for the same three-idea path. The intro says 'reaches about $1.3M a year by 2028 in the mid case'. The box says 'Expected, once running $1.2M'. The chart climbs to $1.5M by Q4 2028. Bill will ask which number is real.
+FIX: Use one headline figure. Intro (site-data.js:2279 million.intro): replace the last sentence with 'Below are 11 ideas, each graded honestly, and a three-idea path worth about $1.2M a year once running (mid case, overlap removed). It passes $1M a year by the end of 2027.' Under the chart add: 'After Q4 2027 the bars keep rising because subscribers keep growing in year 3; the $1.2M is the year-2 figure.' Or cap the chart at the Q4 2028 value the model actually supports.
+
+[74] MEDIUM | index.html (hub) → agents.html | Hero button 'The AI agents that 10x the business →'
+ISSUE: The hub promises that AI '10x the business'. The page it opens says the opposite in its headline: 'Ten times the capacity, not ten times the staff... Revenue does not 10x overnight', with online + B2B revenue about 2-3x. A butcher who clicks through will think the hub button oversold it.
+FIX: Change the button text to 'The AI helpers: 10x the desk, same team →'. In the hub AI card, change 'Meet the agents and the 10x math →' to 'See what each AI helper does →'.
+
+[75] MEDIUM | agents.html | 'The 10x math, lever by lever' table on iPhone
+ISSUE: At 390px the table squeezes Lever / Today / With agents into three narrow columns, and the fourth column, 'Multiple' (7x, 10x, 12x, 10x, 4x, 7x, 1.2x), is pushed off-screen inside a horizontal scroll box with no hint that it scrolls. Bill never sees the headline number of each row; he only sees one word per line.
+FIX: Below 768px, render each lever as a card instead of a table row: the title line '<b>Conversations per staff hour</b> <span class="badge">7x</span>', then one line 'Today: about 8 → With agents: about 55', with the explanation and agent links under it in a <details> 'Why'. Or at minimum move 'Multiple' to the second column and add a 'Swipe →' hint.
+
+[76] MEDIUM | agents.html | Whole page on iPhone: hero stat tiles and the 16 roster cards
+ISSUE: The page is about 35 phone screens (31,748px at 390px) and is written for a developer, not a butcher. Each of the 16 agent cards is about 2 screens and includes 'Built with: Claude API (claude-sonnet-5-5 replies, claude-haiku-5-5 triage) + Shopify Admin API...', 'Reads: ...B2B price lists... past tickets', 'tagged escalations', and 'SEO lift is measured against a holdout set'. The top tiles use 'FTE', 'B2B', 'SKUs' and 'software and tokens'.
+FIX: Keep the description, 'Who approves' and 'Expected effect' visible on each card. Move Reads, Produces, Moves, Built with and Evidence into a closed <details><summary>Technical details</summary>. Make the 16 cards a two-line list on phones (name + one-liner, tap to expand). Plain-word swaps:
+- '3-5 FTE' → '3 to 5 new full-time people'
+- 'Online + B2B revenue' → 'Online and business sales'
+- 'software and tokens' → 'software and AI usage'
+- 'SKUs' → 'items'
+- 'escalations' → 'hand-offs to a person'
+
+[77] MEDIUM | prototypes/* (shared drawer in concept.js) | 'Why this makes money' drawer: the default tab, 'The math' (seen with prototypes/05-corporate-gift-studio.html?money=1 at 390px)
+ISSUE: The drawer is the main money argument inside every prototype. It opens on a monospace wall of formulas that fills the whole phone screen: '18 accounts x 20 gifts x $120 = $43,200 ... Gross $118,940 x 0.80 incrementality = ~$95K (mid)... High: 35 x 25 x $125 holiday, 25 agents at 1.4 gifts...'. It reads like code. The $1M page cards use the same style ('x 0.8 incrementality', '~$85 CAC', 'lab analysis of 8 SKUs').
+FIX: Add a first, default tab 'In plain words' with 3 bullets made from data already there. Example for P5: 'Who buys: about 18 GTA offices, realtors and clinics this holiday, 20 gifts each.' / 'What it adds: about $95K in year one, $315K a year once running.' / 'What J&W keeps: about 38% after food, packing and delivery.' Show 'The math' as a 2-column table (line | amount) in the normal font, not monospace. Replace 'incrementality' with 'share that is truly new sales' and 'CAC' with 'ad cost per new customer'.
+
+[78] MEDIUM | prototypes/01..07 on iPhone (concept.css + per-prototype headers) | Sticky dark concept bar plus each prototype's sticky header; floating chat button; prototype 01's local bar override
+ISSUE: On a phone, the 'Concept by Minastech' bar wraps to 3 rows (about 112px) and stays fixed while scrolling. Prototypes also have their own sticky header (Butcher Club about 75px), so about 187 of 900px (more on a real iPhone with Safari bars) is permanent chrome. The floating chat button covers CTAs on the first screen: 'See a team page' (07) and 'Book a free team tasting' (04). The flagship, 01, is worst: a local CSS override squeezes the label into '…not the / live site ·' and cuts the name to 'Prototype 1 of 7: Goal Plan…'.
+FIX: In concept.css add @media (max-width:640px) { .jwc-bar { position: static; } .jwc-bar-label { font-size: 11px; } .jwc-chat-fab { padding: 12px; } .jwc-chat-fab span:not(.dot) { display: none; } }, so the bar scrolls away and the chat becomes an icon-only circle. Then set --barh to 0 on phones so the prototype headers stick at top:0. Delete the override at 01-goal-plan-builder.html:238-242 so the flagship wraps like the other six.
+
+[79] MEDIUM | agents.html, prototypes 01/02/04/05/06, research.html (jw-audit report) | 'Who approves' lines, team-view approval cards ('Approver: Lucas', 'Approver: Tasia'), review-reply drafts, and the published audit's people table
+ISSUE: Bill's wife (Tasia) and son (Lucas), identified from Yelp and Chamber reviews, are written into the plan as staff with jobs and hours. Examples: 'Lucas (coach desk) approves every Personal Macro Plan', 'Tasia handles Instagram escalations and reviews 20 sampled chats a week', and a 1-to-3-star review reply that says 'ask for Tasia'. The research page publishes a table: 'Lucas | Bill's son... Likely next generation | Yelp', plus 'The flip side is key-person risk: the brand leans on one family' and 'shift the brand from founder-dependent... (Lucas as next-gen face)'. Coming from an outside agenc
+FIX: Replace family names with roles throughout site-data.js and the prototypes: 'Meal Butler lead', 'Account lead', 'Store lead' (keep 'Bill' and 'Stavros' as owners). For example, 'Approver: Meal Butler lead'. In the published jw-audit, delete the Tasia and Lucas rows and the 'Lucas as next-gen face' line, and soften finding 3 to: 'The owner is the brand: reviews name Bill and his team personally and praise the service.' Assign named people in the kickoff meeting instead.
+
+[80] LOW | index.html (hub) | 'Modelled on:' line on all 7 prototype cards
+ISSUE: Every card shows nested brackets, e.g. 'Power Kitchen (GTA (East York, Toronto))', 'Icon Meals (Global (Dallas, Texas))', 'Halenda's Fundraising (GTA (Oshawa, Durham Region))'. It looks careless on the page meant to sell the work.
+FIX: In modelled() replace (m.scope ? ' <span class="text-muted">(' + esc(m.scope) + ')</span>' : '') with (m.scope ? ' <span class="text-muted">· ' + esc(m.scope) + '</span>' : ''). Result: 'Modelled on: Power Kitchen · GTA (East York, Toronto) — Quiz-matched goal meal plans...'.
+
+[81] LOW | index.html (hub) | Flagship card image (phone and desktop) and the 'Which ones should we build first?' card on desktop
+ISSUE: 1) On iPhone the flagship image is the 1440px desktop screenshot shrunk to about 350px wide, so its text is about 5px and unreadable. Its bottom edge shows a beige band with a half-cropped photo, which looks broken. The same cut strip shows under the laptop mock on desktop. 2) At 1440px the dark 'Your turn' card sits alone in column 1 of the 3-column grid, leaving a blank area about 900x900px to its right. The page's main call to action looks like a leftover.
+FIX: 1) Below 1024px show the phone screenshot instead. In the .feat-media rules use .feat-wide{display:none} .feat-phone{display:block; position:static; width:60%; margin:24px auto; border:5px solid #0F1B2D; border-radius:24px}, and drop loading="lazy" on that img. Recapture 01-wide.jpg at 1440x790 so it ends at the bottom of the hero. 2) Give the ask article 'lg:col-span-3', and lay its inside out as lg:grid lg:grid-cols-3 (pitch | plan and fee | next steps and button). Or move it out of #grid into its own full-width section after the cards.
+
+[82] LOW | million.html, agents.html, research.html/roi.html, concept.js dock, index.html documents | Butcher Club tier prices; team-size figures; prototype footer link; 'Read this first' label
+ISSUE: Small mismatches an owner will notice:
+- The $1M page says Butcher Club 'Concept tiers of $129, $229 and $299', but the prototype sells Starter $139, Family $239 and Freezer Fill $319.
+- The AI page says 'the same 15-25 person team', while the research and business-case pages say 'a team of about 10 to 18' and '10-to-18-person butcher'. Bill knows his headcount.
+- The prototype footer link 'Business case & AI agents' goes only to roi.html, and there is no link to agents.html.
+- On the hub, 'Read this first' is on the 14,000-word Full proposal (about 78 phone screens), which competes with 'Prot
+FIX: - site-data.js:2409 (and million.md line 81): change to 'Concept tiers of $139, $239 and $319'.
+- site-data.js:2114: 'not 10x the 10-18 today'; :2130: 'the same 10-18 person team (our estimate; tell us the real number)'.
+- concept.js:428: replace the link with <a href="../roi.html">Business case</a><a href="../agents.html">AI agents</a>.
+- index.html:138: change 'Read this first' to 'For your desk or your accountant'.

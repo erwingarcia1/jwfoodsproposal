@@ -1,0 +1,658 @@
+[
+ {
+  "old": "https://citymatters.london/counting-macros-fresh-fitness-food-math",
+  "new": "https://www.cbinsights.com/company/fresh-fitness-food/financials"
+ },
+ {
+  "old": "Fresh Fitness Food (City Matters)",
+  "new": "Fresh Fitness Food (CB Insights)"
+ },
+ {
+  "old": "City Matters: how Fresh Fitness Food calculates macros",
+  "new": "CB Insights: Fresh Fitness Food company profile"
+ },
+ {
+  "old": "https://octaneai.com/customers/wicked-edge",
+  "new": "https://octaneai.com/case-studies/wicked-edge"
+ },
+ {
+  "old": "https://www.volur.ai/solutions",
+  "new": "https://www.volur.ai/"
+ },
+ {
+  "old": "https://v2.iotone.com/case-study/the-foodery-saves-28-on-delivery-costs-with-routific/c17543",
+  "new": ""
+ },
+ {
+  "old": "28% lower delivery costs than manual routing",
+  "new": "28% lower delivery costs than manual routing (vendor figure; source page retired)"
+ },
+ {
+  "old": "https://www.vincesmarket.com",
+  "new": ""
+ },
+ {
+  "old": "140 avg in year 1; 250 by Oct 2027; 310 avg in year 2",
+  "new": "136 avg in year 1; ~239 by Oct 2027; ~299 avg in year 2"
+ },
+ {
+  "old": "9% or lower in year 1; 8.5% in year 2",
+  "new": "10% or lower in year 1; 9% in year 2"
+ },
+ {
+  "old": "Monthly churn is 9% in year 1 and 8.5% in year 2",
+  "new": "Monthly churn is 10% in year 1 and 9% in year 2"
+ },
+ {
+  "old": "At 9% monthly churn J&W must win about 30 new subscribers a month just to stand still",
+  "new": "At 9-10% monthly churn J&W must win about 24-27 new subscribers a month just to stand still"
+ },
+ {
+  "old": "20 at a time at about 40% gross margin",
+  "new": "20 at a time at about 38% gross margin"
+ },
+ {
+  "old": "25 by Dec 18, 2026",
+  "new": "18 by Dec 18, 2026"
+ },
+ {
+  "old": "Holiday 2026 is a partial season of 25 accounts x 20 gifts.",
+  "new": "Holiday 2026 is a partial season of 18 accounts x 20 gifts (about 360 gifts)."
+ },
+ {
+  "old": "Gross margin is 40% (model-assumptions.md, premium gift boxes and corporate gifting).",
+  "new": "Gross margin is 38%: the model's 40% for gift boxes, less the volume tiers most accounts use."
+ },
+ {
+  "old": "Incrementality is 0.85, because some existing customers already buy boxes for clients.",
+  "new": "Incrementality is 0.80 in year 1 and 0.85 in year 2, because some existing customers already buy boxes for clients."
+ },
+ {
+  "old": "(mix of $85 to $350 levels)",
+  "new": "(mix of $90 to $349 levels)"
+ },
+ {
+  "old": "Do it now: fast cash at 40% margin",
+  "new": "Do it now: fast cash at about 38% margin"
+ },
+ {
+  "old": "a three-idea path that reaches about $1.3M a year by 2028 in the mid case.",
+  "new": "a three-idea path that reaches about $1.0M a year (annualized) at the end of 2027 and averages about $1.25M in year 2 (Nov 2027 to Oct 2028) in the mid case. Its first-year sales are only about $0.45M, and the low case is about $0.62M."
+ },
+ {
+  "old": "$260 in year 1; $330 in year 2",
+  "new": "$240 in year 1; $330 in year 2"
+ },
+ {
+  "old": "Average weekly order $260 in year 1 and $330 in year 2; 50 ordering weeks in year 2.",
+  "new": "Average weekly order $240 in year 1 (young accounts start near $180) and $330 in year 2; 50 ordering weeks a year."
+ },
+ {
+  "old": "Blended gross margin 22% (model-assumptions.md); incremental factor 0.85 (model range 0.75-0.85).",
+  "new": "Blended gross margin 22% (shared model assumptions); incremental factor 0.80 (trimmed from 0.85 in the CFO review; model range 0.75-0.85)."
+ },
+ {
+  "old": "Year 1 is roughly break-even to slightly negative (~-$18K) after freezer capex. The owners must be comfortable investing for a ~$58K/year contribution from year 2",
+  "new": "Year 1 is about -$26K after freezer capex. The owners must be comfortable investing for a ~$50K/year contribution from year 2"
+ },
+ {
+  "old": "not 10x the 15-25 today",
+  "new": "not 10x the estimated 10 to 18 people today"
+ },
+ {
+  "old": "the same 15-25 person team can handle",
+  "new": "the same team of about 10 to 18 people (our estimate) can handle"
+ },
+ {
+  "old": "3-5 FTE",
+  "new": "3 to 5 new full-time people"
+ },
+ {
+  "old": "Online + B2B revenue",
+  "new": "Online and business sales"
+ },
+ {
+  "old": "software and tokens",
+  "new": "software and AI usage"
+ },
+ {
+  "old": "about 3-5 full-time equivalents",
+  "new": "about 3 to 5 new full-time people"
+ },
+ {
+  "old": "to about 500 by Oct 2027 (Goal Plans 251, Butcher Club 247, mid)",
+  "new": "to about 485 by Oct 2027 (Goal Plans ~239, Butcher Club 247, mid)"
+ },
+ {
+  "old": "Plays 2, 4, 5 and 7 bring about 150 business relationships by Oct 2027 (34 partners, 16 employers, about 60 gift buyers, about 38 groups, mid): 7-8 account leads by hand, or about 2 with agents.",
+  "new": "Plays 4 and 5 bring about 75 business relationships by Oct 2027 (16 employers, about 60 gift buyers, mid): 4-5 account leads by hand, or about 1 with agents. With the backup Plays 2 and 7 it would be about 150 (7-8 by hand, about 2 with agents)."
+ },
+ {
+  "old": "worth an estimated $40-65K a year at 250 subscribers",
+  "new": "worth an estimated $40-65K a year at about 240 subscribers"
+ },
+ {
+  "old": "the seven plays fill about 700-1,100 by year 2",
+  "new": "the five-play plan fills about 700-1,100 by year 2"
+ },
+ {
+  "old": "About 17% margin after the group's share: this wins customers, not profit",
+  "new": "About 20% margin after the group's share and displacement: this wins customers, not profit"
+ },
+ {
+  "old": "About $8K setup (storefront and per-group pages, order aggregation, printed forms, sample packs) plus a seasonal coordinator.",
+  "new": "About $3.2K setup (pack photos and team kit, totes and coolers, tasting trays, Shopify setup, label printer) plus a seasonal coordinator."
+ },
+ {
+  "old": "Five pilot fundraisers in January 2027 with Scarborough and Durham hockey and school groups, one drop per group.",
+  "new": "A four-group pilot at the start of the fall 2027 season with Scarborough and Durham hockey and school groups, one drop per group."
+ },
+ {
+  "old": "in Concept tiers of $129, $229 and $299",
+  "new": "in Concept tiers of $139, $239 and $319"
+ },
+ {
+  "old": "Four levels are built on existing boxes: $85 BBQ Dad Pack, $130 Gentleman's or Taste of Greece, $200 Long Weekend, and a $350 Concept J&W Reserve.",
+  "new": "Four levels are built on existing boxes: Thank You $90 (Ultimate BBQ Dad Pack $84.99 or Girls Night $89.99), Well Done $130 (Gentleman's or Taste of Greece), Big Thanks $200 (Long Weekend), and a $349 Concept J&W Reserve."
+ },
+ {
+  "old": "~146 a week (~1,800 meals) in year 2",
+  "new": "~139 a week (~1,650 meals) in year 2"
+ },
+ {
+  "old": "~850 extra meals a week in year 1 and ~1,800 in year 2",
+  "new": "~850 extra meals a week in year 1 and ~1,650 in year 2"
+ },
+ {
+  "old": "Year 2 adds ~1,800 meals a week",
+  "new": "Year 2 adds ~1,650 meals a week"
+ },
+ {
+  "old": "Meal Butler SKUs with numeric macros go from about 6 of 265 to all 265 (the 31 plan SKUs first) for under $25 in tokens.",
+  "new": "Meal Butler items with numeric macros go from about 6 of ~292 to all ~292 (the 31 plan items first) for under $25 in AI usage."
+ },
+ {
+  "old": "Aims for 8-12% of finished quizzes and coach chats",
+  "new": "Aims for 12-15% of finished quizzes and coach chats"
+ },
+ {
+  "old": "that is 120-180 orders a month",
+  "new": "that is 180-225 orders a month"
+ },
+ {
+  "old": "Steven",
+  "new": "Stavros"
+ },
+ {
+  "old": "Bill or Steve)",
+  "new": "Bill or Stavros)"
+ },
+ {
+  "old": ", hence marginPct 20.",
+  "new": ", so we plan on a 20% margin."
+ },
+ {
+  "old": " (startMonth 2)",
+  "new": ""
+ },
+ {
+  "old": "No separate Wild Fork line: the earlier $225K switcher estimate is not added. Those households are counted inside the 415 joins to avoid double counting.",
+  "new": "Wild Fork switchers are not a separate revenue line: those households are counted inside the 415 joins, to avoid double counting."
+ },
+ {
+  "old": "Trimmed from the selection's year-2 idea (100 groups x $4,000 plus a $0.16-0.31M DTC tail), as competitor-07.md advised: only two buyer cohorts exist by year 2, so the follow-on tail is about $55K.",
+  "new": "We kept the follow-on tail small (about $55K in year 2) because only two buyer cohorts exist by then."
+ },
+ {
+  "old": "(ESTIMATE, competitor-07.md)",
+  "new": "(our estimate)"
+ },
+ {
+  "old": "(play-01.md, churn",
+  "new": "(Play 1 business case, churn"
+ },
+ {
+  "old": "(play-02.md, corrected)",
+  "new": "(Play 2 business case)"
+ },
+ {
+  "old": "(play-03.md)",
+  "new": "(Play 3 business case)"
+ },
+ {
+  "old": "(play-04.md)",
+  "new": "(Play 4 business case)"
+ },
+ {
+  "old": "(play-05.md, corrected)",
+  "new": "(Play 5 business case)"
+ },
+ {
+  "old": "(play-06.md)",
+  "new": "(Play 6 business case)"
+ },
+ {
+  "old": "Year 2 (play-07.md):",
+  "new": "Year 2 (Play 7 business case):"
+ },
+ {
+  "old": "(model-assumptions.md range 0.75-0.85)",
+  "new": "(shared model range 0.75-0.85)"
+ },
+ {
+  "old": "the cooked 45% from model-assumptions.md, less",
+  "new": "the cooked 45% from our shared model assumptions, less"
+ },
+ {
+  "old": "per model-assumptions.md;",
+  "new": "per our shared model assumptions;"
+ },
+ {
+  "old": "(model-assumptions raw boxes 25-35%)",
+  "new": "(shared model assumptions: raw boxes 25-35%)"
+ },
+ {
+  "old": "(model-assumptions.md)",
+  "new": "(shared model assumptions)"
+ },
+ {
+  "old": "Cross-check: market-benchmarks.md section 11 says",
+  "new": "Cross-check: our market benchmarks say"
+ },
+ {
+  "old": "The market-benchmarks.md upside of 115 firms x 60 boxes x $120 (about $830K) would need",
+  "new": "The upside in our market benchmarks, 115 firms x 60 boxes x $120 (about $830K), would need"
+ },
+ {
+  "old": "(market-benchmarks.md)",
+  "new": "(our market benchmarks)"
+ },
+ {
+  "old": "market-benchmarks.md s9)",
+  "new": "our market benchmarks)"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-01.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-02.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-03.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-04.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-05.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-06.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-07.md",
+  "new": "research.html"
+ },
+ {
+  "old": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/competitor-04.md",
+  "new": "research.html"
+ },
+ {
+  "old": "Play 4 full write-up (internal)",
+  "new": "Play 4 full write-up"
+ },
+ {
+  "old": "Competitor 4 deep-dive: WeCook (internal)",
+  "new": "Competitor 4 deep dive: WeCook"
+ },
+ {
+  "old": "Full play write-up (local)",
+  "new": "Full play write-up"
+ },
+ {
+  "old": "Play file with full spec",
+  "new": "Full play write-up"
+ },
+ {
+  "old": "an owner-led team, with Lucas or Tasia leading four of them.",
+  "new": "a small team, with the same few leads running four of them."
+ },
+ {
+  "old": "Meal Butler lead (e.g. Lucas or Tasia), 8-12 h/week",
+  "new": "Meal Butler lead, 8-12 h/week"
+ },
+ {
+  "old": "drafts waiting for Lucas.",
+  "new": "drafts waiting for the Meal Butler lead."
+ },
+ {
+  "old": "Lucas (or a new B2B account lead): 8-10 h/week",
+  "new": "Account lead (from the team or a new hire): 8-10 h/week"
+ },
+ {
+  "old": "tastings depend on Bill or Lucas.",
+  "new": "tastings depend on Bill or the account lead."
+ },
+ {
+  "old": "Lucas or the owner: about 6 h a week",
+  "new": "The account lead or an owner: about 6 h a week"
+ },
+ {
+  "old": "A named Gift Desk lead at J&W (for example Lucas or Tasia) handles",
+  "new": "A named Gift Desk lead at J&W handles"
+ },
+ {
+  "old": "if the coach desk depends on Lucas alone;",
+  "new": "if the coach desk depends on one person alone;"
+ },
+ {
+  "old": "Lucas or a hired part-time nutrition coach runs the coach desk:",
+  "new": "A coach desk lead (from the team or a hired part-time nutrition coach) runs the desk:"
+ },
+ {
+  "old": "Tasia ~1–2 h/week on Instagram escalations",
+  "new": "The store lead ~1–2 h/week on Instagram hand-offs"
+ },
+ {
+  "old": "drafts waiting for Lucas:",
+  "new": "drafts waiting for the coach desk lead:"
+ },
+ {
+  "old": "Fundraising coordinator (Tasia or Lucas, as J&W decides):",
+  "new": "Fundraising coordinator (a team member J&W names):"
+ },
+ {
+  "old": "Butcher or Lucas: 1.5 h per",
+  "new": "A butcher or the store lead: 1.5 h per"
+ },
+ {
+  "old": "Tasia handles Instagram escalations and reviews 20 sampled chats a week. Lucas answers partner pricing exceptions.",
+  "new": "The store lead handles Instagram hand-offs and reviews 20 sampled chats a week. The account lead answers partner pricing exceptions."
+ },
+ {
+  "old": "Lucas (coach desk) approves every Personal Macro Plan",
+  "new": "The coach desk lead approves every Personal Macro Plan"
+ },
+ {
+  "old": "Lucas sets save-offer and discount limits and approves anything outside them. The Meal Butler lead clears",
+  "new": "The Meal Butler lead sets save-offer and discount limits, approves anything outside them and clears"
+ },
+ {
+  "old": "Lucas approves every new account's tier and terms.",
+  "new": "The account lead approves every new account's tier and terms."
+ },
+ {
+  "old": "Lucas approves every sequence and offer before anything sends.",
+  "new": "The account lead approves every sequence and offer before anything sends."
+ },
+ {
+  "old": "Lucas approves every campaign before it sends",
+  "new": "The Meal Butler lead approves every campaign before it sends"
+ },
+ {
+  "old": "Tasia spot-checks a random 10%",
+  "new": "The store lead spot-checks a random 10%"
+ },
+ {
+  "old": "Bill or Tasia approve every reply",
+  "new": "Bill or the store lead approve every reply"
+ },
+ {
+  "old": "Lucas approves the Butcher's Pick boxes before the cut-off.",
+  "new": "Bill approves the Butcher's Pick boxes before the cut-off."
+ },
+ {
+  "old": "Lucas approves any budget move over 20% and all new creative.",
+  "new": "The Meal Butler lead approves any budget move over 20% and all new creative."
+ },
+ {
+  "old": "Lucas approves every price change, Cut of the month and clearance deal.",
+  "new": "The store lead approves every price change, Cut of the month and clearance deal."
+ },
+ {
+  "old": "Lucas, Tasia or a partner dietitian take anything medical",
+  "new": "The coach desk lead or a partner dietitian takes anything medical"
+ },
+ {
+  "old": "A partner lead (Tasia or Lucas) about 8 h/week.",
+  "new": "A clinic partner lead at J&W, about 8 h/week."
+ },
+ {
+  "old": "customers know Bill, Tasia and Lucas by name.",
+  "new": "customers know Bill and the counter team by name."
+ },
+ {
+  "old": "so Lucas and Tasia are not carrying four launches at once.",
+  "new": "so the same two or three team leads are not carrying four launches at once."
+ },
+ {
+  "old": "Minastech with Bill, Stavros and Lucas",
+  "new": "Minastech with Bill, Stavros and the team leads"
+ },
+ {
+  "old": "Lucas as Gift Desk lead; Minastech drafts the outreach",
+  "new": "The Gift Desk lead; Minastech drafts the outreach"
+ },
+ {
+  "old": "Tasia approves; Minastech builds",
+  "new": "The store lead approves; Minastech builds"
+ },
+ {
+  "old": "Minastech; Lucas approves quotes, owners approve any over $5,000",
+  "new": "Minastech; the Gift Desk lead approves quotes, owners approve any over $5,000"
+ },
+ {
+  "old": "Minastech, the partner dietitian, Lucas and the kitchen lead",
+  "new": "Minastech, the partner dietitian, the Meal Butler lead and the kitchen lead"
+ },
+ {
+  "old": "Lucas, the kitchen lead and drivers; Minastech watches the numbers daily",
+  "new": "The Meal Butler lead, the kitchen lead and drivers; Minastech watches the numbers daily"
+ },
+ {
+  "old": "Lucas and the new coordinator; Minastech",
+  "new": "The Meal Butler lead, the coach desk lead and the new coordinator; Minastech"
+ },
+ {
+  "old": "The brand rests on a few people, and Lucas or Tasia are named lead on several plays,",
+  "new": "The brand rests on a few people, and the same one or two leads are named on several plays,"
+ },
+ {
+  "old": "(for example Lucas for plans and campaigns, Tasia for reviews and Instagram, the kitchen lead for production, Bill or Stavros for prices and quotes over $5,000)",
+  "new": "(for example a Meal Butler lead for plans and campaigns, a store lead for reviews and Instagram, the kitchen lead for production, Bill or Stavros for prices and quotes over $5,000; we agree the names together at kickoff)"
+ },
+ {
+  "old": "Owner-led brand risk: schools and faith groups will look J&W up; show the 4.8 star Google rating (611 reviews) and keep the coordinator as the program's face.",
+  "new": "Trust: schools and faith groups check reviews before they partner. Show the 4.8-star Google rating (611 reviews) and give each group one named coordinator."
+ },
+ {
+  "old": "J&W confirms from-frozen microwave times for each At Work item before launch. Current guidance: thaw overnight, then heat 60-90 seconds.",
+  "new": "J&W supplies thawed and from-frozen heating times for each At Work item before launch (not yet published)."
+ },
+ {
+  "old": "Not counted: Team Fuel Jerky (in development), and any later",
+  "new": "Not counted: a possible Team Fuel Jerky (a 2027 idea), and any later"
+ },
+ {
+  "old": "a store where customers can get scanned",
+  "new": "a store where an InBody scan could be offered (Concept)"
+ },
+ {
+  "old": "with macro-exact à la carte portions",
+  "new": "with weighed à la carte portions (macros est.)"
+ },
+ {
+  "old": "against $31 to $60/lb at premium GTA butchers",
+  "new": "against $39 to $60/lb at Toronto premium butchers ($31 to $37/lb grass-fed by mail order)"
+ },
+ {
+  "old": "against $31 to $60/lb at Toronto's premium butchers",
+  "new": "against $39 to $60/lb at Toronto premium butchers ($31 to $37/lb grass-fed by mail order)"
+ },
+ {
+  "old": "against $31-60/lb at premium GTA sellers",
+  "new": "against $39-60/lb at Toronto premium butchers"
+ },
+ {
+  "old": "Production Forecast Agent",
+  "new": "Production Planner"
+ },
+ {
+  "old": "J&W waives the $100 route minimum for gift deliveries",
+  "new": "J&W would waive the $100 route minimum for gift deliveries"
+ },
+ {
+  "old": "SKUs",
+  "new": "items"
+ },
+ {
+  "old": "SKU",
+  "new": "item"
+ },
+ {
+  "old": "nnualised",
+  "new": "nnualized"
+ },
+ {
+  "old": "annibalisation",
+  "new": "annibalization"
+ },
+ {
+  "old": "ubsidised",
+  "new": "ubsidized"
+ },
+ {
+  "old": "personalised",
+  "new": "personalized"
+ },
+ {
+  "old": "productised",
+  "new": "productized"
+ },
+ {
+  "old": "utilisation",
+  "new": "utilization"
+ },
+ {
+  "old": " 500",
+  "new": " 500"
+ },
+ {
+  "old": "$500",
+  "new": "$500"
+ },
+ {
+  "old": "(500",
+  "new": "(500"
+ },
+ {
+  "old": ",500",
+  "new": ",500"
+ },
+ {
+  "old": "-500",
+  "new": "-500"
+ },
+ {
+  "old": "8500",
+  "new": "8500"
+ },
+ {
+  "old": "500",
+  "new": "360"
+ },
+ {
+  "old": "500",
+  "new": "500"
+ },
+ {
+  "old": "Bill, Stavros: you already have what most meal-prep brands lack, from your own Ontario-inspected plant and 30 years of butchery to 4.8 stars from 611 Google reviews. What is missing is the packaging around it: standing orders, business buyers and a website that shows what your customers already say. Below are seven working prototypes, each modelled on a business that proves the idea, with numbers checked line by line and a plan that starts with three.",
+  "new": "Bill, Stavros: you already have the plant, the butchers and 4.8 stars from 611 Google reviews. What is missing is the packaging around it: standing orders, business buyers and a website that shows what your customers already say. Below are seven working prototypes of new ways to sell what you already make. Open a few on your phone and tell us which ones feel like J&W."
+ },
+ {
+  "old": ", all salt and sugar free with no added oils.",
+  "new": ", which J&W markets as salt and sugar free with no added oils."
+ },
+ {
+  "old": "Recipes are salt and sugar free with no added oils.",
+  "new": "J&W markets the cooked line as salt and sugar free with no added oils."
+ },
+ {
+  "old": "J&W's promise is no added salt, sugar or oil; WeCook's sample bowl",
+  "new": "J&W markets its plain portions as cooked with no added salt, sugar or oil; WeCook's sample bowl"
+ },
+ {
+  "old": "sells by the ounce with no plan minimum, cooks with no added salt, sugar or oil, flash-freezes",
+  "new": "sells by the ounce with no plan minimum, markets its plain portions as cooked without added salt, sugar or oil, flash-freezes"
+ },
+ {
+  "old": "The high-protein, no salt, sugar or oil story fits sports parents",
+  "new": "The high-protein, clean-cooking story fits sports parents"
+ },
+ {
+  "old": "No added salt, sugar or oil, plus weighed 3-4oz portions, is close to what these patients are told to eat",
+  "new": "Plain portions cooked without added salt, sugar or oil (once the ingredient lists are reconciled), plus weighed 3-4oz portions, are close to what these patients are told to eat"
+ },
+ {
+  "old": "cooks with no added salt, sugar or oil, and prices plan meals",
+  "new": "markets its cooked line as salt and sugar free, and prices plan meals"
+ },
+ {
+  "old": "with no added salt, sugar or oil against 795–1,015 mg sodium",
+  "new": "with plain portions marketed as cooked without added salt, sugar or oil, against 795–1,015 mg sodium"
+ },
+ {
+  "old": "sells by the ounce with no plan minimum, cooks with no added salt, sugar or oil, and flash-freezes",
+  "new": "sells by the ounce with no plan minimum, markets its plain portions as cooked without added salt, sugar or oil, and flash-freezes"
+ },
+ {
+  "old": "Cooked and portioned Meal Butler items, no added salt, sugar or oil",
+  "new": "Cooked and portioned Meal Butler items"
+ },
+ {
+  "old": "A clean recipe promise across the cooked line: salt and sugar free, with no added oils.",
+  "new": "A clean-eating promise on the cooked line, marketed as salt and sugar free with no added oils (a few ingredient lists need reconciling first)."
+ },
+ {
+  "old": "About 292 cooked portions with no added salt, sugar or oil, frozen packs",
+  "new": "About 292 cooked portions marketed as salt and sugar free, frozen packs"
+ },
+ {
+  "old": "(280 ribeyes, 840 lamb chops)",
+  "new": "(136 ribeyes, 408 lamb chops)"
+ },
+ {
+  "old": "full freezer labels with heating times",
+  "new": "full freezer labels with heating steps"
+ },
+ {
+  "old": "Partner drops start in December and At Work pilots in January through the Business Desk.",
+  "new": "At Work pilots start in January through the Business Desk; partner drops follow only if At Work stalls by June 2027."
+ },
+ {
+  "old": "Salt-, sugar- and oil-free cooking sells to hospitals, clinics and wellness-minded HR",
+  "new": "Clean cooking (plain portions without added salt, sugar or oil) sells to hospitals, clinics and wellness-minded HR"
+ },
+ {
+  "old": "Seasonal: most sales land in Nov-Dec, with a peak near 280 gifts in one week",
+  "new": "Seasonal: most sales land in Nov-Dec; Holiday 2026 is about 360 gifts, capped near 150 a week"
+ },
+ {
+  "old": "Night-shift hospital staff fit the clean, no-salt promise",
+  "new": "Night-shift hospital staff want clean, ready meals at any hour"
+ },
+ {
+  "old": "each graded honestly",
+  "new": "each scored the same way"
+ },
+ {
+  "old": "With the default inputs, year-1 gross profit of about $302K sits below the all-in year-1 cost of about $376K, so year 1 is an investment. In year 2, gross profit of about $742K is roughly 1.8 to 2.3 times the cost; the lower figure uses each play's higher year-2 running costs. Our fee alone is earned back by about $111K of added sales at the blended margin.",
+  "new": "With the default inputs, year-1 gross profit of about $302K is about 0.9 times the all-in year-1 cost of about $339K, so year 1 is close to break-even. In year 2, gross profit of about $742K is about 1.8 times the cost, using each play's own year-2 running costs. Our fee and setup are earned back by about $127K of added sales at the blended margin."
+ }
+]

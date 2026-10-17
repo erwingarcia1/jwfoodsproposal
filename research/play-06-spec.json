@@ -1,0 +1,571 @@
+{
+ "n": 6,
+ "slug": "meal-butler-ai-coach",
+ "name": "Meal Butler AI Coach",
+ "oneLiner": "A free AI coach on jwfoods.com and in Instagram DMs turns your goal into a week of Meal Butler portions, and a Personal Macro Plan weighs every portion to your grams and puts your name on the bag.",
+ "headline": "It sells a premium, personal tier ($119–$219 a week) built from portions J&W already cooks and weighs, and the free coach turns Instagram and website questions into complete carts.",
+ "focus": "Personalized macro plans and AI coaching from JW's kitchen",
+ "mechanism": "A free coach on jwfoods.com and in Instagram DMs (DM PLAN to @jwfoods) asks seven questions, calculates daily targets with dietitian-approved rules (e.g. 1,610 kcal and 140 g protein for a 78 kg woman training 3 days) and builds Monday to Friday from real Meal Butler SKUs: Chicken Breast Souvlaki 175 g + White Basmati 200 g + Broccoli 110 g for lunch, Egg White Bites ($5.25) + Steel Cut Oats ($4.40) for breakfast. Shoppers buy that week à la carte in standard 4oz/6oz sizes ($159.12 for the default week) or join the Personal Macro Plan (Concept): Lunch & Dinner $119/$139/$159 or Full Day $169/$189/$219 a week by protein size, with every portion weighed to their grams and a personal label on each meal. The plan includes a weekly check-in the AI drafts and a person approves, an InBody scan at 2201 Brimley Rd every 4 weeks ($25 for non-members) and a free 15-minute call with a partner registered dietitian; skip or pause before the Sunday cut-off. Medical, allergy, pregnancy and under-18 mentions always go to a person, and a production agent turns confirmed plans into a Saturday weigh-and-pack sheet on the existing route days.",
+ "modelledOn": {
+  "name": "Calo",
+  "url": "https://calo.app/en-sa",
+  "scope": "Global (Riyadh, GCC and UK)",
+  "short": "Custom-macro meal plans with an AI private-chef pilot",
+  "what": "Calo sells subscription meal plans in Saudi Arabia, the Gulf and the UK. Its Custom Macros plan uses a short stepper (birthday, sex, height, weight, activity, goal) to calculate editable calories and macros, and cooks to them at about 32% more than its Balanced plan (SAR 47.50 vs SAR 36 per lunch or dinner). Customers skip, pause, swap or edit up to 48 hours ahead (one business day in the UK), can book a 15–20 minute nutritionist call, and in July 2025 Calo announced a pilot of 'Calo Black', an LLM private chef that learns preferences through conversation.",
+  "proof": "280K GCC customers and 18M meals (company claim; global page now 290K and 19M), 10M+ meals in 2024, 50%+ year-on-year growth in H1 2025, a US$64M Series B (Wamda, Jul 2025), 12 café locations including a hospital, and the April 2025 acquisition of UK bespoke-macro brand Fresh Fitness Food (CB Insights). No presence in Canada.",
+  "jwEdge": "J&W runs its own Ontario-inspected plant (since 2008), sells by the ounce with no plan minimum, cooks with no added salt, sugar or oil, flash-freezes so one weekly route covers much of Ontario, has a store where customers can get scanned, and holds 4.8★ from 611 Google reviews. A built J&W day is roughly $29–$33 against about $42 (Balanced) to $57 (Custom Macros) at Calo, estimate."
+ },
+ "year1": {
+  "low": 113000,
+  "mid": 191000,
+  "high": 276000
+ },
+ "runRate": 417000,
+ "marginPct": 45,
+ "startMonth": 3,
+ "mathYear1": "Personal Macro Plan: enrolled clients ramp from 0 (Nov–Dec build and 10-client pilot) to 12 in Jan and 57 in Oct 2027 = 380 client-months × 4.33 weeks × 0.77 active = 1,267 paid weeks × $170/week = $215,383 gross × 0.70 net factor = $150,768. Coach-built one-time carts: 1,045 (40/month in Jan to 150/month in Oct) × $33 incremental each = $34,485. Walk-in InBody scans: 230 × $25 = $5,750. Year 1 mid ≈ $191,000 (low $113,300 at 60% of the clients and $160/week; high $275,800 at 140% and $180/week).",
+ "mathRunRate": "Year 2: 70 enrolled plan clients on average (60 → 80) × 52 weeks × 0.77 active × $170 = $476,476 gross × 0.70 = $333,533; plus 180 coach-built carts/month × 12 × $33 = $71,280; plus 40 walk-in scans/month × 12 × $25 = $12,000. Run-rate ≈ $417,000 (50 clients ≈ $299K; 90 clients ≈ $535K).",
+ "mathNotes": [
+  "Net factor 0.70 on plan revenue: ~40% of clients are existing customers already spending ~$90/week (only ~49% of their plan is new) and ~15% of new clients would otherwise join Play 1: 0.6 × 0.85 + 0.4 × 0.49 ≈ 0.70, slightly below the model's 0.75–0.85 incrementality.",
+  "$33 per coach-built one-time cart: 30% new customers × $130 AOV × 0.6 = $23.40, plus 70% existing customers adding ~$18 of breakfasts and sides × 0.8 = $10.08.",
+  "$170 a week average: 45% Lunch & Dinner (avg $137 at a 30/50/20 Regular/Plus/Performance mix) and 55% Full Day (avg $189) = $166, plus ~$4 of add-ons.",
+  "Standing orders (Subscribe & Save) created from the coach are counted in Play 1, not here.",
+  "Year 1 gross profit 45% × $191K ≈ $86K minus ~$36K of JW play costs ≈ $50K contribution before Minastech's fee; year 2 ≈ $188K − $42K ≈ $146K.",
+  "Sanity check: $191K is ~7.6% of J&W's ~$2.5M mid-case revenue; 60 enrolled clients is 0.2% of the 30K Instagram audience; about 10 new plan clients a month ≈ 1% of coach conversations.",
+  "Upside not counted: repeat orders from coach-acquired new customers, store purchases on scan visits, raw-meat add-ons to plan deliveries."
+ ],
+ "kpis": [
+  {
+   "label": "Coach conversations (site + Instagram)",
+   "target": "1,000+ a month by Oct 2027"
+  },
+  {
+   "label": "Conversation to cart or plan",
+   "target": "12–15%"
+  },
+  {
+   "label": "Personal Macro Plan clients enrolled",
+   "target": "57–60 by Oct 2027; 80 by Oct 2028"
+  },
+  {
+   "label": "New plan clients",
+   "target": "~10 a month"
+  },
+  {
+   "label": "Plan monthly churn",
+   "target": "≤ 9%"
+  },
+  {
+   "label": "Active weeks per enrolled client",
+   "target": "≥ 77% (40 of 52)"
+  },
+  {
+   "label": "Average plan value",
+   "target": "≥ $170 a week"
+  },
+  {
+   "label": "Members re-scanning every 4 weeks",
+   "target": "≥ 70%"
+  },
+  {
+   "label": "Medical or allergy mentions reaching a person",
+   "target": "100%, within 1 business day"
+  },
+  {
+   "label": "Personal portions within ±5 g of target",
+   "target": "≥ 95%"
+  },
+  {
+   "label": "Coach SKUs with dietitian-reviewed macros",
+   "target": "100% before launch"
+  }
+ ],
+ "agentNeeds": [
+  {
+   "name": "Macro Butler coach",
+   "job": "Runs the intake conversation on jwfoods.com and in Instagram DMs, calculates daily targets with dietitian-approved rules, builds Monday to Friday from tagged Meal Butler SKUs within the shopper's budget and skips, explains swaps with price and macro changes, and returns a cart link or a Personal Macro Plan draft. Claude Sonnet; reads only the approved catalogue, prices and routes.",
+   "onScreen": "The intake stepper, the 'Your daily target' card, the 'Here's your week' planner with swaps, and the chat replies."
+  },
+  {
+   "name": "Nutrition data and label agent",
+   "job": "Computes per-SKU macros from J&W recipes, cooked yields and Health Canada's Canadian Nutrient File, stores them in Shopify metafields, flags claims for review, and generates each personal label (name, day, grams, macros) for the weekly print run. Claude Opus in batch; a registered dietitian approves the data.",
+   "onScreen": "Macro dots and 'est.' values on every card, and the personal label that prints in 'Your name on every bag'."
+  },
+  {
+   "name": "Instagram DM concierge",
+   "job": "Answers DMs to @jwfoods about delivery days, prices and reheating, starts the coach when someone types PLAN, books scans, and passes medical, allergy and complaint messages to a person with a short summary.",
+   "onScreen": "The Instagram DM demo, and DM reply drafts in the team approvals queue."
+  },
+  {
+   "name": "Check-in and re-plan agent",
+   "job": "Each week reads the client's feedback and skips, and every 4 weeks their InBody result, then drafts gram, calorie and swap changes within the dietitian's limits. Nothing changes until the coach desk approves.",
+   "onScreen": "Team approval 'Re-plan after scan · Maria S.' and the scan card's 'What the coach changed'."
+  },
+  {
+   "name": "Safety triage agent",
+   "job": "Screens every intake and message for medical conditions, medications, pregnancy, allergies, eating-disorder signals or under-18 users; stops the automatic plan, sends a holding reply and routes to the partner dietitian or staff. Claude Haiku classification.",
+   "onScreen": "The 'Let's get a person on this' card in the intake, and escalations in the team view."
+  },
+  {
+   "name": "Production sheet agent",
+   "job": "At the Sunday cut-off turns all confirmed personal plans into a Saturday weigh-and-pack sheet by component, grams and route day, plus the label print order and stock swaps, and feeds the main production forecast.",
+   "onScreen": "Team view 'Saturday weigh-and-pack' table, route split and the stock-swap approval."
+  }
+ ],
+ "assumptions": [
+  "Public launch Mon Jan 4, 2027 (month 3) after macros for the coach's ~60 SKUs are dietitian-reviewed and a December pilot with 10 regular customers.",
+  "Average plan value $170 a week (size mix 30/50/20 Regular/Plus/Performance; 45% Lunch & Dinner, 55% Full Day; ~$4 add-ons).",
+  "Clients are active 40 of 52 weeks (0.77) and plan churn is 9% a month, between the standing-order (6–8%) and meal-kit (8–15%) benchmarks.",
+  "Net factor 0.70 on plan revenue, removing existing-customer spend and overlap with Play 1.",
+  "$33 incremental per coach-built one-time cart; coach-created standing orders are counted in Play 1.",
+  "Gross margin 45% (model-assumptions.md). Plan prices keep food cost near 55% of price; extra weighing and coaching labour is counted as a cost.",
+  "Coach conversations grow to ~1,100 a month by Oct 2027 from site chat and Instagram DMs (30K followers).",
+  "InBody lease about $300 a month and partner dietitian about $150 an hour (estimates; quotes needed).",
+  "Macros are estimates from recipes, cooked yields and the Canadian Nutrient File until lab tests confirm best-sellers.",
+  "Plan meals are packed in J&W's pre-set meal format with one personal label per meal, delivered on existing route days at the normal fee or picked up free."
+ ],
+ "risks": [
+  "Health advice: the coach gives general guidance only; a registered dietitian signs off the rules, and conditions, medications, pregnancy, eating-disorder signals and under-18s go to a person. Staff are called coaches; 'registered dietitian' is a protected title in Ontario.",
+  "Macro accuracy and label claims: J&W publishes no nutrition panels today. Keep 'estimate' wording, lab-test best-sellers, and confirm personal-label content and 'salt and sugar free' claims with a labelling consultant (CFIA / Health Canada).",
+  "Kitchen complexity: gram-weighed meals add pack time and room for error. Cap at ~100 clients until the Saturday weigh-and-pack run is proven.",
+  "Overlap and cannibalisation with existing buyers and Play 1, handled by the 0.70 net factor and by counting coach standing orders in Play 1.",
+  "Privacy: weight, body composition and GLP-1 use are sensitive under PIPEDA. Clear consent, minimal data, never used for ad targeting, deletable on request.",
+  "AI mistakes: the coach reads only approved data, prices come from Shopify, every plan and change is approved by a person, and transcripts are sampled weekly.",
+  "Instagram automation must follow Meta's messaging policies, including the 24-hour reply window.",
+  "Key-person risk if the coach desk depends on Lucas alone; write a playbook and train a second person.",
+  "Price acceptance among value-minded customers; the free coach and à la carte option stay, and plan prices are reviewed after 3 months."
+ ],
+ "who": "Lucas or a hired part-time nutrition coach runs the coach desk: ~4 h/week at launch, ~8 h/week by Oct 2027, ~10 h/week in year 2 (approves plans and weekly changes, runs scans, takes free calls). Kitchen lead ~2–4 h/week on the Saturday weigh-and-pack and label run. Tasia ~1–2 h/week on Instagram escalations and scan bookings at the counter. A partner registered dietitian on contract: ~12 h at setup, then ~4 h/month. Owner (Bill or Steven) 30 minutes/week reviewing the dashboard.",
+ "costs": {
+  "setup": 7000,
+  "monthly": 3200,
+  "note": "Setup ≈ $7,000: dietitian review of rules and macro database 12 h × $150 = $1,800; lab tests on top 10 SKUs ≈ $2,000 (shared with Play 1, count once); label-printing scale or thermal printer ≈ $1,500; 10 founding clients' first week free ≈ $950 food cost; staff training ≈ $400; launch reels ≈ $300. Monthly ≈ $3,200 at ~60 clients (≈ $2,700 average in year 1, ≈ $3,500 at 75 clients): coach desk ~8 h/wk ≈ $870; extra weigh-and-pack ~3.5 h/wk ≈ $370; labels ≈ $150; partner dietitian ≈ $600; InBody lease ≈ $300 (estimate; buying ≈ $10–15K); software (Claude API, Instagram messaging tool, client profiles) ≈ $250; Meta ads ≈ $700. Year 1 all-in ≈ $36K. Subscription app shared with Play 1; delivery on existing routes at the normal fee. Excludes Minastech's fee."
+ },
+ "sources": [
+  {
+   "title": "Calo KSA home (stats, plans, FAQ)",
+   "url": "https://calo.app/en-sa"
+  },
+  {
+   "title": "Calo plans and packages (Custom Macros config and pricing)",
+   "url": "https://calo.app/en-sa/plans-and-packages"
+  },
+  {
+   "title": "Calo high-protein plan FAQ (48h edits, build your own)",
+   "url": "https://calo.app/en-sa/high-protein-meal-plan"
+  },
+  {
+   "title": "Calo consultations",
+   "url": "https://calo.app/en-sa/consultations"
+  },
+  {
+   "title": "Calo vs COOK (UK pricing and app features, Apr 2026)",
+   "url": "https://calo.app/en-sa/blog/calo-vs-cook"
+  },
+  {
+   "title": "Calo help: pausing a subscription",
+   "url": "https://help.calo.app/en/articles/4704801-how-to-pause-the-subscription-plan"
+  },
+  {
+   "title": "Wamda: Calo raises US$39M Series B extension (Jul 2025)",
+   "url": "https://www.wamda.com/2025/07/calo-raises-39-milliion-series-b-extension-boost-global-growth"
+  },
+  {
+   "title": "CB Insights: Fresh Fitness Food acquired by Calo",
+   "url": "https://www.cbinsights.com/company/fresh-fitness-food/financials"
+  },
+  {
+   "title": "City Matters: how Fresh Fitness Food calculates macros",
+   "url": "https://citymatters.london/counting-macros-fresh-fitness-food-math"
+  },
+  {
+   "title": "One Life Meals ($25 InBody scan, GTA)",
+   "url": "https://www.onelifemeals.com/"
+  },
+  {
+   "title": "Power Kitchen (Play 1 model, for distinction)",
+   "url": "https://powerkitchen.ca/"
+  },
+  {
+   "title": "J&W Foods / Meal Butler store and prices",
+   "url": "https://www.jwfoods.com/"
+  },
+  {
+   "title": "J&W delivery routes and cut-off",
+   "url": "https://www.jwfoods.com/pages/home"
+  },
+  {
+   "title": "J&W Instagram (30K followers)",
+   "url": "https://www.instagram.com/jwfoods/"
+  },
+  {
+   "title": "Yably: J&W Google 4.8★ from 611 reviews",
+   "url": "https://yably.ca/reviews/toronto/j-w-foods-2201-brimley-road"
+  },
+  {
+   "title": "Eightx: subscription churn by category",
+   "url": "https://www.eightx.co/blog/average-subscription-churn-rate-by-category"
+  },
+  {
+   "title": "Claude API pricing",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  {
+   "title": "Health Canada: Canadian Nutrient File",
+   "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data.html"
+  },
+  {
+   "title": "Noom: AI assistant alongside human coaches",
+   "url": "https://www.fintechfutures.com/press-releases/noom-introduces-ai-enabled-products-to-enhance-on-demand-health-care-and-interactive-coaching"
+  },
+  {
+   "title": "Fortune: Amazon Rufus shoppers 60% more likely to buy",
+   "url": "https://www.fortune.com/2025/11/02/amazon-rufus-ai-shopping-assistant-chatbot-10-billion-sales-monetization"
+  },
+  {
+   "title": "Full play write-up (local)",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-06.md"
+  }
+ ],
+ "prototype": {
+  "concept": "A mobile-first page where a shopper answers seven quick questions, sees their daily macros with the maths shown, and gets a Monday-to-Friday week of real Meal Butler portions they can swap, then buys it à la carte or as a Personal Macro Plan. It shows Calo's best idea, cooking to your own numbers, done by a Scarborough butcher with a personal label, an InBody scan at the store and a person behind the AI. The JW team view shows the coach desk: approvals of AI drafts, safety escalations, the client roster and the Saturday weigh-and-pack sheet on the existing route days.",
+  "wow": "Type your name and press 'Print my label': a thermal-style J&W label slides out line by line with your name, the day, each component in grams and that meal's macros, built from the week the coach just made for you (e.g. 'FOR MARIA S. · TUESDAY · LUNCH / Greek Lemon Chicken Breast 180 g / Greek Lemon Potatoes 200 g / Green Beans 110 g / 519 kcal · P 63 g · C 51 g · F 7 g (est.) / Weighed 180 g · target 180 g ✓').",
+  "design": {
+   "inspiredBy": "Calo's split hero with a rotating audience line, macro-dot dish cards, the plan configurator's sticky live summary, the condensed kinetic statement band and the FAQ beside a 'talk to us' card. Rebuilt in J&W navy and Meal Butler slate purple with a butcher-paper label motif instead of Calo's green.",
+   "palette": [
+    {
+     "hex": "#154D8E",
+     "role": "J&W navy: primary buttons, links, logo, active tabs"
+    },
+    {
+     "hex": "#0E2238",
+     "role": "Night navy: kinetic band, Instagram phone frame, footer CTA, team headers"
+    },
+    {
+     "hex": "#5B5A8C",
+     "role": "Meal Butler slate purple: coach avatar, chat bubbles, protein dot, 'Most personal' badge"
+    },
+    {
+     "hex": "#7FB3D5",
+     "role": "Sky blue: fat dot, chips on dark, focus ring on dark"
+    },
+    {
+     "hex": "#EAF1F8",
+     "role": "Sky mist: alternate sections and intake card background"
+    },
+    {
+     "hex": "#F6F1E6",
+     "role": "Butcher paper: personal label and persona cards"
+    },
+    {
+     "hex": "#D9982E",
+     "role": "Harvest amber: carbs dot and bars only, never text"
+    },
+    {
+     "hex": "#1D2433",
+     "role": "Ink: headings and body text"
+    },
+    {
+     "hex": "#5A6377",
+     "role": "Slate: secondary text"
+    },
+    {
+     "hex": "#2E7A57",
+     "role": "Pine: 'On target' checks and success states"
+    },
+    {
+     "hex": "#B4442F",
+     "role": "Brick: escalation and medical flags in team view"
+    }
+   ],
+   "displayFont": "Bricolage Grotesque",
+   "bodyFont": "Inter",
+   "layout": "Single column at 375px with 16px gutters, max width 1180px. Sticky 64px header. Hero two columns on desktop (text 6/11, visual 5/11), H1 40px mobile / 64px desktop, weight 800, tight leading. Planner 8/4 grid with a sticky summary on desktop; on mobile the summary is a bottom sheet that sits above the framework's cart and chat buttons. Cards 20px radius, panels 28px, pill buttons, soft navy shadows, 8px macro dots, 10px stacked macro bars. Label and macro numbers in IBM Plex Mono (Google Fonts URL: https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap). Kinetic band uses Bricolage Grotesque at width 75.",
+   "tone": "Plain, warm, second person, short sentences, Canadian spelling, a little wit. Honest about estimates. Never 'revolutionize', 'unlock', 'seamless' or 'game-changer'."
+  },
+  "sections": [
+   {
+    "name": "Header",
+    "purpose": "Brand and navigation",
+    "content": "Logo ../assets/img/jw-logo.jpg (alt 'J&W Foods, Est. 1995'), wordmark 'Meal Butler' + chip 'AI Coach'. Anchors: How it works · Your numbers · Your week · Plans · Scans · FAQ. Button 'Start my plan'."
+   },
+   {
+    "name": "Hero",
+    "purpose": "Promise and two entry points",
+    "content": "Eyebrow 'MEAL BUTLER AI COACH · CONCEPT'. H1 'Meals weighed to your macros, for' + rotating line 'early-shift nurses.' / 'Saturday lifters.' / 'people on a GLP-1.' / 'busy parents.' / 'marathon training.' (2.4 s, pause on hover, reduced motion shows 'for you.'). Sub: 'Tell the Butler your goal in two minutes. Get a week of J&W cooked portions sized to your numbers. Then our Scarborough kitchen weighs every portion to the gram and puts your name on the bag.' Buttons 'Start my plan' (scrolls to intake) and 'Chat with the Butler' (JWC.chat.open()). Trust line: '4.8★ from 611 Google reviews · No added salt, sugar or oil · Ontario-inspected kitchen since 2008'. Visual: real product photos (souvlaki, salmon, egg bites via JWC.img) with a floating label card 'FOR MARIA S. · MON · LUNCH / Chicken Breast Souvlaki 175 g / White Basmati Rice 200 g / Broccoli 110 g / 589 kcal · P 63 · C 63 · F 7 (est.)' and chip 'Protein today: 140 of 140 g'."
+   },
+   {
+    "name": "How it works",
+    "purpose": "Explain the three steps",
+    "content": "H2 'Three steps. About two minutes.' 1 'Talk to the Butler': 'Answer seven quick questions here, or DM PLAN to @jwfoods on Instagram.' 2 'Get your week': 'The coach builds Monday to Friday from Meal Butler portions we already cook. Swap anything and watch the macros and price change.' 3 'Weighed, labelled, delivered': 'Buy it in our standard 4oz and 6oz sizes, or join the Personal Macro Plan and we weigh each portion to your grams, with your name on the bag.' Numbered badges in navy."
+   },
+   {
+    "name": "Your numbers (intake)",
+    "purpose": "Calo-style custom-macro stepper done as a chat",
+    "content": "H2 \"Let's get your numbers\". Sub 'Seven questions. Demo: your answers stay on this device.' Chat-style stepper with coach avatar and progress dots. Q1 \"What's the goal?\" chips: Lose fat · Build muscle · Maintain and perform · Eat well on a GLP-1 medication. Q2 'A bit about you': age; sex ('used only for the calorie formula'); height cm or ft/in; weight kg or lb. Q3 'How many days a week do you train?' 0–7. Q4 'Which meals should we cover?' Lunch and dinner, Mon–Fri · Breakfast, lunch and dinner, Mon–Fri. Q5 'Anything you skip?' Fish · Beef · Spicy · Eggs · Dairy · Rice · Nothing. Q6 'Weekly food budget?' slider $100–$250, default $175, \"We'll tell you if your week goes over.\" Q7 'Where do you live?' JWC.cities() + 'Pick up at Brimley Rd', shows route day and fee. Safety check: 'Do any of these apply? Pregnant or breastfeeding · Diabetes · Kidney disease · A food allergy · Past eating disorder · Under 18.' Link 'Use demo answers' (Maria: lose fat, F, 38, 165 cm, 78 kg, 3 days, full day, no skips, $175, Scarborough). Result 'Your daily target (estimate)': 1,610 kcal · 140 g protein · 160 g carbs · 45 g fat, stacked bar (protein purple, carbs amber, fat sky), 'Edit macros' ±5 g steppers, expandable 'How we worked this out': 'Resting burn by the Mifflin-St Jeor formula: 1,460 kcal. Times 1.375 for 3 training days: 2,008 kcal. Minus 20% to lose fat: 1,610 kcal. Protein 1.8 g per kg. Fat 25% of calories. Carbs fill the rest. A registered dietitian reviews these rules (concept). General guidance, not medical advice.' Button 'Build my week'. If any safety box is ticked: card \"Let's get a person on this\" with 'Book a free 15-minute call'. Formula: BMR men 10·kg+6.25·cm−5·age+5, women −161; activity 0–1 days 1.2, 2–3 1.375, 4–5 1.55, 6–7 1.725; goal lose 0.80, maintain 1.00, build 1.10, GLP-1 0.75; protein g/kg lose 1.8, maintain 1.6, build 2.0, GLP-1 1.4 (cap 220 g); round kcal to 10, grams to 5."
+   },
+   {
+    "name": "Your week (planner)",
+    "purpose": "Bespoke week from real SKUs with swaps and live totals",
+    "content": "H2 \"Here's your week, Maria.\" Sub 'Built from Meal Butler portions we cook every week. Tap Swap on anything.' Day tabs Mon–Fri; Breakfast / Lunch / Dinner cards with JWC.img photo, name, grams, macro dots, est. kcal, price, 'Swap'. Default week: Mon Chicken Breast Souvlaki 175 g / White Basmati 200 g / Broccoli 110 g + Salmon Fillet 230 g / Quinoa 200 g / Asparagus 110 g; Tue Greek Lemon Chicken 180 g / Greek Lemon Potatoes 200 g / Green Beans 110 g + Roasted Turkey Breast 180 g / Sweet Potato 200 g / Spinach 110 g; Wed Teriyaki Chicken 175 g / Cilantro Lime Rice 200 g / Broccoli & Cauliflower 110 g + Haddock Loin 255 g / Brown Basmati 200 g / Brussels Sprouts 110 g; Thu Korean BBQ Chicken 175 g / White Basmati 200 g / Green Beans 110 g + Beef Flank Steak 195 g / Baked Potato 200 g / Asparagus 110 g; Fri Arabic 7 Spice Chicken 160 g / Caribbean Rice & Beans 200 g / Mixed Veggies 110 g + Jerk Chicken 180 g / Sweet Potato 200 g / Green Beans 110 g; breakfast daily Egg White Bites, Spinach & Feta + Steel Cut Oats. Algorithm: Full Day breakfast fixed (290 kcal, P16, C31, F9.5 est.), lunch and dinner each get (daily − breakfast) ÷ 2; Lunch & Dinner plan gives each meal 35% of the day; veg 110 g (140 g GLP-1); carbs (meal carbs − veg carbs) ÷ carb per g clamped 60–200 g; protein (meal protein − carb and veg protein) ÷ protein per g clamped 85–255 g (GLP-1 cap 140 g); round to 5 g; macros from perOz ÷ 28.35; exact price = per-oz price of largest variant × grams ÷ 28.35; à la carte uses the nearest standard variant, qty 1. Day bar: calories and protein vs target, pine 'On target' when protein within ±10%, amber 'Light on calories' when >15% under with tip 'Add an Apple Cinnamon Oat Bar ($4.99)'. Note: 'We cook with no added oil, so fat runs low. Salmon twice a week helps.' Swap sheet: 4 same-role options respecting skips with deltas (e.g. 'Chicken Breast Souvlaki 175 g · −$1.47 · +4 g fat · same protein, est.') and 'Use this'. Sticky summary: 'Protein average 140 g a day (target 140)', 'À la carte, standard sizes: $159.12', 'Personal Macro Plan, Full Day · Plus: $189 a week, weighed to your grams'. Buttons 'Add this week to cart' and 'Make it my Personal Macro Plan'. Small text: \"Standard sizes are close to your grams, not exact. That's what the plan fixes.\" Budget flag with 'Budget swap' (Beef Flank Steak → Chicken Breast Souvlaki) if over budget. Link 'Want a standing order at 10% off? See Goal Plans (Prototype 1).'"
+   },
+   {
+    "name": "Your name on every bag",
+    "purpose": "The wow: personal label printing",
+    "content": "H2 'Your name on every bag.' Sub \"Plan meals are cooked with everyone else's, then weighed to your grams and sealed with a label made for you.\" Input 'First name and last initial' (labelled). Day and meal pickers. Button 'Print my label' animates a thermal label sliding down line by line in IBM Plex Mono on butcher paper: 'J&W MEAL BUTLER · PERSONAL MACRO PLAN / FOR MARIA S. / TUESDAY · LUNCH / Greek Lemon Chicken Breast 180 g / Greek Lemon Potatoes 200 g / Green Beans 110 g / 519 kcal · P 63 g · C 51 g · F 7 g (est.) / Weighed 180 g · target 180 g ✓ / Packed at 2201 Brimley Rd, Scarborough / Keep frozen. Thaw overnight, reheat 60–90 s.' plus a CSS barcode stripe. Caption 'Macros are estimates from our recipes and Health Canada nutrient data.'"
+   },
+   {
+    "name": "Plans",
+    "purpose": "À la carte vs Personal Macro Plan with Concept pricing",
+    "content": "H2 'Two ways to eat your plan.' Card A 'À la carte · Free coach, standard sizes': 'Pay per item, as always' · 'Free AI coach on the site and Instagram' · '3oz, 4oz and 6oz portions' · 'Free pickup, or $100 minimum on routes' · 'Order by Sunday for next week'; button 'Add my week to cart'. Card B, badge 'Most personal', 'Personal Macro Plan (Concept)': toggles Lunch & Dinner / Full Day and Regular / Plus / Performance (auto-picked: Regular up to 120 g protein a day, Plus 121–160 g, Performance over 160 g): Lunch & Dinner $119 / $139 / $159, Full Day $169 / $189 / $219 a week. Bullets: 'Every portion weighed to your grams' · 'Your name, day and macros on each meal' · 'Weekly check-in: the AI drafts it, a person at J&W approves it' · 'InBody scan at Brimley Rd every 4 weeks, included' · 'Free 15-minute call with a registered dietitian to start' · 'Skip or pause before the Sunday cut-off. No contract.' Button 'Start my Personal Macro Plan'. Footnote: \"Concept pricing built from J&W's own per-ounce prices. Your week at exact grams is about $187 à la carte. GTA premium meal prep runs $14 to $30 a meal.\""
+   },
+   {
+    "name": "Kinetic band",
+    "purpose": "Memorable statement",
+    "content": "Marquee on night navy in Bricolage Grotesque width 75: 'WEIGHED. LABELLED. YOURS.' Smaller line: 'Cut, cooked and portioned in Scarborough since 1995.' Static under reduced motion."
+   },
+   {
+    "name": "Scans",
+    "purpose": "Store visit and re-plan loop",
+    "content": "H2 'Check in every four weeks.' Sub 'Drop by 2201 Brimley Rd for a five-minute InBody scan. Your coach uses it to adjust your grams, so the plan moves with you.' Sample card (labelled 'Sample'): Week 0 → Week 4: weight 78.0 → 76.4 kg · body fat 36.1% → 35.0% · skeletal muscle 25.2 → 25.3 kg, small line chart. 'What the coach changed: calories stay at 1,610, protein stays at 140 g, Thursday's Beef Flank Steak becomes Haddock Loin to keep fat in range.' Button 'Book a scan'."
+   },
+   {
+    "name": "Instagram",
+    "purpose": "Show the DM channel",
+    "content": "H2 'Already on Instagram? So is the Butler.' Sub 'DM PLAN to @jwfoods. Same coach, same numbers. When your week is ready, you get a link that opens here.' Phone mock on night navy, button 'Play the DM demo'. Script: user 'PLAN' → coach \"Hi! I'm the J&W Meal Butler coach, an AI. Lucas and Tasia check anything personal. What's the goal: lose fat, build muscle, maintain, or eating well on a GLP-1?\" → user 'lose fat. 86 kg, 6 ft, 35, gym 4x a week' → coach 'Got it. About 2,270 calories and 155 g of protein a day (estimate). Lunch and dinner, or the full day?' → user 'lunch and dinner. no fish pls' → coach 'Done: 10 meals, no fish, about 55 g of protein each. $139 a week on the Personal Macro Plan (Plus), or about $105 à la carte in our standard sizes.' → button 'Open my week'."
+   },
+   {
+    "name": "Who it's for",
+    "purpose": "Relatable use cases without fake reviews",
+    "content": "H2 'Built for real weeks.' Persona cards labelled 'Sample people, not reviews': 'Early-shift nurse, Scarborough: lunch and dinner sized for 12-hour shifts, Saturday pickup after her scan.' · 'Lifter, Vaughan: Performance size on the Friday route.' · \"On a GLP-1, Ajax: smaller plates, more protein per bite, extra greens. Her prescriber stays in the loop.\" · \"Dad of three, Mississauga: his own plan rides on the family's Wednesday order.\""
+   },
+   {
+    "name": "FAQ and talk to a person",
+    "purpose": "Trust and human fallback",
+    "content": "H2 'Questions, answered.' Accordion: 'Is the coach a real person?' → 'The coach is an AI that knows our menu, prices and delivery routes. A person at J&W approves every Personal Macro Plan and every weekly change before it reaches you. Medical questions always go to a person.' / 'How accurate are the macros?' → \"They're estimates built from our recipes, cooked weights and Health Canada's nutrient file, reviewed by a registered dietitian (concept). We lab-test our top sellers. Each portion is weighed, so the grams on your label are real.\" / 'Can I use it on a GLP-1 medication?' → \"Yes. The coach plans smaller portions with more protein and fibre. Keep your prescriber involved; we don't change medical advice.\" / \"What if I don't like something?\" → 'Tell the coach. It swaps like for like and shows you the price and macro change before you agree.' / 'Can I skip a week?' → 'Yes. Skip or pause any week before the Sunday cut-off. No contract, no cancellation fee.' / 'How does delivery work?' → 'Your plan comes frozen on your usual J&W route day at the normal route fee, or pick it up free at 2201 Brimley Rd.' / 'What happens to my data?' → 'We keep your answers to plan your food and nothing else. We never use your weight or health details for ads. Delete them any time.' Side card 'Rather talk to a person?' with initials avatars L (Lucas), T (Tasia), RD (partner dietitian): button 'Book a free 15-minute call'."
+   },
+   {
+    "name": "Closing band",
+    "purpose": "Final CTA",
+    "content": "'Ready when you are.' Buttons 'Start my plan' and 'Chat with the Butler'. Framework dock follows."
+   }
+  ],
+  "customerFlows": [
+   {
+    "name": "Numbers to week to à la carte order",
+    "steps": [
+     "Hero: tap 'Start my plan'",
+     "Tap 'Use demo answers' (or answer the 7 steps)",
+     "Safety check: leave all boxes empty, tap 'See my numbers'",
+     "Result shows 1,610 kcal · 140 g P · 160 g C · 45 g F (est.); tap 'Build my week'",
+     "Open Tuesday, tap Swap on dinner, choose Chicken Breast Souvlaki 175 g (−$1.47), tap 'Use this'; day bar and summary update",
+     "Tap 'Add this week to cart': real ids at the nearest standard variants go into JWC.cart, toast, cart opens",
+     "Tap Checkout: JWC.checkout({ title: 'Your coach-built week' })",
+     "Choose Scarborough, Wednesday route, 'Place demo order'",
+     "Demo confirmation; order appears in JW team view"
+    ]
+   },
+   {
+    "name": "Join the Personal Macro Plan",
+    "steps": [
+     "Planner: tap 'Make it my Personal Macro Plan' (or Plans card B)",
+     "Choose Full Day; size auto-picks Plus ($189) from 140 g protein",
+     "Type 'Maria S.' and tap 'Print my label'; label prints",
+     "Pick first week (the Monday after the next Sunday cut-off)",
+     "Tap 'Continue': JWC.checkout({ title: 'Personal Macro Plan', items: [{ id: 'concept-pmp-full-plus', name: 'Personal Macro Plan · Full Day · Plus (Concept)', price: 189, qty: 1, note: '1,610 kcal · 140 g protein · weighed to your grams' }], subscription: { label: 'Personal Macro Plan, every week', discountPct: 0 }, onPlaced })",
+     "Place demo order; onPlaced opens welcome modal 'Welcome, Maria. Your first meals arrive on the Wednesday route.'",
+     "Tap 'Book my first scan', pick a slot, demo confirmation"
+    ]
+   },
+   {
+    "name": "Book an InBody scan",
+    "steps": [
+     "Scans section: tap 'Book a scan'",
+     "Pick one of the next 6 open days (Mon–Fri 9–6, Sat 10–4, Sunday closed) and a 15-minute slot",
+     "Enter name (labelled field); note 'Members: included. Everyone else: $25, paid at the counter.'",
+     "Tap 'Book demo scan'",
+     "Confirmation 'Demo: nothing is sent.'; booking appears in the team Saturday scan list"
+    ]
+   },
+   {
+    "name": "Instagram DM to plan",
+    "steps": [
+     "Instagram section: tap 'Play the DM demo'",
+     "Scripted thread plays (PLAN, goal, size, 'lunch and dinner. no fish pls')",
+     "Tap 'Open my week' in the last message",
+     "Planner loads Marc's no-fish Lunch & Dinner week (2,270 kcal, 155 g protein; Ground Turkey Breast and Chicken Breast Tenders replace fish) and scrolls to it",
+     "Continue with 'Add this week to cart' → JWC.checkout, or 'Make it my Personal Macro Plan' ($139 Plus) → JWC.checkout"
+    ]
+   },
+   {
+    "name": "GLP-1 question in chat",
+    "steps": [
+     "Open chat, tap suggestion \"I'm on Ozempic. What should I eat?\"",
+     "Coach replies with smaller, protein-dense meals and keeps the prescriber in the loop",
+     "Tap the reply's action 'Book a free dietitian call'",
+     "Call modal: choose partner registered dietitian, pick a slot, phone field ('Demo: nothing is sent')",
+     "Demo confirmation"
+    ]
+   },
+   {
+    "name": "Safety hand-off",
+    "steps": [
+     "Intake: tick 'Diabetes' at the safety check",
+     "Result shows \"Let's get a person on this\" instead of targets",
+     "Tap 'Book a free 15-minute call', choose partner registered dietitian, pick a slot",
+     "Demo confirmation; the request appears in team escalations"
+    ]
+   }
+  ],
+  "teamView": [
+   {
+    "name": "Coach desk · week of Mar 15, 2027 (sample)",
+    "content": "KPI tiles: Conversations 186 (site 112 · Instagram 74) · Carts built 19 ($2,600) · Plan clients 29 enrolled, 26 active, 3 new, 2 paused · Scans booked 12 · Escalated to a person 7 (3 medical, 2 allergy, 1 age check, 1 complaint) · AI reply under 10 s, human reply 3.2 h. Plan economics card: '26 active × $170 = $4,420 this week · est. gross profit $1,990 · coach desk 5 h · pack time 2.3 h'. Demo orders placed on this page (JWC.orders() with proto 6, listen to jwc:order) appear at the top as new rows."
+   },
+   {
+    "name": "Waiting for your OK (AI drafts)",
+    "content": "Each row has Approve · Edit · Ask dietitian. (a) Re-plan after scan · Maria S. · drafted by Check-in and re-plan agent: '−1.6 kg in 4 weeks, body fat −1.1 points. Keep 1,610 kcal and 140 g protein. Thursday dinner Beef Flank Steak 195 g → Haddock Loin 255 g (−14 g fat).' (b) New plan · Dev P. · Macro Butler coach: '3,250 kcal, 185 g protein, Full Day · Performance $219. Covers his protein and about half his calories; suggest a daily Chicken Souvlaki Wrap ($5.99).' (c) Escalation · Instagram DM (name hidden) · Safety triage agent: 'Mentions type 2 diabetes and metformin. Holding reply drafted; route to partner dietitian.' (d) DM reply · Instagram DM concierge: 'Yes, Whitby is on our Tuesday route ($20, $100 minimum). Order by Sunday.' (e) Stock swap · Production sheet agent: 'Honey Garlic Salmon short until Thursday; swap 4 plans to Salmon Fillet 6oz (−$0.15).' Approving shows a toast and moves the row to 'Done today'."
+   },
+   {
+    "name": "Saturday weigh-and-pack · routes Mar 23–27 (sample)",
+    "content": "Header: 26 active clients · 330 personal meals · 330 labels · ~2.3 h extra pack time. Proteins (portions, avg grams, total): Chicken Breast Souvlaki 72, 168 g, 12.1 kg · Greek Lemon Chicken Breast 44, 165 g, 7.3 kg · Roasted Turkey Breast 34, 170 g, 5.8 kg · Salmon Fillet 30, 215 g, 6.5 kg · Beef Flank Steak 28, 185 g, 5.2 kg · Teriyaki Chicken Breast 28, 165 g, 4.6 kg · Haddock Loin 24, 240 g, 5.8 kg. Carbs: White Basmati Rice 84 · Sweet Potato Chunks 62 · Quinoa 36 · Brown Basmati Rice 30 · Greek Lemon Potatoes 28 · Baked Potato 20. Veg: Broccoli 80 · Green Beans 70 · Asparagus 50 · Brussels Sprouts 30 · Spinach 30. Breakfast: Egg White Bites 70 · Steel Cut Oats 70. Route split: Tue GTA 1: 4 · Wed GTA 2: 10 · Thu GTA 3: 3 · Fri GTA 4: 5 · Sat pickup: 4. Note: 'Drafted by the Production sheet agent at the Sunday cut-off. Kitchen lead signs off.' Button 'Print label run (demo)'."
+   },
+   {
+    "name": "Clients (sample data)",
+    "content": "Table: Client · Plan · Daily target · Route · Last scan · Trend · Status. Maria S. · Full Day Plus · 1,610 kcal / 140 g · Wed GTA 2 Scarborough · Mar 13 · −1.6 kg / 4 wk · Re-plan waiting | Dev P. · Full Day Performance · 3,250 / 185 · Fri GTA 4 Vaughan · new · Plan waiting | Anita R. · Lunch & Dinner, GLP-1 mode · 1,580 / 135 · Tue GTA 1 Ajax · Mar 6 · −2.1 kg, muscle steady · Active | Kevin T. · Lunch & Dinner Plus · 2,630 / 130 · Sat pickup · Feb 27 · +0.4 kg · Scan due | Priya N. · Full Day Regular · 1,750 / 110 · Wed GTA 2 Mississauga · Mar 10 · −0.9 kg · Paused to Mar 29 | Marc L. · Lunch & Dinner Plus · 2,270 / 155 · Thu GTA 3 Oakville · Mar 1 · −1.2 kg · Active."
+   },
+   {
+    "name": "Funnel this week",
+    "content": "186 conversations → 104 got their numbers (56%) → 61 built a week (33%) → 27 started a cart or plan (15%) → 19 paid carts + 3 new plans. Small bar chart, site vs Instagram split."
+   },
+   {
+    "name": "Saturday scan list",
+    "content": "10:00 Kevin T. (member) · 10:15 walk-in, first scan ($25) · 10:30 Maria S. (member) · 11:00 Anita R. (member) · 11:15 walk-in ($25). Scans booked in the customer view are appended here."
+   },
+   {
+    "name": "Agent activity",
+    "content": "'Macro Butler coach drafted 14 plans · Nutrition data agent flagged the Korean BBQ marinade for a sugar check · Instagram DM concierge answered 61 of 74 DMs without help (82%) · Safety triage stopped 7 plans for a person · Production sheet ready Sun 11:59 pm.' Note: 'Agents draft, sort and forecast. Nothing reaches a client until someone at J&W approves it.'"
+   }
+  ],
+  "chat": {
+   "name": "Ask the Butler · Coach",
+   "greeting": "Hi, I'm the Meal Butler coach. Tell me your goal and I'll size a week of J&W portions to your numbers. I'm an AI; Lucas, Tasia and our partner dietitian check anything personal or medical.",
+   "suggestions": [
+    "Build me a week to lose fat",
+    "I'm on Ozempic. What should I eat?",
+    "What's on the personal label?",
+    "How much is the Personal Macro Plan?",
+    "Can I book an InBody scan?"
+   ],
+   "rules": [
+    {
+     "match": "diabet|insulin|metformin|pregnan|breastfeed|kidney|renal|celiac|allerg|anaphyla|eating disorder|anorexi|bulimi|heart (condition|disease)|blood pressure",
+     "reply": "Thanks for telling me. That one needs a person, not an AI. I'll pass it to our partner registered dietitian, who can call you within one business day for a free 15-minute chat. Our portions have no added salt, sugar or oil, but please don't change anything your doctor has set until you've talked to them."
+    },
+    {
+     "match": "glp|ozempic|wegovy|mounjaro|zepbound|saxenda|semaglutide|tirzepatide|appetite",
+     "reply": "Lots of our customers are on a GLP-1. When your appetite drops, protein per bite matters most. I'd plan four smaller meals, like 3oz Chicken Breast Tenders ($3.14) with 6oz broccoli, or a Lemon Chicken Rice Soup ($8.99, about 16 g protein, est.), and keep fibre up with Brussels sprouts and green beans. Please keep your prescriber in the loop. Want a free 15-minute call with our partner dietitian?"
+    },
+    {
+     "match": "how much.*(plan|week|coach)|price|cost|\\$|per week|afford",
+     "reply": "The coach is free. The Personal Macro Plan (concept prices, built from our own per-ounce prices) is $119, $139 or $159 a week for lunch and dinner, or $169, $189 or $219 for the full day, sized by your daily protein. Delivery is the normal route fee, or pick up free at Brimley Rd."
+    },
+    {
+     "match": "label|my name|weigh(ed|ing)?|to the gram|exact (grams|portion)",
+     "reply": "On the Personal Macro Plan each portion is weighed to your grams, not our standard 4oz or 6oz. If your Monday lunch calls for 175 g of Chicken Breast Souvlaki, that's what goes in, give or take 5 g. Each meal gets a label with your name, the day, the grams and the macros (estimates)."
+    },
+    {
+     "match": "scan|inbody|body ?fat|body comp|muscle mass",
+     "reply": "Drop by 2201 Brimley Rd for a five-minute InBody scan, Monday to Friday 9 to 6 or Saturday 10 to 4. It's included every four weeks on the Personal Macro Plan and $25 otherwise (concept). Your coach uses it to adjust your grams."
+    },
+    {
+     "match": "swap|don'?t (like|eat)|hate|instead|no (fish|beef|pork|rice|eggs?)",
+     "reply": "Easy. Tell me what you skip and I'll swap like for like and show you the change first. Example: Salmon Fillet 6oz ($10.85) to Haddock Loin 6oz ($8.25) saves $2.60 and about 20 g of fat, for 3 g less protein (est.). Tap Swap on any meal in your week to try it."
+    },
+    {
+     "match": "skip|pause|cancel|holiday|vacation|away|contract",
+     "reply": "Skip or pause any week before the Sunday cut-off, in your plan or just by telling me. No contract and no cancellation fee. Your grams and label stay saved for when you're back."
+    },
+    {
+     "match": "real person|human|lucas|tasia|dietitian|nutritionist|call me|talk to",
+     "reply": "Happy to get you a person. Lucas or Tasia can help with food, orders and your plan, and our partner registered dietitian handles health conditions and medications. The first 15-minute call is free. Use Book a free call on this page, or phone (416) 298-1350."
+    },
+    {
+     "match": "instagram|\\bdm\\b|\\big\\b|insta",
+     "reply": "DM the word PLAN to @jwfoods on Instagram. It's the same coach with the same numbers, and when your week is ready it sends a link that opens your plan on jwfoods.com."
+    },
+    {
+     "match": "lose|cut|fat loss|build|bulk|gain|muscle|how much protein|calories|macros|tdee",
+     "reply": "I start with your resting burn (the Mifflin-St Jeor formula), adjust for training days, then set the goal: about 20% under to lose fat, 10% over to build. Protein lands around 1.6 to 2.0 g per kg. Example: a 78 kg woman training 3 days gets about 1,610 kcal and 140 g of protein a day (estimate). Tap Start my plan to get yours in two minutes."
+    }
+   ]
+  },
+  "productIds": [
+   "chicken-breast-souvlaki",
+   "chicken-breast-souvlaki-cooked-portioned-copy",
+   "chicken-breast-greek-lemon-cooked-portioned-copy",
+   "chicken-breast-teriyaki-cooked-portion",
+   "chicken-breast-tenders-cooked-portioned-copy",
+   "jerk-chicken-breast",
+   "chicken-breast-tenders",
+   "boneless-chicken-thighs-cooked-3oz",
+   "turkey-breast",
+   "copy-of-turkey-breast-roasted",
+   "cooked-flank-steak",
+   "salmon",
+   "haddock",
+   "tilapia",
+   "rice-white-basmati",
+   "rice-brown-basmati",
+   "quinoa",
+   "sweet-potato-chunks-peeled",
+   "copy-of-potato-boiled",
+   "potato-baked",
+   "cilantro-lime-basmati-rice-cooked-portioned",
+   "caribean-rice-beans-cooked-portioned",
+   "broccoli",
+   "green-beans",
+   "asparagus",
+   "brussel-sprouts",
+   "spinach-chopped",
+   "copy-of-teriyaki-mix-cooked-portioned",
+   "mixed-veggies-cooked-portioned",
+   "copy-of-california-mix-cooked-portioned",
+   "copy-of-feta-omelette-cups-cooked-portioned-2-pkg",
+   "copy-of-egg-bites-omelette-w-peppers-onions-mushrooms-cooked-portioned-2-pkg",
+   "steel-cut-oats",
+   "oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy",
+   "spinach-feta-egg-wrap",
+   "beef-souvlaki-wrap",
+   "soup-chicken-lemon-soup",
+   "pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white"
+  ],
+  "conceptProducts": [
+   {
+    "name": "Personal Macro Plan · Lunch & Dinner (Concept)",
+    "price": "$119 Regular · $139 Plus · $159 Performance per week (10 meals, Mon–Fri)",
+    "basis": "Same 10 meals at exact grams and J&W per-ounce prices cost about $110 (130 g protein/day) to $139 (140 g/day); standard-size equivalent about $100–$111. E.g. Chicken Breast Souvlaki 6oz $6.93 = $1.155/oz, White Basmati 6oz $2.31, Broccoli 4oz $1.39."
+   },
+   {
+    "name": "Personal Macro Plan · Full Day (Concept)",
+    "price": "$169 Regular · $189 Plus · $219 Performance per week (15 meals, Mon–Fri)",
+    "basis": "Adds 5 breakfasts of Egg White Bites ($5.25) + Steel Cut Oats ($4.40) = $48.25. Default 140 g-protein week costs $186.95 at exact grams or $159.12 in standard sizes; a 185 g-protein week is about $214 at exact grams."
+   },
+   {
+    "name": "Plan size rule (Concept)",
+    "price": "Regular ≤120 g protein/day · Plus 121–160 g · Performance >160 g",
+    "basis": "Protein drives portion cost; keeps food cost near 55% of plan price so gross margin stays about 45%."
+   },
+   {
+    "name": "InBody body-composition scan (Concept)",
+    "price": "$25 walk-in; included every 4 weeks for plan members",
+    "basis": "One Life Meals charges $25 for an InBody scan in the GTA; JW's lease cost ≈ $300/month (estimate)."
+   },
+   {
+    "name": "Free 15-minute call (Concept)",
+    "price": "$0",
+    "basis": "With Lucas or Tasia (food, orders, plan) or the partner registered dietitian (health conditions, medications); dietitian time ≈ $150/h is a JW cost."
+   }
+  ]
+ }
+}

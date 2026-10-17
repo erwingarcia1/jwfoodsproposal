@@ -1,0 +1,651 @@
+{
+ "n": 1,
+ "slug": "goal-plan-builder",
+ "name": "Goal Plan Builder",
+ "oneLiner": "A 60-second quiz matches GTA shoppers to one of six goal plans built from real Meal Butler meals, sold as a skip-anytime subscription (weekly, every 2 weeks or a monthly Freezer Fill) with 10% off.",
+ "headline": "Standing orders turn one-off Meal Butler carts into predictable, recurring revenue at about 40% gross margin, using meals J&W already cooks.",
+ "focus": "Quiz-led goal plans on a skip-anytime subscription",
+ "mechanism": "J&W adds a quiz and six goal plans (Lean, Lean Bulk, Athlete, Protein & Greens, GLP-1 Companion, Busy Family) built only from current Meal Butler items. Examples: the Jerk Chicken pre-set at $12.99 (4oz); Chicken Breast Souvlaki 6oz at $6.93 with 6oz white basmati at $2.31 and broccoli at $1.39; 4oz salmon at $7.99; Egg White Bites at $5.25; Lemon Chicken Rice Soup at $8.99. Each box (10 to 40 meals) is priced as the sum of those real items, then 10% off on subscription. That lands at $7.30 a meal (GLP-1 Companion, 14 meals) to $13.02 (Lean Bulk), against about $16 to $27 for GTA goal plans. Customers choose weekly, every 2 weeks or a monthly Freezer Fill (possible only because J&W freezes its meals in vacuum packs), and can skip, swap or pause until Sunday night. If they change nothing, a Butcher's Pick box ships. A household box puts several people's plans in one delivery with one fee, and every box rides the existing Tue to Fri routes or free pickup at Brimley Rd.",
+ "modelledOn": {
+  "name": "Power Kitchen",
+  "url": "https://powerkitchen.ca/",
+  "scope": "GTA (East York, Toronto)",
+  "short": "Quiz-matched goal meal plans on a skip-anytime subscription",
+  "what": "Family-owned, bootstrapped GTA meal-prep company (46 Hollinger Rd, about 10 km from Brimley Rd). It sells eight goal plans (Power, Pro Athlete, GLP-1 Support, Low Carb, Clean Bulking, Keto, Lean Muscle, Vegan) through a plan-matching quiz. The subscription auto-renews and can be skipped, paused or edited before a hard cut-off. It also runs a sticky custom-meal builder, a one-month trial, a prepaid 6-week program, rewards, referrals and an ambassador program.",
+  "proof": "Verified Oct 16 2026: goal boxes list at $16.22-$36.95 a meal (Power and Lean Muscle $17.85-$23.95; GLP-1 Support $21.76-$27.96). Subscribe discount 5% plus 5% credit. One-Month Trial $365-$535 for 20 meals. 4.7 stars from 564 Google reviews. 185 SKUs, all updated Oct 16 2026. Own fleet to about 40 cities on Sunday and Wednesday. Stack includes Klaviyo, Triple Whale and Sezzle. Revenue not published; estimate about C$3-7M a year (low confidence).",
+  "jwEdge": "J&W is its own Ontario-inspected butcher (plant since 2008, family butchers since 1995). Recipes are salt and sugar free with no added oils. Plan meals cost $7.30-$13.02 with Subscribe & Save, roughly 25-45% less per like-for-like meal (est.). Frozen vacuum packs allow a monthly Freezer Fill and long-haul Ontario routes that fresh rivals cannot serve. A household box covers several people in one order, which Power Kitchen cannot do. Credits apply automatically. J&W also has bigger social proof: 4.8 stars from 611 Google reviews and 30K Instagram followers."
+ },
+ "year1": {
+  "low": 175000,
+  "mid": 350000,
+  "high": 580000
+ },
+ "runRate": 757000,
+ "marginPct": 40,
+ "startMonth": 2,
+ "mathYear1": "Subscribers ramp from 0 (Nov 2026 build month) to 251 by Oct 2027. New subscribers: Dec 25, Jan 60, Feb 45, Mar 35, Apr 35, May 30, Jun 25, Jul 25, Aug 30, Sep 40, Oct 40 = 390, with 9% monthly churn. That gives 1,675 subscriber-months (avg 140 active) x $243.75 a month ($125 box after 10% off x 26 deliveries x 0.9 not skipped / 12) = $408K. Add 220 one-off plan boxes x $135 = $30K. Gross $438K x 0.8 incrementality = $350K added revenue (mid). Low: 245 new, 12% churn, $120 box, x0.75 = ~$175K. High: 555 new, 7% churn, $130 box, x0.85 = ~$580K.",
+ "mathRunRate": "Year 2 (Nov 2027-Oct 2028): start with 251 active, add 35 a month, churn 8.5%. Average 312 active x $2,925 a year ($125 x 26 x 0.9) = $914K, plus 240 one-off boxes x $135 = $32K. Gross $946K x 0.8 incrementality = ~$757K a year added revenue. Low ~$380K (25 adds/month, 11% churn); high ~$1.2M (45 adds/month, 7.5% churn; needs a second packing shift).",
+ "mathNotes": [
+  "Plan prices are sums of J&W's real Oct 16 2026 online prices. Example: Lean Bulk 10 meals = $144.65 one-off, $130.18 with 10% Subscribe & Save ($13.02 a meal).",
+  "Revenue counts only subscribers who were not already weekly Meal Butler buyers. The 10% given to existing buyers who switch (~60 people, ~$13K in year 1) is counted as a cost, not as revenue.",
+  "Gross margin 40% after the 10% discount (model-assumptions.md). Year 1 mid: $350K x 40% = $140K gross profit, minus ~$89K all-in JW costs = ~$51K contribution before Minastech's fee.",
+  "Year 2: $757K x 40% = $303K gross profit, minus ~$120K running costs = ~$183K contribution.",
+  "Cross-check: market-benchmarks.md section 11 says ~320 active every-2-weeks subscribers at $120 is about $1M gross. This play's year-2 average of 312 at $125 with 10% skips gives $914K gross.",
+  "Volume: ~68 extra boxes a week (~850 meals) on average in year 1, ~146 a week (~1,800 meals) in year 2. Today J&W runs an estimated 60-160 delivery orders a week, so plant capacity must be confirmed.",
+  "Delivery runs on existing routes. The customer pays the $20-$35 route fee, which covers an owned-route stop at $8-$14. No new route days.",
+  "Year 1 is +14% on the ~$2.5M mid baseline; run-rate is +30%. Both are within the typical range for one play."
+ ],
+ "kpis": [
+  {
+   "label": "Quiz completions",
+   "target": "800 a month avg; 1,200 in Jan 2027"
+  },
+  {
+   "label": "Quiz to first plan order",
+   "target": "7%"
+  },
+  {
+   "label": "Plan buyers choosing Subscribe & Save",
+   "target": "60%+"
+  },
+  {
+   "label": "Active subscribers",
+   "target": "140 avg in year 1; 250 by Oct 2027; 310 avg in year 2"
+  },
+  {
+   "label": "Monthly churn",
+   "target": "9% or lower in year 1; 8.5% in year 2"
+  },
+  {
+   "label": "Skipped deliveries",
+   "target": "12% or fewer of scheduled boxes"
+  },
+  {
+   "label": "Average box after discount",
+   "target": "$125+"
+  },
+  {
+   "label": "Paid CAC per new subscriber",
+   "target": "$90 or less"
+  },
+  {
+   "label": "Freezer Fill share of subscribers",
+   "target": "20%"
+  },
+  {
+   "label": "M3 / M12 subscriber retention",
+   "target": "70% / 45%"
+  }
+ ],
+ "agentNeeds": [
+  {
+   "name": "Macro Butler (plan matcher)",
+   "job": "Scores quiz answers into one of six plans, sets box size and cadence, splits a household into profiles, and writes a two-line 'why this plan' note from owner-approved templates. Routes medical, allergy or eating-disorder signals to a person. Chat-based personal plans hand off to the AI Coach (Play 6).",
+   "onScreen": "Quiz result card: 'Why we picked Lean Bulk for you', labelled 'Drafted by Macro Butler from your answers', plus the household split."
+  },
+  {
+   "name": "Nutrition Data Agent",
+   "job": "Computes est. macros for the ~31 plan SKUs from recipes, cooked yields and Health Canada CNF values. Writes them to Shopify metafields and queues each panel for a nutritionist's sign-off. Flags regulated claim wording (high protein, low carb, GLP-1).",
+   "onScreen": "'est.' macro chips on every plan card and meal row; team tile 'Macro sign-off: 9 of 31 plan SKUs verified'."
+  },
+  {
+   "name": "Butcher's Pick Menu Agent",
+   "job": "Drafts next week's default box for each plan within stock, par levels and margin, and rotates chicken flavours so subscribers don't get bored. The owner approves before the Sunday cut-off.",
+   "onScreen": "Team approval card: 'Week of Mar 29: Lean box swaps the Tilapia pre-set for the Haddock plate (tilapia 2 cases below par). Margin +$0.40 a box.'"
+  },
+  {
+   "name": "Subscription & Reorder Agent",
+   "job": "Sends Saturday SMS and email reminders before the Sunday cut-off. Handles OK, SKIP, SWAP and PAUSE replies in plain language. Proposes cancel-save offers within owner-set limits and follows up failed payments. Checks CASL consent.",
+   "onScreen": "SMS preview in My Plan, the cancel-save modal, and team approvals for 3 save offers and the Saturday reminder."
+  },
+  {
+   "name": "Production Forecast Agent",
+   "job": "After the Sunday cut-off, turns subscription lines into Monday's cook, portion and pack sheet, box counts by route day, and the raw-material purchase list.",
+   "onScreen": "Team 'Monday prep sheet' table (portions by SKU) and the route-impact panel (boxes by route day)."
+  },
+  {
+   "name": "Lifecycle Marketing Agent",
+   "job": "Drafts quiz-abandon emails, a welcome series for each plan, the January 6-Week Reset campaign and the switch campaign for displaced Goodfood and LiveFit customers. The owner approves every send.",
+   "onScreen": "Team campaign drafts awaiting approval, including one GLP-1 email flagged for labelling review."
+  },
+  {
+   "name": "Review & Reputation Agent",
+   "job": "Asks subscribers for a product and Google review after their second box and drafts replies. A person approves every reply to a 1-3 star review. No undisclosed incentives.",
+   "onScreen": "Team queue: 2 reply drafts for new Google reviews."
+  }
+ ],
+ "assumptions": [
+  "Average subscription box is $125 after 10% off ($139 before). 26 scheduled deliveries a year (every-2-weeks equivalent across the weekly, every-2-weeks and monthly mix), 10% skipped, so $2,925 a year per active subscriber.",
+  "390 new subscribers in year 1 (Dec-Oct). None in November, the build month. Existing weekly Meal Butler buyers who switch are not counted as revenue.",
+  "Monthly churn is 9% in year 1 and 8.5% in year 2 (Eightx: replenishment 5-8%, meal kits 8-15%).",
+  "220 one-off plan boxes in year 1 and 240 in year 2, at $135.",
+  "Incrementality factor 0.8 (model-assumptions.md range 0.75-0.85).",
+  "Gross margin 40% after the 10% Subscribe & Save discount (model-assumptions.md).",
+  "About 45% of new subscribers come from paid ads at about $85 CAC. The rest come from Instagram (30K), email, the store counter and referrals.",
+  "Delivery uses existing routes at current fees ($20-$35, $100 minimum) or free pickup. J&W's existing free-delivery-from-$200 rule needs confirming.",
+  "The plant can absorb ~850 extra meals a week in year 1 and ~1,800 in year 2 (to confirm with J&W).",
+  "Prices are J&W's online prices on Oct 16 2026. Macros are estimates until a nutritionist verifies them."
+ ],
+ "risks": [
+  "Claims: J&W shows no nutrition panels, and 'high protein', 'low carb' and GLP-1 wording are regulated or sensitive under Canada's Food and Drug Regulations. Mitigation: show 'est.' on macros until a nutritionist signs off, use 'Protein & Greens' instead of 'Low Carb', and get a labelling review before launch.",
+  "Discount leakage: existing weekly buyers may move to 10% off (~$13K in year 1). Mitigation: Subscribe & Save applies to plan boxes only, not to à la carte carts.",
+  "Kitchen capacity and stockouts on plan SKUs (e.g. tilapia, salmon). Mitigation: Production Forecast Agent par levels, and Butcher's Pick swaps within the plan.",
+  "Churn could run above the model (meal kits churn 8-15% a month; 44% of cancellations happen in the first 90 days). Mitigation: skip and pause, monthly Freezer Fill, save offers and failed-payment follow-up. The low case uses 12% churn.",
+  "Only one route day per zone, while fresh rivals deliver Sunday and Wednesday. The frozen format makes weekly or monthly delivery enough; $30 express stays for urgent orders.",
+  "Overlap with Play 6 (AI Coach) for the same subscribers. Count quiz-led subscribers here and chat-led personal plans in Play 6 only.",
+  "Owner-led brand risk (a 2020 Yelp complaint). Front the plans with the Meal Butler team and the product.",
+  "Comparative pricing must stay accurate. Quote public price ranges, not a named rival, and recheck each quarter."
+ ],
+ "who": "Meal Butler lead (e.g. Lucas or Tasia), 8-12 h/week on plan menus, AI-draft approvals and subscriber messages. Owner (Bill), about 1 h/week on the Monday digest and offer approvals. Kitchen: one part-time cook/packer from February, 20 h/week rising to 35 h/week by October. Store counter: about 2 h/week for pickup plan boxes. Minastech builds the quiz, plans, subscription setup and agents (fee not counted here).",
+ "costs": {
+  "setup": 7000,
+  "monthly": 7450,
+  "note": "Estimates, excluding Minastech's fee. Setup: nutritionist review of plan rules and ~31 SKUs $2,500; lab analysis of top 8 SKUs $1,600; plan photos and video $1,200; label design and print $800; staff training $900. Year-1 running (Dec-Oct) ~$81.9K (~$7,450 a month): software $6.2K (subscription app ~$200/mo, Klaviyo email+SMS share ~$250/mo, AI tokens ~$100/mo, reviews app $15/mo); paid ads $15K (~175 subscribers x ~$85 CAC); switch and referral credits $6.2K; Meal Butler lead 12 h/wk $13.8K; part-time cook/packer from Feb $25.7K; box labels $2.1K; discount leakage on existing buyers who switch $13K. At year-2 volume, running costs rise to about $10K a month (~$120K a year). Route delivery stays customer-paid ($20-$35) and covers the $8-$14 cost per stop."
+ },
+ "sources": [
+  {
+   "title": "Power Kitchen homepage, quiz and live Google widget (4.7/564)",
+   "url": "https://powerkitchen.ca/"
+  },
+  {
+   "title": "Power Kitchen product catalogue and prices",
+   "url": "https://powerkitchen.ca/products.json?limit=250"
+  },
+  {
+   "title": "Power Kitchen collections (5% subscription discount)",
+   "url": "https://powerkitchen.ca/collections.json"
+  },
+  {
+   "title": "Power Kitchen how it works",
+   "url": "https://powerkitchen.ca/pages/how-it-works"
+  },
+  {
+   "title": "Power Kitchen FAQ (skip, pause, cut-offs)",
+   "url": "https://powerkitchen.ca/pages/faq"
+  },
+  {
+   "title": "Power Kitchen shipping policy",
+   "url": "https://powerkitchen.ca/policies/shipping-policy"
+  },
+  {
+   "title": "Power Kitchen quiz landing page",
+   "url": "https://powerkitchen.ca/pages/meal-plan-offer"
+  },
+  {
+   "title": "Power Kitchen custom meal builder",
+   "url": "https://powerkitchen.ca/pages/power-custom-meals"
+  },
+  {
+   "title": "Power Kitchen 6-week program",
+   "url": "https://powerkitchen.ca/pages/six-weeks-program"
+  },
+  {
+   "title": "Power Kitchen one-month trial",
+   "url": "https://powerkitchen.ca/pages/power-one-month-trial"
+  },
+  {
+   "title": "Power Kitchen loyalty",
+   "url": "https://powerkitchen.ca/pages/loyalty"
+  },
+  {
+   "title": "Power Kitchen our story",
+   "url": "https://powerkitchen.ca/pages/our-story"
+  },
+  {
+   "title": "Power Kitchen 2026 Toronto price guide post",
+   "url": "https://powerkitchen.ca/blogs/blog/meal-delivery-cost-toronto-pk"
+  },
+  {
+   "title": "J&W Foods store and product prices",
+   "url": "https://www.jwfoods.com/products.json"
+  },
+  {
+   "title": "J&W delivery routes and Sunday cut-off",
+   "url": "https://www.jwfoods.com/pages/home"
+  },
+  {
+   "title": "J&W free delivery from $200",
+   "url": "https://www.jwfoods.com/pages/free-delivery"
+  },
+  {
+   "title": "J&W about us",
+   "url": "https://www.jwfoods.com/pages/about-us"
+  },
+  {
+   "title": "J&W Google 4.8 from 611 reviews (Yably aggregate)",
+   "url": "https://yably.ca/reviews/toronto/j-w-foods-2201-brimley-road"
+  },
+  {
+   "title": "J&W Instagram (30K)",
+   "url": "https://www.instagram.com/jwfoods/"
+  },
+  {
+   "title": "Eightx subscription churn and cohort benchmarks",
+   "url": "https://www.eightx.co/blog/average-subscription-churn-rate-by-category"
+  },
+  {
+   "title": "Eightx subscription vs one-time AOV",
+   "url": "https://eightx.co/blog/average-ecommerce-aov-subscription-vs-onetime-2026"
+  },
+  {
+   "title": "Recharge Subscriber Trends report",
+   "url": "https://www.prnewswire.com/news-releases/recharge-subscriber-trends-insights-report-highlights-the-growing-value-of-subscribers-to-ecommerce-brands-302250623.html"
+  },
+  {
+   "title": "Triple Whale Meta ads benchmarks",
+   "url": "https://www.triplewhale.com/blog/facebook-ads-benchmarks"
+  },
+  {
+   "title": "Klaviyo email benchmarks",
+   "url": "https://www.klaviyo.com/products/email-marketing/benchmarks"
+  },
+  {
+   "title": "Job Bank delivery driver wages, Ontario",
+   "url": "https://www.jobbank.gc.ca/marketreport/wages-occupation/21667/ON"
+  },
+  {
+   "title": "Goodfood Q2 FY2026 loss (Retail Insider)",
+   "url": "https://retail-insider.com/retail-insider/2026/04/goodfood-market-reports-7-million-net-loss-in-q2/"
+  },
+  {
+   "title": "Goodfood Q4 FY25 results (41.7% gross margin)",
+   "url": "https://cdn.makegoodfood.ca/images/investors/docs/2025/q4/Goodfood_Q4_FY25_Earnings_Press_Release_en.pdf"
+  },
+  {
+   "title": "Full play write-up",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-01.md"
+  }
+ ],
+ "prototype": {
+  "concept": "Shows how J&W can sell the meals it already cooks as goal plans on a subscription, the way Power Kitchen does, but in J&W's voice and at J&W's prices. A shopper answers an 8-step quiz and gets a named plan with est. macros and a real price per meal, built from current Meal Butler SKUs. They subscribe weekly, every 2 weeks or as a monthly Freezer Fill, then manage it in a My Plan portal (skip, swap, pause, cancel with a save offer). The JW team view shows subscribers, the Monday prep sheet, route impact and AI-agent drafts waiting for approval.",
+  "wow": "Pick a goal and a priced, macro-counted box of real J&W meals assembles itself as a stack of kraft freezer bags in the sticky bag. Flip 'Every 2 weeks' to 'Monthly Freezer Fill' and the stack grows to a month of meals, the price per meal holds, and 'Route fees a month' drops from 2 x $20 to 1 x $20.",
+  "design": {
+   "inspiredBy": "Power Kitchen's structure: thin cut-off announcement bar, quiz card with a step tracker and encouraging notes, goal-plan cards with macro chips and a plan accent colour, a sticky builder bag with a 'meals chosen' counter, and a dark rounded trust panel. Rebuilt in J&W's laurel navy, Meal Butler slate purple and sky blue on a warm kraft-cream ground with a premium serif, plus butcher-heritage cues (kraft paper, vacuum-pack freezer bags).",
+   "palette": [
+    {
+     "hex": "#154D8E",
+     "role": "J&W navy: primary buttons, links, logo zone, Lean Bulk accent"
+    },
+    {
+     "hex": "#0E1B4D",
+     "role": "Deep ink: headings, cut-off bar, dark trust panel, footer"
+    },
+    {
+     "hex": "#5B5A8C",
+     "role": "Meal Butler slate purple: recommended offer card, My Plan header, GLP-1 Companion accent"
+    },
+    {
+     "hex": "#7FB3D5",
+     "role": "Sky blue: selected quiz option border, progress tracker, Lean accent (never as text on white)"
+    },
+    {
+     "hex": "#E6F0F8",
+     "role": "Sky tint: selected quiz option background, info chips"
+    },
+    {
+     "hex": "#F7F3EC",
+     "role": "Kraft cream page background"
+    },
+    {
+     "hex": "#D9C7A7",
+     "role": "Kraft tan: freezer-bag stack illustrations, dividers"
+    },
+    {
+     "hex": "#FFFFFF",
+     "role": "Cards"
+    },
+    {
+     "hex": "#A23B2A",
+     "role": "Butcher red: cut-off countdown and Athlete accent only"
+    },
+    {
+     "hex": "#0F7B4F",
+     "role": "Savings green: Subscribe & Save rows, Protein & Greens accent"
+    },
+    {
+     "hex": "#B7791F",
+     "role": "Amber: Busy Family accent and 'Concept' tags (dark text on light amber tint)"
+    },
+    {
+     "hex": "#566072",
+     "role": "Muted body text"
+    }
+   ],
+   "displayFont": "Fraunces",
+   "bodyFont": "Inter",
+   "layout": "Mobile-first single column at 375px; 12-column grid at 1024px+. Quiz is a centred white card (max 720px, 16px radius) with a dot tracker and full-pill options at least 44px tall. Plan cards sit in a 1/2/3-column grid with a 4px left rule in the plan accent. The builder is two panes on desktop with a sticky right-hand bag; on mobile the bag becomes a bottom sheet with a sticky bar ('14 of 14 meals · $182.02'). Freezer Fill and Household are full-width bands; trust is a dark rounded panel. Soft shadows, 12-16px radii, no horizontal scroll.",
+   "tone": "Plain, warm and specific, like the family butcher at the counter. Canadian spelling (fibre, flavour, favourite), short sentences, no hype words, no emoji. 'We' is the J&W kitchen. Every macro says 'est.'; concept items carry an amber 'Concept' tag; GLP-1 copy always says it is food, not medical advice."
+  },
+  "sections": [
+   {
+    "name": "Cut-off bar",
+    "purpose": "Borrowed urgency plus J&W's real rule.",
+    "content": "Thin #0E1B4D bar, white text: 'Change or order your plan by Sunday night for next week's route. Pickup at 2201 Brimley Rd is always free.' Right side: live countdown 'Cut-off in 2d 6h' to the next Sunday 11:59 pm (butcher-red pill)."
+   },
+   {
+    "name": "Header",
+    "purpose": "Brand and navigation.",
+    "content": "Logo ../assets/img/jw-logo.jpg (alt 'J&W Foods, established 1995') + wordmark 'Meal Butler Plans'. Nav: Plans · How it works · Find my plan · My Plan · cart button showing JWC.cart.count() (opens JWC.cart.open())."
+   },
+   {
+    "name": "Hero",
+    "purpose": "State the promise and the price gap.",
+    "content": "Background ../assets/img/meals.jpg (alt 'Meal Butler meals: salmon with quinoa, chicken with broccoli, flank steak with green beans'). Eyebrow: 'Goal plans by J&W Meal Butler'. H1: 'Pick your goal. We'll cook the plan.' Sub: 'Six goal plans made from Meal Butler meals we already cook, portion and freeze at our Ontario-inspected plant in Scarborough. Salt and sugar free, with no added oils. Skip or swap any week.' Buttons: 'Find my plan (about 60 seconds)' and 'See the six plans'. Trust chips: '4.8 on Google · 611 reviews' · 'Butchers since 1995' · 'Ontario-inspected plant since 2008' · '30K on Instagram'. Floating price card: 'From $7.30 a meal with Subscribe & Save. Most plans $9.56 to $13.02 a meal. Premium GTA goal plans list at about $16 to $27 a meal (public prices, Oct 2026).' Amber 'Concept' tag."
+   },
+   {
+    "name": "How it works",
+    "purpose": "Four-step explainer.",
+    "content": "H2 'How it works'. 1 'Take the quiz. Goal, training, who's eating.' 2 'Get your plan. Meals, est. macros and a price per meal.' 3 'Pick a rhythm. Weekly, every 2 weeks, or a monthly Freezer Fill.' 4 'Stay in control. Skip, swap or pause until Sunday night.'"
+   },
+   {
+    "name": "Find my plan (quiz)",
+    "purpose": "The core Power Kitchen idea in J&W's voice; routes to a plan, size, rhythm and route.",
+    "content": "H2 'Find my plan'. 8 steps with dot tracker, Back/Next. Q1 'What's your main goal?' Lose fat · Build muscle · Train hard (5+ days) · Eat fewer starches · I'm eating less on a GLP-1 medicine · Feed the whole family (note: 'Good. We'll build around that.'). Q2 'How many days a week do you train?' 0 · 1–2 · 3–4 · 5–6 · 7. Q3 'Who's eating?' Just me · Two adults · A family with kids (note on 2+: 'We can pack everyone's plan in one box.'). Q4 'How many lunches and dinners should we cover each week?' 5 · 7 · 10 (most popular) · 14. Q5 'How often should we deliver?' Every week · Every 2 weeks (most popular) · Once a month (Freezer Fill) (note: 'Our meals are frozen in vacuum packs, so a month at once works.'). Q6 'Anything to leave out?' multi-chips Fish · Red meat · Eggs and dairy · Spicy · Rice (note: 'Allergies? Call us at (416) 298-1350 before you order.'). Q7 'Are you switching from another meal service?' No · Goodfood · Factor · LiveFit · Another meal-prep service (yes → 'Welcome. We'll take $25 off your first subscribed box (concept offer).'). Q8 'Where should we deliver?' select of JWC.cities() + 'I'll pick up at Brimley Rd'; shows the route live, e.g. 'Toronto: Wednesday route (GTA 2), $20, $100 minimum'. Loading line 1.2s: 'Building your plan from this week's Meal Butler menu…'. Routing: GLP-1 → GLP-1 Companion; family or 'Feed the whole family' → Busy Family / household; fewer starches → Protein & Greens; build muscle with 5+ days or train hard → Athlete; build muscle → Lean Bulk; lose fat → Lean. Box size = meals per week x weeks per delivery (1, 2 or 4)."
+   },
+   {
+    "name": "Quiz result + three offers",
+    "purpose": "Convert to a plan with a real price.",
+    "content": "White card, slate-purple top border. H3 'Your plan: Lean Bulk'. 'Why this plan' (label 'Drafted by Macro Butler from your answers'): 'You train 3–4 days and want to build muscle, so every meal has a 6oz protein and a proper serving of rice or potatoes.' Macros: '523 kcal · 54g protein · 40g carbs · 13g fat per meal (est.)'. Box: '10 meals every 2 weeks · $130.18 with Subscribe & Save ($13.02 a meal)'. Route line from Q8. Monthly maths: 'About $282 a month for 20 meals'. Offer cards: 'Try one box' ($144.65, 'No subscription'); 'Subscribe & Save, Recommended' (slate purple: '10% off every box · Skip, swap or pause until Sunday night · Butcher's Pick if you don't choose', plus '$25 switch credit applied' when Q7 = yes); '6-Week Reset' ('6 weekly boxes, prepaid, 12% off. Starts the week you choose.' Lean Bulk: $763.75 for 60 meals). If 2+ people: link 'Build a household box instead'."
+   },
+   {
+    "name": "Six plans",
+    "purpose": "Merchandise the plans with est. macros and price per meal.",
+    "content": "H2 'Six plans. One butcher.' Cards (eyebrow, name, promise, 3 real product photos, chips kcal·P·C·F est., S&S price per meal large, one-off box small, 3 bullets, button 'Build this plan'). LEAN, 'Fat loss': 'Lighter plates, lean protein in every meal.' Chips 337 · 37g · 33g · 4g. Bullets: 'Turkey, tilapia and chicken meals' · 'Rice or sweet potato, measured' · '10 meals $101.66 with Subscribe & Save' ($10.17 a meal; one-off $112.96). LEAN BULK, 'Muscle gain': '6oz proteins and a proper serving of carbs.' 523 · 54g · 40g · 13g. 'Souvlaki, flank steak, salmon, sirloin' · 'Rice or potatoes in every meal' · '10 meals $130.18' ($13.02; one-off $144.65). ATHLETE, 'Train 5+ days': 'Grab-and-go wraps plus big plates for heavy weeks.' 476 · 44g · 40g · 12g. 'Beef and chicken fajita wraps' · 'Add the Breakfast 5-pack' · '10 meals $108.25' ($10.83; one-off $120.28). PROTEIN & GREENS, 'Fewer starches': 'Rice and potatoes swapped for cauliflower rice and green veg.' 301 · 46g · 12g · 8g. 'Salmon, haddock, turkey, Korean BBQ flank' · 'Cauliflower rice, asparagus, spinach' · '14 meals $133.79' ($9.56; one-off $148.66). GLP-1 COMPANION, 'Smaller appetite': 'Smaller portions, protein first, fibre-rich sides.' 272 · 27g · 23g · 7g. '3–4oz proteins with quinoa and Brussels sprouts' · 'Soups and egg bites for light days' · '14 small meals $102.26' ($7.30; one-off $113.62). Fine print: 'Food, not medical advice. Follow your prescriber's advice on protein and calories.' BUSY FAMILY, 'Household': 'Grown-up plates and kid-sized plates in one box.' 367 · 35g · 36g · 8g (avg). 'Souvlaki and teriyaki for adults' · 'Meatball and tender plates for kids' · '20 plates $168.57' ($8.43; one-off $187.30). Below the grid: 'Don't want to choose? Do nothing. If your box hasn't changed by Sunday night, we send the Butcher's Pick for your plan, with flavours rotating through Greek Lemon, Korean BBQ, Arabic 7 Spice, Teriyaki, BBQ and Jerk.'"
+   },
+   {
+    "name": "Plan builder with sticky bag",
+    "purpose": "Power Kitchen's builder done with J&W's real items and the freezer-bag wow.",
+    "content": "H2 'Build your [Plan] box'. Step A size: 10 · 14 · 20 · 28 · 40 meals. Step B rhythm: Every week · Every 2 weeks · Monthly Freezer Fill. Step C meals: pre-filled with Butcher's Pick (the plan's 6 meals cycled to size). Rows show photo, name, parts with real prices (e.g. 'Jerk Chicken Breast 6oz $6.30 + White Basmati Rice 6oz $2.31 + Broccoli 4oz $1.39 = $10.00'), est. macros, −/+ qty and 'Swap' (sheet with other plan meals; chicken flavour swaps Greek Lemon $4.99, Korean BBQ $4.99, Teriyaki $4.60, Arabic 7 Spice $4.50, BBQ $4.20). Step D add-ons: 'Breakfast 5-pack $24.55' (3 Egg White Bites + 2 Steel Cut Oats) · 'Extra Chicken Breast Souvlaki 6oz $6.93'. Sticky bag: '14 of 14 meals chosen', a kraft freezer-bag stack (one bag per meal), avg est. macros, one-off subtotal, green 'Subscribe & Save 10% −$X', 'Price per meal', 'Route fees a month: 2 x $20' (changes with rhythm), a route-minimum nudge when the after-discount total is under $100 and delivery is chosen ('Add $X, e.g. the Breakfast 5-pack, to reach the $100 route minimum, or pick up for free'), 'Smart-fill my box' button, primary 'Start my plan'."
+   },
+   {
+    "name": "Freezer Fill band",
+    "purpose": "J&W-only advantage from frozen vacuum packs.",
+    "content": "H2 'Fill the freezer once a month.' Body: 'Every Meal Butler meal is cooked, weighed, portioned and flash-frozen in a vacuum-sealed bag. So you can take a month at once: one delivery, one route fee, one Sunday reminder. Fresh-only services can't stretch that far.' Stat pair: 'Weekly box: 4 route fees a month ($80 on the Wednesday route)' vs 'Freezer Fill: 1 ($20)'. Example: 'Lean Freezer Fill, 20 meals: $197.98 a month with Subscribe & Save ($9.90 a meal).' Button 'Make mine monthly'."
+   },
+   {
+    "name": "Household band",
+    "purpose": "The gap Power Kitchen can't fill (one order per person).",
+    "content": "H2 'One box. Everyone's goals.' Body: 'Add each person in your home, pick their plan, and we pack it all in one box with name tags on the packing list. One delivery, one fee.' Example card: 'Alex · Lean Bulk · 10 meals / Sam · GLP-1 Companion · 10 small meals / Kids · 6 plates. $233.60 every 2 weeks with Subscribe & Save.' Button 'Build a household box'."
+   },
+   {
+    "name": "My Plan (demo portal)",
+    "purpose": "Skip, swap, pause and save flows; proves retention mechanics.",
+    "content": "Slate-purple header 'My Plan'. Shows sample subscriber 'Alex' until the visitor places a plan order, then switches to theirs. Next box: '[Plan] · [N] meals · [route day], [date] · [route name]' + 'Changes close Sunday 11:59 pm' countdown. Box contents with 'Swap'. Buttons: 'Skip this delivery' · 'Pause (1–8 weeks)' · 'Change rhythm' · 'Change plan' · 'Cancel plan'. Credits: '$25 switch credit applied automatically · 312 Smile.io points'. SMS bubble, labelled 'Saturday reminder, drafted by the Subscription & Reorder Agent': 'J&W Meal Butler: Hi Alex, your Lean Bulk box (10 meals, $150.18 with delivery) rides Wednesday. Reply OK, SKIP or SWAP by Sunday night. Reply STOP to opt out.'"
+   },
+   {
+    "name": "Trust panel",
+    "purpose": "Butcher heritage and real social proof, no invented quotes.",
+    "content": "Dark rounded #0E1B4D panel. H2 'Butchers first. Since 1995.' Body: 'J&W started as a family butcher and distributor in 1995 and became an Ontario-inspected meat plant in 2008. We cut, cook, portion and freeze every Meal Butler meal ourselves.' Tiles: '4.8 on Google from 611 reviews' · '30K on Instagram' · 'Ontario chicken, air-chilled, no hormones or antibiotics' · 'Salt and sugar free, no added oils'. Line: 'What customers mention most (themes from public Google and Yelp reviews): hands-on advice at the counter · meat quality · no-oil, boil-in-bag convenience.'"
+   },
+   {
+    "name": "FAQ",
+    "purpose": "Answer objections honestly.",
+    "content": "Accordion. 'Are the macros exact?' → 'Not yet. They're estimates from standard nutrition data until our panels are checked by a nutrition professional. We'll mark verified meals.' 'When can I change my box?' → 'Any time before Sunday night for the next week's route. After that, your box is being cooked.' 'Can I skip or pause?' → 'Yes. Skip any delivery or pause for 1 to 8 weeks from My Plan. Skipped weeks are never charged.' 'How do I store and heat the meals?' → 'Keep them frozen and follow the date and heating steps on each bag.' 'Do you deliver to me?' → 'We run weekly routes Tuesday to Friday across the GTA and some of Ontario for $20 to $35, with a $100 minimum. Pickup at Brimley Rd is free.' 'Is the GLP-1 Companion medical advice?' → 'No. It's smaller, protein-first meals. Follow your prescriber's advice.' 'Can I cancel?' → 'Yes, from My Plan, before the Sunday cut-off, with no fee.'"
+   },
+   {
+    "name": "Footer",
+    "purpose": "Contact facts.",
+    "content": "'J&W Foods · Meal Butler · 2201 Brimley Rd, Unit 1, Scarborough · (416) 298-1350 · Mon–Fri 9–6, Sat 10–4'. Plans, prices per meal, the Breakfast 5-pack, the switch credit and the 6-Week Reset all carry an amber 'Concept' tag. The framework adds the prototype dock."
+   }
+  ],
+  "customerFlows": [
+   {
+    "name": "Quiz to subscription",
+    "steps": [
+     "Tap 'Find my plan (about 60 seconds)'",
+     "Q1 Build muscle → Q2 3–4 → Q3 Just me → Q4 5 → Q5 Every 2 weeks → Q6 none → Q7 Goodfood → Q8 Toronto (shows Wednesday GTA 2, $20)",
+     "Result: Lean Bulk, 10 meals every 2 weeks, $130.18, $25 switch credit applied",
+     "Tap 'Subscribe & Save, Recommended'; the builder opens pre-filled with Butcher's Pick and the freezer-bag stack fills",
+     "Tap 'Start my plan' → JWC.checkout({title:'Start your Lean Bulk plan', items, subscription:{label:'Every 2 weeks · Lean Bulk plan', discountPct:10}, extraRows:[{label:'Switch credit, first box', amount:-25}], city:'Toronto', onPlaced})",
+     "Demo confirmation; My Plan now shows Lean Bulk with next Wednesday's date"
+    ]
+   },
+   {
+    "name": "Browse and build Protein & Greens",
+    "steps": [
+     "Tap 'See the six plans'",
+     "Protein & Greens → 'Build this plan'",
+     "Choose 14 meals and 'Every week'",
+     "Swap 'Haddock & asparagus' for a second 'Salmon & asparagus'; bag re-prices",
+     "Add the Breakfast 5-pack ($24.55)",
+     "'Start my plan' → JWC.checkout({subscription:{label:'Every week · Protein & Greens', discountPct:10}}) → confirmation"
+    ]
+   },
+   {
+    "name": "Household box",
+    "steps": [
+     "Tap 'Build a household box'",
+     "Person 1 'Alex', Lean Bulk, 10 meals",
+     "'Add a person': 'Sam', GLP-1 Companion, 10 small meals",
+     "'Add kids' plates': 3 meatball plates + 3 tenders plates",
+     "Bag shows three name-tagged groups, $259.55 one-off, $233.60 every 2 weeks; items carry note 'Alex · Lean Bulk' etc.",
+     "JWC.checkout({subscription:{label:'Every 2 weeks · Household box', discountPct:10}}) → confirmation lists the name tags"
+    ]
+   },
+   {
+    "name": "Monthly Freezer Fill",
+    "steps": [
+     "In the builder, flip rhythm to 'Monthly Freezer Fill'",
+     "Box jumps to 20 meals, the bag stack grows, 'Route fees a month' becomes 1 x $20",
+     "Pick Barrie (Friday long route, $35)",
+     "JWC.checkout({subscription:{label:'Monthly Freezer Fill · Lean', discountPct:10}, city:'Barrie'}) → confirmation"
+    ]
+   },
+   {
+    "name": "6-Week Reset (prepaid)",
+    "steps": [
+     "On the result card tap '6-Week Reset'",
+     "Summary sheet: 'Lean Bulk, 10 meals x 6 weekly boxes, $867.90 less 12% = $763.75'",
+     "JWC.checkout({title:'6-Week Reset (prepaid)', items:[{id:'concept-reset-lean-bulk', name:'6-Week Reset: Lean Bulk, 10 meals x 6 weekly boxes (Concept)', price:144.65, qty:6}], extraRows:[{label:'Prepaid saving (12%)', amount:-104.15}], note:'Route fee applies to each of the 6 deliveries; the demo shows one.'})",
+     "Demo confirmation"
+    ]
+   },
+   {
+    "name": "Manage my plan",
+    "steps": [
+     "Open My Plan",
+     "'Skip this delivery' → toast 'Skipped. Your next box is [date]'; date updates",
+     "'Swap' on a meal → pick another → toast",
+     "'Pause' → 2 weeks → status 'Paused until [date]' → 'Resume'"
+    ]
+   },
+   {
+    "name": "Cancel with a save offer",
+    "steps": [
+     "My Plan → 'Cancel plan'",
+     "Modal 'Before you go, would one of these help?': 'Skip the next 2 boxes' · 'Switch to a monthly Freezer Fill (saves 3 route fees a month)' · 'Make my box smaller (14 → 10 meals)' · link 'Cancel anyway'",
+     "Pick 'Switch to monthly' → 'Done. Your plan is now a monthly Freezer Fill. Next box: [date].' (JWC.toast)",
+     "Or 'Cancel anyway' → 'Cancelled. No fee. Your points stay.' Demo only: nothing is sent"
+    ]
+   }
+  ],
+  "teamView": [
+   {
+    "name": "KPI tiles",
+    "content": "Header 'Sample week: Mar 22, 2027 (month 5 of the plan)', all labelled 'Sample data, for illustration'. Active subscribers 145 (+12 this week) · Quiz completions this week 214 · Quiz → plan order 7.4% · Took Subscribe & Save 63% · Monthly churn 8.6% · Skips 9 of 74 (12%) · Avg box after discount $127.40 · Boxes this week 70 (65 subscription + 5 one-off) · Revenue this week $8,918."
+   },
+   {
+    "name": "Plan mix",
+    "content": "Columns: plan · active · avg box · boxes this week · est. GP/week at 40%. Lean 40 · $112 · 19 · $851; Lean Bulk 32 · $139 · 15 · $834; Athlete 14 · $121 · 6 · $290; Protein & Greens 15 · $134 · 7 · $375; GLP-1 Companion 24 · $104 · 11 · $458; Busy Family 20 · $171 · 7 · $479; Total 145 · 65 boxes · $3,287."
+   },
+   {
+    "name": "Quiz insights (switch intelligence)",
+    "content": "Goals this week: Lose fat 38% · Build muscle 27% · Family 12% · GLP-1 11% · Fewer starches 7% · Train hard 5%. Switching from: Goodfood 19 · Factor 11 · LiveFit 7 · Another service 14. Drop-off: 48 people stopped at Q6 (feeds the Lifecycle Marketing Agent's quiz-abandon email)."
+   },
+   {
+    "name": "Monday prep sheet (Production Forecast Agent)",
+    "content": "Drafted after the Sunday cut-off. SKU · portions: Chicken Breast Souvlaki 6oz 96 · Teriyaki Chicken, Green Beans & Rice pre-set 4oz 72 · Tenders, Broccoli & Sweet Potato pre-set 4oz 61 · Salmon Fillet 4oz/6oz 58 · Jerk Chicken Breast 6oz 52 · Roasted Turkey Breast 49 · Chicken Chili 10oz 46 · Arabic 7 Spice Chicken 4oz 44 · Turkey, Spinach & Rice pre-set 38 · Lemon Chicken Rice Soup 34 · Salmon, Brussels & Quinoa pre-set 6oz 34 · Flank Steak, Green Beans & Potato pre-set 6oz 30 · Beef Meatballs 4oz 30 · Ground Top Sirloin 6oz 28 · Egg White Bites 62 · Steel Cut Oats 30 · Broccoli 4oz 210 · White Basmati 6oz 80 · Quinoa 3oz 70 · Cauliflower Rice 4oz 50. Button 'Approve prep sheet' → toast 'Sent to the kitchen tablet'."
+   },
+   {
+    "name": "Route impact",
+    "content": "Boxes by route day: Tue GTA 1: 11 · Wed GTA 2: 24 · Thu GTA 3: 8 · Fri GTA 4: 15 · Fri long-haul: 3 (Freezer Fills) · Pickup: 9. Note: 'Route fees collected $1,321. Owned-route cost est. $8–14 a stop, so fees cover the extra stops. No new route days needed.'"
+   },
+   {
+    "name": "Approvals queue (AI drafts)",
+    "content": "Each item has Approve / Edit buttons that change status and toast. (1) Butcher's Pick Menu Agent: 'Week of Mar 29: Lean box swaps the Tilapia pre-set for the Haddock plate (tilapia 2 cases below par). Margin +$0.40 a box.' (2) Subscription & Reorder Agent: 'Saturday 10 am reminder to 136 subscribers with a box due', showing the SMS text. (3) Subscription & Reorder Agent save offers: 'Priya K., travelling → 3-week pause'; 'Marco D., too much food → 10-meal box'; 'Jen L., price → monthly Freezer Fill (saves 3 route fees)'. (4) Lifecycle Marketing Agent: 'Quiz-abandon email to 48 people, subject: Your Lean Bulk plan is saved'. (5) Lifecycle Marketing Agent, flagged amber: 'GLP-1 welcome email contains health wording. Owner and labelling review needed.' (6) Nutrition Data Agent: 'Macro sign-off: 9 of 31 plan SKUs verified. Next: 6 salmon and turkey meals with the nutritionist Friday.' (7) Review & Reputation Agent: '2 reply drafts for new Google reviews (5 stars, 4 stars)'."
+   },
+   {
+    "name": "Subscribers",
+    "content": "Sample table: name · plan · size · rhythm · route · next box · status · spend to date. Alex M. · Lean Bulk · 10 · every 2 weeks · Toronto, Wed · Mar 31 · Active · $520.72. Priya K. · GLP-1 Companion · 14 · weekly · Markham, Fri · Apr 23 · Paused · $613.56. Osei household · Household box · 26 · every 2 weeks · Ajax, Tue · Mar 30 · Active · $934.40. Jen L. · Protein & Greens · 28 · monthly · Barrie, Fri · Apr 9 · At risk (price) · $267.58. Marco D. · Athlete · 14 · weekly · Mississauga, Wed · Mar 31 · Cancel requested · $750.35. Sarah T. · Lean · 14 · every 2 weeks · Pickup · Apr 6 · Skipped this week · $418.44. Below, 'New this session': live rows from JWC.orders() where proto === 1, refreshed on jwc:order."
+   },
+   {
+    "name": "Retention",
+    "content": "Bars, target vs benchmark: M1 92% (meal kits 78–88%) · M3 72% (40–55%) · M6 58% (28–42%) · M12 45% (15–28%). Source line 'Benchmarks: Eightx 2026'. teamNote for JWC.init: 'The JW team sees subscribers, Monday's prep sheet, route impact, and AI drafts (menus, reminders, save offers) waiting for approval.'"
+   }
+  ],
+  "chat": {
+   "name": "Ask the Butler",
+   "greeting": "Hi, I'm the Butler. I can help you pick a plan, explain Subscribe & Save, or skip a week. What's your goal?",
+   "suggestions": [
+    "Which plan fits me?",
+    "How do skip and pause work?",
+    "I'm on a GLP-1 medicine",
+    "Can my family share one box?",
+    "What does a Freezer Fill cost?"
+   ],
+   "rules": [
+    {
+     "match": "skip|pause|holiday|vacation|away",
+     "reply": "Skip any delivery or pause for 1 to 8 weeks from My Plan, any time before Sunday night. Skipped weeks are never charged."
+    },
+    {
+     "match": "cancel|stop my plan|unsubscribe",
+     "reply": "You can cancel from My Plan with no fee before the Sunday cut-off. If it's too much food or too much money, a smaller box or a monthly Freezer Fill might fit better."
+    },
+    {
+     "match": "glp|ozempic|wegovy|semaglutide|mounjaro|tirzepatide|zepbound",
+     "reply": "The GLP-1 Companion plan has smaller 3–4oz protein portions with fibre-rich sides like quinoa and Brussels sprouts: about 270 kcal and 27g protein a meal (est.). 14 small meals are $102.26 with Subscribe & Save. It's food, not medical advice, so follow your prescriber's guidance."
+    },
+    {
+     "match": "which plan|best plan|recommend|lose weight|fat loss|bulk|muscle|gain",
+     "reply": "The quiz above takes about a minute. Quick guide (est. per meal): Lean 337 kcal / 37g protein, Lean Bulk 523 / 54g, Athlete 476 / 44g, Protein & Greens 301 / 46g with about 12g carbs, GLP-1 Companion 272 / 27g, and Busy Family for households."
+    },
+    {
+     "match": "freezer|monthly|once a month|how long|keep|frozen",
+     "reply": "Every Meal Butler meal is cooked, portioned and flash-frozen in a vacuum-sealed bag, so a monthly Freezer Fill works: one delivery and one route fee a month. Keep the bags frozen and follow the date on each. A Lean Freezer Fill of 20 meals is $197.98 with Subscribe & Save."
+    },
+    {
+     "match": "family|kids|household|partner|wife|husband|share",
+     "reply": "A household box puts everyone's plan in one delivery with name tags on the packing list. Example: Lean Bulk for one adult, GLP-1 Companion for another, plus 6 kids' plates, $233.60 every 2 weeks with Subscribe & Save."
+    },
+    {
+     "match": "switch|goodfood|factor|livefit|power kitchen|hellofresh|other service",
+     "reply": "Welcome. Tell the quiz which service you used and we'll take $25 off your first subscribed box (concept offer). Plan meals here run $7.30 to $13.02 with Subscribe & Save."
+    },
+    {
+     "match": "price|cost|how much|per meal|cheap|expensive",
+     "reply": "With 10% Subscribe & Save, plan meals are $7.30 to $13.02 each (est. from our current prices). Most boxes run about $100 to $260, depending on plan and size. Route delivery is $20–$35 with a $100 minimum, or free pickup at Brimley Rd."
+    },
+    {
+     "match": "swap|change meal|don'?t like|substitut|replace",
+     "reply": "Swap any meal for another one in your plan until Sunday night. Chicken plates can switch flavour too: Greek Lemon, Korean BBQ, Teriyaki, Arabic 7 Spice or BBQ."
+    },
+    {
+     "match": "butcher'?s pick|choose for me|default|don'?t want to choose",
+     "reply": "If you don't change your box by Sunday night, we send the Butcher's Pick for your plan. The kitchen rotates flavours so the weeks don't feel the same."
+    }
+   ]
+  },
+  "productIds": [
+   "turkey-spinach-white-rice",
+   "tilapia-asparagus-brown-rice",
+   "jerk-chicken-broccoli-sweet-potato-chunks",
+   "chicken-broccoli-sweet-potato-fries",
+   "pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white",
+   "chicken-souvlaki-broccoli-sweet-potato-chunks",
+   "copy-of-chicken-broccoli-sweet-potato-fries",
+   "salmon-brussel-sprouts-quinoa",
+   "chicken-breast-souvlaki",
+   "chicken-breast-tenders",
+   "jerk-chicken-breast",
+   "chicken-breast-souvlaki-cooked-portioned-copy",
+   "chicken-breast-greek-lemon-cooked-portioned-copy",
+   "chicken-breast-teriyaki-cooked-portion",
+   "chicken-breast-tenders-cooked-portioned-copy",
+   "chicken-breast-jerk-cooked-portioned-copy",
+   "turkey-breast",
+   "1lb-of-extra-lean-ground-sirloin",
+   "beef-korean-bbq-flank-steak-cooked-portioned",
+   "salmon",
+   "haddock",
+   "6oz-fully-cooked-meatballs",
+   "rice-white-basmati",
+   "rice-brown-basmati",
+   "quinoa",
+   "sweet-potato-chunks-peeled",
+   "cilantro-lime-basmati-rice-cooked-portioned",
+   "broccoli",
+   "green-beans",
+   "asparagus",
+   "brussel-sprouts",
+   "spinach-chopped",
+   "copy-of-teriyaki-mix-cooked-portioned",
+   "copy-of-california-mix-cooked-portioned",
+   "mixed-veggies-cooked-portioned",
+   "wrap-beef-fajitas-flank-red-peppers-onions-spices",
+   "wrap-beef-flank-fajitas-copy-1",
+   "soup-chicken-lemon-soup",
+   "chicken-ground-chilli",
+   "copy-of-feta-omelette-cups-cooked-portioned-2-pkg",
+   "steel-cut-oats",
+   "oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy"
+  ],
+  "conceptProducts": [
+   {
+    "name": "Lean plan, 10 meals (Concept)",
+    "price": "$112.96 one-off · $101.66 Subscribe & Save ($10.17/meal)",
+    "basis": "Sum of 6 Lean meals cycled to 10 at jwfoods.com prices (pre-sets $9.99-$12.99 + Arabic 7 Spice plate $7.05), less 10%"
+   },
+   {
+    "name": "Lean Bulk plan, 10 meals (Concept)",
+    "price": "$144.65 · $130.18 ($13.02/meal)",
+    "basis": "6oz pre-sets $15.99-$17.49 plus component plates $9.94-$14.17, less 10%"
+   },
+   {
+    "name": "Athlete plan, 10 meals (Concept)",
+    "price": "$120.28 · $108.25 ($10.83/meal)",
+    "basis": "Fajita wraps $8.99-$9.99, 6oz pre-sets, Souvlaki rice plate $10.63, Teriyaki pre-set $9.99"
+   },
+   {
+    "name": "Protein & Greens plan, 14 meals (Concept)",
+    "price": "$148.66 · $133.79 ($9.56/meal)",
+    "basis": "6oz proteins (Souvlaki $6.93, Salmon $10.85, Turkey $8.40, Haddock $8.25) + Cauliflower Rice $0.96 + green veg"
+   },
+   {
+    "name": "GLP-1 Companion, 14 small meals (Concept)",
+    "price": "$113.62 · $102.26 ($7.30/meal)",
+    "basis": "3-4oz proteins, Quinoa 3oz $1.95, Lemon Chicken Rice Soup $8.99, Chicken Chili $9.99, Egg White Bites $5.25"
+   },
+   {
+    "name": "Busy Family, 20 plates (Concept)",
+    "price": "$187.30 · $168.57 ($8.43/plate)",
+    "basis": "4oz pre-sets $9.99-$13.99 plus kids' plates: Meatballs $2.19 + rice $1.54 + veg $0.66 = $4.39; Tenders 3oz $3.14 + sweet potato $1.56 + broccoli $1.39 = $6.09"
+   },
+   {
+    "name": "Lean Freezer Fill, 20 meals monthly (Concept)",
+    "price": "$219.98 · $197.98 ($9.90/meal)",
+    "basis": "Lean meals cycled to 20, less 10%; one route fee a month instead of four"
+   },
+   {
+    "name": "Household box example (Concept)",
+    "price": "$259.55 · $233.60 every 2 weeks",
+    "basis": "Lean Bulk 10 ($144.65) + GLP-1 Companion 10 ($83.46) + 6 kids' plates ($31.44), less 10%"
+   },
+   {
+    "name": "Breakfast 5-pack (Concept)",
+    "price": "$24.55 · $22.10 with Subscribe & Save",
+    "basis": "3 Egg White Bites, Spinach & Feta at $5.25 + 2 Steel Cut Oats at $4.40"
+   },
+   {
+    "name": "6-Week Reset: Lean Bulk, 10 meals x 6 (Concept)",
+    "price": "$763.75 prepaid",
+    "basis": "$144.65 x 6 = $867.90, less 12%; route fee per delivery as today"
+   },
+   {
+    "name": "Switch credit (Concept)",
+    "price": "−$25 on the first subscribed box",
+    "basis": "Acquisition offer for people leaving another meal service; about 30% of the ~$85 paid CAC"
+   }
+  ]
+ }
+}

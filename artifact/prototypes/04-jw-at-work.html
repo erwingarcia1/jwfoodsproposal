@@ -1,0 +1,1948 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>J&amp;W at Work · J&amp;W Foods concept</title>
+<meta name="description" content="Concept prototype: J&W at Work, a workplace meal perk for GTA employers from J&W Foods and Meal Butler.">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+if (window.tailwind) tailwind.config = { theme: { extend: {
+  colors: { navy: '#154D8E', navydeep: '#0F3C70', ink: '#0F1E33', sky: '#7FB3D5', frost: '#EAF3FA', slate: '#5B5A8C', slatel: '#ECEBF5', oat: '#F6F1E7', saffron: '#E3A33B', teal: '#2E7D6B', muted: '#5A6472', paper: '#FFFFFF' },
+  fontFamily: { display: ['"Bricolage Grotesque"', 'Inter', 'system-ui', 'sans-serif'], sans: ['Inter', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'] },
+  boxShadow: { soft: '0 1px 2px rgba(15,30,51,.06), 0 14px 34px -16px rgba(21,77,142,.30)' }
+} } };
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<style>
+:root { --navy:#154D8E;--navy-d:#0F3C70;--ink:#0F1E33;--sky:#7FB3D5;--sky-l:#D3E5F2;--frost:#EAF3FA;--slate:#5B5A8C;--slate-l:#ECEBF5;--oat:#F6F1E7;--saffron:#E3A33B;--saffron-l:#FBEBCF;--teal:#2E7D6B;--teal-l:#E1F1EC;--muted:#5A6472;--line:#DCE3EC;
+  --hdrH:64px;--shadow:0 1px 2px rgba(15,30,51,.06), 0 14px 34px -16px rgba(21,77,142,.30);}
+[hidden] { display:none !important;}
+html { scroll-behavior:smooth;}
+body { font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;}
+h1, h2, h3, .fd { font-family:"Bricolage Grotesque", Inter, system-ui, sans-serif;}
+.num, .money { font-variant-numeric:tabular-nums;}
+section[id], .p4-anchor { scroll-margin-top:calc(var(--jwc-barh, 0px) + var(--hdrH) + 8px);}
+.p4-wrap { max-width:1200px;margin:0 auto;padding-left:16px;padding-right:16px;}
+@media (min-width:768px) { .p4-wrap { padding-left:24px;padding-right:24px;} }
+:focus-visible { outline:2px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 5px rgba(127,179,213,.55);}
+
+/* type */
+.p4-eyebrow { font:600 12px/1.3 Inter, sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);}
+.p4-h2 { font:800 clamp(30px, 4.4vw, 46px)/1.04 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);letter-spacing:-.02em;}
+.p4-h3 { font:700 20px/1.2 "Bricolage Grotesque", Inter, sans-serif;color:var(--ink);letter-spacing:-.01em;}
+.p4-sub { color:var(--muted);font-size:17px;line-height:1.55;}
+.p4-small { font-size:13px;color:var(--muted);line-height:1.45;}
+.p4-concept { display:inline-flex;align-items:center;background:var(--slate-l);color:var(--slate);border-radius:999px;padding:3px 9px;font:700 10.5px/1.3 Inter, sans-serif;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle;white-space:nowrap;}
+.p4-est { color:var(--muted);font-weight:500;font-size:.86em;}
+
+/* surfaces */
+.p4-card { background:#fff;border-radius:16px;box-shadow:var(--shadow);border:1px solid rgba(21,77,142,.08);}
+.p4-band-oat { background:var(--oat);}
+.p4-band-frost { background:var(--frost);}
+
+/* buttons */
+.p4-btn { display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:10px;font:600 15px/1.2 Inter, sans-serif;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:background .15s, border-color .15s, color .15s;text-align:center;}
+.p4-btn-primary { background:var(--navy);color:#fff;}
+.p4-btn-primary:hover { background:var(--navy-d);}
+.p4-btn-ghost { background:#fff;color:var(--navy);border-color:var(--navy);}
+.p4-btn-ghost:hover { background:var(--frost);}
+.p4-btn-soft { background:var(--frost);color:var(--navy);}
+.p4-btn-soft:hover { background:#DBE9F5;}
+.p4-btn-white { background:#fff;color:var(--ink);}
+.p4-btn-white:hover { background:var(--frost);}
+.p4-btn-sm { min-height:40px;padding:8px 12px;font-size:14px;}
+.p4-btn-block { width:100%;}
+.p4-btn[disabled] { opacity:.45;cursor:not-allowed;}
+
+/* header */
+.p4-hdr { position:sticky;top:var(--jwc-barh, 0px);z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);}
+.p4-hdr-in { display:flex;align-items:center;gap:10px;min-height:64px;}
+.p4-badge { width:44px;height:44px;border-radius:999px;border:2px solid var(--navy);background:#fff;overflow:hidden;display:grid;place-items:center;flex:none;}
+.p4-badge img { width:38px;height:auto;}
+.p4-brand { display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0;}
+.p4-brand b { display:block;font:800 19px/1 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);letter-spacing:-.01em;white-space:nowrap;}
+.p4-brand small { display:block;font-size:11.5px;color:var(--muted);margin-top:3px;white-space:nowrap;}
+.p4-nav { display:none;gap:2px;margin-left:8px;}
+.p4-nav a { display:inline-flex;align-items:center;min-height:40px;padding:0 11px;border-radius:999px;color:var(--ink);font-weight:500;font-size:14.5px;text-decoration:none;}
+.p4-nav a:hover { background:var(--frost);color:var(--navy);}
+@media (min-width:1080px) { .p4-nav { display:flex;} .p4-chips-wrap { display:none;} }
+.p4-chips { display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none;}
+.p4-chips::-webkit-scrollbar { display:none;}
+.p4-chips a { flex:none;min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:500;font-size:14px;color:var(--ink);text-decoration:none;}
+.p4-chips a:hover { border-color:var(--navy);color:var(--navy);}
+
+/* hero */
+.p4-hero { background:radial-gradient(1200px 500px at 85% -10%, #DCEBF7 0%, rgba(234,243,250,0) 60%), linear-gradient(#fff, #fff);}
+.p4-h1 { font:800 clamp(38px, 6.4vw, 66px)/0.98 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);letter-spacing:-.03em;}
+.p4-pill-saffron { display:inline-flex;gap:8px;align-items:flex-start;background:var(--saffron);color:var(--ink);border-radius:14px;padding:9px 14px;font-weight:600;font-size:14.5px;line-height:1.35;}
+.p4-pill-saffron i { flex:none;width:8px;height:8px;border-radius:999px;background:var(--ink);margin-top:6px;}
+.p4-proof { display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:13.5px;font-weight:500;color:var(--ink);}
+.p4-proof svg { flex:none;}
+.p4-photo { position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);}
+.p4-photo img { width:100%;height:100%;object-fit:cover;}
+.p4-tag { position:absolute;left:14px;bottom:14px;background:#fff;border-radius:12px;padding:10px 12px 10px 14px;box-shadow:0 16px 30px -14px rgba(15,30,51,.55);font-size:12px;color:var(--muted);min-width:190px;border-left:5px solid var(--navy);}
+.p4-tag b { display:block;font:800 18px/1.05 "Bricolage Grotesque", Inter, sans-serif;color:var(--ink);letter-spacing:.02em;}
+.p4-barcode { height:18px;margin-top:6px;background:repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 4px, var(--ink) 4px 5px, transparent 5px 8px, var(--ink) 8px 11px, transparent 11px 12px);opacity:.85;border-radius:2px;}
+.p4-sticker { position:absolute;display:grid;place-items:center;text-align:center;width:64px;height:64px;border-radius:999px;background:var(--navy);color:#fff;box-shadow:0 0 0 3px #fff, 0 10px 20px -8px rgba(15,30,51,.6);line-height:1;}
+.p4-sticker span { display:block;font:600 9px/1.15 Inter, sans-serif;letter-spacing:.02em;}
+.p4-sticker b { display:block;font:800 17px/1 "Bricolage Grotesque", Inter, sans-serif;margin:1px 0;}
+
+/* form */
+.p4-field { display:block;}
+.p4-field > span { display:block;font:600 13.5px/1.3 Inter, sans-serif;color:var(--ink);margin-bottom:5px;}
+.p4-field input:not([type=checkbox]):not([type=radio]), .p4-field select, .p4-field textarea, .p4-input { width:100%;min-height:46px;border:1px solid #BFCAD8;border-radius:10px;padding:10px 12px;font:400 15.5px/1.3 Inter, sans-serif;background:#fff;color:var(--ink);}
+.p4-field textarea { min-height:84px;resize:vertical;}
+.p4-field input:focus, .p4-field select:focus, .p4-field textarea:focus, .p4-input:focus { outline:2px solid var(--navy);outline-offset:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(127,179,213,.45);}
+.p4-field [aria-invalid="true"] { border-color:#B42318 !important;}
+.p4-err { color:#B42318;font-size:13px;margin-top:4px;font-weight:500;}
+.p4-check { display:flex;gap:10px;align-items:center;min-height:44px;font-size:14.5px;cursor:pointer;}
+.p4-check input { width:20px;height:20px;accent-color:var(--navy);flex:none;}
+.p4-hint { display:flex;gap:10px;align-items:flex-start;border-radius:12px;padding:11px 13px;font-size:14px;line-height:1.45;}
+.p4-hint.ok { background:var(--teal-l);color:#134E41;}
+.p4-hint.route { background:var(--slate-l);color:#3E3D66;}
+.p4-hint.warn { background:var(--saffron-l);color:#5C3D00;}
+.p4-hint svg { flex:none;margin-top:2px;}
+
+/* marquee */
+.p4-marquee { overflow:hidden;background:var(--oat);border-top:1px solid #ECE3D2;border-bottom:1px solid #ECE3D2;position:relative;}
+.p4-track { display:flex;width:max-content;animation:p4-scroll 46s linear infinite;}
+.p4-marquee:hover .p4-track, .p4-marquee:focus-within .p4-track, .p4-marquee.paused .p4-track { animation-play-state:paused;}
+.p4-mq { display:flex;align-items:center;flex:none;}
+.p4-mq li { display:flex;align-items:center;gap:18px;padding:15px 0 15px 18px;font:700 17px/1.2 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);white-space:nowrap;}
+.p4-mq li::after { content:"";width:8px;height:8px;border-radius:999px;background:var(--sky);}
+.p4-mq-pause { position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(246,241,231,.95);border:1px solid #E2D7C2;border-radius:999px;min-height:40px;min-width:40px;padding:0 12px;font:600 12.5px/1 Inter, sans-serif;color:var(--ink);cursor:pointer;}
+@keyframes p4-scroll { to { transform:translateX(-50%);} }
+
+/* how it works */
+.p4-stepno { font:800 54px/0.9 "Bricolage Grotesque", Inter, sans-serif;color:var(--sky-l);-webkit-text-stroke:1.5px var(--navy);}
+.p4-mini { border-radius:14px;background:var(--frost);padding:14px;height:150px;position:relative;overflow:hidden;}
+
+/* designer */
+.p4-range { -webkit-appearance:none;appearance:none;width:100%;height:40px;background:transparent;cursor:pointer;--pct:50%;}
+.p4-range::-webkit-slider-runnable-track { height:8px;border-radius:999px;background:linear-gradient(90deg, var(--navy) 0 var(--pct), #D3DCE6 var(--pct) 100%);}
+.p4-range::-moz-range-track { height:8px;border-radius:999px;background:linear-gradient(90deg, var(--navy) 0 var(--pct), #D3DCE6 var(--pct) 100%);}
+.p4-range::-webkit-slider-thumb { -webkit-appearance:none;width:26px;height:26px;border-radius:999px;background:#fff;border:3px solid var(--navy);margin-top:-9px;box-shadow:0 4px 10px -3px rgba(15,30,51,.45);}
+.p4-range::-moz-range-thumb { width:22px;height:22px;border-radius:999px;background:#fff;border:3px solid var(--navy);box-shadow:0 4px 10px -3px rgba(15,30,51,.45);}
+.p4-range:focus-visible { box-shadow:none;outline-offset:4px;border-radius:8px;}
+.p4-seg { display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;background:#E7EDF4;padding:4px;border-radius:12px;}
+.p4-seg button { min-height:42px;border-radius:9px;font:600 14.5px/1.15 Inter, sans-serif;color:var(--ink);padding:6px 8px;}
+.p4-seg button[aria-pressed="true"] { background:#fff;color:var(--navy);box-shadow:0 2px 8px -3px rgba(15,30,51,.35);}
+.p4-seg button:hover:not([aria-pressed="true"]) { background:rgba(255,255,255,.55);}
+.p4-seg.modes { grid-auto-flow:row;grid-template-columns:1fr;}
+@media (min-width:560px) { .p4-seg.modes { grid-auto-flow:column;grid-template-columns:none;} }
+.p4-val { font:800 22px/1 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);font-variant-numeric:tabular-nums;}
+.p4-switch { position:relative;width:46px;height:28px;flex:none;}
+.p4-switch input { position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1;}
+.p4-switch i { position:absolute;inset:0;border-radius:999px;background:#C3CEDA;transition:background .15s;}
+.p4-switch i::after { content:"";position:absolute;left:3px;top:3px;width:22px;height:22px;border-radius:999px;background:#fff;transition:transform .15s;box-shadow:0 2px 5px rgba(0,0,0,.25);}
+.p4-switch input:checked + i { background:var(--navy);}
+.p4-switch input:checked + i::after { transform:translateX(18px);}
+.p4-switch input:focus-visible + i { outline:2px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 5px rgba(127,179,213,.55);}
+.p4-result { position:relative;}
+#d-mini { position:sticky;bottom:76px;z-index:5;margin-top:12px;background:#fff;border:1px solid #D6E0EA;border-radius:14px;padding:10px 12px;box-shadow:0 16px 30px -14px rgba(15,30,51,.45);}
+@media (min-width:1024px) { .p4-result { position:sticky;top:calc(var(--jwc-barh, 0px) + var(--hdrH) + 16px);} }
+.p4-split { display:flex;height:22px;border-radius:999px;overflow:hidden;background:#E3E9F0;}
+.p4-split i { display:block;height:100%;transition:width .35s ease;}
+.p4-split .co { background:var(--sky);}
+.p4-split .st { background:var(--navy);}
+.p4-leg { display:flex;align-items:center;gap:7px;font-size:14px;}
+.p4-leg i { width:12px;height:12px;border-radius:4px;flex:none;}
+.p4-row { display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid #E8EDF3;font-size:14.5px;}
+.p4-row:last-child { border-bottom:0;}
+.p4-row b { font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.p4-tier { display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;line-height:1.25;}
+.p4-tier.starter { background:#EEF1F5;color:var(--ink);}
+.p4-tier.team, .p4-tier.site { background:var(--slate);color:#fff;}
+.p4-tier.pop { animation:p4-pop .9s ease;}
+@keyframes p4-pop { 0% { transform:scale(.9);box-shadow:0 0 0 0 rgba(91,90,140,.6);} 45% { transform:scale(1.06);box-shadow:0 0 0 12px rgba(91,90,140,0);} 100% { transform:none;} }
+.p4-flash { animation:p4-flash 1.4s ease;}
+@keyframes p4-flash { 0%, 100% { box-shadow:0 0 0 0 rgba(127,179,213,0);} 30% { box-shadow:0 0 0 6px rgba(127,179,213,.85);} }
+
+/* staff app / phone */
+.p4-phone { position:relative;margin:0 auto;background:var(--frost);border-radius:16px;border:1px solid #CFE0EE;overflow:hidden;width:100%;}
+.p4-phone-status, .p4-notch { display:none;}
+.p4-screen { position:relative;}
+@media (min-width:480px) {
+  .p4-phone { width:372px;border:11px solid #0F1E33;border-radius:46px;box-shadow:0 40px 70px -30px rgba(15,30,51,.55), inset 0 0 0 1px #2A3A55;}
+  .p4-notch { display:block;position:absolute;top:8px;left:50%;transform:translateX(-50%);width:112px;height:26px;background:#0F1E33;border-radius:999px;z-index:3;}
+  .p4-phone-status { display:flex;justify-content:space-between;align-items:center;padding:12px 24px 6px;font:600 13px/1 Inter, sans-serif;color:var(--ink);background:var(--frost);}
+  .p4-screen { height:680px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;}
+}
+.p4-app-pad { padding:18px 16px;}
+.p4-app-head { background:var(--navy);color:#fff;padding:16px;}
+.p4-app-head .allow { margin-top:8px;background:rgba(255,255,255,.14);border-radius:10px;padding:8px 10px;font-weight:600;font-size:14px;line-height:1.35;}
+.p4-app-head .allow b { color:#fff;}
+.p4-app-head .cut { font-size:12.5px;color:rgba(255,255,255,.85);margin-top:8px;line-height:1.4;}
+.p4-app-tabs { display:flex;gap:6px;padding:12px 12px 6px;overflow-x:auto;scrollbar-width:none;}
+.p4-app-tabs button { flex:none;min-height:40px;padding:0 13px;border-radius:999px;border:1px solid #C7D7E6;background:#fff;font:600 13.5px/1 Inter, sans-serif;color:var(--ink);}
+.p4-app-tabs button[aria-selected="true"] { background:var(--ink);border-color:var(--ink);color:#fff;}
+.p4-mi { display:grid;grid-template-columns:84px 1fr;gap:12px;background:#fff;border-radius:14px;padding:10px;margin:0 12px 10px;box-shadow:0 1px 2px rgba(15,30,51,.06);position:relative;}
+.p4-mi .ph { position:relative;width:84px;height:84px;}
+.p4-mi .ph img { width:84px;height:84px;object-fit:cover;border-radius:10px;background:var(--frost);}
+.p4-mi .p4-sticker { width:48px;height:48px;right:-8px;bottom:-8px;box-shadow:0 0 0 2px #fff;}
+.p4-mi .p4-sticker b { font-size:13.5px;}
+.p4-mi .p4-sticker span { font-size:7.5px;}
+.p4-mi .nm { font-weight:600;font-size:14px;line-height:1.25;color:var(--ink);}
+.p4-mi .pr { font-size:12.5px;color:var(--muted);margin-top:3px;}
+.p4-mi .pay { font-weight:800;font-size:15px;color:var(--ink);}
+.p4-stepper { display:inline-flex;align-items:center;border:1px solid #C7D3E0;border-radius:999px;background:#fff;}
+.p4-stepper button { width:40px;height:40px;border-radius:999px;font:700 18px/1 Inter, sans-serif;color:var(--navy);display:grid;place-items:center;}
+.p4-stepper button:hover:not([disabled]) { background:var(--frost);}
+.p4-stepper button[disabled] { color:#A9B4C2;cursor:not-allowed;}
+.p4-stepper output { min-width:24px;text-align:center;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;}
+.p4-meter { height:10px;border-radius:999px;background:#D6E3EF;overflow:hidden;}
+.p4-meter i { display:block;height:100%;background:var(--sky);border-radius:999px;transition:width .3s ease;}
+.p4-app-foot { position:sticky;bottom:0;background:linear-gradient(rgba(234,243,250,0), var(--frost) 30%);padding:14px 12px 12px;z-index:2;}
+.p4-callout { display:flex;gap:12px;align-items:flex-start;}
+.p4-callout b.n { flex:none;width:34px;height:34px;border-radius:999px;background:var(--navy);color:#fff;display:grid;place-items:center;font:800 15px/1 "Bricolage Grotesque", Inter, sans-serif;}
+.p4-opt { display:flex;gap:10px;align-items:flex-start;border:1.5px solid #CFDAE6;background:#fff;border-radius:12px;padding:12px;cursor:pointer;font-size:14px;line-height:1.35;}
+.p4-opt:has(input:checked) { border-color:var(--navy);background:#F2F7FC;}
+.p4-opt input { margin-top:2px;width:18px;height:18px;accent-color:var(--navy);flex:none;}
+
+/* freezer */
+.p4-freezer { position:relative;max-width:470px;margin:0 auto;background:linear-gradient(160deg, #F4F7FA, #D9E2EA);border-radius:22px;padding:12px;box-shadow:0 40px 60px -34px rgba(15,30,51,.55), inset 0 0 0 1px #C5D0DB;}
+.p4-fz-top { display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--ink);color:#fff;border-radius:12px 12px 6px 6px;padding:10px 12px;font-size:12.5px;}
+.p4-fz-top b { font:700 14px/1.1 "Bricolage Grotesque", Inter, sans-serif;}
+.p4-fz-lcd { font:700 13px/1 ui-monospace, Menlo, monospace;color:#9FD3F5;background:#0A1424;border-radius:6px;padding:5px 7px;}
+.p4-glass { position:relative;margin-top:8px;border-radius:10px;padding:8px 10px 4px;background:linear-gradient(125deg, rgba(255,255,255,.75) 0%, rgba(234,243,250,.55) 38%, rgba(207,227,242,.7) 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.9), inset 0 0 40px rgba(127,179,213,.55);overflow:hidden;}
+.p4-glass::before { content:"";position:absolute;inset:0;background:linear-gradient(115deg, transparent 0 30%, rgba(255,255,255,.55) 32%, transparent 40% 100%);pointer-events:none;}
+.p4-handle { position:absolute;right:-2px;top:90px;width:8px;height:120px;border-radius:6px;background:linear-gradient(90deg, #9AA9B8, #E7ECF1);box-shadow:0 2px 6px rgba(0,0,0,.3);}
+.p4-shelf { display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 0 10px;border-bottom:5px solid #A9BED1;position:relative;}
+.p4-shelf:last-child { border-bottom:0;}
+.p4-shelf-lbl { position:absolute;left:0;top:-2px;font:700 9.5px/1 Inter, sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#3B5674;}
+.p4-fzi { position:relative;display:grid;grid-template-columns:54px 1fr;gap:8px;align-items:center;text-align:left;background:rgba(255,255,255,.88);border:1px solid rgba(21,77,142,.14);border-radius:12px;padding:7px;margin-top:10px;min-height:70px;cursor:pointer;transition:transform .15s, box-shadow .15s;}
+.p4-fzi:hover:not([disabled]) { transform:translateY(-2px);box-shadow:0 10px 18px -10px rgba(15,30,51,.5);}
+.p4-fzi img { width:54px;height:54px;object-fit:cover;border-radius:8px;}
+.p4-fzi .t, .p4-fzi .c { display:block;}
+.p4-fzi .t { font-weight:600;font-size:12.5px;line-height:1.2;color:var(--ink);}
+.p4-fzi .c { font:800 14px/1 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);margin-top:4px;font-variant-numeric:tabular-nums;}
+.p4-fzi[disabled] { opacity:.55;cursor:not-allowed;}
+.p4-fzi .p4-low.w { grid-column:1 / -1;justify-self:start;margin-top:0;}
+.p4-low { display:inline-block;background:var(--saffron);color:var(--ink);border-radius:999px;padding:3px 7px;font:700 10.5px/1.2 Inter, sans-serif;margin-top:4px;}
+.p4-clock { display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:999px;padding:7px 13px;font-size:13.5px;font-weight:600;}
+.p4-scrim { position:fixed;inset:0;background:rgba(11,18,32,.5);z-index:84;opacity:0;pointer-events:none;transition:opacity .2s ease;}
+.p4-scrim.on { opacity:1;pointer-events:auto;}
+.p4-sheet { position:fixed;left:50%;bottom:0;z-index:85;width:min(520px, 100%);max-height:92vh;overflow-y:auto;background:#fff;border-radius:22px 22px 0 0;transform:translate(-50%, 105%);transition:transform .25s ease;box-shadow:0 -20px 50px -20px rgba(0,0,0,.45);}
+.p4-sheet:not(.on) { visibility:hidden;transition:transform .25s ease, visibility 0s linear .25s;}
+.p4-sheet.on { transform:translate(-50%, 0);visibility:visible;}
+.p4-sheet .grab { width:44px;height:5px;border-radius:999px;background:#CBD5E1;margin:10px auto 0;}
+.p4-qr { width:132px;height:132px;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--line);flex:none;}
+
+/* packs, faq, tiles */
+.p4-pack-imgs { display:grid;grid-template-columns:repeat(3, 1fr);gap:4px;border-radius:16px 16px 0 0;overflow:hidden;height:132px;}
+.p4-pack-imgs img { width:100%;height:132px;object-fit:cover;background:var(--frost);}
+.p4-price { font:800 30px/1 "Bricolage Grotesque", Inter, sans-serif;color:var(--ink);font-variant-numeric:tabular-nums;}
+.p4-mix { border-top:1px dashed #CBD5E1;margin-top:12px;padding-top:12px;}
+.p4-mixrow { display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:6px 0;font-size:14px;}
+.p4-q { font:800 22px/1.15 "Bricolage Grotesque", Inter, sans-serif;color:var(--navy);letter-spacing:-.01em;}
+.p4-tile { border-radius:16px;background:#fff;padding:18px;border:1px solid #E7DFCF;}
+.p4-ico { width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--frost);color:var(--navy);}
+.p4-report { background:var(--slate);color:#fff;border-radius:18px;padding:22px;box-shadow:0 30px 50px -30px rgba(91,90,140,.9);}
+.p4-report .r { display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:14.5px;}
+.p4-report .r:last-child { border-bottom:0;}
+.p4-report .r b { font-variant-numeric:tabular-nums;text-align:right;}
+.p4-table { width:100%;border-collapse:collapse;font-size:14.5px;}
+.p4-table th { text-align:left;font:700 11.5px/1.25 Inter, sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:12px 14px;border-bottom:2px solid var(--navy);}
+.p4-table td { padding:14px;border-bottom:1px solid var(--line);vertical-align:top;}
+.p4-tick.ck::after { content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translate(0, -1px) rotate(45deg);}
+.p4-tick { flex:none;width:22px;height:22px;border-radius:999px;background:var(--teal);color:#fff;display:grid;place-items:center;}
+.p4-dark { background:var(--ink);color:#fff;}
+
+/* team view */
+.p4-team { background:#F2F3F8;}
+.p4-kpi { background:#fff;border-radius:14px;border:1px solid #E1E4EE;padding:14px;}
+.p4-kpi small { display:block;font:700 10.5px/1.25 Inter, sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.p4-kpi b { display:block;font:800 26px/1.1 "Bricolage Grotesque", Inter, sans-serif;color:var(--ink);margin-top:4px;font-variant-numeric:tabular-nums;}
+.p4-kpi span { display:block;font-size:12.5px;color:var(--muted);margin-top:2px;}
+.p4-kpi.accent { background:var(--slate);border-color:var(--slate);}
+.p4-kpi.accent small, .p4-kpi.accent span { color:rgba(255,255,255,.82);}
+.p4-kpi.accent b { color:#fff;}
+.p4-tsec { background:#fff;border-radius:16px;border:1px solid #E1E4EE;padding:18px;}
+.p4-teyebrow { font:700 11px/1.2 Inter, sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--slate);}
+.p4-th { font:800 22px/1.15 "Bricolage Grotesque", Inter, sans-serif;color:var(--ink);letter-spacing:-.01em;}
+.p4-chip { display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 9px;font:700 11.5px/1.2 Inter, sans-serif;white-space:nowrap;}
+.p4-chip.good { background:var(--teal-l);color:#1D5C4E;}
+.p4-chip.watch { background:var(--saffron-l);color:#6B4700;}
+.p4-chip.pilot, .p4-chip.ai { background:var(--slate-l);color:#46457A;}
+.p4-chip.new { background:var(--saffron);color:var(--ink);}
+.p4-chip.sent { background:var(--teal);color:#fff;}
+.p4-chip.no { background:#F1E4E4;color:#8A1C1C;}
+.p4-ttable { width:100%;border-collapse:collapse;font-size:13.5px;}
+.p4-ttable th { text-align:left;font:700 10.5px/1.2 Inter, sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:9px 10px;border-bottom:1.5px solid var(--ink);white-space:nowrap;}
+.p4-ttable td { padding:10px;border-bottom:1px solid #E6E9F0;vertical-align:top;}
+.p4-ttable tr.click { cursor:pointer;}
+.p4-ttable tr.click:hover td { background:#F7F7FC;}
+.p4-ttable td.r, .p4-ttable th.r { text-align:right;font-variant-numeric:tabular-nums;}
+.p4-acct-btn { text-align:left;font-weight:700;color:var(--navy);min-height:40px;text-decoration:underline;text-decoration-color:rgba(21,77,142,.3);text-underline-offset:3px;}
+.p4-draft { border:1px solid #E1E4EE;border-radius:14px;padding:14px;background:#fff;display:flex;flex-direction:column;gap:8px;}
+.p4-draft.approved { border-color:#9BCFC0;background:#F6FBF9;}
+.p4-draft.rejected { opacity:.72;background:#FAFAFB;}
+main .grid > *, .p4-team .grid > * { min-width:0;}
+.p4-draft .p4-chip { white-space:normal;}
+.p4-draft .body { background:#F6F7FB;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;white-space:pre-wrap;}
+.p4-draft textarea { width:100%;min-height:120px;border:1px solid #BFCAD8;border-radius:10px;padding:10px 12px;font:400 14px/1.5 Inter, sans-serif;}
+.p4-kan { display:grid;grid-auto-flow:column;grid-auto-columns:minmax(170px, 1fr);gap:10px;}
+.p4-kcol { background:#F6F7FB;border-radius:12px;padding:10px;border:1px solid #E6E9F0;}
+.p4-kcard { background:#fff;border-radius:10px;padding:9px 10px;border:1px solid #E1E4EE;font-size:13px;margin-top:8px;line-height:1.35;}
+.p4-spark { width:100%;height:auto;max-height:110px;}
+.p4-bar { height:8px;border-radius:999px;background:#E3E7F1;overflow:hidden;}
+.p4-bar i { display:block;height:100%;background:var(--slate);border-radius:999px;}
+.p4-bar i.low { background:var(--saffron);}
+.p4-agent { border:1px solid #E1E4EE;border-radius:12px;padding:11px 12px;background:#fff;}
+.p4-agent b { display:flex;align-items:center;gap:8px;font-size:13.5px;line-height:1.3;}
+.p4-agent .p4-dot { flex:none;}
+.p4-agent span { display:block;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.35;}
+.p4-dot { display:inline-block;width:8px;height:8px;border-radius:999px;background:var(--teal);box-shadow:0 0 0 3px rgba(46,125,107,.2);}
+
+/* closed side panels sit off-screen; drop their shadow so it does not tint the right edge */
+.jwc-panel:not(.on) { box-shadow:none;}
+/* keep toasts clear of the freezer sheet and the side panels' buttons */
+body:has(.p4-sheet.on) .jwc-toasts, body:has(.jwc-panel.on) .jwc-toasts { bottom:auto;top:16px;}
+/* narrow team tables: tighter cells, wrapping headers, readable item names */
+@media (max-width:560px) {
+  .p4-ttable th, .p4-ttable td { padding:8px 6px;}
+  .p4-ttable th { white-space:normal;}
+  #t-cook td:first-child { min-width:132px;}
+  #t-routes td:first-child { white-space:nowrap;}
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto;}
+  .p4-track { animation:none;flex-wrap:wrap;width:auto;justify-content:center;padding:6px 12px;}
+  .p4-mq { flex-wrap:wrap;justify-content:center;}
+  .p4-mq[aria-hidden="true"], .p4-mq-pause { display:none;}
+  .p4-mq li { padding:8px 9px;white-space:normal;}
+  .p4-tier.pop, .p4-flash { animation:none;}
+  .p4-split i, .p4-meter i, .p4-sheet, .p4-scrim, .p4-fzi { transition:none;}
+}
+@media print {
+  body > *:not(.jwc-modal) { display:none !important;}
+  .jwc-modal { position:static !important;transform:none !important;opacity:1 !important;box-shadow:none !important;width:100% !important;max-height:none !important;}
+  .jwc-modal .noprint { display:none !important;}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2.5 focus:font-semibold focus:text-navy focus:shadow-lg">Skip to content</a>
+<div data-customer>
+<header class="p4-hdr" id="p4-hdr">
+<div class="p4-wrap p4-hdr-in">
+<a class="p4-brand" href="#" aria-label="J&amp;W at Work, back to top">
+<span class="p4-badge"><img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods laurel logo" width="296" height="275"></span>
+<span><b>J&amp;W at Work</b><small>from J&amp;W Meal Butler</small></span>
+</a>
+<nav class="p4-nav" aria-label="Page sections">
+<a href="#how">How it works</a><a href="#app" data-menu-link>Menu</a><a href="#freezer">Freezer</a><a href="#pricing">Pricing</a><a href="#hr">For HR</a>
+</nav>
+<div class="ml-auto flex items-center gap-2">
+<a href="#app" class="p4-btn p4-btn-ghost p4-btn-sm hidden sm:inline-flex">See the staff app</a>
+<a href="#tasting" class="p4-btn p4-btn-primary p4-btn-sm" data-to-form>Book a tasting</a>
+</div>
+</div>
+</header>
+<div class="p4-chips-wrap border-b border-[#E3E8EF] bg-white">
+<nav class="p4-chips overflow-x-auto" aria-label="Page sections (mobile)">
+<a href="#how">How it works</a><a href="#app" data-menu-link>Menu</a><a href="#freezer">Freezer</a><a href="#pricing">Pricing</a><a href="#hr">For HR</a><a href="#app">See the staff app</a>
+</nav>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="p4-hero" aria-labelledby="hero-h">
+<div class="p4-wrap grid gap-8 lg:gap-12 py-8 md:py-12 lg:py-16 lg:grid-cols-[55fr_45fr] items-start">
+<div class="lg:col-start-1 lg:row-start-1">
+<p class="p4-eyebrow">Workplace meals · Scarborough, since 1995</p>
+<h1 id="hero-h" class="p4-h1 mt-4">Lunch at work, cooked by your butcher.</h1>
+<p class="p4-sub mt-5 max-w-[600px]">J&amp;W at Work is a meal perk for GTA teams. You decide what the company covers. Your staff pick their meals by Sunday. We bring the whole order to one door on our regular route, packed and labelled by name.</p>
+<p class="p4-pill-saffron mt-6"><i aria-hidden="true"></i><span>Pilot offer: a free tasting and 4 weeks of free delivery for our first 10 employers (Concept)</span></p>
+<ul class="flex flex-wrap gap-2 mt-5" aria-label="Why teams trust J&amp;W">
+<li class="p4-proof"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E3A33B" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg><span class="sr-only">Rated </span>4.8 on Google · 611 reviews</li>
+<li class="p4-proof"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#154D8E" stroke-width="2.2" d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/><path fill="none" stroke="#154D8E" stroke-width="2.2" d="M8 12l3 3 5-6"/></svg>Ontario-inspected plant since 2008</li>
+<li class="p4-proof"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#154D8E" stroke-width="2" d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 4l3 2 3-2M9 20l3-2 3 2"/></svg>Frozen and sealed, so nothing spoils</li>
+</ul>
+</div>
+
+<div id="tasting" class="p4-anchor lg:col-start-2 lg:row-start-1 lg:row-span-2">
+<form id="lead-form" class="p4-card p-5 md:p-6" novalidate aria-labelledby="lead-h">
+<div class="flex items-start justify-between gap-3">
+<div>
+<h2 id="lead-h" class="fd text-[26px] leading-tight font-extrabold text-navy">Book a free team tasting</h2>
+<p class="p4-small mt-1.5">We bring 8 meals for your team to try, on our route day. <b class="text-ink">Demo: nothing is sent.</b></p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 mt-5">
+<label class="p4-field"><span>First name*</span><input id="lf-first" name="first" autocomplete="given-name" required></label>
+<label class="p4-field"><span>Last name*</span><input id="lf-last" name="last" autocomplete="family-name" required></label>
+</div>
+<label class="p4-field mt-3"><span>Work email*</span><input id="lf-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@company.ca"></label>
+<div class="grid sm:grid-cols-2 gap-3 mt-3">
+<label class="p4-field"><span>Company*</span><input id="lf-company" name="company" autocomplete="organization" required></label>
+<label class="p4-field"><span>Phone</span><input id="lf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+</div>
+<label class="p4-field mt-3"><span>Who are the meals for?</span>
+<select id="lf-seg" name="segment">
+<option value="employees" selected>Our employees</option>
+<option value="gym">Members or patients at a gym or clinic we run</option>
+<option value="team">A sports team or school group</option>
+<option value="gifts">Gifts for clients or staff</option>
+<option value="me">Just me</option>
+</select>
+</label>
+<div id="lf-employer">
+<div class="grid sm:grid-cols-2 gap-3 mt-3">
+<label class="p4-field"><span>Staff on site</span>
+<select id="lf-size" name="size"><option value="">Choose</option><option>20-49</option><option>50-99</option><option>100-249</option><option>250+</option></select>
+</label>
+<label class="p4-field"><span>Site city</span><select id="lf-city" name="city"><option value="">Choose a city</option></select></label>
+</div>
+<div id="lf-route" class="mt-3" aria-live="polite"></div>
+<label class="p4-field mt-3"><span style="display:flex;justify-content:space-between;gap:8px"><span>Notes</span><span id="lf-count" class="font-medium text-muted num" aria-live="polite">0/200</span></span><textarea id="lf-notes" name="notes" maxlength="200" rows="3" placeholder="Shifts, dock access, dietary needs…"></textarea></label>
+<label class="p4-check mt-1"><input type="checkbox" id="lf-existing" name="existing"> We already order from J&amp;W</label>
+<p id="lf-error" class="p4-err" role="alert"></p>
+<button type="submit" class="p4-btn p4-btn-primary p4-btn-block mt-3 text-[16px]">Book my tasting</button>
+</div>
+<div id="lf-redirect" class="mt-4" hidden aria-live="polite"></div>
+</form>
+</div>
+
+<div class="lg:col-start-1 lg:row-start-2">
+<figure class="p4-photo aspect-[5/4] sm:aspect-[16/10]">
+<img src="../assets/img/meals.jpg" alt="Five J&amp;W Meal Butler meals in black containers: salmon with quinoa, chicken with broccoli and sweet potato, beef with green beans, tilapia with asparagus and rice" width="1500" height="1200">
+<div class="p4-tag" aria-hidden="true"><span class="uppercase tracking-[.12em] font-semibold text-[10px]">Northline · Fri drop · shelf 2</span><b>PRIYA S.</b><span>4 meals · sealed, named bag</span><div class="p4-barcode"></div></div>
+<div class="p4-sticker" style="right:16px;top:16px" aria-hidden="true"><span>est.</span><b>38 g</b><span>protein</span></div>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section class="p4-marquee" data-scroll-x aria-label="Reasons teams choose J&amp;W at Work" tabindex="0">
+<div class="p4-track">
+<ul class="p4-mq">
+<li>Less than a food-court lunch</li><li>Frozen, so nothing goes to waste</li><li>Protein printed on every meal</li><li>One drop. One invoice.</li><li>Skip a week, nothing ships</li><li>Ontario chicken, no hormones or antibiotics</li><li>A freezer on loan for 75+ staff</li>
+</ul>
+</div>
+<button type="button" class="p4-mq-pause" id="mq-pause" aria-pressed="false">Pause</button>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="py-14 md:py-20" aria-labelledby="how-h">
+<div class="p4-wrap">
+<p class="p4-eyebrow">How it works</p>
+<h2 id="how-h" class="p4-h2 mt-3 max-w-[760px]">Set up in an afternoon. Runs itself after that.</h2>
+<ol class="grid gap-5 mt-10 md:grid-cols-3">
+<li class="p4-card p-5 flex flex-col">
+<div class="p4-mini" aria-hidden="true">
+<div class="flex justify-between text-[12px] font-semibold text-muted"><span>What the company covers</span><span class="text-navy">$3.00 off</span></div>
+<div class="p4-split mt-2" style="height:10px"><i class="co" style="width:30%"></i><i class="st" style="width:70%"></i></div>
+<div class="mt-4 bg-white rounded-[10px] p-2.5 flex items-center gap-2.5 shadow-sm">
+<span class="w-9 h-9 rounded-lg" style="background:var(--sky)"></span>
+<span class="text-[12px] leading-tight"><b class="block text-ink">Cap per person</b><span class="text-muted">5 meals a week · $900/month budget</span></span>
+</div>
+</div>
+<span class="p4-stepno mt-5" aria-hidden="true">1</span>
+<h3 class="p4-h3 mt-2">Choose what the company covers.</h3>
+<p class="text-muted mt-2 leading-relaxed">Take $2 to $13 off each meal, cover a few lunches a week, or pay for all of it. Set a cap per person and a monthly budget, so there are no surprises.</p>
+</li>
+<li class="p4-card p-5 flex flex-col">
+<div class="p4-mini" aria-hidden="true">
+<div class="space-y-1.5">
+<div class="bg-white rounded-lg px-2.5 py-2 text-[12px] flex justify-between items-center"><span>priya@northline.example</span><span class="p4-tick" style="width:18px;height:18px"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" stroke="#fff" stroke-width="3" fill="none"/></svg></span></div>
+<div class="bg-white rounded-lg px-2.5 py-2 text-[12px] flex justify-between items-center"><span>omar@northline.example</span><span class="p4-tick" style="width:18px;height:18px"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10" stroke="#fff" stroke-width="3" fill="none"/></svg></span></div>
+<div class="rounded-lg px-2.5 py-2 text-[12px] font-semibold" style="background:var(--slate-l);color:#46457A">Thursday: friendly reminder goes out</div>
+</div>
+</div>
+<span class="p4-stepno mt-5" aria-hidden="true">2</span>
+<h3 class="p4-h3 mt-2">Invite your team.</h3>
+<p class="text-muted mt-2 leading-relaxed">Staff join with their work email. Each week they pick meals by Sunday night. If they forget, a friendly reminder goes out on Thursday.</p>
+</li>
+<li class="p4-card p-5 flex flex-col">
+<div class="p4-mini" style="padding:0" aria-hidden="true">
+<img id="how-img" alt="" class="w-full h-full object-cover" loading="lazy">
+<div class="p4-tag" style="left:10px;bottom:10px;min-width:150px;padding:7px 10px"><span class="uppercase tracking-[.1em] font-semibold text-[9px]">Wed drop · shelf 1</span><b style="font-size:15px">OMAR K.</b><div class="p4-barcode" style="height:12px;margin-top:4px"></div></div>
+</div>
+<span class="p4-stepno mt-5" aria-hidden="true">3</span>
+<h3 class="p4-h3 mt-2">We bring it to one door.</h3>
+<p class="text-muted mt-2 leading-relaxed">Your order rides our regular Wednesday or Friday route. Each person's meals come in one sealed, named bag. One monthly invoice shows what the company paid and what staff paid.</p>
+</li>
+</ol>
+<p class="mt-6 flex items-center gap-2.5 text-[15px] font-medium"><span class="p4-tick ck" aria-hidden="true"></span>If nobody orders in a week, nothing ships and you pay nothing.</p>
+</div>
+</section>
+
+<!-- PERK DESIGNER -->
+<section id="designer" class="p4-band-oat py-14 md:py-20" aria-labelledby="des-h">
+<div class="p4-wrap">
+<p class="p4-eyebrow">Perk Designer</p>
+<h2 id="des-h" class="p4-h2 mt-3">Design your perk.</h2>
+<p class="p4-sub mt-3 max-w-[640px]">Move the sliders. The numbers change as you go. They are estimates to help you plan, not a quote.</p>
+<div class="grid gap-6 mt-9 lg:grid-cols-[1fr_440px] items-start">
+<div><div class="p4-card p-5 md:p-7 space-y-7">
+<div>
+<div class="flex items-end justify-between gap-3"><label for="d-staff" class="font-semibold">Staff on site</label><output id="d-staff-o" for="d-staff" class="p4-val">100</output></div>
+<input id="d-staff" class="p4-range mt-1" type="range" min="20" max="500" step="5" value="100">
+<div class="flex justify-between p4-small"><span>20</span><span>500</span></div>
+</div>
+<div>
+<p id="d-days-l" class="font-semibold">Days on site each week</p>
+<div class="p4-seg mt-2" role="group" aria-labelledby="d-days-l" id="d-days">
+<button type="button" data-v="1">1</button><button type="button" data-v="2">2</button><button type="button" data-v="3">3</button><button type="button" data-v="4">4</button><button type="button" data-v="5">5</button>
+</div>
+</div>
+<div>
+<p id="d-mode-l" class="font-semibold">What the company covers</p>
+<div class="p4-seg modes mt-2" role="group" aria-labelledby="d-mode-l" id="d-mode">
+<button type="button" data-v="off">$ off each meal</button><button type="button" data-v="lunches">Lunches covered</button><button type="button" data-v="all">Everything</button>
+</div>
+<div class="mt-5" data-pane="off">
+<div class="flex items-end justify-between gap-3"><label for="d-off" class="font-medium">Amount off each meal</label><output id="d-off-o" for="d-off" class="p4-val">$3.00</output></div>
+<input id="d-off" class="p4-range mt-1" type="range" min="0" max="12" step="0.5" value="3">
+<div class="flex justify-between p4small p4-small"><span>$0</span><span>$12</span></div>
+</div>
+<div class="mt-5" data-pane="lunches" hidden>
+<p id="d-lun-l" class="font-medium">Lunches covered per person each week</p>
+<div class="p4-seg mt-2" role="group" aria-labelledby="d-lun-l" id="d-lunches">
+<button type="button" data-v="1">1</button><button type="button" data-v="2">2</button><button type="button" data-v="3">3</button><button type="button" data-v="4">4</button><button type="button" data-v="5">5</button>
+</div>
+<p class="p4-small mt-2">Covered lunches are free for staff. Extra meals are at work prices.</p>
+</div>
+<div class="mt-5" data-pane="all" hidden>
+<p id="d-cap-l" class="font-medium">Company pays for everything, up to this many meals a week</p>
+<div class="p4-seg mt-2" role="group" aria-labelledby="d-cap-l" id="d-cap">
+<button type="button" data-v="1">1</button><button type="button" data-v="2">2</button><button type="button" data-v="3">3</button><button type="button" data-v="4">4</button><button type="button" data-v="5">5</button>
+</div>
+</div>
+</div>
+<div class="border-t border-[#E8EDF3] pt-6">
+<div class="flex items-center justify-between gap-4">
+<label for="d-budget-on" class="font-semibold">Monthly budget cap <span class="font-normal text-muted">(optional)</span></label>
+<span class="p4-switch"><input type="checkbox" id="d-budget-on" role="switch"><i aria-hidden="true"></i></span>
+</div>
+<div id="d-budget-row" class="mt-3 flex items-center gap-3" hidden>
+<label for="d-budget" class="text-[14.5px] text-muted">Cap per month ($)</label>
+<input id="d-budget" class="p4-input num max-w-[160px]" type="number" min="0" step="50" value="600" inputmode="numeric">
+</div>
+</div>
+</div>
+<div id="d-mini" class="lg:hidden" aria-hidden="true">
+<div class="p4-split" style="height:8px"><i class="co" id="dm-co-bar"></i><i class="st" id="dm-st-bar"></i></div>
+<div class="flex justify-between gap-2 mt-2 text-[13px] num"><span>Company <b id="dm-co"></b> · Staff <b id="dm-st"></b></span><span><b id="dm-month"></b>/mo (est.)</span></div>
+</div></div>
+
+<div class="p4-result">
+<div class="p4-card overflow-hidden" id="d-result">
+<div class="p-5 pb-4 flex gap-4 items-center border-b border-[#E8EDF3]">
+<div class="relative flex-none"><img id="d-meal-img" alt="Jerk Chicken, Green Beans &amp; Sweet Potato, a J&amp;W pre-set meal" class="w-[92px] h-[92px] rounded-xl object-cover bg-frost" width="92" height="92"></div>
+<div class="min-w-0">
+<p class="font-semibold leading-snug" id="d-meal-name">Jerk Chicken, Green Beans &amp; Sweet Potato</p>
+<p class="text-[13.5px] text-muted mt-1 num">Published price <span id="d-meal-pub">$12.99</span></p>
+<p class="text-[14px] mt-0.5 num"><b id="d-meal-work" class="text-navy">$12.34</b> <span id="d-meal-tier" class="text-muted">work price</span></p>
+</div>
+</div>
+<div class="p-5">
+<div class="p4-split" role="img" id="d-split" aria-label=""><i class="co" id="d-bar-co"></i><i class="st" id="d-bar-st"></i></div>
+<div class="flex flex-wrap justify-between gap-x-4 gap-y-1 mt-2.5">
+<span class="p4-leg"><i style="background:var(--sky)"></i>Company covers <b class="num" id="d-co">$3.00</b></span>
+<span class="p4-leg"><i style="background:var(--navy)"></i>Staff pay <b class="num" id="d-st">$9.34</b></span>
+</div>
+<p id="d-split-note" class="p4-small mt-1"></p>
+<div class="mt-4">
+<div class="p4-row"><span>Staff likely to order each week <span class="p4-est">(est.)</span></span><b id="d-people">26</b></div>
+<div class="p4-row"><span>Lunches a week <span class="p4-est">(est.)</span></span><b id="d-lunches-o">56</b></div>
+<div class="p4-row" style="flex-direction:column;align-items:flex-start;gap:7px"><span>Pricing tier</span><span id="d-tier" class="p4-tier team" aria-live="polite">Team pricing reached: 5% off for everyone</span></div>
+<div class="p4-row"><span>Company cost per month <span class="p4-est">(est.)</span><span class="block p4-small" id="d-week"></span></span><b id="d-month" class="text-[19px] text-navy">$727</b></div>
+<div class="p4-row"><span>Staff pay per lunch, on average <span class="p4-est">(est.)</span></span><b id="d-staffavg">$8.70</b></div>
+</div>
+<p id="d-capnote" class="p4-hint warn mt-3" hidden></p>
+<p class="p4-small mt-3" id="d-catering"></p>
+<div class="grid gap-2 mt-5">
+<button type="button" class="p4-btn p4-btn-primary" id="d-pilot">Start a 4-week pilot with these settings</button>
+<button type="button" class="p4-btn p4-btn-ghost" id="d-app">See it in the staff app</button>
+<button type="button" class="p4-btn p4-btn-soft" id="d-email">Email this summary to a colleague</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STAFF APP -->
+<section id="app" class="py-14 md:py-20" aria-labelledby="app-h">
+<div class="p4-wrap">
+<div class="text-center max-w-[680px] mx-auto">
+<p class="p4-eyebrow">The staff app</p>
+<h2 id="app-h" class="p4-h2 mt-3">What your team sees.</h2>
+<p class="p4-sub mt-3">A short weekly menu on their phone. Their allowance comes off before they pay.</p>
+<p class="p4-small mt-2">Sample company: Northline Logistics, Markham (fictional). Try it: the phone works.</p>
+</div>
+<div class="grid gap-8 mt-10 lg:grid-cols-[1fr_auto_1fr] items-center">
+<ul class="space-y-6 order-2 lg:order-1 max-w-[340px] lg:ml-auto" aria-label="What happens on the left screens">
+<li class="p4-callout"><b class="n" aria-hidden="true">A</b><div><p class="font-semibold">Only your people can join</p><p class="text-muted text-[14.5px] mt-1">Staff sign in with a work email on your domain. Anyone else is asked to check with HR.</p></div></li>
+<li class="p4-callout"><b class="n" aria-hidden="true">B</b><div><p class="font-semibold">The allowance comes off first</p><p class="text-muted text-[14.5px] mt-1">Each meal shows the work price and what the person pays after your allowance. Protein (est.) is on every card.</p></div></li>
+</ul>
+<div class="order-1 lg:order-2 w-full lg:w-auto">
+<div class="p4-phone" id="phone">
+<div class="p4-notch" aria-hidden="true"></div>
+<div class="p4-phone-status" aria-hidden="true"><span>9:41</span><span>J&amp;W at Work</span><span>5G ▮▮▮</span></div>
+<div class="p4-screen" id="app-screen" aria-live="polite"></div>
+</div>
+</div>
+<ul class="space-y-6 order-3 max-w-[340px]" aria-label="What happens on the right screens">
+<li class="p4-callout"><b class="n" aria-hidden="true">C</b><div><p class="font-semibold">Order by Sunday, skip any week</p><p class="text-muted text-[14.5px] mt-1">Staff pay by card or payroll deduction. A repeat order keeps going until they change it.</p></div></li>
+<li class="p4-callout"><b class="n" aria-hidden="true">D</b><div><p class="font-semibold">One named bag per person</p><p class="text-muted text-[14.5px] mt-1">Everything lands at one door on your route day, sealed and sorted by name.</p></div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- FREEZER -->
+<section id="freezer" class="p4-band-frost py-14 md:py-20" aria-labelledby="fz-h">
+<div class="p4-wrap grid gap-10 lg:grid-cols-2 items-center">
+<div>
+<p class="p4-eyebrow">For shift sites</p>
+<h2 id="fz-h" class="p4-h2 mt-3">The At Work Freezer.</h2>
+<p class="p4-sub mt-4">For sites with 75 or more people on site, we lend you a glass-door freezer and keep it stocked. Good for night shifts, early starts and the days someone forgot to order.</p>
+<ul class="mt-6 space-y-3.5">
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Free loan. We deliver it, plug it in and restock it on your route day.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Staff scan the QR code, pick a meal and pay with their allowance or a card.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>We count stock at every visit. If unpaid items go over 3% of what we stocked, the company covers the difference at work prices.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Frozen meals keep for months, so nothing is thrown out on Friday.</span></li>
+</ul>
+<p class="p4-small mt-6">The site provides a standard outlet. The freezer loan terms are a <span class="p4-concept">Concept</span> for discussion.</p>
+</div>
+<div>
+<p class="mb-4 flex flex-wrap items-center gap-2.5"><span class="p4-clock"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#7FB3D5" stroke-width="2.4"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="2.4" fill="none"/></svg>Try it</span><span class="font-semibold">2:10 am, night shift at a Scarborough care residence (sample).</span></p>
+<div class="p4-freezer" id="fz">
+<div class="p4-fz-top"><span><b>J&amp;W at Work Freezer</b><br><span class="text-[11.5px] opacity-80">Tap a meal to buy it</span></span><span class="p4-fz-lcd" aria-label="Freezer temperature minus 18 degrees">−18°C</span></div>
+<div class="p4-glass" id="fz-glass"></div>
+<span class="p4-handle" aria-hidden="true"></span>
+</div>
+<p class="p4-small mt-3 text-center">Tap a meal to see its work price and what you pay after your allowance. Demo: nothing is charged.</p>
+</div>
+</div>
+</section>
+
+<!-- PACKS -->
+<section id="packs" class="py-14 md:py-20" aria-labelledby="packs-h">
+<div class="p4-wrap">
+<p class="p4-eyebrow">Team Table packs</p>
+<h2 id="packs-h" class="p4-h2 mt-3 max-w-[820px]">Feeding a meeting? Order a Team Table pack.</h2>
+<p class="p4-sub mt-3 max-w-[680px]">For lunch-and-learns, all-hands and the summer BBQ. Packs ride the same route as your team order.</p>
+<div class="grid gap-5 mt-10 md:grid-cols-2 lg:grid-cols-3 items-start" id="packs-grid"></div>
+</div>
+</section>
+
+<!-- FOR HR -->
+<section id="hr" class="p4-band-oat py-14 md:py-20" aria-labelledby="hr-h">
+<div class="p4-wrap grid gap-10 lg:grid-cols-[1fr_1.05fr] items-start">
+<div>
+<p class="p4-eyebrow">For HR</p>
+<h2 id="hr-h" class="p4-h2 mt-3">A monthly report you can send upstairs.</h2>
+<p class="p4-sub mt-4">One page, once a month: what was ordered, what the company covered, and how many people actually ate.</p>
+<p class="mt-5 p4-hint route"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8v5M12 16v.5" stroke="currentColor" stroke-width="2.4"/></svg><span>Each person's company-paid total is listed for payroll. Ask your payroll provider how to treat it.</span></p>
+<h3 class="p4-h3 mt-8">Add-ons</h3>
+<ul class="mt-4 space-y-3">
+<li class="p4-tile flex gap-3.5"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span><b>Quarterly lunch-and-learn</b><span class="block text-muted text-[14.5px] mt-1">30 minutes with our team on protein, portions and meal prep. Free for accounts ordering 40+ items a week.</span></span></li>
+<li class="p4-tile flex gap-3.5"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM17 6h3v2a3 3 0 01-3 3M7 6H4v2a3 3 0 003 3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span><b>Step-challenge prize <span class="p4-concept">Concept</span></b><span class="block text-muted text-[14.5px] mt-1">A $60 Meal Butler credit for your winner each quarter.</span></span></li>
+</ul>
+</div>
+<div class="p4-report" aria-labelledby="rep-h">
+<div class="flex items-center justify-between gap-3">
+<div><p class="text-[11px] tracking-[.14em] uppercase font-semibold opacity-80">Monthly report</p><h3 id="rep-h" class="fd text-[22px] font-extrabold mt-1 leading-tight">Northline Logistics · <span class="js-month">October 2027</span> (sample)</h3></div>
+<span class="p4-badge" style="border-color:#fff"><img src="../assets/img/jw-logo.jpg" alt="" width="296" height="275"></span>
+</div>
+<div class="mt-4">
+<div class="r"><span>Meals delivered</span><b>470 <span class="font-normal opacity-80">(352 pre-ordered, 118 from the freezer)</span></b></div>
+<div class="r"><span>On-site staff who ordered each week</span><b>31%</b></div>
+<div class="r"><span>Company covered</span><b>$1,410.00</b></div>
+<div class="r"><span>Staff paid</span><b>$3,434.88</b></div>
+<div class="r"><span>Average protein per lunch</span><b>36 g (est.)</b></div>
+<div class="r"><span>Most ordered</span><b>Jerk Chicken, Green Beans &amp; Sweet Potato</b></div>
+<div class="r"><span>Freezer shrink</span><b>1.2%</b></div>
+</div>
+<div class="mt-4 bg-white/10 rounded-xl p-3">
+<p class="text-[12px] uppercase tracking-[.12em] font-semibold opacity-80">Participation, last 6 weeks (sample)</p>
+<svg viewBox="0 0 300 64" class="w-full h-16 mt-1" role="img" aria-label="Participation rose from 24% to 31% over six weeks"><polyline fill="none" stroke="#7FB3D5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="10,50 66,44 122,38 178,34 234,26 290,22"/><g fill="#fff"><circle cx="10" cy="50" r="4"/><circle cx="290" cy="22" r="4"/></g><text x="10" y="64" font-size="10" fill="#fff" opacity=".85">24%</text><text x="270" y="14" font-size="10" fill="#fff">31%</text></svg>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAIR QUESTIONS -->
+<section id="faq" class="py-14 md:py-20" aria-labelledby="faq-h">
+<div class="p4-wrap grid gap-8 lg:grid-cols-[360px_1fr] items-start">
+<div>
+<p class="p4-eyebrow">Before you ask</p>
+<h2 id="faq-h" class="p4-h2 mt-3">Fair questions.</h2>
+<p class="p4-sub mt-3">The four things office managers ask us first.</p>
+<figure class="p4-photo mt-6 hidden lg:block aspect-[4/5]"><img src="../assets/img/souvlaki.jpg" alt="Chicken souvlaki skewers from J&amp;W, grilled and plated" width="1066" height="1597" loading="lazy"></figure>
+</div>
+<div class="grid gap-4 sm:grid-cols-2">
+<article class="p4-card p-6"><h3 class="p4-q">“We don't have a kitchen.”</h3><p class="text-muted mt-3 leading-relaxed">You need a microwave and some freezer space. Each bag shows its own heating steps. Sites with 75+ staff can borrow our freezer.</p></article>
+<article class="p4-card p-6"><h3 class="p4-q">“Half the team is remote on Fridays.”</h3><p class="text-muted mt-3 leading-relaxed">Meals are frozen, so they keep. Staff can take theirs home, and anyone can skip a week. No orders means no delivery and no bill.</p></article>
+<article class="p4-card p-6"><h3 class="p4-q">“Healthy lunches are boring.”</h3><p class="text-muted mt-3 leading-relaxed">Jerk chicken, Korean BBQ flank, Greek lemon souvlaki, teriyaki, honey garlic salmon. Our own marinades, cooked in our own plant.</p></article>
+<article class="p4-card p-6"><h3 class="p4-q">“HR doesn't need another job.”</h3><p class="text-muted mt-3 leading-relaxed">Staff order for themselves. You get one invoice and one short report a month. Reminders and order roll-ups are handled for you.</p></article>
+</div>
+</div>
+</section>
+
+<!-- WHO + ROUTE -->
+<section id="who" class="p4-band-oat py-14 md:py-20" aria-labelledby="who-h">
+<div class="p4-wrap">
+<p class="p4-eyebrow">Who it's for</p>
+<h2 id="who-h" class="p4-h2 mt-3">Built for GTA workplaces on our routes.</h2>
+<ul class="grid gap-4 mt-9 sm:grid-cols-2 lg:grid-cols-4">
+<li class="p4-tile"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14M10 21v-5h4v5M12 8v5M9.5 10.5h5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3 class="p4-h3 mt-4 text-[18px]">Hospitals, clinics and care homes</h3><p class="text-muted mt-2 text-[14.5px]">Night shifts and closed cafeterias. The freezer does the work.</p></li>
+<li class="p4-tile"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 21V9l9-5 9 5v12M7 21v-7h10v7M7 17h10" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3 class="p4-h3 mt-4 text-[18px]">Warehouses, plants and distribution centres</h3><p class="text-muted mt-2 text-[14.5px]">No food court nearby, early starts, big shifts.</p></li>
+<li class="p4-tile"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 21V4h11v17M15 9h5v12M8 8h3M8 12h3M8 16h3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3 class="p4-h3 mt-4 text-[18px]">Offices and studios</h3><p class="text-muted mt-2 text-[14.5px]">Hybrid teams on site two or three days a week. A lunch that brings people in.</p></li>
+<li class="p4-tile"><span class="p4-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10h5v11M14 21V3h5v18M7 13h1M7 16h1M16 7h1M16 10h1M16 13h1" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><h3 class="p4-h3 mt-4 text-[18px]">Property managers</h3><p class="text-muted mt-2 text-[14.5px]">A tenant amenity for your towers. Tenants order, you choose the perk.</p></li>
+</ul>
+<div class="grid gap-5 mt-8 lg:grid-cols-[1.1fr_1fr] items-start">
+<form id="route-form" class="p4-card p-5 md:p-6" novalidate>
+<label for="route-in" class="p4-h3 block">Is your site on our route?</label>
+<p class="p4-small mt-1">Type your site's city, for example Vaughan or Scarborough.</p>
+<div class="flex gap-2 mt-4">
+<input id="route-in" class="p4-input" autocomplete="address-level2" placeholder="City">
+<button class="p4-btn p4-btn-primary flex-none">Check</button>
+</div>
+<div id="route-out" class="mt-4" aria-live="polite"></div>
+</form>
+<div class="p4-card p-5 md:p-6">
+<h3 class="p4-h3">Our weekly routes</h3>
+<ul class="mt-3 text-[14.5px]">
+<li class="p4-row"><span class="font-semibold w-12 flex-none">Tue</span><span class="flex-1">Durham</span></li>
+<li class="p4-row"><span class="font-semibold w-12 flex-none">Wed</span><span class="flex-1">Toronto, Scarborough, North York, East York, Etobicoke, Mississauga</span></li>
+<li class="p4-row"><span class="font-semibold w-12 flex-none">Thu</span><span class="flex-1">Oakville, Burlington, Hamilton, Milton</span></li>
+<li class="p4-row"><span class="font-semibold w-12 flex-none">Fri</span><span class="flex-1">Markham, Vaughan, Richmond Hill, Brampton, Newmarket, Aurora</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-14 md:py-20" aria-labelledby="price-h">
+<div class="p4-wrap">
+<p class="p4-eyebrow">Pricing</p>
+<h2 id="price-h" class="p4-h2 mt-3">Simple work pricing. <span class="p4-concept" style="font-size:12px">Concept</span></h2>
+<div class="grid gap-8 mt-9 lg:grid-cols-[1.4fr_1fr] items-start">
+<div class="p4-card overflow-hidden">
+<div class="jwc-scroll-x">
+<table class="p4-table">
+<caption class="sr-only">Work pricing by your company's weekly order size (Concept)</caption>
+<thead><tr><th scope="col">Your company's weekly order</th><th scope="col">Price for everyone</th><th scope="col">Included</th></tr></thead>
+<tbody>
+<tr><td class="font-semibold">Under 40 items</td><td>Our published prices</td><td>Free tasting, monthly report</td></tr>
+<tr><td class="font-semibold">40 to 99 items</td><td><b class="text-navy">5% off</b> every item</td><td>+ quarterly lunch-and-learn</td></tr>
+<tr><td class="font-semibold">100 or more</td><td><b class="text-navy">10% off</b> every item</td><td>+ a say in next month's menu</td></tr>
+</tbody>
+</table>
+</div>
+<p class="p4-small px-4 pb-4 pt-1">Example: a $12.99 pre-set meal is $12.34 at Team pricing and $11.69 at Site pricing, before your company allowance.</p>
+</div>
+<ul class="space-y-3 text-[15px]">
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Free delivery to one door on any week over $250. Under $250, the regular $20 route fee applies.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>At Work Freezer on loan for sites with 75+ staff on site and $250+ a week in combined orders.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Your allowance comes off after the work price.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>No contract. Pilots run 4 weeks. After that, 30 days' notice.</span></li>
+<li class="flex gap-3"><span class="p4-tick ck mt-0.5" aria-hidden="true"></span><span>Prices in CAD. For your own staff, not for resale.</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- CLOSING -->
+<section class="p4-dark py-14 md:py-20" aria-labelledby="end-h">
+<div class="p4-wrap grid gap-8 lg:grid-cols-[1.3fr_1fr] items-center">
+<div>
+<h2 id="end-h" class="fd font-extrabold text-[clamp(32px,5vw,52px)] leading-[1.02] tracking-[-.02em]">Let's feed your team.</h2>
+<p class="mt-4 text-[17px] leading-relaxed text-white/85 max-w-[560px]">Book a free tasting and we'll bring 8 meals to your site on our route day. Or call us at <a class="underline underline-offset-4 font-semibold text-white" href="tel:+14162981350">(416) 298-1350</a>.</p>
+<div class="flex flex-wrap gap-3 mt-7">
+<a href="#tasting" class="p4-btn p4-btn-white" data-to-form>Book a tasting</a>
+<a href="#designer" class="p4-btn" style="border-color:rgba(255,255,255,.5);color:#fff">Design your perk</a>
+</div>
+<p class="mt-8 text-[13px] text-white/70">J&amp;W Foods · 2201 Brimley Rd, Unit 1, Scarborough · Family-run since 1995. Store hours Mon-Fri 9-6, Sat 10-4.</p>
+</div>
+<div class="bg-white rounded-2xl p-5 max-w-[420px] w-full lg:ml-auto">
+<img src="../assets/img/jw-logo2.jpg" alt="J&amp;W Foods Meal Butler logo" width="600" height="391" loading="lazy" class="w-full h-auto">
+<p class="text-ink text-[14px] mt-3 leading-relaxed">Cooked, weighed and portioned in our own plant, then flash-frozen in BPA-free vacuum bags. Plain portions are cooked with no added salt, sugar or oil, and ingredients are on every pack. Our chicken is air-chilled, grain-fed and Ontario-raised, with no hormones or antibiotics.</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<!-- ================= JW TEAM VIEW ================= -->
+<section data-team class="p4-team pb-16" aria-labelledby="desk-h">
+<div class="p4-wrap pt-7 md:pt-10">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div>
+<p class="p4-teyebrow">J&amp;W at Work · internal</p>
+<h1 id="desk-h" class="fd text-[clamp(28px,4vw,40px)] leading-[1.1] font-extrabold tracking-[-.02em] text-ink mt-1">At Work desk · <span id="t-week">week of Oct 18, 2027</span></h1>
+<p class="p4-small mt-1">Sample data: a typical week about 9 months in. Money figures are sample operating numbers. Anything you do in customer view lands here, marked “this device”.</p>
+</div>
+<a href="#t-live" class="p4-btn p4-btn-primary p4-btn-sm">Live from this demo <span id="t-live-n" class="p4-chip new" style="padding:2px 7px">0</span></a>
+</div>
+<nav class="p4-chips flex gap-2 mt-5 overflow-x-auto pb-1" style="padding-left:0;padding-right:0" aria-label="Team desk sections">
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-accounts">Accounts</a>
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-approvals">Approvals</a>
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-prod">Cook plan &amp; routes</a>
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-freezers">Freezers</a>
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-invoice">Split invoice</a>
+<a class="p4-btn p4-btn-white p4-btn-sm flex-none border border-[#E1E4EE]" href="#t-pipe">Pipeline</a>
+</nav>
+
+<div id="t-kpis" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 mt-5"></div>
+
+<div class="mt-5">
+<p class="p4-teyebrow">AI agents on this desk</p>
+<div id="t-agents" class="grid gap-2.5 mt-2 sm:grid-cols-2 lg:grid-cols-3"></div>
+<p class="p4-small mt-2">Agents draft, sort and forecast. Nothing reaches a customer, a route or the cook plan until someone at J&amp;W approves it.</p>
+</div>
+
+<section id="t-accounts" class="p4-tsec mt-6" aria-labelledby="t-acc-h">
+<div class="flex flex-wrap items-end justify-between gap-3">
+<div><p class="p4-teyebrow">Employer accounts</p><h2 id="t-acc-h" class="p4-th mt-1">Who's ordering this week</h2></div>
+<p class="p4-small">All names are fictional. Showing 8 of 14 live accounts plus any pilots set up on this device. Tap an account for details.</p>
+</div>
+<div class="jwc-scroll-x mt-4"><table class="p4-ttable" id="t-acc-table"></table></div>
+</section>
+
+<div class="grid gap-6 mt-6 xl:grid-cols-[1.6fr_1fr] items-start">
+<section id="t-approvals" class="p4-tsec" aria-labelledby="t-apr-h">
+<div class="flex flex-wrap items-end justify-between gap-3">
+<div><p class="p4-teyebrow">Approvals</p><h2 id="t-apr-h" class="p4-th mt-1">AI drafts waiting for you</h2></div>
+<span id="t-apr-count" class="p4-chip ai"></span>
+</div>
+<div id="t-drafts" class="grid gap-3 mt-4 md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2"></div>
+</section>
+<section id="t-live" class="p4-tsec xl:sticky" style="top:calc(var(--jwc-barh, 0px) + 12px)" aria-labelledby="t-live-h">
+<p class="p4-teyebrow">Live from this demo</p>
+<h2 id="t-live-h" class="p4-th mt-1">Orders from this device</h2>
+<div id="t-live-body" class="mt-3"></div>
+</section>
+</div>
+
+<section id="t-prod" class="p4-tsec mt-6" aria-labelledby="t-prod-h">
+<div class="flex flex-wrap items-end justify-between gap-3">
+<div><p class="p4-teyebrow">Production and route impact</p><h2 id="t-prod-h" class="p4-th mt-1">This week's At Work volume</h2></div>
+<span id="t-prod-status"></span>
+</div>
+<div class="grid gap-6 mt-4 lg:grid-cols-2">
+<div>
+<h3 class="font-semibold">Cook-plan change (items)</h3>
+<div class="jwc-scroll-x mt-2"><table class="p4-ttable" id="t-cook"></table></div>
+<p id="t-pack" class="p4-hint route mt-3"></p>
+</div>
+<div>
+<h3 class="font-semibold">Routes <span id="t-route-status"></span></h3>
+<div class="jwc-scroll-x mt-2"><table class="p4-ttable" id="t-routes"></table></div>
+</div>
+</div>
+</section>
+
+<section id="t-freezers" class="p4-tsec mt-6" aria-labelledby="t-fz-h">
+<div class="flex flex-wrap items-end justify-between gap-3">
+<div><p class="p4-teyebrow">At Work Freezers</p><h2 id="t-fz-h" class="p4-th mt-1">Six freezers on loan</h2></div>
+<p class="p4-small">Stock level is the share of a 60-meal load still in the freezer.</p>
+</div>
+<div id="t-fz" class="grid gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+</section>
+
+<section id="t-invoice" class="p4-tsec mt-6" aria-labelledby="t-inv-h">
+<div class="grid gap-6 lg:grid-cols-[1fr_1fr] items-start">
+<div>
+<p class="p4-teyebrow">Split invoice preview</p>
+<h2 id="t-inv-h" class="p4-th mt-1">Northline Logistics · <span class="js-month">October 2027</span> (sample)</h2>
+<p class="p4-small mt-1">Draft from the <span class="js-agent" data-agent="receivables"></span> agent. Company and staff shares are shown separately.</p>
+<div id="t-inv" class="mt-3"></div>
+<div class="flex flex-wrap gap-2 mt-4" id="t-inv-actions"></div>
+</div>
+<div>
+<h3 class="font-semibold">Added from this device this week</h3>
+<div id="t-inv-live" class="mt-2"></div>
+</div>
+</div>
+</section>
+
+<section id="t-pipe" class="p4-tsec mt-6" aria-labelledby="t-pipe-h">
+<div class="flex flex-wrap items-end justify-between gap-3">
+<div><p class="p4-teyebrow">Pipeline</p><h2 id="t-pipe-h" class="p4-th mt-1">From research to live account</h2></div>
+<p class="p4-small">Researched and contacted by the <span class="js-agent" data-agent="scout"></span> agent; a person approves every message.</p>
+</div>
+<div class="jwc-scroll-x mt-4 pb-2"><div class="p4-kan" id="t-kan"></div></div>
+</section>
+</div>
+</section>
+
+<div class="p4-scrim" id="p4-scrim" aria-hidden="true"></div>
+<div class="p4-sheet" id="p4-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-h" aria-hidden="true"></div>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+(function () {
+'use strict';
+
+/* AI agent names for this play, from the shared roster (research/ai-agents-roster.md, play 4).
+ Change a name here and the whole page follows. */
+const AGENTS = {
+ scout: 'Account Scout',            /* prospecting: intro emails, pipeline */
+ desk: 'Business Desk',             /* account care and the weekly order desk: allowances, reminders, save offers */
+ production: 'Production Planner',  /* cook plan and freezer pars */
+ route: 'Route Planner',            /* dock drops and ETA texts */
+ label: 'Nutrition & Safety',       /* protein (est.), labels, heating steps */
+ receivables: 'Receivables Desk',   /* the split company/staff statement */
+ concierge: 'Butler Concierge'      /* the At Work Desk chat */
+};
+
+/* Chat rules from the play spec (regex source strings, matched case-insensitively). */
+const CHAT_RULES = [
+{ "match": "(cost|budget|how much).*(staff|team|employee|people)|\\$\\s?\\d+(\\.\\d+)?\\s*off", "reply": "Here's a rough example. With 100 staff on site 3 days a week and $3 off each meal, about a quarter of people order, which is roughly 56 lunches a week. The company would cover about $168 a week, or around $730 a month, and staff pay about $8.70 for a typical lunch. Try the perk designer on this page to change any number. All figures are estimates." },
+{ "match": "freezer|fridge|storage|space|kitchen", "reply": "You need a microwave and some freezer space. Each person's meals arrive in one sealed, named bag. Sites with 75 or more staff on site can borrow a J&W glass-door freezer at no charge when team orders and freezer sales average $250 a week. We restock it on your route day." },
+{ "match": "\\btax|taxable|\\bcra\\b|payroll", "reply": "Subsidized meals can count as a taxable benefit for staff in Canada, depending on how much they pay. We can't give tax advice, but your monthly report lists each person's company-paid total so your payroll team can handle it. Please check with your accountant or payroll provider." },
+{ "match": "contract|cancel|commit|minimum|skip|pause|notice", "reply": "There's no contract. Pilots run 4 weeks, and after that you give 30 days' notice to stop. If nobody orders in a week, nothing ships and nothing is billed. Delivery is free on any week over $250; under that, the usual $20 route fee applies." },
+{ "match": "allerg|\\bnuts?\\b|gluten|halal|vegetarian|vegan|dairy|kosher", "reply": "Every meal shows its ingredients and allergens before staff order. Vegetarian options include the Egg White Bites with Spinach & Feta, and the Steel Cut Oats are vegan. We don't claim any At Work item is halal or kosher certified. For a serious allergy, please call us at (416) 298-1350 before ordering." },
+{ "match": "night|shift|hospital|nurse|warehouse|24.?7", "reply": "Night shifts are where the freezer shines. Staff grab a meal, scan the QR code and pay with their allowance or a card. Thaw it in the staff fridge for tomorrow, or follow the from-frozen time on the label. We set the freezer mix to what your shifts actually buy and restock weekly." },
+{ "match": "tasting|\\btry\\b|\\bvisit|come by", "reply": "We'll bring a free tasting of 8 meals to your site on our route day, with a short talk on protein and portions. Fill in the form at the top of the page and our account lead will call within one business day. (Demo: nothing is sent.)" },
+{ "match": "meeting|catering|\\bevents?\\b|party|bbq|lunch.and.learn|all.hands", "reply": "For meetings, the Lunch & Learn Pack feeds 12 for $147.88 and the Breakfast Meeting Pack is $115.80, both at our published prices. For a summer BBQ, the Team BBQ Pack ($134.95) has a 5 kg case of no-salt chicken souvlaki skewers, tzatziki and pita for about 25 people. Packs come frozen on your route day, so plan a few days ahead." },
+{ "match": "discount|tier|volume|cheaper|work pric", "reply": "Work pricing starts at our published prices. When your whole company orders 40 or more items a week, everyone gets 5% off. At 100 or more it's 10% off, which brings a $12.99 pre-set meal to $11.69 before your company allowance." },
+{ "match": "gym|resell|resale|wholesale|gift|fundrais|school", "reply": "J&W at Work is for employers feeding their own staff. To resell meals at a gym or clinic, see the Pro Partner Portal (prototype 2). For client or holiday gifts, see the Corporate Gift Studio (prototype 5). For a team or school fundraiser, see Team Fuel (prototype 7)." }
+];
+/* Optional follow-up buttons for some rules: [label, section id, prototype number] */
+const CHAT_ACTIONS = { 1: ['Try the freezer', 'freezer'], 5: ['Try the night-shift freezer', 'freezer'], 6: ['Go to the tasting form', 'tasting'], 7: ['See Team Table packs', 'packs'], 8: ['See work pricing', 'pricing'] };
+
+/* ---------- helpers ---------- */
+var $ = function (s, r) { return (r || document).querySelector(s); };
+var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+var esc = JWC.esc;
+function m2(v) { return JWC.money(v, 2); }
+function m0(v) { return JWC.money(Math.round(v), 0); }
+function r2(v) { return Math.round(v * 100) / 100; }
+var RM = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+function go(id, focusSel) {
+ var t = document.getElementById(id); if (!t) return;
+ if (document.body.dataset.view === 'team' && !t.closest('[data-team]')) JWC.setView('customer');
+ setTimeout(function () {
+  t.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' });
+  if (focusSel) setTimeout(function () { var f = $(focusSel); if (f) try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }, RM ? 0 : 450);
+ }, 30);
+}
+function emit() { document.dispatchEvent(new CustomEvent('p4:change')); }
+function protoPlay(n) { return ((window.JW || {}).plays || []).filter(function (q) { return q.n === n; })[0] || null; }
+function protoHref(n) { var p = protoPlay(n); return p && p.file ? String(p.file).replace(/^prototypes\//, '') : '../index.html'; }
+var TICK = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" stroke="#fff" stroke-width="3" fill="none"/></svg>';
+var ICON = {
+ ok: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#2E7D6B"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none"/></svg>',
+ route: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h11v9H2zM13 9h4l4 4v2h-8z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="17" r="2" fill="currentColor"/><circle cx="17" cy="17" r="2" fill="currentColor"/></svg>',
+ warn: '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z" fill="#E3A33B"/><path d="M12 10v5M12 17.5v.5" stroke="#0F1E33" stroke-width="2.2"/></svg>'
+};
+function hint(kind, html) { return '<p class="p4-hint ' + kind + '">' + (ICON[kind] || ICON.route) + '<span>' + html + '</span></p>'; }
+
+/* JWC.money prints negatives as "$-20.00" (shared framework); show "−$20.00" on this page. */
+(function () { var base = JWC.money; JWC.money = function (v, dp) { return +v < 0 ? '−' + base(-v, dp) : base(v, dp); }; })();
+
+/* Chat: price the perk from the numbers in the question, answer At Work delivery days, store hours, and send
+ gym / gift / school questions to the right prototype. */
+function costReply(t) {
+ var nm = /(\d{1,4})\s*(?:staff|people|employees|persons?|workers|team members)/i.exec(t), xm = /\$\s?(\d+(?:\.\d+)?)\s*off/i.exec(t);
+ var N = nm ? Math.max(5, Math.min(2000, +nm[1])) : 100, X = xm ? Math.max(0, Math.min(13, +xm[1])) : 3;
+ var run = function () { JWC.chat.close(); D.mode = 'off'; D.staff = Math.max(20, Math.min(500, Math.round(N / 5) * 5)); D.off = Math.min(12, Math.round(X * 2) / 2); drawDesigner(true); go('designer'); };
+ if (N === 100 && X === 3) return { text: CHAT_RULES[0].reply, action: { label: 'Open the Perk Designer', run: run } };
+ var c = calc({ staff: N, days: 3, mode: 'off', off: X, lunches: 2, cap: 3, budgetOn: false, budget: 0 });
+ return { text: 'Here’s a rough example. With ' + N + ' staff on site 3 days a week and ' + m2(X) + ' off each meal, about ' + Math.round(c.p * 100) + '% of people order, which is roughly ' + c.lunches + ' lunches a week' + (c.tier.pct ? ' (' + c.tier.label.toLowerCase() + ' for everyone)' : '') + '. The company would cover about ' + m0(c.week) + ' a week, or around ' + m0(c.monthly) + ' a month, and staff pay about ' + m2(c.staffPer) + ' for a typical lunch. Try the Perk Designer to change any number. All figures are estimates.',
+  action: { label: 'Open the Perk Designer', run: run } };
+}
+function deliveryReply(t) {
+ var c = JWC.findCity(t), r = c && mainRoute(c);
+ if (!r) return { text: 'Tell me the city your site is in and I’ll check. Team orders ride our weekly routes: Tuesday for Durham; Wednesday for Toronto, Scarborough, North York, East York, Etobicoke and Mississauga; Thursday for Oakville, Burlington, Hamilton and Milton; Friday for Markham, Vaughan, Richmond Hill, Brampton, Newmarket and Aurora.', action: { label: 'Check my route', run: function () { JWC.chat.close(); go('who', '#route-in'); } } };
+ return c + ' is on ' + routePhrase(r) + '. Your team order would arrive ' + r.day + 's as one drop of named bags, ordered by the Sunday before. Delivery is free on any week over $250; under that, the regular ' + JWC.money(r.fee, 0) + ' route fee applies.';
+}
+function partnerReply(t) {
+ var n = /gift|present|holiday|christmas|client/i.test(t) ? 5 : /fundrais|school/i.test(t) ? 7 : 2;
+ return { text: CHAT_RULES[9].reply, action: { label: { 2: 'Open the Pro Partner Portal', 5: 'Open the Corporate Gift Studio', 7: 'Open Team Fuel' }[n], run: function () { location.href = protoHref(n); } } };
+}
+
+/* ---------- chat + shared chrome ---------- */
+JWC.init({
+ n: 4,
+ teamNote: 'The JW team sees every employer account, this week’s team orders rolled into the cook plan and routes, and AI-drafted outreach, reminders and invoices waiting for approval.',
+ checkout: { title: 'Team Table order', city: 'Markham', extraRows: [{ label: 'At Work delivery credit (team order over $250)', amount: -20 }], note: 'Rides with the Northline team order on Friday' },
+ chat: {
+  name: 'At Work Desk',
+  role: 'AI agent: ' + AGENTS.concierge + ', At Work desk mode · demo',
+  greeting: 'Hi, I’m the At Work Desk. I can price a meal perk for your team, check your delivery day, or explain how the freezer works.',
+  suggestions: ['What would $3 off a meal cost us for 100 staff?', 'Which day do you deliver to Markham?', 'Do we need a freezer?', 'Is this a taxable benefit?'],
+  rules: CHAT_RULES.map(function (r, i) {
+   var act = CHAT_ACTIONS[i], m = new RegExp(r.match, 'i');
+   if (i === 0) return { match: m, reply: costReply };
+   if (i === 9) return { match: m, reply: partnerReply };
+   return {
+    match: m,
+    reply: act ? function () { return { text: r.reply, action: { label: act[0], run: function () { JWC.chat.close(); if (act[2]) location.href = protoHref(act[2]); else go(act[1]); } } }; } : r.reply
+   };
+  }).concat([
+   { match: /\b(deliver\w*|routes?|drops?|drop\s?off|ship\w*|which day|what day)\b/i, reply: deliveryReply },
+   { match: /\b(hours?|open|opening)\b/i, reply: function () { return 'The Brimley Rd store is open ' + JWC.business.hours + '. Team orders close at the Sunday cut-off at midnight and arrive on your route day.'; } }
+  ])
+ }
+});
+
+/* the concept bar's height comes from concept.js as --jwc-barh (0 on phones, where it scrolls away); only the page header is measured here */
+function measure() {
+ var h = $('#p4-hdr');
+ if (h && h.offsetHeight) document.documentElement.style.setProperty('--hdrH', h.offsetHeight + 'px');
+}
+measure(); window.addEventListener('resize', measure); window.addEventListener('load', measure);
+
+/* ---------- products (all real JW catalog items) ---------- */
+var ID = {
+ jerk: 'jerk-chicken-broccoli-sweet-potato-chunks', teri: 'pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white', salmon: 'salmon-brussel-sprouts-quinoa',
+ turkey: 'turkey-spinach-white-rice', souv: 'chicken-souvlaki-broccoli-sweet-potato-chunks', tilapia: 'tilapia-asparagus-brown-rice',
+ tenders: 'chicken-broccoli-sweet-potato-fries', flank: 'copy-of-chicken-broccoli-sweet-potato-fries', sirloin: 'sirloin-ground-green-beans-sweet-potato-chunks',
+ wrapSouv: 'beef-souvlaki-wrap', wrapFajita: 'wrap-beef-flank-fajitas-copy-1', wrapClub: 'copy-of-wrap-chicken-breast-chipotle',
+ chickChili: 'chicken-ground-chilli', lemonSoup: 'soup-chicken-lemon-soup', beefChili: 'beef-chilli',
+ eggFeta: 'copy-of-feta-omelette-cups-cooked-portioned-2-pkg', eggBacon: 'copy-of-egg-bites-omelette-w-peppers-onions-mushrooms-cooked-portioned-2-pkg',
+ oats: 'steel-cut-oats', bWrap: 'spinach-feta-egg-wrap', bPlate: 'copy-of-breakfast-wrap-egg-chicken-breakfast-sausage', oatBar: 'oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy',
+ bbqCase: 'chicken-souvlaki-no-salt', tzatziki: 'copy-of-tzatziki-sauce', pita: 'whole-wheat-pita-bread'
+};
+var KEY_OF = {}; Object.keys(ID).forEach(function (k) { KEY_OF[ID[k]] = k; });
+function P(k) { return JWC.product(ID[k] || k); }
+function price(k) { var p = P(k); return p ? p.variants[0].price : 0; }
+function vlabel(k) { var p = P(k); return p ? p.variants[0].label : ''; }
+function pname(k) { var p = P(k); return p ? p.name : k; }
+function img(k, w) { return JWC.img(P(k), w || 300); }
+function protein(k) { var m = JWC.macros(P(k), 0); return m ? m.p : null; }
+var MENU = {
+ lunch: ['jerk', 'teri', 'salmon', 'turkey', 'souv', 'tilapia', 'tenders', 'flank', 'sirloin'],
+ breakfast: ['eggFeta', 'eggBacon', 'oats', 'bWrap', 'bPlate', 'oatBar'],
+ wraps: ['wrapSouv', 'wrapFajita', 'wrapClub', 'chickChili', 'lemonSoup', 'beefChili']
+};
+var TABS = [['lunch', 'Lunch'], ['breakfast', 'Breakfast'], ['wraps', 'Wraps & soups']];
+var CO = { name: 'Northline Logistics', short: 'Northline', domain: 'northline.example', city: 'Markham' };
+
+/* ---------- dates: the real Sunday cut-off and route days, from today ---------- */
+var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var WD = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var DOW = { Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5 };
+var TODAY = new Date(); TODAY.setHours(12, 0, 0, 0);
+function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+function fMD(d) { return MON[d.getMonth()] + ' ' + d.getDate(); }
+function fDay(d) { return WD[d.getDay()] + ', ' + fMD(d); }
+var CUTOFF = addDays(TODAY, (7 - TODAY.getDay()) % 7);           /* this week's Sunday cut-off */
+function routeDate(day, weeksLater) { return addDays(CUTOFF, (DOW[day] || 5) + 7 * (weeksLater || 0)); }
+/* team view and the sample HR report: pinned to a week about 9 months after the January 2027 launch, not to today */
+var TEAM_DATE = new Date(2027, 9, 18, 12, 0, 0, 0);               /* Monday, Oct 18, 2027 */
+var TEAM_CUTOFF = addDays(TEAM_DATE, -1);                         /* that week's Sunday cut-off */
+function teamRouteDate(day, weeksLater) { return addDays(TEAM_CUTOFF, (DOW[day] || 5) + 7 * (weeksLater || 0)); }
+var MONTH_LABEL = MONTHS[TEAM_DATE.getMonth()] + ' ' + TEAM_DATE.getFullYear();
+$$('.js-month').forEach(function (e) { e.textContent = MONTH_LABEL; });
+$$('.js-agent').forEach(function (e) { e.textContent = AGENTS[e.dataset.agent] || ''; });
+
+/* ---------- routes ---------- */
+function mainRoute(city) {
+ if (!city) return null;
+ return JWC.routesFor(city).filter(function (r) { return r.id !== 'pickup' && r.id !== 'express'; })[0] || null;
+}
+function gtaCode(r) { var m = /GTA \d/.exec((r && r.name) || ''); return m ? m[0] : ''; }
+function routePhrase(r) { var c = gtaCode(r); return c ? 'our ' + r.day + ' route (' + c + ')' : 'our ' + r.name; }
+
+/* ---------- PERK DESIGNER (the wow): formulas from the play spec ---------- */
+var DEF_D = { staff: 100, days: 3, mode: 'off', off: 3, lunches: 2, cap: 3, budgetOn: false, budget: 600 };
+var D = Object.assign({}, DEF_D, JWC.store.get('p4-designer', {}) || {});
+var AVG = 12.32;
+function tierFor(n) {
+ if (n >= 100) return { pct: 0.10, key: 'site', label: 'Site, 10% off', badge: 'Site pricing reached: 10% off for everyone' };
+ if (n >= 40) return { pct: 0.05, key: 'team', label: 'Team, 5% off', badge: 'Team pricing reached: 5% off for everyone' };
+ return { pct: 0, key: 'starter', label: 'Starter, published prices', badge: 'Starter: our published prices' };
+}
+function calc(d) {
+ var N = d.staff, ipp = 0.6 * d.days + 0.4, p, lunches, cw;
+ if (d.mode === 'off') { p = Math.min(0.60, 0.15 + 0.035 * d.off); lunches = Math.round(N * p * ipp); }
+ else if (d.mode === 'lunches') { p = Math.min(0.65, 0.35 + 0.06 * d.lunches); lunches = Math.round(N * p * Math.max(ipp, d.lunches)); }
+ else { p = 0.60; lunches = Math.round(N * p * Math.min(d.cap, d.days)); }
+ var tier = tierFor(lunches), wp = AVG * (1 - tier.pct);
+ if (d.mode === 'off') cw = lunches * Math.min(d.off, wp);
+ else if (d.mode === 'lunches') cw = N * p * d.lunches * wp;
+ else cw = lunches * wp;
+ var monthlyRaw = cw * 4.33, capped = !!(d.budgetOn && d.budget < monthlyRaw);
+ var jp = r2(price('jerk') * (1 - tier.pct)), jco = d.mode === 'off' ? Math.min(d.off, jp) : jp;
+ return {
+  N: N, p: p, people: Math.round(N * p), lunches: lunches, tier: tier, wp: wp, week: cw, monthlyRaw: monthlyRaw,
+  monthly: capped ? d.budget : monthlyRaw, capped: capped, capWeeks: cw > 0 ? d.budget / cw : 0,
+  staffPer: lunches ? Math.max(0, wp - cw / lunches) : wp, jp: jp, jco: r2(jco), jstaff: r2(jp - jco)
+ };
+}
+function allowance() {
+ if (D.mode === 'off') {
+  if (!D.off) return { type: 'off', amt: 0, cap: 5, text: CO.short + ' gives you work prices. No allowance is set yet.' };
+  return { type: 'off', amt: D.off, cap: 5, text: CO.short + ' covers ' + m2(D.off) + ' off each meal, up to 5 a week', short: m2(D.off) + ' off' };
+ }
+ if (D.mode === 'lunches') return { type: 'full', amt: 0, cap: D.lunches, text: CO.short + ' covers ' + D.lunches + (D.lunches === 1 ? ' lunch' : ' lunches') + ' a week in full', short: 'a covered lunch' };
+ return { type: 'full', amt: 0, cap: D.cap, text: CO.short + ' covers your meals in full, up to ' + D.cap + ' a week', short: 'a covered meal' };
+}
+function tierNow() { return calc(D).tier; }
+function wprice(k) { return r2(price(k) * (1 - tierNow().pct)); }
+
+var lastTier = null, lastPct = 0, appTimer = null;
+function setPct(r) { r.style.setProperty('--pct', ((r.value - r.min) / (r.max - r.min) * 100) + '%'); }
+function segSet(id, val) { $$('#' + id + ' button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === String(val))); }); }
+function drawDesigner(animate) {
+ var c = calc(D), st = $('#d-staff'), off = $('#d-off');
+ st.value = D.staff; $('#d-staff-o').textContent = D.staff; setPct(st);
+ off.value = D.off; $('#d-off-o').textContent = m2(D.off); setPct(off);
+ segSet('d-days', D.days); segSet('d-mode', D.mode); segSet('d-lunches', D.lunches); segSet('d-cap', D.cap);
+ $$('[data-pane]').forEach(function (p) { p.hidden = p.dataset.pane !== D.mode; });
+ $('#d-budget-on').checked = !!D.budgetOn; $('#d-budget-row').hidden = !D.budgetOn;
+ if (document.activeElement !== $('#d-budget')) $('#d-budget').value = D.budget;
+
+ $('#d-meal-pub').textContent = m2(price('jerk'));
+ $('#d-meal-work').textContent = m2(c.jp);
+ $('#d-meal-tier').textContent = c.tier.pct ? 'work price (' + c.tier.label + ')' : 'work price (Starter: published price)';
+ var coPct = c.jp ? c.jco / c.jp * 100 : 0;
+ $('#d-bar-co').style.width = coPct + '%'; $('#d-bar-st').style.width = (100 - coPct) + '%';
+ $('#d-co').textContent = $('#dm-co').textContent = m2(c.jco); $('#d-st').textContent = $('#dm-st').textContent = m2(c.jstaff);
+ $('#dm-co-bar').style.width = coPct + '%'; $('#dm-st-bar').style.width = (100 - coPct) + '%';
+ $('#d-split').setAttribute('aria-label', 'On a ' + m2(c.jp) + ' meal, the company covers ' + m2(c.jco) + ' and staff pay ' + m2(c.jstaff));
+ $('#d-split-note').textContent = D.mode === 'off' ? 'Per meal, after work pricing. Staff can use the allowance on up to 5 meals a week.' :
+  D.mode === 'lunches' ? 'On each covered lunch (' + D.lunches + ' a week per person). Extra meals are at work prices.' :
+  'On every meal, up to ' + D.cap + ' a week per person.';
+ $('#d-people').textContent = c.people + ' (' + Math.round(c.p * 100) + '%)';
+ $('#d-lunches-o').textContent = c.lunches;
+ var tb = $('#d-tier');
+ tb.className = 'p4-tier ' + c.tier.key; tb.textContent = c.tier.badge;
+ if (animate && lastTier && lastTier !== c.tier.key && !RM) { void tb.offsetWidth; tb.classList.add('pop'); setTimeout(function () { tb.classList.remove('pop'); }, 950); }
+ if (animate && lastTier && lastTier !== c.tier.key && c.tier.pct > lastPct) JWC.toast(c.tier.badge);
+ lastPct = c.tier.pct;
+ lastTier = c.tier.key;
+ $('#d-week').textContent = 'About ' + m0(c.week) + ' a week' + (c.capped ? ', capped by your budget' : '');
+ $('#d-month').textContent = $('#dm-month').textContent = m0(c.monthly);
+ $('#d-staffavg').textContent = m2(c.staffPer);
+ var cap = $('#d-capnote');
+ if (c.capped) { var wk = Math.round(c.capWeeks * 10) / 10; cap.hidden = false; cap.innerHTML = ICON.warn + '<span>' + (wk < 1 ? 'Your cap covers less than one week a month at this level.' : 'Your cap covers about ' + wk + (wk === 1 ? ' week' : ' weeks') + ' a month at this level.') + ' After that, staff still order at work prices.</span>'; }
+ else cap.hidden = true;
+ $('#d-catering').textContent = 'Fully covered, a lunch here costs the company about ' + m2(c.wp) + ', compared with $20 to $25 a head for typical office catering (est.).';
+ JWC.store.set('p4-designer', D);
+ clearTimeout(appTimer); appTimer = setTimeout(function () { renderApp(); renderFreezer(); }, animate ? 160 : 0);
+}
+$('#d-staff').addEventListener('input', function (e) { D.staff = +e.target.value; drawDesigner(true); });
+$('#d-off').addEventListener('input', function (e) { D.off = +e.target.value; drawDesigner(true); });
+[['d-days', 'days'], ['d-lunches', 'lunches'], ['d-cap', 'cap']].forEach(function (pair) {
+ $('#' + pair[0]).addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; D[pair[1]] = +b.dataset.v; drawDesigner(true); });
+});
+$('#d-mode').addEventListener('click', function (e) { var b = e.target.closest('button'); if (!b) return; D.mode = b.dataset.v; drawDesigner(true); });
+$('#d-budget-on').addEventListener('change', function (e) { D.budgetOn = e.target.checked; drawDesigner(true); if (D.budgetOn) $('#d-budget').focus(); });
+$('#d-budget').addEventListener('input', function (e) { D.budget = Math.max(0, +e.target.value || 0); drawDesigner(true); });
+$('#d-meal-img').src = img('jerk', 300);
+$('#d-pilot').addEventListener('click', openPilot);
+$('#d-app').addEventListener('click', function () {
+ renderApp(); go('app');
+ setTimeout(function () { var t = $('#app-allow') || $('#phone'); t.classList.remove('p4-flash'); void t.offsetWidth; t.classList.add('p4-flash'); }, RM ? 50 : 650);
+ JWC.toast('Staff app updated: ' + allowance().text);
+});
+$('#d-email').addEventListener('click', openSummary);
+
+function summaryRows() {
+ var c = calc(D), a = allowance();
+ return [
+  ['Staff on site', D.staff], ['Days on site each week', D.days], ['What the company covers', a.text.replace(CO.short + ' covers ', '').replace(CO.short + ' gives you ', '')],
+  ['Pricing tier', c.tier.label], ['Staff likely to order each week (est.)', c.people], ['Lunches a week (est.)', c.lunches],
+  ['Company cost per week (est.)', m0(c.week)], ['Company cost per month (est.)', m0(c.monthly) + (c.capped ? ' (budget cap)' : '')],
+  ['Staff pay per lunch, on average (est.)', m2(c.staffPer)],
+  ['Example: ' + pname('jerk') + ' at ' + m2(c.jp), 'Company ' + m2(c.jco) + ' · staff ' + m2(c.jstaff)]
+ ];
+}
+function openSummary() {
+ var rows = summaryRows();
+ JWC.modal('<p class="p4-eyebrow">J&amp;W at Work · perk summary</p><h3 style="margin-top:6px">Your perk, in numbers</h3><p class="p4-small">Estimates to help you plan, not a quote. Prepared ' + esc(fDay(TODAY)) + '. Demo: nothing is sent.</p>' +
+  '<div class="mt-3 border border-[#E3E8EF] rounded-xl px-4 py-1">' + rows.map(function (r) { return '<div class="p4-row"><span>' + esc(r[0]) + '</span><b style="white-space:normal;text-align:right">' + esc(String(r[1])) + '</b></div>'; }).join('') + '</div>' +
+  '<p class="p4-small mt-2">J&amp;W Foods · 2201 Brimley Rd, Unit 1, Scarborough · (416) 298-1350</p>' +
+  '<div class="noprint"><label class="jwc-field"><span>Colleague’s email</span><input id="sum-to" type="email" autocomplete="email" placeholder="name@company.ca"></label><p id="sum-err" class="p4-err" role="alert"></p>' +
+  '<div class="grid grid-cols-3 gap-2 mt-3"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-line" id="sum-print">Copy</button><button type="button" class="jwc-btn jwc-btn-dark" id="sum-send">Send (demo)</button></div></div>',
+  function (root) {
+   root.querySelector('#sum-print').addEventListener('click', function () {
+    var btn = this, text = rows.map(function (r) { return r[0] + ': ' + r[1]; }).join('\n');
+    try { navigator.clipboard.writeText('J&W at Work · perk summary\n' + text).then(function () { JWC.toast('Summary copied. Paste it into an email or a doc.'); }, function () { JWC.toast('Copying is not available here. Select the summary above instead.'); }); }
+    catch (e) { JWC.toast('Copying is not available here. Select the summary above instead.'); }
+   });
+   root.querySelector('#sum-send').addEventListener('click', function () {
+    var v = root.querySelector('#sum-to').value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { root.querySelector('#sum-err').textContent = 'Enter your colleague’s email, like name@company.ca.'; root.querySelector('#sum-to').setAttribute('aria-invalid', 'true'); return; }
+    JWC.closeAll(); JWC.toast('Demo: nothing is sent. The summary would go to ' + v + '.');
+   });
+  });
+}
+
+/* ---------- HERO LEAD FORM ---------- */
+var SEG = {
+ gym: { n: 2, text: 'That’s our Pro Partner Portal.', link: 'See prototype 2 →' },
+ team: { n: 7, text: 'Sports teams and school groups have their own program.', link: 'See Team Fuel, prototype 7 →' },
+ gifts: { n: 5, text: 'Gifts for clients or staff are made in a different studio.', link: 'See the Corporate Gift Studio, prototype 5 →' },
+ me: { n: 1, text: 'Ordering for yourself? Build your own week.', link: 'See the Goal Plan Builder, prototype 1 →' }
+};
+var citySel = $('#lf-city');
+citySel.insertAdjacentHTML('beforeend', JWC.cities().map(function (c) { return '<option>' + esc(c) + '</option>'; }).join('') + '<option value="Other">Other</option>');
+function leadRouteHint() {
+ var city = citySel.value, box = $('#lf-route');
+ if (!city) { box.innerHTML = ''; return; }
+ if (city === 'Other') { box.innerHTML = hint('route', 'We’ll find the closest route day for your site and confirm it on the call.'); return; }
+ var r = mainRoute(city);
+ box.innerHTML = r ? hint('ok', 'Good news: ' + esc(city) + ' is on ' + esc(routePhrase(r)) + '. Your team order would arrive ' + esc(r.day) + 's.') : hint('route', 'We’ll confirm the best route day for ' + esc(city) + ' on the call.');
+}
+citySel.addEventListener('change', leadRouteHint);
+$('#lf-notes').addEventListener('input', function (e) { $('#lf-count').textContent = e.target.value.length + '/200'; });
+$('#lf-seg').addEventListener('change', function (e) {
+ var s = SEG[e.target.value], red = $('#lf-redirect');
+ $('#lf-employer').hidden = !!s; red.hidden = !s;
+ red.innerHTML = s ? '<div class="p4-hint route" style="display:block"><p class="font-semibold">J&amp;W at Work is for employers feeding their own staff.</p><p class="mt-1">' + esc(s.text) + '</p>' +
+  '<a class="p4-btn p4-btn-primary p4-btn-sm mt-3" href="' + esc(protoHref(s.n)) + '">' + esc(s.link) + '</a><p class="p4-small mt-2">Feeding your own staff after all? Choose “Our employees” above.</p></div>' : '';
+});
+$('#lead-form').addEventListener('submit', function (e) {
+ e.preventDefault();
+ var f = { first: $('#lf-first').value.trim(), last: $('#lf-last').value.trim(), email: $('#lf-email').value.trim(), company: $('#lf-company').value.trim(), phone: $('#lf-phone').value.trim(),
+  segment: $('#lf-seg').value, size: $('#lf-size').value, city: citySel.value, notes: $('#lf-notes').value.trim(), existing: $('#lf-existing').checked };
+ var bad = [];
+ [['lf-first', !f.first, 'first name'], ['lf-last', !f.last, 'last name'], ['lf-email', !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email), 'work email'], ['lf-company', !f.company, 'company']].forEach(function (x) {
+  $('#' + x[0]).setAttribute('aria-invalid', x[1] ? 'true' : 'false'); if (x[1]) bad.push(x);
+ });
+ if (bad.length) { var names = bad.map(function (b) { return b[2]; }); $('#lf-error').textContent = 'Please add your ' + (names.length > 1 ? names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1] : names[0]) + '.'; $('#' + bad[0][0]).focus(); return; }
+ $('#lf-error').textContent = '';
+ var r = f.city && f.city !== 'Other' ? mainRoute(f.city) : null;
+ var lead = Object.assign({ id: JWC.uid('lead'), when: new Date().toISOString(), route: r ? r.name : '', day: r ? r.day : '', code: gtaCode(r) }, f);
+ var leads = JWC.store.get('p4-leads', []); leads.unshift(lead); JWC.store.set('p4-leads', leads.slice(0, 20)); emit();
+ var when = r ? 'You’re on ' + routePhrase(r).replace(/ \(GTA \d\)/, '') + ', so we could bring the tasting ' + fDay(routeDate(r.day, 0)) + ' or ' + fMD(routeDate(r.day, 1)) + '.' : 'We’ll pick a tasting day on the route closest to you.';
+ JWC.modal('<div class="flex items-start gap-3"><span class="p4-tick" style="width:38px;height:38px">' + TICK + '</span><h3 style="margin:4px 0 0">Thanks, ' + esc(f.first) + '. Your tasting request is in.</h3></div>' +
+  '<p class="mt-3" style="line-height:1.55">Our account lead will call within one business day. ' + esc(when) + ' <b>Demo: nothing was sent.</b></p>' +
+  '<div class="jwc-note"><span class="jwc-dot"></span><span>Next: price the perk for ' + esc(f.company) + ' in the Perk Designer. In <b style="color:var(--jwc-ink)">JW team view</b>, this lead now sits in the pipeline under “Tasting booked”.</span></div>' +
+  '<div class="grid grid-cols-2 gap-2 mt-4"><button type="button" class="jwc-btn jwc-btn-line" data-close>Done</button><button type="button" class="jwc-btn jwc-btn-dark" id="m-design">Design your perk</button></div>',
+  function (root) { root.querySelector('#m-design').addEventListener('click', function () { JWC.closeAll(true); go('designer'); }); });
+ $('#lead-form').reset(); $('#lf-count').textContent = '0/200'; $('#lf-route').innerHTML = hint('ok', 'Request saved for ' + esc(lead.company) + '. Our account lead will call within one business day.');
+});
+$$('[data-to-form]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); go('tasting', '#lf-first'); }); });
+$$('[data-menu-link]').forEach(function (a) { a.addEventListener('click', function () { if (S.email && S.screen !== 'menu') { S.screen = 'menu'; saveS(); renderApp(); } }); });
+
+/* marquee pause */
+(function () { var u = $('.p4-mq'), c = u.cloneNode(true); c.setAttribute('aria-hidden', 'true'); u.after(c); })();
+$('#mq-pause').addEventListener('click', function (e) {
+ var m = $('.p4-marquee'), on = m.classList.toggle('paused');
+ e.currentTarget.setAttribute('aria-pressed', String(on)); e.currentTarget.textContent = on ? 'Play' : 'Pause';
+});
+$('#how-img').src = img('teri', 600);
+
+/* ---------- PILOT ONBOARDING (4 steps) ---------- */
+var SAMPLE_EMAILS = ['priya@northline.example', 'omar.k@northline.example', 'dana@northline.example', 'li.wei@northline.example', 'marco.r@northline.example', 'aisha@northline.example', 'tom.b@northline.example', 'sofia.m@northline.example', 'kevin@northline.example', 'grace.l@northline.example', 'ravi.p@northline.example', 'noor@northline.example', 'sam@gmail.com'];
+function perkTextOf(s) {
+ if (s.mode === 'off') return m2(s.off) + ' off each meal, up to 5 a week';
+ if (s.mode === 'lunches') return s.lunches + (s.lunches === 1 ? ' lunch' : ' lunches') + ' a week covered in full';
+ return 'Every meal covered, up to ' + s.cap + ' a week';
+}
+function openPilot() {
+ var lead = JWC.store.get('p4-leads', [])[0];
+ var leadDomain = lead && lead.email.indexOf('@') > 0 ? lead.email.split('@')[1].toLowerCase() : '';
+ if (/^(gmail|googlemail|hotmail|outlook|live|yahoo|icloud|me|aol|rogers|bell|sympatico|shaw|protonmail|proton)\.[a-z.]+$/.test(leadDomain)) leadDomain = '';
+ var st = {
+  step: 1, company: lead ? lead.company : CO.name, city: lead && lead.city && mainRoute(lead.city) ? lead.city : CO.city, dock: '',
+  mode: D.mode, off: D.off, lunches: D.lunches, cap: D.cap, domain: leadDomain || CO.domain, emails: '', reminders: true, terms: false
+ };
+ var LBL = ['Company', 'Perk', 'Invite', 'Billing'];
+ JWC.modal('<div id="pilot-root"></div>', function (root) {
+  var box = root.querySelector('#pilot-root');
+  function invites() {
+   var seen = {}, ok = [], bad = [], invalid = [];
+   st.emails.split(/[\s,;]+/).map(function (x) { return x.trim().toLowerCase(); }).filter(Boolean).forEach(function (x) {
+    if (seen[x]) return; seen[x] = 1;
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x)) invalid.push(x); else if (x.split('@')[1] === st.domain) ok.push(x); else bad.push(x);
+   });
+   return { ok: ok, bad: bad, invalid: invalid };
+  }
+  function inviteMsg() {
+   var iv = invites();
+   if (!iv.ok.length && !iv.bad.length && !iv.invalid.length) return '<p class="p4-small">Paste emails to check them against @' + esc(st.domain) + '.</p>';
+   return hint(iv.bad.length || iv.invalid.length ? 'warn' : 'ok', '<b>' + iv.ok.length + (iv.ok.length === 1 ? ' invite' : ' invites') + ' ready</b>' +
+    (iv.bad.length ? ', ' + iv.bad.length + ' not on your domain (' + esc(iv.bad.join(', ')) + ')' : '') + (iv.invalid.length ? ', ' + iv.invalid.length + ' not an email (' + esc(iv.invalid.join(', ')) + ')' : '') + '.');
+  }
+  function draw() {
+   var r = mainRoute(st.city) || mainRoute(CO.city), body = '';
+   var head = '<p class="p4-eyebrow">Start a 4-week pilot · step ' + st.step + ' of 4</p><h3 id="pl-h" style="margin-top:6px">' + ['Your company', 'Your perk', 'Invite your team', 'Billing'][st.step - 1] + '</h3>' +
+    '<ol class="grid grid-cols-4 gap-1.5 mt-3 mb-2" aria-label="Pilot steps">' + LBL.map(function (l, i) {
+     var on = i + 1 <= st.step;
+     return '<li class="text-[11.5px] font-semibold" style="color:' + (on ? 'var(--navy)' : 'var(--muted)') + '"><span class="block h-1.5 rounded-full mb-1.5" style="background:' + (on ? 'var(--navy)' : '#DCE3EC') + '"></span>' + (i + 1) + '. ' + l + (i + 1 === st.step ? '<span class="sr-only"> (current)</span>' : '') + '</li>';
+    }).join('') + '</ol>';
+   if (st.step === 1) {
+    body = '<label class="jwc-field"><span>Company</span><input id="pl-company" value="' + esc(st.company) + '" autocomplete="organization"></label>' +
+     '<label class="jwc-field"><span>Site city</span><select id="pl-city">' + JWC.cities().map(function (c) { return '<option' + (c === st.city ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('') + '</select></label>' +
+     hint('route', 'Route: <b>' + esc(r.day) + ' · ' + esc(gtaCode(r) || r.name) + '</b>. One drop at your door on our regular run.') +
+     '<label class="jwc-field"><span>Dock or drop-off instructions</span><input id="pl-dock" value="' + esc(st.dock) + '" placeholder="Shipping office, door 4"></label><p id="pl-err" class="p4-err" role="alert"></p>';
+   } else if (st.step === 2) {
+    body = '<p class="p4-small">Carried over from the Perk Designer. Change anything you like.</p>' +
+     '<label class="jwc-field"><span>What the company covers</span><select id="pl-mode"><option value="off"' + (st.mode === 'off' ? ' selected' : '') + '>$ off each meal</option><option value="lunches"' + (st.mode === 'lunches' ? ' selected' : '') + '>Lunches covered</option><option value="all"' + (st.mode === 'all' ? ' selected' : '') + '>Everything, with a weekly cap</option></select></label>' +
+     (st.mode === 'off' ? '<label class="jwc-field"><span>Amount off each meal ($)</span><input id="pl-off" type="number" min="0" max="13" step="0.5" value="' + st.off + '" inputmode="decimal"></label>' :
+      '<label class="jwc-field"><span>' + (st.mode === 'lunches' ? 'Lunches covered per person each week' : 'Meals covered per person each week') + '</span><select id="pl-n">' + [1, 2, 3, 4, 5].map(function (n) { return '<option' + (n === (st.mode === 'lunches' ? st.lunches : st.cap) ? ' selected' : '') + '>' + n + '</option>'; }).join('') + '</select></label>') +
+     '<div class="p4-hint ok" id="pl-perk">' + ICON.ok + '<span><b>' + esc(perkTextOf(st)) + '</b></span></div>' +
+     '<label class="jwc-field"><span>Who’s eligible: everyone with an email at</span><input id="pl-domain" value="' + esc(st.domain) + '" autocomplete="off"></label>' +
+     '<p class="p4-small" id="pl-elig">Eligibility: everyone with an @' + esc(st.domain) + ' email.</p>';
+   } else if (st.step === 3) {
+    body = '<label class="jwc-field"><span>Paste staff emails (one per line, or separated by commas)</span><textarea id="pl-emails" rows="6" placeholder="name@' + esc(st.domain) + '">' + esc(st.emails) + '</textarea></label>' +
+     '<button type="button" class="jwc-btn jwc-btn-line" id="pl-sample" style="min-height:44px">Paste a sample list (13 emails)</button>' +
+     '<div id="pl-check" class="mt-3" aria-live="polite">' + inviteMsg() + '</div>' +
+     '<label class="p4-check mt-2"><input type="checkbox" id="pl-rem"' + (st.reminders ? ' checked' : '') + '> Send Thursday reminders to people who haven’t ordered</label>';
+   } else if (st.step === 4) {
+    var iv = invites();
+    body = '<div class="jwc-democard"><span aria-hidden="true">💳</span><span><b style="font-family:inherit;letter-spacing:0">Company wallet</b>, topped up monthly by card or EFT (demo). We bill only what staff use. Pilot: 4 weeks, free delivery.</span></div>' +
+     '<div class="mt-3 border border-[#E3E8EF] rounded-xl px-4 py-1">' + [['Company', st.company], ['Site', st.city + ' · ' + r.day + ' ' + (gtaCode(r) || r.name)], ['Drop-off', st.dock || 'Front reception'], ['Perk', perkTextOf(st)], ['Eligible', '@' + st.domain], ['Invites', iv.ok.length + ' ready'], ['Thursday reminders', st.reminders ? 'On' : 'Off']].map(function (x) { return '<div class="p4-row"><span>' + esc(x[0]) + '</span><b style="white-space:normal;text-align:right">' + esc(x[1]) + '</b></div>'; }).join('') + '</div>' +
+     '<label class="p4-check mt-2"><input type="checkbox" id="pl-terms"' + (st.terms ? ' checked' : '') + '> I’ve read the pilot terms (demo)</label>' +
+     '<p class="p4-small">No contract. After 4 weeks, keep going or stop with 30 days’ notice. Work pricing and the pilot offer are a Concept.</p>';
+   }
+   var canNext = st.step !== 3 || invites().ok.length > 0;
+   box.innerHTML = head + body + '<div class="grid grid-cols-2 gap-2 mt-4">' +
+    '<button type="button" class="jwc-btn jwc-btn-line" id="pl-back">' + (st.step === 1 ? 'Cancel' : 'Back') + '</button>' +
+    '<button type="button" class="jwc-btn jwc-btn-dark" id="pl-next"' + ((st.step === 4 && !st.terms) || !canNext ? ' disabled' : '') + '>' + (st.step === 4 ? 'Start my pilot' : 'Next') + '</button></div>';
+   wire(r);
+  }
+  function wire(r) {
+   var q = function (s) { return box.querySelector(s); };
+   q('#pl-back').addEventListener('click', function () { if (st.step === 1) JWC.closeAll(); else { st.step--; draw(); } });
+   q('#pl-next').addEventListener('click', function () {
+    if (st.step === 1 && !st.company.trim()) { q('#pl-err').textContent = 'Add your company name.'; q('#pl-company').setAttribute('aria-invalid', 'true'); q('#pl-company').focus(); return; }
+    if (st.step < 4) { st.step++; draw(); var f = box.querySelector('input, select, textarea'); if (f) f.focus(); return; }
+    finish(r);
+   });
+   if (st.step === 1) {
+    q('#pl-company').addEventListener('input', function (e) { st.company = e.target.value; });
+    q('#pl-dock').addEventListener('input', function (e) { st.dock = e.target.value; });
+    q('#pl-city').addEventListener('change', function (e) { st.city = e.target.value; draw(); box.querySelector('#pl-city').focus(); });
+   }
+   if (st.step === 2) {
+    q('#pl-mode').addEventListener('change', function (e) { st.mode = e.target.value; draw(); box.querySelector('#pl-mode').focus(); });
+    var o = q('#pl-off'); if (o) o.addEventListener('input', function (e) { st.off = Math.max(0, Math.min(13, +e.target.value || 0)); q('#pl-perk span b').textContent = perkTextOf(st); });
+    var n = q('#pl-n'); if (n) n.addEventListener('change', function (e) { if (st.mode === 'lunches') st.lunches = +e.target.value; else st.cap = +e.target.value; q('#pl-perk span b').textContent = perkTextOf(st); });
+    q('#pl-domain').addEventListener('input', function (e) { st.domain = e.target.value.replace(/^@/, '').trim().toLowerCase() || CO.domain; q('#pl-elig').textContent = 'Eligibility: everyone with an @' + st.domain + ' email.'; });
+   }
+   if (st.step === 3) {
+    var ta = q('#pl-emails');
+    var upd = function () { q('#pl-check').innerHTML = inviteMsg(); q('#pl-next').disabled = !invites().ok.length; };
+    ta.addEventListener('input', function () { st.emails = ta.value; upd(); });
+    q('#pl-sample').addEventListener('click', function () {
+     ta.value = SAMPLE_EMAILS.map(function (x) { return x.replace('northline.example', st.domain); }).map(function (x, i) { return i === 12 ? 'sam@gmail.com' : x; }).join('\n');
+     st.emails = ta.value; upd();
+    });
+    q('#pl-rem').addEventListener('change', function (e) { st.reminders = e.target.checked; });
+   }
+   if (st.step === 4) q('#pl-terms').addEventListener('change', function (e) { st.terms = e.target.checked; q('#pl-next').disabled = !st.terms; });
+  }
+  function finish(r) {
+   var iv = invites(), invite = addDays(TODAY, ((8 - TODAY.getDay()) % 7) || 7), until = addDays(invite, 6), drop = addDays(until, DOW[r.day] || 5);
+   var pilot = { id: JWC.uid('pilot'), when: new Date().toISOString(), company: st.company.trim(), city: st.city, routeName: r.name, code: gtaCode(r), day: r.day, dock: st.dock,
+    perk: { mode: st.mode, off: st.off, lunches: st.lunches, cap: st.cap }, perkText: perkTextOf(st), domain: st.domain, invites: iv.ok.length, notOnDomain: iv.bad,
+    reminders: st.reminders, staff: D.staff, inviteDate: invite.toISOString(), orderUntil: until.toISOString(), firstDrop: drop.toISOString() };
+   var all = JWC.store.get('p4-pilots', []); all.unshift(pilot); JWC.store.set('p4-pilots', all.slice(0, 10)); emit();
+   box.innerHTML = '<div class="flex items-start gap-3"><span class="p4-tick" style="width:38px;height:38px">' + TICK + '</span><h3 style="margin:4px 0 0">Your 4-week pilot is set up</h3></div>' +
+    '<p class="mt-3" style="line-height:1.55">Invites go out ' + esc(fDay(invite)) + '. Staff can order until ' + esc(fDay(until)) + '. Your first drop is ' + esc(fDay(drop)) + ' on the ' + esc(r.code || gtaCode(r) || r.name) + (gtaCode(r) ? ' route' : '') + '. <b>Demo: nothing was sent.</b></p>' +
+    '<div class="jwc-note"><span class="jwc-dot"></span><span>' + esc(pilot.company) + ' now shows in <b style="color:var(--jwc-ink)">JW team view</b>: at the top of the accounts table, in the pipeline, and as a staff invite email waiting for approval.</span></div>' +
+    '<div class="grid grid-cols-2 gap-2 mt-4"><button type="button" class="jwc-btn jwc-btn-line" id="pl-done">Done</button><button type="button" class="jwc-btn jwc-btn-dark" id="pl-team">Open JW team view</button></div>';
+   box.querySelector('#pl-done').addEventListener('click', function () { JWC.closeAll(); });
+   box.querySelector('#pl-team').addEventListener('click', function () { JWC.closeAll(true); JWC.setView('team'); });
+   box.querySelector('#pl-done').focus();
+   JWC.toast('Pilot saved for ' + pilot.company + ' (demo)');
+  }
+  draw();
+ });
+}
+
+/* ---------- STAFF APP (phone) ---------- */
+var S = Object.assign({ screen: 'join', email: '', basket: {}, tab: 'lunch', pay: 'card', repeat: false, editing: null, placed: null }, JWC.store.get('p4-staff', {}) || {});
+var appErr = '', appDraft = '';
+function saveS() { JWC.store.set('p4-staff', S); }
+function who() {
+ var local = (S.email.split('@')[0] || '').toLowerCase(), parts = local.split(/[._-]+/).filter(Boolean);
+ var first = parts[0] ? parts[0].charAt(0).toUpperCase() + parts[0].slice(1) : 'there';
+ var li = parts[1] ? parts[1].charAt(0).toUpperCase() : (parts[0] === 'priya' ? 'S' : '');
+ return { first: first, bag: (first + (li ? ' ' + li + '.' : '')).toUpperCase() };
+}
+function basketCalc() {
+ var a = allowance(), units = [], lines = [];
+ Object.keys(S.basket).forEach(function (k) { var q = S.basket[k]; if (q > 0 && P(k)) { var w = wprice(k); lines.push({ k: k, q: q, w: w, pub: price(k) }); for (var i = 0; i < q; i++) units.push(w); } });
+ if (a.type === 'full') units.sort(function (x, y) { return y - x; });
+ var n = a.type === 'off' && !a.amt ? 0 : Math.min(a.cap, units.length), covered = 0;
+ for (var i = 0; i < n; i++) covered += a.type === 'off' ? Math.min(a.amt, units[i]) : units[i];
+ var sub = r2(lines.reduce(function (s, l) { return s + l.w * l.q; }, 0));
+ covered = r2(covered);
+ return { a: a, lines: lines, count: units.length, sub: sub, covered: covered, pay: r2(sub - covered), used: n };
+}
+function cardPay(k, b) {
+ var w = wprice(k), a = b.a;
+ if (a.type === 'off' && !a.amt) return { pay: w, note: '' };
+ if (b.used >= a.cap) return { pay: w, note: 'allowance used up this week' };
+ return a.type === 'off' ? { pay: r2(w - Math.min(a.amt, w)), note: 'after ' + m2(Math.min(a.amt, w)) + ' allowance' } : { pay: 0, note: 'covered by ' + CO.short };
+}
+function appHead(hi) {
+ var a = allowance(), r = mainRoute(CO.city);
+ return '<div class="p4-app-head"><div class="flex items-center justify-between gap-2"><p class="fd text-[22px] font-extrabold leading-none">' + esc(hi) + '</p>' +
+  (S.email ? '<button type="button" class="text-[12.5px] underline underline-offset-2 text-white/90 min-h-[40px] px-1" data-act="signout">Sign out</button>' : '') + '</div>' +
+  '<p class="allow" id="app-allow">' + esc(a.text) + '</p>' +
+  '<p class="cut">Order by ' + esc(fDay(CUTOFF)) + ' at midnight · Arrives ' + esc(fDay(routeDate(r.day))) + ' at the shipping office</p></div>';
+}
+function renderApp() {
+ var box = $('#app-screen'); if (!box) return;
+ var h = '', a = allowance();
+ if (S.screen === 'join' || !S.email) {
+  h = '<div class="p4-app-pad"><div class="bg-white rounded-2xl p-3 flex justify-center"><img src="../assets/img/jw-logo2.jpg" alt="J&amp;W Meal Butler" width="600" height="391" class="h-[86px] w-auto"></div>' +
+   '<h3 class="fd text-[26px] font-extrabold text-navy mt-5 leading-tight">Join J&amp;W at Work</h3><p class="text-[14.5px] text-muted mt-1.5">Use your work email to join your company’s meal perk.</p>' +
+   '<form data-form="join" class="mt-4" novalidate><label class="p4-field"><span>Work email</span><input id="app-email" type="email" autocomplete="off" inputmode="email" value="' + esc(appDraft) + '" placeholder="name@company.example"' + (appErr ? ' aria-invalid="true" aria-describedby="app-err"' : '') + '></label>' +
+   '<p id="app-err" class="p4-err" role="alert">' + esc(appErr) + '</p>' +
+   '<button class="p4-btn p4-btn-primary p4-btn-block mt-3">Send my sign-in link</button></form>' +
+   '<button type="button" class="mt-3 inline-flex items-center gap-2 min-h-[40px] px-3.5 rounded-full bg-white border border-[#C7D7E6] text-[13.5px] font-semibold text-navy" data-act="hint">Try priya@' + CO.domain + '</button>' +
+   '<div class="mt-5 rounded-xl bg-white p-3.5 border border-[#D6E3EF]" id="app-allow"><p class="text-[11px] uppercase tracking-[.12em] font-semibold text-slate">Your company perk</p><p class="font-semibold mt-1 text-[14.5px]">' + esc(a.text) + '</p></div>' +
+   '<p class="p4-small mt-4">Demo: nothing is sent. Sign-in links are skipped in this preview.</p></div>';
+ } else if (S.screen === 'menu') {
+  var b = basketCalc(), list = MENU[S.tab] || MENU.lunch;
+  h = appHead('Hi ' + who().first) +
+   (S.placed ? '<div class="mx-3 mt-3 p4-hint ok">' + ICON.ok + '<span>' + (S.editing ? 'Editing your ' + esc(mainRoute(CO.city).day) + ' order ' + esc(S.editing) + '. Confirm again to save changes.' : 'Your order ' + esc(S.placed.no) + ' is in: ' + S.placed.count + ' meals. You can edit it until Sunday. <button type="button" class="underline underline-offset-2 font-semibold min-h-[40px]" data-act="reedit">Edit it</button>') + '</span></div>' : '') +
+   '<div class="p4-app-tabs overflow-x-auto" role="tablist" aria-label="Menu">' + TABS.map(function (t) { return '<button type="button" role="tab" aria-selected="' + (S.tab === t[0]) + '" data-tab="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div>' +
+   '<div class="pt-1" role="tabpanel" aria-label="' + esc((TABS.filter(function (t) { return t[0] === S.tab; })[0] || TABS[0])[1]) + ' menu">' + list.map(function (k) {
+    var p = P(k); if (!p) return '';
+    var q = S.basket[k] || 0, w = wprice(k), cp = cardPay(k, b), pr = protein(k);
+    return '<div class="p4-mi"><div class="ph"><img src="' + esc(img(k, 200)) + '" alt="' + esc(p.name) + '" loading="lazy" width="84" height="84">' +
+     (pr ? '<span class="p4-sticker"><span>est.</span><b>' + pr + ' g</b><span>protein</span></span>' : '') + '</div>' +
+     '<div class="min-w-0"><p class="nm">' + esc(p.name) + '</p>' +
+     '<p class="pr num">' + (w < price(k) ? '<s>' + m2(price(k)) + '</s> ' : '') + '<span class="text-ink font-semibold">' + m2(w) + '</span> work price</p></div>' +
+     '<div class="flex items-center justify-between gap-3" style="grid-column:1/-1"><p class="pay num">You pay ' + m2(cp.pay) + (cp.note ? '<span class="block text-[11.5px] font-medium text-muted">' + esc(cp.note) + '</span>' : '') + '</p>' +
+     '<div class="p4-stepper"><button type="button" data-q="' + k + '" data-d="-1" aria-label="One less ' + esc(p.name) + '"' + (q ? '' : ' disabled') + '>−</button><output aria-live="polite">' + q + '</output><button type="button" data-q="' + k + '" data-d="1" aria-label="One more ' + esc(p.name) + '">+</button></div></div></div>';
+   }).join('') + '</div>' +
+   '<p class="p4-small px-4 pb-1">Protein is an estimate (est.), from our ' + esc(AGENTS.label) + ' agent. Ingredients and allergens are on every label.</p>' +
+   '<div class="p4-app-foot"><div class="bg-white rounded-xl p-3 shadow-sm"><div class="flex justify-between text-[13px] font-semibold"><span>' + (a.type === 'off' && !a.amt ? 'No allowance set' : b.used + ' of ' + a.cap + ' covered this week') + '</span><span class="num">' + b.count + (b.count === 1 ? ' meal' : ' meals') + '</span></div>' +
+   '<div class="p4-meter mt-2" role="img" aria-label="' + b.used + ' of ' + a.cap + ' allowance meals used"><i style="width:' + (a.cap ? Math.min(100, b.used / a.cap * 100) : 0) + '%"></i></div>' +
+   '<button type="button" class="p4-btn p4-btn-primary p4-btn-block mt-3" data-act="review"' + (b.count ? '' : ' disabled') + '>' + (b.count ? 'Review · You pay ' + m2(b.pay) : 'Add meals to review') + '</button></div></div>';
+ } else if (S.screen === 'review') {
+  var bb = basketCalc();
+  h = appHead('Review') + '<div class="p4-app-pad"><div class="bg-white rounded-2xl p-4">' +
+   bb.lines.map(function (l) { return '<div class="p4-row"><span>' + l.q + ' × ' + esc(pname(l.k)) + '</span><b>' + m2(l.w * l.q) + '</b></div>'; }).join('') +
+   '<div class="p4-row" style="border-top:1.5px solid var(--ink)"><span>' + bb.count + (bb.count === 1 ? ' meal' : ' meals') + ' at work price</span><b>' + m2(bb.sub) + '</b></div>' +
+   '<div class="p4-row" style="color:var(--teal)"><span>' + esc(CO.short) + ' covers</span><b>−' + m2(bb.covered) + '</b></div>' +
+   '<div class="p4-row text-[17px]"><span class="font-bold">You pay</span><b class="text-navy">' + m2(bb.pay) + '</b></div></div>' +
+   '<fieldset class="mt-4 space-y-2"><legend class="font-semibold text-[14.5px] mb-2">Pay with</legend>' +
+   '<label class="p4-opt"><input type="radio" name="app-pay" value="card"' + (S.pay === 'card' ? ' checked' : '') + '><span>Card on file · <b class="font-mono tracking-wide">DEMO •••• 4242</b></span></label>' +
+   '<label class="p4-opt"><input type="radio" name="app-pay" value="payroll"' + (S.pay === 'payroll' ? ' checked' : '') + '><span>Payroll deduction (if your company allows it)</span></label></fieldset>' +
+   '<label class="flex items-center justify-between gap-3 mt-4 bg-white rounded-xl p-3 cursor-pointer"><span class="text-[14px] font-medium">Repeat this order every week (skip any time)</span><span class="p4-switch"><input type="checkbox" id="app-repeat" role="switch"' + (S.repeat ? ' checked' : '') + '><i aria-hidden="true"></i></span></label>' +
+   '<button type="button" class="p4-btn p4-btn-primary p4-btn-block mt-4" data-act="confirm">Confirm my meals</button>' +
+   '<button type="button" class="p4-btn p4-btn-soft p4-btn-block mt-2" data-act="menu">Back to the menu</button>' +
+   '<p class="p4-small mt-3 text-center">Demo: nothing is charged.</p></div>';
+ } else if (S.screen === 'done') {
+  var rr = mainRoute(CO.city), pl = S.placed || { no: '', count: 0 };
+  h = '<div class="p4-app-pad text-center pt-10"><span class="p4-tick mx-auto" style="width:64px;height:64px"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" stroke="#fff" stroke-width="3" fill="none"/></svg></span>' +
+   '<h3 class="fd text-[26px] font-extrabold text-navy mt-5 leading-tight">You’re in ' + esc(rr.day) + '’s ' + esc(CO.short) + ' drop.</h3>' +
+   '<p class="mt-3 text-[15px]">Your bag will say <b>' + esc(who().bag) + '</b> and sits on shelf 2 of the staff freezer.</p>' +
+   '<div class="bg-white rounded-xl p-3.5 mt-4 text-left text-[14px] flex gap-3"><span class="p4-ico flex-none" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7 4 7-4M5 16l7-4 7 4" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span>Thaw tomorrow’s lunch in the fridge overnight, then follow the heating steps on the bag.</span></div>' +
+   '<p class="p4-small mt-3">Order ' + esc(pl.no) + ' · ' + pl.count + (pl.count === 1 ? ' meal' : ' meals') + ' · arrives ' + esc(fDay(routeDate(rr.day))) + (S.repeat ? ' · repeats weekly' : '') + '</p>' +
+   '<div class="grid grid-cols-2 gap-2 mt-6"><button type="button" class="p4-btn p4-btn-primary" style="padding-left:8px;padding-right:8px" data-act="done">Done</button><button type="button" class="p4-btn p4-btn-ghost" style="padding-left:8px;padding-right:8px;white-space:nowrap" data-act="edit">Edit until Sunday</button></div></div>';
+ }
+ box.innerHTML = h;
+}
+var appBox = $('#app-screen');
+appBox.addEventListener('submit', function (e) {
+ e.preventDefault();
+ var v = ($('#app-email').value || '').trim().toLowerCase(); appDraft = v;
+ if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { appErr = 'Enter your work email, like name@' + CO.domain + '.'; renderApp(); $('#app-email').focus(); return; }
+ if (v.split('@')[1] !== CO.domain) { appErr = 'That email isn’t on ' + CO.short + '’s list. Use your @' + CO.domain + ' address, or ask HR to add you.'; renderApp(); $('#app-email').focus(); return; }
+ appErr = ''; S.email = v; S.screen = 'menu'; saveS(); renderApp();
+ JWC.toast('Demo: no link sent. You’re signed in as ' + who().first + '.');
+ var t = appBox.querySelector('[role=tab]'); if (t) t.focus();
+});
+appBox.addEventListener('input', function (e) { if (e.target.id === 'app-email') appDraft = e.target.value; });
+appBox.addEventListener('change', function (e) {
+ if (e.target.name === 'app-pay') { S.pay = e.target.value; saveS(); }
+ if (e.target.id === 'app-repeat') { S.repeat = e.target.checked; saveS(); }
+});
+appBox.addEventListener('click', function (e) {
+ var t = e.target.closest('button'); if (!t) return;
+ if (t.dataset.q) {
+  var k = t.dataset.q, d = +t.dataset.d; S.basket[k] = Math.max(0, Math.min(9, (S.basket[k] || 0) + d)); if (!S.basket[k]) delete S.basket[k];
+  saveS(); renderApp(); var same = appBox.querySelector('[data-q="' + k + '"][data-d="' + d + '"]'); if (same && !same.disabled) same.focus(); else { same = appBox.querySelector('[data-q="' + k + '"][data-d="1"]'); if (same) same.focus(); }
+  return;
+ }
+ if (t.dataset.tab) { S.tab = t.dataset.tab; saveS(); renderApp(); var tb = appBox.querySelector('[data-tab="' + S.tab + '"]'); if (tb) tb.focus(); return; }
+ var act = t.dataset.act; if (!act) return;
+ if (act === 'hint') { appDraft = 'priya@' + CO.domain; appErr = ''; renderApp(); $('#app-email').focus(); return; }
+ if (act === 'signout') { S.email = ''; S.screen = 'join'; appDraft = ''; saveS(); renderApp(); return; }
+ if (act === 'review') { S.screen = 'review'; saveS(); renderApp(); appBox.scrollTop = 0; focusFirst(); return; }
+ if (act === 'menu') { S.screen = 'menu'; saveS(); renderApp(); focusFirst(); return; }
+ if (act === 'confirm') { confirmStaff(); return; }
+ if (act === 'done') { S.screen = 'menu'; S.basket = {}; S.editing = null; saveS(); renderApp(); appBox.scrollTop = 0; focusFirst(); return; }
+ if (act === 'edit') { S.screen = 'menu'; S.editing = S.placed ? S.placed.no : null; saveS(); renderApp(); appBox.scrollTop = 0; focusFirst(); return; }
+ if (act === 'reedit') {
+  var po = S.placed && JWC.orders().filter(function (o) { return o.no === S.placed.no; })[0];
+  if (!po) { S.placed = null; saveS(); renderApp(); return; }
+  S.basket = {}; (po.items || []).forEach(function (i) { var kk = KEY_OF[i.id]; if (kk) S.basket[kk] = (S.basket[kk] || 0) + i.qty; });
+  S.editing = po.no; saveS(); renderApp(); focusFirst(); return;
+ }
+});
+function focusFirst() { var f = appBox.querySelector('button, input'); if (f) try { f.focus({ preventScroll: true }); } catch (e) { f.focus(); } }
+function confirmStaff() {
+ var b = basketCalc(); if (!b.count) return;
+ var r = mainRoute(CO.city), all = JWC.orders(), no;
+ if (S.editing && all.some(function (o) { return o.no === S.editing; })) { no = S.editing; JWC.store.set('orders', all.filter(function (o) { return o.no !== no; })); }
+ else no = 'JW-' + (10480 + all.length + 1);
+ var order = JWC.addOrder({
+  no: no, proto: 4, kind: 'staff', account: CO.name, who: who().bag, when: new Date().toISOString(), city: CO.city, route: r.name, day: r.day,
+  items: b.lines.map(function (l) { return { key: ID[l.k] + '|' + vlabel(l.k), id: ID[l.k], name: pname(l.k), variant: vlabel(l.k), price: l.w, qty: l.q, img: img(l.k, 120), note: 'Work price' }; }),
+  subtotal: b.sub, discount: b.covered, companyCovered: b.covered, fee: 0, total: b.pay, pay: S.pay,
+  subscription: S.repeat ? { label: 'Every week' } : null, note: 'At Work staff order · ' + CO.short + (S.repeat ? ' · repeats weekly' : '')
+ });
+ var wasEdit = !!S.editing;
+ S.placed = { no: no, count: b.count }; S.editing = null; S.screen = 'done'; saveS(); renderApp(); appBox.scrollTop = 0; focusFirst();
+ document.dispatchEvent(new CustomEvent('jwc:order', { detail: order }));
+ JWC.toast((wasEdit ? 'Order updated: ' : 'Order in: ') + b.count + ' meals for ' + r.day + '’s ' + CO.short + ' drop (demo)');
+}
+
+/* ---------- AT WORK FREEZER ---------- */
+var FZ_SHELVES = [['jerk', 'turkey'], ['salmon', 'chickChili'], ['eggFeta', 'oats']];
+var FZ_SHORT = { jerk: 'Jerk Chicken', turkey: 'Turkey, Spinach & Rice', salmon: 'Salmon, Brussels & Quinoa', chickChili: 'Chicken Chili', eggFeta: 'Egg White Bites', oats: 'Steel Cut Oats' };
+var FZ_DEF = { jerk: 6, turkey: 4, salmon: 3, chickChili: 5, eggFeta: 8, oats: 7 };
+var FZ_SITE = { name: 'Eastgate Care Residence', city: 'Scarborough' };
+var FZD = JWC.store.get('p4-freezer', null) || { stock: Object.assign({}, FZ_DEF), sold: {} };
+function saveFz() { JWC.store.set('p4-freezer', FZD); }
+function fzTotal() { return Object.keys(FZD.stock).reduce(function (s, k) { return s + (FZD.stock[k] || 0); }, 0); }
+function fzPct() { return Math.round(fzTotal() / 60 * 100); }
+function fzPay(k, useAllow) { var w = wprice(k), a = allowance(); if (!useAllow) return w; return a.type === 'off' ? r2(w - Math.min(a.amt, w)) : 0; }
+function renderFreezer() {
+ var g = $('#fz-glass'); if (!g) return;
+ g.innerHTML = FZ_SHELVES.map(function (row, i) {
+  return '<div class="p4-shelf"><span class="p4-shelf-lbl">Shelf ' + (i + 1) + '</span>' + row.map(function (k) {
+   var n = FZD.stock[k] || 0;
+   return '<button type="button" class="p4-fzi" data-fz="' + k + '"' + (n ? '' : ' disabled') + ' aria-label="' + esc(FZ_SHORT[k]) + ', ' + n + ' left' + (n ? ', ' + m2(fzPay(k, true)) + ' with your allowance' : ', sold out') + '">' +
+    '<img src="' + esc(img(k, 160)) + '" alt="" width="54" height="54"><span><span class="t">' + esc(FZ_SHORT[k]) + '</span><span class="c">×' + n + '</span></span>' +
+    (n === 0 ? '<span class="p4-low w">Sold out: restock Wednesday</span>' : n <= 2 ? '<span class="p4-low w">Low: restock Wednesday</span>' : '') + '</button>';
+  }).join('') + '</div>';
+ }).join('');
+}
+function qrSvg(seed) {
+ var s = 7; for (var i = 0; i < seed.length; i++) s = (Math.imul(s, 31) + seed.charCodeAt(i)) >>> 0;
+ var rnd = function () { s = (Math.imul(s, 1103515245) + 12345) >>> 0; return (s >>> 16) & 1; };
+ var cells = '';
+ for (var y = 0; y < 21; y++) for (var x = 0; x < 21; x++) {
+  if ((x < 8 && y < 8) || (x > 12 && y < 8) || (x < 8 && y > 12)) continue;
+  if (rnd()) cells += '<rect x="' + x + '" y="' + y + '" width="1" height="1"/>';
+ }
+ var f = function (x, y) { return '<rect x="' + x + '" y="' + y + '" width="7" height="7"/><rect x="' + (x + 1) + '" y="' + (y + 1) + '" width="5" height="5" fill="#fff"/><rect x="' + (x + 2) + '" y="' + (y + 2) + '" width="3" height="3"/>'; };
+ return '<svg viewBox="-1 -1 23 23" class="p4-qr" aria-hidden="true" shape-rendering="crispEdges"><g fill="#0F1E33">' + cells + f(0, 0) + f(14, 0) + f(0, 14) + '</g></svg>';
+}
+var sheet = $('#p4-sheet'), scrim = $('#p4-scrim'), sheetKey = null;
+function openSheet(html) {
+ sheet.innerHTML = '<div class="grab" aria-hidden="true"></div>' + html;
+ sheet.classList.add('on'); scrim.classList.add('on'); sheet.setAttribute('aria-hidden', 'false');
+ setTimeout(function () { var f = sheet.querySelector('input:checked') || sheet.querySelector('button'); if (f) f.focus(); }, 60);
+}
+function closeSheet() {
+ if (!sheet.classList.contains('on')) return;
+ sheet.classList.remove('on'); scrim.classList.remove('on'); sheet.setAttribute('aria-hidden', 'true');
+ var b = sheetKey && ($('[data-fz="' + sheetKey + '"]:not([disabled])') || $('#fz-glass button:not([disabled])')); if (b) b.focus();
+}
+scrim.addEventListener('click', closeSheet);
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
+function buySheet(k) {
+ sheetKey = k;
+ var a = allowance(), n = FZD.stock[k] || 0, w = wprice(k), shelf = FZ_SHELVES.map(function (r, i) { return r.indexOf(k) > -1 ? i + 1 : 0; }).filter(Boolean)[0], pr = protein(k);
+ var allowLbl = a.type === 'off' ? (a.amt ? 'Use my allowance (' + m2(Math.min(a.amt, w)) + ' off)' : 'Use my allowance (none set)') : 'Use ' + a.short + ' (company pays)';
+ openSheet('<div class="px-5 pb-6 pt-3">' +
+  '<div class="flex items-start gap-3"><img src="' + esc(img(k, 160)) + '" alt="' + esc(pname(k)) + '" width="64" height="64" class="w-16 h-16 rounded-xl object-cover flex-none"><div class="min-w-0 flex-1"><p class="p4-eyebrow" style="font-size:11px">Freezer · shelf ' + shelf + ' · ' + esc(FZ_SITE.name) + '</p><h3 id="sheet-h" class="p4-h3 mt-1">' + esc(pname(k)) + '</h3><p class="p4-small mt-1">' + n + ' in this freezer' + (pr ? ' · est. ' + pr + ' g protein' : '') + '</p></div><button type="button" class="jwc-x" data-x aria-label="Close">×</button></div>' +
+  '<div class="flex items-center gap-4 mt-4 bg-[#F4F8FC] rounded-2xl p-3">' + qrSvg(k + n) + '<p class="text-[13.5px] text-muted leading-snug">Scan the code on the door to open this meal on your phone (mock QR). In this demo, just choose how to pay.</p></div>' +
+  '<fieldset class="mt-4 space-y-2"><legend class="font-semibold mb-2">How do you want to pay?</legend>' +
+  '<label class="p4-opt"><input type="radio" name="fzpay" value="allow" checked><span><b>' + esc(allowLbl) + '</b><span class="block text-muted text-[13px] mt-0.5">Work price ' + m2(w) + (w < price(k) ? ' (published ' + m2(price(k)) + ')' : '') + '</span></span></label>' +
+  '<label class="p4-opt"><input type="radio" name="fzpay" value="card"><span><b>Pay the work price by card (demo)</b><span class="block text-muted text-[13px] mt-0.5">DEMO •••• 4242 · ' + m2(w) + '</span></span></label></fieldset>' +
+  '<button type="button" class="p4-btn p4-btn-primary p4-btn-block mt-4 text-[16px]" id="fz-pay">Pay ' + m2(fzPay(k, true)) + '</button>' +
+  '<p class="p4-small text-center mt-2">Demo: nothing is charged.</p></div>');
+ var payBtn = sheet.querySelector('#fz-pay');
+ $$('input[name=fzpay]', sheet).forEach(function (r) { r.addEventListener('change', function () { payBtn.textContent = 'Pay ' + m2(fzPay(k, r.value === 'allow')); }); });
+ sheet.querySelector('[data-x]').addEventListener('click', closeSheet);
+ payBtn.addEventListener('click', function () {
+  if (!(FZD.stock[k] > 0)) return;
+  var useAllow = sheet.querySelector('input[name=fzpay]:checked').value === 'allow', pay = fzPay(k, useAllow), r = mainRoute(FZ_SITE.city);
+  FZD.stock[k]--; FZD.sold[k] = (FZD.sold[k] || 0) + 1; saveFz();
+  var all = JWC.orders(), order = JWC.addOrder({
+   no: 'JW-' + (10480 + all.length + 1), proto: 4, kind: 'freezer', account: FZ_SITE.name, when: new Date().toISOString(), city: FZ_SITE.city, route: 'At Work Freezer C', day: 'Night shift',
+   items: [{ key: ID[k] + '|' + vlabel(k), id: ID[k], name: pname(k), variant: vlabel(k), price: w, qty: 1, img: img(k, 120), note: 'Freezer' }],
+   subtotal: w, discount: r2(w - pay), companyCovered: r2(w - pay), fee: 0, total: pay, pay: useAllow ? 'allowance' : 'card', note: 'At Work Freezer · ' + FZ_SITE.name + ' night shift'
+  });
+  renderFreezer();
+  document.dispatchEvent(new CustomEvent('jwc:order', { detail: order }));
+  var left = FZD.stock[k];
+  sheet.innerHTML = '<div class="grab" aria-hidden="true"></div><div class="px-6 pb-8 pt-6 text-center"><span class="p4-tick mx-auto" style="width:60px;height:60px"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10" stroke="#fff" stroke-width="3" fill="none"/></svg></span>' +
+   '<h3 id="sheet-h" class="fd text-[26px] font-extrabold text-navy mt-4">Paid. Enjoy your meal.</h3><p class="mt-2 text-[16px]">' + left + ' ' + esc(FZ_SHORT[k]) + ' left.</p>' +
+   (left <= 2 ? '<p class="mt-3"><span class="p4-low" style="font-size:12px;padding:5px 10px">' + (left ? 'Low: restock Wednesday' : 'Sold out: restock Wednesday') + '</span></p>' : '') +
+   '<p class="p4-small mt-3">' + m2(pay) + (useAllow ? ' paid after your allowance' : ' paid by card (demo)') + '. Thaw in the staff fridge for tomorrow, or follow the from-frozen time on the label.</p>' +
+   '<button type="button" class="p4-btn p4-btn-primary p4-btn-block mt-5" data-x>Done</button></div>';
+  sheet.querySelector('[data-x]').addEventListener('click', closeSheet); sheet.querySelector('[data-x]').focus();
+  JWC.toast('Freezer sale: ' + FZ_SHORT[k] + ', ' + m2(pay) + ' (demo)');
+ });
+}
+$('#fz-glass').addEventListener('click', function (e) { var b = e.target.closest('[data-fz]'); if (b && !b.disabled) buySheet(b.dataset.fz); });
+
+/* ---------- TEAM TABLE PACKS (Concept, priced from published portion prices) ---------- */
+var LL_OPTS = ['souv', 'teri', 'salmon', 'jerk', 'turkey', 'tilapia'];
+var LL = Object.assign({ souv: 4, teri: 4, salmon: 4, jerk: 0, turkey: 0, tilapia: 0 }, JWC.store.get('p4-llmix', {}) || {});
+function llCount() { return LL_OPTS.reduce(function (s, k) { return s + (LL[k] || 0); }, 0); }
+var PACKS = [
+ { id: 'll', title: 'Lunch & Learn Pack, 12 people', imgs: ['souv', 'teri', 'salmon'], lines: function () { return LL_OPTS.filter(function (k) { return LL[k] > 0; }).map(function (k) { return { k: k, q: LL[k] }; }); },
+  contents: function () { return LL_OPTS.filter(function (k) { return LL[k] > 0; }).map(function (k) { return LL[k] + ' ' + pname(k); }).join(' · ') + '. Name labels and a printed menu card.'; } },
+ { id: 'bf', title: 'Breakfast Meeting Pack, 12 people', imgs: ['eggFeta', 'oats'], lines: function () { return [{ k: 'eggFeta', q: 12 }, { k: 'oats', q: 12 }]; },
+  contents: function () { return '12 Egg White Bites, Spinach & Feta · 12 Steel Cut Oats.'; } },
+ { id: 'bbq', title: 'Team BBQ Pack, about 25 people', imgs: ['bbqCase', 'tzatziki', 'pita'], lines: function () { return [{ k: 'bbqCase', q: 1 }, { k: 'tzatziki', q: 1 }, { k: 'pita', q: 5 }]; },
+  contents: function () { return 'No-Salt Chicken Souvlaki Case (5 kg, about 50 skewers) · Tzatziki 1.5 L · 5 packs of Whole Grain Greek Pita. Raw skewers for your grill. Cook chicken to 74°C.'; } }
+];
+function packById(id) { return PACKS.filter(function (p) { return p.id === id; })[0]; }
+function packTotal(p) { return r2(p.lines().reduce(function (s, l) { return s + price(l.k) * l.q; }, 0)); }
+function packItems(p) { return p.lines().map(function (l) { return { key: ID[l.k] + '|' + vlabel(l.k), id: ID[l.k], name: pname(l.k), variant: vlabel(l.k), price: price(l.k), qty: l.q, img: img(l.k, 120), note: p.title.split(',')[0] }; }); }
+function packValid(p) { return p.id !== 'll' || llCount() === 12; }
+function mixHtml() {
+ var n = llCount();
+ return LL_OPTS.map(function (k) {
+  return '<div class="p4-mixrow"><span><span class="font-medium">' + esc(pname(k)) + '</span><span class="block p4-small num">' + m2(price(k)) + ' each</span></span>' +
+   '<div class="p4-stepper"><button type="button" data-mk="' + k + '" data-d="-1" aria-label="One less ' + esc(pname(k)) + '"' + (LL[k] ? '' : ' disabled') + '>−</button><output>' + (LL[k] || 0) + '</output><button type="button" data-mk="' + k + '" data-d="1" aria-label="One more ' + esc(pname(k)) + '"' + (n >= 12 ? ' disabled' : '') + '>+</button></div></div>';
+ }).join('') + '<p class="mt-2 text-[14px] font-semibold ' + (n === 12 ? 'text-teal' : '') + '" style="' + (n === 12 ? '' : 'color:#8A5A00') + '" aria-live="polite">' + (n === 12 ? '12 of 12 meals chosen' : n + ' of 12 meals chosen. ' + (n < 12 ? 'Add ' + (12 - n) + ' more.' : '')) + '</p>';
+}
+function renderPacks() {
+ $('#packs-grid').innerHTML = PACKS.map(function (p) {
+  return '<article class="p4-card flex flex-col h-full" data-pack="' + p.id + '">' +
+   '<div class="p4-pack-imgs" style="grid-template-columns:repeat(' + p.imgs.length + ',1fr)">' + p.imgs.map(function (k) { return '<img src="' + esc(img(k, 400)) + '" alt="' + esc(pname(k)) + '" loading="lazy">'; }).join('') + '</div>' +
+   '<div class="p-5 flex flex-col flex-1"><div class="flex items-start justify-between gap-3"><h3 class="p4-h3">' + esc(p.title) + '</h3><span class="p4-concept mt-1">Concept</span></div>' +
+   '<p class="p4-price mt-3" data-price>' + m2(packTotal(p)) + '</p><p class="p4-small mt-1">At our published prices · rides with your team order</p>' +
+   '<p class="mt-3 text-[14.5px] leading-relaxed" data-contents>' + esc(p.contents()) + '</p>' +
+   (p.id === 'll' ? '<button type="button" class="p4-btn p4-btn-soft p4-btn-sm mt-3 self-start" data-mixbtn aria-expanded="false" aria-controls="ll-mix">Change the mix</button><div class="p4-mix" id="ll-mix" hidden>' + mixHtml() + '</div>' : '') +
+   '<div class="grid grid-cols-2 gap-2 mt-auto pt-5"><button type="button" class="p4-btn p4-btn-ghost" data-add' + (packValid(p) ? '' : ' disabled') + '>Add to cart</button><button type="button" class="p4-btn p4-btn-primary" data-order' + (packValid(p) ? '' : ' disabled') + '>Order this pack</button></div></div></article>';
+ }).join('');
+}
+function refreshLL(focusK, focusD) {
+ var card = $('[data-pack="ll"]'), p = packById('ll');
+ card.querySelector('[data-price]').textContent = m2(packTotal(p));
+ card.querySelector('[data-contents]').textContent = p.contents();
+ card.querySelector('#ll-mix').innerHTML = mixHtml();
+ card.querySelector('[data-add]').disabled = !packValid(p); card.querySelector('[data-order]').disabled = !packValid(p);
+ var f = card.querySelector('[data-mk="' + focusK + '"][data-d="' + focusD + '"]');
+ if (!f || f.disabled) f = card.querySelector('[data-mk="' + focusK + '"]:not([disabled])');
+ if (f) f.focus();
+}
+$('#packs-grid').addEventListener('click', function (e) {
+ var t = e.target.closest('button'); if (!t || t.disabled) return;
+ var card = t.closest('[data-pack]'), p = packById(card.dataset.pack);
+ if (t.hasAttribute('data-mixbtn')) { var mx = card.querySelector('#ll-mix'), open = mx.hidden; mx.hidden = !open; t.setAttribute('aria-expanded', String(open)); t.textContent = open ? 'Hide the mix' : 'Change the mix'; return; }
+ if (t.dataset.mk) { var k = t.dataset.mk, d = +t.dataset.d; LL[k] = Math.max(0, (LL[k] || 0) + d); if (llCount() > 12) LL[k]--; JWC.store.set('p4-llmix', LL); refreshLL(k, d); return; }
+ if (t.hasAttribute('data-add')) { packItems(p).forEach(function (it) { JWC.cart.add(it, true); }); JWC.toast('Added: ' + p.title + ' (' + m2(packTotal(p)) + ')'); return; }
+ if (t.hasAttribute('data-order')) {
+  JWC.checkout({ title: 'Team Table order', items: packItems(p), city: 'Markham', extraRows: [{ label: 'At Work delivery credit (team order over $250)', amount: -20 }], note: 'Rides with the Northline team order on Friday' });
+  preferTeamRoute();
+ }
+});
+/* Packs ride with the Northline team order, so start checkout on the Friday route instead of Express. */
+function preferTeamRoute() {
+ var m = document.querySelector('.jwc-modal.on'); if (!m) return;
+ var inp = $$('input[name=jwc-route]', m).filter(function (i) { return /GTA 4/.test(i.parentNode.textContent); })[0];
+ if (inp && !inp.checked) { inp.checked = true; inp.dispatchEvent(new Event('change', { bubbles: true })); }
+}
+document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('.jwc-cart-go')) setTimeout(preferTeamRoute, 0); });
+
+/* ---------- ROUTE LOOKUP ---------- */
+function routeCheck(submitted) {
+ var t = $('#route-in').value.trim(), out = $('#route-out');
+ if (!t) { out.innerHTML = submitted ? hint('warn', 'Type the city your site is in.') : ''; return; }
+ var c = JWC.findCity(t);
+ if (!c) { out.innerHTML = submitted ? hint('warn', 'We don’t have “' + esc(t) + '” on a weekly route yet. Call (416) 298-1350 and we’ll see what we can do.') : ''; return; }
+ var r = mainRoute(c), ex = JWC.routesFor(c).some(function (x) { return x.id === 'express'; });
+ out.innerHTML = hint('ok', '<b>' + esc(c) + ': ' + esc(r.day) + ' route' + (gtaCode(r) ? ' (' + esc(gtaCode(r)) + ')' : '') + '</b>. Your team order would arrive ' + esc(r.day) + 's, ordered by the Sunday before.' + (ex ? ' Express delivery is also available here.' : ''));
+}
+$('#route-form').addEventListener('submit', function (e) { e.preventDefault(); routeCheck(true); });
+$('#route-in').addEventListener('input', function () { routeCheck(false); });
+
+/* ---------- JW TEAM VIEW ---------- */
+var ACCOUNTS = [
+ { id: 'northline', name: 'Northline Logistics', city: 'Markham', route: 'Fri GTA 4', onsite: '140', perk: '$3 off, max 5/wk', part: '31%', items: 96, freezer: 'Yes, 68% stocked', health: 'Good', spark: [24, 26, 27, 29, 30, 31], co: 3, domain: 'northline.example', dock: 'Shipping office, door 4' },
+ { id: 'milliken', name: 'Milliken Precision Plastics', city: 'Scarborough', route: 'Wed GTA 2', onsite: '210', perk: '2 lunches covered', part: '27%', items: 118, freezer: 'Yes, 41% (low)', health: 'Good', spark: [21, 23, 24, 26, 27, 27], co: 6.4, domain: 'millikenplastics.example', dock: 'Loading bay B' },
+ { id: 'donmills', name: 'Don Mills Design Co.', city: 'North York', route: 'Wed GTA 2', onsite: '45', perk: '$4 off', part: '29% (was 44%)', items: 31, freezer: 'none', health: 'Watch', spark: [44, 44, 41, 36, 32, 29], co: 4, domain: 'donmillsdesign.example', dock: 'Reception, 3rd floor' },
+ { id: 'eastgate', name: 'Eastgate Care Residence', city: 'Scarborough', route: 'Wed GTA 2', onsite: '120 (3 shifts)', perk: '$5 off nights', part: '24%', items: 64, freezer: 'live', health: 'Good', spark: [19, 20, 22, 22, 23, 24], co: 3.1, domain: 'eastgatecare.example', dock: 'Kitchen door, east side' },
+ { id: 'vaughan', name: 'Vaughan Cold Storage', city: 'Vaughan', route: 'Fri GTA 4', onsite: '95', perk: '$2 off', part: '22%', items: 44, freezer: 'none', health: 'Good', spark: [18, 19, 21, 20, 22, 22], co: 2, domain: 'vaughancold.example', dock: 'Dispatch office' },
+ { id: 'brightpath', name: 'Brightpath Software', pilot: 'pilot, week 2 of 4', city: 'Toronto', route: 'Wed GTA 2', onsite: '38', perk: 'Everything on Wednesdays', part: '61%', items: 52, freezer: 'none', health: 'Pilot', spark: [0, 0, 0, 0, 58, 61], co: 10.9, domain: 'brightpath.example', dock: 'Front desk' },
+ { id: 'ajax', name: 'Ajax Fleet Services', city: 'Ajax', route: 'Tue GTA 1', onsite: '80', perk: '$3 off', part: '26%', items: 42, freezer: 'Yes, 80%', health: 'Good', spark: [22, 23, 25, 24, 26, 26], co: 3, domain: 'ajaxfleet.example', dock: 'Service bay 1' },
+ { id: 'mpw', name: 'Mississauga Print Works', city: 'Mississauga', route: 'Wed GTA 2', onsite: '60', perk: '$2.50 off', part: '20%', items: 26, freezer: 'none', health: 'Watch (Starter tier)', spark: [23, 22, 22, 21, 20, 20], co: 2.5, domain: 'mpw.example', dock: 'Shipping door' }
+];
+var COOK = [['teri', 112], ['jerk', 96], ['souv', 84], ['salmon', 64], ['tilapia', 58], ['turkey', 46], ['eggFeta', 120], ['oats', 60], ['chickChili', 8]];
+var ROUTE_ROWS = [{ day: 'Tue', code: 'GTA 1', full: 'Tuesday', drops: 1, add: 'under 15 min (est.)' }, { day: 'Wed', code: 'GTA 2', full: 'Wednesday', drops: 7, add: '+52 min, 14 km' }, { day: 'Thu', code: 'GTA 3', full: 'Thursday', drops: 1, add: 'under 15 min (est.)' }, { day: 'Fri', code: 'GTA 4', full: 'Friday', drops: 5, add: '+41 min' }];
+var FREEZERS = [
+ { id: 'A', site: 'Northline Logistics', where: 'Markham · Fri', pct: 68 },
+ { id: 'B', site: 'Milliken Precision Plastics', where: 'Scarborough · Wed', pct: 41, par: true },
+ { id: 'C', site: 'Eastgate Care Residence', where: 'Scarborough · Wed', live: true },
+ { id: 'D', site: 'Ajax Fleet Services', where: 'Ajax · Tue', pct: 80 },
+ { id: 'E', site: 'Morningside Medical Centre', where: 'Scarborough · Wed', pct: 36 },
+ { id: 'F', site: 'Steeles Tech Park', where: 'Markham · Fri', pct: 72 }
+];
+var A = JWC.store.get('p4-approvals', {}) || {};
+var EDITING = {};
+function saveA() { JWC.store.set('p4-approvals', A); }
+function devOrders() { return JWC.orders().filter(function (o) { return o.proto === 4; }); }
+function qtyOf(o) { return (o.items || []).reduce(function (s, i) { return s + (+i.qty || 0); }, 0); }
+function kindOf(o) { return o.kind || 'pack'; }
+var KIND = { staff: ['Staff order', 'pilot'], freezer: ['Freezer buy', 'good'], pack: ['Team Table / cart', 'watch'] };
+function leadsDev() { return JWC.store.get('p4-leads', []) || []; }
+function pilotsDev() { return JWC.store.get('p4-pilots', []) || []; }
+function hm(iso) { var d = new Date(iso); return fMD(d) + ', ' + d.toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' }); }
+
+function drafts() {
+ var r1 = teamRouteDate('Friday', 1), donAllHands = teamRouteDate('Wednesday', 1);
+ var list = [
+  { id: 'a1', agent: 'scout', kind: 'Intro email', title: 'Maple Ridge Packaging', to: 'HR at Maple Ridge Packaging · Markham, about 180 staff, Friday route', subject: 'Lunch for your night shift, from a Scarborough butcher',
+   body: 'Hi there, we’re J&W Foods, a family butcher and meal-prep kitchen on Brimley Rd since 1995. Our truck is in Markham every Friday. We run a simple meal perk: you choose what the company covers, staff order by Sunday, and we drop everything at your door. Could we bring 8 meals for your team to try on ' + fDay(r1) + '? The J&W at Work team, J&W Foods, (416) 298-1350. Reply STOP to opt out.',
+   chips: ['CASL check: published business contact, relevant to role, unsubscribe included: OK'] },
+  { id: 'a2', agent: 'desk', kind: 'Thursday reminder SMS', title: 'Northline Logistics', to: '97 opted-in Northline staff who haven’t ordered', body: 'Hi from J&W at Work. Your $3 lunch credit is waiting. Pick next week’s meals by Sunday at midnight: [link] Reply STOP to opt out.', chips: ['Opted-in staff only', 'Sends Thursday 10:00 am'] },
+  { id: 'a3', agent: 'desk', kind: 'Account health · save offer', title: 'Don Mills Design Co.', to: 'Account lead', body: 'Don Mills Design Co.: participation fell from 44% to 29% in 3 weeks. Suggest a free Breakfast Meeting Pack ($115.80 retail, about $64 food cost) for their ' + fMD(donAllHands) + ' all-hands, plus 2 new menu items.', chips: ['Health: Watch'] },
+  { id: 'a4', agent: 'production', kind: 'Cook-plan change', title: 'Monday cook plan', to: 'Production manager', body: 'Add At Work volume to Monday’s cook plan: +292 chicken breast portions (about 33 kg cooked, 44 kg raw at an est. 75% yield), +46 turkey, +64 salmon, +58 tilapia, +8 chicken chili, +120 egg-bite 2-packs, +60 oats.', chips: ['648 items this week'] },
+  { id: 'a5', agent: 'production', kind: 'Freezer par change', title: 'Freezer B · Milliken', to: 'Production manager', body: 'Freezer B (Milliken) sold out of Jerk Chicken by Tuesday two weeks running. Raise par from 8 to 14; cut Lemon Chicken Rice Soup from 8 to 4.', chips: ['Shrink 0.9%'], live: true },
+  { id: 'a6', agent: 'route', kind: 'Route insert', title: 'Wednesday GTA 2', to: 'Dispatcher', body: 'Wednesday GTA 2: insert 7 At Work drops between stops 9 and 21. Adds about 52 min and 14 km. Text site contacts a 10:30 to 11:30 window.', chips: ['Fits the existing run'] }
+ ];
+ pilotsDev().forEach(function (p) {
+  list.unshift({ id: 'pi-' + p.id, agent: 'desk', kind: 'Staff invite email', title: p.company + ', ready to send ' + WD[new Date(p.inviteDate).getDay()], to: p.invites + ' staff at @' + p.domain + (p.notOnDomain && p.notOnDomain.length ? ' (' + p.notOnDomain.length + ' held back: not on the domain)' : ''),
+   subject: 'Your new lunch perk at ' + p.company,
+   body: 'Hi, ' + p.company + ' now covers ' + (p.perk.mode === 'off' ? m2(p.perk.off) + ' off each meal (up to 5 a week)' : p.perk.mode === 'lunches' ? p.perk.lunches + (p.perk.lunches === 1 ? ' lunch' : ' lunches') + ' a week in full' : 'your meals in full, up to ' + p.perk.cap + ' a week') + ' through J&W at Work. Join with your @' + p.domain + ' email, pick your meals by Sunday at midnight, and we’ll bring them to ' + (p.dock || 'your site') + ' every ' + p.day + ' in one named bag each. Your first order closes ' + fDay(new Date(p.orderUntil)) + '. J&W Foods, (416) 298-1350. Reply STOP to opt out.',
+   chips: ['New pilot from this device', 'Sends ' + fDay(new Date(p.inviteDate))], isNew: true });
+ });
+ return list;
+}
+function pendingCount() { return drafts().filter(function (d) { return !A[d.id] || A[d.id].s === 'edited'; }).length; }
+
+function drawKpis() {
+ var dev = devOrders(), devItems = dev.reduce(function (s, o) { return s + qtyOf(o); }, 0), devMoney = dev.reduce(function (s, o) { return s + (+o.total || 0) + (+o.companyCovered || 0); }, 0);
+ var lowFz = FREEZERS.filter(function (f) { return (f.live ? fzPct() : f.pct) < 45; }).length, pil = pilotsDev().length;
+ var k = [
+  ['Live accounts', '14', '3 on Watch'],
+  ['Pilots', String(2 + pil), pil ? '+' + pil + ' from this device' : 'Brightpath in week 2 of 4'],
+  ['Items ordered this week', String(648 + devItems), '31% company-funded' + (devItems ? ' · +' + devItems + ' this device' : '')],
+  ['Freezers', '6 (' + lowFz + ' low)', 'Restocks on route days']
+ ];
+ $('#t-kpis').innerHTML = k.map(function (x) { return '<div class="p4-kpi"><small>' + x[0] + '</small><b>' + x[1] + '</b><span>' + esc(x[2]) + '</span></div>'; }).join('') +
+  '<div class="p4-kpi accent"><small>Sunday cut-off in</small><b id="t-count" style="font-size:19px;line-height:1.4">…</b><span>Sunday 11:59 pm, then orders lock</span></div>' +
+  '<div class="p4-kpi"><small>This month so far</small><b>' + m0(24900 + devMoney) + '</b><span>sample' + (devMoney ? ' + ' + m2(devMoney) + ' this device' : '') + '</span></div>';
+ tick();
+}
+function tick() {
+ var el = document.getElementById('t-count'); if (!el) return;
+ var now = new Date(), end = new Date(now); end.setDate(now.getDate() + ((7 - now.getDay()) % 7)); end.setHours(23, 59, 59, 0); if (end < now) end.setDate(end.getDate() + 7);
+ var s = Math.max(0, Math.floor((end - now) / 1000)), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), mi = Math.floor(s % 3600 / 60), se = s % 60;
+ el.textContent = d + 'd ' + h + 'h ' + String(mi).padStart(2, '0') + 'm ' + String(se).padStart(2, '0') + 's';
+}
+setInterval(function () { if (document.body.dataset.view === 'team') tick(); }, 1000);
+
+function drawAgents() {
+ var ds = drafts(), pend = function (key) { var n = ds.filter(function (d) { return d.agent === key && (!A[d.id] || A[d.id].s === 'edited'); }).length; return n ? n + (n === 1 ? ' draft' : ' drafts') : 'No drafts'; };
+ var rows = [
+  ['scout', pend('scout') + ' waiting · 46 employers researched on our routes'],
+  ['desk', pend('desk') + ' waiting · allowances, Sunday close, save offers'],
+  ['production', pend('production') + ' waiting · cook plan and freezer pars'],
+  ['route', pend('route') + ' waiting · drops slotted into Tue to Fri routes'],
+  ['label', 'Protein stickers (est.) on 21 menu items · freezer labels · HR report average 36 g (est.)'],
+  ['receivables', (A.invoice && A.invoice.s === 'approved' ? 'Northline statement approved' : '1 split statement waiting') + ' · company wallet and staff shares'],
+  ['concierge', 'Answering on the page as the At Work Desk chat']
+ ];
+ $('#t-agents').innerHTML = rows.map(function (r) { return '<div class="p4-agent"><b><span class="p4-dot" aria-hidden="true"></span> ' + esc(AGENTS[r[0]]) + '</b><span>' + esc(r[1]) + '</span></div>'; }).join('');
+}
+
+function acctRows() {
+ var dev = devOrders(), staffItems = dev.filter(function (o) { return o.kind === 'staff'; }).reduce(function (s, o) { return s + qtyOf(o); }, 0),
+  fzItems = dev.filter(function (o) { return o.kind === 'freezer'; }).reduce(function (s, o) { return s + qtyOf(o); }, 0);
+ var rows = pilotsDev().map(function (p) {
+  return { id: p.id, isNew: true, name: p.company, pilot: 'pilot, starts ' + fMD(new Date(p.firstDrop)), city: p.city, route: (p.day || '').slice(0, 3) + ' ' + (p.code || ''), onsite: String(p.staff || '—'), perk: p.perkText, part: '—', items: 0, freezer: p.staff >= 75 ? 'Eligible' : 'none', health: 'Pilot', spark: [0, 0, 0, 0, 0, 0], co: p.perk.mode === 'off' ? p.perk.off : 10, domain: p.domain, dock: p.dock || 'Front reception', pilotRec: p };
+ });
+ return rows.concat(ACCOUNTS.map(function (a) {
+  var x = Object.assign({}, a);
+  if (a.id === 'northline') x.dev = staffItems;
+  if (a.id === 'eastgate') { x.dev = fzItems; var pc = fzPct(); x.freezer = 'Yes, ' + pc + '%' + (pc < 45 ? ' (low)' : ''); }
+  return x;
+ }));
+}
+function healthChip(h) { var c = /^Good/.test(h) ? 'good' : /^Pilot/.test(h) ? 'pilot' : 'watch'; return '<span class="p4-chip ' + c + '">' + esc(h) + '</span>'; }
+function drawAccounts() {
+ $('#t-acc-table').innerHTML = '<thead><tr><th scope="col">Account</th><th scope="col">Site · route</th><th scope="col" class="r">On site</th><th scope="col">Perk</th><th scope="col" class="r">Took part</th><th scope="col" class="r">Items this week</th><th scope="col">Freezer</th><th scope="col">Health</th></tr></thead><tbody>' +
+  acctRows().map(function (a) {
+   return '<tr class="click" data-acct="' + esc(a.id) + '"><td><button type="button" class="p4-acct-btn" data-acct-btn="' + esc(a.id) + '">' + esc(a.name) + '</button>' + (a.isNew ? ' <span class="p4-chip new">New</span>' : '') + (a.pilot ? '<span class="block p4-small">' + esc(a.pilot) + '</span>' : '') + '</td>' +
+    '<td>' + esc(a.city) + '<span class="block p4-small" style="white-space:nowrap">' + esc(a.route) + '</span></td><td class="r">' + esc(a.onsite) + '</td><td>' + esc(a.perk) + '</td><td class="r">' + esc(a.part) + '</td>' +
+    '<td class="r"><b>' + ((a.items || 0) + (a.dev || 0)) + '</b>' + (a.dev ? '<span class="block text-[11.5px] font-semibold" style="color:var(--teal)">+' + a.dev + ' this device</span>' : '') + '</td>' +
+    '<td>' + esc(a.freezer) + '</td><td>' + healthChip(a.health) + '</td></tr>';
+  }).join('') + '</tbody>';
+}
+var acctPanel = JWC.el('<aside id="p4-acct" class="jwc-panel" aria-hidden="true" role="dialog" aria-labelledby="p4-acct-h"><div class="jwc-panel-head"><div><p class="p4-teyebrow" style="margin:0">Employer account</p><h2 id="p4-acct-h"></h2><p id="p4-acct-sub"></p></div><button type="button" class="jwc-x" aria-label="Close account details">×</button></div><div class="jwc-panel-body" id="p4-acct-body"></div></aside>');
+document.body.appendChild(acctPanel);
+acctPanel.querySelector('.jwc-x').addEventListener('click', function () { JWC.closeAll(); });
+function spark(vals, label) {
+ var w = 300, h = 76, pad = 14, max = Math.max.apply(null, vals.concat([10])) * 1.15, step = (w - 2 * pad) / (vals.length - 1);
+ var pts = vals.map(function (v, i) { return [pad + i * step, h - pad - (v / max) * (h - 2 * pad)]; });
+ return '<svg viewBox="0 0 ' + w + ' ' + h + '" class="p4-spark" role="img" aria-label="' + esc(label) + '"><polyline fill="none" stroke="#5B5A8C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="' + pts.map(function (p) { return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' ') + '"/>' +
+  pts.map(function (p, i) { return '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="' + (i === pts.length - 1 ? 4.5 : 3) + '" fill="' + (i === pts.length - 1 ? '#5B5A8C' : '#fff') + '" stroke="#5B5A8C" stroke-width="2"/>'; }).join('') +
+  '<text x="' + pts[0][0] + '" y="' + (h - 1) + '" font-size="10" fill="#5A6472">6 wks ago · ' + vals[0] + '%</text><text x="' + (w - pad) + '" y="11" font-size="10" text-anchor="end" fill="#0F1E33" font-weight="700">this week · ' + vals[vals.length - 1] + '%</text></svg>';
+}
+function openAcct(id) {
+ var a = acctRows().filter(function (x) { return x.id === id; })[0]; if (!a) return;
+ var items4 = ((a.items || 0) + (a.dev || 0)) * 4, avgW = 10.26, gross = items4 * avgW, co = Math.min(gross, items4 * a.co), staff = gross - co;
+ var inv = a.id === 'northline' ? [['Team orders (4 weeks), 352 items at work prices', '$3,612.48'], ['Freezer sales, 118 items', '$1,232.40'], ['Company covered (470 × $3.00)', '$1,410.00'], ['Staff paid by card', '$3,434.88'], ['Delivery', '$0 (every week over $250)']] :
+  a.isNew ? [['First invoice', 'After week 1 of the pilot'], ['Delivery', 'Free during the 4-week pilot']] :
+  [['Items (4 weeks, est.)', String(items4)], ['At work prices (sample)', m2(gross)], ['Company covered (sample)', m2(co)], ['Staff paid (sample)', m2(staff)], ['Delivery', gross / 4 > 250 ? '$0 (weeks over $250)' : '$20 a week']];
+ $('#p4-acct-h').textContent = a.name;
+ $('#p4-acct-sub').textContent = a.city + ' · ' + a.route + (a.pilot ? ' · ' + a.pilot : '');
+ $('#p4-acct-body').innerHTML =
+  '<h3 class="font-semibold">Allowance settings</h3><div class="mt-1">' + [['Perk', a.perk], ['Cap per person', /max|Everything|covered/.test(a.perk) ? 'As set in the perk' : '5 meals a week'], ['Eligible', '@' + a.domain], ['Thursday reminders', a.pilotRec && !a.pilotRec.reminders ? 'Off' : 'On, opted-in staff only'], ['Drop-off', a.dock], ['On site', a.onsite]].map(function (r) { return '<div class="p4-row"><span>' + esc(r[0]) + '</span><b style="white-space:normal;text-align:right">' + esc(r[1]) + '</b></div>'; }).join('') + '</div>' +
+  '<h3 class="font-semibold mt-5">Participation, last 6 weeks</h3><div class="mt-2 rounded-xl border border-[#E1E4EE] p-3">' + (a.isNew ? '<p class="p4-small">Starts after the first drop on ' + esc(fDay(new Date(a.pilotRec.firstDrop))) + '.</p>' : spark(a.spark, 'Weekly participation from ' + a.spark[0] + '% to ' + a.spark[a.spark.length - 1] + '%')) + '</div>' +
+  '<h3 class="font-semibold mt-5">Invoice preview · ' + esc(MONTH_LABEL) + ' <span class="p4-chip ai">sample</span></h3><div class="mt-1">' + inv.map(function (r) { return '<div class="p4-row"><span>' + esc(r[0]) + '</span><b style="white-space:normal;text-align:right">' + esc(r[1]) + '</b></div>'; }).join('') + '</div>' +
+  (a.dev ? '<p class="p4-hint ok mt-3">' + ICON.ok + '<span>' + a.dev + ' items from this device are included in this week’s count.</span></p>' : '') +
+  '<div class="grid grid-cols-2 gap-2 mt-5"><button type="button" class="jwc-btn jwc-btn-line" data-close-acct>Close</button><button type="button" class="jwc-btn jwc-btn-dark" data-checkin>Ask for a check-in draft</button></div>';
+ $('#p4-acct-body [data-close-acct]').addEventListener('click', function () { JWC.closeAll(); });
+ $('#p4-acct-body [data-checkin]').addEventListener('click', function () { JWC.toast('The ' + AGENTS.desk + ' agent will draft a check-in for ' + a.name + ' and queue it for approval (demo).'); });
+ JWC.openPanel(acctPanel);
+}
+$('#t-acc-table').addEventListener('click', function (e) { var tr = e.target.closest('[data-acct]'); if (tr) openAcct(tr.dataset.acct); });
+
+function drawApprovals() {
+ var ds = drafts();
+ $('#t-apr-count').textContent = pendingCount() + ' waiting';
+ $('#t-drafts').innerHTML = ds.map(function (d) {
+  var st = A[d.id] || {}, body = st.body || d.body, s = st.s || 'pending', editing = EDITING[d.id] != null;
+  var status = s === 'approved' ? '<span class="p4-chip sent">Approved</span>' : s === 'rejected' ? '<span class="p4-chip no">Rejected</span>' : s === 'edited' ? '<span class="p4-chip watch">Edited, not sent</span>' : '<span class="p4-chip ai">Waiting</span>';
+  var live = '';
+  if (d.live) { var sold = Object.keys(FZD.sold || {}).reduce(function (x, k) { return x + FZD.sold[k]; }, 0); if (sold) live = '<p class="p4-hint route" style="font-size:13px">Also from this device: Freezer C (Eastgate) sold ' + sold + (sold === 1 ? ' meal' : ' meals') + ' tonight' + (Object.keys(FZD.stock).filter(function (k) { return FZD.stock[k] <= 2; }).length ? '; ' + Object.keys(FZD.stock).filter(function (k) { return FZD.stock[k] <= 2; }).map(function (k) { return FZ_SHORT[k] + ' at ' + FZD.stock[k]; }).join(', ') + '. Restock Wednesday.' : '.') + '</p>'; }
+  return '<article class="p4-draft ' + s + '" data-draft="' + esc(d.id) + '">' +
+   '<div class="flex flex-wrap items-center justify-between gap-2"><span class="p4-chip ai">AI · ' + esc(AGENTS[d.agent]) + '</span>' + status + '</div>' +
+   '<h3 class="font-bold text-[15.5px] leading-snug">' + esc(d.kind) + ' · ' + esc(d.title) + (d.isNew ? ' <span class="p4-chip new">New</span>' : '') + '</h3>' +
+   '<p class="p4-small">To: ' + esc(d.to) + '</p>' + (d.subject ? '<p class="text-[13.5px]"><b>Subject:</b> ' + esc(d.subject) + '</p>' : '') +
+   (editing ? '<label class="block"><span class="sr-only">Edit the draft for ' + esc(d.title) + '</span><textarea data-edit="' + esc(d.id) + '">' + esc(EDITING[d.id]) + '</textarea></label>' : '<div class="body">' + esc(body) + '</div>') +
+   live + (d.chips && d.chips.length ? '<div class="flex flex-wrap gap-1.5">' + d.chips.map(function (c) { return '<span class="p4-chip ' + (/CASL|OK/.test(c) ? 'good' : 'ai') + '">' + esc(c) + '</span>'; }).join('') + '</div>' : '') +
+   '<div class="flex flex-wrap gap-2 mt-1">' + (editing ?
+    '<button type="button" class="p4-btn p4-btn-primary p4-btn-sm" data-a="save">Save changes</button><button type="button" class="p4-btn p4-btn-ghost p4-btn-sm" data-a="cancel">Cancel</button>' :
+    (s === 'approved' || s === 'rejected') ? '<button type="button" class="p4-btn p4-btn-ghost p4-btn-sm" data-a="undo">Undo</button>' :
+    '<button type="button" class="p4-btn p4-btn-primary p4-btn-sm" data-a="approve">Approve</button><button type="button" class="p4-btn p4-btn-ghost p4-btn-sm" data-a="edit">Edit</button><button type="button" class="p4-btn p4-btn-sm" style="color:#8A1C1C" data-a="reject">Reject</button>') + '</div></article>';
+ }).join('');
+ drawAgents();
+}
+$('#t-drafts').addEventListener('input', function (e) { if (e.target.dataset.edit) EDITING[e.target.dataset.edit] = e.target.value; });
+$('#t-drafts').addEventListener('click', function (e) {
+ var b = e.target.closest('[data-a]'); if (!b) return;
+ var card = b.closest('[data-draft]'), id = card.dataset.draft, d = drafts().filter(function (x) { return x.id === id; })[0], act = b.dataset.a; if (!d) return;
+ if (act === 'approve') {
+  A[id] = { s: 'approved', body: (A[id] || {}).body, at: new Date().toISOString() };
+  JWC.toast(d.agent === 'production' ? 'Approved: ' + d.kind + ' added to the plan (demo)' : d.agent === 'route' ? 'Approved: route updated and site contacts queued (demo)' : 'Approved: ' + d.kind + '. Demo: nothing was sent.');
+ } else if (act === 'reject') { A[id] = { s: 'rejected', body: (A[id] || {}).body }; JWC.toast('Rejected. The agent will not send this draft.'); }
+ else if (act === 'edit') { EDITING[id] = (A[id] && A[id].body) || d.body; }
+ else if (act === 'cancel') { delete EDITING[id]; }
+ else if (act === 'save') { A[id] = { s: 'edited', body: EDITING[id] }; delete EDITING[id]; JWC.toast('Draft saved. Approve it when you’re ready.'); }
+ else if (act === 'undo') { var keep = A[id] && A[id].body; if (keep && keep !== d.body) A[id] = { s: 'edited', body: keep }; else delete A[id]; }
+ saveA(); drawApprovals(); drawTeamData();
+ var again = $('[data-draft="' + id + '"] [data-a]') ; var ta = $('[data-draft="' + id + '"] textarea'); (ta || again) && (ta || again).focus();
+});
+
+function drawProduction() {
+ var dev = devOrders(), add = {}, other = 0, bags = 0;
+ dev.forEach(function (o) {
+  if (o.kind === 'staff') bags++;
+  if (kindOf(o) === 'pack') bags++;
+  (o.items || []).forEach(function (i) { var k = KEY_OF[i.id]; if (k && COOK.some(function (c) { return c[0] === k; })) add[k] = (add[k] || 0) + i.qty; else other += i.qty; });
+ });
+ var base = COOK.reduce(function (s, c) { return s + c[1]; }, 0), devT = Object.keys(add).reduce(function (s, k) { return s + add[k]; }, 0) + other;
+ $('#t-cook').innerHTML = '<thead><tr><th scope="col">Item</th><th scope="col" class="r">Sample</th><th scope="col" class="r">This device</th><th scope="col" class="r">Total</th></tr></thead><tbody>' +
+  COOK.map(function (c) { var a = add[c[0]] || 0; return '<tr><td>' + esc(pname(c[0])) + '</td><td class="r">' + c[1] + '</td><td class="r"' + (a ? ' style="color:var(--teal);font-weight:700"' : '') + '>' + (a ? '+' + a : '—') + '</td><td class="r"><b>' + (c[1] + a) + '</b></td></tr>'; }).join('') +
+  (other ? '<tr><td>Other items from this device</td><td class="r">—</td><td class="r" style="color:var(--teal);font-weight:700">+' + other + '</td><td class="r"><b>' + other + '</b></td></tr>' : '') +
+  '<tr><td><b>Total</b></td><td class="r"><b>' + base + '</b></td><td class="r"><b>' + (devT ? '+' + devT : '—') + '</b></td><td class="r"><b>' + (base + devT) + '</b></td></tr></tbody>';
+ var nb = 241 + bags;
+ $('#t-pack').innerHTML = ICON.route + '<span>Named bags: <b>' + nb + '</b>' + (bags ? ' (+' + bags + ' this device)' : '') + ' · label and pack about ' + (Math.round(nb * 7.5 / 241 * 10) / 10) + ' h (Monday 1-5 pm, 2 people)</span>';
+ var pil = pilotsDev();
+ $('#t-routes').innerHTML = '<thead><tr><th scope="col">Route</th><th scope="col" class="r">At Work drops</th><th scope="col">Added time</th></tr></thead><tbody>' +
+  ROUTE_ROWS.map(function (r) {
+   var extra = pil.filter(function (p) { return p.day === r.full; }).length;
+   return '<tr><td><b>' + r.day + '</b> ' + r.code + '</td><td class="r"><b>' + (r.drops + extra) + '</b>' + (extra ? '<span class="block text-[11.5px] font-semibold" style="color:var(--teal)">+' + extra + ' new pilot</span>' : '') + '</td><td>' + esc(r.add) + (extra ? ' + about ' + (extra * 8) + ' min' : '') + '</td></tr>';
+  }).join('') +
+  '<tr><td><b>Freezer restocks</b></td><td class="r"><b>6</b></td><td>20 min each' + (fzPct() < 45 || Object.keys(FZD.stock).some(function (k) { return FZD.stock[k] <= 2; }) ? ' · <span class="p4-chip watch">Eastgate low</span>' : '') + '</td></tr></tbody>';
+ $('#t-route-status').innerHTML = A.a6 && A.a6.s === 'approved' ? ' <span class="p4-chip sent">Approved by dispatch</span>' : ' <span class="p4-chip ai">Draft</span>';
+ $('#t-prod-status').innerHTML = A.a4 && A.a4.s === 'approved' ? '<span class="p4-chip sent">Cook plan approved</span>' : '<span class="p4-chip ai">Cook plan waiting for approval</span>';
+}
+function drawFreezers() {
+ var parOk = A.a5 && A.a5.s === 'approved', soldDev = Object.keys(FZD.sold || {}).reduce(function (s, k) { return s + FZD.sold[k]; }, 0);
+ $('#t-fz').innerHTML = FREEZERS.map(function (f) {
+  var pct = f.live ? fzPct() : f.pct, low = pct < 45;
+  var extra = '';
+  if (f.par) extra = '<p class="p4-small mt-2">Jerk Chicken par: <b class="text-ink">' + (parOk ? '14 (approved)' : '8, change to 14 waiting') + '</b></p>';
+  if (f.live) {
+   extra = '<ul class="mt-2 text-[13px] space-y-1">' + Object.keys(FZ_SHORT).map(function (k) { var n = FZD.stock[k] || 0; return '<li class="flex justify-between gap-2"><span>' + esc(FZ_SHORT[k]) + '</span><span class="num font-semibold">' + n + (n <= 2 ? ' <span class="p4-low" style="margin:0">Low</span>' : '') + '</span></li>'; }).join('') + '</ul>' +
+    '<p class="p4-small mt-2">' + (soldDev ? 'Sold on this device: <b class="text-ink">' + soldDev + '</b>' : 'No sales from this device yet. Try the freezer in customer view.') + '</p>' +
+    '<button type="button" class="p4-btn p4-btn-ghost p4-btn-sm mt-2" data-restock>Mark restocked (demo)</button>';
+  }
+  return '<div class="border border-[#E1E4EE] rounded-xl p-3.5' + (f.live ? ' bg-[#F7F7FC]' : '') + '"><div class="flex items-start justify-between gap-2"><div><p class="font-bold text-[14.5px]">Freezer ' + f.id + ' · ' + esc(f.site) + '</p><p class="p4-small">' + esc(f.where) + (f.live ? ' · live from this demo' : '') + '</p></div>' + (low ? '<span class="p4-chip watch">Low</span>' : '<span class="p4-chip good">OK</span>') + '</div>' +
+   '<div class="flex items-center gap-2 mt-2.5"><div class="p4-bar flex-1"><i class="' + (low ? 'low' : '') + '" style="width:' + pct + '%"></i></div><span class="num text-[13px] font-semibold">' + pct + '%</span></div>' + extra + '</div>';
+ }).join('');
+ var rs = $('#t-fz [data-restock]');
+ if (rs) rs.addEventListener('click', function () { FZD.stock = Object.assign({}, FZ_DEF); saveFz(); renderFreezer(); drawTeamData(); drawApprovals(); JWC.toast('Freezer C marked restocked (demo)'); });
+}
+function drawInvoice() {
+ var rows = [['Team orders (4 weeks), 352 items at work prices', '$3,612.48'], ['Freezer sales, 118 items', '$1,232.40'], ['Company covered (470 × $3.00)', '$1,410.00'], ['Staff paid by card', '$3,434.88'], ['Delivery', '$0 (every week over $250)'], ['Freezer shrink', '1.2% (under 3%, nothing billed)'], ['Drawn from the company wallet', '$1,410.00']];
+ $('#t-inv').innerHTML = '<div class="rounded-xl border border-[#E1E4EE] px-4 py-1">' + rows.map(function (r, i) { return '<div class="p4-row"' + (i === rows.length - 1 ? ' style="font-weight:700;border-top:1.5px solid var(--ink)"' : '') + '><span>' + esc(r[0]) + '</span><b style="white-space:normal;text-align:right">' + esc(r[1]) + '</b></div>'; }).join('') + '</div>';
+ var sent = A.invoice && A.invoice.s === 'approved';
+ $('#t-inv-actions').innerHTML = sent ? '<span class="p4-chip sent" style="padding:9px 12px">Approved and sent (demo)</span><button type="button" class="p4-btn p4-btn-ghost p4-btn-sm" data-inv="undo">Undo</button>' :
+  '<button type="button" class="p4-btn p4-btn-primary" data-inv="send">Approve and send</button><button type="button" class="p4-btn p4-btn-ghost" data-inv="hold">Hold for review</button>';
+ var st = devOrders().filter(function (o) { return o.kind === 'staff'; });
+ var co = st.reduce(function (s, o) { return s + (+o.companyCovered || 0); }, 0), pd = st.reduce(function (s, o) { return s + (+o.total || 0); }, 0);
+ $('#t-inv-live').innerHTML = st.length ? '<div class="rounded-xl border border-[#E1E4EE] px-4 py-1">' + st.map(function (o) { return '<div class="p4-row"><span>' + esc(o.who || 'Staff') + ' · ' + qtyOf(o) + ' items · ' + esc(o.no) + '</span><b>' + m2(o.total) + '</b></div>'; }).join('') +
+  '<div class="p4-row"><span>Company covered (this device)</span><b>' + m2(co) + '</b></div><div class="p4-row"><span>Staff paid (this device)</span><b>' + m2(pd) + '</b></div></div><p class="p4-small mt-2">These roll into next month’s Northline invoice.</p>' :
+  '<p class="p4-small">No staff orders from this device yet. Place one in the staff app (customer view) and it shows here, split into company and staff shares.</p>';
+}
+$('#t-inv-actions').addEventListener('click', function (e) {
+ var b = e.target.closest('[data-inv]'); if (!b) return;
+ if (b.dataset.inv === 'send') { A.invoice = { s: 'approved' }; JWC.toast('Demo: nothing was sent. Invoice marked approved.'); }
+ else if (b.dataset.inv === 'hold') { JWC.toast('Held. The ' + AGENTS.receivables + ' agent will remind you Monday.'); return; }
+ else delete A.invoice;
+ saveA(); drawInvoice(); drawAgents(); var f = $('#t-inv-actions button'); if (f) f.focus();
+});
+function drawPipeline() {
+ var leads = leadsDev(), pil = pilotsDev();
+ var card = function (t, s, isNew) { return '<div class="p4-kcard"><b>' + esc(t) + '</b>' + (isNew ? ' <span class="p4-chip new">New</span>' : '') + '<span class="block p4-small">' + esc(s) + '</span></div>'; };
+ var cols = [
+  ['Researched', 46, card('Maple Ridge Packaging', 'Markham · Fri · ~180 staff · intro drafted') + card('Highland Creek Labs', 'Scarborough · Wed · ~90 staff')],
+  ['Contacted', 19, card('Agincourt Auto Parts', 'Scarborough · Wed · opened twice') + card('Steeles Dental Group', 'Markham · Fri · replied')],
+  ['Tasting booked', 6 + leads.length, leads.map(function (l) { return card(l.company, (l.city || 'City to confirm') + (l.day ? ' · ' + l.day.slice(0, 3) + ' ' + (l.code || '') : '') + (l.size ? ' · ' + l.size + ' staff' : ''), true); }).join('') + card('Rouge Valley Print', 'Scarborough · Wed · tasting next week') + card('Concord Food Labs', 'Vaughan · Fri')],
+  ['Pilot', 2 + pil.length, pil.map(function (p) { return card(p.company, p.city + ' · ' + p.day.slice(0, 3) + ' ' + (p.code || '') + ' · ' + p.invites + ' invites', true); }).join('') + card('Brightpath Software', 'Toronto · Wed · week 2 of 4') + card('Kennedy Road Physio', 'Scarborough · Wed · week 1 of 4')],
+  ['Live', 14, card('Northline Logistics', 'Markham · Fri · 31%') + card('Milliken Precision Plastics', 'Scarborough · Wed · 27%')],
+  ['Paused', 1, card('Leslie St. Architects', 'East York · paused for summer')]
+ ];
+ $('#t-kan').innerHTML = cols.map(function (c) {
+  var shown = (c[2].match(/p4-kcard/g) || []).length, more = c[1] - shown;
+  return '<div class="p4-kcol"><div class="flex items-center justify-between"><b class="text-[13.5px]">' + c[0] + '</b><span class="p4-chip ai">' + c[1] + '</span></div>' + c[2] + (more > 0 ? '<p class="p4-small mt-2">+ ' + more + ' more</p>' : '') + '</div>';
+ }).join('');
+}
+function drawLive() {
+ var dev = devOrders(), leads = leadsDev(), pil = pilotsDev();
+ $('#t-live-n').textContent = dev.length + leads.length + pil.length;
+ var h = dev.length ? '<ul class="space-y-2">' + dev.map(function (o) {
+  var k = KIND[kindOf(o)] || KIND.pack;
+  return '<li class="border border-[#E1E4EE] rounded-xl p-3"><div class="flex items-center justify-between gap-2"><b class="text-[14px]">' + esc(o.no) + '</b><span class="p4-chip ' + k[1] + '">' + k[0] + '</span></div>' +
+   '<p class="p4-small mt-1">' + esc(hm(o.when)) + ' · ' + esc(o.account || o.city || '') + ' · ' + esc(o.day ? o.day + (o.route && o.kind !== 'freezer' ? ' (' + (gtaCode({ name: o.route }) || o.route) + ')' : '') : o.route || '') + '</p>' +
+   '<div class="flex justify-between gap-2 mt-1 text-[13.5px]"><span>' + qtyOf(o) + (qtyOf(o) === 1 ? ' item' : ' items') + (o.companyCovered ? ' · company ' + m2(o.companyCovered) : '') + '</span><b class="num">' + m2(o.total) + '</b></div></li>';
+ }).join('') + '</ul>' : '<p class="p4-small">Nothing yet. In customer view, order meals in the staff app, buy from the freezer or order a Team Table pack, and it lands here.</p><button type="button" class="p4-btn p4-btn-ghost p4-btn-sm mt-3" data-to-customer>Switch to customer view</button>';
+ h += '<h3 class="font-semibold mt-5 text-[14.5px]">Tasting requests from this device</h3>' + (leads.length ? '<ul class="mt-2 space-y-1.5">' + leads.map(function (l) { return '<li class="text-[13.5px] border-b border-[#EEF0F5] pb-1.5"><b>' + esc(l.company) + '</b> · ' + esc(l.first + ' ' + l.last) + '<span class="block p4-small">' + esc((l.city || 'City to confirm') + (l.day ? ' · ' + l.day + ' route' : '') + (l.size ? ' · ' + l.size + ' staff' : '') + ' · ' + hm(l.when)) + '</span></li>'; }).join('') + '</ul>' : '<p class="p4-small mt-1">None yet. Use the tasting form at the top of the customer page.</p>');
+ h += '<h3 class="font-semibold mt-4 text-[14.5px]">Pilots from this device</h3>' + (pil.length ? '<ul class="mt-2 space-y-1.5">' + pil.map(function (p) { return '<li class="text-[13.5px] border-b border-[#EEF0F5] pb-1.5"><b>' + esc(p.company) + '</b> · ' + esc(p.perkText) + '<span class="block p4-small">' + esc(p.invites + ' invites · first drop ' + fDay(new Date(p.firstDrop)) + ' · ' + (p.code || p.routeName)) + '</span></li>'; }).join('') + '</ul>' : '<p class="p4-small mt-1">None yet. Start one from the Perk Designer.</p>');
+ $('#t-live-body').innerHTML = h;
+ var tc = $('#t-live-body [data-to-customer]'); if (tc) tc.addEventListener('click', function () { JWC.setView('customer'); go('app'); });
+}
+function drawTeamData() { drawKpis(); drawAccounts(); drawProduction(); drawFreezers(); drawInvoice(); drawPipeline(); drawLive(); drawAgents(); }
+function drawTeam() { $('#t-week').textContent = 'week of ' + fMD(TEAM_DATE) + ', ' + TEAM_DATE.getFullYear(); drawTeamData(); drawApprovals(); }
+
+document.addEventListener('jwc:order', function () { drawTeamData(); drawApprovals(); });
+document.addEventListener('p4:change', function () { drawTeamData(); drawApprovals(); });
+document.addEventListener('jwc:view', function () { drawTeam(); setTimeout(measure, 50); });
+
+/* ---------- first paint ---------- */
+drawDesigner(false);
+renderApp();
+renderFreezer();
+renderPacks();
+drawTeam();
+})();
+</script>
+</body>
+</html>

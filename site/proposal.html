@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>J&amp;W Growth Proposal</title>
+  <meta name="description" content="The full growth proposal for J&W Foods: audit, competitors, seven plays, AI agents, the $1M plan, fee, first 90 days and risks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/site-tw.js"></script>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site-data.js"></script>
+  <link rel="icon" href="assets/img/jw-logo.jpg">
+  <style>
+    @media print {
+      @page { margin: 16mm 14mm; }
+      .prose-jw h2 { break-before: page; }
+      .prose-jw h2.first { break-before: auto; }
+      .avoid { break-inside: avoid; }
+      a { color: inherit !important; text-decoration: none !important; }
+      .toc { display: none; }
+    }
+    .kpi { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body class="bg-page text-ink font-body antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg">Skip to the content</a>
+  <div class="jw-bar">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row md:items-center md:justify-between gap-x-6">
+      <p class="pt-3 pb-1 md:py-3 whitespace-nowrap">J&amp;W Foods · growth proposal</p>
+      <nav aria-label="Proposal pages">
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 md:gap-x-5 whitespace-nowrap pt-1 pb-2 md:py-2">
+          <li><a class="inline-block py-1" href="index.html">Prototypes</a></li>
+          <li><a class="inline-block py-1" href="agents.html">AI agents</a></li>
+          <li><a class="inline-block py-1" href="roi.html">Business case</a></li>
+          <li><a class="inline-block py-1" href="million.html">The $1M plan</a></li>
+          <li><a class="inline-block py-1" href="research.html">Research</a></li>
+          <li><a aria-current="page" class="inline-block py-1" href="proposal.html">Proposal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-5 py-10 md:py-14 grid gap-10 lg:grid-cols-[220px_1fr]">
+    <nav class="toc no-print hidden lg:block" aria-label="Contents">
+      <div class="sticky top-6">
+        <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-muted">Contents</p>
+        <ol id="toc" class="mt-3 space-y-1.5 text-[13.5px]"></ol>
+        <button type="button" onclick="window.print()" class="mt-6 w-full rounded-xl bg-ink text-white text-[13.5px] font-semibold py-2.5 hover:bg-deep">Save as PDF</button>
+      </div>
+    </nav>
+    <main id="main" class="bg-white border border-line rounded-3xl px-6 py-8 md:px-12 md:py-12 prose-jw min-w-0">
+      <div class="flex items-center gap-4">
+        <img src="assets/img/jw-logo.jpg" alt="J&amp;W Foods, established 1995" width="296" height="275" class="w-16 h-auto">
+        <div><p class="text-[11px] font-semibold tracking-[0.24em] uppercase text-brand" style="margin:0">Growth proposal · <span id="date"></span></p>
+        <p class="text-[13px] text-muted" style="margin:2px 0 0" id="prep"></p></div>
+      </div>
+      <h1 class="mt-6" id="title">Seven ways to turn Scarborough’s best butcher into the GTA’s protein brand</h1>
+      <p class="text-muted" id="sub"></p>
+      <details class="lg:hidden no-print mt-6 border border-line rounded-xl px-4 py-3"><summary class="font-semibold text-[14px] cursor-pointer">Contents</summary><ol id="toc-m" class="mt-3 space-y-1.5 text-[14px]" style="list-style:none;padding-left:0"></ol></details>
+      <div id="doc"></div>
+      <p class="no-print mt-10"><button type="button" onclick="window.print()" class="rounded-xl bg-ink text-white text-[14px] font-semibold px-5 py-3 hover:bg-deep">Save this proposal as a PDF</button></p>
+    </main>
+  </div>
+
+  <footer class="bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center gap-6 sm:justify-between text-center sm:text-left">
+      <p class="jw-wordmark" style="color:#fff">J&amp;W <span style="color:rgba(255,255,255,.72)">Foods · Meal Butler</span></p>
+      <div class="text-sm text-white/70 leading-relaxed sm:text-right">
+        <p>Prepared for J&amp;W Foods Inc · 2201 Brimley Rd, Unit 1, Scarborough, ON</p>
+        <p>Concept prototypes and estimates by Minastech. Not a forecast, and not financial, legal or tax advice.</p>
+        <p class="mt-1"><a class="text-white underline underline-offset-2 hover:text-white/80" href="mailto:erwin.garcia@minastech.ca">erwin.garcia@minastech.ca</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var J = window.JW; if (!J) return;
+    var PR = J.proposal || {}, P = J.plays || [], A = J.agents || [], M = J.million || {}, R = J.research || {}, F = J.fee || {}, PF = J.portfolio || {}, B = J.baseline || {};
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function fm(v) { var s = v < 0 ? '−' : ''; v = Math.abs(v || 0); if (v >= 999500) return s + '$' + (Math.round(v / 1e5) / 10) + 'M'; if (v >= 99950) return s + '$' + Math.round(v / 1000) + 'K'; if (v >= 1000) return s + '$' + (Math.round(v / 100) / 10) + 'K'; return s + '$' + Math.round(v); }
+    function ul(a) { return '<ul>' + (a || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
+    function paras(a) { return (a || []).map(function (x) { return '<p>' + esc(x) + '</p>'; }).join(''); }
+    var pre = J.preparedBy || {};
+    document.getElementById('date').textContent = pre.date || 'October 2026';
+    document.getElementById('prep').textContent = 'Prepared for J&W Foods Inc by ' + (pre.person ? pre.person + ', ' : '') + (pre.name || 'Minastech');
+    if (PR.title) document.getElementById('title').textContent = PR.title;
+    document.getElementById('sub').textContent = PR.subtitle || '';
+
+    var S = [];
+    function sec(id, title, html) { S.push({ id: id, title: title, html: html }); }
+
+    sec('summary', 'The short version',
+      paras(PR.summary) +
+      '<div class="avoid not-prose grid gap-3 sm:grid-cols-3 my-6">' +
+        '<div class="rounded-2xl bg-gainsoft px-4 py-4"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-gain" style="margin:0">Added revenue, year 1</p><p class="font-display text-[30px] leading-tight text-gain kpi" style="margin:4px 0 0">' + esc((PF.year1 || {}).plan || '') + '</p><p class="text-[12.5px] text-muted" style="margin:2px 0 0">overlap removed, estimate</p></div>' +
+        '<div class="rounded-2xl bg-soft px-4 py-4"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-deep" style="margin:0">Added revenue, year 2</p><p class="font-display text-[30px] leading-tight text-deep kpi" style="margin:4px 0 0">' + esc((PF.year2 || {}).plan || '') + '</p><p class="text-[12.5px] text-muted" style="margin:2px 0 0">once the plays are running</p></div>' +
+        '<div class="rounded-2xl bg-page border border-line px-4 py-4"><p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-muted" style="margin:0">The $1M path</p><p class="font-display text-[30px] leading-tight kpi" style="margin:4px 0 0">' + fm((M.path || {}).total) + '</p><p class="text-[12.5px] text-muted" style="margin:2px 0 0">a year, expected, once running</p></div>' +
+      '</div>' +
+      (PR.recommendation ? '<blockquote>' + esc(PR.recommendation) + '</blockquote>' : ''));
+
+    sec('today', 'J&W today',
+      paras(PR.today) +
+      '<h3>What J&amp;W already does better than anyone</h3>' + ul(R.strengths) +
+      '<h3>What is holding growth back</h3>' + ul(R.gaps) +
+      '<p>Our estimate of today’s sales, from public signals: <b>' + fm(B.low) + '–' + fm(B.high) + '</b> a year, midpoint <b>' + fm(B.mid) + '</b>. ' + esc(B.note || '') + '</p>');
+
+    sec('competitors', 'The competitors we learned from',
+      paras(PR.competitorsIntro) +
+      '<table><thead><tr><th>#</th><th>Competitor</th><th>Where</th><th>Why premium</th><th>What we borrowed</th></tr></thead><tbody>' +
+      (J.competitors || []).map(function (c, i) { return '<tr><td>' + (i + 1) + '</td><td><b>' + esc(c.name) + '</b><br><span class="text-muted">' + esc(c.category || '') + '</span></td><td>' + esc(c.scope || '') + (c.hq ? ', ' + esc(c.hq) : '') + '</td><td>' + esc(c.premium || '') + '</td><td>' + esc(c.borrow || '') + '</td></tr>'; }).join('') +
+      '</tbody></table><p>The full field of about 60 businesses we checked is on the <a href="research.html#considered">research page</a>.</p>');
+
+    sec('plays', 'The seven plays',
+      paras(PR.playsIntro) +
+      '<table><thead><tr><th>#</th><th>Play</th><th>Modelled on</th><th>Year 1 (expected)</th><th>Range</th><th>Once running</th><th>Margin</th></tr></thead><tbody>' +
+      P.map(function (p) { var y = p.year1 || {}; return '<tr><td>' + p.n + '</td><td><a href="' + esc(p.file) + '"><b>' + esc(p.name) + '</b></a></td><td>' + esc((p.modelledOn || {}).name || '') + '</td><td>' + fm(y.mid) + '</td><td>' + fm(y.low) + '–' + fm(y.high) + '</td><td>' + fm(p.runRate) + '</td><td>' + (p.marginPct || 0) + '%</td></tr>'; }).join('') +
+      '</tbody></table>' +
+      P.map(function (p) {
+        var mo = p.modelledOn || {};
+        return '<div class="avoid"><h3 id="play-' + p.n + '">' + p.n + '. ' + esc(p.name) + '</h3><p><b>' + esc(p.oneLiner || '') + '</b></p>' +
+          (p.mechanism ? '<p>' + esc(p.mechanism) + '</p>' : '') +
+          '<p><b>Modelled on ' + esc(mo.name || '') + '.</b> ' + esc(mo.what || '') + (mo.proof ? ' ' + esc(mo.proof) : '') + '</p>' +
+          '<p><b>The math.</b> ' + esc(p.mathYear1 || '') + (p.mathRunRate ? ' ' + esc(p.mathRunRate) : '') + '</p>' +
+          '<p><b>KPIs.</b> ' + (p.kpis || []).map(function (k) { return esc(k.label) + ': ' + esc(k.target); }).join('; ') + '.</p>' +
+          '<p><b>Risks.</b> ' + (p.risks || []).map(esc).join(' ') + '</p>' +
+          '<p><a href="' + esc(p.file) + '">Open the prototype →</a></p></div>';
+      }).join(''));
+
+    var T = J.tenX || {};
+    sec('agents', 'The AI agents: ten times the desk capacity',
+      '<p><b>' + esc(T.headline || '') + '</b></p>' + paras(T.thesis) +
+      '<table><thead><tr><th>Lever</th><th>Today</th><th>With agents</th><th>Multiple</th></tr></thead><tbody>' + (T.levers || []).map(function (l) { return '<tr><td>' + esc(l.lever) + '</td><td>' + esc(l.today) + '</td><td>' + esc(l.withAgents) + '</td><td><b>' + esc(l.multiple) + '</b></td></tr>'; }).join('') + '</tbody></table>' +
+      '<table><thead><tr><th>Agent</th><th>Tier</th><th>What it does</th><th>Who approves</th></tr></thead><tbody>' + A.map(function (a) { return '<tr><td><a href="agents.html#' + esc(a.id) + '"><b>' + esc(a.name) + '</b></a></td><td>' + esc(a.tier || '') + '</td><td>' + esc(a.job || '') + '</td><td>' + esc(a.human || '') + '</td></tr>'; }).join('') + '</tbody></table>' +
+      '<h3>Guardrails</h3>' + ul(T.guardrails) + (T.cost ? '<p><b>Running cost.</b> ' + esc(T.cost.text || '') + '</p>' : ''));
+
+    sec('million', 'How J&W adds $1 million a year',
+      '<p>' + esc(M.intro || '') + '</p>' + (M.path ? '<p><b>' + esc(M.path.title || 'Recommended path') + '.</b> ' + esc(M.path.summary || '') + '</p>' : '') +
+      '<table><thead><tr><th>Idea</th><th>Sales a year (expected)</th><th>Range</th><th>You keep</th><th>First step</th></tr></thead><tbody>' +
+      (M.ideas || []).map(function (d) { var s = d.sales || {}; return '<tr><td><a href="million.html#idea-' + d.n + '"><b>' + esc(d.name) + '</b></a></td><td>' + fm(s.mid) + '</td><td>' + fm(s.low) + '–' + fm(s.high) + '</td><td>' + (d.keepPct || 0) + '%</td><td>' + esc(d.firstTest || '') + '</td></tr>'; }).join('') +
+      '</tbody></table><h3>Rules to check before spending</h3><ul>' + (M.rules || []).map(function (r) { return '<li><b>' + esc(r.q) + '</b> ' + esc(r.why || '') + (r.who ? ' Ask: ' + esc(r.who) + '.' : '') + '</li>'; }).join('') + '</ul>');
+
+    sec('fee', 'Our fee and how we work',
+      paras(PR.howWeWork) +
+      (F.monthly ? '<p><b>Fee:</b> $' + Number(F.monthly).toLocaleString('en-CA') + ' a month' + (F.setup ? ' plus a one-time setup of $' + Number(F.setup).toLocaleString('en-CA') : '') + '. ' + esc((F.term || '').replace(/\.?$/, '.')) + '</p>' + (F.includes ? '<p>' + esc(F.includes.replace(/\.\.$/, '.')) + '</p>' : '') : '') +
+      (PF.breakEven ? '<p><b>Break-even on the fee alone:</b> ' + esc(PF.breakEven) + '.</p>' : '') +
+      (PF.roiYear1 ? '<p><b>Return:</b> ' + esc(PF.roiYear1) + (PF.roiYear2 ? '; ' + esc(PF.roiYear2) + ' in year 2' : '') + '.</p>' : ''));
+
+    sec('ninety', 'The first 90 days',
+      '<table><thead><tr><th>When</th><th>What happens</th><th>Who</th></tr></thead><tbody>' + (PR.ninety || []).map(function (r) { return '<tr><td><b>' + esc(r.when) + '</b></td><td>' + esc(r.what) + '</td><td>' + esc(r.who || '') + '</td></tr>'; }).join('') + '</tbody></table>' +
+      (PR.kpis ? '<h3>What we measure at day 90</h3>' + ul(PR.kpis) : ''));
+
+    sec('risks', 'Risks and how we handle them',
+      '<table><thead><tr><th>Risk</th><th>What we do about it</th></tr></thead><tbody>' + (PR.risks || []).map(function (r) { return '<tr><td><b>' + esc(r.risk) + '</b></td><td>' + esc(r.mitigation) + '</td></tr>'; }).join('') + '</tbody></table>');
+
+    sec('next', 'What we need from you',
+      ul(PR.asks) + '<p>Then send us your shortlist of prototypes: <a href="mailto:erwin.garcia@minastech.ca?subject=J%26W%20Foods%3A%20our%20shortlist">erwin.garcia@minastech.ca</a>.</p>' +
+      '<p class="text-muted" style="font-size:13px">Every figure in this proposal is an estimate built on public benchmarks and J&amp;W’s published prices, not on J&amp;W’s own sales data, and is shown as a range. Sources are on the <a href="research.html">research page</a>.</p>');
+
+    document.getElementById('doc').innerHTML = S.map(function (s, i) { return '<h2 id="' + s.id + '"' + (i === 0 ? ' class="first"' : '') + '>' + esc(s.title) + '</h2>' + s.html; }).join('');
+    document.getElementById('toc').innerHTML = S.map(function (s, i) { return '<li><a class="text-muted hover:text-ink" href="#' + s.id + '">' + (i + 1) + '. ' + esc(s.title) + '</a></li>'; }).join('');
+    document.getElementById('toc-m').innerHTML = document.getElementById('toc').innerHTML;
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jw-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8787",
+        "--directory",
+        "/Users/erwingarcia/Claude/JWFOODSPROPOSAL/site"
+      ],
+      "port": 8787
+    },
+    {
+      "name": "jw-artifact-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8788",
+        "--directory",
+        "/private/tmp/claude-501/-Users-erwingarcia-Claude-JWFOODSPROPOSAL/7f9cea33-ca57-4f08-a5f5-40df3c313a82/scratchpad/preview"
+      ],
+      "port": 8788
+    }
+  ]
+}

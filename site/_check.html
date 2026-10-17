@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><title>check frame</title><meta name="robots" content="noindex"></head>
+<body style="margin:0;display:flex;justify-content:center;align-items:flex-start"><script>
+/* Dev tool only (excluded from the deploy): loads a page in an iframe of a given width so headless checks see a real
+   phone viewport. With &audit=1 it also logs layout/accessibility problems of the framed page to the console. */
+var q = new URLSearchParams(location.search), f = document.createElement('iframe');
+f.style.cssText = 'border:0;width:' + (q.get('w') || 390) + 'px;height:' + (q.get('h') || 900) + 'px';
+f.src = q.get('src'); document.body.appendChild(f);
+if (q.get('audit')) f.addEventListener('load', function () { setTimeout(function () {
+  var d = f.contentDocument, w = f.contentWindow, W = d.documentElement.clientWidth, out = [];
+  if (d.documentElement.scrollWidth > W + 1) out.push('OVERFLOW-X page ' + d.documentElement.scrollWidth + '>' + W);
+  var wide = [];
+  d.querySelectorAll('body *').forEach(function (e) {
+    if (wide.length >= 6) return;
+    for (var a = e.parentElement; a && a !== d.body; a = a.parentElement) { var cs = w.getComputedStyle(a); if (/hidden|clip|auto|scroll/.test(cs.overflowX) && a.getBoundingClientRect().right <= W + 2) return; }
+    var r = e.getBoundingClientRect(); if (r.width && r.right > W + 2 && w.getComputedStyle(e).position !== 'fixed') wide.push(e.tagName + (e.id ? '#' + e.id : '') + ' right=' + Math.round(r.right));
+  });
+  if (wide.length) out.push('WIDE ' + wide.join(' | '));
+  var broken = [].filter.call(d.images, function (i) { return i.complete && !i.naturalWidth && i.src; }).map(function (i) { return i.src.slice(-50); });
+  if (broken.length) out.push('BROKEN-IMG ' + broken.length + ' ' + broken.slice(0, 4).join(' '));
+  var links = [].filter.call(d.querySelectorAll('a[href]'), function (a) { return !(a.textContent.trim() || a.getAttribute('aria-label')); }).length; if (links) out.push('UNNAMED-LINKS ' + links);
+  out.push('STATS width=' + W + ' height=' + d.documentElement.scrollHeight + ' links=' + d.querySelectorAll('a[href]').length);
+  out.forEach(function (l) { console.log('PAGE-CHECK ' + l); });
+}, 2500); });
+</script></body></html>

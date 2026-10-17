@@ -1,0 +1,531 @@
+{
+ "n": 4,
+ "slug": "jw-at-work",
+ "name": "J&W at Work",
+ "oneLiner": "A workplace meal perk for GTA employers: the company covers part or all of each Meal Butler meal, staff pre-order by Sunday, and J&W drops one order of named bags at the site on a route it already drives, with a loaned freezer for big shift sites.",
+ "headline": "One dock drop of 50-plus prepaid meals on a route J&W already drives is the cheapest, highest-margin order J&W can take, and the employer subsidy keeps staff ordering every week.",
+ "focus": "Employer-subsidised staff meals delivered on existing routes",
+ "mechanism": "Employers choose a perk: $2 off up to the full price of each meal, 1-5 lunches covered a week, or everything up to a cap. The company's share is drawn from a prepaid wallet, so J&W carries no receivables. Staff join with their work email and order by J&W's existing Sunday cut-off from a 20-item At Work menu of real Meal Butler items, for example Teriyaki Chicken, Green Beans & Rice at $9.99, Jerk Chicken, Green Beans & Sweet Potato at $12.99, Egg White Bites at $5.25 and Steel Cut Oats at $4.40. Company-wide work pricing takes 5% off at 40+ items a week and 10% off at 100+ (a $12.99 meal becomes $11.69). Each week's orders go out as one stop of sealed, named bags on the route day that already serves that city, and delivery is free when the week tops $250. Sites with 75+ staff on site borrow a glass-door freezer that is restocked weekly and paid by QR code, and HR gets one split invoice, a monthly report and Team Table packs priced from published portions ($115.80-$147.88).",
+ "modelledOn": {
+  "name": "WeCook for Business",
+  "url": "https://www.wecookmeals.ca/en/business",
+  "scope": "Canada (Montreal)",
+  "short": "Employer-subsidised ready meals, ordered by staff, delivered to the office",
+  "what": "WeCook runs a workplace meal platform. The employer sets an allowance ($ per employee, $ per meal up to a cap, or N meals each) and invites staff, who must use the company email domain. Staff pick meals each week, and everything is rolled into one joint office order that cancels itself if nobody orders. The invoice splits what the company covered from what employees paid, and the price per meal falls with total company volume. Larger firms get on-site fridges.",
+  "proof": "About 90,000 meals a week and nearly 400 staff (Retail Insider, Aug 2025). Trustpilot 4.8 from 6,584 reviews. The CEO puts the B2B meal at about $11.75, against $20-25 for traditional catering. Employers fund anywhere from $1 a meal to 100%, and the program fits companies of 20 to 500 employees. The dashboard copy was still live on Oct 16 2026.",
+  "jwEdge": "J&W's frozen, vacuum-sealed meals suit an unattended office freezer, with no use-by waste. J&W's own Scarborough plant and its Tuesday-Friday routes already pass the Scarborough, Markham, North York, Vaughan and Mississauga business parks, while WeCook couriers from Quebec. Pre-set meals cost $9.99-13.99, at or below WeCook's $11.99-15.49, with macro-exact à la carte portions. J&W's promise is no added salt, sugar or oil; WeCook's sample bowl has 795-1,015 mg sodium. A butcher range (BBQ souvlaki cases) is something WeCook cannot offer."
+ },
+ "year1": {
+  "low": 68000,
+  "mid": 162000,
+  "high": 323000
+ },
+ "runRate": 622000,
+ "marginPct": 40,
+ "startMonth": 3,
+ "mathYear1": "Live from Jan 2027 (month 3). Team orders: accounts ramp 3→16 from Jan to Oct (3,4,6,8,10,11,12,12,14,16 = 96 account-months) × 4 order weeks × 40 items a week (new accounts start at about half the steady 55) × $10.00 average net item = $153,600. Freezers: 1→6 from Mar (30 freezer-months) × 4.2 weeks × $250 a week = $31,500. Team Table packs: 96 × 0.4 a month × $150 = $5,760. Gross $190,860 × 0.85 incrementality = $162K (mid). Low: 57 account-months × 4 × 30 items × $10 + 12 freezer-months × 4.2 × $200 + packs $1,710 = $80,190 × 0.85 = $68K. High: 145 account-months × 4 × 50 × $10.50 + 50 freezer-months × 4.2 × $300 + packs $11,963 = $379,463 × 0.85 = $323K.",
+ "mathRunRate": "Year 2 (Nov 2027-Oct 2028): 22 average live accounts (16 rising to about 28) × 55 items a week × $10.00 × 48 weeks = $580,800, plus 9 freezers × $300 a week × 50 weeks = $135,000, plus 22 accounts × 5 packs × $150 = $16,500. Gross $732,300 × 0.85 incrementality = about $622K a year.",
+ "mathNotes": [
+  "Average net item price of $10.00: 75% lunches (average published 4 oz price of $12.32 across the 9 menu meals) and 25% breakfast items (about $5) give a $10.49 list mix, less about 5% for the volume tier.",
+  "One steady account (100-140 staff on site, 25-30% ordering, 2.2 items each, 3 on-site days) is about 55 items and $550 a week, or about $26.4K a year, for roughly $10.6K gross profit at 40%.",
+  "Gross profit at 40% is about $65K in year 1 and about $249K in year 2.",
+  "JW's own costs are about $54.5K in year 1 ($13.8K setup, including 6 freezers, plus 11 × $3.7K a month), so year 1 is roughly break-even. Year 2 costs are about $80K, leaving about $170K contribution before Minastech's fee.",
+  "Sanity check: year-1 mid is about 6.5% of JW's ~$2.5M mid-case revenue, and the run-rate is about 25%. Twenty-eight accounts by Oct 2028 is about 0.2% of the ~11-14K GTA sites with 50+ staff.",
+  "Year-2 volume is about 1,470 extra items a week (about 1,210 pre-ordered plus about 260 from freezers), probably +1 cook/packer FTE. Plant headroom needs confirming.",
+  "Incrementality is 0.85, the top of the shared 0.75-0.85 range, because employers are a new buyer. Some staff already buy J&W at home.",
+  "Not counted here: gifts from the same employers (Play 5), resale by gyms and clinics (Play 2), fundraisers (Play 7), and staff who later subscribe at home (Plays 1 and 6)."
+ ],
+ "kpis": [
+  {
+   "label": "Employer accounts live",
+   "target": "16 by Oct 2027; 28 by Oct 2028"
+  },
+  {
+   "label": "Weekly participation (on-site staff who order)",
+   "target": "25-30%"
+  },
+  {
+   "label": "Items per account per week",
+   "target": "40 in year 1 (ramp), 55 at steady state"
+  },
+  {
+   "label": "Average net item price",
+   "target": "About $10.00"
+  },
+  {
+   "label": "Tasting to pilot / pilot to paid",
+   "target": "40% / 70%"
+  },
+  {
+   "label": "Account retention at 6 months",
+   "target": "85%+"
+  },
+  {
+   "label": "Freezer sales per freezer",
+   "target": "$250/week in year 1, $300 in year 2; shrink under 3%"
+  },
+  {
+   "label": "Gross margin",
+   "target": "40%+"
+  },
+  {
+   "label": "Added time per dock drop",
+   "target": "Under 15 minutes (under $14 a stop)"
+  }
+ ],
+ "agentNeeds": [
+  {
+   "name": "B2B prospecting and account agent",
+   "job": "Builds lists of GTA employers with 50+ staff along J&W's route corridors (Scarborough, Markham, North York, Vaughan, Mississauga). Drafts CASL-compliant intro emails to HR and books tastings. Watches live accounts for falling participation and suggests save offers. A person approves every message.",
+   "onScreen": "Team view: the drafted intro email to Maple Ridge Packaging, the Don Mills Design Co. save offer and the pipeline board, all waiting for approval."
+  },
+  {
+   "name": "At Work order desk agent",
+   "job": "Runs each employer's weekly order. It applies allowances and caps, drafts Thursday reminders for opted-in staff and closes at the Sunday cut-off. It cancels empty weeks, rolls picks into one named-bag pick list per site, and drafts the split company/staff invoice.",
+   "onScreen": "Staff app allowance meter and confirmation. Team view: the reminder SMS awaiting approval and the Northline split invoice."
+  },
+  {
+   "name": "Production forecast and prep-sheet agent",
+   "job": "Adds At Work volume to Monday's cook, portion and pack plan, and sets freezer par levels per site from sell-through. The production manager approves.",
+   "onScreen": "Team view: the cook-plan change (648 items) and the Milliken freezer par change from 8 to 14."
+  },
+  {
+   "name": "Route and delivery experience agent",
+   "job": "Slots dock drops and freezer restocks into the existing Tuesday-Friday routes and texts each site contact an ETA window. The dispatcher approves.",
+   "onScreen": "Team view route impact: 7 Wednesday drops adding about 52 minutes."
+  },
+  {
+   "name": "Nutrition data and label agent",
+   "job": "Drafts the full prepackaged labels needed for meals sold from a workplace freezer: ingredients, allergens, Nutrition Facts, the front-of-pack symbol and from-frozen heating times. Also supplies the protein figures in the HR report. A labelling consultant approves.",
+   "onScreen": "Protein stickers (est.) on menu cards and the average protein per lunch in the HR report."
+  },
+  {
+   "name": "Butler Concierge 24/7 support and sales chat",
+   "job": "Answers HR and staff questions on pricing, route day, allergens, the freezer and the taxable-benefit caveat. Hands allergies and complaints to staff.",
+   "onScreen": "The At Work Desk chat on this page."
+  }
+ ],
+ "assumptions": [
+  "Launch in January 2027 (month 3) with 3 friendly pilots. November and December go to the build, labels and recruiting. HR wellness budgets reset in January.",
+  "About 5 tastings a month. 40% become pilots and 70% of pilots convert, so about 1.4 net new accounts a month after a little churn.",
+  "An average account has 100-140 staff on site, 25-30% weekly participation and 2.2 items per person on 3 on-site days, about 55 items a week at steady state. New accounts start at about half that.",
+  "Average net item about $10.00: 75% lunches (average $12.32 published 4 oz price) and 25% breakfast (about $5), less about 5% for the volume tier.",
+  "48 order weeks a year, allowing for holidays and summer skips.",
+  "About 40% of accounts qualify for a loaned freezer (75+ staff on site and $250+ a week). Each costs about $1,800 (estimate). Sales are $250 a week in year 1 and $300 in year 2, the low end of the $300-900 smart-fridge benchmark because the menu is frozen.",
+  "Gross margin is 40%: the cooked 45% from model-assumptions.md, less the tier discount, freezer shrink and named-bag packaging.",
+  "Incrementality factor is 0.85.",
+  "Drops ride existing routes at about $8-14 a stop. Delivery is free on weeks over $250 and the regular $20 fee applies below that.",
+  "The employer's share is prepaid through a company wallet, so there are no receivables.",
+  "J&W confirms from-frozen microwave times for each At Work item before launch. Current guidance: thaw overnight, then heat 60-90 seconds.",
+  "Revenue from the same employers' gifts, resale or fundraisers is counted in Plays 5, 2 and 7, not here."
+ ],
+ "risks": [
+  "A slow B2B sales cycle: HR budgets are set in Q4 and Q1. Mitigations: free-delivery pilots, a January launch and a route-day pitch ('our truck is already in Markham on Fridays').",
+  "Labels gate the freezer. Meals sold away from J&W's store need full prepackaged labels: ingredients, allergens, Nutrition Facts and the front-of-pack symbol, mandatory since Jan 2026. Budget a labelling consultant.",
+  "Some jwfoods.com ingredient lists (for example, Chicken Breast Souvlaki lists salt and oil) conflict with the site-wide 'salt and sugar free, no added oils' promise. Reconcile them before pitching clinics and hospitals.",
+  "Participation can fade after the first month. Mitigations: menu rotation, Thursday reminders, allowance nudges and the quarterly lunch-and-learn.",
+  "Hybrid work cuts on-site days. The frozen format and take-home help, but items per account may sit at the low end.",
+  "Subsidised meals can be a taxable benefit for staff. J&W must not give tax advice; the portal reports each person's company-paid total for payroll.",
+  "Plant capacity: about 1,470 extra items a week by year 2 may need a second cook/pack shift. Confirm headroom with J&W.",
+  "Freezer shrink or damage under honour-system QR pay. Mitigations: the 3% shrink clause, counts at every restock, and a lock option for public-facing sites.",
+  "WeCook already sells B2B in Ontario and could push harder in Toronto. J&W's local routes, freezer format and butcher range are its defence.",
+  "Founder bandwidth: tastings depend on Bill or Lucas. Protect about 6 hours a week."
+ ],
+ "who": "Lucas or the owner: about 6 h a week on tastings, HR calls and pilot check-ins. A part-time At Work coordinator: 12 h a week in year 1, rising to 20 h in year 2, covering onboarding, wallet top-ups, freezer counts, invoices and approving agent drafts. Kitchen: 4-8 extra packing hours a week for named bags, growing to part of a second cook/pack shift by year 2. Drivers: 10-15 minutes per extra dock drop on existing routes, plus about 20 minutes per freezer restock. Minastech builds the portal and sets up the agents (fee separate).",
+ "costs": {
+  "setup": 13800,
+  "monthly": 3700,
+  "note": "Setup: 6 glass-door freezers at about $1,800 each ($10,800; estimated range $1,500-2,500), QR signage, freezer wraps and printed menus ($1,500), and a pilot agreement template plus an insurance check for loaned equipment ($1,500). Monthly year-1 average: part-time coordinator, 12 h/week at about $28/h loaded ($1,450); named-bag packing labour ($745); about 10 extra route stops a week at about $11 each, plus freezer restocks ($475); software and AI tokens ($300); paid search and LinkedIn ($400); tasting boxes and step-challenge prizes ($330). Year 1 all-in is about $54.5K against about $65K gross profit. Year 2 running cost is about $80K. Excludes Minastech's fee."
+ },
+ "sources": [
+  {
+   "title": "WeCook for Business",
+   "url": "https://www.wecookmeals.ca/en/business"
+  },
+  {
+   "title": "WeCook plans API (consumer prices, Oct 16 2026)",
+   "url": "https://www.wecookmeals.ca/api/plans"
+  },
+  {
+   "title": "WeCook UI strings (B2B dashboard mechanics)",
+   "url": "https://www.wecookmeals.ca/js/i18n.js"
+  },
+  {
+   "title": "Retail Insider: WeCook launches WeCook for Business (Aug 26 2025)",
+   "url": "https://retail-insider.com/?p=177907"
+  },
+  {
+   "title": "Trustpilot: WeCook (4.8, 6,584 reviews)",
+   "url": "https://www.trustpilot.com/review/wecookmeals.ca"
+  },
+  {
+   "title": "Strategy: WeCook and P.K. Subban (Aug 26 2025)",
+   "url": "https://strategyonline.ca/2025/08/26/wecook-pk-subban/"
+  },
+  {
+   "title": "City of Toronto Employment Survey 2025",
+   "url": "https://www.toronto.ca/wp-content/uploads/2025/11/97af-CityPlanning-Toronto-Employment-Survey-Two-Pager-Summary-2025.pdf"
+  },
+  {
+   "title": "York Region business counts factsheet (StatCan CBC, Jun 2025)",
+   "url": "https://yorklink.ca/2025-york-region-business-counts-factsheet/"
+  },
+  {
+   "title": "Byte smart-fridge pricing (phase-2 comparison)",
+   "url": "https://www.bytetechnology.co/pricing"
+  },
+  {
+   "title": "Job Bank: delivery driver wages, Ontario",
+   "url": "https://www.jobbank.gc.ca/marketreport/wages-occupation/21667/ON"
+  },
+  {
+   "title": "J&W Foods delivery routes and Sunday cut-off",
+   "url": "https://www.jwfoods.com/pages/home"
+  },
+  {
+   "title": "J&W Foods products and prices",
+   "url": "https://www.jwfoods.com/products.json"
+  },
+  {
+   "title": "J&W Foods Google rating 4.8 / 611 reviews (via Yably)",
+   "url": "https://yably.ca/reviews/toronto/j-w-foods-2201-brimley-road"
+  },
+  {
+   "title": "Play 4 full write-up (internal)",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/play-04.md"
+  },
+  {
+   "title": "Competitor 4 deep-dive: WeCook (internal)",
+   "url": "file:///Users/erwingarcia/Claude/JWFOODSPROPOSAL/research/competitor-04.md"
+  }
+ ],
+ "prototype": {
+  "concept": "An HR manager at a GTA employer designs a meal perk with live numbers, previews the staff app their team would use, tries the night-shift freezer, and then books a tasting or starts a 4-week pilot. Every product, price and route on the page is J&W's own; the work pricing, freezer loan and Team Table packs are labelled Concept. In JW team view, the same clicks appear as leads, pilots and orders. They sit beside a sample week of employer accounts, AI-drafted outreach and reminders waiting for approval, the cook-plan and route impact, and a company/staff split invoice. File: site/prototypes/04-jw-at-work.html. JWC.init({ n: 4, teamNote: 'The JW team sees every employer account, this week's team orders rolled into the cook plan and routes, and AI-drafted outreach, reminders and invoices waiting for approval.', chat: {...} }). Store keys: p4-leads, p4-pilots, p4-freezer, p4-approvals, p4-designer.",
+  "wow": "The Perk Designer. HR drags the allowance slider, and a real meal card (Jerk Chicken, Green Beans & Sweet Potato, $12.99) splits live into a sky-blue 'Company covers $3.00' bar and a navy 'Staff pay $9.34' bar. Weekly lunches, monthly company cost and the pricing tier update as the slider moves, and a slate-purple badge animates when the team reaches Team or Site pricing ('Team pricing reached: 5% off for everyone'). One tap on 'See it in the staff app' carries the settings into the phone preview, which then reads 'Northline covers $3.00 off each meal'.",
+  "design": {
+   "inspiredBy": "WeCook for Business, ideas only: the lead form as the hero, an auto-scrolling benefit marquee, three numbered set-up cards, a 2x2 grid of objections, and round protein stickers on meal cards. Reworked with J&W's navy laurel, a frost-blue freezer motif and Meal Butler's slate purple, so it reads as crisp, premium and calm rather than WeCook green.",
+   "palette": [
+    {
+     "hex": "#154D8E",
+     "role": "Primary JW laurel navy: buttons, H1/H2, the 'Staff pay' bar"
+    },
+    {
+     "hex": "#0F1E33",
+     "role": "Ink: body text and dark bands"
+    },
+    {
+     "hex": "#7FB3D5",
+     "role": "Meal Butler sky: the 'Company covers' bar, highlights, focus rings (fill only, never text on white)"
+    },
+    {
+     "hex": "#EAF3FA",
+     "role": "Frost: freezer section and staff-app background"
+    },
+    {
+     "hex": "#5B5A8C",
+     "role": "Meal Butler slate purple: tier badges, HR report, Concept tags, team-view accents"
+    },
+    {
+     "hex": "#F6F1E7",
+     "role": "Oat: alternating section bands"
+    },
+    {
+     "hex": "#E3A33B",
+     "role": "Saffron: pilot-offer pill and low-stock badges (ink text on top)"
+    },
+    {
+     "hex": "#2E7D6B",
+     "role": "Teal: success ticks and confirmations"
+    },
+    {
+     "hex": "#5A6472",
+     "role": "Muted text"
+    },
+    {
+     "hex": "#FFFFFF",
+     "role": "Paper / cards"
+    }
+   ],
+   "displayFont": "Bricolage Grotesque",
+   "bodyFont": "Inter",
+   "layout": "Mobile-first single column with a 16 px gutter and no horizontal scroll at 375 px. Desktop (1024 px and up):\n- Hero split 55/45, lead-form card on the right.\n- How it works in 3 columns.\n- Perk Designer: controls on the left, sticky result card on the right.\n- Staff app in a centred phone frame with callouts either side. Below 480 px the frame becomes a full-width card without device chrome.\n- Team Table packs in 3 columns; Fair questions in a 2x2 grid.\n\nStyling:\n- Cards: 16 px radius with a soft navy shadow.\n- Buttons: 10 px radius, at least 44 px tall.\n- All money figures use tabular numbers.\n- The marquee pauses on hover and focus, and shows as a static wrap under prefers-reduced-motion.\n- Bricolage Grotesque 600/700/800 for headings; Inter 400/500/600 for everything else.",
+   "tone": "Neighbourly, plain and specific, like a family butcher talking to an office manager. Short sentences and Canadian spelling. No hype words (never 'unlock', 'seamless', 'revolutionize' or 'game-changer'), few em dashes. Every estimate says 'est.', and every Concept item says 'Concept'. Customer copy never names a competitor."
+  },
+  "sections": [
+   {
+    "name": "Sticky header",
+    "purpose": "Brand the program and keep the main action one tap away.",
+    "content": "Left: a navy laurel badge reading 'J&W', the wordmark 'J&W at Work', and a small sub-label 'from J&W Meal Butler'.\nNav: How it works · Menu · Freezer · Pricing · For HR. On mobile these become horizontal scroll chips.\nRight: a ghost button 'See the staff app' (scrolls to the phone) and a navy button 'Book a tasting' (scrolls to the hero form)."
+   },
+   {
+    "name": "Hero with lead form",
+    "purpose": "Say what it is in one breath and capture a sales-assisted lead above the fold, routing non-employer buyers to the right prototype.",
+    "content": "Eyebrow: 'Workplace meals · Scarborough, since 1995'.\nH1: 'Lunch at work, cooked by your butcher.'\nSub: 'J&W at Work is a meal perk for GTA teams. You decide what the company covers. Your staff pick their meals by Sunday. We bring the whole order to one door on our regular route, packed and labelled by name.'\nSaffron pill: 'Pilot offer: a free tasting and 4 weeks of free delivery for our first 10 employers (Concept)'.\nProof chips: '4.8★ on Google · 611 reviews' · 'Ontario-inspected plant since 2008' · 'Frozen and sealed, so nothing spoils'.\n\nForm card 'Book a free team tasting'\n- Note: 'We bring 8 meals for your team to try, on our route day. Demo: nothing is sent.'\n- Fields:\n  - First name*, Last name*, Work email*, Company*, Phone.\n  - 'Who are the meals for?': Our employees (default) / Members or patients at a gym or clinic we run / A sports team or school group / Gifts for clients or staff / Just me.\n  - Staff on site: 20-49 / 50-99 / 100-249 / 250+.\n  - Site city: select from JWC.cities() plus Other.\n  - Notes: textarea, 200-character maximum, live counter 'x/200'.\n  - Checkbox: 'We already order from J&W'.\n- Live route hint once a city is chosen (built from JWC.routesFor), e.g. 'Good news: Markham is on our Friday route (GTA 4). Your team order would arrive Fridays.'\n- Routing notes instead of submitting:\n  - Gym or clinic: 'That's our Pro Partner Portal. See prototype 2 →'\n  - Team or school: 'See Team Fuel, prototype 7 →'\n  - Gifts: 'See the Corporate Gift Studio, prototype 5 →'\n  - Just me: 'See the Goal Plan Builder, prototype 1 →'\n- Button: 'Book my tasting'."
+   },
+   {
+    "name": "Benefit marquee",
+    "purpose": "Quick scannable reasons to care, borrowed as a format.",
+    "content": "Auto-scrolling strip on oat background, navy text with small sky dots between items:\n- 'Less than a food-court lunch'\n- 'Frozen, so nothing goes to waste'\n- 'Protein printed on every meal'\n- 'One drop. One invoice.'\n- 'Skip a week, nothing ships'\n- 'Ontario chicken, no hormones or antibiotics'\n- 'A freezer on loan for 75+ staff'"
+   },
+   {
+    "name": "How it works",
+    "purpose": "Show the program is light work for HR.",
+    "content": "H2: 'Set up in an afternoon. Runs itself after that.'\n\nThree numbered cards, each with a small UI or product image:\n1. 'Choose what the company covers.' 'Take $2 to $13 off each meal, cover a few lunches a week, or pay for all of it. Set a cap per person and a monthly budget, so there are no surprises.'\n2. 'Invite your team.' 'Staff join with their work email. Each week they pick meals by Sunday night. If they forget, a friendly reminder goes out on Thursday.'\n3. 'We bring it to one door.' 'Your order rides our regular Wednesday or Friday route. Each person's meals come in one sealed, named bag. One monthly invoice shows what the company paid and what staff paid.'\n\nFootnote: 'If nobody orders in a week, nothing ships and you pay nothing.'"
+   },
+   {
+    "name": "Perk Designer (wow)",
+    "purpose": "Let HR price a perk live, and see the company/staff split on a real J&W meal.",
+    "content": "H2: 'Design your perk.' Sub: 'Move the sliders. The numbers change as you go. They are estimates to help you plan, not a quote.'\n\nControls\n- 'Staff on site': slider 20-500, default 100.\n- 'Days on site each week': segmented 1-5, default 3.\n- 'What the company covers', segmented:\n  - '$ off each meal': slider $0-12, step $0.50, default $3.\n  - 'Lunches covered': 1-5 per person per week, default 2.\n  - 'Everything': cap 1-5 a week, default 3.\n- 'Monthly budget cap (optional)': toggle plus $ input.\n\nResult card\n- Meal card: Jerk Chicken, Green Beans & Sweet Potato (JWC.img). Shows 'Published price $12.99', the work price at the current tier, and a split bar (sky 'Company covers $3.00' / navy 'Staff pay $9.34').\n- Rows, each marked est.:\n  - 'Staff likely to order each week (est.)'\n  - 'Lunches a week (est.)'\n  - Tier badge: Starter / Team, 5% off / Site, 10% off. On a tier change, animate 'Team pricing reached: 5% off for everyone'.\n  - 'Company cost per month (est.)'\n  - 'Staff pay per lunch, on average (est.)'\n- Line: 'Fully covered, a lunch here costs the company about $11.70, compared with $20 to $25 a head for typical office catering (est.)'.\n- If the budget cap is below the cost: 'Your cap covers about N weeks a month at this level. After that, staff still order at work prices.'\n\nButtons\n- 'Start a 4-week pilot with these settings' (opens onboarding).\n- 'See it in the staff app' (scrolls and updates the phone).\n- 'Email this summary to a colleague' (demo modal with a printable summary; 'Demo: nothing is sent').\n\nFormulas\n- avgLunch = 12.32\n- itemsPerPerson = 0.6 × days + 0.4\n- $ off X: p = min(0.60, 0.15 + 0.035 × X); lunches = round(N × p × itemsPerPerson); companyWeek = lunches × min(X, workPrice).\n- Lunches covered K: p = min(0.65, 0.35 + 0.06 × K); lunches = round(N × p × max(itemsPerPerson, K)); companyWeek = N × p × K × workPrice.\n- Everything, cap C: p = 0.60; lunches = round(N × p × min(C, days)); companyWeek = lunches × workPrice.\n- Tier: under 40 lunches 0%; 40-99 5%; 100+ 10%. workPrice = avgLunch × (1 − tier).\n- monthly = companyWeek × 4.33, capped by the budget if one is set.\n- staffPerLunch = workPrice − companyWeek / lunches.\n\nDefault check: 100 staff, 3 days, $3 off → p 25.5%, 56 lunches, Team tier, about $168 a week, about $727 a month, staff pay about $8.70 on average."
+   },
+   {
+    "name": "Staff app preview",
+    "purpose": "Show employees' side: domain-locked join, allowance applied before pay, named-bag drop.",
+    "content": "H2: 'What your team sees.' Sub: 'A short weekly menu on their phone. Their allowance comes off before they pay.' Note: 'Sample company: Northline Logistics, Markham (fictional)'.\n\nPhone frame with 4 screens.\n\nA. Join\n- Title 'Join J&W at Work'. Text: 'Use your work email to join your company's meal perk.'\n- Email field and 'Send my sign-in link' button.\n- Hint chip: 'Try priya@northline.example'.\n- Any other domain shows: 'That email isn't on Northline's list. Use your @northline.example address, or ask HR to add you.'\n\nB. Menu\n- Header: 'Hi Priya' and 'Northline covers $3.00 off each meal, up to 5 a week'. The amount follows the Perk Designer.\n- Line: 'Order by Sunday, Oct 18 at midnight · Arrives Friday, Oct 23 at the shipping office'.\n- Tabs: Lunch / Breakfast / Wraps & soups.\n- Each card: photo, name, round navy sticker 'est. 38 g protein' (from JWC.macros), published price struck through next to the work price (Team tier), bold 'You pay $X', and +/- steppers.\n- Allowance meter: '3 of 5 covered this week'.\n\nC. Review\n- Rows, for example 4 meals (Jerk, Teriyaki, Salmon, Turkey) at work price $46.51; 'Northline covers −$12.00'; 'You pay $34.51'.\n- Pay with 'Card on file · DEMO •••• 4242' or 'Payroll deduction (if your company allows it)'.\n- Toggle: 'Repeat this order every week (skip any time)'.\n- Button: 'Confirm my meals'.\n\nD. Done\n- 'You're in Friday's Northline drop.'\n- 'Your bag will say PRIYA S. and sits on shelf 2 of the staff freezer.'\n- 'Thaw tomorrow's lunch in the fridge overnight, then heat 60 to 90 seconds.'\n- Buttons: 'Done' · 'Edit until Sunday'."
+   },
+   {
+    "name": "The At Work Freezer",
+    "purpose": "Sell the loaned-freezer idea for shift sites and let visitors try a 2 am purchase.",
+    "content": "H2: 'The At Work Freezer.' Sub: 'For sites with 75 or more people on site, we lend you a glass-door freezer and keep it stocked. Good for night shifts, early starts and the days someone forgot to order.'\n\nBullets\n- 'Free loan. We deliver it, plug it in and restock it on your route day.'\n- 'Staff scan the QR code, pick a meal and pay with their allowance or a card.'\n- 'We count stock at every visit. If unpaid items go over 3% of what we stocked, the company covers the difference at work prices.'\n- 'Frozen meals keep for months, so nothing is thrown out on Friday.'\n\nInteractive: 'Try it: 2:10 am, night shift at a Scarborough care residence (sample).'\n- A CSS glass-door freezer with frost background and 3 shelves. Thumbnails with stock counts: Jerk Chicken ×6, Turkey, Spinach & Rice ×4, Salmon, Brussels & Quinoa ×3, Chicken Chili ×5, Egg White Bites ×8, Steel Cut Oats ×7.\n- Tap an item and a bottom sheet opens with a mock QR. Options: 'Use my allowance ($3.00 off)' / 'Pay the work price by card (demo)'. Then 'Pay $9.34'.\n- Confirmation: 'Paid. Enjoy your meal. 5 Jerk Chicken left.'\n- At 2 or fewer of an item, a saffron badge shows 'Low: restock Wednesday'.\n\nSmall print: 'The site provides a standard outlet. The freezer loan terms are a Concept for discussion.'"
+   },
+   {
+    "name": "Team Table packs",
+    "purpose": "Meeting and event add-ons built from real portions, including a butcher-only BBQ pack.",
+    "content": "H2: 'Feeding a meeting? Order a Team Table pack.' Sub: 'For lunch-and-learns, all-hands and the summer BBQ. Packs ride the same route as your team order.'\n\nThree cards, each tagged Concept.\n\n1. 'Lunch & Learn Pack, 12 people', $147.88\n- Contents: '4 Souvlaki, Broccoli & Greek Potatoes · 4 Teriyaki Chicken, Green Beans & Rice · 4 Salmon, Brussels & Quinoa. Name labels and a printed menu card.'\n- Mix editor: steppers that must total 12, choosing from 6 favourite lunches. The price recalculates from published 4 oz prices.\n\n2. 'Breakfast Meeting Pack, 12 people', $115.80\n- Contents: '12 Egg White Bites, Spinach & Feta · 12 Steel Cut Oats.'\n\n3. 'Team BBQ Pack, about 25 people', $134.95\n- Contents: 'No-Salt Chicken Souvlaki Case (5 kg, about 50 skewers) · Tzatziki 1.5 L · 5 packs of Whole Grain Greek Pita. Raw skewers for your grill. Cook chicken to 74°C.'\n\nEach card has two buttons:\n- 'Add to cart' (JWC.cart.add).\n- 'Order this pack': JWC.checkout({title:'Team Table order', city:'Markham', extraRows:[{label:'At Work delivery credit (team order over $250)', amount:-20}], note:'Rides with the Northline team order on Friday'})."
+   },
+   {
+    "name": "For HR",
+    "purpose": "Show the monthly report and wellness add-ons that keep HR renewing.",
+    "content": "H2: 'A monthly report you can send upstairs.'\n\nSample report card in slate purple, 'Northline Logistics · October 2026 (sample)':\n- 'Meals delivered: 470 (352 pre-ordered, 118 from the freezer)'\n- 'On-site staff who ordered each week: 31%'\n- 'Company covered: $1,410.00 · Staff paid: $3,434.88'\n- 'Average protein per lunch: 36 g (est.)'\n- 'Most ordered: Jerk Chicken, Green Beans & Sweet Potato'\n- 'Freezer shrink: 1.2%'\n\nLine: 'Each person's company-paid total is listed for payroll. Ask your payroll provider how to treat it.'\n\nAdd-ons:\n- 'Quarterly lunch-and-learn: 30 minutes with our team on protein, portions and meal prep. Free for accounts ordering 40+ items a week.'\n- 'Step-challenge prize: a $60 Meal Butler credit for your winner each quarter (Concept).'"
+   },
+   {
+    "name": "Fair questions",
+    "purpose": "Handle the four common objections (format idea from WeCook's myth-busters).",
+    "content": "H2: 'Fair questions.' Four cards in a 2x2 grid:\n1. 'We don't have a kitchen.' → 'You need a microwave and some freezer space. Meals heat in 60 to 90 seconds once thawed. Sites with 75+ staff can borrow our freezer.'\n2. 'Half the team is remote on Fridays.' → 'Meals are frozen, so they keep. Staff can take theirs home, and anyone can skip a week. No orders means no delivery and no bill.'\n3. 'Healthy lunches are boring.' → 'Jerk chicken, Korean BBQ flank, Greek lemon souvlaki, teriyaki, honey garlic salmon. Our own marinades, cooked in our own plant.'\n4. 'HR doesn't need another job.' → 'Staff order for themselves. You get one invoice and one short report a month. Reminders and order roll-ups are handled for you.'"
+   },
+   {
+    "name": "Who it's for and route check",
+    "purpose": "Name the target segments and prove the site is on an existing route.",
+    "content": "H2: 'Built for GTA workplaces on our routes.'\n\nFour tiles:\n- 'Hospitals, clinics and care homes': 'Night shifts and closed cafeterias. The freezer does the work.'\n- 'Warehouses, plants and distribution centres': 'No food court nearby, early starts, big shifts.'\n- 'Offices and studios': 'Hybrid teams on site two or three days a week. A lunch that brings people in.'\n- 'Property managers': 'A tenant amenity for your towers. Tenants order, you choose the perk.'\n\nRoute lookup: label 'Is your site on our route?'. An input using JWC.findCity / JWC.routesFor returns, for example, 'Vaughan: Friday route (GTA 4)'.\n\nRoute list:\n- Tue: Durham\n- Wed: Toronto, Scarborough, North York, East York, Etobicoke, Mississauga\n- Thu: Oakville, Burlington, Hamilton, Milton\n- Fri: Markham, Vaughan, Richmond Hill, Brampton, Newmarket, Aurora"
+   },
+   {
+    "name": "Pricing",
+    "purpose": "Plain work-pricing tiers and terms (Concept).",
+    "content": "H2: 'Simple work pricing.' Tag: Concept.\n\nTable columns: Your company's weekly order | Price for everyone | Included.\n- 'Under 40 items' | 'Our published prices' | 'Free tasting, monthly report'\n- '40 to 99 items' | '5% off every item' | '+ quarterly lunch-and-learn'\n- '100 or more' | '10% off every item' | '+ a say in next month's menu'\n\nNotes:\n- 'Free delivery to one door on any week over $250. Under $250, the regular $20 route fee applies.'\n- 'At Work Freezer on loan for sites with 75+ staff on site and $250+ a week in combined orders.'\n- 'Your allowance comes off after the work price.'\n- 'No contract. Pilots run 4 weeks. After that, 30 days' notice.'\n- 'Prices in CAD. For your own staff, not for resale.'"
+   },
+   {
+    "name": "Closing call to action",
+    "purpose": "Repeat the tasting offer with the phone number.",
+    "content": "H2: 'Let's feed your team.' Sub: 'Book a free tasting and we'll bring 8 meals to your site on our route day. Or call us at (416) 298-1350.'\nButton: 'Book a tasting' (scrolls to the hero form).\nSmall print: 'J&W Foods · 2201 Brimley Rd, Unit 1, Scarborough · Family-run since 1995.'"
+   }
+  ],
+  "customerFlows": [
+   {
+    "name": "HR books a free team tasting",
+    "steps": [
+     "In the hero form, enter Dana, Okafor, dana@northline.example, Northline Logistics, 100-249 staff.",
+     "Leave 'Who are the meals for?' on 'Our employees'.",
+     "Choose Markham as the site city. The hint appears: 'Good news: Markham is on our Friday route (GTA 4).'",
+     "Type a note and watch the 200-character counter.",
+     "Click 'Book my tasting'.",
+     "A demo modal opens: 'Thanks, Dana. Your tasting request is in. Lucas from our team will call within one business day. You're on our Friday route, so we could bring the tasting Friday, Oct 23 or Oct 30. Demo: nothing was sent.' The lead is saved to JWC.store('p4-leads').",
+     "Click 'Design your perk' to scroll to the Perk Designer. Branch: choosing 'Members or patients at a gym or clinic we run' shows the routing note with a link to prototype 2 instead of submitting."
+    ]
+   },
+   {
+    "name": "HR designs the perk and starts a 4-week pilot",
+    "steps": [
+     "In the Perk Designer, set Staff on site to 140, Days to 3, and '$ off each meal' to $3. The split bar reads Company $3.00 / Staff $9.34, and the badge changes to 'Team pricing reached: 5% off for everyone'.",
+     "Click 'Start a 4-week pilot with these settings'. A 4-step modal opens.",
+     "Step 1, Company: prefilled from the lead (or Northline Logistics, Markham). Route shows 'Friday · GTA 4'. Add dock instructions: 'Shipping office, door 4'.",
+     "Step 2, Perk: an editable summary: '$3.00 off each meal, up to 5 a week'. Eligibility: 'everyone with an @northline.example email'.",
+     "Step 3, Invite: paste 13 emails. The check reports '12 invites ready, 1 not on your domain (sam@gmail.com)'. Toggle 'Send Thursday reminders'.",
+     "Step 4, Billing: 'Company wallet, topped up monthly by card or EFT (demo). We bill only what staff use. Pilot: 4 weeks, free delivery.' Tick 'I've read the pilot terms (demo)'.",
+     "Click 'Start my pilot'. A demo confirmation reads: 'Invites go out Monday, Oct 19. Staff can order until Sunday, Oct 25. Your first drop is Friday, Oct 30 on the GTA 4 route. Demo: nothing was sent.' The pilot is saved to p4-pilots and shows in the team-view accounts and pipeline."
+    ]
+   },
+   {
+    "name": "An employee orders next week's meals",
+    "steps": [
+     "In the staff app, type sam@gmail.com and see the domain error.",
+     "Tap the chip to use priya@northline.example, then 'Send my sign-in link'. The demo signs her straight in.",
+     "The menu shows 'Northline covers $3.00 off each meal, up to 5 a week' and the Sunday Oct 18 cut-off.",
+     "Add Jerk Chicken, Teriyaki Chicken, Salmon and Turkey. Each card shows 'You pay', and the allowance meter fills to '4 of 5 covered'.",
+     "Tap 'Review'. The rows show meals $46.51, 'Northline covers −$12.00' and 'You pay $34.51'. Turn on 'Repeat this order every week'.",
+     "Tap 'Confirm my meals'. The Done screen reads 'You're in Friday's Northline drop. Your bag will say PRIYA S.' The order is saved via JWC.addOrder with the note 'At Work staff order · Northline', a toast appears, and the team-view Northline item count goes up by 4."
+    ]
+   },
+   {
+    "name": "A night-shift worker buys from the At Work Freezer",
+    "steps": [
+     "In the freezer section, tap Jerk Chicken (×6).",
+     "A bottom sheet opens with a mock QR code. Choose 'Use my allowance ($3.00 off)'.",
+     "Tap 'Pay $9.34'.",
+     "A demo confirmation reads 'Paid. Enjoy your meal. 5 Jerk Chicken left.' The stock count drops and is saved to p4-freezer.",
+     "Buy Salmon twice more. It drops to 1 and shows the saffron 'Low: restock Wednesday' badge.",
+     "Switch to JW team view. The freezer row and the production agent's par card show the sales."
+    ]
+   },
+   {
+    "name": "An office manager orders a Team Table pack",
+    "steps": [
+     "Open the Lunch & Learn Pack card and use the mix editor to swap 2 Salmon for 2 Jerk Chicken. The total stays at 12 meals, and the price recalculates from published prices.",
+     "Click 'Order this pack'.",
+     "JWC.checkout opens with the title 'Team Table order', city Markham, and the row 'At Work delivery credit (team order over $250) −$20.00'.",
+     "Pick 'GTA 4 · Friday route'.",
+     "Click 'Place demo order'. The standard confirmation shows the order number and the Friday route. The order appears in the team-view 'Orders from this device' list."
+    ]
+   }
+  ],
+  "teamView": [
+   {
+    "name": "At Work desk header",
+    "content": "Title: 'At Work desk · week of Oct 19'. Caption: 'Sample data: a typical week about 9 months in'.\nKPI strip:\n- Live accounts 14\n- Pilots 2, plus any created on this device\n- Items ordered this week 648 (31% company-funded)\n- Freezers 6 (2 low)\n- Live countdown to the Sunday 11:59 pm cut-off\n- This month so far $24,900"
+   },
+   {
+    "name": "Employer accounts table",
+    "content": "Columns: Account | Site · route | On site | Perk | Took part | Items this week | Freezer | Health. All names are fictional.\n\nRows:\n1. Northline Logistics | Markham · Fri GTA 4 | 140 | $3 off, max 5/wk | 31% | 96 | Yes, 68% stocked | Good\n2. Milliken Precision Plastics | Scarborough · Wed GTA 2 | 210 | 2 lunches covered | 27% | 118 | Yes, 41% (low) | Good\n3. Don Mills Design Co. | North York · Wed GTA 2 | 45 | $4 off | 29% (was 44%) | 31 | none | Watch\n4. Eastgate Care Residence | Scarborough · Wed GTA 2 | 120 (3 shifts) | $5 off nights | 24% | 64 | Yes, 55% | Good\n5. Vaughan Cold Storage | Vaughan · Fri GTA 4 | 95 | $2 off | 22% | 44 | none | Good\n6. Brightpath Software (pilot, week 2 of 4) | Toronto · Wed GTA 2 | 38 | Everything on Wednesdays | 61% | 52 | none | Pilot\n7. Ajax Fleet Services | Ajax · Tue GTA 1 | 80 | $3 off | 26% | 42 | Yes, 80% | Good\n8. Mississauga Print Works | Mississauga · Wed GTA 2 | 60 | $2.50 off | 20% | 26 | none | Watch (Starter tier)\n\nBehaviour:\n- Pilots created in flow 2 appear at the top with a 'New' tag.\n- Clicking a row opens a drawer with the allowance settings, a 6-week participation sparkline and the invoice preview.\n- Staff orders and freezer buys from this device add to the Northline item count."
+   },
+   {
+    "name": "Approvals: AI drafts waiting for you",
+    "content": "Cards, each with Approve / Edit / Skip buttons. State is saved in p4-approvals.\n\n1. B2B prospecting and account agent: intro email to Maple Ridge Packaging (Markham, about 180 staff, Friday route).\n- Subject: 'Lunch for your night shift, from a Scarborough butcher'.\n- Body: 'Hi there, we're J&W Foods, a family butcher and meal-prep kitchen on Brimley Rd since 1995. Our truck is in Markham every Friday. We run a simple meal perk: you choose what the company covers, staff order by Sunday, and we drop everything at your door. Could we bring 8 meals for your team to try on Friday, Oct 30? Lucas, J&W Foods, (416) 298-1350. Reply STOP to opt out.'\n- Chip: 'CASL check: published business contact, relevant to role, unsubscribe included: OK'.\n\n2. At Work order desk agent: Thursday reminder SMS to 97 opted-in Northline staff who haven't ordered.\n- Text: 'Hi from J&W at Work. Your $3 lunch credit is waiting. Pick next week's meals by Sunday at midnight: [link]'.\n\n3. B2B prospecting and account agent (account health): 'Don Mills Design Co.: participation fell from 44% to 29% in 3 weeks. Suggest a free Breakfast Meeting Pack ($115.80 retail, about $64 food cost) for their Oct 28 all-hands, plus 2 new menu items.'\n\n4. Production forecast and prep-sheet agent: 'Add At Work volume to Monday's cook plan: +212 chicken breast portions (about 24 kg cooked, 32 kg raw at an est. 75% yield), +64 salmon, +58 tilapia, +120 egg-bite 2-packs, +60 oats.'\n\n5. Production forecast and prep-sheet agent: 'Freezer B (Milliken) sold out of Jerk Chicken by Tuesday two weeks running. Raise par from 8 to 14; cut Lemon Chicken Rice Soup from 8 to 4.'\n\n6. Route and delivery experience agent: 'Wednesday GTA 2: insert 7 At Work drops between stops 9 and 21. Adds about 52 min and 14 km. Text site contacts a 10:30 to 11:30 window.'\n\nPilots created in flow 2 add a card from the At Work order desk agent: 'Staff invite email for [company], ready to send Monday'."
+   },
+   {
+    "name": "Production and route impact this week",
+    "content": "Cook-plan change (items):\n- Teriyaki Chicken, Green Beans & Rice: 112\n- Jerk Chicken, Green Beans & Sweet Potato: 96\n- Souvlaki, Broccoli & Greek Potatoes: 84\n- Salmon, Brussels & Quinoa: 64\n- Tilapia, Asparagus & Brown Rice: 58\n- Turkey, Spinach & Rice: 46\n- Egg White Bites: 120\n- Steel Cut Oats: 60\n- Chicken Chili: 8\n- Total: 648\n\nPacking: 'Named bags: 241 · label and pack about 7.5 h (Monday 1-5 pm, 2 people)'.\n\nRoutes:\n- Tue GTA 1: 1 drop\n- Wed GTA 2: 7 drops, +52 min\n- Thu GTA 3: 1 drop\n- Fri GTA 4: 5 drops, +41 min\n- Freezer restocks: 6 (20 min each)\n\nThe table updates when staff orders or freezer buys happen on this device."
+   },
+   {
+    "name": "Split invoice preview",
+    "content": "Title: 'Northline Logistics · October 2026 (sample)'. Draft from the At Work order desk agent.\n\nRows:\n- Team orders (4 weeks), 352 items at work prices: $3,612.48\n- Freezer sales, 118 items: $1,232.40\n- Company covered (470 × $3.00): $1,410.00\n- Staff paid by card: $3,434.88\n- Delivery: $0 (every week over $250)\n- Freezer shrink: 1.2% (under 3%, nothing billed)\n- Drawn from the company wallet: $1,410.00\n\nButton: 'Approve and send' (demo toast: 'Demo: nothing was sent')."
+   },
+   {
+    "name": "Pipeline board and device orders",
+    "content": "Kanban counts:\n- Researched 46\n- Contacted 19\n- Tasting booked 6, plus leads from flow 1 shown as cards with company, city and route day\n- Pilot 2, plus pilots from flow 2\n- Live 14\n- Paused 1\n\nBelow it: 'Orders from this device', listing JWC.orders() filtered to proto 4 (staff orders, freezer buys and Team Table packs) with time, city or route, and total."
+   }
+  ],
+  "chat": {
+   "name": "At Work Desk",
+   "greeting": "Hi, I'm the At Work Desk. I can price a meal perk for your team, check your delivery day, or explain how the freezer works.",
+   "suggestions": [
+    "What would $3 off a meal cost us for 100 staff?",
+    "Which day do you deliver to Markham?",
+    "Do we need a freezer?",
+    "Is this a taxable benefit?"
+   ],
+   "rules": [
+    {
+     "match": "(cost|budget|how much).*(staff|team|employee|people)|\\$\\s?\\d+(\\.\\d+)?\\s*off",
+     "reply": "Here's a rough example. With 100 staff on site 3 days a week and $3 off each meal, about a quarter of people order, which is roughly 56 lunches a week. The company would cover about $168 a week, or around $730 a month, and staff pay about $8.70 for a typical lunch. Try the perk designer on this page to change any number. All figures are estimates."
+    },
+    {
+     "match": "freezer|fridge|storage|space|kitchen",
+     "reply": "You need a microwave and some freezer space. Each person's meals arrive in one sealed, named bag. Sites with 75 or more staff on site can borrow a J&W glass-door freezer at no charge when team orders and freezer sales average $250 a week. We restock it on your route day."
+    },
+    {
+     "match": "\\btax|taxable|\\bcra\\b|payroll",
+     "reply": "Subsidised meals can count as a taxable benefit for staff in Canada, depending on how much they pay. We can't give tax advice, but your monthly report lists each person's company-paid total so your payroll team can handle it. Please check with your accountant or payroll provider."
+    },
+    {
+     "match": "contract|cancel|commit|minimum|skip|pause|notice",
+     "reply": "There's no contract. Pilots run 4 weeks, and after that you give 30 days' notice to stop. If nobody orders in a week, nothing ships and nothing is billed. Delivery is free on any week over $250; under that, the usual $20 route fee applies."
+    },
+    {
+     "match": "allerg|\\bnuts?\\b|gluten|halal|vegetarian|vegan|dairy|kosher",
+     "reply": "Every meal shows its ingredients and allergens before staff order. Vegetarian options include the Egg White Bites with Spinach & Feta, and the Steel Cut Oats are vegan. We don't claim any At Work item is halal or kosher certified. For a serious allergy, please call us at (416) 298-1350 before ordering."
+    },
+    {
+     "match": "night|shift|hospital|nurse|warehouse|24.?7",
+     "reply": "Night shifts are where the freezer shines. Staff grab a meal, scan the QR code and pay with their allowance or a card. Thaw it in the staff fridge for tomorrow, or follow the from-frozen time on the label. We set the freezer mix to what your shifts actually buy and restock weekly."
+    },
+    {
+     "match": "tasting|\\btry\\b|\\bvisit|come by",
+     "reply": "We'll bring a free tasting of 8 meals to your site on our route day, with a short talk on protein and portions. Fill in the form at the top of the page and Lucas will call within one business day. (Demo: nothing is sent.)"
+    },
+    {
+     "match": "meeting|catering|\\bevents?\\b|party|bbq|lunch.and.learn|all.hands",
+     "reply": "For meetings, the Lunch & Learn Pack feeds 12 for $147.88 and the Breakfast Meeting Pack is $115.80, both at our published prices. For a summer BBQ, the Team BBQ Pack ($134.95) has a 5 kg case of no-salt chicken souvlaki skewers, tzatziki and pita for about 25 people. Packs come frozen on your route day, so plan a few days ahead."
+    },
+    {
+     "match": "discount|tier|volume|cheaper|work pric",
+     "reply": "Work pricing starts at our published prices. When your whole company orders 40 or more items a week, everyone gets 5% off. At 100 or more it's 10% off, which brings a $12.99 pre-set meal to $11.69 before your company allowance."
+    },
+    {
+     "match": "gym|resell|resale|wholesale|gift|fundrais|school",
+     "reply": "J&W at Work is for employers feeding their own staff. To resell meals at a gym or clinic, see the Pro Partner Portal (prototype 2). For client or holiday gifts, see the Corporate Gift Studio (prototype 5). For a team or school fundraiser, see Team Fuel (prototype 7)."
+    }
+   ]
+  },
+  "productIds": [
+   "pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white",
+   "chicken-broccoli-sweet-potato-fries",
+   "tilapia-asparagus-brown-rice",
+   "jerk-chicken-broccoli-sweet-potato-chunks",
+   "turkey-spinach-white-rice",
+   "salmon-brussel-sprouts-quinoa",
+   "copy-of-chicken-broccoli-sweet-potato-fries",
+   "sirloin-ground-green-beans-sweet-potato-chunks",
+   "chicken-souvlaki-broccoli-sweet-potato-chunks",
+   "beef-souvlaki-wrap",
+   "wrap-beef-flank-fajitas-copy-1",
+   "copy-of-wrap-chicken-breast-chipotle",
+   "chicken-ground-chilli",
+   "soup-chicken-lemon-soup",
+   "beef-chilli",
+   "copy-of-feta-omelette-cups-cooked-portioned-2-pkg",
+   "copy-of-egg-bites-omelette-w-peppers-onions-mushrooms-cooked-portioned-2-pkg",
+   "steel-cut-oats",
+   "spinach-feta-egg-wrap",
+   "copy-of-breakfast-wrap-egg-chicken-breakfast-sausage",
+   "oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy",
+   "chicken-souvlaki-no-salt",
+   "copy-of-tzatziki-sauce (from jw-catalog.json: 'TZATZIKI SAUCE', 1.5 LITRE $15.00, img https://cdn.shopify.com/s/files/1/1156/0176/products/tzatzi_small.JPEG_05c73538-5d17-4b94-a467-1fdf5256d3b3.png?v=1603817943)",
+   "whole-wheat-pita-bread (from jw-catalog.json: 'WHOLE GRAIN GREEK PITA', 12 per pack, $4.99, img https://cdn.shopify.com/s/files/1/1156/0176/products/WHOLEWHEATPITA.jpg?v=1603989548)"
+  ],
+  "conceptProducts": [
+   {
+    "name": "Work pricing: Team tier (Concept)",
+    "price": "5% off every item at 40-99 items a week (e.g. $12.99 → $12.34)",
+    "basis": "J&W's published prices less 5%. The discount is paid for by one-stop delivery on an existing route and steady weekly volume."
+   },
+   {
+    "name": "Work pricing: Site tier (Concept)",
+    "price": "10% off every item at 100+ items a week ($12.99 → $11.69)",
+    "basis": "J&W's published prices less 10%."
+   },
+   {
+    "name": "Lunch & Learn Pack, 12 people (Concept)",
+    "price": "$147.88",
+    "basis": "4 × Souvlaki, Broccoli & Greek Potatoes 4 oz ($13.99) + 4 × Teriyaki Chicken, Green Beans & Rice ($9.99) + 4 × Salmon, Brussels & Quinoa 4 oz ($12.99), at published prices; recalculates when the mix changes."
+   },
+   {
+    "name": "Breakfast Meeting Pack, 12 people (Concept)",
+    "price": "$115.80",
+    "basis": "12 × Egg White Bites, Spinach & Feta ($5.25) + 12 × Steel Cut Oats ($4.40)."
+   },
+   {
+    "name": "Team BBQ Pack, about 25 people (Concept)",
+    "price": "$134.95",
+    "basis": "No-Salt Chicken Souvlaki Case 5 kg ($95) + Tzatziki 1.5 L ($15) + 5 × Whole Grain Greek Pita, 12-pack ($4.99)."
+   },
+   {
+    "name": "Free team tasting (Concept)",
+    "price": "$0 (value $99.92)",
+    "basis": "2 each of Souvlaki, Broccoli & Greek Potatoes ($13.99), Jerk Chicken, Green Beans & Sweet Potato ($12.99), Teriyaki Chicken, Green Beans & Rice ($9.99) and Salmon, Brussels & Quinoa ($12.99). About $55 food cost to J&W."
+   },
+   {
+    "name": "At Work Freezer loan (Concept)",
+    "price": "$0 to the employer",
+    "basis": "For sites with 75+ staff on site and $250+ a week in combined orders. Unpaid items above 3% of stock are billed at work prices. J&W capex about $1,800 per freezer (estimate)."
+   },
+   {
+    "name": "At Work delivery (Concept)",
+    "price": "Free on weeks over $250; otherwise the regular $20 route fee",
+    "basis": "Replaces J&W's $20 GTA route fee for one consolidated stop. Cost to J&W is about $8-14 a stop on an existing route."
+   },
+   {
+    "name": "Step-challenge prize (Concept)",
+    "price": "$60 Meal Butler credit per account per quarter",
+    "basis": "Redeemed against published prices. About $33 food cost to J&W."
+   }
+  ]
+ }
+}

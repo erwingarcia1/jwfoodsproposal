@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Team Fuel Fundraiser · J&amp;W Foods concept</title>
+<meta name="description" content="Concept: a J&amp;W Foods fundraiser for GTA teams, schools and clubs. Families buy Ontario chicken, butcher-cut beef and Meal Butler meals at store prices, the group's share shows under every price, and everything arrives in one team drop.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { tnavy: '#154D8E', tnight: '#0E1E36', tember: '#C2481A', temberd: '#9E3B12', tembert: '#FCE9DD', tice: '#F3F7FB', tink: '#13202F', tmuted: '#526070', tline: '#D9E2EC', tsky: '#7FB3D5', tskyt: '#E6F1F8', tslate: '#5B5A8C', tturf: '#237A4B', tgold: '#F2B33D' },
+  fontFamily: { display: ['"Big Shoulders Display"', 'Impact', 'sans-serif'], serif: ['"Instrument Serif"', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
+  maxWidth: { page: '1120px' }
+} } };
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<style>
+:root { --navy:#154D8E; --night:#0E1E36; --ember:#C2481A; --emberd:#9E3B12; --embert:#FCE9DD; --ice:#F3F7FB; --ink:#13202F; --muted:#526070; --line:#D9E2EC; --sky:#7FB3D5; --skyt:#E6F1F8; --slate:#5B5A8C; --turf:#237A4B; --gold:#F2B33D; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--jwc-barh, 0px) + 12px); } /* --jwc-barh: concept bar height while it is sticky (0 on phones), set by concept.js */
+body { background: var(--ice); color: var(--ink); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.tnum, .tf-money { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.tf-dark :focus-visible { outline-color: #fff; }
+.tf-wrap { max-width: 1120px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+.tf-h { font-family: "Big Shoulders Display", Impact, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .01em; line-height: .98; }
+.tf-accent { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.tf-eyebrow { font: 700 11.5px/1.25 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.tf-title { text-align: center; }
+.tf-title h2 { font-size: clamp(34px, 7vw, 52px); color: var(--night); }
+.tf-title .tf-accent { display: block; font-size: clamp(21px, 3.6vw, 27px); color: var(--navy); margin-top: 6px; }
+.tf-rule { display: block; width: 40px; height: 4px; border-radius: 4px; background: var(--ember); margin: 14px auto 0; }
+.tf-lead { max-width: 640px; margin: 14px auto 0; color: var(--muted); font-size: 16.5px; line-height: 1.55; }
+
+/* buttons */
+.tf-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 11px 22px; border-radius: 999px; font: 700 15.5px/1.15 Inter, sans-serif; border: 2px solid transparent; cursor: pointer; text-decoration: none; text-align: center; transition: background-color .15s, border-color .15s, color .15s, transform .1s; }
+.tf-btn:active { transform: translateY(1px); }
+.tf-btn-ember { background: var(--ember); color: #fff; } .tf-btn-ember:hover { background: #A93D14; }
+.tf-btn-navy { background: var(--navy); color: #fff; } .tf-btn-navy:hover { background: #0F3C70; }
+.tf-btn-night { background: var(--night); color: #fff; } .tf-btn-night:hover { background: #1A3050; }
+.tf-btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.8); } .tf-btn-ghost:hover { background: rgba(255,255,255,.12); }
+.tf-btn-line { background: #fff; color: var(--ink); border-color: var(--line); } .tf-btn-line:hover { border-color: var(--navy); color: var(--navy); }
+.tf-btn-outline { background: #fff; color: var(--emberd); border-color: var(--ember); } .tf-btn-outline:hover { background: var(--embert); }
+.tf-btn-turf { background: var(--turf); color: #fff; } .tf-btn-turf:hover { background: #1B623C; }
+.tf-btn-slate { background: var(--slate); color: #fff; } .tf-btn-slate:hover { background: #4A4979; }
+.tf-btn-sm { min-height: 42px; padding: 8px 15px; font-size: 14px; }
+.tf-btn-block { width: 100%; }
+.tf-btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+.tf-link { display: inline-flex; align-items: center; min-height: 40px; color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; padding: 0 2px; cursor: pointer; font-size: inherit; }
+
+/* chips + tags */
+.tf-share { display: inline-flex; align-items: center; gap: 6px; background: var(--embert); color: var(--emberd); border-radius: 999px; padding: 5px 10px; font: 700 12.5px/1.1 Inter, sans-serif; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tf-share svg { flex: none; }
+.tf-tag { display: inline-flex; align-items: center; font: 700 10.5px/1 Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; padding: 5px 8px; white-space: nowrap; }
+.tf-tag-concept { background: #FFF4DA; color: #6E4A00; border: 1px solid #EBCB85; }
+.tf-tag-mb { background: #ECEBF6; color: var(--slate); border: 1px solid #CFCDE6; }
+.tf-tag-box { background: var(--skyt); color: var(--navy); border: 1px solid #BFD9EA; }
+.tf-tag-pork { background: #F4F6F9; color: #4A5664; border: 1px solid var(--line); }
+.tf-tag-grey { background: #E9EDF2; color: #3F4B59; }
+.tf-est { display: inline-flex; font: 700 10px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #3F4B59; background: #E9EDF2; border-radius: 5px; padding: 3px 5px; vertical-align: middle; }
+.tf-chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 7px 12px; font: 600 13px/1.15 Inter, sans-serif; }
+.tf-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 1px 2px rgba(14,30,54,.04), 0 22px 44px -30px rgba(14,30,54,.35); }
+
+/* season strip + utility bar */
+.tf-season { background: var(--embert); color: var(--emberd); }
+.tf-util { background: #fff; border-bottom: 1px solid var(--line); }
+.tf-nav { display: inline-flex; align-items: center; min-height: 44px; padding: 0 11px; border-radius: 10px; color: var(--ink); font: 500 14.5px/1 Inter, sans-serif; text-decoration: none; }
+.tf-nav:hover { background: var(--ice); color: var(--navy); }
+.tf-word { font-family: "Big Shoulders Display", Impact, sans-serif; font-weight: 800; font-size: 25px; letter-spacing: .04em; color: var(--night); line-height: 1; }
+
+/* hero */
+.tf-hero { position: relative; color: #fff; overflow: hidden; background: var(--night); }
+.tf-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.tf-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,30,54,.74) 0%, rgba(14,30,54,.70) 45%, rgba(14,30,54,.94) 100%); z-index: 1; }
+.tf-hero .tf-wrap { position: relative; z-index: 2; }
+@media (min-width: 1024px) { .tf-hero::before { background: linear-gradient(90deg, rgba(14,30,54,.93) 0%, rgba(14,30,54,.80) 48%, rgba(14,30,54,.42) 100%); } }
+.tf-hero h1 { font-size: clamp(44px, 11vw, 82px); }
+.tf-glance { color: var(--ink); }
+.tf-glance li { display: flex; gap: 11px; align-items: flex-start; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; line-height: 1.4; }
+.tf-glance li:first-child { border-top: 0; padding-top: 2px; }
+.tf-glance li svg { flex: none; margin-top: 1px; }
+@media (max-width: 1023px) { .tf-glance-wrap { margin-top: -86px; position: relative; z-index: 3; } .tf-hero { padding-bottom: 104px; } }
+
+/* proof band */
+.tf-proof svg { color: var(--navy); flex: none; }
+
+/* how it works */
+.tf-step-n { font-family: "Big Shoulders Display", Impact, sans-serif; font-weight: 800; font-size: 54px; line-height: .85; color: var(--ember); }
+
+/* team page */
+.tf-teamframe { border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: #fff; box-shadow: 0 30px 60px -40px rgba(14,30,54,.55); }
+.tf-browser { display: flex; align-items: center; gap: 8px; padding: 9px 14px; background: #EEF2F6; border-bottom: 1px solid var(--line); font: 500 12.5px/1 Inter, sans-serif; color: var(--muted); }
+.tf-browser i { width: 9px; height: 9px; border-radius: 99px; background: #C9D3DE; display: inline-block; }
+.tf-browser span.u { flex: 1; min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tf-score { position: relative; background: var(--night); color: #fff; overflow: hidden; }
+.tf-score > svg.rink { position: absolute; right: -60px; top: 50%; transform: translateY(-50%); width: 640px; max-width: none; height: auto; opacity: .22; pointer-events: none; }
+.tf-score > .in { position: relative; }
+.tf-crest { width: 64px; height: 64px; border-radius: 999px; flex: none; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #234B82, #0B1729); border: 3px solid var(--sky); box-shadow: 0 0 0 3px var(--night), 0 0 0 5px var(--gold); font: 800 25px/1 "Big Shoulders Display", Impact, sans-serif; color: #fff; letter-spacing: .04em; }
+.tf-big { font: 800 clamp(56px, 13vw, 92px)/.88 "Big Shoulders Display", Impact, sans-serif; color: var(--gold); font-variant-numeric: tabular-nums; letter-spacing: .01em; }
+.tf-bar { position: relative; height: 14px; border-radius: 999px; background: rgba(255,255,255,.14); }
+.tf-bar .fill, .tf-bar .pend { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; }
+.tf-bar .fill { background: linear-gradient(90deg, #154D8E 0%, #3E7DC0 60%, #7FB3D5 100%); width: 0; transition: width .9s cubic-bezier(.2,.7,.2,1); z-index: 2; }
+.tf-bar .pend { z-index: 1; background: repeating-linear-gradient(-45deg, #FCE9DD 0 6px, #E9895F 6px 12px); width: 0; transition: width .4s ease, left .9s cubic-bezier(.2,.7,.2,1); border-radius: 0 999px 999px 0; }
+.tf-bar .goal { position: absolute; right: 0; top: -7px; bottom: -7px; width: 4px; border-radius: 4px; background: var(--gold); z-index: 3; }
+.tf-schip { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 7px 12px; font: 600 13px/1.2 Inter, sans-serif; background: rgba(255,255,255,.09); color: #fff; border: 1px solid rgba(255,255,255,.2); }
+.tf-schip.turf { background: rgba(35,122,75,.3); border-color: #3FA36C; color: #E3F6EA; }
+.tf-schip.pace { background: rgba(127,179,213,.16); border-color: rgba(127,179,213,.55); color: #DCEBF5; }
+.tf-schip.drop { background: rgba(242,179,61,.13); border-color: rgba(242,179,61,.6); color: #FCE7BC; }
+.tf-who { display: flex; flex-wrap: wrap; gap: 8px; }
+.tf-who label { position: relative; }
+.tf-who input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.tf-who span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 15px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; font: 600 14px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; }
+.tf-who input:checked + span { background: var(--night); border-color: var(--night); color: #fff; }
+.tf-who input:focus-visible + span { outline: 3px solid var(--navy); outline-offset: 2px; }
+.tf-pack { display: flex; flex-direction: column; min-width: 0; }
+.tf-pack .ph { position: relative; aspect-ratio: 4 / 3; background: #E9EEF3; overflow: hidden; border-radius: 17px 17px 0 0; }
+.tf-pack .ph img { width: 100%; height: 100%; object-fit: cover; }
+.tf-pack ul li { position: relative; padding-left: 14px; }
+.tf-pack ul li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 5px; height: 5px; border-radius: 9px; background: var(--sky); }
+.tf-step { display: inline-flex; align-items: center; border: 1.5px solid var(--line); border-radius: 999px; background: #fff; }
+.tf-step button { width: 42px; height: 42px; border: 0; background: none; font: 600 20px/1 Inter, sans-serif; color: var(--ink); cursor: pointer; border-radius: 999px; }
+.tf-step button:hover { background: var(--ice); }
+.tf-step output { min-width: 22px; text-align: center; font: 700 15px/1 Inter, sans-serif; font-variant-numeric: tabular-nums; }
+.tf-rail { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+.tf-rail > * { scroll-snap-align: start; }
+@media (min-width: 640px) { .tf-rail { grid-auto-columns: 44%; } }
+@media (min-width: 1024px) { .tf-rail { grid-auto-columns: 23.5%; } }
+.tf-addon img { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; flex: none; background: #E9EEF3; }
+.tf-pending { animation: tf-pulse 1.6s ease-in-out infinite; }
+@keyframes tf-pulse { 50% { opacity: .55; } }
+
+/* sticky order bar */
+.tf-sbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 75; min-height: 52px; background: var(--night); color: #fff; display: none; align-items: center; gap: 10px; padding: 7px 12px 7px 16px; box-shadow: 0 -12px 30px -16px rgba(0,0,0,.6); }
+body.tf-bar-on .tf-sbar { display: flex; }
+body.tf-bar-on .jwc-cart-fab, body[data-view="team"] .jwc-cart-fab { display: none !important; }
+body.tf-bar-on .jwc-chat-fab { bottom: 72px; }
+@media (min-width: 1024px) { .tf-sbar { left: 50%; right: auto; bottom: 18px; transform: translateX(-50%); width: min(760px, calc(100% - 220px)); border-radius: 999px; padding: 7px 8px 7px 22px; } body.tf-bar-on .jwc-chat-fab { bottom: 20px; } }
+@media (min-width: 1024px) and (max-width: 1180px) { body.tf-bar-on .jwc-chat-fab { bottom: 84px; } } /* the pill would cover the chat button */
+
+/* earnings */
+.tf-calc { background: var(--skyt); border: 2px solid var(--sky); border-radius: 20px; }
+.tf-tabs { display: flex; gap: 4px; background: #fff; border: 1px solid #BFD9EA; border-radius: 999px; padding: 4px; }
+.tf-tabs button { flex: 1; min-height: 42px; border-radius: 999px; border: 0; background: transparent; font: 600 14px/1.15 Inter, sans-serif; color: var(--muted); cursor: pointer; padding: 0 10px; }
+.tf-tabs button[aria-selected="true"] { background: var(--navy); color: #fff; }
+.tf-tabs.kit button { padding: 0 6px; white-space: nowrap; }
+.tf-h, .tf-accent, .tf-lead { text-wrap: balance; }
+.tf-label { display: block; font: 600 13.5px/1.3 Inter, sans-serif; color: var(--ink); margin-bottom: 6px; }
+.tf-input, .tf-select { width: 100%; min-height: 48px; border: 1.5px solid #C3CFDB; border-radius: 12px; padding: 10px 13px; font: 400 16px/1.3 Inter, sans-serif; background: #fff; color: var(--ink); }
+.tf-input:focus, .tf-select:focus { outline: 3px solid var(--sky); outline-offset: 0; border-color: var(--navy); }
+.tf-input.bad { border-color: #B3261E; }
+.tf-money-in { position: relative; } .tf-money-in > span { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); font-weight: 600; } .tf-money-in .tf-input { padding-left: 27px; }
+.tf-rate { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 15px 0; border-top: 1px solid var(--line); }
+.tf-rate b.pct { font: 800 40px/.9 "Big Shoulders Display", Impact, sans-serif; color: var(--ember); flex: none; }
+.tf-ms { display: flex; gap: 9px; align-items: center; font-size: 14.5px; }
+.tf-ms i { width: 24px; height: 24px; border-radius: 99px; flex: none; display: grid; place-items: center; font-style: normal; font-weight: 700; font-size: 13px; background: #DCE3EA; color: #5D6976; }
+.tf-ms.on i { background: var(--turf); color: #fff; }
+.tf-ms:not(.on) { color: #5D6976; }
+
+/* perks, who, faq */
+.tf-perk-n { font: 800 34px/.9 "Big Shoulders Display", Impact, sans-serif; color: var(--navy); }
+.tf-seg svg { color: var(--navy); }
+.tf-faq details { border-top: 1px solid var(--line); }
+.tf-faq details:last-child { border-bottom: 1px solid var(--line); }
+.tf-faq summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 14px; min-height: 58px; padding: 12px 2px; cursor: pointer; font: 600 16.5px/1.35 Inter, sans-serif; color: var(--night); }
+.tf-faq summary::-webkit-details-marker { display: none; }
+.tf-faq summary .pm { flex: none; width: 30px; height: 30px; border-radius: 99px; border: 1.5px solid var(--line); display: grid; place-items: center; color: var(--ember); font-weight: 700; transition: transform .2s; }
+.tf-faq details[open] summary .pm { transform: rotate(45deg); border-color: var(--ember); }
+.tf-faq details p { margin: 0 0 18px; color: #3B4756; line-height: 1.6; max-width: 760px; }
+.tf-dash { border: 2px dashed #B8C6D4; border-radius: 20px; background: #fff; }
+
+/* start form */
+.tf-radio { display: flex; gap: 11px; align-items: flex-start; border: 1.5px solid var(--line); border-radius: 14px; padding: 12px 14px; cursor: pointer; background: #fff; min-height: 48px; }
+.tf-radio:has(input:checked) { border-color: var(--navy); background: var(--skyt); }
+.tf-radio input { margin-top: 3px; accent-color: var(--navy); width: 18px; height: 18px; flex: none; }
+.tf-shimmer { position: relative; overflow: hidden; background: #EEF2F6; border-radius: 10px; }
+.tf-shimmer::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.75), transparent); animation: tf-sh 1.1s infinite; }
+@keyframes tf-sh { to { transform: translateX(100%); } }
+.tf-agent { display: inline-flex; align-items: center; gap: 6px; background: var(--slate); color: #fff; border-radius: 999px; padding: 5px 10px 5px 7px; font: 700 11.5px/1 Inter, sans-serif; letter-spacing: .03em; white-space: nowrap; }
+.tf-agent::before { content: ""; width: 14px; height: 14px; border-radius: 99px; background: radial-gradient(circle, #fff 0 2.5px, transparent 3px), #8C8BC0; }
+.tf-kit { white-space: pre-wrap; background: var(--ice); border: 1px solid var(--line); border-radius: 12px; padding: 14px; font-size: 14.5px; line-height: 1.55; }
+.tf-close { background: var(--night); color: #fff; position: relative; overflow: hidden; }
+
+/* thank-you */
+.tf-thanks { border: 2px solid var(--turf); background: #F1F9F4; border-radius: 18px; }
+#thanks:empty { display: none; }
+
+/* team view */
+.tf-team { background: #EEF2F6; }
+.tf-panel { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; min-width: 0; }
+.tf-panel h2, .tf-panel h3.ph { font: 700 17px/1.3 Inter, sans-serif; color: var(--night); margin: 0; }
+.tf-kpi { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 13px 14px; min-width: 0; }
+.tf-kpi small { display: block; font: 700 10.5px/1.25 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.tf-kpi b { display: block; font: 800 34px/1 "Big Shoulders Display", Impact, sans-serif; color: var(--night); margin-top: 5px; font-variant-numeric: tabular-nums; }
+.tf-kpi span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 3px; line-height: 1.35; }
+.tf-kpi .up { color: var(--turf); font-weight: 600; }
+.tf-samp { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; font: 700 10.5px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; background: #FFF6D6; color: #5B4300; border: 1px solid #F0DE9C; }
+.tf-mini { height: 8px; border-radius: 99px; background: #E3E9EF; overflow: hidden; min-width: 70px; }
+.tf-mini i { display: block; height: 100%; border-radius: 99px; background: var(--navy); }
+.tf-mini i.over { background: var(--turf); } .tf-mini i.behind { background: var(--ember); }
+.tf-t { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.4; }
+.tf-t th { text-align: left; font: 700 10.5px/1.2 Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--night); padding: 8px 10px; white-space: nowrap; }
+.tf-t td { border-bottom: 1px solid var(--line); padding: 10px; vertical-align: top; }
+.tf-t td.num, .tf-t th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tf-t tfoot td { font-weight: 700; border-bottom: 0; border-top: 1.5px solid var(--night); }
+.tf-wrap-th th { white-space: normal; }
+@media (max-width: 639px) {
+  .tf-stack thead { display: none; }
+  .tf-stack, .tf-stack tbody, .tf-stack tfoot, .tf-stack tr, .tf-stack td { display: block; width: 100%; }
+  .tf-stack tr { border: 1px solid var(--line); border-radius: 12px; padding: 6px 12px; margin-bottom: 10px; background: #fff; }
+  .tf-stack td { border: 0; padding: 6px 0; display: flex; justify-content: space-between; gap: 12px; text-align: right; }
+  .tf-stack td.num { text-align: right; white-space: normal; }
+  .tf-stack td::before { content: attr(data-l); font: 700 10.5px/1.5 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: left; flex: none; max-width: 45%; }
+  .tf-stack td.lead { display: block; text-align: left; font-weight: 700; font-size: 14.5px; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 2px; }
+  .tf-stack td.lead::before { display: none; }
+  .tf-stack td.wide { display: block; text-align: left; }
+  .tf-stack td.wide::before { display: block; margin-bottom: 3px; max-width: none; }
+  .tf-stack tfoot tr { background: var(--ice); }
+  .tf-stack tfoot td { border-top: 0; }
+  .tf-stack tfoot td:empty { display: none; }
+}
+.tf-draft { border: 1px solid var(--line); border-radius: 14px; padding: 15px; background: #fff; }
+.tf-draft.done { background: #F1F9F4; border-color: #B9DEC8; }
+.tf-draft.rej { background: #FBF4F1; border-color: #EBCDBF; }
+.tf-draft blockquote { margin: 10px 0 0; padding: 11px 13px; background: var(--ice); border-left: 3px solid var(--slate); border-radius: 0 10px 10px 0; font-size: 14px; line-height: 1.55; color: #26323F; white-space: pre-wrap; }
+.tf-draft textarea { width: 100%; min-height: 120px; margin-top: 10px; border: 1.5px solid #C3CFDB; border-radius: 10px; padding: 10px 12px; font: 400 14px/1.5 Inter, sans-serif; color: var(--ink); }
+.tf-funnel > div { display: flex; align-items: center; gap: 10px; margin: 7px 0; }
+.tf-funnel .bar { height: 30px; border-radius: 8px; background: var(--navy); color: #fff; display: flex; align-items: center; padding: 0 10px; font: 700 13px/1 Inter, sans-serif; white-space: nowrap; min-width: 46px; font-variant-numeric: tabular-nums; }
+.tf-funnel .lab { font-size: 13.5px; color: #33404E; min-width: 0; }
+.tf-pill-st { display: inline-flex; align-items: center; border-radius: 8px; padding: 4px 8px; font: 700 11.5px/1.15 Inter, sans-serif; white-space: normal; }
+.st-open { background: var(--skyt); color: var(--navy); } .st-ok { background: #E2F3E9; color: #1C6A40; } .st-warn { background: #FCEBDD; color: #8A3410; } .st-new { background: #ECEBF6; color: var(--slate); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tf-bar .fill, .tf-bar .pend, .tf-btn, .tf-faq summary .pm { transition: none !important; }
+  .tf-shimmer::after, .tf-pending { animation: none !important; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[100] focus:rounded-[10px] focus:bg-white focus:px-[14px] focus:py-[10px] focus:font-semibold focus:text-tink focus:shadow-lg">Skip to content</a>
+<div data-customer>
+<!-- S0 Season strip -->
+<div class="tf-season">
+  <p class="tf-wrap py-2.5 text-center text-[13.5px] leading-snug font-semibold"><span class="tf-tag tf-tag-concept align-middle mr-1.5">Optional pilot</span>Holiday 2026, a few groups if capacity allows: sign up by Sun Nov 22, drop the week of Dec 7. Every group can join from the fall 2027 season.</p>
+</div>
+
+<!-- S1 Utility bar -->
+<header class="tf-util">
+  <div class="tf-wrap flex items-center justify-between gap-3 py-2.5">
+    <a href="#" class="flex items-center gap-2.5 no-underline min-h-[44px]" aria-label="J&amp;W Team Fuel, back to top">
+      <img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods, est. 1995" width="39" height="36" class="h-9 w-auto">
+      <span class="tf-word">TEAM FUEL</span>
+    </a>
+    <nav aria-label="Team Fuel" class="hidden md:flex items-center gap-1">
+      <a class="tf-nav" href="#how">How it works</a><a class="tf-nav" href="#team">Team page</a><a class="tf-nav" href="#earn">Earnings</a><a class="tf-nav" href="#faq">FAQ</a>
+    </nav>
+    <a href="#start" class="tf-btn tf-btn-outline tf-btn-sm" data-go="start">Start a fundraiser</a>
+  </div>
+  <nav aria-label="Team Fuel sections" class="md:hidden border-t border-tline">
+    <div class="tf-wrap flex justify-between gap-1 text-[13.5px]">
+      <a class="tf-nav px-2" href="#how">How it works</a><a class="tf-nav px-2" href="#team">Team page</a><a class="tf-nav px-2" href="#earn">Earnings</a><a class="tf-nav px-2" href="#faq">FAQ</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- S2 Hero -->
+<section class="tf-hero tf-dark" aria-labelledby="hero-h">
+  <img id="hero-img" alt="J&amp;W premium chicken burgers on a wooden cutting board" width="1600" height="1067" fetchpriority="high">
+  <div class="tf-wrap pt-12 pb-12 lg:pt-20 lg:pb-20">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 text-center lg:text-left">
+        <p class="tf-eyebrow text-tsky">J&amp;W Team Fuel Fundraiser</p>
+        <h1 id="hero-h" class="tf-h mt-3">Raise money with food your families already buy.</h1>
+        <p class="tf-accent text-tsky text-[24px] sm:text-[28px] mt-4">For teams, schools and clubs across the GTA.</p>
+        <p class="mt-4 text-[16.5px] leading-relaxed text-white/90 max-w-[600px] mx-auto lg:mx-0">Ontario chicken, butcher-cut beef and Meal Butler cooked meals from our family plant in Scarborough. Your group's share shows under every price. Nothing to pre-buy, no cash to collect, and one drop at your arena, field or hall.</p>
+        <div class="mt-7 flex flex-wrap gap-3 justify-center lg:justify-start">
+          <a href="#start" class="tf-btn tf-btn-ember" data-go="start">Start a fundraiser</a>
+          <a href="#team" class="tf-btn tf-btn-ghost" data-go="team">See a team page</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 hidden lg:block" id="glance-desk"></div>
+    </div>
+  </div>
+</section>
+<div class="tf-wrap tf-glance-wrap lg:hidden" id="glance-mob"></div>
+
+<!-- S3 Proof band -->
+<section aria-label="Why groups trust J&amp;W" class="tf-proof">
+  <div class="tf-wrap py-8 lg:py-10">
+    <ul class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-5">
+      <li class="flex items-center gap-3"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 15 17 6l12 9v13H5z"/><path d="M13 28v-8h8v8"/></svg><span class="text-[14.5px] font-semibold leading-snug">Family butcher since 1995</span></li>
+      <li class="flex items-center gap-3"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 4 6 8v8c0 7 5 12 11 14 6-2 11-7 11-14V8z"/><path d="m12 17 4 4 7-8"/></svg><span class="text-[14.5px] font-semibold leading-snug">Ontario-inspected plant since 2008</span></li>
+      <li class="flex items-center gap-3"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m17 5 3.6 7.4 8.1 1.2-5.9 5.7 1.4 8.1L17 23.6l-7.2 3.8 1.4-8.1-5.9-5.7 8.1-1.2z"/></svg><span class="text-[14.5px] font-semibold leading-snug">4.8 stars from 611 Google reviews</span></li>
+      <li class="flex items-center gap-3"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="10" width="17" height="13" rx="2"/><path d="M20 14h6l4 5v4h-10"/><circle cx="9" cy="25" r="2.6"/><circle cx="25" cy="25" r="2.6"/></svg><span class="text-[14.5px] font-semibold leading-snug">Weekly routes from Port Perry to Hamilton</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- S4 How it works -->
+<section id="how" class="bg-white border-y border-tline" aria-labelledby="how-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="how-h" class="tf-h">How it works</h2><span class="tf-accent">Four steps, about three weeks.</span><span class="tf-rule" aria-hidden="true"></span></div>
+    <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
+      <li class="tf-card p-5"><span class="tf-step-n" aria-hidden="true">1</span><h3 class="font-bold text-[17.5px] mt-3 text-tnight">Tell us about your group.</h3><p class="mt-2 text-tmuted text-[15px] leading-relaxed">Name, goal, dates and where you practise. Your team page is ready within one business day.</p></li>
+      <li class="tf-card p-5"><span class="tf-step-n" aria-hidden="true">2</span><h3 class="font-bold text-[17.5px] mt-3 text-tnight">Share your link.</h3><p class="mt-2 text-tmuted text-[15px] leading-relaxed">Every player or family gets their own link, so you can see who sold what. Post it in your team app, text it, or print the QR flyer.</p></li>
+      <li class="tf-card p-5"><span class="tf-step-n" aria-hidden="true">3</span><h3 class="font-bold text-[17.5px] mt-3 text-tnight">Families order online.</h3><p class="mt-2 text-tmuted text-[15px] leading-relaxed">Supporters pay J&amp;W directly. You never handle cash or product. Your group's share shows under every price.</p></li>
+      <li class="tf-card p-5"><span class="tf-step-n" aria-hidden="true">4</span><h3 class="font-bold text-[17.5px] mt-3 text-tnight">One drop, then you get paid.</h3><p class="mt-2 text-tmuted text-[15px] leading-relaxed">We bring every order, bagged and labelled by name, to your arena or hall on our route day. Your group's money arrives by e-transfer or cheque within 10 business days.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- S5 Team page demo -->
+<section id="team" aria-labelledby="team-h2">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="team-h2" class="tf-h">This is your team page</h2><span class="tf-rule" aria-hidden="true"></span>
+      <p class="tf-lead">Here's what a family sees when they tap your link. Try it: add a pack and watch the bar move.</p>
+      <p class="mt-3"><span class="tf-tag tf-tag-grey">Sample team. Names are fictional.</span></p>
+    </div>
+
+    <div class="tf-teamframe mt-8">
+      <div class="tf-browser" aria-hidden="true"><i></i><i></i><i></i><span class="u">jwfoods.com/team/scarborough-snowhawks-u11 (demo)</span></div>
+      <!-- scoreboard -->
+      <div class="tf-score tf-dark">
+        <svg class="rink" viewBox="0 0 600 260" fill="none" stroke="#7FB3D5" stroke-width="2.4" aria-hidden="true"><rect x="6" y="6" width="588" height="248" rx="110"/><path d="M300 6v248M200 6v248M400 6v248"/><circle cx="300" cy="130" r="40"/><circle cx="300" cy="130" r="3" fill="#7FB3D5"/><circle cx="110" cy="70" r="30"/><circle cx="110" cy="190" r="30"/><circle cx="490" cy="70" r="30"/><circle cx="490" cy="190" r="30"/><path d="M50 6v248M550 6v248"/><path d="M50 112a18 18 0 0 1 0 36M550 112a18 18 0 0 0 0 36"/></svg>
+        <div class="in px-4 py-6 sm:px-7 sm:py-8">
+          <div class="flex items-center gap-4">
+            <span class="tf-crest" aria-hidden="true">SH</span>
+            <div class="min-w-0">
+              <p class="tf-h text-[25px] sm:text-[32px] leading-none">Scarborough Snowhawks U11 AA</p>
+              <p class="text-white/85 text-[15px] mt-1.5">Raising $750 for tournament fees and ice time.</p>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-wrap items-end gap-x-4 gap-y-1">
+            <p class="tf-big" id="sb-raised" aria-live="polite">$456.12</p>
+            <p class="text-[17px] text-white/85 pb-1.5">raised of <b class="text-white">$750</b> <span class="text-tgold font-semibold" id="sb-pct">(61%)</span></p>
+          </div>
+          <div class="mt-4">
+            <div class="flex justify-end text-[11px] font-bold tracking-[.14em] uppercase text-tgold mb-2">Goal $750</div>
+            <div class="tf-bar" role="progressbar" aria-label="Raised toward the $750 goal" aria-valuemin="0" aria-valuemax="750" aria-valuenow="456" id="sb-bar"><span class="fill" id="sb-fill"></span><span class="pend" id="sb-pend"></span><span class="goal" aria-hidden="true"></span></div>
+            <p class="mt-2 text-[13px] text-tsky min-h-[20px]" id="sb-pendtxt" aria-live="polite"></p>
+          </div>
+          <p class="mt-3 text-[15px] font-semibold tnum"><span id="sb-orders">22</span> orders · 6 days left · Orders close Sun Dec 6</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="tf-schip drop"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 15s5-4.6 5-8.5A5 5 0 0 0 3 6.5C3 10.4 8 15 8 15z"/><circle cx="8" cy="6.5" r="1.8"/></svg>Team drop: Wed Dec 9, 5:00–6:30 pm · team arena, east lot</span>
+            <span class="tf-schip turf">✓ Coach talk unlocked</span>
+            <span class="tf-schip turf">✓ Raffle box unlocked</span>
+            <span class="tf-schip pace" id="sb-pace">On pace for about $705</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-7">
+        <div id="thanks" class="mb-8" aria-live="polite"></div>
+        <fieldset>
+          <legend class="font-bold text-[17px] text-tnight">Who are you ordering for?</legend>
+          <p class="text-[13.5px] text-tmuted mt-1">Pick a player so they get the shout-out. Every order counts for the team either way.</p>
+          <div class="tf-who mt-3" id="who"></div>
+        </fieldset>
+
+        <h3 class="tf-h text-[30px] text-tnight mt-9">Fundraiser packs</h3>
+        <p class="text-[14px] text-tmuted mt-1">Same prices as our store. The orange line is what J&amp;W sends the Snowhawks from our side.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5" id="packs"></div>
+
+        <div class="flex items-end justify-between gap-3 mt-10">
+          <div><h3 class="tf-h text-[28px] text-tnight">Add to any order</h3><p class="text-[14px] text-tmuted mt-1">Real J&amp;W favourites. Swipe for more.</p></div>
+          <div class="hidden sm:flex gap-2"><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-rail="-1" aria-label="Scroll add-ons left">←</button><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-rail="1" aria-label="Scroll add-ons right">→</button></div>
+        </div>
+        <div class="tf-rail mt-4" id="addons" role="list" aria-label="Add-ons"></div>
+
+        <div class="grid lg:grid-cols-2 gap-5 mt-8">
+          <div class="rounded-2xl border border-tline p-5">
+            <h3 class="font-bold text-[16.5px] text-tnight">Team shout-outs</h3>
+            <ol class="mt-3 space-y-2" id="shout"></ol>
+            <p class="text-[13px] text-tmuted mt-3">Families can hide their name.</p>
+          </div>
+          <div class="rounded-2xl border border-tline p-5">
+            <h3 class="font-bold text-[16.5px] text-tnight">Share this page</h3>
+            <p class="text-[14px] text-tmuted mt-1">One more family is often all it takes to reach the next milestone.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-share="link">Copy link</button>
+              <button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-share="text">Text</button>
+              <button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-share="app">Team app</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S6 What your group earns + goal calculator -->
+<section id="earn" class="bg-white border-y border-tline" aria-labelledby="earn-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="earn-h" class="tf-h">What your group earns</h2><span class="tf-accent">Same prices as our store.</span><span class="tf-rule" aria-hidden="true"></span>
+      <p class="tf-lead">Families pay our regular prices. J&amp;W pays your group a share of every order from our side, and we show the exact amount under each price.</p>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 mt-10 items-start">
+      <div class="lg:col-span-6 min-w-0">
+        <div class="tf-card p-5 sm:p-6">
+          <div class="flex items-center justify-between gap-3"><h3 class="font-bold text-[17px] text-tnight">Your group's share</h3><span class="tf-tag tf-tag-concept">Concept</span></div>
+          <div class="mt-3">
+            <div class="tf-rate"><span class="text-[15.5px] leading-snug">Meal Butler cooked and portioned packs</span><b class="pct">20%</b></div>
+            <div class="tf-rate"><span class="text-[15.5px] leading-snug">Butcher boxes, freezer packs and cases</span><b class="pct">12%</b></div>
+            <div class="tf-rate"><span class="text-[15.5px] leading-snug">Orders through your team link for 6 months after the drop</span><b class="pct">5%</b></div>
+          </div>
+          <p class="mt-3"><span class="tf-share" style="white-space:normal">Typical order $135 → about $21 for your group (est.)</span></p>
+          <p class="text-[13px] text-tmuted mt-3">Rates are a Concept for the 2026–27 pilot.</p>
+        </div>
+      </div>
+      <div class="lg:col-span-6 min-w-0">
+        <div class="tf-calc p-5 sm:p-6">
+          <h3 class="tf-h text-[30px] text-tnight">Goal calculator</h3>
+          <div class="tf-tabs mt-4" role="tablist" aria-label="Calculator mode">
+            <button type="button" role="tab" id="ct-goal" aria-controls="cp-goal" aria-selected="true">I have a goal</button>
+            <button type="button" role="tab" id="ct-orders" aria-controls="cp-orders" aria-selected="false" tabindex="-1">I know our orders</button>
+          </div>
+          <div id="cp-goal" role="tabpanel" aria-labelledby="ct-goal" class="mt-5">
+            <div class="grid grid-cols-2 gap-3">
+              <div><label class="tf-label" for="c-goal">Goal ($)</label><div class="tf-money-in"><span aria-hidden="true">$</span><input class="tf-input tnum" id="c-goal" type="number" inputmode="numeric" min="100" max="50000" step="50" value="1000"></div></div>
+              <div><label class="tf-label" for="c-fam">Families</label><input class="tf-input tnum" id="c-fam" type="number" inputmode="numeric" min="1" max="400" step="1" value="16"></div>
+            </div>
+            <p class="mt-5 text-[19px] leading-snug font-semibold text-tnight" id="c-goal-out" aria-live="polite"></p>
+          </div>
+          <div id="cp-orders" role="tabpanel" aria-labelledby="ct-orders" class="mt-5" hidden>
+            <div class="max-w-[240px]"><label class="tf-label" for="c-ord">Orders</label><input class="tf-input tnum" id="c-ord" type="number" inputmode="numeric" min="1" max="2000" step="1" value="40"></div>
+            <p class="mt-5 text-[19px] leading-snug font-semibold text-tnight" id="c-ord-out" aria-live="polite"></p>
+            <div class="mt-4 space-y-2.5" id="c-ms"></div>
+          </div>
+          <button type="button" class="tf-btn tf-btn-ember mt-6 w-full sm:w-auto" id="c-start">Start with this goal</button>
+          <p class="text-[12.5px] text-tmuted mt-4 leading-snug">Based on a $135 average order and a 15.6% average share. Estimates, not a promise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 Perks -->
+<section aria-labelledby="perks-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="perks-h" class="tf-h">A little extra for your team</h2><span class="tf-rule" aria-hidden="true"></span></div>
+    <div class="grid md:grid-cols-3 gap-5 mt-10">
+      <article class="tf-card p-6 flex flex-col">
+        <div class="flex items-center justify-between gap-2"><span class="tf-perk-n">$1,500</span><span class="tf-tag tf-tag-concept">Concept</span></div>
+        <h3 class="font-bold text-[18px] text-tnight mt-3">Fuel for Game Day</h3>
+        <p class="mt-2 text-[15px] text-tmuted leading-relaxed flex-1">Pass $1,500 in sales and a J&amp;W butcher brings a free 30-minute talk and a tasting tray to one practice. Early-ice breakfasts, tournament coolers, reheating at the hotel. General food tips, not medical advice.</p>
+        <button type="button" class="tf-btn tf-btn-navy mt-5" id="book-talk">Book your talk</button>
+      </article>
+      <article class="tf-card p-6 flex flex-col">
+        <div class="flex items-center justify-between gap-2"><span class="tf-perk-n">$3,000</span><span class="tf-tag tf-tag-concept">Concept</span></div>
+        <h3 class="font-bold text-[18px] text-tnight mt-3">Raffle box</h3>
+        <p class="mt-2 text-[15px] text-tmuted leading-relaxed flex-1">Pass $3,000 in sales and we add a Long Weekend Box ($199) for your team raffle or year-end barbecue.</p>
+        <div class="mt-5 flex items-center gap-3 rounded-xl bg-tice p-2.5"><img id="perk-box-img" alt="J&amp;W Long Weekend Box" width="56" height="56" class="w-14 h-14 rounded-lg object-cover"><span class="text-[13.5px] font-semibold">Long Weekend Box · $199 value</span></div>
+      </article>
+      <article class="tf-card p-6 flex flex-col">
+        <div class="flex items-center justify-between gap-2"><span class="tf-perk-n">5%</span><span class="tf-tag tf-tag-concept">Concept</span></div>
+        <h3 class="font-bold text-[18px] text-tnight mt-3">Keep fuelling the team</h3>
+        <p class="mt-2 text-[15px] text-tmuted leading-relaxed flex-1">For six months after your drop, every order through your team link still sends 5% to your group.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S8 Who it's for -->
+<section class="bg-white border-y border-tline" aria-labelledby="who-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="who-h" class="tf-h">Who it's for</h2><span class="tf-accent">Pick the season that suits your group.</span><span class="tf-rule" aria-hidden="true"></span></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10" id="segs"></div>
+  </div>
+</section>
+
+<!-- S9 FAQ -->
+<section id="faq" aria-labelledby="faq-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="faq-h" class="tf-h">Questions organizers ask</h2><span class="tf-accent">The ones a principal or club board asks first.</span><span class="tf-rule" aria-hidden="true"></span></div>
+    <div class="tf-faq max-w-[860px] mx-auto mt-10">
+      <details><summary>Do we have to pre-buy anything?<span class="pm" aria-hidden="true">+</span></summary><p>No. Families pay J&amp;W online when they order. You never hold cash or product.</p></details>
+      <details><summary>When do we get paid?<span class="pm" aria-hidden="true">+</span></summary><p>Within 10 business days of your drop, by e-transfer or cheque, with a statement of every order.</p></details>
+      <details><summary>Is this a donation? Do buyers get tax receipts?<span class="pm" aria-hidden="true">+</span></summary><p>No. Your group's share is a fundraising payment from J&amp;W, not a charitable donation, so we don't issue tax receipts.</p></details>
+      <details><summary>Can you deliver to our school?<span class="pm" aria-hidden="true">+</span></summary><p>School boards have their own fundraising and food rules. We send your principal a one-page school pack. Until your board says yes to a school drop, families can pick up free at Brimley Rd or choose home delivery.</p></details>
+      <details><summary>What if a family misses the drop?<span class="pm" aria-hidden="true">+</span></summary><p>We take their order back to Brimley Rd frozen and hold it 3 days for free pickup (Mon–Fri 9–6, Sat 10–4).</p></details>
+      <details><summary>Allergies, pork and halal?<span class="pm" aria-hidden="true">+</span></summary><p>Every pack comes with an ingredient and allergen sheet before your campaign starts, and our coordinator confirms anything specific. The Freezer Pack, Game-Week Pack and Kids Combo list no pork. The Long Weekend Box includes sausages and ribs. We don't label packs halal or kosher.</p></details>
+      <details><summary>Can relatives outside Ontario help?<span class="pm" aria-hidden="true">+</span></summary><p>Yes, if the food stays here. We deliver only in Ontario because our plant is provincially inspected. A grandparent in BC can buy a pack for a team family to pick up at the drop.</p></details>
+      <details><summary>How long should a campaign run?<span class="pm" aria-hidden="true">+</span></summary><p>Two weeks works well: open on a Monday, close on a Sunday, drop the next week on our route day.</p></details>
+      <details><summary>Where do you do team drops?<span class="pm" aria-hidden="true">+</span></summary><p>On our weekly routes: Tuesday in Durham (Pickering to Port Perry), Wednesday in Toronto, Scarborough, North York, Etobicoke and Mississauga, Thursday from Oakville to Hamilton, Friday in York and Peel. Farther away, families choose home delivery on our long routes.</p></details>
+    </div>
+    <p class="text-center mt-8"><button type="button" class="tf-btn tf-btn-line" id="faq-chat">Ask the Team Fuel Desk</button></p>
+  </div>
+</section>
+
+<!-- S10 Looking ahead: Team Fuel Jerky (an idea for 2027, not in development) -->
+<section aria-labelledby="jerky-h">
+  <div class="tf-wrap pb-14 lg:pb-20">
+    <div class="tf-dash p-6 sm:p-8 max-w-[860px] mx-auto">
+      <div class="grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-7">
+          <p class="tf-eyebrow text-tmuted">Looking ahead</p>
+          <p class="mt-2"><span class="tf-tag tf-tag-concept">Concept · idea for 2027</span></p>
+          <h3 id="jerky-h" class="tf-h text-[34px] text-tnight mt-3">Team Fuel Jerky</h3>
+          <p class="mt-3 text-[15.5px] text-tmuted leading-relaxed">An idea for 2027: a J&amp;W-made jerky that players could sell by hand. It would need a tested recipe, shelf-life testing and approval under J&amp;W's provincial licence.</p>
+        </div>
+        <form class="md:col-span-5" id="jerky-form" novalidate>
+          <label class="tf-label" for="jerky-email">Email</label>
+          <input class="tf-input" id="jerky-email" type="email" autocomplete="email" placeholder="you@example.com">
+          <p class="text-[13px] text-[#B3261E] mt-1 min-h-[18px]" id="jerky-err" aria-live="polite"></p>
+          <button class="tf-btn tf-btn-night tf-btn-block mt-1">Tell me if it goes ahead</button>
+          <p class="text-[12.5px] text-tmuted mt-2">Demo: nothing is sent.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S11 Start a fundraiser -->
+<section id="start" class="bg-white border-y border-tline" aria-labelledby="start-h">
+  <div class="tf-wrap py-14 lg:py-20">
+    <div class="tf-title"><h2 id="start-h" class="tf-h">Start a fundraiser</h2><span class="tf-rule" aria-hidden="true"></span>
+      <p class="tf-lead">About two minutes. Our coordinator checks every page before it goes live.</p>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-8 mt-10 items-start">
+      <form id="start-form" class="lg:col-span-6 tf-card p-5 sm:p-6" novalidate>
+        <div class="flex items-center justify-between gap-3">
+          <h3 class="font-bold text-[17px] text-tnight">About your group</h3>
+          <button type="button" class="tf-link text-[14px]" id="use-sample">Use sample</button>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mt-4">
+          <div class="sm:col-span-2"><label class="tf-label" for="f-name">Group name</label><input class="tf-input" id="f-name" autocomplete="organization" placeholder="e.g. Agincourt Lions U13"></div>
+          <div><label class="tf-label" for="f-type">Type</label><select class="tf-select" id="f-type"></select></div>
+          <div><label class="tf-label" for="f-city">City</label><select class="tf-select" id="f-city"></select></div>
+        </div>
+        <fieldset class="mt-5">
+          <legend class="tf-label">Campaign window</legend>
+          <p class="text-[12.5px] text-tmuted -mt-0.5 mb-2 leading-snug">2026–27 dates are pilot windows, offered only if capacity allows. Team Fuel opens to every group for the fall 2027 season.</p>
+          <div class="grid gap-2" id="f-win"></div>
+        </fieldset>
+        <div class="grid grid-cols-2 gap-4 mt-5">
+          <div><label class="tf-label" for="f-goal">Goal ($)</label><div class="tf-money-in"><span aria-hidden="true">$</span><input class="tf-input tnum" id="f-goal" type="number" inputmode="numeric" min="100" step="50" placeholder="1000"></div></div>
+          <div><label class="tf-label" for="f-fam">Number of families</label><input class="tf-input tnum" id="f-fam" type="number" inputmode="numeric" min="1" step="1" placeholder="16"></div>
+          <div class="col-span-2"><label class="tf-label" for="f-spot">Drop spot</label><input class="tf-input" id="f-spot" placeholder="Arena, field, hall or studio"></div>
+          <div><label class="tf-label" for="f-you">Your name</label><input class="tf-input" id="f-you" autocomplete="name"></div>
+          <div><label class="tf-label" for="f-email">Email</label><input class="tf-input" id="f-email" type="email" autocomplete="email"></div>
+        </div>
+        <p class="text-[13.5px] text-[#B3261E] mt-3 min-h-[20px]" id="f-err" aria-live="polite"></p>
+        <button class="tf-btn tf-btn-ember tf-btn-block mt-1" id="f-build">Build my team page</button>
+        <p class="text-[12.5px] text-tmuted mt-3 text-center">Demo: nothing is sent.</p>
+      </form>
+      <div class="lg:col-span-6" id="draft" aria-live="polite">
+        <div class="rounded-[18px] border-2 border-dashed border-tline p-6 sm:p-8 text-center bg-tice">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#7FB3D5" stroke-width="2" class="mx-auto" aria-hidden="true"><rect x="8" y="10" width="40" height="36" rx="5"/><path d="M8 19h40M15 27h18M15 33h26M15 39h12"/></svg>
+          <p class="font-semibold text-tnight mt-3">Your draft team page appears here</p>
+          <p class="text-[14px] text-tmuted mt-1.5 max-w-[360px] mx-auto">Fill in the form or tap "Use sample". An AI agent drafts the page, the drop plan and a share kit in a few seconds. A person at J&amp;W checks it before it goes live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S12 Closing band -->
+<section class="tf-close tf-dark" aria-labelledby="close-h">
+  <svg class="absolute -left-24 -bottom-24 w-[520px] opacity-[.14] pointer-events-none" viewBox="0 0 600 260" fill="none" stroke="#7FB3D5" stroke-width="2.4" aria-hidden="true"><rect x="6" y="6" width="588" height="248" rx="110"/><path d="M300 6v248"/><circle cx="300" cy="130" r="40"/><circle cx="110" cy="70" r="30"/><circle cx="110" cy="190" r="30"/></svg>
+  <div class="tf-wrap py-16 lg:py-20 text-center relative">
+    <h2 id="close-h" class="tf-h text-[40px] sm:text-[56px]">Ready when your team is.</h2>
+    <span class="tf-rule" aria-hidden="true"></span>
+    <p class="mt-5 text-[17px] text-white/85 max-w-[560px] mx-auto leading-relaxed">Tell us your goal and your dates. We'll have your team page ready within one business day.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center">
+      <a href="#start" class="tf-btn tf-btn-ember" data-go="start">Start a fundraiser</a>
+      <a href="tel:+14162981350" class="tf-btn tf-btn-ghost">Call (416) 298-1350</a>
+    </div>
+    <p class="mt-8 text-[13px] text-white/70">J&amp;W Foods · 2201 Brimley Rd, Scarborough · Store hours Mon–Fri 9–6, Sat 10–4</p>
+  </div>
+</section>
+</main>
+
+<!-- Sticky order bar (team page) -->
+<div class="tf-sbar" id="sbar" role="region" aria-label="Your fundraiser order">
+  <p class="flex-1 min-w-0 text-[14px] leading-tight tnum"><b id="sbar-main">0 items</b><br><span class="text-tgold font-semibold" id="sbar-share"></span></p>
+  <button type="button" class="tf-btn tf-btn-ember tf-btn-sm" id="sbar-go">Review order</button>
+</div>
+</div><!-- /data-customer -->
+
+<!-- ======================= JW TEAM VIEW ======================= -->
+<section data-team class="tf-team" aria-labelledby="t-h">
+  <div class="tf-wrap py-8 lg:py-10">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="min-w-0">
+        <p class="tf-eyebrow text-tslate">J&amp;W Team Fuel · fundraising desk</p>
+        <h1 id="t-h" class="tf-h text-[38px] sm:text-[48px] text-tnight mt-1">Team Fuel Desk</h1>
+        <p class="mt-2 text-[15px] text-tmuted">Mon Nov 30, 2026 · optional pilot week (sample data, fictional groups). The plan starts Team Fuel with the fall 2027 season; this pilot runs only if the plant has room in December.</p>
+        <p class="mt-3 flex flex-wrap gap-2"><span class="tf-samp">Sample operating numbers</span><span class="tf-chip bg-white border border-tline text-tink">Optional Holiday 2026 pilot · 4 groups</span></p>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button type="button" class="tf-btn tf-btn-line tf-btn-sm" id="t-money">Why this makes money</button>
+        <button type="button" class="tf-btn tf-btn-night tf-btn-sm" id="t-tocust">See the customer page</button>
+      </div>
+    </div>
+    <div id="t-kpis" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-6"></div>
+
+    <div class="tf-panel mt-5" id="t-camps"></div>
+
+    <div class="grid lg:grid-cols-12 gap-5 mt-5 items-start">
+      <div class="lg:col-span-8 tf-panel" id="t-drafts"></div>
+      <div class="lg:col-span-4 space-y-5 min-w-0"><div class="tf-panel" id="t-live"></div><div class="tf-panel" id="t-approved"></div><div class="tf-panel" id="t-agents"></div></div>
+    </div>
+
+    <div class="tf-panel mt-5" id="t-prod"></div>
+
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-7 tf-panel" id="t-pay"></div>
+      <div class="lg:col-span-5 tf-panel" id="t-funnel"></div>
+    </div>
+
+    <div class="tf-panel mt-5" id="t-pipe"></div>
+  </div>
+</section>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+/* ---------- AI agents: rename them here only (final roster, research/ai-agents-roster.md, Play 7) ---------- */
+const AGENTS = {
+  concierge: 'Butler Concierge',   /* the Team Fuel Desk chat */
+  desk: 'Business Desk',           /* team page builder, campaign coach, payout statements */
+  planner: 'Production Planner',   /* drop sheets, cook plan, raw order */
+  lifecycle: 'Lifecycle Marketing',/* welcome flow for opted-in buyers */
+  scout: 'Account Scout'           /* next-season group prospecting */
+};
+(function () {
+'use strict';
+const AGENT_IDS = { concierge: 'butler-concierge', desk: 'business-desk', planner: 'production-planner', lifecycle: 'lifecycle-marketing', scout: 'account-scout' };
+
+/* ---------- helpers ---------- */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
+const esc = JWC.esc;
+const r2 = v => Math.round(v * 100) / 100;
+const m2 = v => JWC.money(v, 2);
+const m0 = v => JWC.money(v, 0);
+const RM = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+const store = { get: (k, d) => JWC.store.get('p7-' + k, d), set: (k, v) => JWC.store.set('p7-' + k, v) };
+function go(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); }
+function niceDate(d) { try { return new Date(d + 'T12:00:00').toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric' }); } catch (e) { return d; } }
+function fmtTime(iso) { try { return new Date(iso).toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } }
+const CHECK = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style="flex:none"><circle cx="10" cy="10" r="10" fill="#FCE9DD"/><path d="m6 10.3 2.6 2.6L14.2 7" stroke="#C2481A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const HEART = '<svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 14.2 6.9 13C3 9.6.8 7.6.8 5A3.7 3.7 0 0 1 4.6 1.3c1.3 0 2.5.6 3.4 1.6a4.5 4.5 0 0 1 3.4-1.6A3.7 3.7 0 0 1 15.2 5c0 2.6-2.2 4.6-6.1 8z"/></svg>';
+
+/* ---------- the sample team (fictional) ---------- */
+const TEAM = { name: 'Snowhawks', full: 'Scarborough Snowhawks U11 AA', goal: 750, base: { raised: 456.12, orders: 22, sales: 3171.77, pace: 705 },
+  drop: 'Wed Dec 9, 5:00–6:30 pm · team arena, east lot', dropShort: 'Team drop, Wed Dec 9' };
+const PLAYERS = [
+  { k: 'maya', n: 'Maya R. #14', base: 3 }, { k: 'ethan', n: 'Ethan K. #7', base: 4 }, { k: 'arjun', n: 'Arjun P. #22', base: 3 },
+  { k: 'leo', n: 'Leo M. #3', base: 2 }, { k: 'sofia', n: 'Sofia D. #11', base: 2 }, { k: 'noah', n: 'Noah T. #9', base: 1 },
+  { k: 'team', n: 'Just the team', base: 0 }
+];
+const playerName = k => (PLAYERS.filter(p => p.k === k)[0] || PLAYERS[6]).n;
+
+/* ---------- products: real J&W items (catalog.js) + two real items from jw-catalog.json defined here ---------- */
+const P = id => JWC.product(id);
+const LOCAL = {
+  burgers: { id: 'chicken-burgers-1', name: 'Premium Chicken Burgers, 25 Pack (6 oz each)', price: 35.5, img: 'https://cdn.shopify.com/s/files/1/1156/0176/files/chicken-burger-on-cutting-board.png?v=1782841639&width=600' },
+  beef: { id: 'ground-beef-10lb-bulk-mix-special', name: 'Ground Beef Bulk Mix, 5 lb', price: 40, img: 'https://cdn.shopify.com/s/files/1/1156/0176/products/GROUNDPORK.jpg?v=1613490076&width=600' }
+};
+const RATE = { mb: 0.20, butcher: 0.12, link: 0.05 };
+const share = (price, rate) => r2(price * rate);
+const GW = [
+  ['pre-set-meal-teriyaki-chicken-breast-green-beans-basmati-white', 3],
+  ['chicken-broccoli-sweet-potato-fries', 3],
+  ['jerk-chicken-broccoli-sweet-potato-chunks', 2],
+  ['turkey-spinach-white-rice', 2],
+  ['copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 2]
+];
+const PACKS = [
+  { id: 'p7-freezer-pack', name: 'Team Freezer Pack', price: 167.50, rate: RATE.butcher, concept: true, tags: [['Concept bundle', 'concept']],
+    img: () => JWC.img(LOCAL.burgers, 700), alt: 'J&W premium chicken burgers on a cutting board',
+    pitch: 'About 23 lb of Ontario chicken and ground beef for the freezer.',
+    contents: ['Premium Chicken Burgers, 25 × 6 oz ($35.50)', 'Case of Portioned Chicken Breast, 4 kg, 6 oz pieces, about 23 ($92)', 'Ground Beef Bulk Mix, 5 lb ($40)'] },
+  { id: 'p7-gameweek-pack', name: 'Game-Week Meal Pack', price: 122.40, rate: RATE.mb, concept: true, tags: [['Meal Butler', 'mb'], ['Concept bundle', 'concept']],
+    img: () => JWC.img(P(GW[0][0]), 700), alt: 'J&W Meal Butler teriyaki chicken, green beans and rice',
+    pitch: '10 cooked meals and 2 egg-bite breakfasts for a week of practices and games. About 37 g protein per meal (est.). Each bag shows its own heating steps.',
+    contents: ['3 Teriyaki Chicken, Green Beans & Rice', '3 Tenders, Broccoli & Sweet Potato', '2 Jerk Chicken, Green Beans & Sweet Potato', '2 Turkey, Spinach & Rice (all 4 oz)', '2 Egg White Bites, Spinach & Feta'], macros: true },
+  { id: 'kids-favourite-combo-special', name: 'Kids Favourite Combo', price: 95, rate: RATE.butcher, tags: [['J&W box', 'box']],
+    img: () => JWC.img(P('kids-favourite-combo-special'), 700), alt: 'J&W Kids Favourite Combo box',
+    pitch: 'Weeknight dinners kids ask for.',
+    contents: ['4 chicken breasts, 6–8 oz', '2 packs beef hot dogs', '2 × 1 lb ground beef', '1 lb cooked beef meatballs', '1 lb AAA beef stew', '2 kg breaded chicken fingers'] },
+  { id: 'summer-bbq-box-special', name: 'Long Weekend Box', price: 199, rate: RATE.butcher, tags: [['J&W box', 'box'], ['Includes pork', 'pork']],
+    img: () => JWC.img(P('summer-bbq-box-special'), 700), alt: 'J&W Long Weekend Box of steaks, ribs, sausages and burgers',
+    pitch: 'Steaks, ribs, sausages, burgers and sliders for a team barbecue.', contents: [], note: 'Includes pork' }
+];
+PACKS.forEach(p => { p.share = share(p.price, p.rate); p.variant = 'Snowhawks fundraiser'; });
+const ADDONS = [
+  ['beef-chilli', 0, 'Beef Chili, 10 oz', RATE.mb],
+  ['soup-chicken-lemon-soup', 0, 'Lemon Chicken Rice Soup', RATE.mb],
+  ['copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 0, 'Egg White Bites, Spinach & Feta', RATE.mb],
+  ['spinach-feta-egg-wrap', 0, 'Breakfast Wrap, Egg, Spinach & Feta', RATE.mb],
+  ['beef-souvlaki-wrap', 0, 'Chicken Souvlaki Wrap', RATE.mb],
+  ['chicken-breast-marinated-korean-4kg', 2, 'Marinated Chicken Breast Case, 4 kg · Korean BBQ', RATE.butcher],
+  ['new-york-striploin', 3, 'AAA New York Striploin, case of 8 × 8–9 oz', RATE.butcher],
+  ['chicken-souvlaki-no-salt', 0, 'No-Salt Chicken Souvlaki Case, 5 kg', RATE.butcher]
+].map(a => { const p = P(a[0]); if (!p) return null; const v = p.variants[a[1]] || p.variants[0]; return { id: p.id, prod: p, name: a[2], variant: v.label, price: v.price, rate: a[3], share: share(v.price, a[3]), mb: a[3] === RATE.mb }; }).filter(Boolean);
+/* share per unit, by cart line id */
+const SHARE = {}; PACKS.forEach(p => { SHARE[p.id] = p.share; }); ADDONS.forEach(a => { SHARE[a.id] = a.share; });
+const itemsShare = items => r2((items || []).reduce((a, i) => a + (SHARE[i.id] || share(i.price, RATE.butcher)) * i.qty, 0));
+
+/* ---------- organizer data ---------- */
+const TYPES = ['Hockey and ringette', 'Soccer and baseball', 'Schools and parent councils', 'Cadets, scouts and guides', 'Dance, gymnastics and martial arts', 'Faith and community groups', 'Other'];
+const SEGS = [
+  { t: TYPES[0], best: 'Best Oct–Feb', why: 'Tournament fees, ice time, team jackets.', win: 'holiday', icon: '<rect x="4" y="12" width="40" height="24" rx="12"/><path d="M24 12v24"/><circle cx="24" cy="24" r="5"/><path d="M10 18v12M38 18v12"/>' },
+  { t: TYPES[1], best: 'Best Mar–Jun', why: 'Spring kit, field rentals, travel.', win: 'spring', icon: '<rect x="4" y="10" width="40" height="28" rx="2"/><path d="M24 10v28"/><circle cx="24" cy="24" r="6"/><path d="M4 18h6v12H4M44 18h-6v12h6"/>' },
+  { t: TYPES[2], best: 'Best Nov–Dec and Apr–May', why: 'Trips, playgrounds, graduation.', win: 'holiday', icon: '<path d="M6 20 24 9l18 11"/><path d="M10 18v20h28V18"/><path d="M20 38v-9h8v9"/><path d="M24 4v5"/>' },
+  { t: TYPES[3], best: 'Any time', why: 'Camps and gear.', win: 'winter', icon: '<path d="M24 8 6 38h36z"/><path d="M24 8v30M17 38l7-11 7 11"/>' },
+  { t: TYPES[4], best: 'Best Jan–Apr', why: 'Competition and recital costs.', win: 'winter', icon: '<path d="m24 6 4.6 11.4L41 18l-9.4 8 3 12L24 31.6 13.4 38l3-12L7 18l12.4-.6z"/>' },
+  { t: TYPES[5], best: 'Any time', why: 'Youth programs and community meals.', win: 'spring', icon: '<path d="M24 40S8 30 8 19a8 8 0 0 1 16-2 8 8 0 0 1 16 2c0 11-16 21-16 21z"/>' }
+];
+const WINDOWS = {
+  holiday: { label: 'Holiday 2026 pilot · Nov 23 – Dec 6', open: 'Mon Nov 23', close: 'Sun Dec 6, 2026', closeShort: 'Sun Dec 6', drop: { Tuesday: 'Tue Dec 8', Wednesday: 'Wed Dec 9', Thursday: 'Thu Dec 10', Friday: 'Fri Dec 11' } },
+  winter: { label: 'Winter 2027 · Jan 18 – 31', open: 'Mon Jan 18', close: 'Sun Jan 31, 2027', closeShort: 'Sun Jan 31', drop: { Tuesday: 'Tue Feb 2', Wednesday: 'Wed Feb 3', Thursday: 'Thu Feb 4', Friday: 'Fri Feb 5' } },
+  spring: { label: 'Spring 2027 · Apr 19 – May 2', open: 'Mon Apr 19', close: 'Sun May 2, 2027', closeShort: 'Sun May 2', drop: { Tuesday: 'Tue May 4', Wednesday: 'Wed May 5', Thursday: 'Thu May 6', Friday: 'Fri May 7' } }
+};
+const AVG_ORDER = 135, AVG_SHARE = 21.06; /* $135 × 15.6% */
+const SAMPLE = { name: 'Rouge Valley Rapids U12 Girls', type: TYPES[1], city: 'Pickering', win: 'spring', goal: 1000, fam: 16, spot: 'Soccer fields, north lot', you: 'Dana L.', email: 'dana@example.com' };
+
+/* ---------- chat (spec rules, regex sources matched case-insensitively) ---------- */
+/* a goal question with its own amount ("raise $800") gets that amount worked out; otherwise the standard $1,000 answer */
+function goalReply(t, std) {
+  const m = String(t).replace(/(\d),(\d{3})/g, '$1$2').match(/(\d{3,6})(?!\s*(?:families|kids|players|orders))/), n = m ? +m[1] : 0;
+  if (!n || n === 1000) return std;
+  return `At about $21 for your group on a typical $135 order, ${/^8/.test(String(n)) || /^1[18](\d{3})?$/.test(String(n)) ? 'an' : 'a'} ${m0(n)} goal is about ${Math.ceil(n / AVG_SHARE).toLocaleString('en-CA')} orders. Try the goal calculator on this page with your number of families. These are estimates, not a promise.`;
+}
+const CHAT_RULES = [
+  { match: "\\b(allerg\\w*|peanuts?|nuts?|nut-free|gluten|celiac|dairy|sesame|pork|halal|kosher)\\b", reply: "We don't answer allergy questions from memory. Every pack comes with an ingredient and allergen sheet before your campaign starts, and our coordinator will confirm anything specific at (416) 298-1350. On pork: the Team Freezer Pack, Game-Week Meal Pack and Kids Favourite Combo list no pork. The Long Weekend Box includes sausages and ribs. We don't label our packs halal or kosher." },
+  { match: "\\b(tax|receipts?|charit\\w*)\\b", reply: "Your group's share is a fundraising payment from J&W to your group, not a charitable donation, so buyers don't get tax receipts. Your group gets a statement of every order, and the money arrives by e-transfer or cheque within 10 business days of the drop." },
+  { match: "(outside ontario|out of province|out-of-province|\\bbc\\b|british columbia|alberta|quebec|québec|manitoba|nova scotia|grandparents?|another province|vancouver|calgary|edmonton|montr[eé]al|winnipeg|halifax|saskatchewan|new brunswick|\\busa\\b|united states|out of (the )?country)", reply: "We can only deliver in Ontario, because our meat plant is provincially inspected. Relatives outside Ontario can still help: they buy a pack for a team family, and it's picked up at the drop here. The food never leaves the province." },
+  { match: "\\b(schools?|principal|school board|tdsb|tcdsb|ddsb|dcdsb|parent council|ppm)\\b", reply: "School boards have their own fundraising and food rules, so we send your principal a one-page school pack with the product list and allergen sheets. Until your board says yes to a school drop, families can pick up free at 2201 Brimley Rd or choose home delivery on their route day." },
+  { match: "\\b(snowhawks?)\\b|when (is|'s) (the )?(team )?(pick ?up|drop)", reply: "The Snowhawks team drop is Wed Dec 9, 5:00–6:30 pm at the team arena, east lot, and orders close Sun Dec 6. Every order is bagged and labelled by name. If you can't make it, we hold your order frozen at 2201 Brimley Rd for 3 days." },
+  { match: "\\b(change|cancel|edit|modify)\\b[^.?!]*\\border|\\border\\b[^.?!]*\\b(change|cancel)", reply: "Before orders close (Sun Dec 6 for the Snowhawks), call (416) 298-1350 and the counter team will change or cancel it. After that we start cutting and cooking for the drop, so we may not be able to change it." },
+  { match: "\\b(arena|rink|drop|field|hall|studio|miss(es|ed)?|can'?t make)\\b", reply: "We bring every order, bagged and labelled by name, to one spot on our route day for your area: Tuesday in Durham, Wednesday in Toronto, Scarborough and Mississauga, Thursday from Oakville to Hamilton, Friday in York and Peel. A J&W staffer stays for a 60-minute pickup window. Team drops have no fee and no $100 minimum. If a family misses it, we hold their order frozen at Brimley Rd for 3 days." },
+  { match: "(how many orders|orders (do|would|will) we need|\\bgoal\\b|\\btarget\\b|\\braise\\b)", reply: "At about $21 for your group on a typical $135 order, a $1,000 goal is about 48 orders. For 16 families that's 3 each: your own freezer fill plus two supporters. Try the goal calculator on this page with your own numbers. These are estimates, not a promise.", fn: goalReply, act: ['Open the goal calculator', () => { JWC.chat.close(); go('earn'); }] },
+  { match: "\\b(up ?front|pre-?buy|cash|cheque|e-?transfer|payout|get paid|paid out|handle (the )?money|collect (the )?money)\\b", reply: "Nothing up front. Families pay J&W online when they order, so you never collect cash or store product. After the drop we send your group a statement of every order and pay your share by e-transfer or cheque within 10 business days." },
+  { match: "\\b(perks?|talk|coach|raffle|prize|bonus|team link|after the drop)\\b", reply: "Three extras. At $1,500 in sales, a J&W butcher brings a free 30-minute 'Fuel for Game Day' talk and a tasting tray to a practice (general food tips, not medical advice). At $3,000, we add a Long Weekend Box ($199) for your raffle. And for six months after your drop, orders through your team link still send 5% to your group." },
+  { match: "\\b(jerky|meat sticks?|pepperoni|snacks?|hand.?sell|door.?to.?door)\\b", reply: "An idea for 2027: a J&W-made jerky that players could sell by hand. It would need a tested recipe, shelf-life testing and approval under J&W's provincial licence. It isn't for sale, so leave your email in the 'Looking ahead' card on this page and we'll tell you if it goes ahead." },
+  { match: "\\b(freezer pack|game-?week|meal pack|kids'? favou?rite|long weekend|prices?|cost)\\b|how much (is|are) (a|an|the)\\b", reply: "Team Freezer Pack $167.50 ($20.10 to the team) · Game-Week Meal Pack $122.40 ($24.48) · Kids Favourite Combo $95 ($11.40) · Long Weekend Box $199 ($23.88). Prices are the same as in our store, and the team's share comes from J&W's side, so nothing is added to your price." },
+  { match: "\\b(earn\\w*|share|percent\\w*|commission|how much|rates?|(do|does|we|group) keep)\\b", reply: "Your group earns 20% on Meal Butler cooked packs and 12% on butcher boxes, freezer packs and cases, shown under every price. That's about $21 on a typical $135 order. Families pay our regular store prices; the share comes from our side. For six months after your drop, orders through your team link still send 5%." }
+];
+JWC.init({
+  n: 7,
+  teamNote: 'The J&W team sees the optional December pilot (only if capacity allows): live campaigns, AI drafts waiting for approval, the drop sheet, production and route impact, payouts, and the new customers the program brings in.',
+  checkout: { title: 'Snowhawks U11 AA fundraiser' },
+  chat: {
+    name: 'Team Fuel Desk',
+    role: AGENTS.concierge + ' · fundraising answers from J&W’s approved sheets',
+    fabLabel: 'Team Fuel Desk',
+    greeting: "Hi, I'm the Team Fuel Desk. I can work out how many orders your group needs, explain how drops and payouts work, or answer a parent's question. Is your group a team, a school or a club?",
+    suggestions: ['How much does our group earn?', 'How many orders for a $1,000 goal?', 'Can you deliver to our arena?', 'Is anything peanut-free or pork-free?'],
+    rules: CHAT_RULES.map(r => ({ match: new RegExp(r.match, 'i'), reply: r.act ? t => ({ text: r.fn ? r.fn(t, r.reply) : r.reply, action: { label: r.act[0], run: r.act[1] } }) : r.reply }))
+  }
+});
+
+/* ---------- live team state, derived from this device's demo orders (Reset demo restores the start values) ---------- */
+function demoOrders() { return JWC.orders().filter(o => o.proto === 7); }
+function teamState() {
+  const meta = store.get('meta', {}), os = demoOrders();
+  const shout = {}; PLAYERS.forEach(p => { shout[p.k] = p.base; });
+  let raised = TEAM.base.raised, sales = TEAM.base.sales, add = 0;
+  os.forEach(o => { const s = itemsShare(o.items); raised += s; add += s; sales += o.subtotal || 0; const m = meta[o.no] || {}; if (m.for && m.for !== 'team') shout[m.for] = (shout[m.for] || 0) + 1; });
+  return { raised: r2(raised), orders: TEAM.base.orders + os.length, sales: r2(sales), add: r2(add), shout, os, meta, pace: Math.round(TEAM.base.pace + add) };
+}
+function orderMode(o, meta) { const m = (meta || {})[o.no] || {}; if (o.city && o.city !== 'Pickup') return 'home'; return m.mode === 'pickup' ? 'pickup' : (m.mode || 'drop'); }
+function orderCounts(os) {
+  const c = { 'p7-freezer-pack': 0, 'p7-gameweek-pack': 0, 'kids-favourite-combo-special': 0, 'summer-bbq-box-special': 0, addons: 0 };
+  os.forEach(o => (o.items || []).forEach(i => { if (c[i.id] != null) c[i.id] += i.qty; else c.addons += i.qty; }));
+  return c;
+}
+
+/* ---------- static renders ---------- */
+function renderGlance() {
+  const rows = ['12% to 20% of every order goes to your group', 'About $21 on a typical $135 order (est.)', '$0 up front. Families pay J&W online', 'One drop on our route day, or free pickup at 2201 Brimley Rd', 'Paid within 10 business days of the drop', 'Free "Fuel for Game Day" talk at $1,500 in sales'];
+  const html = `<div class="tf-card tf-glance p-5 sm:p-6">
+    <div class="flex items-center justify-between gap-2"><p class="tf-eyebrow text-temberd">At a glance</p><span class="tf-tag tf-tag-concept">Concept</span></div>
+    <ul class="mt-3">${rows.map(r => `<li>${CHECK}<span>${esc(r)}</span></li>`).join('')}</ul></div>`;
+  $('#glance-desk').innerHTML = html; $('#glance-mob').innerHTML = html;
+  $('#hero-img').src = JWC.img(LOCAL.burgers, 1600);
+  const lw = P('summer-bbq-box-special'); if (lw) $('#perk-box-img').src = JWC.img(lw, 160);
+}
+let player = store.get('player', 'team');
+function renderWho() {
+  $('#who').innerHTML = PLAYERS.map(p => `<label><input type="radio" name="who" value="${p.k}"${p.k === player ? ' checked' : ''}><span>${esc(p.n)}</span></label>`).join('');
+  $$('#who input').forEach(i => i.addEventListener('change', () => {
+    player = i.value; store.set('player', player);
+    const items = JWC.cart.items(); if (items.length) JWC.cart.save(items.map(it => Object.assign(it, { note: noteFor(it) })));
+    JWC.toast(player === 'team' ? 'Ordering for the whole team' : 'Ordering for ' + playerName(player));
+    drawShout();
+  }));
+}
+/* per unit, so the cart line stays right when its quantity changes */
+function noteFor(it) { return (player === 'team' ? 'For the team' : 'For ' + playerName(player)) + ' · ' + m2(SHARE[it.id] || 0) + ' each to the ' + TEAM.name; }
+const packQty = {};
+function renderPacks() {
+  $('#packs').innerHTML = PACKS.map(p => {
+    packQty[p.id] = packQty[p.id] || 1;
+    const mac = p.macros ? GW.map(g => { const pr = P(g[0]), m = JWC.macros(pr, 0); return m ? `<li class="flex justify-between gap-2"><span>${esc(pr.name)}</span><span class="tnum whitespace-nowrap">${m.p} g · ${m.kcal} kcal</span></li>` : ''; }).join('') : '';
+    return `<article class="tf-card tf-pack" aria-labelledby="pk-${p.id}">
+      <div class="ph"><img src="${esc(p.img())}" alt="${esc(p.alt)}" loading="lazy" width="700" height="525">
+        <div class="absolute left-3 top-3 flex flex-wrap gap-1.5">${p.tags.map(t => `<span class="tf-tag tf-tag-${t[1]}">${esc(t[0])}</span>`).join('')}</div></div>
+      <div class="p-4 flex flex-col flex-1">
+        <h4 id="pk-${p.id}" class="font-bold text-[17.5px] text-tnight leading-snug">${esc(p.name)}</h4>
+        <p class="text-[14px] text-tmuted mt-1.5 leading-relaxed">${esc(p.pitch)}</p>
+        ${p.contents.length ? `<ul class="mt-3 space-y-1 text-[13.5px] text-[#33404E]">${p.contents.map(c => `<li>${esc(c)}</li>`).join('')}</ul>` : ''}
+        ${mac ? `<details class="mt-3 text-[13px]"><summary class="cursor-pointer font-semibold text-tnavy min-h-[40px] flex items-center">Protein per meal <span class="tf-est ml-1.5">est.</span></summary><ul class="space-y-1 mt-1 text-[#33404E]">${mac}</ul><p class="text-[12px] text-tmuted mt-1.5">Estimates for one 4 oz meal or one 2-pack of bites. Ingredients on every pack.</p></details>` : ''}
+        <div class="mt-auto pt-4">
+          <p class="flex items-baseline justify-between gap-2"><span class="font-bold text-[22px] tnum text-tnight">${m2(p.price)}</span>${p.concept ? '<span class="text-[11.5px] text-tmuted">bundle at list prices</span>' : ''}</p>
+          <p class="mt-1.5"><span class="tf-share">${HEART}${m2(p.share)} to the ${TEAM.name}</span></p>
+          <div class="flex items-center gap-2 mt-3">
+            <div class="tf-step" role="group" aria-label="Quantity for ${esc(p.name)}"><button type="button" data-pq="${p.id}" data-d="-1" aria-label="Fewer">−</button><output data-pqo="${p.id}" aria-live="polite">${packQty[p.id]}</output><button type="button" data-pq="${p.id}" data-d="1" aria-label="More">+</button></div>
+            <button type="button" class="tf-btn tf-btn-ember tf-btn-sm flex-1" data-add="${p.id}">Add</button>
+          </div>
+          <p class="text-[12.5px] text-tturf font-semibold mt-2 min-h-[18px]" data-incart="${p.id}"></p>
+        </div>
+      </div></article>`;
+  }).join('');
+  $$('[data-pq]').forEach(b => b.addEventListener('click', () => { const id = b.dataset.pq; packQty[id] = Math.max(1, Math.min(9, packQty[id] + (+b.dataset.d))); $(`[data-pqo="${id}"]`).textContent = packQty[id]; }));
+  $$('[data-add]').forEach(b => b.addEventListener('click', () => { const p = PACKS.filter(x => x.id === b.dataset.add)[0]; addLine({ id: p.id, name: p.name + (p.concept ? ' (Concept)' : ''), variant: p.variant, price: p.price, qty: packQty[p.id], img: p.img() }); packQty[p.id] = 1; $(`[data-pqo="${p.id}"]`).textContent = 1; }));
+}
+function renderAddons() {
+  $('#addons').innerHTML = ADDONS.map(a => `<div role="listitem" class="tf-card tf-addon p-3.5 flex flex-col">
+    <div class="flex gap-3"><img src="${esc(JWC.img(a.prod, 200))}" alt="${esc(a.name)}" loading="lazy" width="64" height="64">
+      <div class="min-w-0"><p class="font-semibold text-[14.5px] leading-snug text-tnight">${esc(a.name)}</p>${a.mb ? '<p class="mt-1"><span class="tf-tag tf-tag-mb">Meal Butler</span></p>' : ''}</div></div>
+    <div class="flex items-center justify-between gap-2 mt-auto pt-3"><div><p class="font-bold tnum">${m2(a.price)}</p><p class="mt-1"><span class="tf-share">${m2(a.share)} to team</span></p></div>
+      <button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-addon="${a.id}" aria-label="Add ${esc(a.name)}">Add</button></div></div>`).join('');
+  $$('[data-addon]').forEach(b => b.addEventListener('click', () => { const a = ADDONS.filter(x => x.id === b.dataset.addon)[0]; addLine({ id: a.id, name: a.name, variant: a.variant, price: a.price, qty: 1, img: JWC.img(a.prod, 200) }); }));
+  $$('[data-rail]').forEach(b => b.addEventListener('click', () => { const r = $('#addons'); r.scrollBy({ left: (+b.dataset.rail) * r.clientWidth * 0.8, behavior: RM ? 'auto' : 'smooth' }); }));
+}
+function addLine(it) {
+  it.note = noteFor(it);
+  JWC.cart.add(it, true);
+  JWC.toast('Added: ' + it.name + ' · ' + m2((SHARE[it.id] || 0) * it.qty) + ' to the ' + TEAM.name);
+}
+
+/* ---------- scoreboard, shout-outs, sticky bar ---------- */
+let shownRaised = null, countT = null, seenOrders = null, holdScore = false;
+function countUp(from, to) {
+  const el = $('#sb-raised'); clearInterval(countT);
+  if (RM || from == null || from === to) { el.textContent = m2(to); return; }
+  const t0 = performance.now(), d = 900;
+  countT = setInterval(() => { const k = Math.min(1, (performance.now() - t0) / d), e = 1 - Math.pow(1 - k, 3); el.textContent = m2(from + (to - from) * e); if (k >= 1) clearInterval(countT); }, 30);
+}
+function drawScore() {
+  const s = teamState(), pct = Math.min(100, s.raised / TEAM.goal * 100), cartShare = itemsShare(JWC.cart.items());
+  /* an order placed behind the checkout confirmation: keep the old total and the striped segment until the confirmation closes, so the fill and count-up are seen */
+  if (seenOrders != null && s.os.length > seenOrders && document.querySelector('.jwc-modal.on')) holdScore = true;
+  seenOrders = s.os.length;
+  if (holdScore) return;
+  countUp(shownRaised, s.raised); shownRaised = s.raised;
+  $('#sb-pct').textContent = '(' + Math.round(s.raised / TEAM.goal * 100) + '%)';
+  $('#sb-fill').style.width = pct + '%';
+  const pend = $('#sb-pend'); pend.style.left = pct + '%'; pend.style.width = cartShare > 0 ? 'max(14px, ' + Math.min(100 - pct, cartShare / TEAM.goal * 100) + '%)' : '0';
+  pend.classList.toggle('tf-pending', cartShare > 0);
+  $('#sb-pendtxt').textContent = cartShare > 0 ? '+' + m2(cartShare) + ' pending in your order (striped). It fills in when you place the order.' : '';
+  const bar = $('#sb-bar'); bar.setAttribute('aria-valuenow', Math.round(s.raised)); bar.setAttribute('aria-valuetext', m2(s.raised) + ' raised of $750');
+  $('#sb-orders').textContent = s.orders;
+  $('#sb-pace').textContent = 'On pace for about ' + m0(s.pace);
+}
+function drawShout() {
+  const s = teamState(), demoFor = {}; s.os.forEach(o => { const m = s.meta[o.no]; if (m && m.for) demoFor[m.for] = 1; });
+  const ranked = PLAYERS.filter(p => p.k !== 'team').map((p, i) => ({ p, c: s.shout[p.k], i })).sort((a, b) => b.c - a.c || (a.p.k === 'ethan' ? -1 : b.p.k === 'ethan' ? 1 : a.i - b.i));
+  const show = ranked.filter((r, i) => i < 3 || demoFor[r.p.k]);
+  $('#shout').innerHTML = show.map((r, i) => `<li class="flex items-center justify-between gap-3 rounded-xl ${r.p.k === player ? 'bg-tembert' : 'bg-tice'} px-3.5 py-2.5"><span class="flex items-center gap-3 min-w-0"><span class="font-display font-extrabold text-[22px] text-tnavy w-5 text-center">${i + 1}</span><span class="font-semibold truncate">${esc(r.p.n)}</span></span><span class="tnum text-[14px] font-semibold whitespace-nowrap">${r.c} orders</span></li>`).join('');
+}
+let teamInView = false;
+function drawCartBits() {
+  const items = JWC.cart.items(), n = JWC.cart.count(), sh = itemsShare(items);
+  $('#sbar-main').textContent = n + (n === 1 ? ' item' : ' items') + ' · ' + m2(JWC.cart.subtotal());
+  $('#sbar-share').textContent = m2(sh) + ' to the ' + TEAM.name;
+  document.body.classList.toggle('tf-bar-on', n > 0 && teamInView && document.body.dataset.view !== 'team');
+  PACKS.forEach(p => { const q = items.filter(i => i.id === p.id).reduce((a, i) => a + i.qty, 0); const el = $(`[data-incart="${p.id}"]`); if (el) el.textContent = q ? '✓ ' + q + ' in your order' : ''; });
+  ADDONS.forEach(a => { const b = $(`[data-addon="${a.id}"]`); if (!b) return; const q = items.filter(i => i.id === a.id).reduce((x, i) => x + i.qty, 0); b.textContent = q ? 'Add (' + q + ')' : 'Add'; });
+  drawScore();
+}
+function watchTeam() {
+  const t = $('#team');
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { es.forEach(e => { teamInView = e.isIntersecting; }); drawCartBits(); }, { threshold: 0, rootMargin: '0px 0px -30% 0px' }).observe(t);
+  else teamInView = true;
+}
+
+/* ---------- review sheet -> JWC.checkout ---------- */
+let pending = null;
+function openReview() {
+  const items = JWC.cart.items(); if (!items.length) { JWC.toast('Add a pack first'); go('team'); return; }
+  const sh = itemsShare(items), sub = JWC.cart.subtotal(), cities = JWC.cities();
+  const lastMode = store.get('mode', 'drop'), lastCity = store.get('city', '');
+  JWC.modal(`<h3>Review your order</h3>
+    <p style="margin:0 0 10px;color:var(--jwc-muted);font-size:13.5px">${esc(TEAM.full)} fundraiser · demo, nothing is charged</p>
+    <div>${items.map(i => `<div class="jwc-row"><span>${i.qty} × ${esc(i.name)}</span><span class="tnum">${m2(i.qty * i.price)}</span></div>`).join('')}
+      <div class="jwc-row total"><span>Items</span><span class="tnum">${m2(sub)}</span></div></div>
+    <div class="rounded-xl p-3 mt-3" style="background:#FCE9DD;color:#9E3B12"><b class="tnum">To the ${TEAM.name}: ${m2(sh)}</b>, paid by J&amp;W from our share, not added to your price.</div>
+    <p class="mt-3 text-[14px]">Ordering for: <b>${esc(playerName(player))}</b> <button type="button" class="tf-link text-[13.5px]" id="rv-who">Change</button></p>
+    <fieldset class="mt-2"><legend class="jwc-field" style="margin:6px 0 0;font-weight:600;font-size:13px">How should it reach you?</legend>
+      <label class="jwc-choice"><input type="radio" name="rv-mode" value="drop"${lastMode === 'drop' ? ' checked' : ''}><span><b>Team drop</b><br><small style="color:var(--jwc-muted)">${esc(TEAM.drop)} · no fee, no minimum</small></span></label>
+      <label class="jwc-choice"><input type="radio" name="rv-mode" value="home"${lastMode === 'home' ? ' checked' : ''}><span><b>Home delivery</b><br><small style="color:var(--jwc-muted)">On our weekly route for your city · route fee and $100 minimum apply</small></span></label>
+      <label class="jwc-choice"><input type="radio" name="rv-mode" value="pickup"${lastMode === 'pickup' ? ' checked' : ''}><span><b>Pick up at 2201 Brimley Rd</b><br><small style="color:var(--jwc-muted)">Free · ready in 2–3 business days · Mon–Fri 9–6, Sat 10–4</small></span></label>
+    </fieldset>
+    <div id="rv-home" hidden><label class="jwc-field"><span>City</span><select id="rv-city"><option value="">Choose your city</option>${cities.map(c => `<option${c === lastCity ? ' selected' : ''}>${esc(c)}</option>`).join('')}</select></label><p id="rv-route" class="text-[13px]" style="color:var(--jwc-muted)"></p></div>
+    <p id="rv-err" class="text-[13px] mt-1" style="color:#B3261E" aria-live="polite"></p>
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:8px;margin-top:12px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Keep shopping</button><button type="button" class="jwc-btn" style="background:#C2481A;color:#fff" id="rv-go">Continue to demo payment</button></div>`, root => {
+    const homeBox = $('#rv-home', root), citySel = $('#rv-city', root), info = $('#rv-route', root);
+    function mode() { return ($('input[name="rv-mode"]:checked', root) || {}).value || 'drop'; }
+    function upd() {
+      homeBox.hidden = mode() !== 'home';
+      const c = citySel.value, rs = c ? JWC.routesFor(c).filter(r => r.id !== 'pickup') : [];
+      info.textContent = c ? rs.map(r => r.name + ' (' + m2(r.fee) + ' fee, ' + m0(r.min) + ' minimum)').join(' or ') + (sub < 100 ? '. Your items are under the $100 minimum: add a little more, or choose the team drop.' : '. $100 minimum met.') : '';
+      $('#rv-err', root).textContent = '';
+    }
+    $$('input[name="rv-mode"]', root).forEach(i => i.addEventListener('change', upd)); citySel.addEventListener('change', upd); upd();
+    $('#rv-who', root).addEventListener('click', () => { JWC.closeAll(); go('team'); setTimeout(() => { const i = $('#who input:checked'); if (i) i.focus(); }, 500); });
+    $('#rv-go', root).addEventListener('click', () => {
+      const md = mode(), city = citySel.value;
+      if (md === 'home' && !city) { $('#rv-err', root).textContent = 'Choose your city for home delivery.'; citySel.focus(); return; }
+      store.set('mode', md); if (city) store.set('city', city);
+      pending = { for: player, mode: md };
+      const forTxt = player === 'team' ? 'For the team.' : 'For ' + playerName(player) + '.';
+      /* city: '' so a city remembered from another checkout never adds a route fee or the $100 minimum to a team drop or pickup */
+      if (md === 'drop') { JWC.checkout({ title: 'Snowhawks U11 AA fundraiser · team drop Wed Dec 9', city: '', extraRows: [{ label: 'Team drop, Wed Dec 9 (no fee, no minimum)', amount: 0 }], note: 'Team drop Wed Dec 9, 5:00–6:30 pm, team arena east lot. ' + forTxt + ' ' + m2(sh) + ' to the Snowhawks, paid by J&W.', onPlaced: placed }); lockDrop(); }
+      else if (md === 'home') JWC.checkout({ title: 'Snowhawks U11 AA fundraiser · home delivery', city: city, note: forTxt + ' ' + m2(sh) + ' to the Snowhawks, paid by J&W.', onPlaced: placed });
+      else JWC.checkout({ title: 'Snowhawks U11 AA fundraiser · pickup at Brimley Rd', city: '', note: forTxt + ' ' + m2(sh) + ' to the Snowhawks, paid by J&W.', onPlaced: placed });
+    });
+  });
+}
+/* the framework checkout offers "Pick up at Brimley Rd" or a city; for a team drop show the drop instead, so the sheet can't contradict itself */
+function lockDrop() {
+  const root = document.querySelector('.jwc-modal.on .jwc-modal-in'); if (!root) return;
+  const sel = root.querySelector('#jwc-city'), lab = sel && sel.closest('label'); if (lab) lab.style.display = 'none';
+  const rb = root.querySelector('#jwc-routes');
+  if (rb) rb.innerHTML = `<div class="jwc-choice" style="cursor:default;border-color:#154D8E;background:#E6F1F8"><span aria-hidden="true" style="color:#237A4B;font-weight:700">✓</span><span><b>Team drop · ${esc(TEAM.drop)}</b><br><small style="color:var(--jwc-muted)">Bagged and labelled by name · no fee, no minimum</small></span></div>`;
+  root.querySelectorAll('#jwc-sum .jwc-row').forEach(r => { if (r.firstElementChild && /^Pickup$/.test(r.firstElementChild.textContent.trim())) r.style.display = 'none'; });
+  const pl = root.querySelector('#jwc-place'); if (pl) setTimeout(() => pl.focus(), 60); /* the framework focuses the first field, which is now hidden */
+}
+/* the framework's confirmation says "ready at Brimley Rd" for any no-city order; make it say team drop when that was chosen */
+function placed(order) {
+  if (pending && pending.mode === 'drop' && order.city === 'Pickup') {
+    const p = document.querySelector('.jwc-modal.on .jwc-modal-in p');
+    if (p) p.textContent = 'Your order will be bagged and labelled by name for the Snowhawks team drop, ' + TEAM.drop + '. This is a demo, so nothing was charged and nothing was sent.';
+  }
+}
+function onOrder(o) {
+  if (!o || o.proto !== 7) return;
+  const meta = store.get('meta', {});
+  if (!meta[o.no]) { const md = pending ? pending.mode : 'drop'; meta[o.no] = { for: pending ? pending.for : player, mode: o.city && o.city !== 'Pickup' ? 'home' : (md === 'home' ? 'pickup' : md) }; store.set('meta', meta); }
+  pending = null;
+  const sh = itemsShare(o.items);
+  drawTeam();
+  /* reveal on the page once the confirmation is closed: scoreboard fills and counts up, shout-out ticks, thank-you card, toast */
+  const reveal = () => {
+    holdScore = false;
+    if (document.body.dataset.view !== 'team') $(innerWidth >= 1024 ? '.tf-score' : '#sb-raised').scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' });
+    setTimeout(() => { drawCartBits(); drawShout(); showThanks(o, sh); setTimeout(() => JWC.toast('You just sent ' + m2(sh) + ' to the Snowhawks.'), RM ? 0 : 950); }, RM ? 0 : 550);
+  };
+  const t = setInterval(() => { if (!document.querySelector('.jwc-modal.on')) { clearInterval(t); reveal(); } }, 120);
+}
+function showThanks(o, sh) {
+  const s = teamState(), pct = Math.round(s.raised / TEAM.goal * 100), m = s.meta[o.no] || {}, mode = orderMode(o, s.meta);
+  const how = mode === 'drop' ? 'Pick it up at the team drop, ' + TEAM.drop + '.' : mode === 'home' ? 'Arriving on the ' + o.day + ' route to ' + o.city + '.' : 'Ready for pickup at 2201 Brimley Rd in 2–3 business days.';
+  const asked = store.get('offer', null);
+  $('#thanks').innerHTML = `<div class="tf-thanks p-5 sm:p-6">
+    <div class="flex items-start gap-3"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" class="flex-none"><circle cx="17" cy="17" r="17" fill="#237A4B"/><path d="m10 17.5 4.5 4.5L24 12.5" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="min-w-0"><p class="font-bold text-[18px] text-tnight tnum">Thank you. The Snowhawks are at ${m2(s.raised)} of $750 (${pct}%).</p>
+        <p class="text-[14.5px] text-[#2B3A48] mt-1.5">Order ${esc(o.no)} sent <b class="tnum">${m2(sh)}</b> to the team${m.for && m.for !== 'team' ? ' and counts for <b>' + esc(playerName(m.for)) + '</b> (' + s.shout[m.for] + ' orders now)' : ''}. J&amp;W pays it from our share, so it wasn't added to your price. ${esc(how)}</p>
+        <button type="button" class="tf-btn tf-btn-turf tf-btn-sm mt-4" id="ty-share">Share with one more family</button></div></div>
+    <div class="mt-5 rounded-xl bg-white border border-tline p-4" id="ty-offer">${asked ? offerDone(asked) : `<p class="font-semibold text-tnight">Want $10 off your first regular J&amp;W order of $100 or more?</p>
+      <div class="flex flex-wrap gap-2 mt-3"><button type="button" class="tf-btn tf-btn-navy tf-btn-sm" data-offer="yes">Yes, email me the offer</button><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-offer="no">No thanks</button></div>
+      <p class="text-[12.5px] text-tmuted mt-2">Demo: nothing is sent. We only email people who say yes, and every email has an unsubscribe link.</p>`}</div></div>`;
+  $('#ty-share').addEventListener('click', () => JWC.toast('Link copied (demo)'));
+  $$('[data-offer]').forEach(b => b.addEventListener('click', () => {
+    const v = b.dataset.offer; store.set('offer', v);
+    if (v === 'yes') store.set('optins', store.get('optins', 0) + 1);
+    $('#ty-offer').innerHTML = offerDone(v);
+    JWC.toast(v === 'yes' ? "Saved. We'll email your $10 offer (demo)." : 'No problem. We won’t email you.');
+    drawTeam();
+  }));
+}
+function offerDone(v) { return v === 'yes' ? '<p class="text-[14.5px]"><b class="text-tturf">✓ You’re in.</b> Your $10 offer for a first regular order of $100+ goes to your email within a day. Demo: nothing is sent.</p>' : '<p class="text-[14.5px] text-tmuted">No problem. We won’t email you. Your fundraiser order is all set.</p>'; }
+
+/* ---------- goal calculator ---------- */
+let calcTab = 'goal';
+function perFamilyText(orders, fam) {
+  const pf = Math.round(orders / fam * 10) / 10, n = pf.toLocaleString('en-CA', { minimumFractionDigits: pf % 1 === 0 ? 0 : 1, maximumFractionDigits: 1 });
+  if (pf <= 1) return `That's about ${n} per family: one freezer fill each covers it.`;
+  if (pf === 3) return `That's 3 per family: your own freezer fill plus two supporters.`;
+  if (pf <= 3.5) return `That's ${n} per family: your own order plus a couple of supporters.`;
+  return `That's about ${n} per family.`;
+}
+function calc() {
+  const goal = Math.max(0, Math.round(+$('#c-goal').value || 0)), famIn = Math.round(+$('#c-fam').value || 0), fam = Math.max(1, famIn);
+  const orders = Math.ceil(goal / AVG_SHARE), nf = v => v.toLocaleString('en-CA');
+  $('#c-goal-out').textContent = !goal ? 'Enter your goal to see how many orders it takes.' : `About ${nf(orders)} orders. ` + (famIn >= 1 ? perFamilyText(orders, fam) : 'Add your number of families to see orders per family.');
+  const ord = Math.max(0, Math.round(+$('#c-ord').value || 0)), sales = ord * AVG_ORDER, earn = Math.round(ord * AVG_SHARE);
+  $('#c-ord-out').textContent = ord ? `About ${m0(sales)} in sales and ${m0(earn)} for your group.` : 'Enter your expected orders to see what your group earns.';
+  $('#c-ms').innerHTML = [[1500, 'Coach talk at $1,500 in sales'], [3000, 'Raffle box at $3,000 in sales']].map(x => `<p class="tf-ms${sales >= x[0] ? ' on' : ''}"><i aria-hidden="true">${sales >= x[0] ? '✓' : '·'}</i><span>${sales >= x[0] ? '' : 'Not yet: '}${x[1]}</span></p>`).join('');
+  return { goal, fam, famIn, orders, earn };
+}
+function setCalcTab(t) {
+  calcTab = t;
+  [['goal', '#ct-goal', '#cp-goal'], ['orders', '#ct-orders', '#cp-orders']].forEach(x => { const on = x[0] === t; $(x[1]).setAttribute('aria-selected', on); $(x[1]).tabIndex = on ? 0 : -1; $(x[2]).hidden = !on; });
+}
+function initCalc() {
+  ['#c-goal', '#c-fam', '#c-ord'].forEach(s => $(s).addEventListener('input', calc));
+  $('#ct-goal').addEventListener('click', () => setCalcTab('goal'));
+  $('#ct-orders').addEventListener('click', () => setCalcTab('orders'));
+  $$('.tf-tabs [role=tab]').forEach(b => b.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const nt = calcTab === 'goal' ? 'orders' : 'goal'; setCalcTab(nt); $(nt === 'goal' ? '#ct-goal' : '#ct-orders').focus(); } }));
+  $('#c-start').addEventListener('click', () => {
+    const c = calc();
+    if (calcTab === 'goal' ? !c.goal : !c.earn) { const i = $(calcTab === 'goal' ? '#c-goal' : '#c-ord'); i.focus(); JWC.toast(calcTab === 'goal' ? 'Enter a goal first' : 'Enter your expected orders first'); return; }
+    if (calcTab === 'goal') { $('#f-goal').value = c.goal; if (c.famIn >= 1) $('#f-fam').value = c.fam; }
+    else { $('#f-goal').value = c.earn; }
+    go('start'); setTimeout(() => $('#f-name').focus({ preventScroll: true }), RM ? 0 : 600);
+    JWC.toast('Goal ' + m0(+$('#f-goal').value || 0) + ' added to your form');
+  });
+  calc();
+}
+
+/* ---------- segments ---------- */
+function renderSegs() {
+  $('#segs').innerHTML = SEGS.map((s, i) => `<article class="tf-card tf-seg p-5 flex flex-col">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">${s.icon}</svg>
+    <h3 class="font-bold text-[17.5px] text-tnight mt-3">${esc(s.t)}</h3>
+    <p class="mt-1"><span class="tf-chip bg-tskyt text-tnavy" style="padding:5px 10px;font-size:12.5px">${esc(s.best)}</span></p>
+    <p class="text-[15px] text-tmuted mt-2.5 flex-1">${esc(s.why)}</p>
+    <button type="button" class="tf-btn tf-btn-line tf-btn-sm mt-4 self-start" data-seg="${i}">Plan a fundraiser</button></article>`).join('');
+  $$('[data-seg]').forEach(b => b.addEventListener('click', () => {
+    const s = SEGS[+b.dataset.seg]; $('#f-type').value = s.t;
+    const w = $(`#f-win input[value="${s.win}"]`); if (w) w.checked = true;
+    go('start'); setTimeout(() => $('#f-name').focus({ preventScroll: true }), RM ? 0 : 600);
+    JWC.toast('Type set: ' + s.t);
+  }));
+}
+
+/* ---------- start a fundraiser: form -> AI draft -> share kit -> send for approval ---------- */
+function initForm() {
+  $('#f-type').innerHTML = TYPES.map(t => `<option>${esc(t)}</option>`).join('');
+  $('#f-city').innerHTML = '<option value="">Choose a city</option>' + JWC.cities().map(c => `<option>${esc(c)}</option>`).join('');
+  $('#f-win').innerHTML = Object.keys(WINDOWS).map((k, i) => `<label class="tf-radio"><input type="radio" name="f-win" value="${k}"${i === 0 ? ' checked' : ''}><span class="text-[15px] font-semibold">${esc(WINDOWS[k].label)}</span></label>`).join('');
+  $('#use-sample').addEventListener('click', () => {
+    $('#f-name').value = SAMPLE.name; $('#f-type').value = SAMPLE.type; $('#f-city').value = SAMPLE.city;
+    $(`#f-win input[value="${SAMPLE.win}"]`).checked = true;
+    if (!+$('#f-goal').value) $('#f-goal').value = SAMPLE.goal;
+    if (!+$('#f-fam').value) $('#f-fam').value = SAMPLE.fam;
+    $('#f-spot').value = SAMPLE.spot; $('#f-you').value = SAMPLE.you; $('#f-email').value = SAMPLE.email;
+    $$('#start-form .bad').forEach(x => x.classList.remove('bad')); $('#f-err').textContent = '';
+    JWC.toast('Sample filled in: ' + SAMPLE.name);
+  });
+  $('#start-form').addEventListener('submit', e => { e.preventDefault(); build(); });
+}
+function readForm() {
+  return { name: $('#f-name').value.trim(), type: $('#f-type').value, city: $('#f-city').value, win: ($('#f-win input:checked') || {}).value || 'holiday',
+    goal: Math.round(+$('#f-goal').value || 0), fam: Math.round(+$('#f-fam').value || 0), spot: $('#f-spot').value.trim(), you: $('#f-you').value.trim(), email: $('#f-email').value.trim() };
+}
+function nick(name) { const w = name.split(/\s+/), i = w.findIndex(x => /^U\d{1,2}$/i.test(x)); return i > 0 ? w[i - 1] : name; }
+function slug(name) { const w = name.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9\s-]/g, '').split(/\s+/).filter(Boolean), i = w.findIndex(x => /^u\d{1,2}$/.test(x)); return (i >= 0 ? w.slice(0, i + 1) : w.slice(0, 5)).join('-'); }
+function dropPlan(f) {
+  const W = WINDOWS[f.win], r = JWC.routesFor(f.city).filter(x => x.id !== 'pickup' && x.id !== 'express')[0];
+  if (!r) return { ok: false, text: 'We will plan your drop with you.' };
+  const long = r.fee >= 35;
+  if (f.type === TYPES[2]) return { ok: false, route: r, text: `School drops need your board's OK first, so we'll send your principal a one-page school pack. Until then, families pick up free at 2201 Brimley Rd or choose home delivery on our ${r.day} route.` };
+  if (long) return { ok: false, route: r, text: `Team drops run on our GTA routes. For ${f.city}, families can choose home delivery on the ${r.day} route, or we can plan a group drop for 40+ orders.` };
+  const date = W.drop[r.day], code = r.name.split(' · ')[0];
+  return { ok: true, route: r, date, code, text: `Drop: ${date} on our ${code} route, 4:30–6:00 pm at ${f.spot || 'your arena, field or hall'}. We'll confirm the spot with you.` };
+}
+function noun(type) { return ({ 'Hockey and ringette': 'hockey team', 'Soccer and baseball': 'soccer team', 'Schools and parent councils': 'school', 'Cadets, scouts and guides': 'group', 'Dance, gymnastics and martial arts': 'club', 'Faith and community groups': 'group' })[type] || 'group'; }
+let lastDraft = null;
+function build() {
+  const f = readForm(), bad = [];
+  if (!f.name) bad.push(['#f-name', 'group name']);
+  if (!f.city) bad.push(['#f-city', 'city']);
+  if (f.goal < 100) bad.push(['#f-goal', 'goal of at least $100']);
+  if (f.fam < 1) bad.push(['#f-fam', 'number of families']);
+  if (!f.you) bad.push(['#f-you', 'your name']);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) bad.push(['#f-email', 'email']);
+  $$('#start-form .tf-input, #start-form .tf-select').forEach(x => x.classList.remove('bad'));
+  if (bad.length) { bad.forEach(b => $(b[0]).classList.add('bad')); $('#f-err').textContent = 'Please add: ' + bad.map(b => b[1]).join(', ') + '.'; $(bad[0][0]).focus(); return; }
+  $('#f-err').textContent = '';
+  const btn = $('#f-build'); btn.disabled = true;
+  $('#draft').innerHTML = `<div class="tf-card p-5 sm:p-6"><p class="flex items-center gap-2"><span class="tf-agent">${esc(AGENTS.desk)}</span><span class="text-[14px] text-tmuted">Team page builder is drafting…</span></p>
+    <div class="tf-shimmer h-6 w-3/4 mt-5"></div><div class="tf-shimmer h-4 w-full mt-4"></div><div class="tf-shimmer h-4 w-11/12 mt-2.5"></div><div class="tf-shimmer h-4 w-4/5 mt-2.5"></div><div class="tf-shimmer h-28 w-full mt-5"></div></div>`;
+  if (!RM) $('#draft').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  setTimeout(() => { btn.disabled = false; renderDraft(f); }, 900);
+}
+function renderDraft(f) {
+  const W = WINDOWS[f.win], orders = Math.ceil(f.goal / AVG_SHARE), pf = Math.round(orders / f.fam * 10) / 10, pfT = pf % 1 === 0 ? String(pf) : pf.toFixed(1);
+  const d = dropPlan(f), link = 'jwfoods.com/team/' + slug(f.name), nk = nick(f.name), yr = W.close.slice(-4);
+  const where = d.ok ? `One pickup on ${d.date} at ${f.spot || 'our drop spot'}.` : `Pickup is free at J&W in Scarborough, or choose home delivery.`;
+  const kit = {
+    app: `${nk} families: our J&W fundraiser opens ${W.open.replace(/^Mon /, 'Monday, ')}. Fill your freezer with Ontario chicken and butcher-cut beef, or grab a week of cooked Meal Butler meals. About $20 of every order goes to our team. ${where} Order here: ${link}`,
+    text: `Hi! Our ${noun(f.type)} is raising money with J&W Foods in Scarborough. If you buy meat or meal prep anyway, about $20 of your order goes to the team. Order by ${W.closeShort}: ${link}`,
+    email: `Subject: Help the ${nk} and stock your freezer\n\nHi everyone,\n\nThe ${f.name} fundraiser with J&W Foods runs ${W.open} to ${W.close}. Families pay J&W's regular store prices for Ontario chicken, butcher-cut beef and Meal Butler cooked meals, and J&W sends part of every order to our ${noun(f.type)}. The amount shows under every price.\n\n${d.ok ? 'Everything arrives in one drop: ' + d.date + ', 4:30–6:00 pm at ' + (f.spot || 'our drop spot') + '.' : 'Pick up free at 2201 Brimley Rd, or choose home delivery.'}\n\nJ&W delivers in Ontario only, so relatives farther away can buy a pack for one of our families.\n\nOrder here: ${link}\n\nThank you,\n${f.you}`
+  };
+  lastDraft = { f, orders, link, kit, d };
+  $('#draft').innerHTML = `<div class="tf-card p-5 sm:p-6">
+    <div class="flex flex-wrap items-center justify-between gap-2"><span class="tf-agent">Drafted by ${esc(AGENTS.desk)}</span><span class="text-[12.5px] text-tmuted">AI draft · a person checks it before it goes live</span></div>
+    <h3 class="tf-h text-[30px] text-tnight mt-4">${esc(f.name)}</h3>
+    <ul class="mt-3 space-y-2.5 text-[15px] leading-snug">
+      <li class="flex gap-2.5">${CHECK}<span>Your page: <b class="break-all">${esc(link)}</b> (demo)</span></li>
+      <li class="flex gap-2.5">${CHECK}<span class="tnum">Goal ${m0(f.goal)} ≈ ${orders.toLocaleString('en-CA')} orders, about ${pfT} per family (est. at $21 an order).</span></li>
+      <li class="flex gap-2.5">${CHECK}<span>Orders open ${esc(W.open)} and close ${esc(W.close)}. ${esc(d.text)}</span></li>
+      <li class="flex gap-2.5">${CHECK}<span>Perks: free coach talk at $1,500 in sales; raffle box at $3,000.</span></li>
+    </ul>
+    <h4 class="font-bold text-[15px] text-tnight mt-6">Share kit</h4>
+    <div class="tf-tabs kit mt-2" role="tablist" aria-label="Share kit">${[['app', 'Team app'], ['text', 'Text'], ['email', 'Email'], ['flyer', 'Flyer']].map((t, i) => `<button type="button" role="tab" aria-selected="${i === 0}" data-kit="${t[0]}"${i ? ' tabindex="-1"' : ''}>${t[1]}</button>`).join('')}</div>
+    <div class="mt-3" id="kit-body" role="tabpanel" aria-label="Share kit message"></div>
+    <div class="flex flex-wrap gap-2 mt-5"><button type="button" class="tf-btn tf-btn-ember" id="d-send">Send for approval</button><button type="button" class="tf-btn tf-btn-line" id="d-edit">Edit</button></div>
+    <p class="text-[12.5px] text-tmuted mt-3">Demo: nothing is sent. Claims check: no health claims, Ontario-only delivery note included.</p></div>`;
+  const tabs = $$('[data-kit]');
+  function showKit(k) {
+    tabs.forEach(b => { const on = b.dataset.kit === k; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
+    $('#kit-body').innerHTML = k === 'flyer' ? flyer(f, W, d, link) : `<div class="tf-kit">${esc(kit[k])}</div><button type="button" class="tf-link text-[14px] mt-1" id="kit-copy">Copy message</button>`;
+    const c = $('#kit-copy'); if (c) c.addEventListener('click', () => JWC.toast('Message copied (demo)'));
+  }
+  tabs.forEach(b => b.addEventListener('click', () => showKit(b.dataset.kit)));
+  showKit('app');
+  $('#d-edit').addEventListener('click', () => { go('start'); setTimeout(() => $('#f-name').focus({ preventScroll: true }), RM ? 0 : 500); });
+  $('#d-send').addEventListener('click', sendApp);
+}
+function qr() {
+  let s = '', seed = 7; const cell = (x, y) => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280 > 0.52; };
+  for (let y = 0; y < 21; y++) for (let x = 0; x < 21; x++) { const fin = (x < 7 && y < 7) || (x > 13 && y < 7) || (x < 7 && y > 13); if (!fin && cell(x, y)) s += `<rect x="${x}" y="${y}" width="1" height="1"/>`; }
+  const finder = (x, y) => `<rect x="${x}" y="${y}" width="7" height="7" fill="none" stroke="#0E1E36" stroke-width="1" transform="translate(.5 .5) scale(.857)"/><rect x="${x + 2}" y="${y + 2}" width="3" height="3"/>`;
+  return `<svg viewBox="-1 -1 23 23" width="112" height="112" role="img" aria-label="QR code placeholder" fill="#0E1E36"><rect x="-1" y="-1" width="23" height="23" fill="#fff"/>${s}${finder(0, 0)}${finder(14, 0)}${finder(0, 14)}</svg>`;
+}
+function flyer(f, W, d, link) {
+  return `<div class="rounded-xl overflow-hidden border border-tline"><div class="bg-tnight text-white p-5 text-center"><p class="tf-eyebrow text-tsky">J&amp;W Team Fuel Fundraiser</p><p class="tf-h text-[30px] mt-2">${esc(f.name)}</p><p class="text-tgold font-semibold mt-1 tnum">Goal ${m0(f.goal)}</p></div>
+    <div class="p-5 flex flex-wrap items-center gap-5 bg-white"><div class="flex-none">${qr()}</div><div class="min-w-0 flex-1 text-[14.5px]"><p><b>Order ${esc(W.open)} – ${esc(W.close)}</b></p><p class="mt-1">${d.ok ? 'Team drop ' + esc(d.date) + ', 4:30–6:00 pm' : d.route ? 'Home delivery on our ' + esc(d.route.day) + ' route, or free pickup at 2201 Brimley Rd' : 'Free pickup at 2201 Brimley Rd'}</p><p class="mt-1 text-tmuted break-all">${esc(link)}</p><p class="mt-2 text-[12.5px] text-tmuted">QR placeholder · the real flyer prints with your team's code</p></div></div></div>`;
+}
+function sendApp() {
+  if (!lastDraft || lastDraft.sent) return;
+  lastDraft.sent = true; const sb = $('#d-send'); if (sb) { sb.disabled = true; sb.textContent = '✓ Sent for approval'; }
+  const f = lastDraft.f, apps = store.get('apps', []);
+  const app = { id: JWC.uid('app'), name: f.name, type: f.type, city: f.city, win: f.win, goal: f.goal, fam: f.fam, spot: f.spot, you: f.you, orders: lastDraft.orders, drop: lastDraft.d.ok ? lastDraft.d.date + ' · ' + lastDraft.d.code : 'Pickup or home delivery', link: lastDraft.link, when: new Date().toISOString() };
+  apps.unshift(app); store.set('apps', apps.slice(0, 12));
+  const first = f.you.split(/\s+/)[0] || 'there';
+  JWC.modal(`<h3>Thanks, ${esc(first)}.</h3><p style="color:var(--jwc-muted);margin:0 0 12px">Our fundraising coordinator will check your page and call you within one business day. Demo: nothing is sent.</p>
+    <div class="jwc-note" style="margin-top:0"><span class="jwc-dot"></span><span>Switch to <b style="color:var(--jwc-ink)">JW team view</b> in the dark bar to see ${esc(f.name)} land in the pipeline with its draft.</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" id="m-team">See team view</button><button type="button" class="jwc-btn jwc-btn-dark" data-close>Done</button></div>`, root => {
+    $('#m-team', root).addEventListener('click', () => { JWC.closeAll(); JWC.setView('team'); });
+  });
+  drawTeam();
+}
+
+/* ---------- perks: book the coach talk ---------- */
+function bookTalk() {
+  const times = []; for (let h = 6; h <= 20; h++) ['00', '30'].forEach(mm => { const hh = h > 12 ? h - 12 : h; times.push(`${hh}:${mm} ${h < 12 ? 'am' : 'pm'}`); });
+  JWC.modal(`<h3>Book your Fuel for Game Day talk</h3>
+    <p style="margin:0 0 6px;color:var(--jwc-muted);font-size:13.5px">Free at $1,500 in sales: 30 minutes with a J&amp;W butcher and a tasting tray at one practice. General food tips, not medical advice.</p>
+    <label class="jwc-field"><span>Practice date</span><input type="date" id="bt-date" min="2026-11-23" max="2027-06-30" value="2026-12-03"></label>
+    <label class="jwc-field"><span>Start time</span><select id="bt-time">${times.map(t => `<option${t === '6:30 pm' ? ' selected' : ''}>${t}</option>`).join('')}</select></label>
+    <label class="jwc-field"><span>Arena or field name</span><input id="bt-where" placeholder="e.g. Scarborough Village arena, rink 2"></label>
+    <p id="bt-err" style="color:#B3261E;font-size:13px;margin:0" aria-live="polite"></p>
+    <p style="color:var(--jwc-muted);font-size:12.5px;margin:6px 0 0">Demo: nothing is sent.</p>
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:8px;margin-top:12px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Cancel</button><button type="button" class="jwc-btn jwc-btn-dark" id="bt-go">Request this time</button></div>`, root => {
+    $('#bt-go', root).addEventListener('click', () => {
+      const date = $('#bt-date', root).value, time = $('#bt-time', root).value, where = $('#bt-where', root).value.trim();
+      if (!date || !where) { $('#bt-err', root).textContent = !date ? 'Choose a practice date.' : 'Add the arena or field name.'; (!date ? $('#bt-date', root) : $('#bt-where', root)).focus(); return; }
+      const talks = store.get('talks', []); talks.unshift({ date, time, where, when: new Date().toISOString() }); store.set('talks', talks.slice(0, 10));
+      let nice = date; try { nice = new Date(date + 'T12:00:00').toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric' }); } catch (e) {}
+      root.innerHTML = `<h3>Requested.</h3><p style="color:var(--jwc-muted);margin:0 0 12px">${esc(nice)} at ${esc(time)}, ${esc(where)}. We'll confirm by phone within one business day. Demo: nothing is sent.</p><button type="button" class="jwc-btn jwc-btn-dark jwc-btn-block" data-close>Done</button>`;
+      $('[data-close]', root).addEventListener('click', () => JWC.closeAll());
+      $('[data-close]', root).focus();
+      JWC.toast('Talk requested (demo)'); drawTeam();
+    });
+  });
+}
+
+/* ---------- jerky interest, share row, nav ---------- */
+function initMisc() {
+  $('#book-talk').addEventListener('click', bookTalk);
+  $('#jerky-form').addEventListener('submit', e => {
+    e.preventDefault(); const v = $('#jerky-email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { $('#jerky-err').textContent = 'Enter an email like you@example.com.'; $('#jerky-email').classList.add('bad'); $('#jerky-email').focus(); return; }
+    $('#jerky-err').textContent = ''; $('#jerky-email').classList.remove('bad'); $('#jerky-email').value = '';
+    store.set('jerky', store.get('jerky', 0) + 1);
+    JWC.toast("Saved. We'll email you if it goes ahead (demo).");
+    drawTeam();
+  });
+  $$('[data-share]').forEach(b => b.addEventListener('click', () => JWC.toast('Link copied (demo)')));
+  $('#sbar-go').addEventListener('click', openReview);
+  $('#faq-chat').addEventListener('click', () => JWC.chat.open());
+  $$('[data-go]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); go(a.dataset.go); }));
+  /* the framework cart's Checkout button opens our review sheet, so the team drop and player pick are never skipped */
+  document.addEventListener('click', e => { if (e.target.closest && e.target.closest('.jwc-cart-go')) { e.preventDefault(); e.stopImmediatePropagation(); JWC.closeAll(true); openReview(); } }, true);
+  $('#t-money').addEventListener('click', JWC.openMoney);
+  $('#t-tocust').addEventListener('click', () => { JWC.setView('customer'); setTimeout(() => go('team'), 50); });
+}
+
+/* ======================= JW TEAM VIEW (sample operating numbers, fictional groups) ======================= */
+const BASE = { camps: 4, orders: 97, sales: 14046.23, owed: 2067.94, newBuyers: 69, optin: 61 };
+function demoTotals() {
+  const s = teamState(), n = s.os.length, sub = r2(s.os.reduce((a, o) => a + (o.subtotal || 0), 0));
+  return { s, n, sub, add: s.add, optins: store.get('optins', 0) };
+}
+function drawKPIs(t) {
+  const orders = BASE.orders + t.n, nb = BASE.newBuyers + t.n, opt = BASE.optin + t.optins;
+  const up = (v, txt) => v ? `<span class="up">+${txt} from this demo</span>` : '';
+  const k = [
+    ['Live campaigns', String(BASE.camps), '3 open · 1 closed, drop Tue Dec 1'],
+    ['Orders', String(orders), up(t.n, t.n) || 'Holiday pilot so far'],
+    ['Sales', m0(BASE.sales + t.sub), up(t.sub, m2(t.sub)) || 'At J&W store prices'],
+    ['Owed to groups', m0(BASE.owed + t.add), up(t.add, m2(t.add)) || 'Paid after each drop'],
+    ['New to J&W', nb + ' of ' + orders, Math.round(nb / orders * 100) + '% never ordered before'],
+    ['Opted in', String(opt), Math.round(opt / orders * 100) + '% to email or SMS (CASL)']
+  ];
+  $('#t-kpis').innerHTML = k.map(x => `<div class="tf-kpi"><small>${x[0]}</small><b>${esc(x[1])}</b><span>${x[2]}</span></div>`).join('');
+}
+function camps(t) {
+  const s = t.s;
+  return [
+    { g: TEAM.full, type: 'Hockey', drop: 'Wed Dec 9, GTA 2, team arena 5:00–6:30 pm', goal: 750, raised: s.raised, orders: s.orders, closes: 'Sun Dec 6', note: 'On pace for about ' + m0(s.pace) + '. Last-48-hours message drafted', st: 'open', live: t.n > 0 },
+    { g: 'Cedar Hollow PS Parent Council', type: 'School', drop: 'Brimley pickup + home delivery (school drop waiting on board)', goal: 1500, raised: 707.80, orders: 34, closes: 'Sun Dec 6', note: 'Behind pace. Newsletter post drafted', st: 'warn' },
+    { g: 'Whitby Wolves Ringette U14', type: 'Ringette', drop: 'Tue Dec 1, GTA 1, arena lot 4:30–5:30 pm', goal: 600, raised: 643.74, orders: 29, closes: 'Closed Sun Nov 29', note: 'Drop sheet ready. Raffle box earned', st: 'ok' },
+    { g: '1st Ajax Lakeshore Cadets', type: 'Cadets', drop: 'Tue Dec 8, GTA 1, cadet hall 6:00–7:00 pm', goal: 500, raised: 260.28, orders: 12, closes: 'Sun Dec 6', note: 'Coach talk booked Thu Dec 3', st: 'open' }
+  ];
+}
+function drawCamps(t) {
+  const rows = camps(t);
+  $('#t-camps').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Live campaigns</h2><span class="tf-samp">Sample</span></div>
+    <div class="jwc-scroll-x mt-3"><table class="tf-t tf-stack"><thead><tr><th>Group</th><th>Drop</th><th class="num">Goal</th><th>Raised</th><th class="num">Orders</th><th>Closes</th><th>Next</th></tr></thead><tbody>
+    ${rows.map(r => { const p = Math.round(r.raised / r.goal * 100), cls = p >= 100 ? 'over' : r.st === 'warn' ? 'behind' : ''; return `<tr>
+      <td class="lead" data-l="Group"><b>${esc(r.g)}</b><br><span class="text-[12.5px] text-tmuted font-normal">${esc(r.type)}</span>${r.live ? ' <span class="tf-pill-st st-new">Live demo orders</span>' : ''}</td>
+      <td data-l="Drop" class="text-[13px] lg:min-w-[190px]">${esc(r.drop)}</td>
+      <td class="num" data-l="Goal">${m0(r.goal)}</td>
+      <td data-l="Raised"><div class="min-w-[110px]"><span class="tnum font-semibold">${m2(r.raised)}</span> <span class="text-tmuted tnum">(${p}%)</span><div class="tf-mini mt-1.5" aria-hidden="true"><i class="${cls}" style="width:${Math.min(100, p)}%"></i></div></div></td>
+      <td class="num" data-l="Orders">${r.orders}</td>
+      <td data-l="Closes" class="whitespace-nowrap">${esc(r.closes)}</td>
+      <td data-l="Next" class="lg:min-w-[190px]"><span class="tf-pill-st ${r.st === 'ok' ? 'st-ok' : r.st === 'warn' ? 'st-warn' : 'st-open'}">${esc(r.note)}</span></td></tr>`; }).join('')}
+    </tbody></table></div>`;
+}
+function drawLive(t) {
+  const os = t.s.os, meta = t.s.meta;
+  const modeTxt = o => { const md = orderMode(o, meta); return md === 'drop' ? 'Team drop · Wed Dec 9' : md === 'home' ? 'Home · ' + o.city + ' · ' + o.day : 'Pickup · Brimley Rd'; };
+  $('#t-live').innerHTML = `<div class="flex items-center justify-between gap-2"><h2>Live from this demo</h2><span class="tf-pill-st st-new">${os.length} order${os.length === 1 ? '' : 's'}</span></div>
+    <p class="text-[13px] text-tmuted mt-1">Latest Snowhawks orders placed on this device. They add to Orders, Sales and Owed above.</p>
+    ${os.length ? `<ul class="mt-3 space-y-2.5">${os.slice(0, 6).map(o => { const m = meta[o.no] || {}, n = (o.items || []).reduce((a, i) => a + i.qty, 0); return `<li class="rounded-xl border border-tline p-3">
+      <div class="flex justify-between gap-2"><b class="tnum">${esc(o.no)}</b><span class="text-[12.5px] text-tmuted">${esc(fmtTime(o.when))}</span></div>
+      <div class="grid grid-cols-2 gap-x-3 gap-y-1 mt-1.5 text-[13px]"><span class="text-tmuted">For</span><span class="text-right">${esc(playerName(m.for || 'team'))}</span>
+      <span class="text-tmuted">Items</span><span class="text-right tnum">${n} · ${m2(o.subtotal || 0)}</span>
+      <span class="text-tmuted">Delivery</span><span class="text-right">${esc(modeTxt(o))}</span>
+      <span class="text-tmuted">To team</span><span class="text-right tnum font-semibold text-temberd">${m2(itemsShare(o.items))}</span></div></li>`; }).join('')}</ul>`
+    : `<div class="mt-4 rounded-xl bg-tice p-4 text-[14px]"><p>No demo orders yet. Add a pack on the Snowhawks team page and place a demo order; it lands here at once.</p><button type="button" class="tf-btn tf-btn-night tf-btn-sm mt-3" id="t-try">Open the team page</button></div>`}`;
+  const tr = $('#t-try'); if (tr) tr.addEventListener('click', () => { JWC.setView('customer'); setTimeout(() => go('team'), 50); });
+}
+
+/* ---------- AI drafts waiting for approval ---------- */
+function drafts(t) {
+  const s = t.s, list = [
+    { id: 'coach-sh', ag: 'desk', job: 'Campaign coach', who: 'Snowhawks', title: 'Last-48-hours post for the team manager, Fri Dec 4',
+      body: `Snowhawks families: two days left. We're at ${m0(s.raised)} of $750. A Team Freezer Pack sends $20.10 to the team and a Game-Week Meal Pack sends $24.48. Pickup is Wed Dec 9 at the rink, 5:00–6:30. Order by Sunday: jwfoods.com/team/scarborough-snowhawks-u11`,
+      note: "J&W doesn't message families who haven't opted in; the team manager sends this.", ok: 'Approve', okToast: 'Approved. Sent to the Snowhawks team manager to post Fri Dec 4.' },
+    { id: 'coach-ch', ag: 'desk', job: 'Campaign coach', who: 'Cedar Hollow PS', title: 'Behind pace: 47% with 6 days left. Forecast at close about 52 orders, $1,083 (72%).',
+      body: 'Skip a week of cooking and help our school. A Game-Week Meal Pack is 10 cooked meals for $122.40, and $24.48 of it comes to Cedar Hollow. Order by Sunday.',
+      note: 'Newsletter blurb for the parent council to send.', ok: 'Approve', okToast: 'Approved. Newsletter blurb sent to the Cedar Hollow parent council.' },
+    { id: 'drop-ww', ag: 'planner', job: 'Drop and production planner', who: 'Whitby Wolves · Tue Dec 1', title: 'Drop sheet for the Whitby Wolves',
+      body: '29 orders in 29 named bags, 4 coolers. Last stop on GTA 1: arrive 4:15, window 4:30–5:30, about +80 min of van time. Pick list attached. Transactional text to 29 families with the window.',
+      note: 'Transactional text only: pickup window and location, no marketing.', ok: 'Approve and print labels', okToast: 'Approved. 29 bag labels sent to the packing-room printer (demo).' },
+    { id: 'pay-ww', ag: 'desk', job: 'Fundraiser payout statement', who: 'Whitby Wolves', title: 'Payout statement · needs account lead approval',
+      body: '29 orders, sales $4,462.46. Meal Butler $1,352.96 × 20% = $270.60. Butcher $3,109.50 × 12% = $373.14. Total $643.74 by e-transfer to the club treasurer by Tue Dec 15, plus a Long Weekend Box raffle prize ($199 value) at the drop.',
+      note: 'Shares are rounded per item. The account lead approves every payout; Bill or Stavros approve any payout over $5,000.', ok: 'Approve payout', okToast: 'Payout approved: $643.74 to the Whitby Wolves treasurer by Tue Dec 15 (demo).', approver: 'Account lead' },
+    { id: 'life-61', ag: 'lifecycle', job: 'Welcome flow', who: (BASE.optin + t.optins) + ' opted-in buyers', title: 'Fundraiser buyer welcome flow',
+      body: 'Day 2: how to store and reheat. Day 10: $10 off your first regular order of $100+. Day 30: your team still earns 5% through its link for six months after the drop. CASL consent ✓ · unsubscribe ✓.',
+      note: 'Only buyers who said yes at checkout get this.', ok: 'Approve', okToast: 'Approved. Welcome flow scheduled for opted-in buyers.' },
+    { id: 'page-nd', ag: 'desk', job: 'Team page builder', who: 'Markham Northstar Dance', title: 'Team page draft from an application',
+      body: 'Goal $1,500 ≈ 72 orders, about 2.9 per family (25 families). Orders Jan 18–31, drop Fri Feb 5 on GTA 4 at the studio, 4:30–6:00 pm. Claims check ✓ (no salt or sugar claims, Ontario-only note).',
+      note: 'Coordinator checks the page and calls the organizer before it goes live.', ok: 'Approve page', okToast: 'Approved. Markham Northstar Dance page goes live after the coordinator call.' },
+    { id: 'scout-32', ag: 'scout', job: 'Group prospecting', who: 'Jan–Feb season', title: '32 new leads along GTA 1 and GTA 2',
+      body: '32 new leads for Jan–Feb along GTA 1 and GTA 2: minor hockey and ringette teams, school councils and cadet corps in Pickering, Ajax, Whitby and Scarborough. Intro emails drafted to published volunteer contacts with a tasting-tray offer. CASL check ✓. Sends 8 a day once approved.',
+      note: 'Published volunteer contacts only; every email has an unsubscribe.', ok: 'Approve sequence', okToast: 'Approved. Intro emails go out 8 a day from tomorrow (demo).' }
+  ];
+  store.get('apps', []).forEach(a => {
+    const W = WINDOWS[a.win] || WINDOWS.holiday, pf = Math.round(a.orders / Math.max(1, a.fam) * 10) / 10;
+    list.unshift({ id: 'app-' + a.id, ag: 'desk', job: 'Team page builder', who: a.name, title: 'New application from the website · ' + a.city, fresh: true,
+      body: `Goal ${m0(a.goal)} ≈ ${a.orders} orders, about ${pf % 1 === 0 ? pf : pf.toFixed(1)} per family (${a.fam} families). Orders ${W.open} – ${W.close}, ${a.drop.indexOf(' · ') > 0 ? 'drop ' + a.drop + (a.spot ? ' at ' + a.spot : '') : 'no team drop yet: pickup or home delivery'}. Claims check ✓ (no salt or sugar claims, Ontario-only note).`,
+      note: 'Organizer: ' + a.you.replace(/\.+$/, '') + '. Coordinator calls within one business day.', ok: 'Approve page', okToast: 'Approved. ' + a.name + ' page goes live after the coordinator call.' });
+  });
+  return list;
+}
+let editing = null;
+function drawDrafts(t) {
+  const st = store.get('drafts', {}), list = drafts(t);
+  const pend = list.filter(d => !st[d.id] || !st[d.id].st), rej = list.filter(d => st[d.id] && st[d.id].st === 'rejected');
+  const card = d => { const e = st[d.id] || {}, body = e.text || d.body; return `<article class="tf-draft" data-d="${esc(d.id)}">
+    <div class="flex flex-wrap items-center gap-2"><span class="tf-agent">${esc(AGENTS[d.ag])}</span><span class="text-[12.5px] text-tmuted">${esc(d.job)} · ${esc(d.who)}</span>${d.fresh ? '<span class="tf-pill-st st-new">From this demo</span>' : ''}${e.text ? '<span class="tf-pill-st st-open">Edited</span>' : ''}${d.approver ? '<span class="tf-pill-st st-warn">' + esc(d.approver) + ' approval</span>' : ''}</div>
+    <h3 class="font-bold text-[15.5px] text-tnight mt-2.5 leading-snug">${esc(d.title)}</h3>
+    ${editing === d.id ? `<label class="jwc-sr" for="ed-${esc(d.id)}">Edit draft</label><textarea id="ed-${esc(d.id)}">${esc(body)}</textarea>
+      <div class="flex flex-wrap gap-2 mt-3"><button type="button" class="tf-btn tf-btn-navy tf-btn-sm" data-act="save">Save edit</button><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-act="cancel">Cancel</button></div>`
+    : `<blockquote>${esc(body)}</blockquote><p class="text-[12.5px] text-tmuted mt-2">${esc(d.note)}</p>
+      <div class="flex flex-wrap gap-2 mt-3"><button type="button" class="tf-btn tf-btn-turf tf-btn-sm" data-act="ok">${esc(d.ok)}</button><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-act="edit">Edit</button><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-act="rej">Reject</button></div>`}</article>`; };
+  $('#t-drafts').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>AI drafts waiting for you</h2><span class="tf-pill-st ${pend.length ? 'st-warn' : 'st-ok'}">${pend.length} to review</span></div>
+    <p class="text-[13px] text-tmuted mt-1">Agents draft; a named person at J&amp;W approves anything that reaches a family, moves money or commits the plant.</p>
+    <div class="space-y-3 mt-4">${pend.length ? pend.map(card).join('') : '<p class="rounded-xl bg-[#F1F9F4] p-4 text-[14px] text-tturf font-semibold">All caught up. Nothing waiting for approval.</p>'}</div>
+    ${rej.length ? `<details class="mt-4"><summary class="cursor-pointer font-semibold text-[14px] text-tnavy min-h-[40px] flex items-center">Sent back to the agent (${rej.length})</summary><ul class="mt-2 space-y-2">${rej.map(d => `<li class="tf-draft rej flex flex-wrap items-center justify-between gap-2"><span class="text-[13.5px] min-w-0"><b>${esc(AGENTS[d.ag])}</b> · ${esc(d.title)}</span><button type="button" class="tf-btn tf-btn-line tf-btn-sm" data-restore="${esc(d.id)}">Restore</button></li>`).join('')}</ul></details>` : ''}`;
+  const ok = list.filter(d => st[d.id] && st[d.id].st === 'approved');
+  $('#t-approved').innerHTML = `<div class="flex items-center justify-between gap-2"><h2>Approved today</h2><span class="tf-pill-st st-ok">${ok.length}</span></div>
+    ${ok.length ? `<ul class="mt-3 space-y-2">${ok.map(d => `<li class="tf-draft done"><div class="flex justify-between gap-2"><b class="text-[13.5px] leading-snug min-w-0">${esc(d.title)}</b><span class="text-[12px] text-tmuted whitespace-nowrap">${esc(fmtTime(st[d.id].at))}</span></div><p class="text-[12.5px] text-tmuted mt-1">${esc(AGENTS[d.ag])} · ${esc(d.who)}</p><button type="button" class="tf-link text-[13px]" data-undo="${esc(d.id)}">Undo</button></li>`).join('')}</ul>`
+    : '<p class="text-[13.5px] text-tmuted mt-2">Nothing approved yet. Approve a draft and it moves here with the time.</p>'}`;
+  $$('#t-drafts [data-d]').forEach(c => {
+    const id = c.dataset.d, d = list.filter(x => x.id === id)[0];
+    c.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {
+      const all = store.get('drafts', {}), a = b.dataset.act;
+      if (a === 'ok') { all[id] = Object.assign(all[id] || {}, { st: 'approved', at: new Date().toISOString() }); store.set('drafts', all); JWC.toast(d.okToast); }
+      else if (a === 'rej') { all[id] = Object.assign(all[id] || {}, { st: 'rejected', at: new Date().toISOString() }); store.set('drafts', all); JWC.toast('Rejected. Sent back to ' + AGENTS[d.ag] + ' with a note.'); }
+      else if (a === 'edit') { editing = id; drawDrafts(teamTotals()); const ta = $('#ed-' + CSS.escape(id)); if (ta) ta.focus(); return; }
+      else if (a === 'save') { const ta = $('#ed-' + CSS.escape(id)); all[id] = Object.assign(all[id] || {}, { text: ta.value.trim() || d.body }); store.set('drafts', all); editing = null; JWC.toast('Edit saved. Approve when ready.'); }
+      else if (a === 'cancel') { editing = null; }
+      drawDrafts(teamTotals()); drawPay(teamTotals()); /* the payout approval also changes the ledger status */
+    }));
+  });
+  $$('[data-restore], [data-undo]').forEach(b => b.addEventListener('click', () => { const id = b.dataset.restore || b.dataset.undo, all = store.get('drafts', {}); if (all[id]) delete all[id].st; store.set('drafts', all); JWC.toast('Back in the review queue'); drawDrafts(teamTotals()); drawPay(teamTotals()); }));
+}
+const teamTotals = demoTotals;
+
+/* ---------- agents on this play (notes come from site-data.js) ---------- */
+function drawAgents() {
+  const play = JWC.play() || {}, notes = play.agentNotes || {};
+  $('#t-agents').innerHTML = `<h2>Agents on this play</h2><ul class="mt-3 space-y-2.5">${Object.keys(AGENTS).map(k => `<li><span class="tf-agent">${esc(AGENTS[k])}</span><p class="text-[13px] text-[#33404E] mt-1.5 leading-snug">${esc(notes[AGENT_IDS[k]] || '')}</p></li>`).join('')}</ul>`;
+}
+
+/* ---------- production and route impact ---------- */
+function drawProd(t) {
+  const c = orderCounts(t.s.os), meta = t.s.meta, plus = v => v ? ` <span class="tf-pill-st st-new">+${v} demo</span>` : '';
+  let drop = 0, pick = 0, home = 0; t.s.os.forEach(o => { const md = orderMode(o, meta); if (md === 'drop') drop++; else if (md === 'pickup') pick++; else home++; });
+  const F = 32 + c['p7-freezer-pack'], G = 38 + c['p7-gameweek-pack'];
+  const rows = [
+    ['Team Freezer Packs', '11', '32' + plus(c['p7-freezer-pack'])],
+    ['Game-Week Meal Packs', '10', '38' + plus(c['p7-gameweek-pack'])],
+    ['Kids Favourite Combos', '5', '20' + plus(c['kids-favourite-combo-special'])],
+    ['Long Weekend Boxes', '3 + 1 raffle', '7 + 2 raffle' + plus(c['summer-bbq-box-special'])],
+    ['Cases and add-ons', '1 marinated chicken case, 1 no-salt souvlaki case, 6 beef chili, 4 lemon chicken soup, 4 egg white bites', 'about 7 orders' + plus(c.addons)],
+    ['Orders', '29', 'about ' + (104 + t.n) + plus(t.n)]
+  ];
+  const cook = [['Teriyaki Chicken, Green Beans & Rice', 3], ['Tenders, Broccoli & Sweet Potato', 3], ['Jerk Chicken, Green Beans & Sweet Potato', 2], ['Turkey, Spinach & Rice', 2], ['Egg White Bites', 2]];
+  $('#t-prod').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Production and route impact</h2><span class="flex gap-2 items-center"><span class="tf-agent">${esc(AGENTS.planner)}</span><span class="tf-samp">Sample</span></span></div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-4">
+      <div class="lg:col-span-7 min-w-0"><div class="jwc-scroll-x"><table class="tf-t tf-stack tf-wrap-th"><thead><tr><th style="min-width:130px">Pack</th><th>Tue Dec 1 (Whitby Wolves, final)</th><th>Week of Dec 7 (3 campaigns, forecast at close)</th></tr></thead><tbody>
+        ${rows.map(r => `<tr><td class="lead" data-l="Pack"><b>${esc(r[0])}</b></td><td data-l="Tue Dec 1, final">${esc(r[1])}</td><td data-l="Week of Dec 7, forecast"><span>${r[2]}</span></td></tr>`).join('')}
+      </tbody></table></div></div>
+      <div class="lg:col-span-5 min-w-0 space-y-4">
+        <div class="rounded-xl bg-tice p-4"><h3 class="font-bold text-[14.5px]">Cook plan Mon Dec 7 <span class="font-normal text-tmuted">(from ${G} Game-Week packs)</span></h3>
+          <ul class="mt-2 space-y-1 text-[13.5px]">${cook.map(x => `<li class="flex justify-between gap-3"><span>${esc(x[0])}</span><b class="tnum">${G * x[1]}</b></li>`).join('')}</ul></div>
+        <div class="rounded-xl bg-tice p-4"><h3 class="font-bold text-[14.5px]">Raw for the week</h3><p class="text-[13.5px] mt-1.5 tnum">${F} chicken breast cases (${F * 4} kg) · ${F} burger 25-packs · ${F * 5} lb ground beef</p></div>
+        <div class="rounded-xl bg-tice p-4"><h3 class="font-bold text-[14.5px]">Routes</h3><ul class="mt-2 space-y-1.5 text-[13.5px]">
+          <li>Tue Dec 8 GTA 1 +1 drop (Ajax cadet hall, 6:00–7:00 pm, +90 min, 1.5 h driver overtime)</li>
+          <li>Wed Dec 9 GTA 2 +1 drop (Snowhawks rink, 5:00–6:30 pm, +100 min)${drop ? ` <span class="tf-pill-st st-new">+${drop} named bag${drop > 1 ? 's' : ''}</span>` : ''}</li>
+          <li>Brimley pickups about ${40 + pick} (Cedar Hollow)${plus(pick)}</li>
+          <li>Home deliveries about ${12 + home} on the usual routes${plus(home)}</li></ul></div>
+      </div>
+    </div>
+    <blockquote class="mt-4 rounded-xl border-l-4 border-tslate bg-white p-3.5 text-[14px] text-[#26323F]" style="border:1px solid #D9E2EC;border-left:4px solid #5B5A8C">Planner note: “All of it is pre-sold, so nothing is cooked on spec. Order about 150 kg of chicken breast and 160 lb of ground beef by Thu Dec 3.”</blockquote>`;
+}
+
+/* ---------- payout ledger ---------- */
+function drawPay(t) {
+  const s = t.s, rows = [
+    ['Whitby Wolves Ringette U14', '29', 4462.46, 643.74, 'Raffle box', 'Statement drafted · account lead approval · pay by Tue Dec 15', 'warn'],
+    [TEAM.full, s.orders + ' (open)', s.sales, s.raised, 'Raffle box earned, talk to book', 'Open', 'open'],
+    ['Cedar Hollow PS Parent Council', '34 (open)', 4687.02, 707.80, 'Raffle box earned', 'Open', 'open'],
+    ['1st Ajax Lakeshore Cadets', '12 (open)', 1724.98, 260.28, 'Talk Thu Dec 3', 'Open', 'open']
+  ];
+  const paid = (store.get('drafts', {})['pay-ww'] || {}).st === 'approved';
+  if (paid) { rows[0][5] = 'Approved · e-transfer by Tue Dec 15'; rows[0][6] = 'ok'; }
+  const tot = { o: BASE.orders + t.n, s: BASE.sales + t.sub, g: BASE.owed + t.add };
+  $('#t-pay').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Payout ledger</h2><span class="tf-samp">Sample</span></div>
+    <div class="jwc-scroll-x mt-3"><table class="tf-t tf-stack"><thead><tr><th>Group</th><th class="num">Orders</th><th class="num">Sales</th><th class="num">To group</th><th>Extras</th><th>Status</th></tr></thead><tbody>
+    ${rows.map((r, i) => `<tr><td class="lead" data-l="Group"><b>${esc(r[0])}</b></td><td class="num" data-l="Orders">${esc(r[1])}</td><td class="num" data-l="Sales">${m2(r[2])}</td><td class="num" data-l="To group"><span><b>${m2(r[3])}</b>${i ? ' so far' : ''}</span></td><td data-l="Extras" class="text-[13px]">${esc(r[4])}</td><td data-l="Status"><span class="tf-pill-st st-${r[6]}">${esc(r[5])}</span></td></tr>`).join('')}
+    </tbody><tfoot><tr><td class="lead" data-l="Total">Total</td><td class="num" data-l="Orders">${tot.o}</td><td class="num" data-l="Sales">${m2(tot.s)}</td><td class="num" data-l="To group">${m2(tot.g)}</td><td data-l="Extras"></td><td data-l="Status"></td></tr></tfoot></table></div>
+    <p class="text-[12.5px] text-tmuted mt-3">Statements drafted by ${esc(AGENTS.desk)}. The account lead approves each payout; any over $5,000 also needs Bill or Stavros.</p>`;
+}
+
+/* ---------- new customers from fundraisers ---------- */
+function drawFunnel(t) {
+  const buyers = BASE.orders + t.n, nw = BASE.newBuyers + t.n, opt = BASE.optin + t.optins, target = Math.round(nw * 0.12), owed = BASE.owed + t.add;
+  const steps = [['Buyers', buyers], ['New to J&W', nw, Math.round(nw / buyers * 100) + '%'], ['Opted in', opt], ['Welcome flow scheduled', opt], ['Target: regular order within 6 months (12% of new households)', target]];
+  $('#t-funnel').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>New customers from fundraisers</h2><span class="tf-samp">Sample</span></div>
+    <p class="text-[13px] text-tmuted mt-1">Pilot so far.</p>
+    <div class="tf-funnel mt-3">${steps.map((x, i) => `<div><span class="bar" style="width:${Math.max(14, Math.round(x[1] / buyers * 62))}%;${i === 4 ? 'background:#237A4B' : i ? '' : 'background:#0E1E36'}">${x[1]}${x[2] ? ' · ' + x[2] : ''}</span><span class="lab">${esc(x[0])}</span></div>`).join('')}</div>
+    <p class="mt-4 text-[14px] leading-snug">Group share per new household so far: <b class="tnum">${m0(owed / nw)}</b> (${m0(owed)} ÷ ${nw}). Paid ads cost $60–120 per new customer (estimate).</p>`;
+}
+
+/* ---------- next season pipeline ---------- */
+function drawPipe() {
+  const apps = store.get('apps', []), talks = store.get('talks', []), jerky = store.get('jerky', 0);
+  const base = [['Markham Northstar Dance', 'Dance', 'Draft ready', 'st-open'], ['Pickering Pond Kings U13', 'Hockey', 'Call booked', 'st-open'], ['Milner Avenue Faith Centre youth group', 'Faith', 'New', 'st-new']];
+  $('#t-pipe').innerHTML = `<div class="flex flex-wrap items-center justify-between gap-2"><h2>Next season pipeline</h2><span class="flex gap-2 items-center"><span class="tf-agent">${esc(AGENTS.scout)}</span><span class="tf-samp">Sample</span></span></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+      <div class="tf-kpi"><small>Applications</small><b>${3 + apps.length}</b><span>${apps.length ? apps.length + ' from this demo' : 'From the website form'}</span></div>
+      <div class="tf-kpi"><small>Leads</small><b>32</b><span>${esc(AGENTS.scout)} · Jan–Feb, GTA 1 and GTA 2</span></div>
+      <div class="tf-kpi"><small>Re-runs booked</small><b>1</b><span>Whitby Wolves, spring Apr 19 – May 2</span></div>
+      <div class="tf-kpi"><small>Talks and jerky interest</small><b>${talks.length + 1} · ${jerky}</b><span>Talk requests · jerky emails (demo)</span></div>
+    </div>
+    <div class="jwc-scroll-x mt-4"><table class="tf-t tf-stack"><thead><tr><th>Group</th><th>Type · city</th><th>Window</th><th>Goal</th><th>Status</th></tr></thead><tbody>
+      ${apps.map(a => `<tr><td class="lead" data-l="Group"><b>${esc(a.name)}</b> <span class="tf-pill-st st-new">From this demo</span></td><td data-l="Type · city">${esc(a.type)} · ${esc(a.city)}</td><td data-l="Window">${esc((WINDOWS[a.win] || {}).label || '')}</td><td data-l="Goal" class="tnum">${m0(a.goal)} · ${a.orders} orders</td><td data-l="Status"><span class="tf-pill-st st-warn">Needs coordinator check</span></td></tr>`).join('')}
+      ${base.map(b => `<tr><td class="lead" data-l="Group"><b>${esc(b[0])}</b></td><td data-l="Type · city">${esc(b[1])}</td><td data-l="Window">${b[0].indexOf('Markham') === 0 ? 'Winter 2027 · Jan 18 – 31' : 'To confirm'}</td><td data-l="Goal" class="tnum">${b[0].indexOf('Markham') === 0 ? '$1,500 · 72 orders' : 'To set'}</td><td data-l="Status"><span class="tf-pill-st ${b[3]}">${esc(b[2])}</span></td></tr>`).join('')}
+      ${talks.map(x => `<tr><td class="lead" data-l="Group"><b>Coach talk request</b> <span class="tf-pill-st st-new">From this demo</span></td><td data-l="Type · city">${esc(x.where)}</td><td data-l="Window">${esc(niceDate(x.date))} · ${esc(x.time)}</td><td data-l="Goal">At $1,500 in sales</td><td data-l="Status"><span class="tf-pill-st st-warn">Call to confirm</span></td></tr>`).join('')}
+    </tbody></table></div>`;
+}
+
+function drawTeam() {
+  const t = demoTotals();
+  drawKPIs(t); drawCamps(t); drawLive(t); drawDrafts(t); drawAgents(); drawProd(t); drawPay(t); drawFunnel(t); drawPipe();
+}
+
+/* ---------- boot ---------- */
+renderGlance(); renderWho(); renderPacks(); renderAddons(); drawShout(); initCalc(); renderSegs(); initForm(); initMisc(); watchTeam();
+{ const ci = JWC.cart.items(); if (ci.some(i => i.note !== noteFor(i))) JWC.cart.save(ci.map(i => Object.assign(i, { note: noteFor(i) }))); } /* older carts kept a total, not per-unit, share note */
+JWC.cart.onChange(drawCartBits); drawCartBits(); drawTeam();
+document.addEventListener('jwc:order', e => onOrder(e.detail));
+document.addEventListener('jwc:view', e => { drawTeam(); drawCartBits(); const sk = document.querySelector('body > a.skip-link'); if (sk && e.detail !== 'team') sk.setAttribute('href', '#main'); }); /* concept.js points the skip link at the team view; point it back at the customer page */
+})();
+</script>
+</body>
+</html>

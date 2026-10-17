@@ -1,0 +1,1944 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Butcher Club · J&amp;W Foods concept</title>
+<meta name="description" content="Concept: the J&amp;W Butcher Club, a points-built raw-meat box from J&amp;W's Scarborough plant, brought on your J&amp;W route day with a free Meal Butler cooked chicken pack in every box.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  corePlugins: { preflight: false },
+  theme: { extend: {
+    colors: { navy: '#154D8E', deep: '#0F2E52', cream: '#F6F0E4', ink: '#1F2328', ox: '#8A2E2A', brass: '#C8A15A', slate: '#5B5A8C', sky: '#7FB3D5', hair: '#E2D8C4', tick: '#2E7D4F', muted: '#5E5A52' },
+    fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Inter', 'system-ui', 'sans-serif'], cond: ['"Barlow Condensed"', 'Inter', 'sans-serif'] }
+  } }
+};
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<style>
+/* ---------- tokens + small reset (Tailwind preflight is off so the shared chrome keeps its own button styles) ---------- */
+:root { --navy:#154D8E; --deep:#0F2E52; --cream:#F6F0E4; --ink:#1F2328; --ox:#8A2E2A; --ox-d:#6E2320; --brass:#C8A15A; --slate:#5B5A8C; --sky:#7FB3D5; --hair:#E2D8C4; --tick:#2E7D4F; --muted:#5E5A52; --kraft:#CDB78F; }
+*, ::before, ::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: var(--hair); }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 400 16px/1.55 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, p, figure, dl, dd, blockquote, ol, ul, fieldset { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+fieldset { padding: 0; min-width: 0; }
+legend { padding: 0; }
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; margin: 0; }
+button { background: transparent; cursor: pointer; padding: 0; line-height: inherit; }
+a { color: inherit; }
+[hidden] { display: none !important; }
+table { border-collapse: collapse; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.dark :focus-visible, .bbar :focus-visible, .bp-top :focus-visible { outline-color: var(--sky); }
+a.skip-link:focus { position: fixed; left: 8px; top: 8px; z-index: 200; width: auto; height: auto; margin: 0; clip: auto; overflow: visible; white-space: nowrap; background: #fff; color: var(--ink); padding: 10px 14px; border-radius: 10px; font-weight: 600; text-decoration: none; box-shadow: 0 8px 24px -8px rgba(0,0,0,.35); }
+.sr { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.f-display { font-family: Fraunces, Georgia, serif; font-optical-sizing: auto; }
+.f-cond { font-family: "Barlow Condensed", Inter, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+section[id], .anchor { scroll-margin-top: calc(var(--jwc-barh, 0px) + 76px); }
+.dark { background: var(--deep); color: #fff; }
+.eyebrow { font-family: "Barlow Condensed", Inter, sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .13em; font-size: 14px; line-height: 1.2; }
+.h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 32px; line-height: 1.08; letter-spacing: -.01em; }
+@media (min-width: 768px) { .h2 { font-size: 42px; } }
+.lede { font-size: 17px; color: var(--muted); max-width: 640px; margin-top: 10px; }
+.dark .lede { color: rgba(255,255,255,.8); }
+.band { padding: 56px 0; }
+@media (min-width: 768px) { .band { padding: 80px 0; } }
+.bg-white-b { background: #fff; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; font: 600 15.5px/1.15 Inter, sans-serif; text-decoration: none; border: 1.5px solid transparent; text-align: center; transition: background-color .15s, border-color .15s, color .15s; }
+.btn-ox { background: var(--ox); color: #fff; }
+.btn-ox:hover { background: var(--ox-d); }
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-navy:hover { background: var(--deep); }
+.btn-light { background: #fff; color: var(--deep); }
+.btn-light:hover { background: var(--cream); }
+.btn-line { background: #fff; border-color: var(--navy); color: var(--navy); }
+.btn-line:hover { background: #EEF3FA; }
+.btn-ghost { border-color: rgba(255,255,255,.6); color: #fff; }
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.btn-sm { min-height: 40px; padding: 0 16px; font-size: 14px; }
+.btn-block { width: 100%; }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.link { color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 15px; border-radius: 999px; border: 1.5px solid var(--hair); background: #fff; color: var(--ink); font: 600 14px/1.1 Inter, sans-serif; white-space: nowrap; }
+.chip:hover { border-color: var(--navy); }
+.chip[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.chip small { font-weight: 500; opacity: .8; }
+.tag { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 3px 9px; font: 600 12.5px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
+.tag-concept { background: #E7EEF8; color: var(--deep); }
+.tag-ox { background: var(--ox); color: #fff; }
+.tag-brass { background: var(--brass); color: var(--deep); }
+.tag-slate { background: var(--slate); color: #fff; }
+.tag-sky { background: #E3EFF7; color: var(--deep); }
+.tag-navy { background: var(--deep); color: #fff; }
+.pts { display: inline-flex; align-items: center; border-radius: 999px; padding: 3px 9px; background: var(--deep); color: #fff; font: 600 13px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.lbt { display: inline-flex; border-radius: 6px; padding: 2px 7px; background: var(--cream); border: 1px solid var(--hair); color: var(--ink); font: 600 13px/1.25 "Barlow Condensed", Inter, sans-serif; letter-spacing: .04em; white-space: nowrap; }
+.card { background: #fff; border: 1px solid var(--hair); border-radius: 14px; }
+.inp { width: 100%; min-height: 48px; border: 1.5px solid #CFC3AA; border-radius: 999px; padding: 0 18px; background: #fff; color: var(--ink); font-size: 16px; }
+.inp:focus { outline: 3px solid var(--sky); outline-offset: 1px; border-color: var(--navy); }
+.sel { width: 100%; min-height: 40px; border: 1.5px solid #CFC3AA; border-radius: 10px; padding: 0 10px; background: #fff; color: var(--ink); font-size: 14px; }
+.small { font-size: 13px; color: var(--muted); line-height: 1.45; }
+.dark .small { color: rgba(255,255,255,.72); }
+.ico { width: 18px; height: 18px; flex: none; }
+
+/* header */
+.bc-head { position: sticky; top: var(--jwc-barh, 0px); z-index: 50; background: rgba(246,240,228,.97); border-bottom: 1px solid var(--hair); }
+.navl { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 999px; font: 600 14.5px/1 Inter, sans-serif; color: var(--ink); text-decoration: none; }
+.navl:hover { background: #fff; color: var(--navy); }
+.hbtn { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; min-width: 40px; justify-content: center; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--hair); background: #fff; font: 600 14px/1 Inter, sans-serif; color: var(--ink); }
+.hbtn:hover { border-color: var(--navy); }
+.hbtn .n { background: var(--ox); color: #fff; border-radius: 999px; min-width: 20px; height: 20px; padding: 0 5px; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; }
+.memdot { width: 8px; height: 8px; border-radius: 999px; background: var(--tick); }
+#mnav { border-top: 1px solid var(--hair); background: var(--cream); }
+#mnav a, #mnav button { display: flex; align-items: center; width: 100%; min-height: 48px; padding: 0 16px; border-bottom: 1px solid var(--hair); font-weight: 600; text-decoration: none; text-align: left; }
+
+.bc-logo { width: 40px; height: auto; flex: none; }
+.bc-brand { font-size: 18px; margin-top: 2px; }
+@media (min-width: 640px) { .bc-logo { width: 46px; } .bc-brand { font-size: 21px; } }
+.lid.instant, .lid.instant .seal { transition: none !important; animation: none !important; }
+/* hero */
+.hero { position: relative; overflow: hidden; background: radial-gradient(1200px 500px at 80% 0%, #17406F 0%, var(--deep) 60%); }
+.routebox { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.16); border-radius: 18px; padding: 16px; max-width: 560px; }
+.routeout { margin-top: 10px; font-size: 15px; line-height: 1.45; color: rgba(255,255,255,.88); min-height: 1px; }
+.routeout b { color: #fff; }
+.routeout .ok { color: var(--sky); }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 26px; font-size: 14px; color: rgba(255,255,255,.88); }
+.trust li { display: inline-flex; align-items: center; gap: 7px; }
+.trust svg { color: var(--brass); }
+.heroart { position: relative; width: min(100%, 430px); aspect-ratio: 1 / 1; margin: 0 auto; }
+.heroart .hring { position: absolute; inset: 0; }
+.heroart .ph { position: absolute; border-radius: 999px; overflow: hidden; background: #0B2342; box-shadow: 0 24px 50px -24px rgba(0,0,0,.7); }
+.heroart .ph img { width: 100%; height: 100%; object-fit: cover; }
+.heroart .ph-main { left: 17%; top: 12%; width: 66%; height: 66%; border: 4px solid var(--brass); }
+.heroart .ph-a { left: 5%; bottom: 7%; width: 34%; height: 34%; border: 4px solid var(--deep); }
+.heroart .ph-b { right: 5%; bottom: 7%; width: 34%; height: 34%; border: 4px solid var(--slate); }
+.heroart .freetag { position: absolute; right: 7%; bottom: 3%; z-index: 2; }
+.heroart .cap { position: absolute; left: 50%; top: 2%; transform: translateX(-50%); z-index: 2; white-space: nowrap; }
+
+/* ribbon */
+.ribbon { background: var(--ox); color: #fff; font-size: 15px; }
+.ribbon a { color: #fff; }
+
+/* pillars + steps */
+.pillar { padding: 22px; }
+.pillar .pi { width: 46px; height: 46px; border-radius: 12px; background: #E7EEF8; color: var(--navy); display: grid; place-items: center; }
+.pillar h3, .step h3 { font: 600 19px/1.25 Fraunces, Georgia, serif; margin-top: 14px; }
+.pillar p, .step p { margin-top: 6px; color: var(--muted); font-size: 15px; }
+.step { position: relative; padding: 22px 22px 22px 22px; }
+.step .num { width: 40px; height: 40px; border-radius: 999px; background: var(--deep); color: #fff; display: grid; place-items: center; font: 600 18px/1 Fraunces, serif; }
+
+/* tiers */
+.tier { position: relative; display: flex; flex-direction: column; background: #fff; border: 2px solid var(--hair); border-radius: 16px; padding: 24px 20px 20px; transition: border-color .15s, box-shadow .15s; }
+.tier.sel { border-color: var(--navy); box-shadow: 0 0 0 4px rgba(21,77,142,.14); }
+.tier .badge { position: absolute; top: -13px; left: 18px; }
+.tier .pr { font: 600 40px/1 Fraunces, Georgia, serif; color: var(--ox); }
+.tier ul.f li { display: flex; gap: 8px; align-items: flex-start; font-size: 15px; padding: 3px 0; }
+.tier ul.f svg { color: var(--tick); margin-top: 3px; }
+.tier .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; margin: 14px 0; padding: 12px 0; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); font-size: 14.5px; }
+.tier .meta b { display: block; font: 600 18px/1.15 Inter, sans-serif; }
+.tier .meta span { color: var(--muted); font-size: 13px; }
+
+/* free item */
+.fopt { position: relative; display: flex; flex-direction: column; border-radius: 16px; border: 2px solid var(--hair); background: #fff; overflow: hidden; cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+.fopt.on { border-color: var(--navy); box-shadow: 0 0 0 4px rgba(21,77,142,.14); }
+.fopt.cooked { background: var(--slate); color: #fff; border-color: var(--slate); }
+.fopt.cooked.on { border-color: var(--brass); box-shadow: 0 0 0 4px rgba(200,161,90,.35); }
+.fopt .fimg { aspect-ratio: 16 / 9; background: #EDE5D3; overflow: hidden; }
+.fopt .fimg img { width: 100%; height: 100%; object-fit: cover; }
+.fopt .fb { padding: 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.fopt h3 { font: 600 19px/1.25 Fraunces, Georgia, serif; }
+.fopt .radio { position: absolute; top: 12px; right: 12px; width: 26px; height: 26px; border-radius: 999px; background: #fff; border: 2px solid var(--hair); display: grid; place-items: center; }
+.fopt.on .radio::after { content: ""; width: 12px; height: 12px; border-radius: 999px; background: var(--navy); }
+.fopt input[type=radio] { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.fopt:has(input:focus-visible) { outline: 3px solid var(--navy); outline-offset: 3px; }
+.fopt.cooked .sel { border-color: rgba(255,255,255,.4); }
+.fopt.cooked label { color: #fff; }
+.mblogo { width: 64px; height: 42px; border-radius: 8px; background: #fff; object-fit: contain; padding: 2px; }
+
+/* builder */
+.presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (min-width: 900px) { .presets { display: flex; flex-wrap: wrap; } }
+.preset { display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; min-height: 52px; padding: 7px 14px; border-radius: 14px; border: 1.5px solid var(--hair); background: #fff; text-align: left; }
+.preset:hover { border-color: var(--navy); }
+.preset[aria-pressed="true"] { border-color: var(--navy); background: #EEF3FA; }
+.preset b { font-size: 14.5px; line-height: 1.2; }
+.preset small { font-size: 12.5px; color: var(--muted); line-height: 1.2; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.menu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 640px) { .menu { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; } }
+.mcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--hair); border-radius: 14px; overflow: hidden; min-width: 0; transition: border-color .15s, box-shadow .15s; }
+.mcard.in { border-color: var(--navy); box-shadow: 0 0 0 2px rgba(21,77,142,.2); }
+.mcard, #bpanel { scroll-margin-top: calc(var(--jwc-barh, 0px) + 80px); }
+.mcard .ph { position: relative; aspect-ratio: 4 / 3; background: #EDE5D3; }
+.mcard .ph img { width: 100%; height: 100%; object-fit: cover; }
+.mcard .ph .pts { position: absolute; top: 8px; left: 8px; }
+.mcard .ph .cotm { position: absolute; bottom: 8px; left: 8px; }
+.mcard .ph .qbadge { position: absolute; top: 8px; right: 8px; min-width: 28px; height: 28px; border-radius: 999px; background: var(--ox); color: #fff; display: grid; place-items: center; font: 700 13px/1 Inter, sans-serif; padding: 0 7px; }
+.mc-b { padding: 11px 11px 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+.mc-n { font: 600 15px/1.25 Inter, sans-serif; }
+.mc-t { font-size: 11.5px; line-height: 1.3; color: #6B675E; overflow-wrap: anywhere; }
+.mc-m { font-size: 13.5px; color: var(--ink); line-height: 1.35; }
+.mc-m b { color: var(--ox); }
+.mc-ctrl { margin-top: auto; padding-top: 4px; }
+.seg { display: inline-flex; border: 1px solid var(--hair); border-radius: 999px; padding: 2px; background: var(--cream); max-width: 100%; }
+.seg button { min-height: 36px; min-width: 40px; padding: 0 8px; border-radius: 999px; font: 600 13.5px/1 Inter, sans-serif; color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+.seg-l { font-size: 11.5px; color: var(--muted); font-weight: 600; }
+.addb { width: 100%; min-height: 44px; border-radius: 999px; border: 1.5px solid var(--navy); color: var(--navy); background: #fff; font: 600 14.5px/1 Inter, sans-serif; }
+.addb:hover { background: var(--navy); color: #fff; }
+.stepper { display: flex; align-items: center; justify-content: space-between; border-radius: 999px; background: var(--navy); color: #fff; min-height: 44px; }
+.stepper button { width: 44px; height: 44px; border-radius: 999px; font: 600 22px/1 Inter, sans-serif; color: #fff; }
+.stepper button:hover { background: rgba(255,255,255,.14); }
+.stepper output { font: 700 15px/1 Inter, sans-serif; }
+
+/* box panel (the wow) */
+.bpanel { background: #fff; border: 1px solid var(--hair); border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px -30px rgba(15,46,82,.5); }
+@media (min-width: 1024px) { .bpanel { position: sticky; top: calc(var(--jwc-barh, 0px) + 80px); } }
+.bp-top { background: var(--deep); color: #fff; padding: 16px 16px 14px; }
+.meter { position: relative; height: 12px; border-radius: 999px; background: rgba(255,255,255,.16); overflow: hidden; margin-top: 10px; }
+.meter i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--sky); border-radius: 999px; transition: width .35s ease; }
+.meter i.over { background: var(--brass); }
+.meter b { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; opacity: .7; }
+.bp-live { margin-top: 8px; font: 600 15px/1.35 "Barlow Condensed", Inter, sans-serif; letter-spacing: .05em; color: var(--sky); text-transform: uppercase; }
+.bbox { position: relative; margin: 14px; border-radius: 14px; background: var(--kraft); padding: 7px; }
+.bbox-in { position: relative; border-radius: 9px; background: linear-gradient(180deg, #0D2A4B, #0A2240); padding: 7px; min-height: 196px; overflow: hidden; box-shadow: inset 0 0 0 1.5px rgba(127,179,213,.45), inset 0 8px 18px rgba(0,0,0,.35); }
+.bbox-in::before { content: ""; position: absolute; inset: 4px; border-radius: 7px; border: 1px dashed rgba(127,179,213,.35); pointer-events: none; }
+.tiles { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: 36px; grid-auto-flow: dense; gap: 4px; }
+.tile { position: relative; border-radius: 6px; overflow: hidden; background: #244A75; min-width: 0; }
+.tile img { width: 100%; height: 100%; object-fit: cover; }
+.tile span { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 5px 3px; font: 600 10.5px/1.15 Inter, sans-serif; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.78)); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.t11 span { display: none; }
+.tile em { font-style: normal; }
+.tile.new { animation: tilein .45s cubic-bezier(.2,.9,.3,1.3); }
+@keyframes tilein { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.t21 { grid-column: span 2; } .t22 { grid-column: span 2; grid-row: span 2; } .t32 { grid-column: span 3; grid-row: span 2; } .t33 { grid-column: span 3; grid-row: span 3; }
+.tile.free { grid-column: span 2; grid-row: span 2; order: -1; background: var(--slate); box-shadow: inset 0 0 0 2px var(--brass); }
+.tile.free img { opacity: .55; }
+.tile.free .rib { position: absolute; left: 5px; top: 5px; padding: 2px 6px; border-radius: 4px; background: var(--brass); color: var(--deep); font: 600 10.5px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+.tile.more { display: grid; place-items: center; background: rgba(127,179,213,.18); color: #fff; font: 700 13px/1 Inter, sans-serif; }
+.bbox-empty { grid-column: 3 / -1; grid-row: span 2; display: flex; align-items: center; padding: 6px 8px; color: rgba(255,255,255,.82); font-size: 13px; line-height: 1.35; border: 1px dashed rgba(127,179,213,.45); border-radius: 6px; }
+.lid { position: absolute; inset: 0; z-index: 3; border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-align: center;
+  background: repeating-linear-gradient(90deg, rgba(0,0,0,.025) 0 2px, transparent 2px 7px), linear-gradient(180deg, #F3E8D2, #E8D9BC); color: var(--deep);
+  transform: translateY(-104%); visibility: hidden; transition: transform .7s cubic-bezier(.2,.8,.2,1), visibility 0s linear .7s; box-shadow: 0 10px 24px -10px rgba(0,0,0,.45); }
+.lid::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 26px; transform: translateY(-50%); background: rgba(21,77,142,.12); }
+.lid.on { transform: none; visibility: visible; transition: transform .7s cubic-bezier(.2,.8,.2,1), visibility 0s; }
+.lid > * { position: relative; }
+.lid .seal { width: 112px; height: 112px; }
+.lid.on .seal { animation: stamp .5s .55s both cubic-bezier(.2,.9,.3,1.4); }
+@keyframes stamp { from { transform: scale(1.6) rotate(-14deg); opacity: 0; } to { transform: rotate(-6deg); opacity: 1; } }
+.lid .lidt { font: 600 17px/1.2 Fraunces, Georgia, serif; }
+.blines { padding: 0 16px; }
+.blines div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--hair); font-size: 14.5px; }
+.blines dt { color: var(--muted); }
+.blines dd { font-weight: 600; text-align: right; }
+.blines .yp dd { color: var(--ox); font-size: 16px; }
+.bmsg { margin: 12px 16px 0; padding: 10px 12px; border-radius: 12px; font-size: 14px; line-height: 1.4; background: #EEF3FA; color: var(--deep); }
+.bmsg.over { background: #FBF1DC; color: #6B4600; }
+.bmsg.full { background: #E3F1E8; color: #1F5E3A; }
+.miniTier { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 10px; }
+.miniTier button { min-height: 44px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,.35); color: #fff; font: 600 13px/1.2 Inter, sans-serif; padding: 4px; }
+.miniTier button:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.xcard { display: flex; gap: 12px; align-items: center; padding: 10px; background: #fff; border: 1px solid var(--hair); border-radius: 14px; min-width: 0; }
+.xcard img { width: 72px; height: 72px; border-radius: 10px; object-fit: cover; flex: none; background: #EDE5D3; }
+.xcard .xb { min-width: 0; flex: 1; }
+.xcard .xc { width: 124px; flex: none; }
+
+/* sticky box bar (mobile) */
+.bbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; background: var(--deep); color: #fff; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -12px 30px -14px rgba(0,0,0,.5); }
+.bbar .meter { height: 6px; margin-top: 6px; }
+@media (min-width: 1024px) { .bbar { display: none !important; } }
+@media (max-width: 1023px) {
+  body.bc-hasbar .jwc-chat-fab { bottom: 86px; }
+  body.bc-hasbar .jwc-cart-fab { bottom: 148px; }
+  body.bc-hasbar .jwc-toasts { bottom: 92px; }
+}
+
+/* comparison */
+.cmp { width: 100%; background: #fff; color: var(--ink); border-radius: 16px; overflow: hidden; }
+.cmp th, .cmp td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--hair); font-size: 15px; line-height: 1.4; }
+.cmp thead th { font: 600 14px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: #FBF8F2; }
+.cmp thead th.jw { color: var(--navy); }
+.cmp td.jw { background: #F1F6FC; font-weight: 600; }
+.cmp tbody tr { cursor: pointer; }
+.cmp tbody tr:hover td, .cmp tbody tr:hover th { background: #F7F2E8; }
+.cmp tbody tr:hover td.jw { background: #E6EFF9; }
+.cmp .rowb { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; text-align: left; font: 600 15px/1.3 Inter, sans-serif; color: var(--ink); min-height: 40px; }
+.cmp .rowb .how { flex: none; display: inline-flex; align-items: center; gap: 4px; color: var(--navy); font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.cv { display: flex; gap: 7px; align-items: flex-start; }
+.cv svg { margin-top: 2px; }
+.cv .y { color: var(--tick); } .cv .n { color: #8A847A; } .cv .p { color: #8A847A; }
+@media (max-width: 767px) {
+  .cmp thead { display: none; }
+  .cmp, .cmp tbody, .cmp tr, .cmp td, .cmp th { display: block; width: 100%; }
+  .cmp tr { border-bottom: 6px solid var(--deep); }
+  .cmp tbody tr:last-child { border-bottom: 0; }
+  .cmp th { border-bottom: 0; padding-bottom: 4px; background: #FBF8F2; }
+  .cmp td { padding: 8px 16px; }
+  .cmp td::before { content: attr(data-l); display: block; font: 600 12.5px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+  .cmp td.jw::before { color: var(--navy); }
+}
+
+/* shares */
+.share { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--hair); border-radius: 16px; overflow: hidden; }
+.share .ph { position: relative; aspect-ratio: 16 / 10; background: #EDE5D3; }
+.share .ph img { width: 100%; height: 100%; object-fit: cover; }
+.share .ph .tag { position: absolute; top: 10px; left: 10px; }
+.share .sb { padding: 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.share h3 { font: 600 22px/1.2 Fraunces, Georgia, serif; }
+.share .pr { font: 600 26px/1.1 Fraunces, Georgia, serif; color: var(--ox); }
+.share ul li { font-size: 14.5px; padding: 2px 0; display: flex; gap: 8px; }
+.share ul li::before { content: ""; width: 5px; height: 5px; border-radius: 999px; background: var(--navy); margin-top: 9px; flex: none; }
+.pool { font-size: 13.5px; background: #EEF3FA; color: var(--deep); border-radius: 10px; padding: 8px 10px; }
+.pool.full { background: #E3F1E8; color: #1F5E3A; }
+
+/* cut sheet + modal pieces */
+.cs-f { margin-top: 14px; }
+.cs-f legend { font: 600 14px/1.3 Inter, sans-serif; margin-bottom: 6px; }
+.cs-f legend small { font-weight: 500; color: var(--muted); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { position: relative; display: inline-flex; }
+.pill input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.pill span { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--hair); background: #fff; font: 600 14px/1 Inter, sans-serif; cursor: pointer; }
+.pill input:checked + span { background: var(--navy); border-color: var(--navy); color: #fff; }
+.pill input:focus-visible + span { outline: 3px solid var(--navy); outline-offset: 2px; }
+.pill input[type=checkbox] + span::before { content: ""; width: 14px; height: 14px; border-radius: 4px; border: 1.5px solid currentColor; }
+.pill input[type=checkbox]:checked + span::before { background: #fff; box-shadow: inset 0 0 0 3px var(--navy); }
+.rv-list li { display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px solid #EEE7D8; font-size: 14px; }
+.rv-list li span:last-child { white-space: nowrap; color: var(--muted); }
+.rv-list .nt { display: block; font-size: 12.5px; color: var(--muted); }
+.mhead { font: 600 22px/1.2 Fraunces, Georgia, serif !important; }
+
+/* wild fork */
+.wfband { background: #E9F1F8; }
+.wfres { border-radius: 16px; background: #fff; border: 1px solid #C9DCEB; padding: 18px; }
+
+/* reviews, story, faq */
+.stars { color: var(--ox); letter-spacing: 2px; }
+.tl { position: relative; display: grid; gap: 14px; }
+@media (min-width: 900px) { .tl { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.tl li { position: relative; padding: 18px; background: var(--cream); border-radius: 14px; border: 1px solid var(--hair); }
+.tl li b { display: block; font: 600 24px/1.1 Fraunces, Georgia, serif; color: var(--navy); }
+.tl li.next { background: var(--deep); color: #fff; border-color: var(--deep); }
+.tl li.next b { color: var(--brass); }
+.faq details { background: #fff; border: 1px solid var(--hair); border-radius: 14px; }
+.faq details + details { margin-top: 10px; }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; padding: 12px 18px; cursor: pointer; font: 600 16.5px/1.3 Inter, sans-serif; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 500 24px/1 Inter, sans-serif; color: var(--navy); flex: none; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding: 0 18px 18px; color: var(--muted); font-size: 15.5px; }
+
+/* My Club drawer */
+.mc-card { border-radius: 16px; background: var(--deep); color: #fff; padding: 18px; }
+.mc-card .meter { height: 8px; }
+.mc-card .small { color: rgba(255,255,255,.8); }
+.mc-acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+.mc-acts button { min-height: 48px; border-radius: 12px; border: 1.5px solid var(--hair); background: #fff; font: 600 14px/1.2 Inter, sans-serif; color: var(--ink); text-align: left; padding: 8px 12px; }
+.mc-acts button:hover { border-color: var(--navy); }
+.mc-acts button.danger { color: var(--ox); }
+.offer { border: 2px solid var(--navy); border-radius: 14px; padding: 14px; margin-top: 10px; background: #F4F8FD; }
+.choice { display: flex; gap: 10px; align-items: center; min-height: 48px; padding: 8px 12px; border: 1.5px solid var(--hair); border-radius: 12px; margin-top: 8px; cursor: pointer; background: #fff; }
+.choice:has(input:checked) { border-color: var(--navy); background: #EEF3FA; }
+.choice input { accent-color: var(--navy); width: 18px; height: 18px; }
+.logl li { font-size: 13.5px; padding: 6px 0; border-bottom: 1px solid #EEE7D8; display: flex; gap: 10px; justify-content: space-between; }
+.logl li span:last-child { color: var(--muted); white-space: nowrap; }
+
+/* team view */
+.team { background: #EFE8DA; padding: 26px 0 60px; }
+.tcard { background: #fff; border: 1px solid var(--hair); border-radius: 16px; padding: 18px; min-width: 0; }
+.tcard h2 { font: 600 22px/1.2 Fraunces, Georgia, serif; }
+.tsub { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
+.kpi { background: #fff; border: 1px solid var(--hair); border-radius: 14px; padding: 14px; min-width: 0; }
+.kpi small { display: block; font: 600 13px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.kpi b { display: block; font: 600 28px/1.1 Fraunces, Georgia, serif; color: var(--deep); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi p { font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.35; }
+.st { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 3px 9px; font: 600 12px/1.2 Inter, sans-serif; white-space: nowrap; }
+.st-ok { background: #E3F1E8; color: #1F5E3A; } .st-wait { background: #FBF1DC; color: #6B4600; } .st-no { background: #F6E3E2; color: #7A2320; } .st-info { background: #E7EEF8; color: var(--deep); } .st-demo { background: var(--slate); color: #fff; }
+.tbl { width: 100%; font-size: 14px; }
+.tbl th { text-align: left; font: 600 12.5px/1.2 "Barlow Condensed", Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-bottom: 1.5px solid var(--ink); padding: 8px 10px; white-space: nowrap; }
+.tbl td { border-bottom: 1px solid #EEE7D8; padding: 9px 10px; vertical-align: top; }
+.tbl td.num, .tbl th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tbl tr.demo td { background: #F1F0F8; }
+.tbl tfoot td { font-weight: 700; border-bottom: 0; border-top: 1.5px solid var(--ink); }
+.agent { display: inline-flex; align-items: center; gap: 6px; font: 600 12.5px/1.2 Inter, sans-serif; color: var(--navy); }
+.agent::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--sky); box-shadow: 0 0 0 3px rgba(127,179,213,.3); }
+.draft { margin-top: 10px; padding: 12px; border-radius: 12px; background: #FBF8F2; border: 1px solid var(--hair); font-size: 14.5px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.draft textarea { width: 100%; min-height: 120px; border: 1.5px solid #CFC3AA; border-radius: 10px; padding: 10px; background: #fff; font-size: 14.5px; line-height: 1.5; }
+.apbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.bars { position: relative; display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; align-items: end; height: 210px; padding-top: 22px; border-bottom: 1px solid var(--ink); }
+.bars .b { position: relative; height: 100%; display: flex; align-items: flex-end; }
+.bars .b i { display: block; width: 100%; border-radius: 4px 4px 0 0; background: #9DB7D6; outline: none; }
+.bars .b.now i { background: var(--navy); }
+.bars .b .v { position: absolute; left: 50%; transform: translateX(-50%); font: 600 12px/1 Inter, sans-serif; color: var(--ink); white-space: nowrap; }
+.bars .b .tip { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -6px); background: var(--ink); color: #fff; font: 500 12px/1.3 Inter, sans-serif; padding: 5px 8px; border-radius: 8px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .12s; z-index: 2; }
+.bars .b .tip { display: none; }
+.bars .b:hover .tip, .bars .b:focus-within .tip { display: block; opacity: 1; }
+.bars .b.tl .tip { left: 0; transform: translate(0, -6px); }
+.bars .b.tr .tip { left: auto; right: 0; transform: translate(0, -6px); }
+.xl { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; margin-top: 6px; font-size: 11.5px; color: var(--muted); text-align: center; }
+.pl div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid #EEE7D8; font-size: 14.5px; }
+.pl div span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.pl .tot { border-top: 1.5px solid var(--ink); border-bottom: 0; font-weight: 700; }
+.pl .neg span:last-child { color: var(--ox); }
+.tnav { display: flex; flex-wrap: wrap; gap: 6px; }
+.tnav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; background: #fff; border: 1px solid var(--hair); font: 600 13.5px/1 Inter, sans-serif; text-decoration: none; color: var(--deep); }
+.tnav a:hover { border-color: var(--navy); }
+
+/* shared chrome on this page: closed drawers are fully hidden (no shadow tint on the right edge, no off-screen focus),
+   and the page's .card style must not turn the prototype dock cards white */
+.jwc-panel:not(.on) { box-shadow: none; visibility: hidden; transition: transform .25s ease, visibility 0s linear .25s; }
+.jwc-panel.on { visibility: visible; }
+.jwc-dock a.card { background: transparent; }
+.jwc-dock a.card[aria-current="page"] { background: #fff; }
+.mcard .ph, .share .ph { overflow: hidden; }
+.st svg { flex: none; }
+.nw { white-space: nowrap; }
+@media (max-width: 420px) { .xcard .xc { width: 100px; } }
+/* phones: keep the hero buttons clear of the round chat button (bottom-right) */
+@media (max-width: 640px) { .hero .hero-ctas { gap: 10px; } .hero .hero-ctas .btn { padding: 0 17px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation-duration: .001ms !important; animation-delay: 0s !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link sr-only focus:not-sr-only">Skip to content</a>
+
+<!-- ======================= CUSTOMER VIEW ======================= -->
+<header class="bc-head" data-customer>
+  <div class="wrap flex items-center gap-3" style="min-height:64px">
+    <a href="#" class="flex items-center gap-3 no-underline min-w-0" aria-label="J&amp;W Butcher Club, back to top">
+      <img src="../assets/img/jw-logo.jpg" width="46" height="43" alt="J&amp;W Foods laurel logo, est. 1995" class="rounded-md bg-white bc-logo">
+      <span class="leading-none min-w-0" style="white-space:nowrap"><span class="f-cond block text-navy" style="font-size:12px;letter-spacing:.16em">J&amp;W Foods</span><span class="f-display block font-semibold text-ink bc-brand">Butcher Club</span></span>
+    </a>
+    <nav class="hidden lg:flex ml-auto items-center gap-1" aria-label="Butcher Club sections">
+      <a class="navl" href="#how">How it works</a><a class="navl" href="#boxes">Boxes</a><a class="navl" href="#build">Build</a><a class="navl" href="#shares">Shares</a><a class="navl" href="#faq">FAQ</a>
+    </nav>
+    <div class="ml-auto lg:ml-2 flex items-center gap-2 flex-none">
+      <button type="button" class="hbtn" data-act="myclub"><span class="memdot" id="memdot" hidden></span><span class="hidden sm:inline">My Club (demo)</span><span class="sm:hidden" style="white-space:nowrap">My Club</span></button>
+      <button type="button" class="hbtn hidden sm:inline-flex" data-act="cart" id="hdr-cart" aria-label="Open your order"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span class="n" id="hdr-cart-n">0</span></button>
+      <button type="button" class="hbtn lg:hidden" id="menu-btn" aria-expanded="false" aria-controls="mnav">Menu</button>
+    </div>
+  </div>
+  <nav id="mnav" class="lg:hidden" hidden aria-label="Butcher Club menu">
+    <a href="#how">How it works</a><a href="#boxes">Boxes</a><a href="#build">Build your box</a><a href="#shares">Beef and lamb shares</a><a href="#faq">FAQ</a><button type="button" data-act="myclub">My Club (demo)</button>
+  </nav>
+</header>
+
+<main data-customer id="main">
+  <!-- Hero -->
+  <section class="hero dark" aria-labelledby="hero-h">
+    <div class="wrap grid lg:grid-cols-12 gap-10 items-center" style="padding-top:48px;padding-bottom:56px">
+      <div class="lg:col-span-7">
+        <p class="eyebrow text-brass">J&amp;W Butcher Club · Concept</p>
+        <h1 id="hero-h" class="f-display font-semibold" style="font-size:clamp(40px,7vw,64px);line-height:1.02;letter-spacing:-.015em;margin-top:12px">Your butcher, on a schedule.</h1>
+        <p style="margin-top:18px;font-size:18px;max-width:580px;color:rgba(255,255,255,.86)">Pick your cuts from our Scarborough counter. We cut, vacuum-seal and freeze them, and bring them on your J&amp;W route day. Every box comes with a free Meal Butler cooked chicken pack, for as long as you're a member.</p>
+        <form class="routebox" id="hero-route" style="margin-top:26px" novalidate>
+          <label for="hero-town" class="block font-semibold" style="font-size:15px;margin-bottom:8px">Where do you live?</label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input id="hero-town" class="inp" placeholder="Town or city, e.g. Whitby" autocomplete="address-level2" list="town-list">
+            <button type="submit" class="btn btn-ox" style="white-space:nowrap">Check my day</button>
+          </div>
+          <p class="routeout" id="hero-route-out" aria-live="polite"></p>
+        </form>
+        <div class="flex flex-wrap gap-3 hero-ctas" style="margin-top:22px">
+          <a href="#boxes" class="btn btn-light">Build my box</a>
+          <a href="#shares" class="btn btn-ghost">See beef shares</a>
+        </div>
+        <ul class="trust" aria-label="Why people trust J&amp;W">
+          <li><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21l1.6-7L2 9.3l7-.7z"/></svg>4.8 on Google · 611 reviews</li>
+          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.6-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Ontario-inspected plant since 2008</li>
+          <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/></svg>Scarborough family butcher since 1995</li>
+        </ul>
+        <p style="font-size:13px;color:rgba(255,255,255,.72);margin-top:14px">Concept prices for discussion with J&amp;W.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="heroart" id="heroart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founding ribbon -->
+  <div class="ribbon" role="region" aria-label="Founding member offer">
+    <div class="wrap flex flex-wrap items-center justify-center text-center gap-x-5 gap-y-1" style="padding-top:12px;padding-bottom:12px">
+      <p><b>Founding members:</b> $30 off your first box when you join by January 31, 2027.</p>
+      <a href="#wildfork" class="font-semibold underline" style="text-underline-offset:3px;min-height:40px;display:inline-flex;align-items:center">Wild Fork closing near you? See your route day</a>
+    </div>
+  </div>
+
+  <!-- Why -->
+  <section id="why" class="band bg-white-b" aria-labelledby="why-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">The J&amp;W difference</p>
+      <h2 id="why-h" class="h2" style="margin-top:8px">Why a butcher's club</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4" style="margin-top:28px">
+        <div class="card pillar"><div class="pi" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M8 21v-7h8v7"/><path d="M3 21h18"/></svg></div><h3>Cut in our own plant</h3><p>We cut, portion and vacuum-seal at 2201 Brimley Rd, in an Ontario-inspected plant.</p></div>
+        <div class="card pillar"><div class="pi" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6 8v3M10 8v4M14 8v3M18 8v4"/></svg></div><h3>Cut to your thickness</h3><p>Tell us 1, 1¼ or 1½ inch. We cut your steaks before they're frozen.</p></div>
+        <div class="card pillar"><div class="pi" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><h3>Brought on your route day</h3><p>Your box comes with your normal J&amp;W delivery, not by courier. Free for members.</p></div>
+        <div class="card pillar"><div class="pi" aria-hidden="true"><svg class="ico" style="width:24px;height:24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></div><h3>Skip any time</h3><p>Skip, swap or pause online until Sunday night. No contract.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="band" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">How it works</p>
+      <h2 id="how-h" class="h2" style="margin-top:8px">Three steps, then it repeats</h2>
+      <ol class="grid md:grid-cols-3 gap-4" style="margin-top:28px">
+        <li class="card step"><span class="num" aria-hidden="true">1</span><h3>Choose a box and how often</h3><p>Starter, Family or Freezer Fill. Every 2, 4, 6 or 8 weeks.</p></li>
+        <li class="card step"><span class="num" aria-hidden="true">2</span><h3>Spend your points on real cuts</h3><p>A point is about $5 of our shelf price. Mix chicken, steaks, ground, pork, lamb and fish.</p></li>
+        <li class="card step"><span class="num" aria-hidden="true">3</span><h3>We pack it, you put it away</h3><p>Order by Sunday 11:59 pm. Your box arrives frozen on your route day that week.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Box sizes -->
+  <section id="boxes" class="band bg-white-b" aria-labelledby="boxes-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Step 1</p>
+      <h2 id="boxes-h" class="h2" style="margin-top:8px">Pick a box size</h2>
+      <p class="lede">Concept prices. Delivery on your route day is included.</p>
+      <div class="flex flex-wrap items-center gap-2" style="margin-top:22px" role="group" aria-label="How often" id="freq"></div>
+      <div class="grid md:grid-cols-3 gap-5" style="margin-top:30px" id="tiers"></div>
+      <p class="small" style="margin-top:14px">Servings est. at 5 oz raw. Steak-heavy boxes weigh less.</p>
+    </div>
+  </section>
+
+  <!-- Free for life -->
+  <section id="free" class="band" aria-labelledby="free-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Step 2</p>
+      <h2 id="free-h" class="h2" style="margin-top:8px">Pick your free-for-life item</h2>
+      <p class="lede">It comes free in every box while you're a member.</p>
+      <div class="grid md:grid-cols-3 gap-5" style="margin-top:28px" id="freeopts" role="radiogroup" aria-labelledby="free-h"></div>
+    </div>
+  </section>
+
+  <!-- Builder -->
+  <section id="build" class="band bg-white-b" aria-labelledby="build-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Step 3</p>
+      <h2 id="build-h" class="h2" style="margin-top:8px">Build your box</h2>
+      <p class="lede">Tap to add. Your box fills as you go.</p>
+      <div id="member-note" class="small" style="margin-top:10px" hidden></div>
+      <div style="margin-top:22px">
+        <p class="font-semibold" style="font-size:15px;margin-bottom:8px" id="presets-l">Start from a ready box:</p>
+        <div class="presets" id="presets" role="group" aria-labelledby="presets-l"></div>
+      </div>
+      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-6" style="margin-top:26px">
+        <div class="order-1 lg:order-2 lg:col-span-4">
+          <aside class="bpanel" id="bpanel" aria-labelledby="bx-title">
+            <div class="bp-top">
+              <div class="flex items-baseline justify-between gap-3"><h3 id="bx-title" class="f-display font-semibold" style="font-size:20px">Your box</h3><span class="f-cond" id="bx-cad" style="font-size:14px;color:var(--sky)"></span></div>
+              <div id="bx-tiers"></div>
+              <div class="meter" id="bx-meter" role="progressbar" aria-label="Points used" aria-valuemin="0" aria-valuemax="48" aria-valuenow="0"><i></i></div>
+              <div class="flex justify-between gap-3" style="margin-top:6px;font-size:14px"><span id="bx-pts">0 points</span><span id="bx-price" class="font-semibold"></span></div>
+              <p class="bp-live" id="bx-live"></p>
+            </div>
+            <div class="bbox">
+              <div class="bbox-in"><div class="tiles" id="tiles" aria-hidden="true"></div></div>
+              <div class="lid" id="lid"></div>
+            </div>
+            <p class="sr" id="bx-sr"></p>
+            <dl class="blines" id="blines"></dl>
+            <p class="bmsg" id="bmsg" aria-live="polite"></p>
+            <div style="padding:14px 16px 16px">
+              <button type="button" class="btn btn-ox btn-block" data-act="review" id="reviewBtn">Review my box</button>
+              <p class="small" style="margin-top:8px;text-align:center">Box locks Sunday 11:59 pm. Skip, swap or pause online until then.</p>
+            </div>
+          </aside>
+        </div>
+        <div class="order-2 lg:order-1 lg:col-span-8 min-w-0">
+          <div class="filters" role="group" aria-label="Filter cuts" id="filters"></div>
+          <p class="small" style="margin-top:10px">Real J&amp;W cuts and shelf prices. Points = shelf price ÷ $5, rounded. Pack weights and $/lb are est.</p>
+          <div class="menu" id="menu" style="margin-top:14px"></div>
+        </div>
+      </div>
+
+      <div id="extras" class="anchor" style="margin-top:44px">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p class="eyebrow" style="color:var(--slate)">Meal Butler · cooked &amp; portioned</p>
+            <h3 class="f-display font-semibold" style="font-size:26px;line-height:1.15;margin-top:6px">Add Meal Butler extras (regular prices, outside your points)</h3>
+            <p class="small" style="margin-top:6px">Plain portions cooked with no added salt, sugar or oil. Ingredients on every pack. Flash-frozen in BPA-free vacuum bags, they ride along in your box. Macros are est.</p>
+          </div>
+          <img src="../assets/img/jw-logo2.jpg" width="120" height="78" alt="J&amp;W Meal Butler logo" class="rounded-lg bg-white hidden sm:block" style="width:120px;height:auto">
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" style="margin-top:18px" id="xgrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section id="compare" class="band dark" aria-labelledby="cmp-h">
+    <div class="wrap">
+      <p class="eyebrow text-brass">Honest numbers</p>
+      <h2 id="cmp-h" class="h2" style="margin-top:8px">Price per pound, side by side</h2>
+      <p class="lede">We priced our counter against public online prices in Toronto on Oct 16, 2026. Tap a row to see how.</p>
+      <div style="margin-top:26px">
+        <table class="cmp" id="cmp">
+          <caption class="sr">J&amp;W Butcher Club compared with Toronto premium butchers and mail-order meat boxes</caption>
+          <thead><tr><th scope="col">What</th><th scope="col" class="jw">J&amp;W Butcher Club</th><th scope="col">Toronto premium butchers</th><th scope="col">Mail-order meat boxes</th></tr></thead>
+          <tbody id="cmp-body"></tbody>
+        </table>
+      </div>
+      <p class="small" style="margin-top:12px">Based on five Toronto butchers and two Ontario meat-box services. Ranges, not quotes. Prices change.</p>
+    </div>
+  </section>
+
+  <!-- Shares -->
+  <section id="shares" class="band" aria-labelledby="shares-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Whole-animal, made simple</p>
+      <h2 id="shares-h" class="h2" style="margin-top:8px">Beef and lamb shares</h2>
+      <p class="lede">Fill a chest freezer for the season. We pool shares into whole quarters, then cut to your sheet.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" style="margin-top:28px" id="sharegrid"></div>
+      <p class="small" style="margin-top:16px">Weights are planning estimates until we weigh a test quarter. Members get first pick of cut dates and free route delivery on shares.</p>
+    </div>
+  </section>
+
+  <!-- Wild Fork -->
+  <section id="wildfork" class="band wfband" aria-labelledby="wf-h">
+    <div class="wrap grid lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-6">
+        <p class="eyebrow text-navy">Switching stores?</p>
+        <h2 id="wf-h" class="h2" style="margin-top:8px">Wild Fork closing near you?</h2>
+        <p class="lede" style="color:var(--ink)">Wild Fork's Ontario stores close by December 14. J&amp;W already delivers frozen, vacuum-sealed meat to these towns every week.</p>
+        <div class="flex flex-wrap gap-2" style="margin-top:22px" role="group" aria-label="Pick your town" id="wfchips"></div>
+        <form id="wf-else" class="flex flex-col sm:flex-row gap-2" style="margin-top:12px;max-width:520px" hidden novalidate>
+          <label for="wf-town" class="sr">Your town or city</label>
+          <input id="wf-town" class="inp" placeholder="Your town or city" autocomplete="address-level2" list="town-list">
+          <button type="submit" class="btn btn-navy">Check</button>
+        </form>
+        <p class="small" style="margin-top:18px">Wild Fork is a trademark of its owner. J&amp;W is not connected to Wild Fork.</p>
+      </div>
+      <div class="lg:col-span-6">
+        <div class="wfres" id="wfres" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="band bg-white-b" aria-labelledby="rev-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Social proof</p>
+      <h2 id="rev-h" class="h2" style="margin-top:8px">What J&amp;W customers say</h2>
+      <p class="f-display" style="font-size:clamp(26px,4vw,36px);line-height:1.2;margin-top:16px"><span class="stars" aria-hidden="true">★★★★★</span> 4.8<span class="sr"> out of 5 stars</span> from 611 Google reviews.</p>
+      <div class="grid md:grid-cols-3 gap-4" style="margin-top:24px">
+        <div class="card pillar" style="background:var(--cream)"><h3 style="margin-top:0">An owner who teaches you</h3><p>Reviewers often mention Bill explaining cuts and cooking.</p></div>
+        <div class="card pillar" style="background:var(--cream)"><h3 style="margin-top:0">Better than supermarket meat</h3><p>Steaks, brisket bacon, bison and venison come up again and again.</p></div>
+        <div class="card pillar" style="background:var(--cream)"><h3 style="margin-top:0">Value for the quality</h3><p>People say the prices are fair for what you get.</p></div>
+      </div>
+      <p class="small" style="margin-top:12px">Themes from public Google and Yelp reviews, not quotes.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="band" aria-labelledby="story-h">
+    <div class="wrap">
+      <p class="eyebrow text-navy">Our story</p>
+      <h2 id="story-h" class="h2" style="margin-top:8px">From a 1960s Toronto butcher shop to Brimley Rd</h2>
+      <ol class="tl" style="margin-top:28px">
+        <li><b>1960s</b><p style="margin-top:6px">George Trougakos runs a butcher and grocery in downtown Toronto.</p></li>
+        <li><b>1973</b><p style="margin-top:6px">The family starts Advance Food Products in Scarborough.</p></li>
+        <li><b>1995</b><p style="margin-top:6px">Stavros Trougakos and William Fehr open J&amp;W Foods.</p></li>
+        <li><b>2008</b><p style="margin-top:6px">J&amp;W becomes an Ontario-inspected meat plant.</p></li>
+        <li class="next"><b>Next</b><p style="margin-top:6px">The Butcher Club (concept).</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="band bg-white-b" aria-labelledby="faq-h">
+    <div class="wrap" style="max-width:860px">
+      <p class="eyebrow text-navy">Questions</p>
+      <h2 id="faq-h" class="h2" style="margin-top:8px">Questions</h2>
+      <div class="faq" style="margin-top:24px">
+        <details><summary>How do points work?</summary><p>Each cut has a point price, about $5 of our shelf price per point. Your box size sets your points. Extra points are $5 each. Up to 5 unused points roll to your next box.</p></details>
+        <details><summary>When can I change my box?</summary><p>Until Sunday 11:59 pm before your route day. After that we start cutting and packing.</p></details>
+        <details><summary>Can I skip or cancel?</summary><p>Yes. Skip, swap, change how often, pause or cancel online. No contract, no fee.</p></details>
+        <details><summary>How does delivery work?</summary><p>On your normal J&amp;W route day, frozen and vacuum-sealed. Members don't pay the route fee. We text your window the day before.</p></details>
+        <details><summary>Where's the meat from?</summary><p>Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics. Our beef is graded AAA, with Wagyu and Canadian Prime available. Lamb chops and whole lamb are Ontario-raised.</p></details>
+        <details><summary>Can you ship outside Ontario?</summary><p>No. We're an Ontario-inspected plant, so our meat stays in Ontario. Our Friday long-haul route reaches Ottawa, Kingston, London and Windsor.</p></details>
+        <details><summary>What if something arrives thawed?</summary><p>Text us a photo the same day and we'll replace it in your next box.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="band dark" aria-labelledby="cta-h">
+    <div class="wrap text-center" style="max-width:820px">
+      <div id="cta-seal" style="width:96px;margin:0 auto 18px"></div>
+      <h2 id="cta-h" class="h2">Fill your freezer the butcher's way.</h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">Starter from $139. Free delivery on your route day. Free cooked chicken in every box.</p>
+      <a href="#boxes" class="btn btn-ox" style="margin-top:24px">Build my box</a>
+      <p class="small" style="margin-top:26px">J&amp;W Foods · 2201 Brimley Rd, Unit 1, Scarborough · <a href="tel:+14162981350" class="nw">(416) 298-1350</a> · Mon–Fri 9–6, Sat 10–4 · Instagram 30K</p>
+    </div>
+  </section>
+</main>
+
+<datalist id="town-list"></datalist>
+
+<!-- Sticky box bar (mobile) -->
+<div class="bbar" id="bbar" data-customer hidden>
+  <div class="flex items-center gap-3">
+    <button type="button" class="min-w-0 flex-1 text-left" data-act="tobox" style="min-height:40px" aria-label="Jump to your box">
+      <span class="block font-semibold" style="font-size:15px" id="bbar-t"></span>
+      <span class="meter" style="display:block"><i id="bbar-m"></i></span>
+    </button>
+    <button type="button" class="btn btn-ox btn-sm" data-act="review">Review</button>
+  </div>
+</div>
+
+<!-- My Club drawer -->
+<aside id="myclub" class="jwc-panel" aria-hidden="true" aria-labelledby="myclub-h">
+  <div class="jwc-panel-head"><div><h2 id="myclub-h">My Club (demo)</h2><p>Self-serve membership. Demo: nothing is sent.</p></div><button type="button" class="jwc-x" data-act="close" aria-label="Close My Club">×</button></div>
+  <div class="jwc-panel-body" id="myclub-body"></div>
+</aside>
+
+<!-- ======================= JW TEAM VIEW ======================= -->
+<div class="team" data-team>
+  <div class="wrap">
+    <section data-team aria-labelledby="t-h">
+      <p class="eyebrow text-navy">Butcher Club · operations (concept)</p>
+      <h1 id="t-h" class="f-display font-semibold" style="font-size:clamp(30px,5vw,44px);line-height:1.08;margin-top:6px">Week of Monday, Apr 12, 2027</h1>
+      <p class="tsub" style="font-size:15px;max-width:760px">A modelled sample week, mid case. Every number here is a sample operating figure for illustration, not J&amp;W data. Anything you join or reserve in customer view lands in these panels.</p>
+      <nav class="tnav" style="margin-top:14px" aria-label="Team panels">
+        <a href="#t-kpi">KPIs</a><a href="#t-approvals">Approvals</a><a href="#t-pick">Pick list</a><a href="#t-routes">Routes</a><a href="#t-retention">Retention</a><a href="#t-shares">Share board</a><a href="#t-pnl">P&amp;L</a><a href="#t-live">Live from this demo</a>
+      </nav>
+    </section>
+
+    <section id="t-kpi" data-team aria-labelledby="t-kpi-h" style="margin-top:22px">
+      <h2 id="t-kpi-h" class="sr">Key numbers this week</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="kpis"></div>
+    </section>
+
+    <div class="grid lg:grid-cols-12 gap-4" style="margin-top:16px">
+      <section class="tcard lg:col-span-7" data-team aria-labelledby="t-ramp-h">
+        <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-ramp-h">Active members at month end</h2><p class="tsub">Modelled, mid case · Dec 2026 to Oct 2027</p></div><span class="st st-info">Sample</span></div>
+        <div id="ramp" style="margin-top:12px"></div>
+        <div class="flex flex-wrap items-center gap-3" style="margin-top:14px"><p class="small">Year-1 and run-rate revenue estimates for this play sit in one place.</p><button type="button" class="btn btn-line btn-sm" data-act="money">Open “Why this makes money”</button></div>
+      </section>
+      <section class="tcard lg:col-span-5" data-team aria-labelledby="t-agents-h">
+        <h2 id="t-agents-h">AI agents on the Club</h2>
+        <p class="tsub">They draft, total and forecast. A person at J&amp;W approves anything that reaches a member.</p>
+        <ul id="agentlist" style="margin-top:10px"></ul>
+      </section>
+    </div>
+
+    <section id="t-approvals" class="tcard" data-team aria-labelledby="t-ap-h" style="margin-top:16px">
+      <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-ap-h">Approvals</h2><p class="tsub">Agent drafts waiting for the owner or Club lead. Approve, edit or reject. Demo: nothing is sent.</p></div><span class="st st-wait" id="ap-count"></span></div>
+      <div class="grid md:grid-cols-2 gap-3" style="margin-top:14px" id="approvals"></div>
+    </section>
+
+    <div class="grid lg:grid-cols-12 gap-4 items-start" style="margin-top:16px">
+      <section id="t-pick" class="tcard lg:col-span-7" data-team aria-labelledby="t-pick-h">
+        <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-pick-h">Monday pick list</h2><p class="tsub" id="pick-sub"></p></div><span id="pick-st"></span></div>
+        <div class="jwc-scroll-x" style="margin-top:10px"><table class="tbl" id="picktbl"></table></div>
+        <div class="apbar" id="pick-bar"></div>
+      </section>
+      <div class="lg:col-span-5 grid gap-4">
+        <section id="t-routes" class="tcard" data-team aria-labelledby="t-routes-h">
+        <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-routes-h">Route impact</h2><p class="tsub" id="routes-sub"></p></div><span id="routes-st"></span></div>
+        <div class="jwc-scroll-x" style="margin-top:10px"><table class="tbl" id="routetbl"></table></div>
+        <div class="apbar" id="routes-bar"></div>
+      </section>
+        <section class="tcard" data-team aria-labelledby="t-con-h">
+        <h2 id="t-con-h">Concierge log</h2>
+        <p class="tsub" id="con-sub"></p>
+        <div id="conlog" style="margin-top:10px"></div>
+      </section>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-4 items-start" style="margin-top:16px">
+      <section id="t-retention" class="tcard lg:col-span-7" data-team aria-labelledby="t-ret-h">
+        <h2 id="t-ret-h">Retention queue</h2>
+        <p class="tsub" id="ret-sub"></p>
+        <div class="jwc-scroll-x" style="margin-top:10px"><table class="tbl" id="rettbl"></table></div>
+      </section>
+      <section id="t-shares" class="tcard lg:col-span-5" data-team aria-labelledby="t-sh-h">
+        <h2 id="t-sh-h">Beef share board</h2>
+        <p class="tsub" id="sh-sub"></p>
+        <div class="jwc-scroll-x" style="margin-top:10px"><table class="tbl" id="shtbl"></table></div>
+        <p class="small" style="margin-top:10px">Last 3 quarters averaged 112 lb take-home (sample).</p>
+      </section>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-4 items-start" style="margin-top:16px">
+      <section id="t-pnl" class="tcard lg:col-span-5" data-team aria-labelledby="t-pnl-h">
+        <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-pnl-h">Club P&amp;L, April 2027 (sample)</h2><p class="tsub">Sample month, modelled. Operating numbers for illustration.</p></div><span class="st st-info">Sample</span></div>
+        <div class="pl" id="pnl" style="margin-top:10px"></div>
+      </section>
+      <section id="t-live" class="tcard lg:col-span-7" data-team aria-labelledby="t-live-h">
+      <div class="flex flex-wrap items-start justify-between gap-2"><div><h2 id="t-live-h">Live from this demo</h2><p class="tsub">New members, share deposits and orders placed on this page, on this device.</p></div><span class="st st-demo" id="live-n"></span></div>
+      <div id="live" style="margin-top:10px"></div>
+    </section>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+/* J&W Butcher Club (prototype 3 of 7). Page logic. Everything is simulated and stays on this device. */
+/* AI agent names: change them here, they are used everywhere on the page. */
+/* Names follow the final shared roster (research/ai-agents-roster.md, Play 3). */
+const AGENTS = {
+  reminder: 'Reorder & Save',
+  concierge: 'Butler Concierge',
+  picklist: 'Production Planner',
+  carcass: 'Carcass Balancer',
+  route: 'Route Planner',
+  lifecycle: 'Lifecycle Marketing',
+  ads: 'Paid Ads Analyst',
+  catalogue: 'Catalogue & SEO',
+  phone: 'Phone Order Line'
+};
+
+(function () {
+  'use strict';
+
+  /* ---------- helpers ---------- */
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var esc = function (s) { return JWC.esc(s); };
+  var money = function (v, dp) { return JWC.money(v, dp); };
+  var m2 = function (v) { return JWC.money(v, 2); };
+  var reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function go(sel) { var e = typeof sel === 'string' ? $(sel) : sel; if (e) e.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); }
+  function clone(o) { return JSON.parse(JSON.stringify(o)); }
+  function plural(n, a, b) { return n + ' ' + (n === 1 ? a : (b || a + 's')); }
+  function round1(v) { return Math.round(v * 10) / 10; }
+  function toast(m) { JWC.toast(m); }
+  var IC = {
+    tick: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+    x: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+    part: '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 12h12"/></svg>',
+    tickS: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
+    warnS: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M12 7v6M12 16.5v.5"/><circle cx="12" cy="12" r="9.5"/></svg>',
+    infoS: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M12 11v6M12 7.5v.5"/><circle cx="12" cy="12" r="9.5"/></svg>',
+    noS: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>'
+  };
+
+  /* ---------- chat (spec rules; match strings become RegExp(src, 'i')) ---------- */
+  /* "Do you have ...?" lookups against the Club menu (keys are ITEMS below) */
+  var FIND = [[/pork ?chop/i, ['porkchops']], [/short ?rib/i, ['shortribs']], [/rib ?eye/i, ['ribeye', 'ribeye10']], [/bacon/i, ['bacon']], [/wing/i, ['wings']],
+    [/salmon|sockeye|fish/i, ['sockeye']], [/lamb/i, ['lambchops', 'groundlamb']], [/bison/i, ['bison', 'groundbison']], [/venison|deer/i, ['venison']],
+    [/brisket/i, ['brisketground']], [/wagyu|kobe/i, ['wagyustrip', 'wagyuground']], [/turkey/i, ['turkey']], [/sausage|loukaniko/i, ['loukaniko']],
+    [/thigh/i, ['thighs']], [/drum/i, ['drums']], [/burger/i, ['burgers']], [/picanha/i, ['picanha']], [/filet|tenderloin/i, ['tender', 'porktender']],
+    [/strip ?loin|new york|\bny\b/i, ['strip', 'stripcase']], [/sirloin/i, ['sirloin']], [/ground beef|hamburger|mince/i, ['groundbulk', 'brisketground']],
+    [/ground chicken/i, ['gchicken']], [/marinated/i, ['marinated']], [/breast|chicken/i, ['case', 'half', 'gchicken', 'thighs']], [/pork/i, ['porktender', 'porkchops', 'loukaniko', 'bacon']],
+    [/steak|beef/i, ['sirloin', 'strip', 'ribeye', 'picanha']]];
+  function findItems(t) { for (var i = 0; i < FIND.length; i++) if (FIND[i][0].test(t)) return FIND[i][1].filter(function (k) { return IT[k]; }).map(function (k) { return IT[k]; }); return []; }
+  function itemLine(it) { return it.name + ' (' + it.pack + ', ' + m2(it.price) + ', ' + plural(ptsOf(it), 'point') + ')'; }
+  var CHAT_RULES = [
+    { match: 'allerg|gluten|celiac|coeliac|\\bnuts?\\b|peanut|dairy|lactose|sesame|\\bsoy\\b', reply: 'Allergies need a person, so I\'ve passed this to the counter team. They check the label on that exact product and call you back, usually the same day (demo: nothing is sent). Raw Club cuts are plain unless the name says marinated.' },
+    { match: 'wild ?fork', reply: function (t) {
+      var text = 'Sorry your store is closing. We deliver frozen, vacuum-sealed meat to Whitby on Tuesdays, Oakville and Ancaster on Thursdays, and Newmarket on Fridays. Club delivery is free.';
+      var info = lookupTown(t);
+      if (info && info.ok) text += ' ' + info.town + ': join by ' + fmtL(cutoffDate()) + ' and your first box comes ' + fmtS(boxDate(info.day)) + '.';
+      return { text: text, action: { label: 'Start with the Switcher box', run: function () { JWC.chat.close(); if (info && info.ok) setTown(info); startSwitcher(); } } };
+    } },
+    { match: 'point|how many pts|extra point', reply: function (t) {
+      var f = findItems(t);
+      return { text: 'Each cut has a point price, about $5 of our shelf price per point. An 11–12 oz AAA ribeye is 5 points, an 8–9 oz Wagyu striploin is 7, a 1 lb bag of ground chicken breast is 2. Extra points are $5. Up to 5 unused points roll to your next box.' + (f.length ? ' You asked about: ' + f.map(itemLine).join('; ') + '.' : ''),
+        action: { label: 'Build my box', run: function () { JWC.chat.close(); go('#build'); } } };
+    } },
+    { match: 'skip|pause|cancel|change my box', reply: function () {
+      return { text: 'Skip, swap, pause or cancel online until Sunday 11:59 pm before your route day. No contract, no fee. Try it in My Club (demo).',
+        action: { label: 'Open My Club (demo)', run: function () { JWC.chat.close(); openClub(); } } };
+    } },
+    { match: '\\bfree\\b|for life|chicken pack', reply: function (t) {
+      if (/deliver|route|ship/i.test(t)) { var d = townReply(t); if (d) return d; }
+      if (/hormone|antibiotic|grass|organic/i.test(t)) return 'Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics. Our beef is graded AAA, with Wagyu and Canadian Prime available. We don\'t make grass-fed claims on the Club menu. Ask the counter about a specific cut.';
+      if (/salt|sugar|oil|gluten/i.test(t)) return 'Plain Meal Butler portions are cooked with no added salt, sugar or oil. Flavoured ones can include them, and the ingredients are on every pack. Everything is flash-frozen in BPA-free vacuum bags. Raw Club cuts are plain unless the name says marinated. For allergies, ask the counter and we\'ll check the label for you.';
+      return { text: 'Every box includes one free item while you\'re a member: Meal Butler cooked chicken 4 x 4 oz in your flavour, 1 lb Wagyu/Kobe AAA ground, or a wild sockeye fillet.',
+        action: { label: 'Pick my free item', run: function () { JWC.chat.close(); go('#free'); } } };
+    } },
+    { match: 'share|quarter|cow|1/8|1/16|eighth|sixteenth|side of beef', reply: function (t) {
+      var base = 'Beef shares come as 1/16 ($325), 1/8 ($625) and 1/4 ($1,200, our current price). The 1/16 and 1/8 are concept prices built from the quarter. Weights are planning estimates until we weigh a test quarter. Reserve with a deposit and pick your cuts on the cut sheet.';
+      var k = /1\/16|sixteenth/i.test(t) ? 'sixteenth' : /1\/8|eighth/i.test(t) ? 'eighth' : /1\/4|quarter/i.test(t) ? 'quarter' : null;
+      if (k) {
+        var s = SHARE[k];
+        base = 'A ' + s.name + ' share is ' + money(s.price, 0) + (s.concept ? ' (a concept price built from our $1,200 quarter)' : ' (our current price)') + ' for ' + s.lb + ' of beef: steaks (ribeye, striploin, top sirloin, tenderloin), roasts and ground, plus short ribs, brisket, shank and soup bones if you want them. ' + (k === 'quarter' ? 'A quarter is cut for you alone.' : 'We pool shares into a whole quarter, then cut to your sheet.') + ' Reserve with a ' + money(s.dep, 0) + ' deposit and pick your cuts on the cut sheet.';
+        return { text: base, action: { label: 'Open ' + s.name + ' cut sheet', run: function () { openSheet(k); } } };
+      }
+      return { text: base, action: { label: 'See beef shares', run: function () { JWC.chat.close(); go('#shares'); } } };
+    } },
+    { match: 'thick|thickness|cut to|inch', reply: 'Pick 1, 1¼ or 1½ inch on any steak. We cut it before it\'s vacuum-sealed and frozen.' },
+    { match: 'servings|how much meat|pounds|\\blb\\b|weigh', reply: 'Starter is up to 45 servings (about 10–14 lb on a mixed box), Family up to 80 (17–25 lb) and Freezer Fill up to 110 (25–34 lb). These are estimates at 5 oz raw per serving. Steak-heavy boxes weigh less.' },
+    { match: 'grass|organic|hormone|antibiotic', reply: 'Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics. Our beef is graded AAA, with Wagyu and Canadian Prime available. We don\'t make grass-fed claims on the Club menu. Ask the counter about a specific cut.' },
+    { match: 'outside ontario|other province|calgary|vancouver|montreal|ship to', reply: 'We\'re an Ontario-inspected plant, so our meat stays in Ontario. Our Friday long-haul route reaches Ottawa, Kingston, London, Windsor and more.' },
+    { match: 'price per|per lb|cheaper|compare|trulocal|butcherbox', reply: 'Our AAA ribeye is about $23–25/lb in the 10-pack, and our 4 kg chicken breast case works out to $9.64/lb. Toronto premium butchers were at $39–60/lb for ribeye on Oct 16, 2026. See \'Price per pound, side by side\' on this page.' },
+    { match: 'deliver|route|what day|come to|ancaster', reply: function (t) {
+      return townReply(t) || 'Club boxes ride on our weekly routes: Tuesday Durham, Wednesday Toronto and Mississauga, Thursday Halton and Hamilton, Friday York and Peel, plus long-haul routes. Members don\'t pay the $20–35 route fee. Which town are you in?';
+    } },
+    { match: 'protein|macro|calorie|kcal', reply: function () {
+      var p = JWC.product('chicken-breast-teriyaki-cooked-portion'), m = p ? JWC.macros(p, 0) : null;
+      return 'Macros are estimates, because we don\'t publish nutrition panels yet. Our Meal Butler cooked chicken breast, the free pack in every box, is about ' + (m ? m.p + ' g protein and ' + m.kcal + ' kcal' : '35 g protein') + ' per 4 oz portion (est.). For raw Club cuts, ask the counter and we\'ll check the label.';
+    } },
+    { match: '\\bhours?\\b|\\bopen\\b|\\bclosed?\\b|what time', reply: 'The Brimley Rd store is open Mon–Fri 9–6 and Sat 10–4, closed Sunday. Club boxes lock Sunday 11:59 pm before your route day, and you can change yours online any time before that.' },
+    { match: '^(?!.*(protein|macro|calorie|kcal|carb)).*(pork|short ?rib|rib ?eye|bacon|wing|salmon|sockeye|fish|lamb|bison|venison|deer|brisket|wagyu|kobe|turkey|sausage|loukaniko|thigh|drum|burger|picanha|filet|tenderloin|strip ?loin|new york|sirloin|ground beef|hamburger|mince|chicken|breast|steak|beef)', reply: function (t) {
+      var f = findItems(t);
+      if (!f.length) return 'Ask the counter about that cut: (416) 298-1350. Everything on the Club menu is in Build your box.';
+      return { text: 'Yes, on the Club menu: ' + f.map(itemLine).join('; ') + '. A point is about $5 of our shelf price.',
+        action: { label: 'Show me in the builder', run: function () { JWC.chat.close(); S.filter = f[0].cat; saveS(); renderFilters(); go($('.mcard[data-k="' + f[0].k + '"]') || '#build'); } } };
+    } }
+  ];
+  function townReply(t) {
+    var info = lookupTown(t);
+    if (!info || !info.ok) return null;
+    return { text: info.town + ' is on our ' + routeWords(info) + (info.alias ? ' (via ' + info.city + ')' : '') + '. Club boxes ride along free (non-members pay ' + money(info.fee, 0) + '). Join by ' + fmtL(cutoffDate()) + ' and your first box comes ' + fmtS(boxDate(info.day)) + '.',
+      action: { label: 'Build my box', run: function () { setTown(info); JWC.chat.close(); go('#boxes'); } } };
+  }
+
+  JWC.init({
+    n: 3,
+    teamNote: 'A modelled week in April 2027 behind the Butcher Club: KPIs, the Monday pick list, route impact, agent drafts to approve, the retention queue, the share board and a sample P&L. Members and deposits you create in customer view land here.',
+    checkout: { title: 'Meal Butler extras', note: 'Regular prices. Join the Club and they ride free with your box.' },
+    chat: {
+      name: 'Ask the Butler',
+      role: 'AI concierge · Club boxes, points, shares, delivery days',
+      greeting: 'Hi, I\'m the Butler. Ask me about Club boxes, points, beef shares or your delivery day.',
+      suggestions: ['How do points work?', 'Can I skip a box?', 'What\'s in a 1/8 share?', 'Wild Fork closed. Do you deliver to Oakville?'],
+      fallback: 'Good question. In the live version I\'d check that with the counter team and get back to you. Try asking about points, box sizes, the free item, beef shares or your delivery day.',
+      rules: CHAT_RULES.map(function (r) { return { match: new RegExp(r.match, 'i'), reply: r.reply }; })
+    }
+  });
+
+  /* ---------- dates (Club soft launch: cut-off Sun Nov 29 2026, first boxes Tue Dec 1) ---------- */
+  var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var MONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var LAUNCH_CUTOFF = new Date(2026, 10, 29);
+  var FOUNDING_END = new Date(2027, 0, 31, 23, 59, 59);
+  var POOL0 = new Date(2026, 11, 9);
+  function today() { var d = new Date(); return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+  function addDays(d, n) { var x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() + n); return x; }
+  function cutoffDate() { var t = today(), s = addDays(t, (7 - t.getDay()) % 7); return s < LAUNCH_CUTOFF ? new Date(LAUNCH_CUTOFF.getTime()) : s; }
+  function boxDate(day, from) { var i = DAYS.indexOf(day); if (i < 1) i = 3; return addDays(from || cutoffDate(), i); }
+  function fmtS(d) { return DAYS[d.getDay()].slice(0, 3) + ', ' + MONS[d.getMonth()] + ' ' + d.getDate(); }
+  function fmtL(d) { return DAYS[d.getDay()] + ', ' + MONS[d.getMonth()] + ' ' + d.getDate(); }
+  function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function parse(s) { var p = String(s || '').split('-'); return p.length === 3 ? new Date(+p[0], +p[1] - 1, +p[2]) : boxDate('Tuesday'); }
+  function lockOf(d) { return addDays(d, -d.getDay()); }
+  function founding() { return new Date() <= FOUNDING_END; }
+
+  /* ---------- towns and routes (JWC.routes are J&W's real weekly routes) ---------- */
+  var ALIASES = { 'ancaster': 'Hamilton', 'dundas': 'Hamilton', 'stoney creek': 'Hamilton', 'waterdown': 'Hamilton', 'thornhill': 'Vaughan', 'unionville': 'Markham', 'courtice': 'Clarington' };
+  /* places outside Ontario: J&W is an Ontario-inspected plant, so its meat can't leave the province */
+  var OUTSIDE = /\b(calgary|edmonton|alberta|vancouver|british columbia|montr[eé]al|qu[eé]bec|gatineau|laval|winnipeg|manitoba|regina|saskatoon|saskatchewan|halifax|nova scotia|moncton|fredericton|new brunswick|newfoundland|charlottetown|yukon|whitehorse|yellowknife|nunavut|usa|united states|buffalo|detroit|florida)\b/i;
+  var OUTSIDE_TXT = 'Our meat stays in Ontario (we\'re an Ontario-inspected plant), so we can\'t deliver there. Our Friday long-haul route reaches Ottawa, Kingston, London and Windsor.';
+  function titleCase(s) { return s.replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }
+  function lookupTown(text) {
+    var raw = String(text || '').trim();
+    if (!raw) return null;
+    var low = raw.toLowerCase(), city = null, alias = null;
+    Object.keys(ALIASES).some(function (k) { if (low.indexOf(k) > -1) { city = ALIASES[k]; alias = titleCase(k); return true; } return false; });
+    if (!city) city = JWC.findCity(raw);
+    if (!city) return { ok: false, input: raw, outside: OUTSIDE.test(raw) };
+    var r = JWC.routesFor(city).filter(function (x) { return x.id !== 'pickup' && x.id !== 'express'; })[0];
+    if (!r) return { ok: false, input: raw };
+    return { ok: true, town: alias || city, city: city, alias: !!alias, route: r, day: r.day, fee: r.fee, code: routeCode(r), long: /long/i.test(r.name) };
+  }
+  function routeCode(r) { return /^GTA/.test(r.name) ? r.name.split(' · ')[0] : r.day + ' long-haul'; }
+  function routeWords(info) { return info.long ? info.day + ' long-haul route' : info.day + ' route'; }
+  function townOptions(sel) {
+    return '<option value="">Pick up at 2201 Brimley Rd (free)</option>' + JWC.cities().map(function (c) { return '<option' + (c === sel ? ' selected' : '') + '>' + esc(c) + '</option>'; }).join('');
+  }
+  function setTown(info) { if (!info || !info.ok) return; S.town = info.town; S.city = info.city; saveS(); }
+  function townLabel(city) { return city && S.city === city && S.town ? S.town : city; }
+
+  /* ---------- Club data (Concept prices built from J&W's real shelf prices) ---------- */
+  var TIERS = {
+    starter: { key: 'starter', name: 'Starter', price: 139, pts: 28, servings: 45, lb: '10–14 lb', who: 'Good for 1–2 people', badge: '' },
+    family: { key: 'family', name: 'Family', price: 239, pts: 48, servings: 80, lb: '17–25 lb', who: 'Good for 3–4 people', badge: 'Our pick for families' },
+    freezer: { key: 'freezer', name: 'Freezer Fill', price: 319, pts: 66, bonus: 2, servings: 110, lb: '25–34 lb', who: 'For big families and athletes', badge: 'Best value per point' }
+  };
+  var TIER_ORDER = ['starter', 'family', 'freezer'];
+  var CADENCES = [2, 4, 6, 8];
+  var FLAVOURS = [
+    { k: 'teriyaki', label: 'Teriyaki', id: 'chicken-breast-teriyaki-cooked-portion' },
+    { k: 'souvlaki', label: 'Souvlaki', id: 'chicken-breast-souvlaki' },
+    { k: 'bbq', label: 'BBQ', id: 'chicken-breast-jerk-cooked-portioned-copy' },
+    { k: 'jerk', label: 'Jerk', id: 'jerk-chicken-breast' },
+    { k: 'greeklemon', label: 'Greek Lemon', id: 'chicken-breast-souvlaki-cooked-portioned-copy' },
+    { k: 'koreanbbq', label: 'Korean BBQ', id: 'chicken-breast-greek-lemon-cooked-portioned-copy' }
+  ];
+  var FREE = {
+    chicken: { k: 'chicken', name: 'Meal Butler cooked chicken, 4 x 4 oz' },
+    wagyu: { k: 'wagyu', name: 'Wagyu/Kobe AAA ground, 1 lb', id: 'beef-tenderloin-aaa-ground' },
+    sockeye: { k: 'sockeye', name: 'Wild sockeye fillet, 5–7 oz', id: 'copy-of-salmon-fillets-5-6oz-portion-canadian-atlantic' }
+  };
+  var THICK = [{ v: '1', l: '1″', w: '1"' }, { v: '1.25', l: '1¼″', w: '1¼"' }, { v: '1.5', l: '1½″', w: '1½"' }];
+  var CATS = [{ k: 'all', l: 'All' }, { k: 'chicken', l: 'Chicken' }, { k: 'beef', l: 'Beef' }, { k: 'pork', l: 'Pork' }, { k: 'lamb', l: 'Lamb & game' }, { k: 'fish', l: 'Fish' }];
+  var ITEMS = [
+    { k: 'case', id: 'portioned-4kg-cases-of-frozen-chicken-breasts', vi: 2, cat: 'chicken', name: 'Chicken breast case, 4 kg', pack: '4 kg, portioned', lb: 8.82, opt: { label: 'Portion size', choices: ['4 oz', '5 oz', '6 oz', '8 oz'], def: '6 oz', suffix: ' portions' }, tag: 'Best $/lb breast' },
+    { k: 'half', id: 'portioned-4kg-cases-of-frozen-chicken-breasts', vi: 4, cat: 'chicken', name: 'Chicken breast half case', pack: '2 kg bag, random portions', lb: 4.41 },
+    { k: 'gchicken', id: '1lb-ground-chicken', vi: 0, cat: 'chicken', name: 'Ground chicken breast', pack: '1 lb bag', lb: 1 },
+    { k: 'thighs', id: 'chicken-boneless-leg-meat', vi: 0, cat: 'chicken', name: 'Boneless skinless thighs', pack: '2.5–3 lb bag', lb: 2.75 },
+    { k: 'drums', id: '2-5-3-lb-bag-chicken-drumsticks', vi: 0, cat: 'chicken', name: 'Chicken drumsticks', pack: '2–3 lb bag', lb: 2.5 },
+    { k: 'wings', id: 'chicken-wings', vi: 0, cat: 'chicken', name: 'Chicken wings', pack: '2 lb bag, drums & flats', lb: 2 },
+    { k: 'burgers', id: 'chicken-burgers-1', vi: 0, cat: 'chicken', name: 'Chicken burgers, 25-pack', pack: '25 x 6 oz', lb: 9.38 },
+    { k: 'marinated', id: 'chicken-breast-marinated-korean-4kg', vi: 2, cat: 'chicken', name: 'Marinated chicken breast case', pack: '4 kg, 6 oz portions', lb: 8.82, opt: { label: 'Marinade', choices: ['Korean BBQ', 'Teriyaki'], def: 'Korean BBQ', suffix: '' } },
+    { k: 'turkey', id: 'ground-turkey', vi: 0, cat: 'chicken', name: 'Ontario ground turkey breast', pack: '1 lb bag', lb: 1 },
+    { k: 'sirloin', id: 'aaa-beef-sirloin-steaks-6oz', vi: 0, cat: 'beef', name: 'AAA top sirloin steak', pack: '7–8 oz steak', lb: 0.47, steak: true },
+    { k: 'strip', id: 'new-york-striploin', vi: 2, cat: 'beef', name: 'AAA New York striploin', pack: '8–9 oz steak', lb: 0.53, steak: true },
+    { k: 'stripcase', id: 'new-york-striploin', vi: 3, cat: 'beef', name: 'AAA NY striploin case', pack: '8 x 8–9 oz steaks', lb: 4.25, steak: true },
+    { k: 'ribeye', id: 'beef-ribeye-boneless-aaa', vi: 2, cat: 'beef', name: 'AAA boneless ribeye', pack: '11–12 oz steak', lb: 0.72, steak: true },
+    { k: 'ribeye10', id: 'aaa-beef-ribeye-steak-special-10x10oz', vi: 0, cat: 'beef', name: 'AAA ribeye 10-pack', pack: '10 x 11–12 oz steaks', lb: 7.19, steak: true, tag: 'Best $/lb ribeye' },
+    { k: 'tender', id: 'tenderloin', vi: 0, cat: 'beef', name: 'AAA beef tenderloin', pack: '6–8 oz portion', lb: 0.44, steak: true },
+    { k: 'picanha', id: 'picanha-top-sirloin-cap-grilling-steak', vi: 0, cat: 'beef', name: 'Picanha grilling steak', pack: '9–10 oz steak', lb: 0.59, steak: true },
+    { k: 'wagyustrip', id: 'wagyu-striploin-cut-into-steaks-any-size-your-choice', vi: 0, cat: 'beef', name: 'Wagyu striploin steak', pack: '8–9 oz steak', lb: 0.53, steak: true },
+    { k: 'wagyuground', id: 'beef-tenderloin-aaa-ground', vi: 0, cat: 'beef', name: 'Wagyu/Kobe AAA ground', pack: '1 lb bag', lb: 1 },
+    { k: 'brisketground', id: 'ground-chuck-brisket', vi: 0, cat: 'beef', name: 'Ground beef brisket', pack: '1 lb bag', lb: 1 },
+    { k: 'groundbulk', id: 'ground-beef-10lb-bulk-mix-special', vi: 0, cat: 'beef', name: 'Ground beef bulk mix', pack: '5 lb', lb: 5 },
+    { k: 'shortribs', id: 'beef-short-ribs-korean-style', vi: 0, cat: 'beef', name: 'Korean-style short ribs', pack: 'about 2 lb, plain', lb: 2 },
+    { k: 'porktender', id: 'pork-tenderloin', vi: 0, cat: 'pork', name: 'Pork tenderloin', pack: '2 loins', lb: 2.5 },
+    { k: 'porkchops', id: 'boneless-porkchop-case-special', vi: 0, cat: 'pork', name: 'Boneless pork chop case', pack: '10 x 6 oz', lb: 3.75 },
+    { k: 'loukaniko', id: 'greek-pork-sausages-3-pk', vi: 0, cat: 'pork', name: 'Spartan Loukaniko sausages', pack: '4 per pack', lb: 1 },
+    { k: 'bacon', id: 'bacon-sliced-centre-cut', vi: 0, cat: 'pork', name: 'Centre-cut bacon', pack: '1 lb bag', lb: 1 },
+    { k: 'lambchops', id: 'ontario-lamb-chops-raised-here-in-southern-ontario', vi: 0, cat: 'lamb', name: 'Ontario lamb chops', pack: '8 per pack', lb: 1.5 },
+    { k: 'groundlamb', id: 'lean-ground-lamb-454g', vi: 0, cat: 'lamb', name: 'Ground lamb', pack: '1 lb bag', lb: 1 },
+    { k: 'bison', id: 'bison-ribeye-steaks-6oz-portions', vi: 0, cat: 'lamb', name: 'Bison ribeye steak', pack: '6 oz portion', lb: 0.375 },
+    { k: 'groundbison', id: 'copy-of-bison-striploin-steaks-6oz-portions', vi: 0, cat: 'lamb', name: 'Ground bison', pack: '1 lb bag', lb: 1 },
+    { k: 'venison', id: 'venison-steaks', vi: 0, cat: 'lamb', name: 'Venison striploin', pack: '6 oz portion', lb: 0.375 },
+    { k: 'sockeye', id: 'copy-of-salmon-fillets-5-6oz-portion-canadian-atlantic', vi: 0, cat: 'fish', name: 'Wild sockeye fillet', pack: '5–7 oz, skin-on', lb: 0.375 }
+  ];
+  ITEMS = ITEMS.filter(function (it) {
+    var p = JWC.product(it.id); if (!p) return false;
+    var v = p.variants[it.vi] || p.variants[0];
+    it.p = p; it.price = v.price; it.title = p.title; return true;
+  });
+  var IT = {}; ITEMS.forEach(function (it) { IT[it.k] = it; });
+  var PRESETS = [
+    { k: 'lean', name: 'Lean & simple', tier: 'starter', picks: { half: 1, gchicken: 3, turkey: 1, sirloin: 2, sockeye: 2 } },
+    { k: 'switcher', name: 'Wild Fork switcher', tier: 'family', picks: { 'case': 1, wagyuground: 2, groundbulk: 1, sirloin: 4, sockeye: 3, porktender: 1 } },
+    { k: 'greek', name: 'Greek Sunday', tier: 'family', picks: { lambchops: 1, loukaniko: 2, groundlamb: 1, porktender: 1, half: 1, sirloin: 4, gchicken: 2, bacon: 1, brisketground: 1 } },
+    { k: 'steak', name: 'Steak night', tier: 'freezer', picks: { ribeye10: 1, strip: 4, wagyustrip: 1, picanha: 2, wagyuground: 2 } }
+  ];
+  var PRESET_BY = {}; PRESETS.forEach(function (p) { PRESET_BY[p.k] = p; });
+  var EXTRAS = ['chicken-breast-souvlaki', '6oz-fully-cooked-meatballs', 'copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 'soup-chicken-lemon-soup', 'chicken-souvlaki-broccoli-sweet-potato-chunks'];
+  var SHARES = [
+    { k: 'sixteenth', name: '1/16 beef', concept: true, price: 325, dep: 100, lb: 'about 25–30 lb (planning est.)', perlb: 'about $11–13/lb', img: 'beef-ribeye-boneless-aaa', alt: 'J&W AAA boneless ribeye steaks', kind: 'beef', per: 4, word: 'sixteenths', id: 'share-sixteenth-deposit' },
+    { k: 'eighth', name: '1/8 beef', concept: true, price: 625, dep: 150, lb: 'about 50–60 lb (planning est.)', perlb: 'about $10–13/lb', img: 'aaa-whole-striploin-cut-any-size-and-vacumed', alt: 'J&W whole AAA striploin, cut to order and vacuum-sealed', kind: 'beef', per: 2, word: 'eighths', id: 'share-eighth-deposit' },
+    { k: 'quarter', name: '1/4 beef', concept: false, price: 1200, dep: 300, priceNote: 'J&W\'s current price', lb: 'about 100–120 lb (planning est.)', perlb: 'about $10–12/lb', img: 'quarter-cow-purchase', alt: 'J&W quarter cow listing photo', kind: 'beef', id: 'share-quarter-deposit' },
+    { k: 'lamb', name: 'Ontario whole lamb', concept: false, price: 475, dep: 400, priceNote: '$400 deposit, $75 at pickup', img: 'untitled-mar22_05-40', alt: 'J&W Ontario-raised whole lamb', kind: 'lamb', id: 'share-lamb-deposit', facts: ['Ontario-raised', 'Chops, legs, shoulder, shanks and ground, cut to your sheet', '$400 deposit now, $75 at pickup'] },
+    { k: 'halflamb', name: 'Ontario half lamb', concept: false, price: 250, dep: 250, priceNote: 'J&W\'s current price', img: 'untitled-mar22_05-40', alt: 'J&W Ontario lamb, shown as a half lamb', photoLabel: 'Half lamb', kind: 'lamb', id: 'share-halflamb', facts: ['Ontario-raised', 'Half the cuts of a whole lamb', 'Pay in full to reserve'] }
+  ];
+  var SHARE = {}; SHARES.forEach(function (s) { SHARE[s.k] = s; if (!s.facts) s.facts = [s.lb, s.perlb, money(s.dep, 0) + ' deposit']; });
+
+  /* ---------- state (JWC.store) ---------- */
+  var S = Object.assign({ tier: null, cadence: 4, picks: {}, opts: {}, free: 'chicken', flavour: 'teriyaki', town: null, city: null, filter: 'all', preset: null, editing: false, peek: false }, JWC.store.get('bc:box', {}) || {});
+  function saveS() { JWC.store.set('bc:box', S); }
+  var T = Object.assign({ ap: {}, edits: {}, pick: null, routes: null, m0932: null }, JWC.store.get('bc:team', {}) || {});
+  function saveT() { JWC.store.set('bc:team', T); }
+  var SH = Object.assign({ e: 1, s: 2, res: [] }, JWC.store.get('bc:shares', {}) || {});
+  function saveSH() { JWC.store.set('bc:shares', SH); }
+  function boxOrders() { return JWC.store.get('bc:boxorders', []); }
+
+  /* ---------- box math ---------- */
+  function ptsOf(it) { if (it.k === 'shortribs' && T.ap.shortribs === 'approved') return 6; return Math.round(it.price / 5); }
+  function totals(picks, tierKey) {
+    picks = picks || S.picks; if (tierKey === undefined) tierKey = S.tier;
+    var r = { pts: 0, lb: 0, shelf: 0, packs: 0 };
+    Object.keys(picks).forEach(function (k) { var it = IT[k], q = picks[k]; if (!it || !q) return; r.pts += ptsOf(it) * q; r.lb += it.lb * q; r.shelf += it.price * q; r.packs += q; });
+    var t = tierKey ? TIERS[tierKey] : null;
+    r.tier = t; r.budget = t ? t.pts : 0; r.over = t ? Math.max(0, r.pts - t.pts) : 0; r.left = t ? Math.max(0, t.pts - r.pts) : 0; r.full = !!t && r.pts >= t.pts;
+    r.lb1 = round1(r.lb); r.serv = Math.round(r.lb * 16 / 5);
+    r.perlb = t && r.lb1 ? (t.price + r.over * 5) / r.lb1 : 0;
+    return r;
+  }
+  function flav(k) { return FLAVOURS.filter(function (f) { return f.k === k; })[0] || FLAVOURS[0]; }
+  function freeProduct(free, fl) { return JWC.product(free === 'chicken' ? flav(fl).id : FREE[free].id); }
+  function freeName(free, fl) { free = free || S.free; fl = fl || S.flavour; return free === 'chicken' ? flav(fl).label + ' cooked chicken 4 x 4 oz' : FREE[free].name; }
+  function freeValue(free, fl) { free = free || S.free; var p = freeProduct(free, fl || S.flavour); if (!p) return 0; return free === 'chicken' ? p.variants[0].price * 4 : p.variants[0].price; }
+  function thickW(v) { return (THICK.filter(function (x) { return x.v === v; })[0] || THICK[1]).w; }
+  function optNote(it, opts) { opts = opts || S.opts; if (it.steak) return thickW(opts[it.k] || '1.25') + ' thick'; if (it.opt) return (opts[it.k] || it.opt.def) + it.opt.suffix; return ''; }
+  function picksArr(picks, opts) {
+    picks = picks || S.picks;
+    return ITEMS.filter(function (it) { return picks[it.k] > 0; }).map(function (it) { var q = picks[it.k]; return { it: it, q: q, note: optNote(it, opts), pts: ptsOf(it) * q }; });
+  }
+  function picksSummary(picks, opts) { return picksArr(picks, opts).map(function (x) { return x.q + ' x ' + x.it.name + (x.note ? ' (' + x.note + ')' : ''); }).join('; '); }
+  function tileCls(lb) { if (lb >= 6) return 't33'; if (lb >= 3.5) return 't32'; if (lb >= 2) return 't22'; if (lb >= 0.9) return 't21'; return 't11'; }
+
+  /* ---------- laurel + seal artwork ---------- */
+  function laurel(R, color, n) {
+    var out = '', stems = '';
+    function pt(d, r) { var a = d * Math.PI / 180; return [Math.cos(a) * r, Math.sin(a) * r]; }
+    function f(v) { return Math.round(v * 10) / 10; }
+    [1, -1].forEach(function (side) {
+      var a0 = side === 1 ? 108 : 72, span = 140, a1 = a0 + side * span, p0 = pt(a0, R), p1 = pt(a1, R);
+      stems += '<path d="M' + f(p0[0]) + ' ' + f(p0[1]) + ' A' + R + ' ' + R + ' 0 0 ' + (side === 1 ? 1 : 0) + ' ' + f(p1[0]) + ' ' + f(p1[1]) + '" fill="none" stroke="' + color + '" stroke-width="' + f(R * 0.025) + '" stroke-linecap="round"/>';
+      for (var i = 0; i < n; i++) {
+        var deg = a0 + side * span * (i + 0.6) / n, tang = deg + side * 90;
+        [1, -1].forEach(function (s) {
+          var rot = tang - s * 32 * side, base = pt(deg, R + s * R * 0.02), L = R * 0.12 * (1 - i * 0.03), W = L * 0.42;
+          var cx = base[0] + Math.cos(rot * Math.PI / 180) * L * 0.85, cy = base[1] + Math.sin(rot * Math.PI / 180) * L * 0.85;
+          out += '<ellipse cx="' + f(cx) + '" cy="' + f(cy) + '" rx="' + f(L) + '" ry="' + f(W) + '" transform="rotate(' + f(rot) + ' ' + f(cx) + ' ' + f(cy) + ')" fill="' + color + '"/>';
+        });
+      }
+    });
+    return stems + out;
+  }
+  var sealN = 0;
+  function sealSVG(label) {
+    var id = 'seal' + (++sealN);
+    return '<svg class="seal" viewBox="-60 -60 120 120" role="img" aria-label="' + esc(label || 'Seal: Packed at 2201 Brimley Rd') + '"><defs><path id="' + id + 't" d="M -45 0 A 45 45 0 0 1 45 0"/><path id="' + id + 'b" d="M -52 0 A 52 52 0 0 0 52 0"/></defs>' +
+      '<circle r="58" fill="#0F2E52"/><circle r="55" fill="none" stroke="#C8A15A" stroke-width="1.4"/><circle r="40" fill="none" stroke="#C8A15A" stroke-width=".7" opacity=".55"/>' +
+      '<g>' + laurel(29, '#C8A15A', 6) + '</g>' +
+      '<text font-family="Barlow Condensed, Inter, sans-serif" font-weight="600" font-size="8.6" letter-spacing="1.1" fill="#F6F0E4"><textPath href="#' + id + 't" startOffset="50%" text-anchor="middle">PACKED AT 2201 BRIMLEY RD</textPath></text>' +
+      '<text font-family="Barlow Condensed, Inter, sans-serif" font-weight="600" font-size="7.4" letter-spacing="1.3" fill="#C8A15A"><textPath href="#' + id + 'b" startOffset="50%" text-anchor="middle">SCARBOROUGH · EST. 1995</textPath></text>' +
+      '<text y="5" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="19" fill="#fff">J&amp;W</text>' +
+      '<text y="15.5" text-anchor="middle" font-family="Barlow Condensed, Inter, sans-serif" font-weight="600" font-size="6.2" letter-spacing="1.3" fill="#C8A15A">BUTCHER CLUB</text></svg>';
+  }
+
+  /* ---------- hero ---------- */
+  function renderHeroArt() {
+    /* main photo: J&W's plain AAA ribeye shot (the 10-pack listing photo has price text that the round crop cuts off) */
+    var r10 = JWC.product('beef-ribeye-boneless-aaa'), cs = JWC.product('portioned-4kg-cases-of-frozen-chicken-breasts'), ter = JWC.product('chicken-breast-teriyaki-cooked-portion');
+    $('#heroart').innerHTML = '<svg class="hring" viewBox="-120 -120 240 240" aria-hidden="true">' + laurel(104, '#C8A15A', 10) + '</svg>' +
+      '<span class="cap tag tag-brass">Cut at 2201 Brimley Rd</span>' +
+      (r10 ? '<figure class="ph ph-main"><img src="' + JWC.img(r10, 800) + '" alt="J&amp;W AAA boneless ribeye steaks, raw, on a cutting board" width="800" height="500"></figure>' : '') +
+      (cs ? '<figure class="ph ph-a"><img src="' + JWC.img(cs, 400) + '" alt="J&amp;W case of portioned chicken breasts" width="400" height="400"></figure>' : '') +
+      (ter ? '<figure class="ph ph-b"><img src="' + JWC.img(ter, 400) + '" alt="Meal Butler teriyaki chicken breast, cooked and portioned" width="400" height="400"></figure><span class="freetag tag tag-brass">Free for life</span>' : '');
+  }
+  function heroCheck(e) {
+    e.preventDefault();
+    var inp = $('#hero-town'), out = $('#hero-route-out'), v = inp.value;
+    if (!v.trim()) { out.innerHTML = 'Type your town or city first, for example Whitby.'; inp.focus(); return; }
+    var info = lookupTown(v);
+    if (!info.ok) { out.innerHTML = info.outside ? '<b>' + esc(info.input) + '</b>: ' + esc(OUTSIDE_TXT) : 'We don\'t have a route to <b>' + esc(info.input) + '</b> yet. Pick up free at 2201 Brimley Rd.'; return; }
+    setTown(info);
+    out.innerHTML = '<span class="ok" aria-hidden="true">✓</span> <b>' + esc(info.town) + '</b> is on our ' + esc(routeWords(info)) + (info.alias ? ' (via ' + esc(info.city) + ')' : '') + '. Club delivery is free (non-members pay ' + money(info.fee, 0) + '). Join by ' + fmtS(cutoffDate()) + ' and your first box comes ' + fmtS(boxDate(info.day)) + '.';
+    renderWild();
+  }
+
+  /* ---------- tiers + cadence ---------- */
+  function renderFreq() {
+    $('#freq').innerHTML = '<span class="font-semibold" style="font-size:15px;margin-right:4px">How often:</span>' + CADENCES.map(function (w) {
+      return '<button type="button" class="chip" data-act="freq" data-arg="' + w + '" aria-pressed="' + (S.cadence === w) + '">Every ' + w + ' weeks</button>';
+    }).join('');
+  }
+  function renderTiers() {
+    $('#tiers').innerHTML = TIER_ORDER.map(function (k) {
+      var t = TIERS[k], sel = S.tier === k;
+      return '<article class="tier' + (sel ? ' sel' : '') + '" aria-labelledby="tier-' + k + '">' +
+        (t.badge ? '<span class="badge tag ' + (k === 'family' ? 'tag-ox' : 'tag-navy') + '">' + esc(t.badge) + '</span>' : '') +
+        '<div class="flex items-center justify-between gap-2"><h3 id="tier-' + k + '" class="f-display font-semibold" style="font-size:26px;line-height:1.1">' + t.name + '</h3><span class="tag tag-concept">Concept</span></div>' +
+        '<p style="margin-top:10px"><span class="pr">' + money(t.price, 0) + '</span> <span class="small">a box</span></p>' +
+        '<div class="meta"><div><b>' + t.pts + '</b><span>points' + (t.bonus ? ' (' + t.bonus + ' bonus)' : '') + '</span></div><div><b>Up to ' + t.servings + '</b><span>servings (est.)</span></div><div><b>' + t.lb + '</b><span>about, est.</span></div><div><b>' + m2(t.price / t.pts) + '</b><span>per point</span></div></div>' +
+        '<p style="font-size:15px;font-weight:600">' + t.who + '</p>' +
+        '<ul class="f" style="margin:10px 0 18px"><li>' + IC.tick + '<span>Free route delivery ($20–35 value)</span></li><li>' + IC.tick + '<span>Free-for-life item</span></li><li>' + IC.tick + '<span>Skip, swap or pause online</span></li></ul>' +
+        '<button type="button" class="btn ' + (sel ? 'btn-navy' : 'btn-ox') + ' btn-block" style="margin-top:auto" data-act="tier" data-arg="' + k + '" aria-pressed="' + sel + '">' + (sel ? 'Chosen: ' + t.name + ' ✓' : 'Choose ' + t.name) + '</button>' +
+        (sel ? '<a href="#free" class="link" style="display:block;text-align:center;margin-top:10px;min-height:24px">Next: pick your free item</a>' : '') + '</article>';
+    }).join('');
+  }
+
+  /* ---------- free-for-life item ---------- */
+  function renderFree() {
+    var fp = freeProduct('chicken', S.flavour), wg = JWC.product(FREE.wagyu.id), sk = JWC.product(FREE.sockeye.id), mac = fp ? JWC.macros(fp, 0) : null;
+    function head(k, p, alt) { return '<input type="radio" id="free-' + k + '" name="freeitem" value="' + k + '"' + (S.free === k ? ' checked' : '') + ' data-chg="free"><span class="radio" aria-hidden="true"></span><div class="fimg">' + (p ? '<img src="' + JWC.img(p, 600) + '" alt="' + esc(alt) + '" width="600" height="338" loading="lazy">' : '') + '</div>'; }
+    $('#freeopts').innerHTML =
+      '<div class="fopt cooked' + (S.free === 'chicken' ? ' on' : '') + '"><label for="free-chicken" style="cursor:pointer;display:block">' + head('chicken', fp, 'Meal Butler ' + flav(S.flavour).label + ' chicken breast, cooked and portioned') +
+      '<div class="fb"><div class="flex items-center gap-2"><img src="../assets/img/jw-logo2.jpg" alt="Meal Butler logo" class="mblogo" width="64" height="42"><span class="tag tag-brass">Default · Free for life</span></div><h3>Meal Butler cooked chicken, 4 x 4 oz</h3><p style="font-size:15px;color:rgba(255,255,255,.88)">Fully cooked and portioned. Heat and eat.</p>' +
+      '<p style="font-size:14px"><b>$16.80–19.96 value</b> · this flavour ' + m2(freeValue('chicken', S.flavour)) + (mac ? ' · about ' + mac.p + ' g protein per 4 oz (est.)' : '') + '</p></div></label>' +
+      '<div style="padding:0 16px 16px"><label for="free-flav" style="display:block;font-weight:600;font-size:14px;margin-bottom:5px">Flavour</label><select id="free-flav" class="sel" data-chg="flavour">' + FLAVOURS.map(function (f) { return '<option value="' + f.k + '"' + (f.k === S.flavour ? ' selected' : '') + '>' + f.label + '</option>'; }).join('') + '</select></div></div>' +
+      '<div class="fopt' + (S.free === 'wagyu' ? ' on' : '') + '"><label for="free-wagyu" style="cursor:pointer;display:flex;flex-direction:column;height:100%">' + head('wagyu', wg, 'J&W Wagyu/Kobe AAA ground beef, 1 lb bag') +
+      '<div class="fb"><h3>Wagyu/Kobe AAA ground, 1 lb</h3><p class="small">Our AAA Wagyu/Kobe grind in a 1 lb vacuum bag. Burgers, meatballs, bolognese.</p><p style="font-size:14px"><b>' + m2(wg ? wg.variants[0].price : 14.99) + ' value</b></p></div></label></div>' +
+      '<div class="fopt' + (S.free === 'sockeye' ? ' on' : '') + '"><label for="free-sockeye" style="cursor:pointer;display:flex;flex-direction:column;height:100%">' + head('sockeye', sk, 'J&W wild Canadian sockeye salmon fillet, skin-on') +
+      '<div class="fb"><h3>Wild sockeye fillet, 5–7 oz</h3><p class="small">Skin-on Canadian wild sockeye, frozen and vacuum-sealed.</p><p style="font-size:14px"><b>' + m2(sk ? sk.variants[0].price : 10.5) + ' value</b></p></div></label></div>';
+  }
+
+  /* ---------- builder: presets, filters, menu ---------- */
+  function renderPresets() {
+    $('#presets').innerHTML = PRESETS.map(function (p) {
+      var t = totals(p.picks, p.tier);
+      return '<button type="button" class="preset" data-act="preset" data-arg="' + p.k + '" aria-pressed="' + (S.preset === p.k) + '"><b>' + esc(p.name) + '</b><small>' + TIERS[p.tier].name + ' · ' + t.pts + ' pts · ' + m2(t.shelf) + ' shelf · ~' + t.lb1 + ' lb</small></button>';
+    }).join('') + '<button type="button" class="preset" data-act="preset" data-arg="empty"><b>Start empty</b><small>Clear the box</small></button>';
+  }
+  function renderFilters() {
+    $('#filters').innerHTML = CATS.map(function (c) {
+      var n = c.k === 'all' ? ITEMS.length : ITEMS.filter(function (i) { return i.cat === c.k; }).length;
+      return '<button type="button" class="chip" data-act="filter" data-arg="' + c.k + '" aria-pressed="' + (S.filter === c.k) + '">' + c.l + ' <small>' + n + '</small></button>';
+    }).join('');
+    $$('#menu .mcard').forEach(function (el) { el.hidden = !(S.filter === 'all' || el.dataset.cat === S.filter); });
+  }
+  function buildMenu() {
+    $('#menu').innerHTML = ITEMS.map(function (it) {
+      var perlb = it.price / it.lb, opt = '';
+      if (it.steak) {
+        opt = '<div><span class="seg-l" id="th-' + it.k + '">Thickness</span><div class="seg" role="group" aria-labelledby="th-' + it.k + '" style="margin-top:3px">' + THICK.map(function (t) {
+          return '<button type="button" data-act="thick" data-arg="' + it.k + '" data-v="' + t.v + '" aria-pressed="false" aria-label="' + t.w.replace('"', ' inch') + ' thick ' + esc(it.name) + '">' + t.l + '</button>';
+        }).join('') + '</div></div>';
+      } else if (it.opt) {
+        opt = '<div><label class="seg-l" for="opt-' + it.k + '">' + it.opt.label + '</label><select id="opt-' + it.k + '" class="sel" style="margin-top:3px" data-chg="opt" data-arg="' + it.k + '">' + it.opt.choices.map(function (c) { return '<option>' + esc(c) + '</option>'; }).join('') + '</select></div>';
+      }
+      return '<article class="mcard" data-k="' + it.k + '" data-cat="' + it.cat + '">' +
+        '<div class="ph"><img src="' + JWC.img(it.p, 400) + '" alt="J&amp;W product photo: ' + esc(it.title) + '" width="400" height="300" loading="lazy"><span class="pts" id="pt-' + it.k + '"></span><span class="qbadge" id="qb-' + it.k + '" hidden></span>' +
+        (it.k === 'shortribs' ? '<span class="cotm tag tag-ox" id="cotm" hidden>Cut of the month</span>' : (it.tag ? '<span class="cotm tag tag-brass">' + esc(it.tag) + '</span>' : '')) + '</div>' +
+        '<div class="mc-b"><h3 class="mc-n">' + esc(it.name) + '</h3><p class="mc-t">' + esc(it.p.name) + '</p>' +
+        '<p class="mc-m">' + esc(it.pack) + ' · <b>' + m2(it.price) + '</b></p><p><span class="lbt">' + m2(perlb) + '/lb' + (/^1 lb/.test(it.pack) ? '' : ' est.') + '</span></p>' + opt +
+        '<div class="mc-ctrl" id="ctrl-' + it.k + '"></div></div></article>';
+    }).join('');
+    ITEMS.forEach(function (it) { updateCard(it.k); });
+    renderFilters();
+  }
+  function updateCard(k) {
+    var it = IT[k]; if (!it) return;
+    var q = S.picks[k] || 0, p = ptsOf(it), card = $('.mcard[data-k="' + k + '"]');
+    if (!card) return;
+    card.classList.toggle('in', q > 0);
+    $('#pt-' + k).textContent = plural(p, 'pt') + (k === 'shortribs' && p === 6 ? ' (was 7)' : '');
+    var qb = $('#qb-' + k); qb.hidden = !q; qb.textContent = q ? '×' + q : '';
+    if (k === 'shortribs') $('#cotm').hidden = p !== 6;
+    $('#ctrl-' + k).innerHTML = q ? '<div class="stepper"><button type="button" data-act="dec" data-arg="' + k + '" aria-label="Remove one ' + esc(it.name) + '">−</button><output>' + q + ' in box</output><button type="button" data-act="inc" data-arg="' + k + '" aria-label="Add one more ' + esc(it.name) + '">+</button></div>'
+      : '<button type="button" class="addb" data-act="add" data-arg="' + k + '" aria-label="Add ' + esc(it.name) + ', ' + plural(p, 'point') + '">Add · ' + plural(p, 'pt') + '</button>';
+    if (it.steak) { var v = S.opts[k] || '1.25'; $$('[data-act="thick"][data-arg="' + k + '"]', card).forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.v === v ? 'true' : 'false'); }); }
+    if (it.opt) { var sel = $('#opt-' + k); if (sel) sel.value = S.opts[k] || it.opt.def; }
+  }
+
+  /* ---------- the box panel (the wow) ---------- */
+  var prevQ = null, wasFull = null;
+  function renderBox(userAct) {
+    var t = totals(), tier = t.tier;
+    $('#bx-title').textContent = tier ? 'Your ' + tier.name + ' box' : 'Your box';
+    $('#bx-cad').textContent = tier ? 'Every ' + S.cadence + ' weeks' : '';
+    $('#bx-tiers').innerHTML = tier ? '' : '<p style="font-size:14px;margin-top:6px;color:rgba(255,255,255,.86)">Pick a box size to set your points budget.</p><div class="miniTier">' + TIER_ORDER.map(function (k) { return '<button type="button" data-act="tier" data-arg="' + k + '">' + TIERS[k].name + '<br>' + TIERS[k].pts + ' pts · $' + TIERS[k].price + '</button>'; }).join('') + '</div>';
+    var meter = $('#bx-meter'), bar = meter.querySelector('i');
+    bar.style.width = (tier ? Math.min(100, t.pts / t.budget * 100) : 0) + '%';
+    bar.classList.toggle('over', t.over > 0);
+    meter.setAttribute('aria-valuemax', String(t.budget || 0)); meter.setAttribute('aria-valuenow', String(Math.min(t.pts, t.budget || t.pts)));
+    meter.setAttribute('aria-valuetext', tier ? t.pts + ' of ' + t.budget + ' points' : t.pts + ' points, no box size chosen');
+    $('#bx-pts').textContent = tier ? t.pts + ' of ' + t.budget + ' points' : plural(t.pts, 'point') + ' picked';
+    $('#bx-price').textContent = tier ? money(tier.price, 0) + ' a box' : '';
+    $('#bx-live').textContent = t.packs ? t.lb1 + ' lb · about ' + t.serv + ' servings' + (t.perlb ? ' · ' + m2(t.perlb) + '/lb' : '') : 'Empty box · free item pinned';
+
+    /* tiles: one per pack, sized by weight; free tile pinned top-left */
+    var fp = freeProduct(S.free, S.flavour), html = '<div class="tile free">' + (fp ? '<img src="' + JWC.img(fp, 200) + '" alt="">' : '') + '<em class="rib">Free for life</em><span>' + esc(freeName()) + '</span></div>';
+    var list = [], cap = 40, n = 0;
+    picksArr().forEach(function (x) { for (var i = 0; i < x.q; i++) list.push({ it: x.it, idx: i }); });
+    list.forEach(function (o) {
+      if (n >= cap) return;
+      var isNew = userAct && prevQ && o.idx >= (prevQ[o.it.k] || 0);
+      html += '<div class="tile ' + tileCls(o.it.lb) + (isNew && !reduced ? ' new' : '') + '"' + (isNew && !reduced ? ' style="animation-delay:' + Math.min(n, 14) * 35 + 'ms"' : '') + '><img src="' + JWC.img(o.it.p, 200) + '" alt=""><span>' + esc(o.it.name) + '</span></div>';
+      n++;
+    });
+    if (list.length > cap) html += '<div class="tile more t21">+' + (list.length - cap) + ' more</div>';
+    if (!list.length) html += '<div class="bbox-empty">Tap Add on any cut, or start from a ready box.</div>';
+    $('#tiles').innerHTML = html;
+    prevQ = clone(S.picks);
+    $('#bx-sr').textContent = 'Your box: ' + (list.length ? picksArr().map(function (x) { return x.q + ' ' + x.it.name; }).join(', ') : 'empty') + '. Free for life: ' + freeName() + '.';
+
+    var cartItems = JWC.cart.items(), cartN = JWC.cart.count();
+    function row(a, b, cls) { return '<div' + (cls ? ' class="' + cls + '"' : '') + '><dt>' + a + '</dt><dd>' + b + '</dd></div>'; }
+    $('#blines').innerHTML = row('Weight', t.lb1 + ' lb (est.)') + row('Servings', 'About ' + t.serv + ' (est.)') + row('Shelf value', m2(t.shelf)) +
+      (tier ? row('Your price', money(tier.price, 0) + ' a box' + (t.over ? ' + ' + money(t.over * 5, 0) : ''), 'yp') : '') +
+      row('Free for life', esc(freeName())) + row('Delivery', 'Free on your route day') +
+      (cartN ? row('Meal Butler extras', plural(cartN, 'item') + ' · ' + m2(JWC.cart.subtotal())) : '');
+
+    var msg = $('#bmsg'), cls = '', txt;
+    if (!tier) txt = t.packs ? 'Pick a box size to see how many points you have left.' : 'Pick a box size, then tap Add on any cut.';
+    else if (!t.packs) txt = t.budget + ' points to spend. Tap Add, or start from a ready box.';
+    else if (t.over) { txt = 'You\'re ' + plural(t.over, 'point') + ' over. Extra points are $5 each (' + money(t.over * 5, 0) + '), or remove something.'; cls = 'over'; }
+    else if (t.left) txt = plural(t.left, 'point') + ' left. Up to 5 roll to your next box.';
+    else { txt = 'Box full. Nice work.'; cls = 'full'; }
+    msg.className = 'bmsg' + (cls ? ' ' + cls : '');
+    msg.innerHTML = esc(txt) + (t.full && S.peek ? ' <button type="button" class="link" data-act="lid">Close the lid</button>' : '');
+
+    $('#reviewBtn').textContent = S.editing ? 'Review changes' : (t.full ? 'Join with this box' : 'Review my box');
+    if (!t.full) S.peek = false;
+    var lid = $('#lid'), lidOn = t.full && !S.peek;
+    if (wasFull === null) { lid.classList.add('instant'); requestAnimationFrame(function () { requestAnimationFrame(function () { lid.classList.remove('instant'); }); }); }
+    lid.classList.toggle('on', lidOn);
+    $('#lid-sub').textContent = t.pts + ' of ' + t.budget + ' points · ' + t.lb1 + ' lb (est.)';
+    if (userAct && t.full && wasFull === false) toast('Box full. Nice work.');
+    wasFull = t.full;
+    renderBar();
+  }
+  function buildLid() {
+    $('#lid').innerHTML = sealSVG('Seal: Packed at 2201 Brimley Rd') + '<p class="lidt">Packed at 2201 Brimley Rd</p><p class="small" id="lid-sub" style="color:var(--deep)"></p><button type="button" class="btn btn-line btn-sm" data-act="peek">Peek inside</button>';
+  }
+  function renderBar() {
+    var t = totals(), bb = $('#bbar');
+    bb.hidden = !t.tier;
+    document.body.classList.toggle('bc-hasbar', !!t.tier && document.body.dataset.view !== 'team');
+    if (!t.tier) return;
+    $('#bbar-t').textContent = t.tier.name + ' · ' + t.pts + '/' + t.budget + ' pts · ' + money(t.tier.price, 0);
+    var m = $('#bbar-m'); m.style.width = Math.min(100, t.pts / t.budget * 100) + '%'; m.classList.toggle('over', t.over > 0);
+  }
+
+  /* ---------- Meal Butler extras (JWC.cart) ---------- */
+  function renderExtras() {
+    var items = JWC.cart.items();
+    $('#xgrid').innerHTML = EXTRAS.map(function (id) {
+      var p = JWC.product(id); if (!p) return '';
+      var v = p.variants[0], key = p.id + '|' + v.label, inCart = items.filter(function (i) { return i.key === key; })[0], m = JWC.macros(p, 0);
+      return '<div class="xcard"><img src="' + JWC.img(p, 200) + '" alt="' + esc(p.name) + ', Meal Butler cooked and portioned" width="72" height="72" loading="lazy"><div class="xb"><p class="font-semibold" style="font-size:14.5px;line-height:1.25">' + esc(p.name) + '</p><p class="small">' + esc(v.label) + ' · <b style="color:var(--ox)">' + m2(v.price) + '</b>' + (m ? ' · ' + m.p + ' g protein est.' : '') + '</p></div><div class="xc">' +
+        (inCart ? '<div class="stepper"><button type="button" data-act="xdec" data-arg="' + esc(key) + '" aria-label="One less ' + esc(p.name) + '">−</button><output>' + inCart.qty + '</output><button type="button" data-act="xinc" data-arg="' + esc(key) + '" aria-label="One more ' + esc(p.name) + '">+</button></div>'
+          : '<button type="button" class="addb" data-act="xadd" data-arg="' + esc(p.id) + '" aria-label="Add ' + esc(p.name) + ' to your order">Add</button>') + '</div></div>';
+    }).join('');
+  }
+  function renderHeaderCart() {
+    var n = JWC.cart.count();
+    $('#hdr-cart-n').textContent = n;
+    $('#hdr-cart').setAttribute('aria-label', 'Open your order, ' + plural(n, 'item'));
+  }
+
+  /* ---------- review sheet + join checkout ---------- */
+  function openReview() {
+    var t = totals();
+    if (!t.tier) { toast('Pick a box size first'); go('#boxes'); return; }
+    if (!t.packs) { toast('Add a few cuts first'); go('#build'); return; }
+    var tier = t.tier, extras = JWC.cart.items(), exSub = JWC.cart.subtotal(), mem = !S.editing && isMember() ? JWC.store.get('club', null) : null;
+    var html = '<p class="eyebrow text-navy">' + (S.editing ? 'Your Club box · editing' : 'Review · Concept') + '</p><h3 class="mhead">Your ' + tier.name + ' box, every ' + S.cadence + ' weeks</h3>' +
+      (mem ? '<p class="pool" style="margin-top:8px">You\'re already a member on this device (' + TIERS[mem.tier].name + ' box, next ' + fmtS(parse(mem.next)) + '). Joining again replaces that membership. <button type="button" class="link" data-act="rv-update">Save these picks to my current box instead</button></p>' : '') +
+      '<ul class="rv-list" style="margin-top:10px">' + picksArr().map(function (x) { return '<li><span>' + x.q + ' x ' + esc(x.it.name) + (x.note ? '<span class="nt">' + esc(x.note) + '</span>' : '') + '</span><span>' + plural(x.pts, 'pt') + '</span></li>'; }).join('') +
+      '<li><span>Free for life: ' + esc(freeName()) + '<span class="nt">' + m2(freeValue()) + ' value</span></span><span>Free</span></li>' +
+      (t.over ? '<li><span>Extra points x ' + t.over + '<span class="nt">$5 each</span></span><span>' + money(t.over * 5, 0) + '</span></li>' : '') +
+      (S.editing ? '' : extras.map(function (i) { return '<li><span>' + i.qty + ' x ' + esc(i.name) + '<span class="nt">Meal Butler extra · ' + esc(i.variant) + ' · regular price</span></span><span>' + m2(i.qty * i.price) + '</span></li>'; }).join('')) + '</ul>' +
+      '<p class="small" style="margin-top:8px">' + t.pts + ' of ' + t.budget + ' points · ' + t.lb1 + ' lb est. · about ' + t.serv + ' servings · shelf value ' + m2(t.shelf) + '</p>' +
+      '<label class="jwc-field"><span>Your town</span><select id="rv-town">' + townOptions(S.city) + '</select></label>' +
+      '<p class="pool" id="rv-next"></p><div id="rv-sum" style="margin-top:10px"></div>' +
+      '<p class="small" style="margin-top:8px">Box locks Sunday 11:59 pm. Skip, swap or pause online until then.</p>' +
+      '<div class="grid gap-2" style="grid-template-columns:1fr 2fr;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Edit</button><button type="button" class="btn btn-ox" id="rv-go">' + (S.editing ? 'Save changes' : 'Join and check out') + '</button></div>';
+    JWC.modal(html, function (root) {
+      var sel = root.querySelector('#rv-town');
+      function draw() {
+        var city = sel.value, info = city ? lookupTown(city) : null, fee = info && info.ok ? info.fee : 0;
+        root.querySelector('#rv-next').innerHTML = info && info.ok ? 'Next box: <b>' + fmtL(boxDate(info.day)) + ' · ' + esc(townLabel(city)) + ' (' + esc(info.code) + ')</b>' : 'First pickup: <b>' + fmtL(boxDate('Wednesday')) + ' · 2201 Brimley Rd</b>';
+        var first = tier.price + t.over * 5 + (S.editing ? 0 : exSub) - (founding() && !S.editing ? 30 : 0);
+        root.querySelector('#rv-sum').innerHTML = '<div class="jwc-row"><span>' + tier.name + ' box</span><span>' + money(tier.price, 2) + '</span></div>' +
+          (t.over ? '<div class="jwc-row"><span>Extra points</span><span>' + money(t.over * 5, 2) + '</span></div>' : '') +
+          (!S.editing && exSub ? '<div class="jwc-row"><span>Meal Butler extras</span><span>' + m2(exSub) + '</span></div>' : '') +
+          '<div class="jwc-row"><span>Club delivery</span><span>' + (fee ? 'Free (normally ' + money(fee, 0) + ')' : 'Free') + '</span></div>' +
+          (founding() && !S.editing ? '<div class="jwc-row" style="color:var(--tick)"><span>Founding member credit</span><span>−$30.00</span></div>' : '') +
+          '<div class="jwc-row total"><span>' + (S.editing ? 'Each box' : 'First box') + '</span><span>' + m2(first) + '</span></div>';
+      }
+      sel.addEventListener('change', draw); draw();
+      root.querySelector('#rv-go').addEventListener('click', function () { if (S.editing) saveMemberEdit(sel.value); else doJoin(sel.value); });
+    });
+  }
+  function doJoin(city) {
+    var t = totals(), tier = t.tier, info = city ? lookupTown(city) : null, fee = info && info.ok ? info.fee : 0, town = townLabel(city);
+    var items = [{ id: 'club-' + tier.key + '-box', name: 'Butcher Club ' + tier.name + ' box (Concept)', variant: tier.pts + ' points · every ' + S.cadence + ' weeks', price: tier.price, qty: 1, note: picksSummary() }];
+    items.push({ id: 'club-free-item', name: 'Free for life: ' + freeName(), variant: 'Members only', price: 0, qty: 1, note: m2(freeValue()) + ' value' });
+    if (t.over) items.push({ id: 'club-extra-points', name: 'Extra box points x ' + t.over + ' (Concept)', variant: '$5 each', price: t.over * 5, qty: 1 });
+    JWC.cart.items().forEach(function (i) { items.push(i); });
+    var snap = { tier: S.tier, cadence: S.cadence, picks: clone(S.picks), opts: clone(S.opts), free: S.free, flavour: S.flavour, town: town };
+    memberCheckout(function (cityNow, feeNow) {
+      var extra = [];
+      if (feeNow) extra.push({ label: 'Club delivery credit', amount: -feeNow });
+      if (founding()) extra.push({ label: 'Founding member credit (first box)', amount: -30 });
+      return {
+      title: 'Join the J&W Butcher Club · ' + tier.name + ' box', city: cityNow, items: items,
+      subscription: { label: 'Butcher Club · every ' + S.cadence + ' weeks', discountPct: 0 },
+      extraRows: extra, note: 'Box locks Sunday 11:59 pm before your route day.',
+      onPlaced: function (order) {
+        var pick = order.city === 'Pickup', inf = pick ? null : lookupTown(order.city);
+        var m = /(Tuesday|Wednesday|Thursday|Friday)/.exec(order.day || ''), day = m ? m[1] : (inf && inf.ok ? inf.day : 'Wednesday');
+        var c = { demo: false, tier: snap.tier, cadence: snap.cadence, picks: snap.picks, opts: snap.opts, free: snap.free, flavour: snap.flavour,
+          town: pick ? 'Pickup' : (order.city === city ? snap.town : order.city), city: order.city, day: day, code: pick ? 'Pickup' : (/Express/.test(order.route) ? 'Express' : (inf && inf.ok ? inf.code : '')), route: order.route,
+          next: iso(boxDate(day)), anchor: null, status: 'active', orderNo: order.no, joined: order.when, log: [{ when: order.when, type: 'join', text: 'Joined · ' + TIERS[snap.tier].name + ' every ' + snap.cadence + ' weeks' }] };
+        JWC.store.set('club', c);
+        var bo = boxOrders(); bo.unshift({ no: order.no, tier: snap.tier, cadence: snap.cadence, picks: snap.picks, opts: snap.opts, free: snap.free, flavour: snap.flavour, city: order.city, town: c.town, day: day, route: order.route, total: order.total }); JWC.store.set('bc:boxorders', bo.slice(0, 30));
+        JWC.cart.clear();
+        S.editing = false; saveS();
+        toast('Welcome to the Butcher Club');
+        renderAll();
+      }
+      };
+    }, city);
+  }
+  /* Club and share checkouts: the route-day credit follows the town picked inside the checkout, and the weekly
+     route (not Express) is preselected, so "Club delivery is free" stays true whatever the shopper changes there. */
+  function weeklyRouteIdx(city) {
+    var rs = JWC.routesFor(city).filter(function (r) { return r.id !== 'pickup'; });
+    for (var i = 0; i < rs.length; i++) if (rs[i].id !== 'express') return i;
+    return 0;
+  }
+  function memberCheckout(build, city) {
+    var info = city ? lookupTown(city) : null, fee = info && info.ok ? info.fee : 0;
+    JWC.checkout(build(city || '', fee));
+    var root = $('.jwc-modal.on .jwc-modal-in'), cs = root && root.querySelector('#jwc-city');
+    if (!cs) return;
+    if (city) { var r = root.querySelector('input[name="jwc-route"][value="' + weeklyRouteIdx(city) + '"]'); if (r && !r.checked) r.click(); }
+    cs.addEventListener('change', function () { memberCheckout(build, cs.value); });
+  }
+  function saveMemberEdit(city) {
+    var c = club(), info = city ? lookupTown(city) : null;
+    c.tier = S.tier; c.cadence = S.cadence; c.picks = clone(S.picks); c.opts = clone(S.opts); c.free = S.free; c.flavour = S.flavour;
+    if ((city || 'Pickup') !== c.city) {
+      var day = info && info.ok ? info.day : 'Wednesday';
+      c.next = iso(addDays(lockOf(parse(c.next)), DAYS.indexOf(day)));
+      c.city = city || 'Pickup'; c.town = city ? townLabel(city) : 'Pickup'; c.day = day; c.code = info && info.ok ? info.code : 'Pickup';
+    }
+    logC(c, { type: 'edit', text: 'Edited picks · ' + totals(c.picks, c.tier).pts + ' points' });
+    saveClub(c); S.editing = false; saveS(); JWC.closeAll(); renderAll();
+    toast('Saved. Your ' + fmtS(parse(c.next)) + ' box is updated.');
+  }
+
+  /* ---------- comparison table ---------- */
+  var CMP = [
+    { k: 'ribeye', row: 'AAA ribeye', jw: ['', '$23–25/lb in the 10-pack ($175). $33–36/lb as a single.'], b: ['', '$39–60/lb'], m: ['', '$31–37/lb (grass-fed)'] },
+    { k: 'chicken', row: 'Boneless chicken breast', jw: ['', '$9.64/lb (4 kg case, $85)'], b: ['', '$13.68–16.75/lb'], m: ['p', 'Usually not shown per lb'] },
+    { k: 'thick', row: 'Cut to your thickness', jw: ['y', 'Yes, 1–1½ inch'], b: ['y', 'Yes, at the counter'], m: ['n', 'Fixed portions'] },
+    { k: 'who', row: 'Who brings it', jw: ['y', 'J&W, on your route day'], b: ['', 'Pickup or local delivery'], m: ['', 'Usually a courier'] },
+    { k: 'skip', row: 'Skip or pause online', jw: ['y', 'Yes, until Sunday night'], b: ['n', 'No subscription'], m: ['y', 'Yes'] },
+    { k: 'free', row: 'Free item in every box', jw: ['y', 'Yes, for life'], b: ['n', 'No'], m: ['p', 'Some offer one'] },
+    { k: 'range', row: 'Wagyu, bison, Ontario lamb', jw: ['y', 'Yes'], b: ['p', 'Some'], m: ['p', 'Rarely'] }
+  ];
+  function cv(c) { var ic = c[0] === 'y' ? '<span class="y">' + IC.tick + '</span>' : c[0] === 'n' ? '<span class="n">' + IC.x + '</span>' : c[0] === 'p' ? '<span class="p">' + IC.part + '</span>' : ''; return '<div class="cv">' + ic + '<span>' + esc(c[1]) + '</span></div>'; }
+  function renderCmp() {
+    $('#cmp-body').innerHTML = CMP.map(function (r) {
+      return '<tr data-act="cmp" data-arg="' + r.k + '"><th scope="row"><button type="button" class="rowb" data-act="cmp" data-arg="' + r.k + '" aria-label="' + esc(r.row) + ': see how we worked it out">' + esc(r.row) + '<span class="how" aria-hidden="true">How? ›</span></button></th>' +
+        '<td class="jw" data-l="J&amp;W Butcher Club">' + cv(r.jw) + '</td><td data-l="Toronto premium butchers">' + cv(r.b) + '</td><td data-l="Mail-order meat boxes">' + cv(r.m) + '</td></tr>';
+    }).join('');
+  }
+  function lbOf(oz) { return oz / 16; }
+  function openExplain(k) {
+    var r = CMP.filter(function (x) { return x.k === k; })[0]; if (!r) return;
+    var body = '', act = '';
+    if (k === 'ribeye') {
+      var p10 = IT.ribeye10 ? IT.ribeye10.price : 175, p1 = IT.ribeye ? IT.ribeye.price : 24.5;
+      body = '<p><b>AAA Beef Ribeye Steak Special, 10 x 11–12 oz for ' + money(p10) + ' = ' + m2(p10 / (10 * lbOf(12))) + '–' + m2(p10 / (10 * lbOf(11))).slice(1) + '/lb.</b></p><p style="margin-top:8px">A single AAA boneless ribeye, 11–12 oz, is ' + m2(p1) + ' = ' + m2(p1 / lbOf(12)) + '–' + m2(p1 / lbOf(11)).slice(1) + '/lb. In the Club the 10-pack is ' + ptsOf(IT.ribeye10) + ' points and a single is ' + ptsOf(IT.ribeye) + '.</p><p style="margin-top:8px">Toronto premium butchers listed ribeye at $39–60/lb online. Mail-order boxes that show weights came to $31–37/lb, mostly grass-fed.</p>';
+    } else if (k === 'chicken') {
+      body = '<p><b>Case of portioned chicken breasts, 4 kg (8.82 lb) for $85 = $9.64/lb.</b></p><p style="margin-top:8px">The 2 kg half case is $48 = ' + m2(48 / 4.409) + '/lb. Premium butchers listed boneless breast at $13.68–16.75/lb. Most mail-order boxes price the box, not the pound. Our chicken is Ontario-raised, air-chilled and grain-fed, with no hormones or antibiotics.</p>';
+    } else if (k === 'thick') {
+      body = '<p>Pick 1, 1¼ or 1½ inch on any steak in the builder. Our butcher cuts it Monday morning, then we vacuum-seal and freeze it. Butcher counters do this in person. Most boxes ship fixed portions.</p>';
+    } else if (k === 'who') {
+      body = '<p>Our own vans on weekly routes: Tuesday Durham, Wednesday Toronto and Mississauga, Thursday Halton and Hamilton, Friday York and Peel, plus Wednesday and Friday long routes. Members don\'t pay the $20–35 route fee. We text your window the day before.</p>';
+    } else if (k === 'skip') {
+      body = '<p>Skip, swap, change how often, pause or cancel in My Club until Sunday 11:59 pm before your route day. No contract, no fee.</p>'; act = '<button type="button" class="btn btn-line btn-sm" data-act="myclub">Try it in My Club (demo)</button>';
+    } else if (k === 'free') {
+      body = '<p>Pick Meal Butler cooked chicken 4 x 4 oz ($16.80–19.96 value), Wagyu/Kobe AAA ground 1 lb ($14.99) or a wild sockeye fillet ($10.50). It\'s in every box while you\'re a member.</p>';
+    } else {
+      body = '<p>On the Club menu now: ' + ['wagyustrip', 'bison', 'venison', 'lambchops', 'groundbison', 'groundlamb'].filter(function (x) { return IT[x]; }).map(function (x) { return IT[x].name + ' ' + m2(IT[x].price) + ' (' + plural(ptsOf(IT[x]), 'pt') + ')'; }).join(', ') + '.</p>';
+    }
+    JWC.modal('<p class="eyebrow text-navy">How we worked it out</p><h3 class="mhead">' + esc(r.row) + '</h3><div style="margin-top:8px;font-size:15px">' + body + '</div>' +
+      '<p class="small" style="margin-top:12px">Based on five Toronto butchers and two Ontario meat-box services. Ranges, not quotes. Prices change.</p>' +
+      '<div class="apbar" style="margin-top:14px">' + act + '<button type="button" class="jwc-btn jwc-btn-dark" data-close>Got it</button></div>');
+  }
+
+  /* ---------- shares + cut sheets ---------- */
+  function poolInfo(k) {
+    var s = SHARE[k];
+    if (s.per) {
+      var n = k === 'eighth' ? SH.e : SH.s, idx = Math.floor(n / s.per), filled = n % s.per, d = addDays(POOL0, idx * 7);
+      var mine = SH.res.filter(function (r) { return r.k === k; }).length;
+      if (filled === 0 && idx > 0 && mine) return { full: true, date: d, text: 'Pooled quarter ' + fmtS(addDays(POOL0, (idx - 1) * 7)) + ': ' + s.per + ' of ' + s.per + ' ' + s.word + ' reserved, full. Next pool ' + fmtS(d) + '.' };
+      return { full: false, date: d, filled: filled, text: 'Next pooled quarter: ' + fmtS(d) + ' · ' + filled + ' of ' + s.per + ' ' + s.word + ' reserved' };
+    }
+    if (s.kind === 'beef') return { date: POOL0, text: 'Next cut date: ' + fmtS(POOL0) + ' · a whole quarter, cut for you alone' };
+    return { date: null, text: 'Cut to order. We call you with your pickup or route date.' };
+  }
+  function renderShares() {
+    $('#sharegrid').innerHTML = SHARES.map(function (s) {
+      var p = JWC.product(s.img), pool = poolInfo(s.k);
+      return '<article class="share"><div class="ph">' + (p ? '<img src="' + JWC.img(p, 600) + '" alt="' + esc(s.alt) + '" width="600" height="375" loading="lazy">' : '') +
+        (s.concept ? '<span class="tag tag-concept">Concept</span>' : '<span class="tag tag-sky">J&amp;W listing</span>') + (s.photoLabel ? '<span class="tag tag-navy" style="left:auto;right:10px">' + esc(s.photoLabel) + '</span>' : '') + '</div>' +
+        '<div class="sb"><h3>' + esc(s.name) + '</h3><p class="pr">' + money(s.price, 0) + (s.priceNote ? ' <span class="small" style="font-family:Inter,sans-serif;font-size:13.5px">' + esc(s.priceNote) + '</span>' : '') + '</p>' +
+        '<ul style="margin-top:4px">' + s.facts.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>' +
+        '<p class="pool' + (pool.full ? ' full' : '') + '" style="margin-top:8px">' + esc(pool.text) + '</p>' +
+        '<div style="margin-top:auto;padding-top:12px"><button type="button" class="btn btn-line btn-block" data-act="sheet" data-arg="' + s.k + '">See cut sheet</button></div></div></article>';
+    }).join('');
+  }
+  function pills(name, legend, opts, def) {
+    return '<fieldset class="cs-f"><legend>' + legend + '</legend><div class="pills">' + opts.map(function (o) {
+      return '<label class="pill"><input type="radio" name="cs-' + name + '" value="' + esc(o) + '"' + (o === def ? ' checked' : '') + '><span>' + esc(o) + '</span></label>';
+    }).join('') + '</div></fieldset>';
+  }
+  function checks(name, legend, opts) {
+    return '<fieldset class="cs-f"><legend>' + legend + '</legend><div class="pills">' + opts.map(function (o) {
+      return '<label class="pill"><input type="checkbox" name="cs-' + name + '" value="' + esc(o) + '"><span>' + esc(o) + '</span></label>';
+    }).join('') + '</div></fieldset>';
+  }
+  function openSheet(k) {
+    var s = SHARE[k]; if (!s) return;
+    JWC.chat.close();
+    var beef = s.kind === 'beef', pool = poolInfo(k);
+    var cta = s.k === 'halflamb' ? 'Reserve for ' + money(s.dep, 0) : 'Reserve with ' + money(s.dep, 0) + ' deposit';
+    var bal = s.price - s.dep;
+    var html = '<p class="eyebrow text-navy">' + (s.concept ? 'Concept · ' : '') + 'Cut sheet</p><h3 class="mhead">Your ' + esc(s.name) + ' cut sheet</h3>' +
+      '<p class="small" style="margin-top:4px">' + money(s.price, 0) + (beef ? ' · ' + esc(s.lb) : ' · Ontario-raised') + '. Every pack is vacuum-sealed and frozen at 2201 Brimley Rd.</p>' +
+      (beef ? pills('steak', 'Steaks <small>(ribeye, striploin, top sirloin, tenderloin): thickness</small>', ['1"', '1¼"', '1½"'], '1¼"') + pills('pack', 'Steaks per pack', ['2', '4'], '4') +
+        pills('roast', 'Roasts', ['2–3 lb', '3–4 lb', 'Grind them'], '2–3 lb') + pills('ground', 'Ground', ['1 lb bags', '2 lb bags'], '2 lb bags') +
+        checks('extra', 'Extras <small>(keep these)</small>', ['Short ribs', 'Brisket', 'Shank', 'Soup bones']) + pills('flank', 'Flank and skirt', ['Keep whole', 'Grind'], 'Keep whole')
+        : pills('rack', 'Racks', ['Chops', 'Whole racks'], 'Chops') + pills('leg', 'Legs', ['Whole leg', 'Half legs', 'Boneless, cubed for souvlaki'], 'Whole leg') +
+        pills('shoulder', 'Shoulder', ['Chops', 'Roast', 'Ground'], 'Chops') + pills('shank', 'Shanks', ['Keep', 'Grind'], 'Keep')) +
+      '<label class="jwc-field"><span>Deliver to</span><select id="cs-town">' + townOptions(S.city) + '</select></label>' +
+      '<p class="pool' + (pool.full ? ' full' : '') + '" style="margin-top:6px">' + esc(pool.text) + '</p>' +
+      '<div class="grid gap-2" style="grid-template-columns:1fr 2fr;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="btn btn-ox" id="cs-go">' + cta + '</button></div>' +
+      '<p class="small" style="margin-top:8px">' + (bal > 0 ? (s.kind === 'lamb' ? 'Balance $75 due at pickup, or on delivery if we bring it.' : 'Balance ' + money(bal, 0) + ' due on delivery or pickup, by the cut date.') : 'Paid in full.') + ' Demo: nothing is sent.</p>';
+    JWC.modal(html, function (root) {
+      root.querySelector('#cs-go').addEventListener('click', function () {
+        function val(n) { var i = root.querySelector('input[name="cs-' + n + '"]:checked'); return i ? i.value : ''; }
+        var ex = $$('input[name="cs-extra"]:checked', root).map(function (i) { return i.value.toLowerCase(); });
+        var summary = beef ? 'Steaks ' + val('steak') + ' in packs of ' + val('pack') + ' · Roasts ' + val('roast') + ' · Ground in ' + val('ground') + ' · Extras: ' + (ex.length ? ex.join(', ') : 'none') + ' · Flank and skirt: ' + val('flank').toLowerCase()
+          : 'Racks: ' + val('rack').toLowerCase() + ' · Legs: ' + val('leg').toLowerCase() + ' · Shoulder: ' + val('shoulder').toLowerCase() + ' · Shanks: ' + val('shank').toLowerCase();
+        var city = root.querySelector('#cs-town').value;
+        var poolNow = poolInfo(k), poolDate = poolNow.date;
+        memberCheckout(function (cityNow, fee) { return {
+          title: s.kind === 'beef' ? 'Reserve your ' + s.name + ' share' : 'Reserve your ' + s.name,
+          city: cityNow,
+          items: [{ id: s.id, name: s.name + (s.k === 'halflamb' ? '' : s.kind === 'lamb' ? ' deposit' : ' share deposit') + (s.concept ? ' (Concept)' : ''), variant: poolDate ? 'Cut ' + fmtS(poolDate) : 'Cut to order', price: s.dep, qty: 1, note: summary }],
+          extraRows: fee ? [{ label: 'Club delivery credit', amount: -fee }] : [],
+          note: bal > 0 ? (s.kind === 'lamb' ? 'Balance $75 due at pickup, or on delivery if we bring it.' : 'Balance ' + money(bal, 0) + ' due on delivery or pickup, by the cut date.') : 'Paid in full.',
+          onPlaced: function (order) {
+            var filledAfter = poolNow.filled != null ? poolNow.filled + 1 : null;
+            if (k === 'eighth') SH.e++; if (k === 'sixteenth') SH.s++;
+            SH.res.unshift({ no: order.no, k: k, name: s.name, sheet: summary, dep: s.dep, city: order.city, pool: poolDate ? iso(poolDate) : null, filled: filledAfter, per: s.per || null, when: order.when });
+            saveSH(); renderShares(); renderTeam();
+            toast(s.kind === 'beef' ? 'Share reserved. We call you before the cut date.' : 'Lamb reserved. We call you with your pickup or route date.');
+          }
+        }; }, city);
+      });
+    });
+  }
+
+  /* ---------- Wild Fork towns ---------- */
+  var WF = ['Whitby', 'Oakville', 'Ancaster', 'Newmarket'], wfSel = null, wfInfo = null;
+  function renderWild() {
+    $('#wfchips').innerHTML = WF.map(function (q) {
+      var i = lookupTown(q);
+      return '<button type="button" class="chip" style="min-height:48px" data-act="wf" data-arg="' + q + '" aria-pressed="' + (wfSel === q) + '">' + q + ' <small>' + i.day + (i.alias ? ' via ' + i.city : '') + ', normally ' + money(i.fee, 0) + '</small></button>';
+    }).join('') + '<button type="button" class="chip" style="min-height:48px" data-act="wf-else" aria-pressed="' + (wfSel === 'else') + '" aria-expanded="' + (wfSel === 'else') + '" aria-controls="wf-else">Somewhere else</button>';
+    $('#wf-else').hidden = wfSel !== 'else';
+    var box = $('#wfres'), info = wfInfo;
+    if (!info) { box.innerHTML = '<p class="eyebrow text-navy">Your route day</p><p class="f-display" style="font-size:22px;line-height:1.25;margin-top:6px">Pick your town to see your route day and first box date.</p><p class="small" style="margin-top:8px">Boxes lock Sunday 11:59 pm and come frozen on your route day that week.</p>'; return; }
+    if (!info.ok) { box.innerHTML = '<p class="eyebrow text-navy">Your route day</p><p class="f-display" style="font-size:22px;line-height:1.25;margin-top:6px">' + (info.outside ? 'Sorry, ' + esc(info.input) + ' is outside Ontario.' : 'We don\'t have a route to ' + esc(info.input) + ' yet.') + '</p><p style="margin-top:8px">' + (info.outside ? esc(OUTSIDE_TXT) : 'Pick up free at 2201 Brimley Rd, Scarborough (Mon–Fri 9–6, Sat 10–4), or try a nearby town.') + '</p>'; return; }
+    var sw = totals(PRESET_BY.switcher.picks, 'family');
+    box.innerHTML = '<p class="eyebrow text-navy">Your route day</p><h3 class="f-display" style="font-size:26px;line-height:1.2;margin-top:6px">' + esc(info.town) + ': ' + esc(routeWords(info)) + (info.alias ? ' (via ' + esc(info.city) + ')' : '') + '.</h3>' +
+      '<p style="margin-top:8px;font-size:16px">Join by ' + fmtL(cutoffDate()) + ' and your first box comes <b>' + fmtS(boxDate(info.day)) + '</b>. Club delivery is free (normally ' + money(info.fee, 0) + ').</p>' +
+      '<button type="button" class="btn btn-ox" style="margin-top:16px" data-act="switcher">Start with the Switcher box</button>' +
+      '<p class="small" style="margin-top:10px">Switcher box: Family size, ' + sw.pts + ' points, ~' + sw.lb1 + ' lb, ~' + sw.serv + ' servings, ~' + m2(239 / sw.lb1) + '/lb (est.). Chicken breast case, Wagyu/Kobe ground, AAA sirloins, wild sockeye.</p>';
+  }
+  function startSwitcher() {
+    S.tier = 'family'; S.picks = clone(PRESET_BY.switcher.picks); S.preset = 'switcher'; S.peek = false; saveS();
+    renderAll(true); go('#build');
+    toast('Switcher box loaded: Family, ' + totals().pts + ' points.');
+  }
+
+  /* ---------- My Club (demo) drawer ---------- */
+  var CV = 'home', CVreason = null, CVmove = null;
+  var REASONS = [['full', 'Freezer\'s full'], ['price', 'Too expensive'], ['moving', 'Moving'], ['quality', 'Quality'], ['other', 'Other']];
+  function reasonLabel(k) { return (REASONS.filter(function (r) { return r[0] === k; })[0] || ['', 'Other'])[1]; }
+  function demoMember() {
+    var picks = clone(PRESET_BY.greek.picks); picks.gchicken = (picks.gchicken || 0) + 1;
+    return { demo: true, tier: 'family', cadence: 4, picks: picks, opts: {}, free: 'chicken', flavour: 'teriyaki', town: 'Whitby', city: 'Whitby', day: 'Tuesday', code: 'GTA 1', next: iso(boxDate('Tuesday')), anchor: null, status: 'active', log: [] };
+  }
+  function club() { var c = JWC.store.get('club', null); return c && c.tier && TIERS[c.tier] ? c : demoMember(); }
+  function isMember() { var c = JWC.store.get('club', null); return !!(c && !c.demo && c.status !== 'cancelled' && TIERS[c.tier]); }
+  function saveClub(c) { JWC.store.set('club', c); renderMemberBits(); renderTeam(); }
+  function logC(c, o) { c.log = (c.log || []).concat([Object.assign({ when: new Date().toISOString() }, o)]).slice(-14); }
+  function nextFor(c, w) { return c.anchor ? addDays(parse(c.anchor), w * 7) : parse(c.next); }
+  function openClub() { CV = 'home'; renderClub(); JWC.openPanel($('#myclub')); }
+  function cbtn(act, label, cls, arg) { return '<button type="button" class="' + (cls || '') + '" data-act="' + act + '"' + (arg ? ' data-arg="' + arg + '"' : '') + '>' + label + '</button>'; }
+  function offerCard(k, title, sub) { return '<div class="offer"><p class="font-semibold">' + esc(title) + '</p><p class="small" style="margin-top:2px">' + esc(sub) + '</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-accept" data-arg="' + k + '">Accept</button></div></div>'; }
+  function renderClub() {
+    var c = club(), t = TIERS[c.tier], nx = parse(c.next), tt = totals(c.picks, c.tier), h = '';
+    var where = c.city === 'Pickup' ? 'Pickup at Brimley Rd' : c.town;
+    var line = c.status === 'cancelled' ? 'Membership cancelled' : (c.status === 'paused' ? 'Paused until ' + fmtS(nx) : 'Next box ' + fmtS(nx)) + ' · ' + where;
+    h += '<div class="mc-card"><div class="flex items-center justify-between gap-2"><span class="tag tag-brass">' + (c.demo ? 'Demo member' : 'Member' + (c.orderNo ? ' · ' + esc(c.orderNo) : '')) + '</span><span class="f-cond" style="color:var(--sky);font-size:13px">' + esc(c.code || '') + '</span></div>' +
+      '<p class="f-display" style="font-size:22px;line-height:1.2;margin-top:10px">' + t.name + ' box · every ' + c.cadence + ' weeks</p>' +
+      '<p style="margin-top:4px;color:rgba(255,255,255,.9)">' + esc(line) + '</p>' +
+      (c.status === 'active' ? '<p class="small" style="margin-top:2px">Locks ' + fmtS(lockOf(nx)) + ' at 11:59 pm</p>' : '') +
+      '<div class="meter"><i style="width:' + Math.min(100, tt.pts / t.pts * 100) + '%"></i></div><p class="small" style="margin-top:6px">' + tt.pts + ' of ' + t.pts + ' points · ' + tt.lb1 + ' lb est. · Free for life: ' + esc(freeName(c.free, c.flavour)) + '</p>' +
+      (tt.pts > t.pts && c.status !== 'cancelled' ? '<p style="font-size:13.5px;margin-top:6px;color:var(--brass);font-weight:600">' + plural(tt.pts - t.pts, 'point') + ' over. Tap Edit picks to trim them, or extra points are $5 each.</p>' : '') + '</div>';
+    if (c.demo) h += '<p class="small" style="margin-top:10px">Nobody has joined on this device yet, so this is a demo member. Join in the builder to see your own box here.</p>';
+    if (CV === 'home') {
+      if (c.status === 'cancelled') h += '<div class="offer"><p class="font-semibold">Your membership is cancelled.</p><p class="small">Your picks are saved on this device. Come back any time.</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-rejoin">Rejoin the Club</button></div></div>';
+      else h += '<div class="mc-acts">' + cbtn('club-edit', 'Edit picks') + cbtn('club-v', 'Skip this box', '', 'skip') + cbtn('club-v', 'Change how often', '', 'cad') + cbtn('club-v', 'Swap free item', '', 'swap') +
+        (c.status === 'paused' ? cbtn('club-resume', 'Resume deliveries') : cbtn('club-v', 'Pause', '', 'pause')) + cbtn('club-v', 'Cancel membership', 'danger', 'cancel') + '</div>';
+      h += '<h3 style="font:600 15px/1.3 Inter;margin-top:18px">Your picks</h3><ul class="logl">' + picksArr(c.picks, c.opts).map(function (x) { return '<li><span>' + x.q + ' x ' + esc(x.it.name) + (x.note ? ' · ' + esc(x.note) : '') + '</span><span>' + plural(x.pts, 'pt') + '</span></li>'; }).join('') + '</ul>';
+      if ((c.log || []).length) h += '<h3 style="font:600 15px/1.3 Inter;margin-top:18px">Activity</h3><ul class="logl">' + c.log.slice().reverse().map(function (l) { var d = new Date(l.when); return '<li><span>' + esc(l.text) + '</span><span>' + MONS[d.getMonth()] + ' ' + d.getDate() + '</span></li>'; }).join('') + '</ul>';
+    } else if (CV === 'skip') {
+      h += '<div class="offer"><p class="font-semibold">Skip your ' + fmtS(nx) + ' box?</p><p class="small" style="margin-top:2px">Your next box would be ' + fmtS(addDays(nx, c.cadence * 7)) + '. Nothing is charged for a skipped box.</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-skip">Yes, skip it</button><button type="button" class="btn btn-line btn-sm" data-act="club-home">Keep my box</button></div></div>';
+    } else if (CV === 'cad') {
+      h += '<fieldset class="offer"><legend class="font-semibold">How often?</legend>' + CADENCES.map(function (w) { return '<label class="choice"><input type="radio" name="mc-cad" value="' + w + '"' + (w === c.cadence ? ' checked' : '') + '> <span>Every ' + w + ' weeks</span><span class="small" style="margin-left:auto">next box ' + fmtS(nextFor(c, w)) + '</span></label>'; }).join('') +
+        '<div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-cad">Save</button><button type="button" class="btn btn-line btn-sm" data-act="club-home">Back</button></div></fieldset>';
+    } else if (CV === 'swap') {
+      h += '<fieldset class="offer"><legend class="font-semibold">Your free-for-life item</legend>' + ['chicken', 'wagyu', 'sockeye'].map(function (f) { return '<label class="choice"><input type="radio" name="mc-free" value="' + f + '"' + (f === c.free ? ' checked' : '') + '> <span>' + esc(FREE[f].name) + '</span></label>'; }).join('') +
+        '<label class="jwc-field"><span>Cooked chicken flavour</span><select id="mc-flav">' + FLAVOURS.map(function (f) { return '<option value="' + f.k + '"' + (f.k === c.flavour ? ' selected' : '') + '>' + f.label + '</option>'; }).join('') + '</select></label>' +
+        '<div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-swap">Save</button><button type="button" class="btn btn-line btn-sm" data-act="club-home">Back</button></div></fieldset>';
+    } else if (CV === 'pause') {
+      h += '<fieldset class="offer"><legend class="font-semibold">Pause for how long?</legend>' + [4, 8].map(function (w, i) { return '<label class="choice"><input type="radio" name="mc-pause" value="' + w + '"' + (i === 0 ? ' checked' : '') + '> <span>' + (w === 4 ? 'One month' : 'Two months') + '</span><span class="small" style="margin-left:auto">back ' + fmtS(addDays(nx, w * 7)) + '</span></label>'; }).join('') +
+        '<div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-pause">Pause</button><button type="button" class="btn btn-line btn-sm" data-act="club-home">Back</button></div></fieldset>';
+    } else if (CV === 'cancel') {
+      h += '<fieldset class="offer"><legend class="font-semibold">Before you go. What\'s the reason?</legend>' + REASONS.map(function (r, i) { return '<label class="choice"><input type="radio" name="mc-why" value="' + r[0] + '"' + (i === 0 ? ' checked' : '') + '> <span>' + esc(r[1]) + '</span></label>'; }).join('') +
+        '<div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-why">Continue</button><button type="button" class="btn btn-line btn-sm" data-act="club-home">Keep my membership</button></div></fieldset>';
+    } else if (CV === 'offer') {
+      var r = CVreason;
+      h += '<p class="font-semibold" style="margin-top:16px">' + esc(reasonLabel(r)) + '. Could one of these help?</p>';
+      if (r === 'full') h += c.cadence < 8 ? offerCard('every8', 'Every 8 weeks instead', 'Same box, half as often. Next box ' + fmtS(nextFor(c, 8)) + '.') : offerCard('pause1', 'Pause one month', 'Your next box moves to ' + fmtS(addDays(nx, 28)) + '.');
+      if (r === 'price') h += (c.tier !== 'starter' ? offerCard('starter', 'Switch to Starter ($139)', '28 points, the same free item and free route delivery.') : '') + offerCard('pause1', 'Pause one month', 'No box and no charge until ' + fmtS(addDays(nx, 28)) + '.');
+      if (r === 'moving') {
+        h += '<form class="offer" id="mc-move" novalidate><label for="mc-move-town" class="font-semibold" style="display:block">Where are you moving?</label><div class="flex gap-2" style="margin-top:8px"><input id="mc-move-town" class="inp" placeholder="Town or city, e.g. Ottawa" autocomplete="address-level2"><button type="submit" class="btn btn-navy btn-sm" style="min-height:48px">Check</button></div><div id="mc-move-out" aria-live="polite">';
+        if (CVmove) h += CVmove.ok ? '<p style="margin-top:10px">Good news: ' + esc(CVmove.town) + ' is on our ' + esc(routeWords(CVmove)) + '. ' + (CVmove.long ? 'Long-haul Club delivery (normally ' + money(CVmove.fee, 0) + ') needs an OK from the owners, so we text you to confirm before your next box.' : 'Club delivery stays free (normally ' + money(CVmove.fee, 0) + ').') + '</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-accept" data-arg="move">Move my box to ' + esc(CVmove.town) + '</button></div>'
+          : CVmove.outside ? '<p style="margin-top:10px">' + esc(OUTSIDE_TXT) + ' We\'d be sorry to see you go.</p>'
+          : '<p style="margin-top:10px">We don\'t have a route to ' + esc(CVmove.input) + ' yet. You can keep your box with free pickup at 2201 Brimley Rd.</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-accept" data-arg="pickup">Switch to pickup</button></div>';
+        h += '</div></form>';
+      }
+      if (r === 'quality') h += '<div class="offer"><p class="font-semibold">Talk to the butcher</p><p class="small" style="margin-top:2px">Tell us what wasn\'t right. We replace anything that arrives thawed or not up to standard in your next box.</p><div class="apbar"><button type="button" class="btn btn-ox btn-sm" data-act="club-talk">Talk to the butcher</button></div></div>';
+      if (r === 'other') h += offerCard('pause1', 'Pause one month', 'Take a break. Your next box moves to ' + fmtS(addDays(nx, 28)) + '.');
+      h += '<div class="apbar" style="margin-top:16px"><button type="button" class="btn btn-line btn-sm" data-act="club-home">Keep my membership</button><button type="button" class="btn btn-sm" style="color:var(--ox);text-decoration:underline" data-act="club-cancel">Cancel anyway</button></div>';
+    }
+    $('#myclub-body').innerHTML = h;
+    var mf = $('#mc-move'); if (mf) mf.addEventListener('submit', function (e) { e.preventDefault(); var v = $('#mc-move-town').value; if (!v.trim()) { $('#mc-move-town').focus(); return; } CVmove = lookupTown(v); renderClub(); var b = $('#mc-move-out button'); if (b) b.focus(); });
+  }
+  function clubView(v) { CV = v; CVmove = null; renderClub(); var f = $('#myclub-body .offer input, #myclub-body .offer button'); if (f) f.focus(); }
+  function clubAct(a, arg) {
+    var c = club(), nx = parse(c.next), msg = '';
+    if (a === 'club-v') { clubView(arg); return; }
+    if (a === 'club-home') { clubView('home'); return; }
+    if (a === 'club-edit') {
+      S.tier = c.tier; S.cadence = c.cadence; S.picks = clone(c.picks); S.opts = clone(c.opts || {}); S.free = c.free; S.flavour = c.flavour;
+      if (c.city && c.city !== 'Pickup') { S.city = c.city; S.town = c.town; }
+      S.editing = true; S.preset = null; saveS(); JWC.closeAll(); renderAll(); go('#build');
+      toast('Editing your Club box. Changes apply from ' + fmtS(nx) + '.'); return;
+    }
+    if (a === 'club-skip') { c.anchor = c.next; c.next = iso(addDays(nx, c.cadence * 7)); msg = 'Skipped. Next box ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'skip', text: 'Skipped the ' + fmtS(nx) + ' box', reason: 'Skip', offer: '—', status: 'Skipped' }); }
+    if (a === 'club-cad') { var w = +($('input[name="mc-cad"]:checked') || {}).value || c.cadence; c.cadence = w; c.next = iso(nextFor(c, w)); msg = 'Done. You\'re now every ' + w + ' weeks. Next box ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'cadence', text: 'Now every ' + w + ' weeks', reason: 'Change how often', offer: 'Every ' + w + ' weeks', status: 'Changed' }); }
+    if (a === 'club-swap') { c.free = ($('input[name="mc-free"]:checked') || {}).value || c.free; c.flavour = $('#mc-flav').value; msg = 'Free item swapped to ' + freeName(c.free, c.flavour) + '.'; logC(c, { type: 'swap', text: 'Free item: ' + freeName(c.free, c.flavour) }); }
+    if (a === 'club-pause') { var pw = +($('input[name="mc-pause"]:checked') || {}).value || 4; c.anchor = iso(addDays(nx, (pw - c.cadence) * 7)); c.next = iso(addDays(nx, pw * 7)); c.status = 'paused'; msg = 'Paused. Your next box is ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'pause', text: 'Paused until ' + fmtS(parse(c.next)), reason: 'Pause', offer: '—', status: 'Paused to ' + fmtS(parse(c.next)) }); }
+    if (a === 'club-resume') { c.status = 'active'; msg = 'Resumed. Next box ' + fmtS(nx) + '.'; logC(c, { type: 'resume', text: 'Resumed deliveries' }); }
+    if (a === 'club-why') { CVreason = ($('input[name="mc-why"]:checked') || {}).value || 'other'; clubView('offer'); return; }
+    if (a === 'club-accept') {
+      var why = reasonLabel(CVreason);
+      if (arg === 'every8') { c.cadence = 8; c.next = iso(nextFor(c, 8)); msg = 'Done. You\'re now every 8 weeks. Next box ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'save', text: 'Cancel saved: every 8 weeks', reason: why, offer: 'Every 8 weeks', status: 'Accepted' }); }
+      if (arg === 'starter') { c.tier = 'starter'; msg = 'Done. You\'re now on the Starter box ($139). Trim your picks to 28 points before Sunday.'; logC(c, { type: 'save', text: 'Cancel saved: switched to Starter', reason: why, offer: 'Starter ($139)', status: 'Accepted' }); }
+      if (arg === 'pause1') { c.anchor = iso(addDays(nx, (4 - c.cadence) * 7)); c.next = iso(addDays(nx, 28)); c.status = 'paused'; msg = 'Done. Paused one month. Next box ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'save', text: 'Cancel saved: paused one month', reason: why, offer: 'Pause 1 month', status: 'Paused to ' + fmtS(parse(c.next)) }); }
+      if (arg === 'move' && CVmove && CVmove.ok) { c.town = CVmove.town; c.city = CVmove.city; c.day = CVmove.day; c.code = CVmove.code; c.next = iso(addDays(lockOf(nx), DAYS.indexOf(CVmove.day))); msg = 'Done. Your box moves to the ' + routeWords(CVmove) + '. Next box ' + fmtS(parse(c.next)) + '.' + (CVmove.long ? ' We text you to confirm the delivery fee.' : ''); logC(c, { type: 'save', text: 'Moved to ' + CVmove.town, reason: 'Moving to ' + CVmove.town, offer: routeWords(CVmove) + ' (fee normally ' + money(CVmove.fee, 0) + ')', status: CVmove.long ? 'Needs owner' : 'Accepted' }); }
+      if (arg === 'pickup') { c.town = 'Pickup'; c.city = 'Pickup'; c.day = 'Wednesday'; c.code = 'Pickup'; c.next = iso(addDays(lockOf(nx), 3)); msg = 'Done. Your box is ready for pickup at 2201 Brimley Rd from ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'save', text: 'Switched to pickup', reason: why, offer: 'Pickup at Brimley Rd', status: 'Accepted' }); }
+      CV = 'home';
+    }
+    if (a === 'club-talk') {
+      logC(c, { type: 'save', text: 'Asked to talk to the butcher', reason: 'Quality', offer: 'Talk to the butcher', status: 'Sent to staff' }); JWC.store.set('club', c); renderMemberBits(); renderTeam();
+      JWC.closeAll(); JWC.chat.open();
+      setTimeout(function () { JWC.chat.say('I\'m sorry your box wasn\'t right. I\'ve flagged this for Bill and the counter team, and someone will call you today. If something arrived thawed, send a photo and we\'ll replace it in your next box.'); }, 250);
+      return;
+    }
+    if (a === 'club-cancel') { c.status = 'cancelled'; msg = 'Membership cancelled (demo). No more boxes are scheduled.'; logC(c, { type: 'cancel', text: 'Cancelled membership', reason: reasonLabel(CVreason), offer: 'Declined offers', status: 'Cancelled' }); CV = 'home'; }
+    if (a === 'club-rejoin') { c.status = 'active'; c.next = iso(boxDate(c.day || 'Tuesday')); c.anchor = null; msg = 'Welcome back. Next box ' + fmtS(parse(c.next)) + '.'; logC(c, { type: 'join', text: 'Rejoined' }); }
+    if (a !== 'club-why') CV = 'home';
+    saveClub(c); renderClub();
+    if (msg) toast(msg);
+    var f = $('#myclub-body .mc-acts button') || $('#myclub-body button'); if (f) f.focus();
+  }
+  function renderMemberBits() {
+    var raw = JWC.store.get('club', null), member = raw && !raw.demo && raw.status !== 'cancelled';
+    $('#memdot').hidden = !member;
+    var note = $('#member-note');
+    if (S.editing) { note.hidden = false; note.innerHTML = 'You\'re editing your Club box for ' + fmtS(parse(club().next)) + '. <button type="button" class="link" data-act="stopedit">Stop editing</button>'; }
+    else if (member) { note.hidden = false; note.innerHTML = 'You\'re a member: ' + TIERS[raw.tier].name + ' box, next ' + fmtS(parse(raw.next)) + '. <button type="button" class="link" data-act="myclub">Open My Club</button>'; }
+    else note.hidden = true;
+  }
+
+  /* ======================= JW TEAM VIEW ======================= */
+  function st(kind, label) { var ic = kind === 'ok' ? IC.tickS : kind === 'wait' ? IC.warnS : kind === 'no' ? IC.noS : IC.infoS; return '<span class="st st-' + kind + '">' + ic + esc(label) + '</span>'; }
+  var DRAFTS = [
+    { k: 'sms', agent: 'reminder', title: 'Thursday reminder SMS to 32 members', meta: 'Sends Thu, Apr 15 at 10:00 am · box size and route day fill in per member; preview for a Family member on the Tuesday route', body: 'J&W here. Your Family box ships Tuesday. Same picks as last time? Reply YES, SKIP or SWAP. You can edit until Sunday 11:59 pm.', effect: 'Queued for Thu 10:00 am. Replies land in the Retention queue.' },
+    { k: 'email', agent: 'lifecycle', title: 'Spring email to 412 waitlist sign-ups', meta: 'Whitby, Oakville, Ancaster and Newmarket · $25 off the first box until Apr 30', subject: 'BBQ season is on your route day', body: 'Hi {first name},\n\nGrilling season is here, and it comes on your J&W route day. AAA striploins cut to the thickness you pick, Ontario lamb chops and our 4 kg chicken breast case, delivered frozen and vacuum-sealed, with a free Meal Butler cooked chicken pack in every box.\n\nJoin the Butcher Club by April 30 and take $25 off your first box.\n\nBill, Stavros and the team at 2201 Brimley Rd', effect: 'Scheduled for Tue 9:00 am to 412 sign-ups (demo).' },
+    { k: 'ads', agent: 'ads', title: 'Move $10/day from Mississauga to Newmarket', meta: 'Last 28 days · monthly cap $1,400', body: 'Move $10/day from Mississauga to Newmarket. Last 28 days: Newmarket CAC $68, Mississauga $97. Monthly cap stays $1,400.', effect: 'Budget moved from Monday. Cap unchanged at $1,400.' },
+    { k: 'shortribs', agent: 'carcass', title: 'Cut of the month: short ribs at 6 points', meta: 'April boxes · stock 14 kg over par', body: 'Korean-style short ribs are 14 kg over par. Offer them at 6 points instead of 7 in April boxes (cost about $5 a pack).', effect: 'Short ribs now show as 6 points (Cut of the month) in the customer builder.' },
+    { k: 'q0419', agent: 'carcass', title: 'Fill Q-0419: offer the last 1/16', meta: 'Cut date Apr 23', body: 'Quarter Q-0419 has 3 of 4 sixteenths reserved, cut Apr 23. Offer the last 1/16 to 37 members who viewed shares this month?', effect: 'Offer queued to 37 members. The share board shows it.' },
+    { k: 'credit', agent: 'concierge', title: 'Thawed-pack credit for #M-1102', meta: 'Photo received Sat 4:12 pm · Markham, Friday route', body: 'Member #M-1102 (Markham) sent a photo of a thawed ground chicken bag. Credit $9.99 on the next box?', effect: '$9.99 credit added to the Apr 16 box. Member texted.' }
+  ];
+  var apEditing = null;
+  function renderApprovals() {
+    var waiting = 0;
+    $('#approvals').innerHTML = DRAFTS.map(function (d) {
+      var s = T.ap[d.k] || 'waiting', txt = T.edits[d.k] || d.body, ed = apEditing === d.k;
+      if (s === 'waiting' || s === 'edited') waiting++;
+      var chip = s === 'approved' ? st('ok', 'Approved') : s === 'rejected' ? st('no', 'Rejected') : s === 'edited' ? st('wait', 'Edited · waiting') : st('wait', 'Waiting');
+      var btns = ed ? '<button type="button" class="btn btn-ox btn-sm" data-act="ap-save" data-arg="' + d.k + '">Save edit</button><button type="button" class="btn btn-line btn-sm" data-act="ap-cancel" data-arg="' + d.k + '">Cancel</button>'
+        : (s === 'approved' || s === 'rejected') ? '<button type="button" class="btn btn-line btn-sm" data-act="ap-undo" data-arg="' + d.k + '">Undo</button>'
+          : '<button type="button" class="btn btn-ox btn-sm" data-act="ap-approve" data-arg="' + d.k + '">Approve</button><button type="button" class="btn btn-line btn-sm" data-act="ap-edit" data-arg="' + d.k + '">Edit</button><button type="button" class="btn btn-sm" style="color:var(--ox)" data-act="ap-reject" data-arg="' + d.k + '">Reject</button>';
+      return '<article class="card" style="padding:16px;display:flex;flex-direction:column;min-width:0"><div class="flex flex-wrap items-center justify-between gap-2"><span class="agent">' + esc(AGENTS[d.agent]) + '</span>' + chip + '</div>' +
+        '<h3 style="font:600 16.5px/1.3 Inter,sans-serif;margin-top:8px">' + esc(d.title) + '</h3><p class="tsub">' + esc(d.meta) + '</p>' +
+        (d.subject ? '<p style="font-size:14px;margin-top:8px"><b>Subject:</b> ' + esc(d.subject) + '</p>' : '') +
+        '<div class="draft">' + (ed ? '<label class="sr" for="ed-' + d.k + '">Edit the draft</label><textarea id="ed-' + d.k + '">' + esc(txt) + '</textarea>' : esc(txt)) + '</div>' +
+        (s === 'approved' ? '<p class="small" style="margin-top:8px;color:#1F5E3A">' + esc(d.effect) + '</p>' : '') +
+        '<div class="apbar" style="margin-top:auto;padding-top:12px">' + btns + '</div></article>';
+    }).join('');
+    $('#ap-count').innerHTML = IC.warnS + ' ' + waiting + ' waiting';
+  }
+  function apAct(a, k) {
+    var d = DRAFTS.filter(function (x) { return x.k === k; })[0]; if (!d) return;
+    if (a === 'ap-approve') { T.ap[k] = 'approved'; toast('Approved. Queued (demo).'); }
+    if (a === 'ap-reject') { T.ap[k] = 'rejected'; toast('Rejected. The agent won\'t send it (demo).'); }
+    if (a === 'ap-undo') { delete T.ap[k]; toast('Back in the queue.'); }
+    if (a === 'ap-edit') { apEditing = k; renderApprovals(); var ta = $('#ed-' + k); if (ta) ta.focus(); return; }
+    if (a === 'ap-cancel') { apEditing = null; renderApprovals(); return; }
+    if (a === 'ap-save') {
+      var v = ($('#ed-' + k) || {}).value;
+      if (!v || !v.trim()) { toast('The draft can\'t be empty. Type the message, or cancel.'); var et = $('#ed-' + k); if (et) et.focus(); return; }
+      T.edits[k] = v.trim(); T.ap[k] = 'edited'; apEditing = null; toast('Edit saved. Approve it when ready.');
+    }
+    saveT(); renderTeam();
+    if (k === 'shortribs') { updateCard('shortribs'); renderBox(); renderPresets(); }
+    var b = $('[data-arg="' + k + '"][data-act^="ap-"]'); if (b) b.focus();
+  }
+  var KPI_BASE = [
+    ['Active members', 145, 'Plan 145 by mid-April', 'ok', 'On plan'],
+    ['Boxes this week', 32, 'Tue–Fri routes', 'info', 'Sample'],
+    ['Avg order', '$236', 'Box + add-ons · target $235', 'ok', 'On target'],
+    ['Churn, last 30 days', '10.6%', 'Limit 11%', 'ok', 'Under limit'],
+    ['Skips this cycle', '12%', 'Model allows 12–15%', 'ok', 'Normal'],
+    ['Members in Wild Fork towns', 38, 'Whitby, Oakville, Ancaster, Newmarket · target 40+', 'wait', 'Just behind'],
+    ['Free pack → cooked reorder', '17%', 'Within 60 days · target 15%', 'ok', 'Above target'],
+    ['Shares reserved YTD', 25, '1/16 x14 · 1/8 x7 · 1/4 x4', 'info', 'Sample']
+  ];
+  function renderKpis() {
+    var nB = boxOrders().length, nS = SH.res.filter(function (r) { return SHARE[r.k] && SHARE[r.k].kind === 'beef'; }).length;
+    var nW = boxOrders().filter(function (o) { return WF.indexOf(o.town) > -1 || ['Whitby', 'Oakville', 'Newmarket'].indexOf(o.city) > -1; }).length;
+    $('#kpis').innerHTML = KPI_BASE.map(function (k, i) {
+      var v = k[1], sub = k[2];
+      if (i === 0 && nB) { v = 145 + nB; sub += ' · +' + nB + ' from this demo'; }
+      if (i === 1 && nB) { v = 32 + nB; sub += ' · incl. ' + nB + ' demo'; }
+      if (i === 5 && nW) { v = 38 + nW; sub += ' · +' + nW + ' demo'; }
+      if (i === 7 && nS) { v = 25 + nS; sub += ' · +' + nS + ' demo'; }
+      var chip = i === 5 && v >= 40 ? st('ok', 'On target') : st(k[3], k[4]);
+      return '<div class="kpi"><small>' + esc(k[0]) + '</small><b>' + esc(String(v)) + '</b><p>' + esc(sub) + '</p><div style="margin-top:8px">' + chip + '</div></div>';
+    }).join('');
+  }
+  function renderRamp() {
+    var V = [55, 84, 105, 123, 145, 169, 190, 204, 217, 233, 247], L = ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'], max = 270;
+    $('#ramp').innerHTML = '<div class="bars">' + V.map(function (v, i) {
+      var yr = i === 0 ? 2026 : 2027, h = v / max * 100, lab = L[i] + ' ' + yr + ': ' + v + ' active members (modelled)' + (i === 4 ? ', this week' : '');
+      return '<div class="b' + (i === 4 ? ' now' : '') + (i < 3 ? ' tl' : i > 7 ? ' tr' : '') + '"><i style="height:' + h + '%" tabindex="0" role="img" aria-label="' + lab + '"></i>' + (i === 0 || i === 4 || i === 10 ? '<span class="v" style="bottom:calc(' + h + '% + 4px)" aria-hidden="true">' + v + '</span>' : '') + '<span class="tip" aria-hidden="true">' + L[i] + ' ' + yr + ' · ' + v + ' members' + (i === 4 ? ' · this week' : '') + '</span></div>';
+    }).join('') + '</div><div class="xl" aria-hidden="true">' + L.map(function (l) { return '<span>' + l + '</span>'; }).join('') + '</div>' +
+      '<p class="small" style="margin-top:8px">Dark bar: this week (Apr 2027). Targets: 120 by Mar 31, 2027 and 245 by Oct 31, 2027.' + (boxOrders().length ? ' Plus ' + plural(boxOrders().length, 'member') + ' from this demo.' : '') + '</p>' +
+      '<details style="margin-top:6px"><summary class="link" style="cursor:pointer;min-height:40px;display:inline-flex;align-items:center">Show as table</summary><div class="jwc-scroll-x"><table class="tbl" style="margin-top:6px"><thead><tr><th>Month</th><th class="num">Active members</th></tr></thead><tbody>' + V.map(function (v, i) { return '<tr><td>' + L[i] + ' ' + (i === 0 ? 2026 : 2027) + '</td><td class="num">' + v + '</td></tr>'; }).join('') + '</tbody></table></div></details>';
+  }
+  function renderAgents() {
+    var STAT = { reminder: '32 reminder texts drafted · 5 saves in the queue', concierge: '23 chats · 19 closed, 4 to staff', picklist: '13 pick lines · 3 whole striploins to cut', carcass: '3 pools open · 2 offers drafted', route: '32 boxes · 22 new stops · 1 dry-ice box', lifecycle: '1 email to 412 waitlist sign-ups', ads: '1 budget move proposed', catalogue: ITEMS.length + ' cut cards with full copy, $/lb and thickness options', phone: 'Sunday calls answered · 1 caller texted the 1/8 cut sheet and deposit link' };
+    $('#agentlist').innerHTML = Object.keys(AGENTS).map(function (k) { return '<li style="padding:9px 0;border-bottom:1px solid #EEE7D8"><span class="agent">' + esc(AGENTS[k]) + '</span><p class="small" style="margin-top:2px">' + esc(STAT[k]) + '</p></li>'; }).join('');
+  }
+  var PICK = [
+    ['4 kg chicken breast cases', 'Pull', 9, '6 oz x5 · 4 oz x2 · 8 oz x2'],
+    ['2 kg chicken breast half cases', 'Pull', 7, 'Random portions'],
+    ['Ground chicken breast, 1 lb', 'Pull', 41, ''],
+    ['AAA NY striploin, 8–9 oz', 'Cut', 38, '1" x14 · 1¼" x18 · 1½" x6 · from 3 whole AAA striploins, Mon 7 am'],
+    ['AAA boneless ribeye, 11–12 oz', 'Cut', 24, ''],
+    ['AAA top sirloin, 7–8 oz', 'Cut', 30, ''],
+    ['Wagyu striploin, 8–9 oz', 'Cut', 7, ''],
+    ['Wagyu/Kobe AAA ground, 1 lb', 'Pull', 33, '6 are free items'],
+    ['Pork tenderloin, 2/pkg', 'Pull', 11, ''],
+    ['Spartan Loukaniko, 4/pk', 'Pull', 14, ''],
+    ['Ontario lamb chops, 8/pkg', 'Pull', 5, ''],
+    ['Wild sockeye fillet', 'Pull', 16, '4 are free items'],
+    ['Free cooked chicken, 4 x 4 oz', 'Pull', 22, 'Teriyaki 7 · Souvlaki 6 · BBQ 4 · Jerk 3 · Greek Lemon 2 · pull 88 x 4 oz portions from cooked stock']
+  ];
+  function renderPick() {
+    var bo = boxOrders(), agg = {}, freeAgg = {};
+    bo.forEach(function (o) {
+      Object.keys(o.picks || {}).forEach(function (k) { var it = IT[k]; if (!it) return; var a = agg[k] || (agg[k] = { q: 0, notes: {} }); a.q += o.picks[k]; var n = optNote(it, o.opts || {}); if (n) a.notes[n] = (a.notes[n] || 0) + o.picks[k]; });
+      var fn = freeName(o.free, o.flavour); freeAgg[fn] = (freeAgg[fn] || 0) + 1;
+    });
+    var rows = PICK.map(function (r) { return '<tr><td>' + esc(r[0]) + '</td><td class="num">' + r[1] + ' ' + r[2] + '</td><td>' + esc(r[3]) + '</td></tr>'; }).join('');
+    var demo = Object.keys(agg).map(function (k) { var it = IT[k], a = agg[k]; return '<tr class="demo"><td>' + esc(it.name) + ' <span class="st st-demo">Demo</span></td><td class="num">' + (it.steak ? 'Cut ' : 'Pull ') + a.q + '</td><td>' + esc(Object.keys(a.notes).map(function (n) { return n + ' x' + a.notes[n]; }).join(' · ')) + '</td></tr>'; }).join('') +
+      Object.keys(freeAgg).map(function (n) { return '<tr class="demo"><td>Free: ' + esc(n) + ' <span class="st st-demo">Demo</span></td><td class="num">Pull ' + freeAgg[n] + '</td><td>Free-for-life item</td></tr>'; }).join('');
+    $('#picktbl').innerHTML = '<thead><tr><th>Item</th><th class="num">Pull / cut</th><th>Notes</th></tr></thead><tbody>' + rows + demo + '</tbody>';
+    $('#pick-sub').textContent = 'Drafted by ' + AGENTS.picklist + ' after the Sunday 11:59 pm cut-off · 32 boxes' + (bo.length ? ' + ' + bo.length + ' from this demo' : '') + '.';
+    $('#pick-st').innerHTML = T.pick === 'approved' ? st('ok', 'Approved') : st('wait', 'Waiting');
+    $('#pick-bar').innerHTML = T.pick === 'approved' ? '<p class="small" style="flex:1">Sent to the cutting room. Cutting starts Mon 7:00 am; cooked chicken pulled from Meal Butler stock.</p><button type="button" class="btn btn-line btn-sm" data-act="pick-undo">Undo</button>'
+      : '<button type="button" class="btn btn-ox btn-sm" data-act="pick-ok">Approve pick list</button><p class="small" style="flex:1;align-self:center">Head butcher ~3 h this week.</p>';
+  }
+  var RT = [
+    { k: 'tue', l: 'Tue · GTA 1 Durham', b: 9, s: 6, m: 24, n: 'Whitby 4' },
+    { k: 'wed', l: 'Wed · GTA 2 Toronto core', b: 11, s: 7, m: 28, n: '' },
+    { k: 'thu', l: 'Thu · GTA 3 Halton/Hamilton', b: 7, s: 5, m: 25, n: 'Oakville 3 · Ancaster 1' },
+    { k: 'fri', l: 'Fri · GTA 4 York/Peel', b: 4, s: 3, m: 12, n: 'Newmarket 2' },
+    { k: 'frix', l: 'Fri · long-haul', b: 1, s: 1, m: null, n: 'Kingston · add dry ice' }
+  ];
+  function rowKey(route) { route = route || ''; if (/GTA 1/.test(route)) return 'tue'; if (/GTA 2/.test(route)) return 'wed'; if (/GTA 3/.test(route)) return 'thu'; if (/GTA 4/.test(route)) return 'fri'; if (/Friday long/.test(route)) return 'frix'; if (/Wednesday long/.test(route)) return 'wedx'; if (/Express/.test(route)) return 'exp'; return 'pick'; }
+  function renderRoutes() {
+    var rows = clone(RT), extra = { wedx: { k: 'wedx', l: 'Wed · long route', b: 0, s: 0, m: 0, n: '' }, exp: { k: 'exp', l: 'Express (416)', b: 0, s: 0, m: 0, n: '' }, pick: { k: 'pick', l: 'Pickup · Brimley Rd', b: 0, s: 0, m: null, n: '' } };
+    var demoN = {};
+    boxOrders().forEach(function (o) {
+      var key = rowKey(o.route), r = rows.filter(function (x) { return x.k === key; })[0];
+      if (!r) { r = extra[key]; rows.push(r); delete extra[key]; }
+      r.b += 1; if (key !== 'pick') { r.s += 1; if (r.m != null) r.m += 4; }
+      demoN[key] = demoN[key] || []; demoN[key].push(o.town || o.city);
+      r.demo = true;
+    });
+    var tb = 0, ts = 0;
+    var body = rows.map(function (r) {
+      tb += r.b; ts += r.s;
+      var note = r.n + (demoN[r.k] ? (r.n ? ' · ' : '') + '+' + demoN[r.k].length + ' demo (' + demoN[r.k].join(', ') + ')' : '') + (r.k === 'frix' || (r.k === 'wedx' && r.b) ? '' : '');
+      return '<tr' + (r.demo ? ' class="demo"' : '') + '><td>' + esc(r.l) + '</td><td class="num">' + r.b + '</td><td class="num">' + r.s + '</td><td class="num">' + (r.m == null ? '—' : '+' + r.m + ' min') + '</td><td>' + esc(note) + '</td></tr>';
+    }).join('');
+    $('#routetbl').innerHTML = '<thead><tr><th>Route day</th><th class="num">Boxes</th><th class="num">New stops</th><th class="num">Added</th><th>Notes</th></tr></thead><tbody>' + body + '</tbody><tfoot><tr><td>Total</td><td class="num">' + tb + '</td><td class="num">' + ts + '</td><td class="num">≈ ' + money(ts * 10, 0) + '</td><td>at $10 a stop</td></tr></tfoot>';
+    $('#routes-sub').textContent = 'Slotted by ' + AGENTS.route + ' into existing route days. No new route day needed; delivery-window texts go out the day before.';
+    $('#routes-st').innerHTML = T.routes === 'approved' ? st('ok', 'Approved') : st('wait', 'Waiting');
+    $('#routes-bar').innerHTML = T.routes === 'approved' ? '<p class="small" style="flex:1">Routes locked. Drivers see the new stops in their run sheets; window texts go out the day before.</p><button type="button" class="btn btn-line btn-sm" data-act="routes-undo">Undo</button>'
+      : '<button type="button" class="btn btn-ox btn-sm" data-act="routes-ok">Approve routes</button><p class="small" style="flex:1;align-self:center">Kingston box gets an insulated tote and dry ice.</p>';
+  }
+  var RET = [
+    ['#M-1187', 'Family / 4 wks', 'Freezer\'s full', 'Every 8 weeks', ['ok', 'Accepted']],
+    ['#M-0932', 'Starter / 4 wks', 'Moving to Ottawa', 'Friday long-haul (fee normally $35)', null],
+    ['#M-1210', 'Freezer Fill / 6 wks', 'Card declined twice', 'SMS payment link + retry Fri', ['wait', 'Waiting']],
+    ['#M-1046', 'Family / 2 wks', 'Too much beef', 'Chicken-heavy preset', ['wait', 'Waiting reply']],
+    ['#M-0871', 'Starter / 4 wks', 'Price', 'Pause 1 month (no discount per owner rule)', ['info', 'Paused to May 10']]
+  ];
+  function renderRetention() {
+    var rows = RET.map(function (r) {
+      var stc;
+      if (r[4]) stc = st(r[4][0], r[4][1]);
+      else if (T.m0932) stc = st('ok', T.m0932 === 'keep' ? 'Kept free (owner)' : 'Charging $15 (owner)') + ' <button type="button" class="link" style="font-size:13px;min-height:40px" data-act="m0932" data-arg="undo">Undo</button>';
+      else stc = st('wait', 'Needs owner') + '<div class="apbar" style="margin-top:6px"><button type="button" class="btn btn-ox btn-sm" data-act="m0932" data-arg="keep">Keep free</button><button type="button" class="btn btn-line btn-sm" data-act="m0932" data-arg="charge">Charge $15</button></div>';
+      return '<tr><td class="nw">' + r[0] + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td>' + stc + '</td></tr>';
+    }).join('');
+    var raw = JWC.store.get('club', null), demo = '';
+    if (raw && raw.log) {
+      demo = raw.log.filter(function (l) { return ['skip', 'save', 'cancel', 'pause', 'cadence'].indexOf(l.type) > -1; }).slice().reverse().map(function (l) {
+        var kind = l.type === 'cancel' ? 'no' : (l.status === 'Sent to staff' || l.status === 'Needs owner') ? 'wait' : 'ok';
+        return '<tr class="demo"><td class="nw">You <span class="st st-demo">Demo</span></td><td>' + esc(TIERS[raw.tier].name + ' / ' + raw.cadence + ' wks') + '</td><td>' + esc(l.reason || '') + '</td><td>' + esc(l.offer || '') + '</td><td>' + st(kind, l.status || 'Done') + '</td></tr>';
+      }).join('');
+    }
+    $('#rettbl').innerHTML = '<thead><tr><th>Member</th><th>Box</th><th>Reason</th><th>Agent\'s offer</th><th>Status</th></tr></thead><tbody>' + demo + rows + '</tbody>';
+    $('#ret-sub').textContent = 'Run by ' + AGENTS.reminder + ' inside owner rules: skip, slower cadence, smaller box or pause, no surprise discounts.' + (T.ap.sms === 'approved' ? ' Thursday reminder texts are queued.' : '') + ' Skips and saves from My Club (demo) appear here.';
+  }
+  function renderConcierge() {
+    var cr = T.ap.credit;
+    var esc4 = [
+      ['Allergy question · marinated chicken case', st('wait', 'With counter staff')],
+      ['Allergy question · Spartan Loukaniko', st('wait', 'With counter staff')],
+      ['Thawed ground chicken · #M-1102 Markham', cr === 'approved' ? st('ok', '$9.99 credit approved') : cr === 'rejected' ? st('no', 'Credit declined') : st('wait', 'Credit awaiting approval')],
+      ['Calgary address', st('ok', 'Replied: Ontario only')]
+    ];
+    var closed = ['#M-1064 skipped the Apr 20 box', '#M-0815 swapped 2 sirloins for 1 ribeye, within points', 'Newmarket prospect: Friday route, free for members', '#M-1131: a Wagyu striploin is 7 points', AGENTS.phone + ', Sunday: a caller asked about a 1/8 beef share and got the cut sheet and deposit link by text'];
+    $('#con-sub').textContent = AGENTS.concierge + ' · 23 member chats this week. 19 closed by the agent (skips, swaps, delivery day, points). 4 sent to staff: 2 allergy questions, 1 thawed pack, 1 Calgary address (we can\'t ship outside Ontario).';
+    $('#conlog').innerHTML = '<p class="f-cond" style="font-size:13px;color:var(--muted)">Sent to staff</p><ul>' + esc4.map(function (e) { return '<li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;padding:8px 0;border-bottom:1px solid #EEE7D8;font-size:14px"><span>' + esc(e[0]) + '</span>' + e[1] + '</li>'; }).join('') + '</ul>' +
+      '<p class="f-cond" style="font-size:13px;color:var(--muted);margin-top:12px">Closed by the agent (sample)</p><ul>' + closed.map(function (c) { return '<li style="padding:6px 0;border-bottom:1px solid #EEE7D8;font-size:13.5px;display:flex;gap:8px"><span style="color:var(--tick);flex:none">' + IC.tickS + '</span><span>' + esc(c) + '</span></li>'; }).join('') + '</ul>';
+  }
+  function renderShareBoard() {
+    var SB = [
+      ['Q-0418', 'Apr 16', '1/4 x1', st('ok', 'Full · cut sheet received')],
+      ['Q-0419', 'Apr 23', '1/16: 3 of 4', T.ap.q0419 === 'approved' ? st('info', 'Offer sent to 37 members') : st('wait', 'Needs one (offer drafted)')],
+      ['Q-0420', 'Apr 30', '1/8 x1 + 1/16: 1 of 2', st('wait', 'Needs one 1/16')],
+      ['Greek Easter lamb', 'May 2', 'Whole x2 + half x1', st('ok', 'Deposits paid')]
+    ];
+    var demo = SH.res.map(function (r) {
+      var res = r.per ? r.name + ': ' + r.filled + ' of ' + r.per + ' (incl. yours)' : r.name;
+      var full = r.per && r.filled >= r.per;
+      return '<tr class="demo"><td>' + (r.pool ? 'Pool ' + fmtS(parse(r.pool)) : 'Lamb order') + ' <span class="st st-demo">Demo</span><span class="small" style="display:block">' + esc(r.no) + ' · ' + esc(r.city) + '</span></td><td>' + (r.pool ? fmtS(parse(r.pool)) : 'To book') + '</td><td>' + esc(res) + '<span class="small" style="display:block">' + esc(r.sheet) + '</span></td><td>' + (r.per ? (full ? st('ok', 'Full · ready to cut') : st('wait', 'Pooling')) : st('ok', 'Deposit paid')) + '<span class="small" style="display:block">' + money(r.dep, 0) + ' deposit</span></td></tr>';
+    }).join('');
+    $('#shtbl').innerHTML = '<thead><tr><th>Pool</th><th>Cut date</th><th>Reserved</th><th>Status</th></tr></thead><tbody>' + demo + SB.map(function (r) { return '<tr><td' + (/^Q-/.test(r[0]) ? ' class="nw"' : '') + '>' + r[0] + '</td><td class="nw">' + r[1] + '</td><td>' + esc(r[2]) + '</td><td>' + r[3] + '</td></tr>'; }).join('') + '</tbody>';
+    $('#sh-sub').textContent = 'Pooled by ' + AGENTS.carcass + ' into whole quarters before each cut date. Deposits placed in the demo appear here.';
+  }
+  function renderPnl() {
+    var R = [['Box revenue', '$32.3K'], ['Shares', '$3.4K'], ['Gross Club revenue', '$35.7K', 'tot'], ['New revenue (75% truly new sales)', '$26.8K'], ['Gross profit at 30% of new revenue', '$8.0K'], ['Route stops', '−$1.0K', 'neg'], ['Ads and credits', '−$1.9K', 'neg'], ['Staff (Club lead, butcher)', '−$1.6K', 'neg'], ['Apps, SMS, AI', '−$0.45K', 'neg'], ['Cannibalization (route fees, free item)', '−$1.0K', 'neg'], ['Contribution (sample)', '≈ $2.1K', 'tot']];
+    $('#pnl').innerHTML = R.map(function (r) { return '<div' + (r[2] ? ' class="' + r[2] + '"' : '') + '><span>' + esc(r[0]) + '</span><span>' + esc(r[1]) + '</span></div>'; }).join('') + '<p class="small" style="margin-top:8px">Low-margin, steady play: raw boxes run about 30% gross margin, taken on new revenue only.</p>';
+  }
+  function renderLive() {
+    var os = JWC.orders().filter(function (o) { return o.proto === 3; });
+    $('#live-n').textContent = plural(os.length, 'order') + ' from this demo';
+    if (!os.length) { $('#live').innerHTML = '<p style="font-size:15px">Join in customer view to see a member land here.</p><button type="button" class="btn btn-line btn-sm" style="margin-top:10px" data-act="tocustomer">Go to customer view</button>'; return; }
+    $('#live').innerHTML = '<div class="jwc-scroll-x"><table class="tbl"><thead><tr><th>Order</th><th>Town</th><th>Route day</th><th>Box or item</th><th class="num">Total</th><th>Placed</th></tr></thead><tbody>' + os.map(function (o) {
+      var first = (o.items || [])[0] || {}, what;
+      if (/^club-/.test(first.id || '')) what = first.name.replace(' (Concept)', '') + ' · ' + (o.subscription ? o.subscription.label.replace('Butcher Club · ', '') : '');
+      else if (/^share-/.test(first.id || '')) what = first.name;
+      else what = 'Meal Butler extras (' + plural((o.items || []).reduce(function (a, i) { return a + i.qty; }, 0), 'item') + ')';
+      var d = new Date(o.when), day = /business days/.test(o.day || '') ? 'Pickup' : o.day;
+      return '<tr><td class="nw"><b>' + esc(o.no) + '</b></td><td>' + esc(o.city) + '</td><td>' + esc(day || '') + '</td><td>' + esc(what) + '</td><td class="num">' + m2(o.total) + '</td><td>' + MONS[d.getMonth()] + ' ' + d.getDate() + ', ' + ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + '</td></tr>';
+    }).join('') + '</tbody></table></div><p class="small" style="margin-top:8px">These also flow into the KPIs, pick list, route impact and share board above.</p>';
+  }
+  function renderTeam() { renderKpis(); renderRamp(); renderAgents(); renderApprovals(); renderPick(); renderRoutes(); renderRetention(); renderConcierge(); renderShareBoard(); renderPnl(); renderLive(); }
+
+  /* ---------- render all customer parts ---------- */
+  function renderAll(userAct) {
+    renderFreq(); renderTiers(); renderFree(); renderPresets(); renderFilters();
+    ITEMS.forEach(function (it) { updateCard(it.k); });
+    renderBox(userAct); renderExtras(); renderHeaderCart(); renderShares(); renderWild(); renderMemberBits(); renderTeam();
+  }
+
+  /* ---------- events ---------- */
+  function refocus(sel) { var e = $(sel); if (e) e.focus(); }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-act]'); if (!b) return;
+    var a = b.dataset.act, arg = b.dataset.arg;
+    if (b.tagName === 'TR' && e.target.closest('button')) return; /* the row's own button handles it */
+    switch (a) {
+      case 'tier': var inTiers = !!b.closest('#tiers'); S.tier = arg; S.peek = false; saveS(); renderAll(true); toast(TIERS[arg].name + ' box chosen: ' + TIERS[arg].pts + ' points to spend.'); refocus(inTiers ? '#tiers [data-act="tier"][data-arg="' + arg + '"]' : '#reviewBtn'); break;
+      case 'freq': S.cadence = +arg; saveS(); renderFreq(); renderBox(); refocus('[data-act="freq"][data-arg="' + arg + '"]'); break;
+      case 'preset':
+        if (arg === 'empty') { S.picks = {}; S.preset = null; saveS(); renderAll(true); toast('Box cleared.'); break; }
+        var p = PRESET_BY[arg], switched = S.tier !== p.tier; S.picks = clone(p.picks); S.preset = arg; S.tier = p.tier; S.peek = false; saveS(); renderAll(true);
+        toast('Loaded ' + p.name + ' (' + totals().pts + ' points).' + (switched ? ' Switched to the ' + TIERS[p.tier].name + ' box.' : ''));
+        refocus('[data-act="preset"][data-arg="' + arg + '"]'); break;
+      case 'filter': S.filter = arg; saveS(); renderFilters(); refocus('[data-act="filter"][data-arg="' + arg + '"]'); break;
+      case 'add': case 'inc': case 'dec':
+        S.picks[arg] = Math.max(0, (S.picks[arg] || 0) + (a === 'dec' ? -1 : 1)); if (!S.picks[arg]) delete S.picks[arg];
+        S.preset = null; saveS(); updateCard(arg); renderPresets(); renderBox(true);
+        refocus(S.picks[arg] ? '[data-act="' + (a === 'dec' ? 'dec' : 'inc') + '"][data-arg="' + arg + '"]' : '[data-act="add"][data-arg="' + arg + '"]'); break;
+      case 'thick': S.opts[arg] = b.dataset.v; saveS(); updateCard(arg); break;
+      case 'review': openReview(); break;
+      case 'rv-update': S.editing = true; saveS(); renderMemberBits(); renderBox(); openReview(); break;
+      case 'peek': S.peek = true; renderBox(); refocus('#bmsg button'); break;
+      case 'lid': S.peek = false; renderBox(); refocus('#lid button'); break;
+      case 'tobox': go('#bpanel'); break;
+      case 'xadd': var xp = JWC.product(arg); if (!xp) break; JWC.cart.add({ id: xp.id, name: xp.name, variant: xp.variants[0].label, price: xp.variants[0].price, qty: 1, img: JWC.img(xp, 120), note: 'Meal Butler extra' }); refocus('[data-act="xinc"][data-arg="' + xp.id + '|' + xp.variants[0].label + '"]'); break;
+      case 'xinc': case 'xdec': var it = JWC.cart.items().filter(function (i) { return i.key === arg; })[0]; if (it) JWC.cart.setQty(it.key, it.qty + (a === 'xinc' ? 1 : -1)); break;
+      case 'cart': JWC.cart.open(); break;
+      case 'cmp': openExplain(arg); break;
+      case 'sheet': openSheet(arg); break;
+      case 'wf': wfSel = arg; wfInfo = lookupTown(arg); setTown(wfInfo); renderWild(); refocus('#wfres button') ; break;
+      case 'wf-else': wfSel = 'else'; wfInfo = null; renderWild(); refocus('#wf-town'); break;
+      case 'switcher': startSwitcher(); break;
+      case 'myclub': JWC.closeAll(true); openClub(); break;
+      case 'close': JWC.closeAll(); break;
+      case 'stopedit': S.editing = false; saveS(); renderAll(); toast('Stopped editing. Your Club box is unchanged.'); break;
+      case 'money': JWC.openMoney(); break;
+      case 'tocustomer': JWC.setView('customer'); break;
+      case 'pick-ok': T.pick = 'approved'; saveT(); renderPick(); toast('Pick list approved. Sent to the cutting room (demo).'); refocus('[data-act="pick-undo"]'); break;
+      case 'pick-undo': T.pick = null; saveT(); renderPick(); refocus('[data-act="pick-ok"]'); break;
+      case 'routes-ok': T.routes = 'approved'; saveT(); renderRoutes(); toast('Routes approved. Delivery-window texts go out the day before (demo).'); refocus('[data-act="routes-undo"]'); break;
+      case 'routes-undo': T.routes = null; saveT(); renderRoutes(); refocus('[data-act="routes-ok"]'); break;
+      case 'm0932': T.m0932 = arg === 'undo' ? null : arg; saveT(); renderRetention(); if (arg !== 'undo') toast(arg === 'keep' ? 'Owner rule: Ottawa delivery stays free for #M-0932 (demo).' : 'Owner rule: $15 long-haul fee for #M-0932. The agent texts the member (demo).'); break;
+      default:
+        if (a.indexOf('ap-') === 0) apAct(a, arg);
+        else if (a.indexOf('club-') === 0) clubAct(a, arg);
+    }
+  });
+  document.addEventListener('change', function (e) {
+    var t = e.target, c = t.dataset ? t.dataset.chg : null; if (!c) return;
+    if (c === 'free') { S.free = t.value; saveS(); renderFree(); renderBox(); refocus('#free-' + S.free); }
+    if (c === 'flavour') { S.flavour = t.value; S.free = 'chicken'; saveS(); renderFree(); renderBox(); refocus('#free-flav'); }
+    if (c === 'opt') { S.opts[t.dataset.arg] = t.value; saveS(); }
+  });
+  $('#hero-route').addEventListener('submit', heroCheck);
+  $('#wf-else').addEventListener('submit', function (e) {
+    e.preventDefault(); var v = $('#wf-town').value; if (!v.trim()) { $('#wf-town').focus(); return; }
+    wfInfo = lookupTown(v); if (wfInfo.ok) setTown(wfInfo); renderWild(); $('#wf-town').value = v;
+  });
+  $('#menu-btn').addEventListener('click', function () { var n = $('#mnav'), open = n.hidden; n.hidden = !open; this.setAttribute('aria-expanded', String(open)); });
+  $$('#mnav a, #mnav button').forEach(function (a) { a.addEventListener('click', function () { $('#mnav').hidden = true; $('#menu-btn').setAttribute('aria-expanded', 'false'); }); });
+  JWC.cart.onChange(function () { renderExtras(); renderHeaderCart(); renderBox(); });
+  document.addEventListener('jwc:view', function () { renderBar(); renderTeam(); });
+  document.addEventListener('jwc:order', function () { renderTeam(); renderMemberBits(); });
+
+  /* ---------- boot ---------- */
+  $('#town-list').innerHTML = JWC.cities().concat(Object.keys(ALIASES).map(titleCase)).sort().map(function (c) { return '<option value="' + esc(c) + '"></option>'; }).join('');
+  if (S.city) { var hi = lookupTown(S.town || S.city); if (hi && hi.ok) { $('#hero-town').value = hi.town; } }
+  renderHeroArt(); buildLid(); $('#cta-seal').innerHTML = sealSVG('J&W Butcher Club seal: Packed at 2201 Brimley Rd, Scarborough, est. 1995');
+  buildMenu(); renderCmp();
+  renderAll(false);
+})();
+
+</script>
+</body>
+</html>

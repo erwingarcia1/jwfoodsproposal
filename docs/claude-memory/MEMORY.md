@@ -1,0 +1,2 @@
+- [Erwin / Minastech](user-erwin-minastech.md) — builds client growth-proposal sites (prototypes, AI agents, $1M plan) in a fixed Netlify format
+- [J&W Foods proposal](project-jwfoods-proposal.md) — J&W Foods proposal: private claude.ai artifact URL, placeholder fee, naming and claim rules

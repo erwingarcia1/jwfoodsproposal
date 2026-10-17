@@ -1,0 +1,1469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Meal Butler AI Coach · J&amp;W Foods concept</title>
+<meta name="description" content="Concept: an AI coach that sizes a week of real J&amp;W Meal Butler portions to your macros, then weighs every portion to the gram and puts your name on the bag.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { navy: '#154D8E', night: '#0E2238', plum: '#5B5A8C', sky: '#7FB3D5', mist: '#EAF1F8', paper: '#F6F1E6', amber: '#D9982E', ink: '#1D2433', slate: '#5A6377', pine: '#2E7A57', brick: '#B4442F' },
+  fontFamily: { display: ['"Bricolage Grotesque"', 'Inter', 'system-ui', 'sans-serif'], sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'], mono: ['"IBM Plex Mono"', 'ui-monospace', 'Menlo', 'monospace'] },
+  maxWidth: { page: '1180px' }
+} } };
+</script>
+<link rel="stylesheet" href="../assets/concept.css">
+<link rel="icon" href="../assets/img/jw-logo.jpg">
+<style>
+:root { --navy:#154D8E; --night:#0E2238; --plum:#5B5A8C; --sky:#7FB3D5; --mist:#EAF1F8; --paper:#F6F1E6; --amber:#D9982E; --ink:#1D2433; --slate:#5A6377; --pine:#2E7A57; --brick:#B4442F; --line:#DCE4EE; --shadow:0 1px 2px rgba(14,34,56,.06), 0 18px 44px -26px rgba(14,34,56,.38); }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--jwc-barh, 0px) + 12px); }
+@media (min-width: 768px) { html { scroll-padding-top: calc(var(--jwc-barh, 0px) + 76px); } }
+body { background: #FBFCFE; color: var(--ink); font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: "Bricolage Grotesque", Inter, sans-serif; font-optical-sizing: auto; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.mb-dark :focus-visible { outline-color: var(--sky); }
+.mb-eyebrow { font: 700 11.5px/1.3 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.mb-h2 { font-family: "Bricolage Grotesque", Inter, sans-serif; font-weight: 800; font-size: 32px; line-height: 1.05; letter-spacing: -.02em; }
+@media (min-width: 1024px) { .mb-h2 { font-size: 44px; } }
+.mb-sub { color: var(--slate); font-size: 16.5px; line-height: 1.55; }
+/* buttons */
+.mb-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 22px; border-radius: 999px; font: 600 15px/1.2 Inter, sans-serif; border: 1.5px solid transparent; cursor: pointer; text-decoration: none; text-align: center; transition: background-color .15s, border-color .15s, transform .1s, box-shadow .15s; }
+.mb-btn:active { transform: translateY(1px); }
+.mb-btn-navy { background: var(--navy); color: #fff; box-shadow: 0 12px 24px -14px rgba(21,77,142,.8); } .mb-btn-navy:hover { background: #0F3C70; }
+.mb-btn-night { background: var(--night); color: #fff; } .mb-btn-night:hover { background: #1A3A5C; }
+.mb-btn-plum { background: var(--plum); color: #fff; } .mb-btn-plum:hover { background: #4A4979; }
+.mb-btn-pine { background: var(--pine); color: #fff; } .mb-btn-pine:hover { background: #246247; }
+.mb-btn-line { background: #fff; color: var(--ink); border-color: #C9D4E2; } .mb-btn-line:hover { border-color: var(--navy); color: var(--navy); }
+.mb-btn-white { background: #fff; color: var(--night); } .mb-btn-white:hover { background: var(--mist); }
+.mb-btn-glass { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.5); } .mb-btn-glass:hover { background: rgba(255,255,255,.14); }
+.mb-btn-sm { min-height: 40px; padding: 8px 15px; font-size: 14px; }
+.mb-btn-xs { min-height: 40px; padding: 6px 12px; font-size: 13px; }
+.mb-btn[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+.mb-link { display: inline-flex; align-items: center; min-height: 40px; color: var(--navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; padding: 0 2px; cursor: pointer; font-size: inherit; text-align: left; }
+.mb-dark .mb-link { color: #CFE3F2; }
+/* badges */
+.mb-chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 6px 11px; font: 600 12.5px/1.15 Inter, sans-serif; background: var(--mist); color: var(--ink); }
+.mb-concept { display: inline-flex; align-items: center; font: 700 10px/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; background: #FBF1DC; color: #774709; border: 1px solid #E8C98F; border-radius: 999px; padding: 4px 8px; vertical-align: middle; white-space: nowrap; }
+.mb-est { display: inline-flex; align-items: center; font: 600 10px/1 "IBM Plex Mono", monospace; letter-spacing: .04em; text-transform: uppercase; color: #4B5466; background: #E9EDF3; border-radius: 6px; padding: 3px 5px; vertical-align: middle; }
+.mb-sample { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; font: 700 10.5px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; background: #FFF6D6; color: #5B4300; border: 1px solid #F0DE9C; white-space: nowrap; }
+.mb-card { background: #fff; border-radius: 20px; box-shadow: var(--shadow); }
+.mb-panel { background: #fff; border-radius: 28px; box-shadow: var(--shadow); }
+/* header */
+.mb-head { position: relative; z-index: 58; height: 64px; background: rgba(255,255,255,.94); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+@media (min-width: 768px) { .mb-head { position: sticky; top: var(--jwc-barh, 0px); } }
+.mb-nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 11px; border-radius: 999px; color: var(--ink); font: 500 14.5px/1 Inter, sans-serif; text-decoration: none; }
+.mb-nav a:hover { background: var(--mist); color: var(--navy); }
+.mb-menu { position: absolute; left: 0; right: 0; top: 64px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 20px 30px -20px rgba(14,34,56,.4); }
+.mb-menu a { display: flex; align-items: center; min-height: 48px; padding: 0 20px; color: var(--ink); text-decoration: none; font-weight: 500; border-top: 1px solid #EEF2F7; }
+/* hero */
+.mb-hero { background: radial-gradient(1200px 500px at 85% -10%, #DCE8F5 0%, rgba(220,232,245,0) 60%), #FBFCFE; }
+.mb-h1 { font-family: "Bricolage Grotesque", Inter, sans-serif; font-weight: 800; font-size: 40px; line-height: 1.02; letter-spacing: -.03em; }
+@media (min-width: 1024px) { .mb-h1 { font-size: 64px; } }
+.mb-rot { display: block; color: var(--navy); min-height: 1.05em; }
+.mb-rot span { display: inline-block; transition: opacity .3s, transform .3s; }
+.mb-rot span.out { opacity: 0; transform: translateY(.25em); }
+.mb-collage { position: relative; aspect-ratio: 1 / 1.02; }
+.mb-collage img { position: absolute; object-fit: cover; border-radius: 26px; box-shadow: 0 30px 60px -30px rgba(14,34,56,.55); background: var(--mist); }
+.mb-collage .a { left: 0; top: 0; width: 70%; height: 66%; }
+.mb-collage .b { right: 0; top: 10%; width: 40%; height: 36%; }
+.mb-collage .c { right: 3%; bottom: 0; width: 46%; height: 40%; }
+.mb-float { position: absolute; left: 4%; bottom: 3%; width: min(300px, 74%); }
+.mb-protein-chip { position: absolute; right: 2%; top: 1%; background: var(--night); color: #fff; border-radius: 999px; padding: 9px 14px; font: 600 13px/1 Inter, sans-serif; box-shadow: 0 14px 30px -14px rgba(14,34,56,.8); display: inline-flex; gap: 8px; align-items: center; }
+.mb-protein-chip i { width: 8px; height: 8px; border-radius: 99px; background: #9DE0BC; }
+/* label (butcher paper, thermal) */
+.mb-label { background: var(--paper); color: #1F1B16; border-radius: 6px; padding: 14px 16px 12px; font: 500 12.5px/1.5 "IBM Plex Mono", monospace; box-shadow: 0 1px 0 #E3D8C0 inset, 0 22px 40px -24px rgba(60,40,10,.55); position: relative; }
+.mb-label::before, .mb-label::after { content: ""; position: absolute; left: 0; right: 0; height: 6px; background: radial-gradient(circle at 5px -1px, transparent 5px, var(--paper) 5.5px) repeat-x; background-size: 10px 6px; }
+.mb-label::before { top: -6px; transform: scaleY(-1); }
+.mb-label::after { bottom: -6px; }
+.mb-label .ln { display: block; }
+.mb-label .hd { font-weight: 600; letter-spacing: .06em; font-size: 11px; color: #5B4A2E; border-bottom: 1px dashed #BFAE8C; padding-bottom: 6px; margin-bottom: 6px; }
+.mb-label .nm { font-weight: 600; font-size: 17px; letter-spacing: .02em; }
+.mb-label .mac { border-top: 1px dashed #BFAE8C; margin-top: 6px; padding-top: 6px; }
+.mb-label .ok { color: #1F5E41; font-weight: 600; }
+.mb-label .sm { font-size: 11px; color: #5B4A2E; }
+.mb-bar { height: 34px; margin-top: 8px; background: #1F1B16; }
+.mb-printer { position: relative; }
+.mb-slot { height: 14px; border-radius: 10px; background: linear-gradient(#2A3446, #0E1626); box-shadow: inset 0 2px 3px rgba(0,0,0,.6); margin: 0 6px; }
+.mb-printing .ln { opacity: 0; transform: translateY(-6px); animation: mbLine .32s ease forwards; }
+@keyframes mbLine { to { opacity: 1; transform: none; } }
+.mb-printing { animation: mbFeed .9s ease-out both; transform-origin: top; }
+@keyframes mbFeed { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+/* steps */
+.mb-num { flex: none; width: 44px; height: 44px; border-radius: 999px; background: var(--navy); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: 800 19px/1 "Bricolage Grotesque", sans-serif; }
+/* intake */
+.mb-intake { background: var(--mist); }
+.mb-coach { width: 40px; height: 40px; border-radius: 999px; background: var(--plum); color: #fff; display: inline-flex; align-items: center; justify-content: center; font: 700 13px/1 Inter, sans-serif; flex: none; }
+.mb-bub { background: #fff; border-radius: 4px 18px 18px 18px; padding: 12px 15px; box-shadow: 0 1px 2px rgba(14,34,56,.06); }
+.mb-bub-me { background: var(--navy); color: #fff; border-radius: 18px 4px 18px 18px; padding: 9px 14px; font-size: 14.5px; margin-left: auto; max-width: 85%; }
+.mb-dots { display: flex; gap: 6px; }
+.mb-dots i { width: 22px; height: 6px; border-radius: 99px; background: #C9D6E6; }
+.mb-dots i.on { background: var(--plum); }
+.mb-dots i.done { background: var(--navy); }
+.mb-opt { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 9px 16px; border-radius: 999px; border: 1.5px solid #C9D4E2; background: #fff; color: var(--ink); font: 500 14.5px/1.2 Inter, sans-serif; cursor: pointer; text-align: center; }
+.mb-opt:hover { border-color: var(--navy); }
+.mb-opt[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.mb-opt-plum[aria-pressed="true"] { background: var(--plum); border-color: var(--plum); }
+.mb-seg { display: inline-flex; padding: 4px; gap: 4px; border-radius: 999px; background: #E3EAF3; flex-wrap: wrap; }
+.mb-seg button { min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 0; background: transparent; font: 600 13.5px/1.1 Inter, sans-serif; color: var(--slate); cursor: pointer; }
+.mb-seg button[aria-pressed="true"] { background: #fff; color: var(--navy); box-shadow: 0 2px 6px -2px rgba(14,34,56,.3); }
+.mb-seg3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 20px; width: 100%; max-width: 420px; }
+.mb-seg3 button { border-radius: 16px; line-height: 1.25; padding: 6px 4px; }
+.mb-lab { display: block; font: 600 13px/1.3 Inter, sans-serif; margin-bottom: 6px; color: var(--ink); }
+.mb-in { width: 100%; min-height: 46px; border: 1.5px solid #C9D4E2; border-radius: 14px; padding: 10px 12px; font: 400 16px/1.3 Inter, sans-serif; background: #fff; color: var(--ink); }
+.mb-in:focus { outline: 3px solid rgba(21,77,142,.35); outline-offset: 0; border-color: var(--navy); }
+.mb-check { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 8px 12px; border: 1.5px solid #D5DEEA; border-radius: 14px; background: #fff; cursor: pointer; font-size: 14.5px; }
+.mb-check:has(input:checked) { border-color: var(--brick); background: #FBEFEC; }
+.mb-check input { width: 18px; height: 18px; accent-color: var(--brick); flex: none; }
+input[type=range].mb-range { width: 100%; accent-color: var(--navy); height: 40px; }
+.mb-stack { display: flex; height: 10px; border-radius: 99px; overflow: hidden; background: #E3EAF3; }
+.mb-stack > i { display: block; height: 100%; }
+.bg-p { background: var(--plum); } .bg-c { background: var(--amber); } .bg-f { background: var(--sky); }
+.mb-dot { display: inline-block; width: 8px; height: 8px; border-radius: 99px; flex: none; }
+.mb-mac { display: inline-flex; align-items: center; gap: 5px; font: 500 12.5px/1 "IBM Plex Mono", monospace; color: var(--ink); white-space: nowrap; }
+.mb-step { display: inline-flex; align-items: center; border: 1.5px solid #C9D4E2; border-radius: 999px; background: #fff; }
+.mb-step button { width: 40px; height: 40px; border: 0; background: none; font-size: 18px; color: var(--navy); cursor: pointer; border-radius: 999px; }
+.mb-step output { min-width: 56px; text-align: center; font: 600 14px/1 "IBM Plex Mono", monospace; }
+.mb-stop { border: 2px solid var(--brick); background: #FFF7F5; }
+/* planner */
+.mb-days { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.mb-day { min-height: 56px; border-radius: 16px; border: 1.5px solid #D5DEEA; background: #fff; cursor: pointer; padding: 6px 4px; text-align: center; color: var(--ink); }
+.mb-day b { display: block; font: 700 14px/1.1 Inter, sans-serif; }
+.mb-day small { display: block; font: 500 11px/1.2 "IBM Plex Mono", monospace; color: var(--slate); margin-top: 3px; }
+.mb-day[aria-selected="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.mb-day[aria-selected="true"] small { color: #D4E4F5; }
+.mb-meal { display: grid; grid-template-columns: 84px minmax(0,1fr); gap: 12px; padding: 12px; border-radius: 20px; background: #fff; box-shadow: var(--shadow); }
+@media (min-width: 640px) { .mb-meal { grid-template-columns: 116px minmax(0,1fr); gap: 16px; padding: 14px; } }
+.mb-meal img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; background: var(--mist); }
+.mb-meal.flash { animation: mbFlash 1.1s ease; }
+@keyframes mbFlash { 0% { box-shadow: 0 0 0 3px var(--pine), var(--shadow); } 100% { box-shadow: var(--shadow); } }
+.mb-meter { height: 10px; border-radius: 99px; background: #E3EAF3; overflow: hidden; position: relative; }
+.mb-meter i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; }
+.mb-ok { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 10px; font: 600 12.5px/1 Inter, sans-serif; background: #E2F1E9; color: #1F5E41; }
+.mb-warn { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 10px; font: 600 12.5px/1 Inter, sans-serif; background: #FBF1DC; color: #774709; }
+.mb-sum { position: sticky; top: calc(var(--jwc-barh, 0px) + 80px); }
+.mb-sheet { display: none; }
+@media (max-width: 1023px) {
+  .mb-sum-desk { display: none; }
+  .mb-sheet { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 65; background: #fff; border-radius: 22px 22px 0 0; box-shadow: 0 -18px 40px -20px rgba(14,34,56,.5); transform: translateY(110%); transition: transform .25s ease; padding: 10px 16px 14px; max-height: 78vh; overflow-y: auto; }
+  .mb-sheet.on { transform: none; }
+  body.mb-sheet-on .jwc-chat-fab { bottom: 104px; }
+  body.mb-sheet-on .jwc-cart-fab { bottom: 168px; }
+  body.mb-sheet-open .jwc-chat-fab, body.mb-sheet-open .jwc-cart-fab { display: none; }
+}
+.mb-grab { width: 40px; height: 4px; border-radius: 99px; background: #C9D4E2; margin: 0 auto 8px; }
+.mb-swapopt { display: grid; grid-template-columns: 56px minmax(0,1fr) auto; gap: 10px; align-items: center; padding: 10px; border: 1.5px solid var(--line); border-radius: 16px; margin-top: 8px; }
+.mb-swapopt img { width: 56px; height: 56px; object-fit: cover; border-radius: 12px; }
+.mb-delta-dn { color: #1F5E41; } .mb-delta-up { color: #8A4A00; }
+/* plans */
+.mb-plan-b { border: 2px solid var(--plum); }
+.mb-tick { display: flex; gap: 10px; align-items: flex-start; }
+.mb-tick::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 2px; border-radius: 99px; background: #E2F1E9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%232E7A57' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.mb-never { display: flex; gap: 10px; align-items: flex-start; }
+.mb-never::before { content: ""; flex: none; width: 18px; height: 18px; margin-top: 2px; border-radius: 99px; background: #FBEAE6 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5 5l6 6M11 5l-6 6' fill='none' stroke='%238E2F1E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.mb-trust { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.mb-trust > span { display: inline-flex; align-items: center; gap: 7px; }
+.mb-trust > span::before { content: ""; width: 5px; height: 5px; border-radius: 99px; background: var(--navy); flex: none; }
+/* kinetic band */
+.mb-kin { background: var(--night); color: #fff; overflow: hidden; }
+.mb-marq { display: flex; width: max-content; animation: mbMarq 26s linear infinite; }
+.mb-marq span { font-family: "Bricolage Grotesque", sans-serif; font-variation-settings: "wdth" 75; font-stretch: 75%; font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -.01em; padding-right: 48px; white-space: nowrap; }
+.mb-marq span:nth-child(even) { color: var(--sky); }
+@media (min-width: 1024px) { .mb-marq span { font-size: 112px; } }
+@keyframes mbMarq { to { transform: translateX(-50%); } }
+/* instagram phone */
+.mb-ig { background: var(--night); }
+.mb-phone { width: min(330px, 100%); margin: 0 auto; border-radius: 40px; background: #000; padding: 10px; box-shadow: 0 40px 80px -40px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.12); }
+.mb-screen { border-radius: 31px; background: #fff; overflow: hidden; height: 560px; display: flex; flex-direction: column; }
+.mb-ighead { display: flex; align-items: center; gap: 10px; padding: 14px 14px 10px; border-bottom: 1px solid #EEF0F3; }
+.mb-ighead img { width: 34px; height: 34px; border-radius: 99px; object-fit: cover; border: 1px solid #E3E7EE; }
+.mb-thread { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; line-height: 1.4; }
+.mb-dm { max-width: 82%; padding: 9px 12px; border-radius: 18px; }
+.mb-dm.them { background: #EFEFF4; color: #111; border-bottom-left-radius: 6px; }
+.mb-dm.coach { background: var(--plum); color: #fff; border-bottom-left-radius: 6px; }
+.mb-dm.me { align-self: flex-end; background: #3B5BDB; color: #fff; border-bottom-right-radius: 6px; }
+.mb-dm.typing { color: #555; background: #EFEFF4; font-style: italic; }
+.mb-dm button { margin-top: 8px; min-height: 40px; padding: 6px 14px; border-radius: 999px; border: 0; background: #fff; color: var(--night); font: 700 13px/1 Inter, sans-serif; cursor: pointer; }
+/* scans chart */
+.mb-spark path { fill: none; stroke-width: 2.5; stroke-linecap: round; }
+/* personas */
+.mb-persona { background: var(--paper); border-radius: 20px; padding: 18px; border: 1px solid #E7DCC6; }
+/* faq */
+.mb-faq button { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 56px; padding: 14px 18px; background: #fff; border: 0; text-align: left; font: 600 16px/1.35 Inter, sans-serif; color: var(--ink); cursor: pointer; border-radius: 18px; }
+.mb-faq button i { flex: none; width: 28px; height: 28px; border-radius: 99px; background: var(--mist); position: relative; }
+.mb-faq button i::before, .mb-faq button i::after { content: ""; position: absolute; left: 8px; right: 8px; top: 13px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .2s; }
+.mb-faq button i::after { transform: rotate(90deg); }
+.mb-faq button[aria-expanded="true"] i::after { transform: rotate(0); }
+.mb-faq .ans { padding: 0 18px 16px; color: var(--slate); line-height: 1.6; }
+.mb-av { width: 44px; height: 44px; border-radius: 99px; display: inline-flex; align-items: center; justify-content: center; font: 700 14px/1 Inter, sans-serif; color: #fff; border: 3px solid var(--mist); }
+/* team view */
+.mb-team { background: #EEF2F7; }
+.mb-thead { background: var(--night); color: #fff; }
+.mb-kpi { background: #fff; border-radius: 20px; padding: 14px 16px; box-shadow: var(--shadow); min-width: 0; }
+.mb-kpi small { display: block; font: 600 11px/1.3 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--slate); }
+.mb-kpi b { display: block; font: 800 28px/1.1 "Bricolage Grotesque", sans-serif; margin-top: 4px; }
+.mb-kpi span { display: block; font-size: 12.5px; color: var(--slate); margin-top: 2px; line-height: 1.4; }
+.mb-tp { background: #fff; border-radius: 24px; padding: 18px; box-shadow: var(--shadow); min-width: 0; }
+@media (min-width: 640px) { .mb-tp { padding: 22px; } }
+.mb-tp h3 { font: 800 21px/1.15 "Bricolage Grotesque", sans-serif; }
+.mb-tt { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.mb-tt th { text-align: left; font: 600 11px/1.2 Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--slate); padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.mb-tt td { padding: 10px; border-bottom: 1px solid #EEF2F7; vertical-align: top; }
+.mb-tt tr.new td { background: #F0F7F2; }
+.mb-tt .n { font-family: "IBM Plex Mono", monospace; font-size: 12.5px; white-space: nowrap; }
+.mb-st { display: inline-flex; align-items: center; border-radius: 999px; padding: 4px 9px; font: 600 12px/1.1 Inter, sans-serif; white-space: nowrap; }
+.st-wait { background: #FBF1DC; color: #774709; } .st-ok { background: #E2F1E9; color: #1F5E41; } .st-pause { background: #E9EDF3; color: #4B5466; } .st-flag { background: #FBEAE6; color: #8E2F1E; } .st-plum { background: #ECEBF5; color: #45446E; }
+.mb-draft { border: 1.5px solid var(--line); border-radius: 18px; padding: 14px; }
+.mb-draft.esc { border-color: #E6B5AA; background: #FFF9F7; }
+.mb-agent { display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1.2 Inter, sans-serif; color: #45446E; background: #ECEBF5; border-radius: 999px; padding: 4px 9px; }
+.mb-agent::before { content: ""; width: 7px; height: 7px; border-radius: 99px; background: var(--plum); }
+.mb-hbar { height: 12px; border-radius: 99px; background: #E3EAF3; overflow: hidden; display: flex; }
+.mb-hbar i { display: block; height: 100%; }
+.mb-ta { width: 100%; min-height: 84px; border: 1.5px solid #C9D4E2; border-radius: 12px; padding: 10px; font: 400 14px/1.45 Inter, sans-serif; }
+@media (max-width: 1023px) { #week { padding-bottom: 112px; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .mb-marq { animation: none; width: auto; flex-wrap: wrap; }
+  .mb-marq span:nth-child(n+4) { display: none; }
+  .mb-printing, .mb-printing .ln, .mb-meal.flash { animation: none !important; opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .mb-rot span { transition: none; }
+  .mb-sheet { transition: none; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Skip to content</a>
+<div data-customer>
+<!-- ======================= HEADER ======================= -->
+<header class="mb-head">
+  <div class="max-w-page mx-auto px-4 h-full flex items-center justify-between gap-3">
+    <a href="#" class="flex items-center gap-2.5 min-w-0 no-underline text-ink" aria-label="J&amp;W Meal Butler AI Coach, back to top">
+      <img src="../assets/img/jw-logo.jpg" alt="J&amp;W Foods, Est. 1995" width="44" height="41" class="w-11 h-auto rounded-md flex-none">
+      <span class="font-display font-extrabold text-[19px] leading-none tracking-tight whitespace-nowrap">Meal Butler</span>
+      <span class="mb-chip !py-1 !px-2 !text-[11px] !bg-plum !text-white whitespace-nowrap">AI Coach</span>
+    </a>
+    <nav class="mb-nav hidden lg:flex items-center gap-0.5" aria-label="Page sections">
+      <a href="#how">How it works</a><a href="#numbers">Your numbers</a><a href="#week">Your week</a><a href="#plans">Plans</a><a href="#scans">Scans</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="#numbers" class="mb-btn mb-btn-navy mb-btn-sm hidden sm:inline-flex" data-start>Start my plan</a>
+      <button type="button" class="mb-btn mb-btn-line mb-btn-sm lg:hidden" id="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+  <nav id="menu" class="mb-menu lg:hidden" hidden aria-label="Page sections, mobile">
+    <a href="#how">How it works</a><a href="#numbers">Your numbers</a><a href="#week">Your week</a><a href="#plans">Plans</a><a href="#scans">Scans</a><a href="#faq">FAQ</a>
+    <div class="p-4"><a href="#numbers" class="mb-btn mb-btn-navy w-full" data-start>Start my plan</a></div>
+  </nav>
+</header>
+
+<main id="main">
+<!-- ======================= HERO ======================= -->
+<section id="top" class="mb-hero" aria-labelledby="hero-h">
+  <div class="max-w-page mx-auto px-4 pt-10 pb-14 lg:pt-16 lg:pb-20 grid lg:grid-cols-11 gap-10 lg:gap-12 items-center">
+    <div class="lg:col-span-6 min-w-0">
+      <p class="mb-eyebrow text-plum">Meal Butler AI Coach · Concept</p>
+      <h1 id="hero-h" class="mb-h1 mt-4">Meals weighed to your macros, for <span class="mb-rot" id="rot" aria-live="off"><span>early-shift nurses.</span></span></h1>
+      <p class="mb-sub mt-5 max-w-[560px] text-[17px]">Tell the Butler your goal in two minutes. Get a week of J&amp;W cooked portions sized to your numbers. Then our Scarborough kitchen weighs every portion to the gram and puts your name on the bag.</p>
+      <div class="flex flex-wrap gap-3 mt-7">
+        <a href="#numbers" class="mb-btn mb-btn-navy" data-start>Start my plan</a>
+        <button type="button" class="mb-btn mb-btn-line" data-chat>Chat with the Butler</button>
+      </div>
+      <p class="mt-6 text-[13.5px] text-slate mb-trust"><span><span><b class="text-ink">4.8★</b> from 611 Google reviews</span></span><span>Ingredients on every pack</span><span>Ontario-inspected kitchen since 2008</span></p>
+    </div>
+    <div class="lg:col-span-5 min-w-0">
+      <div class="mb-collage" id="hero-collage">
+        <img class="a" data-pid="chicken-breast-souvlaki" alt="J&amp;W Chicken Breast Souvlaki, cooked and portioned" width="420" height="400">
+        <img class="b" data-pid="salmon" alt="J&amp;W Salmon Fillet, cooked portion" width="240" height="220">
+        <img class="c" data-pid="copy-of-feta-omelette-cups-cooked-portioned-2-pkg" alt="J&amp;W Egg White Bites with spinach and feta" width="280" height="240">
+        <span class="mb-protein-chip"><i aria-hidden="true"></i>Protein today: 140 of 140 g</span>
+        <div class="mb-float">
+          <div class="mb-label" aria-label="Sample personal label">
+            <span class="ln hd">J&amp;W MEAL BUTLER · PERSONAL</span>
+            <span class="ln nm">FOR MARIA S.</span>
+            <span class="ln sm">MON · LUNCH</span>
+            <span class="ln">Chicken Breast Souvlaki 175 g</span>
+            <span class="ln">White Basmati Rice 200 g</span>
+            <span class="ln">Broccoli 110 g</span>
+            <span class="ln mac">589 kcal · P 63 · C 63 · F 7 <span class="mb-est">est.</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= HOW IT WORKS ======================= -->
+<section id="how" class="py-14 lg:py-20 bg-white" aria-labelledby="how-h">
+  <div class="max-w-page mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7 min-w-0">
+      <p class="mb-eyebrow text-plum">How it works</p>
+      <h2 id="how-h" class="mb-h2 mt-3">Three steps. About two minutes.</h2>
+      <ol class="mt-8 space-y-6">
+        <li class="flex gap-4"><span class="mb-num" aria-hidden="true">1</span><div><h3 class="font-display font-bold text-[21px]">Talk to the Butler</h3><p class="text-slate mt-1 leading-relaxed">Answer seven quick questions here, or DM PLAN to @jwfoods on Instagram.</p></div></li>
+        <li class="flex gap-4"><span class="mb-num" aria-hidden="true">2</span><div><h3 class="font-display font-bold text-[21px]">Get your week</h3><p class="text-slate mt-1 leading-relaxed">The coach builds Monday to Friday from Meal Butler portions we already cook. Swap anything and watch the macros and price change.</p></div></li>
+        <li class="flex gap-4"><span class="mb-num" aria-hidden="true">3</span><div><h3 class="font-display font-bold text-[21px]">Weighed, labelled, delivered</h3><p class="text-slate mt-1 leading-relaxed">Buy it in our standard 4oz and 6oz sizes, or join the Personal Macro Plan and we weigh each portion to your grams, with your name on the bag.</p></div></li>
+      </ol>
+    </div>
+    <figure class="lg:col-span-5 min-w-0">
+      <img src="../assets/img/meals.jpg" alt="Meal Butler containers of chicken, steak, rice, sweet potato, broccoli and green beans, portioned for the week" width="1500" height="1200" class="w-full rounded-[28px] object-cover aspect-[5/4]" loading="lazy">
+      <figcaption class="text-[13px] text-slate mt-3">Cooked, portioned and flash-frozen at 2201 Brimley Rd in BPA-free vacuum bags.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= YOUR NUMBERS (INTAKE) ======================= -->
+<section id="numbers" class="mb-intake py-14 lg:py-20" aria-labelledby="num-h">
+  <div class="max-w-page mx-auto px-4">
+    <div class="max-w-[720px]">
+      <p class="mb-eyebrow text-plum">Your numbers</p>
+      <h2 id="num-h" class="mb-h2 mt-3">Let's get your numbers</h2>
+      <p class="mb-sub mt-3">Seven questions. Demo: your answers stay on this device.</p>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-6 mt-8 items-start">
+      <div class="lg:col-span-8 min-w-0">
+        <div class="mb-panel p-4 sm:p-7" id="intake" aria-live="polite"></div>
+      </div>
+      <aside class="lg:col-span-4 min-w-0 space-y-4">
+        <div class="mb-card p-5">
+          <h3 class="font-display font-bold text-[19px]">A person behind the AI</h3>
+          <p class="text-slate text-[14.5px] mt-2 leading-relaxed">The coach does the math. A person on our coach desk approves every Personal Macro Plan, and our partner registered dietitian takes anything medical.</p>
+          <div class="flex -space-x-2 mt-4" aria-hidden="true"><span class="mb-av" style="background:#154D8E">J&amp;W</span><span class="mb-av" style="background:#2E7A57">RD</span></div>
+        </div>
+        <div class="mb-card p-5">
+          <h3 class="font-display font-bold text-[19px]">What we never do</h3>
+          <ul class="mt-3 space-y-2 text-[14.5px] text-slate">
+            <li class="mb-never">Change anything your doctor has set</li>
+            <li class="mb-never">Use your weight or health details for ads</li>
+            <li class="mb-never">Plan for anyone under 18 without a person</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= YOUR WEEK (PLANNER) ======================= -->
+<section id="week" class="py-14 lg:py-20 bg-white" aria-labelledby="week-h">
+  <div class="max-w-page mx-auto px-4">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-[720px] min-w-0">
+        <p class="mb-eyebrow text-plum">Your week</p>
+        <h2 id="week-h" class="mb-h2 mt-3">Here's your week, Maria.</h2>
+        <p class="mb-sub mt-3">Built from Meal Butler portions we cook every week. Tap Swap on anything.</p>
+        <p class="text-[13.5px] text-slate mt-2" id="week-who"></p>
+      </div>
+      <div class="flex flex-wrap gap-2" id="week-chips"></div>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-6 mt-8 items-start">
+      <div class="lg:col-span-8 min-w-0">
+        <div class="mb-days" role="tablist" aria-label="Day of the week" id="day-tabs"></div>
+        <div class="mt-4 mb-card p-4 sm:p-5" id="day-bar"></div>
+        <div class="mt-4 space-y-3" id="meals" role="tabpanel" aria-labelledby="day-tab-0"></div>
+        <p class="text-[13px] text-slate mt-4" id="fat-note"></p>
+      </div>
+      <aside class="lg:col-span-4 min-w-0 mb-sum mb-sum-desk" aria-label="Week summary">
+        <div class="mb-panel p-5 sm:p-6" id="sum-desk"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+<div class="mb-sheet" id="sheet" aria-label="Week summary">
+  <div class="mb-grab" aria-hidden="true"></div>
+  <div class="flex items-center justify-between gap-3">
+    <div class="min-w-0 text-[13.5px] leading-tight" id="sheet-mini"></div>
+    <button type="button" class="mb-btn mb-btn-navy mb-btn-sm flex-none" id="sheet-toggle" aria-expanded="false" aria-controls="sheet-body">Summary</button>
+  </div>
+  <div id="sheet-body" hidden class="pt-3"></div>
+</div>
+
+<!-- ======================= YOUR NAME ON EVERY BAG ======================= -->
+<section id="label" class="py-14 lg:py-20" style="background:linear-gradient(180deg,#F6F1E6 0%,#FBFCFE 100%)" aria-labelledby="label-h">
+  <div class="max-w-page mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
+    <div class="lg:col-span-6 min-w-0">
+      <p class="mb-eyebrow text-plum">The personal label</p>
+      <h2 id="label-h" class="mb-h2 mt-3">Your name on every bag.</h2>
+      <p class="mb-sub mt-3">Plan meals are cooked with everyone else's, then weighed to your grams and sealed with a label made for you.</p>
+      <form class="mt-7 mb-card p-5 sm:p-6 space-y-4" id="label-form">
+        <div>
+          <label class="mb-lab" for="lb-name">First name and last initial</label>
+          <input class="mb-in" id="lb-name" maxlength="24" autocomplete="off" placeholder="Maria S.">
+        </div>
+        <div>
+          <span class="mb-lab" id="lb-day-l">Day</span>
+          <div class="mb-seg" role="group" aria-labelledby="lb-day-l" id="lb-day"></div>
+        </div>
+        <div>
+          <span class="mb-lab" id="lb-meal-l">Meal</span>
+          <div class="mb-seg" role="group" aria-labelledby="lb-meal-l" id="lb-meal"></div>
+        </div>
+        <button type="submit" class="mb-btn mb-btn-navy w-full sm:w-auto">Print my label</button>
+        <p class="text-[12.5px] text-slate">Demo: nothing is sent. The label is built from the week the coach made for you above.</p>
+      </form>
+    </div>
+    <div class="lg:col-span-6 min-w-0">
+      <div class="mx-auto max-w-[380px]">
+        <div class="rounded-[22px] p-3 pb-0" style="background:linear-gradient(#2B3A52,#18263B)">
+          <div class="flex items-center justify-between px-2 pb-2 text-[11px] text-[#B9C8DC] mono"><span>J&amp;W LABEL · BRIMLEY RD</span><span id="printer-led" class="inline-flex items-center gap-1.5"><i class="w-2 h-2 rounded-full bg-[#9DE0BC] inline-block"></i>READY</span></div>
+          <div class="mb-slot" aria-hidden="true"></div>
+        </div>
+        <div class="px-4 -mt-1.5 min-h-[360px]" id="label-out" aria-live="polite"></div>
+      </div>
+      <p class="text-[12.5px] text-slate mt-4 text-center">Macros are estimates from standard nutrition data until J&amp;W's recipes are analyzed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PLANS ======================= -->
+<section id="plans" class="py-14 lg:py-20 bg-white" aria-labelledby="plans-h">
+  <div class="max-w-page mx-auto px-4">
+    <p class="mb-eyebrow text-plum">Plans</p>
+    <h2 id="plans-h" class="mb-h2 mt-3">Two ways to eat your plan.</h2>
+    <div class="grid lg:grid-cols-2 gap-6 mt-8 items-stretch">
+      <article class="mb-panel p-6 sm:p-8 flex flex-col">
+        <p class="mb-eyebrow text-slate">À la carte</p>
+        <h3 class="font-display font-extrabold text-[28px] mt-2 leading-tight">Free coach, standard sizes</h3>
+        <p class="mt-2 text-slate">Your week right now: <b class="text-ink mono" id="plan-a-total">$159.12</b> in standard sizes.</p>
+        <ul class="mt-5 space-y-2.5 text-[15px]">
+          <li class="mb-tick">Pay per item, as always</li>
+          <li class="mb-tick">Free AI coach on the site and Instagram</li>
+          <li class="mb-tick">3oz, 4oz and 6oz portions</li>
+          <li class="mb-tick">Free pickup, or $100 minimum on routes</li>
+          <li class="mb-tick">Order by Sunday for next week</li>
+        </ul>
+        <div class="mt-auto pt-7"><button type="button" class="mb-btn mb-btn-line w-full sm:w-auto" data-addweek>Add my week to cart</button></div>
+      </article>
+      <article class="mb-panel mb-plan-b p-6 sm:p-8 flex flex-col relative">
+        <span class="absolute -top-3 right-6 mb-chip !bg-plum !text-white">Most personal</span>
+        <p class="mb-eyebrow text-plum">Personal Macro Plan <span class="mb-concept ml-1">Concept</span></p>
+        <h3 class="font-display font-extrabold text-[28px] mt-2 leading-tight">Weighed to your grams</h3>
+        <div class="mt-4 space-y-3">
+          <div><span class="mb-lab" id="pb-mode-l">Meals</span><div class="mb-seg" role="group" aria-labelledby="pb-mode-l" id="pb-mode"></div></div>
+          <div><span class="mb-lab" id="pb-size-l">Size</span><div class="mb-seg mb-seg3" role="group" aria-labelledby="pb-size-l" id="pb-size"></div><p class="text-[12.5px] text-slate mt-1.5" id="pb-size-why"></p></div>
+        </div>
+        <p class="mt-4"><span class="font-display font-extrabold text-[44px] leading-none" id="pb-price">$189</span> <span class="text-slate">a week</span></p>
+        <ul class="mt-5 space-y-2.5 text-[15px]">
+          <li class="mb-tick">Every portion weighed to your grams</li>
+          <li class="mb-tick">Your name, day and macros on each meal</li>
+          <li class="mb-tick">Weekly check-in: the AI drafts it, a person at J&amp;W approves it</li>
+          <li class="mb-tick">InBody scan at Brimley Rd every 4 weeks, included</li>
+          <li class="mb-tick">Free 15-minute call with a registered dietitian to start</li>
+          <li class="mb-tick">Skip or pause before the Sunday cut-off. No contract.</li>
+        </ul>
+        <div class="mt-auto pt-7"><button type="button" class="mb-btn mb-btn-plum w-full sm:w-auto" id="pb-start">Start my Personal Macro Plan</button></div>
+      </article>
+    </div>
+    <p class="text-[13px] text-slate mt-5 max-w-[860px]" id="plans-foot">Concept pricing built from J&amp;W's own per-ounce prices. Your week at exact grams is about $187 à la carte. GTA premium meal prep runs $14 to $30 a meal.</p>
+  </div>
+</section>
+
+<!-- ======================= KINETIC BAND ======================= -->
+<section class="mb-kin py-10 lg:py-14" aria-label="Weighed. Labelled. Yours.">
+  <div class="mb-marq" aria-hidden="true"><span>WEIGHED.</span><span>LABELLED.</span><span>YOURS.</span><span>WEIGHED.</span><span>LABELLED.</span><span>YOURS.</span></div>
+  <p class="sr-only">Weighed. Labelled. Yours.</p>
+  <p class="max-w-page mx-auto px-4 mt-5 text-[#C7D6E8] text-[16px]">A Scarborough family butcher since 1995. Cut, cooked and portioned in our own plant.</p>
+</section>
+
+<!-- ======================= SCANS ======================= -->
+<section id="scans" class="py-14 lg:py-20 bg-mist" aria-labelledby="scans-h">
+  <div class="max-w-page mx-auto px-4 grid lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-5 min-w-0">
+      <p class="mb-eyebrow text-plum">InBody scans <span class="mb-concept ml-1">Concept</span></p>
+      <h2 id="scans-h" class="mb-h2 mt-3">Check in every four weeks.</h2>
+      <p class="mb-sub mt-3">The idea: a five-minute InBody scan at 2201 Brimley Rd. Your coach uses it to adjust your grams, so the plan moves with you.</p>
+      <p class="text-[14px] text-slate mt-3">Mon–Fri 9–6 · Sat 10–4 · Members: included. Everyone else: $25, paid at the counter.</p>
+      <button type="button" class="mb-btn mb-btn-navy mt-6" data-scan>Book a scan</button>
+      <div id="my-scans" class="mt-4"></div>
+    </div>
+    <div class="lg:col-span-7 min-w-0">
+      <div class="mb-panel p-5 sm:p-7">
+        <div class="flex flex-wrap items-center justify-between gap-2"><h3 class="font-display font-bold text-[21px]">Maria S. · Week 0 → Week 4</h3><span class="mb-sample">Sample</span></div>
+        <div class="grid grid-cols-3 gap-3 mt-5">
+          <div class="rounded-2xl bg-mist p-3"><small class="block text-[11.5px] text-slate font-semibold uppercase tracking-wide">Weight</small><b class="mono block text-[15px] mt-1">78.0 → 76.4 kg</b></div>
+          <div class="rounded-2xl bg-mist p-3"><small class="block text-[11.5px] text-slate font-semibold uppercase tracking-wide">Body fat</small><b class="mono block text-[15px] mt-1">36.1 → 35.0%</b></div>
+          <div class="rounded-2xl bg-mist p-3"><small class="block text-[11.5px] text-slate font-semibold uppercase tracking-wide">Muscle</small><b class="mono block text-[15px] mt-1">25.2 → 25.3 kg</b></div>
+        </div>
+        <svg class="mb-spark w-full h-auto mt-5" viewBox="0 0 520 150" role="img" aria-label="Sample chart: weight falls from 78.0 to 76.4 kilograms over four weeks while skeletal muscle holds at about 25 kilograms">
+          <g stroke="#DCE4EE" stroke-width="1"><line x1="30" y1="20" x2="510" y2="20"/><line x1="30" y1="70" x2="510" y2="70"/><line x1="30" y1="120" x2="510" y2="120"/></g>
+          <path d="M30 28 L150 44 L270 58 L390 70 L510 86" stroke="#154D8E"/>
+          <path d="M30 112 L150 111 L270 111 L390 110 L510 110" stroke="#5B5A8C" stroke-dasharray="5 5"/>
+          <g fill="#154D8E"><circle cx="30" cy="28" r="4"/><circle cx="510" cy="86" r="4"/></g>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5A6377"><text x="30" y="142">Wk 0</text><text x="150" y="142">Wk 1</text><text x="270" y="142">Wk 2</text><text x="390" y="142">Wk 3</text><text x="478" y="142">Wk 4</text><text x="40" y="16">Weight (kg)</text><text x="40" y="104">Skeletal muscle (kg)</text></g>
+        </svg>
+        <div class="mt-4 rounded-2xl p-4" style="background:#ECEBF5"><p class="text-[14.5px] leading-relaxed"><b>What the coach changed:</b> calories stay at 1,610, protein stays at 140 g, Thursday's Beef Flank Steak becomes Haddock Loin to keep fat in range.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INSTAGRAM ======================= -->
+<section id="ig" class="mb-ig mb-dark py-14 lg:py-20 text-white" aria-labelledby="ig-h">
+  <div class="max-w-page mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-6 min-w-0">
+      <p class="mb-eyebrow text-sky">Instagram · 30K followers</p>
+      <h2 id="ig-h" class="mb-h2 mt-3">Already on Instagram? So is the Butler.</h2>
+      <p class="mt-4 text-[#C7D6E8] text-[16.5px] leading-relaxed">DM PLAN to @jwfoods. Same coach, same numbers. When your week is ready, you get a link that opens here.</p>
+      <div class="flex flex-wrap gap-3 mt-7"><button type="button" class="mb-btn mb-btn-white" id="dm-play">Play the DM demo</button></div>
+      <p class="text-[13px] text-[#AFC3DA] mt-4">Demo thread. The coach is an AI; a person at J&amp;W checks anything personal.</p>
+    </div>
+    <div class="lg:col-span-6 min-w-0">
+      <div class="mb-phone">
+        <div class="mb-screen">
+          <div class="mb-ighead"><img src="../assets/img/jw-logo.jpg" alt="" width="34" height="34"><div class="min-w-0"><b class="block text-[14px] text-[#111] leading-tight">jwfoods</b><small class="block text-[12px] text-[#555]">J&amp;W Meal Butler coach · AI</small></div></div>
+          <div class="mb-thread" id="dm-thread" aria-live="polite"><p class="text-center text-[12.5px] text-[#555] mt-auto mb-auto">Tap “Play the DM demo” to watch a plan start from one word.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHO IT'S FOR ======================= -->
+<section class="py-14 lg:py-20 bg-white" aria-labelledby="who-h">
+  <div class="max-w-page mx-auto px-4">
+    <div class="flex flex-wrap items-end justify-between gap-3"><div><p class="mb-eyebrow text-plum">Who it's for</p><h2 id="who-h" class="mb-h2 mt-3">Built for real weeks.</h2></div><span class="mb-sample">Sample people, not reviews</span></div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+      <article class="mb-persona"><p class="mono text-[11.5px] tracking-wide text-[#5B4A2E]">SCARBOROUGH · SAT PICKUP</p><h3 class="font-display font-bold text-[19px] mt-2">Early-shift nurse</h3><p class="text-[14.5px] text-[#4A4234] mt-2 leading-relaxed">Lunch and dinner sized for 12-hour shifts, Saturday pickup after her scan.</p></article>
+      <article class="mb-persona"><p class="mono text-[11.5px] tracking-wide text-[#5B4A2E]">VAUGHAN · FRI ROUTE</p><h3 class="font-display font-bold text-[19px] mt-2">Lifter</h3><p class="text-[14.5px] text-[#4A4234] mt-2 leading-relaxed">Performance size on the Friday route.</p><img src="../assets/img/arm.jpg" alt="Man pressing two dumbbells overhead in a gym" width="1100" height="734" loading="lazy" class="mt-3 w-full aspect-[16/9] object-cover rounded-xl"></article>
+      <article class="mb-persona"><p class="mono text-[11.5px] tracking-wide text-[#5B4A2E]">AJAX · TUE ROUTE</p><h3 class="font-display font-bold text-[19px] mt-2">On a GLP-1</h3><p class="text-[14.5px] text-[#4A4234] mt-2 leading-relaxed">Smaller plates, more protein per bite, extra greens. Her prescriber stays in the loop.</p></article>
+      <article class="mb-persona"><p class="mono text-[11.5px] tracking-wide text-[#5B4A2E]">MISSISSAUGA · WED ROUTE</p><h3 class="font-display font-bold text-[19px] mt-2">Dad of three</h3><p class="text-[14.5px] text-[#4A4234] mt-2 leading-relaxed">His own plan rides on the family's Wednesday order.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq" class="py-14 lg:py-20 bg-mist" aria-labelledby="faq-h">
+  <div class="max-w-page mx-auto px-4 grid lg:grid-cols-12 gap-8 items-start">
+    <div class="lg:col-span-8 min-w-0">
+      <p class="mb-eyebrow text-plum">FAQ</p>
+      <h2 id="faq-h" class="mb-h2 mt-3">Questions, answered.</h2>
+      <div class="mb-faq mt-7 space-y-2.5" id="faq-list"></div>
+    </div>
+    <aside class="lg:col-span-4 min-w-0 mb-panel p-6 lg:mt-24">
+      <h3 class="font-display font-extrabold text-[24px] leading-tight">Rather talk to a person?</h3>
+      <div class="flex -space-x-2 mt-4" aria-hidden="true"><span class="mb-av" style="background:#154D8E">J&amp;W</span><span class="mb-av" style="background:#2E7A57">RD</span></div>
+      <p class="text-slate text-[14.5px] mt-3 leading-relaxed">Our coach desk helps with food, orders and your plan. Our partner registered dietitian handles health conditions and medications. The first 15 minutes are free.</p>
+      <button type="button" class="mb-btn mb-btn-navy w-full mt-5" data-call>Book a free 15-minute call</button>
+      <p class="text-[13px] text-slate mt-3">Or phone <a href="tel:+14162981350" class="font-semibold text-navy underline underline-offset-2">(416) 298-1350</a> · Mon–Fri 9–6, Sat 10–4</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ======================= CLOSING ======================= -->
+<section class="mb-dark text-white" style="background:linear-gradient(120deg,rgba(14,34,56,.96),rgba(21,77,142,.9)),url('../assets/img/souvlaki.jpg') center/cover" aria-labelledby="close-h">
+  <div class="max-w-page mx-auto px-4 py-16 lg:py-24 text-center">
+    <h2 id="close-h" class="font-display font-extrabold text-[40px] lg:text-[64px] leading-none tracking-tight">Ready when you are.</h2>
+    <p class="mt-4 text-[#C7D6E8]">Two minutes to your numbers. A person checks the rest.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-8"><a href="#numbers" class="mb-btn mb-btn-white" data-start>Start my plan</a><button type="button" class="mb-btn mb-btn-glass" data-chat>Chat with the Butler</button></div>
+  </div>
+</section>
+</main>
+</div>
+
+<!-- ======================= JW TEAM VIEW ======================= -->
+<section data-team class="mb-team" aria-labelledby="team-h">
+  <div class="mb-thead mb-dark">
+    <div class="max-w-page mx-auto px-4 py-8 lg:py-10 flex flex-wrap items-end justify-between gap-4">
+      <div class="min-w-0">
+        <p class="mb-eyebrow text-sky">Meal Butler AI Coach · coach desk</p>
+        <h1 id="team-h" class="font-display font-extrabold text-[30px] sm:text-[40px] leading-tight mt-1">Coach desk · week of Mar 15, 2027</h1>
+        <p class="mt-3 flex flex-wrap gap-2 items-center"><span class="mb-sample">Sample data, for illustration</span><span class="text-[13.5px] text-[#C7D6E8]">Demo orders, scans and calls from this page appear live.</span></p>
+      </div>
+      <button type="button" class="mb-btn mb-btn-glass mb-btn-sm" id="t-money">Why this makes money</button>
+    </div>
+  </div>
+  <div class="max-w-page mx-auto px-4 py-8">
+    <div id="t-kpis" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-8 mb-tp" id="t-drafts"></div>
+      <div class="lg:col-span-4 space-y-5 min-w-0">
+        <div class="mb-tp" id="t-live"></div>
+        <div class="mb-tp" id="t-econ"></div>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-7 mb-tp" id="t-esc"></div>
+      <div class="lg:col-span-5 mb-tp" id="t-scanlist"></div>
+    </div>
+    <div class="mb-tp mt-5" id="t-pack"></div>
+    <div class="mb-tp mt-5" id="t-clients"></div>
+    <div class="grid lg:grid-cols-12 gap-5 mt-5">
+      <div class="lg:col-span-6 mb-tp" id="t-funnel"></div>
+      <div class="lg:col-span-6 mb-tp" id="t-agents"></div>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/site-data.js"></script>
+<script src="../assets/catalog.js"></script>
+<script src="../assets/concept.js"></script>
+<script>
+(function () {
+'use strict';
+
+/* ---------- AI agents: final shared roster names (research/ai-agents-roster.md, Play 6). Rename here only. ---------- */
+const AGENTS = {
+  macro: 'Macro Butler',             /* intake, targets, planner, swaps, re-plan drafts */
+  nutrition: 'Nutrition & Safety',   /* macros, personal labels, safety triage */
+  concierge: 'Butler Concierge',     /* chat + Instagram DM concierge */
+  reorder: 'Reorder & Save',         /* skips and pauses before the Sunday cut-off */
+  production: 'Production Planner'   /* Saturday weigh-and-pack sheet, label run, stock swaps */
+};
+
+/* ---------- helpers ---------- */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const esc = JWC.esc;
+const m2 = v => JWC.money(v, 2);
+const G = 28.35;
+const P = id => JWC.product(id);
+const RM = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+const fmt = n => Math.round(n).toLocaleString('en-CA');
+const r5 = x => Math.round(x / 5) * 5, r10 = x => Math.round(x / 10) * 10;
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const copy = o => JSON.parse(JSON.stringify(o));
+const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const DSHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const MEALN = { b: 'Breakfast', l: 'Lunch', d: 'Dinner' };
+const scrollTo = id => { const e = document.getElementById(id); if (e) e.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); };
+
+/* ---------- catalogue roles (real J&W ids) ---------- */
+const ROLE = {
+  p: ['chicken-breast-souvlaki', 'chicken-breast-souvlaki-cooked-portioned-copy', 'chicken-breast-teriyaki-cooked-portion', 'chicken-breast-tenders', 'copy-of-turkey-breast-roasted', 'turkey-breast', 'salmon', 'haddock', 'cooked-flank-steak', 'jerk-chicken-breast', 'chicken-breast-greek-lemon-cooked-portioned-copy', 'chicken-breast-tenders-cooked-portioned-copy', 'tilapia', 'boneless-chicken-thighs-cooked-3oz'],
+  c: ['rice-white-basmati', 'sweet-potato-chunks-peeled', 'quinoa', 'rice-brown-basmati', 'copy-of-potato-boiled', 'potato-baked', 'cilantro-lime-basmati-rice-cooked-portioned', 'caribean-rice-beans-cooked-portioned'],
+  v: ['broccoli', 'green-beans', 'asparagus', 'brussel-sprouts', 'spinach-chopped', 'copy-of-california-mix-cooked-portioned', 'mixed-veggies-cooked-portioned', 'copy-of-teriyaki-mix-cooked-portioned']
+};
+const SKIPTAG = { fish: ['salmon', 'haddock', 'tilapia'], beef: ['cooked-flank-steak'], spicy: ['jerk-chicken-breast', 'chicken-breast-greek-lemon-cooked-portioned-copy'], rice: ['rice-white-basmati', 'rice-brown-basmati', 'cilantro-lime-basmati-rice-cooked-portioned', 'caribean-rice-beans-cooked-portioned'] };
+const REPL = { salmon: 'copy-of-turkey-breast-roasted', haddock: 'chicken-breast-tenders', tilapia: 'chicken-breast-tenders', 'cooked-flank-steak': 'chicken-breast-souvlaki', 'jerk-chicken-breast': 'chicken-breast-souvlaki', 'chicken-breast-greek-lemon-cooked-portioned-copy': 'chicken-breast-teriyaki-cooked-portion', 'rice-white-basmati': 'sweet-potato-chunks-peeled', 'rice-brown-basmati': 'quinoa', 'cilantro-lime-basmati-rice-cooked-portioned': 'potato-baked', 'caribean-rice-beans-cooked-portioned': 'copy-of-potato-boiled' };
+const BFAST = {
+  ew: { name: 'Egg White Bites + Steel Cut Oats', ids: ['copy-of-feta-omelette-cups-cooked-portioned-2-pkg', 'steel-cut-oats'], skip: ['eggs', 'dairy'] },
+  om: { name: 'Omelette Bites, Bacon & Cheddar + Steel Cut Oats', ids: ['copy-of-egg-bites-omelette-w-peppers-onions-mushrooms-cooked-portioned-2-pkg', 'steel-cut-oats'], skip: ['eggs', 'dairy'] },
+  wr: { name: 'Breakfast Wrap, Egg, Spinach & Feta', ids: ['spinach-feta-egg-wrap'], skip: ['eggs', 'dairy'] },
+  ob: { name: 'Steel Cut Oats + Apple Cinnamon Oat Bar', ids: ['steel-cut-oats', 'oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy'], skip: [] }
+};
+const TEMPLATE = [
+  [['chicken-breast-souvlaki', 'rice-white-basmati', 'broccoli'], ['salmon', 'quinoa', 'asparagus']],
+  [['chicken-breast-souvlaki-cooked-portioned-copy', 'potato-baked', 'green-beans'], ['turkey-breast', 'sweet-potato-chunks-peeled', 'spinach-chopped']],
+  [['chicken-breast-teriyaki-cooked-portion', 'cilantro-lime-basmati-rice-cooked-portioned', 'copy-of-california-mix-cooked-portioned'], ['haddock', 'rice-brown-basmati', 'brussel-sprouts']],
+  [['chicken-breast-greek-lemon-cooked-portioned-copy', 'rice-white-basmati', 'green-beans'], ['cooked-flank-steak', 'copy-of-potato-boiled', 'asparagus']],
+  [['chicken-breast-tenders-cooked-portioned-copy', 'caribean-rice-beans-cooked-portioned', 'mixed-veggies-cooked-portioned'], ['jerk-chicken-breast', 'sweet-potato-chunks-peeled', 'green-beans']]
+];
+const BUDGET_SWAPS = [['cooked-flank-steak', 'chicken-breast-souvlaki'], ['salmon', 'haddock'], ['asparagus', 'green-beans'], ['turkey-breast', 'chicken-breast-tenders'], ['quinoa', 'sweet-potato-chunks-peeled']];
+const PRICES = { ld: { reg: 119, plus: 139, perf: 159 }, full: { reg: 169, plus: 189, perf: 219 } };
+const SIZEN = { reg: 'Regular', plus: 'Plus', perf: 'Performance' };
+const MODEN = { ld: 'Lunch & Dinner', full: 'Full Day' };
+const GOALS = { lose: 'Lose fat', build: 'Build muscle', maintain: 'Maintain and perform', glp: 'Eat well on a GLP-1 medication' };
+const SAFETY = ['Pregnant or breastfeeding', 'Diabetes', 'Kidney disease', 'A food allergy', 'Past eating disorder', 'Under 18'];
+const SKIPS = [['fish', 'Fish'], ['beef', 'Beef'], ['spicy', 'Spicy'], ['eggs', 'Eggs'], ['dairy', 'Dairy'], ['rice', 'Rice']];
+const MARIA = { name: 'Maria S.', goal: 'lose', sex: 'f', age: 38, cm: 165, kg: 78, days: 3, meals: 'full', skips: [], budget: 175, city: 'Scarborough', safety: [], hu: 'cm', wu: 'kg' };
+const MARC = { name: 'Marc L.', goal: 'lose', sex: 'm', age: 35, cm: 182.9, kg: 86, days: 4, meals: 'ld', skips: ['fish'], budget: 175, city: 'Oakville', safety: [], hu: 'ft', wu: 'kg' };
+
+/* ---------- nutrition math (estimates) ---------- */
+const perG = (prod, k) => (prod && prod.perOz ? prod.perOz[k] / G : 0);
+function unitMac(prod) { const u = prod.perUnit || (prod.perOz && prod.variants[0].oz ? { kcal: prod.perOz.kcal * prod.variants[0].oz, p: prod.perOz.p * prod.variants[0].oz, c: prod.perOz.c * prod.variants[0].oz, f: prod.perOz.f * prod.variants[0].oz } : { kcal: 0, p: 0, c: 0, f: 0 }); return u; }
+function bfMac(key) { const b = BFAST[key] || BFAST.ew, m = { kcal: 0, p: 0, c: 0, f: 0 }; b.ids.forEach(id => { const u = unitMac(P(id)); ['kcal', 'p', 'c', 'f'].forEach(k => { m[k] += u[k]; }); }); return m; }
+function bfPrice(key) { return (BFAST[key] || BFAST.ew).ids.reduce((a, id) => a + P(id).variants[0].price, 0); }
+function targets(a) {
+  const bmr = 10 * a.kg + 6.25 * a.cm - 5 * a.age + (a.sex === 'm' ? 5 : -161);
+  const act = a.days <= 1 ? 1.2 : a.days <= 3 ? 1.375 : a.days <= 5 ? 1.55 : 1.725;
+  const gm = { lose: 0.8, maintain: 1, build: 1.1, glp: 0.75 }[a.goal] || 1;
+  const raw = r10(bmr * act * gm), floor = a.sex === 'm' ? 1500 : 1200, kcal = Math.max(floor, raw); /* safety floor: never plan below 1,200 / 1,500 kcal without a dietitian */
+  const ppk = { lose: 1.8, maintain: 1.6, build: 2.0, glp: 1.4 }[a.goal] || 1.6;
+  const p = Math.min(220, r5(a.kg * ppk)), f = r5(kcal * 0.25 / 9), c = Math.max(0, r5((kcal - p * 4 - f * 9) / 4));
+  return { kcal, p, c, f, bmr: Math.round(bmr), act, tdee: Math.round(bmr * act), ppk, gm, raw, floor };
+}
+function nearestVar(prod, g) { return prod.variants.filter(v => v.oz).reduce((a, b) => (Math.abs(b.oz * G - g) < Math.abs(a.oz * G - g) ? b : a)); }
+function bigVar(prod) { return prod.variants.filter(v => v.oz).reduce((a, b) => (b.oz > a.oz ? b : a)); }
+function mealTarget(di) {
+  const t = S.t;
+  if (S.prof.meals !== 'full') return { kcal: t.kcal * 0.35, p: t.p * 0.35, c: t.c * 0.35, f: t.f * 0.35 };
+  const b = bfMac(S.week[di].b);
+  return { kcal: (t.kcal - b.kcal) / 2, p: (t.p - b.p) / 2, c: (t.c - b.c) / 2, f: (t.f - b.f) / 2 };
+}
+function sizeMeal(mt, ids) {
+  const glp = S.prof.goal === 'glp', pp = P(ids.p), cp = P(ids.c), vp = P(ids.v), vg = glp ? 140 : 110;
+  const cg = r5(clamp((mt.c - perG(vp, 'c') * vg) / perG(cp, 'c'), 60, 200));
+  const pg = r5(clamp((mt.p - perG(cp, 'p') * cg - perG(vp, 'p') * vg) / perG(pp, 'p'), 85, glp ? 140 : 255));
+  return { p: pg, c: cg, v: vg };
+}
+/* one lunch or dinner: components, grams, macros, exact-gram price, standard-size price */
+function calcMeal(di, slot, ids) {
+  ids = ids || S.week[di][slot];
+  const g = sizeMeal(mealTarget(di), ids), mac = { kcal: 0, p: 0, c: 0, f: 0 };
+  let exact = 0, alc = 0;
+  const comp = ['p', 'c', 'v'].map(r => {
+    const prod = P(ids[r]), grams = g[r], bv = bigVar(prod), nv = nearestVar(prod, grams);
+    ['kcal', 'p', 'c', 'f'].forEach(k => { mac[k] += perG(prod, k) * grams; });
+    exact += bv.price / bv.oz * grams / G; alc += nv.price;
+    return { role: r, prod, g: grams, nv };
+  });
+  return { comp, mac, exact, alc };
+}
+function calcDay(di) {
+  const d = { meals: {}, mac: { kcal: 0, p: 0, c: 0, f: 0 }, exact: 0, alc: 0 };
+  if (S.prof.meals === 'full') {
+    const bm = bfMac(S.week[di].b), bp = bfPrice(S.week[di].b);
+    d.meals.b = { bf: true, key: S.week[di].b, mac: bm, exact: bp, alc: bp };
+  }
+  d.meals.l = calcMeal(di, 'l'); d.meals.d = calcMeal(di, 'd');
+  Object.values(d.meals).forEach(m => { ['kcal', 'p', 'c', 'f'].forEach(k => { d.mac[k] += m.mac[k]; }); d.exact += m.exact; d.alc += m.alc; });
+  return d;
+}
+function calcWeek() {
+  const days = [0, 1, 2, 3, 4].map(calcDay), w = { days, exact: 0, alc: 0, p: 0, kcal: 0, f: 0 };
+  days.forEach(d => { w.exact += d.exact; w.alc += d.alc; w.p += d.mac.p / 5; w.kcal += d.mac.kcal / 5; w.f += d.mac.f / 5; });
+  w.exact = Math.round(w.exact * 100) / 100; w.alc = Math.round(w.alc * 100) / 100;
+  return w;
+}
+function buildWeek(prof) {
+  const skip = prof.skips || [], bad = id => skip.some(s => (SKIPTAG[s] || []).indexOf(id) > -1);
+  const fix = id => { let x = id, n = 0; while (bad(x) && REPL[x] && n++ < 4) x = REPL[x]; return x; };
+  const bkey = skip.indexOf('eggs') > -1 || skip.indexOf('dairy') > -1 ? 'ob' : 'ew';
+  return TEMPLATE.map(day => ({ b: bkey, l: { p: fix(day[0][0]), c: fix(day[0][1]), v: day[0][2] }, d: { p: fix(day[1][0]), c: fix(day[1][1]), v: day[1][2] } }));
+}
+function allowed(id, prof) { return !(prof.skips || []).some(s => (SKIPTAG[s] || []).indexOf(id) > -1); }
+function autoSize(p) { return p <= 120 ? 'reg' : p <= 160 ? 'plus' : 'perf'; }
+function firstName() { return (S.prof.name || '').trim().split(/\s+/)[0] || ''; }
+function routeFor(city) { if (!city || city === 'pickup') return JWC.routes[0]; return JWC.routesFor(city).filter(r => r.id !== 'pickup' && r.id !== 'express')[0] || JWC.routes[0]; }
+
+/* ---------- state (saved on this device) ---------- */
+function freshState() {
+  return { prof: copy(MARIA), t: targets(MARIA), week: buildWeek(MARIA), day: 0, source: 'sample', tEdited: false,
+    draft: copy(MARIA), step: 0, pmp: { mode: 'full', size: null }, label: { name: '', day: 1, meal: 'l' }, member: null, safetyLogged: false };
+}
+let S = JWC.store.get('p6:s', null);
+if (!S || !S.week || !S.prof || !S.t) S = freshState();
+function save() { JWC.store.set('p6:s', S); }
+const listGet = k => JWC.store.get('p6:' + k, []);
+const listPush = (k, v) => { const a = listGet(k); a.unshift(v); JWC.store.set('p6:' + k, a.slice(0, 30)); document.dispatchEvent(new CustomEvent('p6:data')); };
+
+/* ---------- header, hero ---------- */
+const menuBtn = $('#menu-btn'), menu = $('#menu');
+menuBtn.addEventListener('click', () => { const on = menu.hidden; menu.hidden = !on; menuBtn.setAttribute('aria-expanded', String(on)); });
+$$('#menu a').forEach(a => a.addEventListener('click', () => { menu.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); }));
+$$('[data-chat]').forEach(b => b.addEventListener('click', () => JWC.chat.open()));
+$$('#hero-collage img[data-pid]').forEach(img => { img.src = JWC.img(P(img.dataset.pid), 700); });
+(function rotate() {
+  const lines = ['early-shift nurses.', 'Saturday lifters.', 'people on a GLP-1.', 'busy parents.', 'marathon training.'];
+  const box = $('#rot'), span = box.firstElementChild;
+  if (RM) { span.textContent = 'you.'; return; } /* the H1 already ends in "for", so it reads "…for you." */
+  let i = 0, paused = false;
+  const h1 = $('#hero-h'); h1.addEventListener('mouseenter', () => { paused = true; }); h1.addEventListener('mouseleave', () => { paused = false; });
+  setInterval(() => {
+    if (paused || document.hidden) return;
+    span.classList.add('out');
+    setTimeout(() => { i = (i + 1) % lines.length; span.textContent = lines[i]; span.classList.remove('out'); }, 300);
+  }, 2400);
+})();
+
+/* ---------- intake (7 questions + safety + result) ---------- */
+const intake = $('#intake');
+const STEPS = 9;
+function dots() { return '<div class="mb-dots" aria-hidden="true">' + Array.from({ length: 8 }, (_, i) => '<i class="' + (i < S.step ? 'done' : i === S.step ? 'on' : '') + '"></i>').join('') + '</div>'; }
+function answersLine() {
+  const d = S.draft, out = [];
+  if (S.step > 0) out.push([0, GOALS[d.goal]]);
+  if (S.step > 1) out.push([1, (d.sex === 'm' ? 'M' : 'F') + ' ' + d.age + ' · ' + (d.hu === 'ft' ? cmToFt(d.cm) : Math.round(d.cm) + ' cm') + ' · ' + (d.wu === 'lb' ? Math.round(d.kg * 2.20462) + ' lb' : d.kg + ' kg')]);
+  if (S.step > 2) out.push([2, d.days + (d.days === 1 ? ' day' : ' days') + ' a week']);
+  if (S.step > 3) out.push([3, d.meals === 'full' ? 'Full day' : 'Lunch & dinner']);
+  if (S.step > 4) out.push([4, d.skips.length ? 'Skip: ' + d.skips.join(', ') : 'No skips']);
+  if (S.step > 5) out.push([5, '$' + d.budget + ' a week']);
+  if (S.step > 6) out.push([6, d.city === 'pickup' ? 'Pickup' : d.city]);
+  if (!out.length) return '';
+  return '<div class="flex flex-wrap gap-1.5 mt-4" aria-label="Your answers so far">' + out.map(a => '<button type="button" class="mb-chip !bg-white border border-[#C9D4E2] min-h-[40px]" data-goto="' + a[0] + '" aria-label="Change: ' + esc(a[1]) + '">' + esc(a[1]) + ' <span aria-hidden="true" class="text-navy">✎</span></button>').join('') + '</div>';
+}
+function cmToFt(cm) { const inch = Math.round(cm / 2.54); return Math.floor(inch / 12) + ' ft ' + (inch % 12) + ' in'; }
+function coach(q, sub) { return '<div class="flex gap-3 mt-5"><span class="mb-coach" aria-hidden="true">MB</span><div class="mb-bub min-w-0"><p class="font-semibold text-[16.5px]">' + q + '</p>' + (sub ? '<p class="text-slate text-[13.5px] mt-1">' + sub + '</p>' : '') + '</div></div>'; }
+function navBtns(nextLabel, nextId) { return '<div class="flex flex-wrap items-center justify-between gap-3 mt-6">' + (S.step > 0 ? '<button type="button" class="mb-btn mb-btn-line mb-btn-sm" data-back>Back</button>' : '<span></span>') + (nextLabel ? '<button type="button" class="mb-btn mb-btn-navy" id="' + (nextId || 'q-next') + '">' + nextLabel + '</button>' : '') + '</div>'; }
+function drawIntake() {
+  const d = S.draft, st = S.step;
+  let h = '<div class="flex flex-wrap items-center justify-between gap-3"><div class="flex items-center gap-3"><span class="mb-coach" aria-hidden="true">MB</span><div><b class="block text-[15px]">Meal Butler coach</b><small class="text-slate text-[12.5px]">AI · ' + esc(AGENTS.macro) + ' · a person approves plans</small></div></div>' +
+    '<div class="flex items-center gap-3">' + dots() + '<span class="text-[12.5px] text-slate mono">' + (st < 7 ? 'Q' + (st + 1) + ' of 7' : st === 7 ? 'Safety' : 'Done') + '</span></div></div>' +
+    (st < 8 ? '<p class="mt-3"><button type="button" class="mb-link text-[14px]" id="q-demo">Use demo answers</button> <span class="text-[13px] text-slate">(Maria: lose fat, 38, 165 cm, 78 kg)</span></p>' : '') + answersLine();
+  if (st === 0) {
+    h += coach("What's the goal?") + '<div class="flex flex-wrap gap-2 mt-4 sm:pl-[52px]">' + Object.keys(GOALS).map(k => '<button type="button" class="mb-opt" data-goal="' + k + '" aria-pressed="' + (d.goal === k) + '">' + GOALS[k] + '</button>').join('') + '</div>' + navBtns();
+  } else if (st === 1) {
+    h += coach('A bit about you', 'Sex is used only for the calorie formula.') +
+      '<div class="grid sm:grid-cols-2 gap-4 mt-4 sm:pl-[52px]">' +
+      '<div><label class="mb-lab" for="q-name">First name and last initial (optional)</label><input class="mb-in" id="q-name" maxlength="24" autocomplete="off" value="' + esc(d.name === MARIA.name && S.source === 'sample' ? '' : d.name) + '" placeholder="Maria S."></div>' +
+      '<div><label class="mb-lab" for="q-age">Age</label><input class="mb-in" id="q-age" type="number" inputmode="numeric" min="13" max="100" value="' + esc(d.age) + '"></div>' +
+      '<div><span class="mb-lab" id="q-sex-l">Sex</span><div class="mb-seg" role="group" aria-labelledby="q-sex-l"><button type="button" data-sex="f" aria-pressed="' + (d.sex === 'f') + '">Female</button><button type="button" data-sex="m" aria-pressed="' + (d.sex === 'm') + '">Male</button></div></div>' +
+      '<div><span class="mb-lab" id="q-hu-l">Height</span><div class="flex flex-wrap gap-2 items-center"><div class="mb-seg" role="group" aria-labelledby="q-hu-l"><button type="button" data-hu="cm" aria-pressed="' + (d.hu !== 'ft') + '">cm</button><button type="button" data-hu="ft" aria-pressed="' + (d.hu === 'ft') + '">ft/in</button></div>' +
+      (d.hu === 'ft' ? '<input class="mb-in !w-[74px]" id="q-ft" type="number" min="4" max="7" aria-label="Feet" value="' + Math.floor(Math.round(d.cm / 2.54) / 12) + '"><input class="mb-in !w-[74px]" id="q-in" type="number" min="0" max="11" aria-label="Inches" value="' + (Math.round(d.cm / 2.54) % 12) + '">' : '<input class="mb-in !w-[110px]" id="q-cm" type="number" min="120" max="230" aria-label="Height in centimetres" value="' + Math.round(d.cm) + '">') + '</div></div>' +
+      '<div class="sm:col-span-2"><span class="mb-lab" id="q-wu-l">Weight</span><div class="flex flex-wrap gap-2 items-center"><div class="mb-seg" role="group" aria-labelledby="q-wu-l"><button type="button" data-wu="kg" aria-pressed="' + (d.wu !== 'lb') + '">kg</button><button type="button" data-wu="lb" aria-pressed="' + (d.wu === 'lb') + '">lb</button></div>' +
+      '<input class="mb-in !w-[110px]" id="q-kg" type="number" step="0.1" aria-label="Weight in ' + (d.wu === 'lb' ? 'pounds' : 'kilograms') + '" value="' + (d.wu === 'lb' ? Math.round(d.kg * 2.20462) : d.kg) + '"></div></div>' +
+      '</div><p class="text-brick text-[13.5px] mt-3 sm:pl-[52px]" id="q-err" role="alert"></p>' + navBtns('Next');
+  } else if (st === 2) {
+    h += coach('How many days a week do you train?') + '<div class="flex flex-wrap gap-2 mt-4 sm:pl-[52px]">' + [0, 1, 2, 3, 4, 5, 6, 7].map(n => '<button type="button" class="mb-opt !min-w-[48px]" data-days="' + n + '" aria-pressed="' + (d.days === n) + '">' + n + '</button>').join('') + '</div>' + navBtns();
+  } else if (st === 3) {
+    h += coach('Which meals should we cover?') + '<div class="flex flex-wrap gap-2 mt-4 sm:pl-[52px]"><button type="button" class="mb-opt" data-meals="ld" aria-pressed="' + (d.meals === 'ld') + '">Lunch and dinner, Mon–Fri</button><button type="button" class="mb-opt" data-meals="full" aria-pressed="' + (d.meals === 'full') + '">Breakfast, lunch and dinner, Mon–Fri</button></div>' + navBtns();
+  } else if (st === 4) {
+    h += coach('Anything you skip?', 'Pick as many as you like.') + '<div class="flex flex-wrap gap-2 mt-4 sm:pl-[52px]">' + SKIPS.map(s => '<button type="button" class="mb-opt" data-skip="' + s[0] + '" aria-pressed="' + (d.skips.indexOf(s[0]) > -1) + '">' + s[1] + '</button>').join('') + '<button type="button" class="mb-opt" data-skip="none" aria-pressed="' + (!d.skips.length) + '">Nothing</button></div>' + navBtns('Next');
+  } else if (st === 5) {
+    h += coach('Weekly food budget?', "We'll tell you if your week goes over.") + '<div class="mt-4 sm:pl-[52px]"><label class="mb-lab" for="q-budget">Budget: <output class="mono text-navy" id="q-bout">$' + d.budget + '</output> a week</label><input type="range" class="mb-range" id="q-budget" min="100" max="250" step="5" value="' + d.budget + '"><div class="flex justify-between text-[12px] text-slate mono"><span>$100</span><span>$250</span></div></div>' + navBtns('Next');
+  } else if (st === 6) {
+    const r = routeFor(d.city);
+    h += coach('Where do you live?') + '<div class="mt-4 sm:pl-[52px]"><label class="mb-lab" for="q-city">City or pickup</label><select class="mb-in" id="q-city"><option value="pickup"' + (d.city === 'pickup' ? ' selected' : '') + '>Pick up at Brimley Rd</option>' + JWC.cities().map(c => '<option' + (c === d.city ? ' selected' : '') + '>' + esc(c) + '</option>').join('') + '</select>' +
+      '<p class="mt-3 mb-chip !bg-white" id="q-route">' + (r.id === 'pickup' ? 'Free pickup at 2201 Brimley Rd · Mon–Fri 9–6, Sat 10–4' : esc(r.name) + ' · ' + m2(r.fee) + ' fee · $' + r.min + ' minimum') + '</p></div>' + navBtns('Next');
+  } else if (st === 7) {
+    h += coach('Safety check. Do any of these apply?', 'If yes, a person helps you instead of the AI. Nothing is sent.') + '<div class="grid sm:grid-cols-2 gap-2 mt-4 sm:pl-[52px]">' + SAFETY.map((s, i) => '<label class="mb-check"><input type="checkbox" data-safe="' + i + '"' + (d.safety.indexOf(s) > -1 ? ' checked' : '') + '><span>' + s + '</span></label>').join('') + '</div>' + navBtns('See my numbers', 'q-see');
+  } else {
+    h += resultHtml();
+  }
+  intake.innerHTML = h;
+  bindIntake();
+}
+let editOpen = false, focusQ = false;
+function goalLine(t, goal) { return { lose: 'Minus 20% to lose fat', build: 'Plus 10% to build muscle', maintain: 'No change to maintain', glp: 'Minus 25% for a smaller GLP-1 appetite' }[goal] + ': ' + fmt(t.raw || t.kcal) + ' kcal.' + (t.raw < t.floor ? ' We never plan below ' + fmt(t.floor) + ' kcal a day without a dietitian, so yours is set to ' + fmt(t.floor) + '.' : ''); }
+function macroTiles(t) {
+  const tot = t.p * 4 + t.c * 4 + t.f * 9 || 1;
+  return '<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">' +
+    '<div class="rounded-2xl bg-white p-3"><small class="text-[12px] text-slate font-semibold">Calories</small><b class="mono block text-[24px] leading-tight">' + fmt(t.kcal) + '</b><small class="text-slate text-[12px]">kcal a day</small></div>' +
+    [['p', 'Protein', 'bg-p'], ['c', 'Carbs', 'bg-c'], ['f', 'Fat', 'bg-f']].map(x => '<div class="rounded-2xl bg-white p-3"><small class="text-[12px] text-slate font-semibold inline-flex items-center gap-1.5"><i class="mb-dot ' + x[2] + '"></i>' + x[1] + '</small><b class="mono block text-[24px] leading-tight">' + t[x[0]] + ' g</b><small class="text-slate text-[12px]">' + Math.round(t[x[0]] * (x[0] === 'f' ? 9 : 4) / tot * 100) + '% of calories</small></div>').join('') + '</div>' +
+    '<div class="mb-stack mt-4" role="img" aria-label="Calories split: protein ' + Math.round(t.p * 4 / tot * 100) + '%, carbs ' + Math.round(t.c * 4 / tot * 100) + '%, fat ' + Math.round(t.f * 9 / tot * 100) + '%"><i class="bg-p" style="width:' + (t.p * 4 / tot * 100) + '%"></i><i class="bg-c" style="width:' + (t.c * 4 / tot * 100) + '%"></i><i class="bg-f" style="width:' + (t.f * 9 / tot * 100) + '%"></i></div>';
+}
+function resultHtml() {
+  const d = S.draft;
+  if (d.safety.length) {
+    return '<div class="mt-6 rounded-[24px] p-5 sm:p-6 mb-stop" tabindex="-1" id="q-focus"><p class="mb-eyebrow text-brick">Held for a person · ' + esc(AGENTS.nutrition) + '</p>' +
+      '<h3 class="font-display font-extrabold text-[26px] mt-2">Let\'s get a person on this</h3>' +
+      '<p class="mt-2 leading-relaxed">You ticked: <b>' + esc(d.safety.join(', ')) + '</b>. That needs a person, not an AI, so we won\'t set targets here. Our partner registered dietitian can call you for a free 15-minute chat, usually within one business day. Until then, please don\'t change anything your doctor has set.</p>' +
+      '<div class="flex flex-wrap gap-3 mt-5"><button type="button" class="mb-btn mb-btn-navy" data-call data-who="rd" data-reason="Intake safety check: ' + esc(d.safety.join(', ')) + '">Book a free 15-minute call</button><button type="button" class="mb-link" id="q-safety-back">Change my answers</button></div></div>';
+  }
+  const t = S.dt;
+  return '<div class="mt-6 rounded-[24px] p-5 sm:p-6" style="background:#F2F6FB" tabindex="-1" id="q-focus">' +
+    '<div class="flex flex-wrap items-center justify-between gap-2"><h3 class="font-display font-extrabold text-[24px]">Your daily target (estimate)</h3><span class="mb-est">est.</span></div>' + macroTiles(t) +
+    '<div class="flex flex-wrap gap-3 items-center mt-4"><button type="button" class="mb-link" id="q-edit" aria-expanded="' + editOpen + '">Edit macros</button>' + (S.dtEdited ? '<span class="mb-chip">Edited by you</span>' : '') + '</div>' +
+    (editOpen ? '<div class="flex flex-wrap gap-4 mt-2">' + [['p', 'Protein'], ['c', 'Carbs'], ['f', 'Fat']].map(x => '<div><span class="mb-lab">' + x[1] + '</span><div class="mb-step"><button type="button" data-ed="' + x[0] + '" data-d="-5" aria-label="5 g less ' + x[1].toLowerCase() + '">−</button><output>' + t[x[0]] + ' g</output><button type="button" data-ed="' + x[0] + '" data-d="5" aria-label="5 g more ' + x[1].toLowerCase() + '">+</button></div></div>').join('') + '</div>' : '') +
+    '<details class="mt-4 bg-white rounded-2xl p-4"><summary class="cursor-pointer font-semibold py-2 leading-6">How we worked this out</summary><p class="mt-2 text-slate leading-relaxed text-[14.5px]">Resting burn by the Mifflin-St Jeor formula: ' + fmt(t.bmr) + ' kcal. Times ' + t.act + ' for ' + d.days + ' training day' + (d.days === 1 ? '' : 's') + ': ' + fmt(t.tdee) + ' kcal. ' + goalLine(targets(d), d.goal) + ' Protein ' + t.ppk + ' g per kg. Fat 25% of calories. Carbs fill the rest.' + (S.dtEdited ? ' You then edited the grams, so calories are now ' + fmt(t.kcal) + '.' : '') + ' A registered dietitian reviews these rules (concept). General guidance, not medical advice.</p></details>' +
+    '<div class="flex flex-wrap items-center gap-3 mt-5"><button type="button" class="mb-btn mb-btn-navy" id="q-build">Build my week</button><button type="button" class="mb-link" id="q-restart">Start over</button></div></div>';
+}
+function readQ2(strict) {
+  const d = S.draft, err = $('#q-err');
+  const nm = $('#q-name'), age = +($('#q-age') || {}).value, kgIn = +($('#q-kg') || {}).value;
+  if (nm) d.name = nm.value.trim();
+  let cm = d.cm;
+  if ($('#q-cm')) cm = +$('#q-cm').value; else if ($('#q-ft')) cm = ((+$('#q-ft').value || 0) * 12 + (+$('#q-in').value || 0)) * 2.54;
+  const kg = d.wu === 'lb' ? kgIn / 2.20462 : kgIn;
+  const bad = !(age >= 13 && age <= 100) ? 'Please enter an age from 13 to 100.' : !(cm >= 120 && cm <= 230) ? 'Please check your height.' : !(kg >= 35 && kg <= 250) ? 'Please check your weight.' : '';
+  if (strict && bad) { if (err) err.textContent = bad; return false; }
+  if (age) d.age = age; if (cm) d.cm = Math.round(cm * 10) / 10; if (kg) d.kg = Math.round(kg * 10) / 10;
+  syncAge(d);
+  return true;
+}
+/* age is the source of truth for the under-18 safety stop (it can't be unticked away) */
+function syncAge(d, addOnly) { const u = d.safety.indexOf('Under 18'); if (d.age < 18 && u < 0) d.safety.push('Under 18'); else if (!addOnly && d.age >= 18 && u > -1) d.safety.splice(u, 1); }
+function go(step) { S.step = step; focusQ = true; save(); drawIntake(); }
+function bindIntake() {
+  const d = S.draft, on = (sel, fn) => $$(sel, intake).forEach(b => b.addEventListener('click', fn));
+  on('#q-demo', () => { S.draft = copy(MARIA); go(7); });
+  on('[data-goto]', e => go(+e.currentTarget.dataset.goto));
+  on('[data-back]', () => { if (S.step === 1) readQ2(false); go(Math.max(0, S.step - 1)); });
+  on('[data-goal]', e => { d.goal = e.currentTarget.dataset.goal; go(1); });
+  on('[data-sex]', e => { readQ2(false); d.sex = e.currentTarget.dataset.sex; drawIntake(); });
+  on('[data-hu]', e => { readQ2(false); d.hu = e.currentTarget.dataset.hu; drawIntake(); });
+  on('[data-wu]', e => { readQ2(false); d.wu = e.currentTarget.dataset.wu; drawIntake(); });
+  on('[data-days]', e => { d.days = +e.currentTarget.dataset.days; go(3); });
+  on('[data-meals]', e => { d.meals = e.currentTarget.dataset.meals; go(4); });
+  on('[data-skip]', e => {
+    const k = e.currentTarget.dataset.skip;
+    if (k === 'none') d.skips = []; else { const i = d.skips.indexOf(k); if (i > -1) d.skips.splice(i, 1); else d.skips.push(k); }
+    save(); drawIntake(); const b = $('[data-skip="' + k + '"]', intake); if (b) b.focus();
+  });
+  const bud = $('#q-budget', intake); if (bud) bud.addEventListener('input', () => { d.budget = +bud.value; $('#q-bout').textContent = '$' + d.budget; save(); });
+  const city = $('#q-city', intake); if (city) city.addEventListener('change', () => { d.city = city.value; const r = routeFor(d.city); $('#q-route').textContent = r.id === 'pickup' ? 'Free pickup at 2201 Brimley Rd · Mon–Fri 9–6, Sat 10–4' : r.name + ' · ' + m2(r.fee) + ' fee · $' + r.min + ' minimum'; save(); });
+  $$('[data-safe]', intake).forEach(c => c.addEventListener('change', () => { d.safety = $$('[data-safe]', intake).filter(x => x.checked).map(x => SAFETY[+x.dataset.safe]); save(); }));
+  on('#q-next', () => { if (S.step === 1 && !readQ2(true)) return; go(S.step + 1); });
+  on('#q-see', () => {
+    syncAge(d, true);
+    S.dt = targets(d); S.dtEdited = false; editOpen = false;
+    if (d.safety.length) { const reason = d.safety.join(', '); if (S.safetyLogged !== reason) { S.safetyLogged = reason; listPush('esc', { when: new Date().toISOString(), src: 'Site intake (this demo)', reason: reason, status: 'Waiting for a person' }); } }
+    go(8);
+  });
+  on('#q-safety-back', () => go(7));
+  on('#q-edit', () => { editOpen = !editOpen; drawIntake(); const b = $('#q-edit'); if (b) b.focus(); });
+  on('[data-ed]', e => { const k = e.currentTarget.dataset.ed, t = S.dt; t[k] = Math.max(k === 'p' ? 40 : 0, Math.min(400, t[k] + (+e.currentTarget.dataset.d))); t.kcal = r10(t.p * 4 + t.c * 4 + t.f * 9); S.dtEdited = true; save(); drawIntake(); const b = $('[data-ed="' + k + '"][data-d="' + e.currentTarget.dataset.d + '"]'); if (b) b.focus(); });
+  on('#q-build', () => {
+    S.prof = copy(d); if (!S.prof.name) S.prof.name = ''; S.t = copy(S.dt); S.week = buildWeek(S.prof); S.day = 0; S.source = 'mine'; S.pmp = { mode: S.prof.meals, size: null };
+    if (S.prof.name) S.label.name = S.prof.name;
+    save(); drawPlanner(); drawPlans(); drawLabelForm(); scrollTo('week'); JWC.toast('Your week is built: ' + fmt(S.t.kcal) + ' kcal · ' + S.t.p + ' g protein (est.)');
+  });
+  on('#q-restart', () => { S.draft = copy(MARIA); S.draft.name = ''; go(0); });
+  if (focusQ) { focusQ = false; const f = $('#q-focus', intake) || $('.mb-bub', intake); if (f) { if (!f.hasAttribute('tabindex')) f.setAttribute('tabindex', '-1'); f.focus({ preventScroll: true }); } }
+}
+
+/* ---------- planner ---------- */
+function macLine(m, big) { return '<span class="mb-mac"><i class="mb-dot bg-p" aria-hidden="true"></i>P ' + Math.round(m.p) + ' g</span><span class="mb-mac"><i class="mb-dot bg-c" aria-hidden="true"></i>C ' + Math.round(m.c) + ' g</span><span class="mb-mac"><i class="mb-dot bg-f" aria-hidden="true"></i>F ' + Math.round(m.f) + ' g</span><span class="mb-mac' + (big ? ' font-semibold' : '') + '">' + fmt(m.kcal) + ' kcal <span class="mb-est">est.</span></span>'; }
+function dayTargets() { const k = S.prof.meals === 'full' ? 1 : 0.7; return { kcal: S.t.kcal * k, p: S.t.p * k }; }
+function drawPlanner() {
+  const w = calcWeek(), di = S.day, day = w.days[di], tg = dayTargets(), fn = firstName(), full = S.prof.meals === 'full';
+  $('#week-h').textContent = "Here's your week" + (fn ? ', ' + fn : '') + '.';
+  $('#week-who').innerHTML = (S.source === 'sample' ? 'Sample week for Maria S. · ' : S.source === 'dm' ? 'Loaded from the Instagram DM demo · ' : 'Sized to your answers · ') +
+    esc(MODEN[S.prof.meals]) + (S.prof.skips.length ? ' · no ' + esc(S.prof.skips.join(', no ')) : ' · no skips') + (S.source === 'sample' ? ' · <a class="mb-link !min-h-0" href="#numbers">Get your own numbers</a>' : '');
+  $('#week-chips').innerHTML = '<span class="mb-chip mono">' + fmt(S.t.kcal) + ' kcal</span><span class="mb-chip mono"><i class="mb-dot bg-p"></i>P ' + S.t.p + ' g</span><span class="mb-chip mono"><i class="mb-dot bg-c"></i>C ' + S.t.c + ' g</span><span class="mb-chip mono"><i class="mb-dot bg-f"></i>F ' + S.t.f + ' g</span><span class="mb-est">est.</span>';
+  $('#day-tabs').innerHTML = w.days.map((d, i) => '<button type="button" role="tab" class="mb-day" id="day-tab-' + i + '" aria-controls="meals" aria-selected="' + (i === di) + '" tabindex="' + (i === di ? 0 : -1) + '" data-day="' + i + '"><b>' + DSHORT[i] + '</b><small>' + fmt(d.mac.kcal) + ' kcal</small></button>').join('');
+  $('#meals').setAttribute('aria-labelledby', 'day-tab-' + di);
+  const pOk = Math.abs(day.mac.p - tg.p) <= tg.p * 0.1, kLow = day.mac.kcal < tg.kcal * 0.85;
+  $('#day-bar').innerHTML = '<div class="flex flex-wrap items-center justify-between gap-2"><h3 class="font-display font-bold text-[20px]">' + DAYS[di] + '</h3><div class="flex flex-wrap gap-2">' +
+    (pOk ? '<span class="mb-ok">✓ On target</span>' : '<span class="mb-warn">' + (day.mac.p < tg.p ? 'Light on protein' : 'Over on protein') + '</span>') + (kLow ? '<span class="mb-warn">Light on calories</span>' : '') + '</div></div>' +
+    '<div class="grid sm:grid-cols-2 gap-4 mt-3">' +
+    '<div><p class="flex justify-between text-[13px]"><span>Calories' + (full ? '' : ' (lunch + dinner)') + '</span><span class="mono">' + fmt(day.mac.kcal) + ' / ' + fmt(tg.kcal) + '</span></p><div class="mb-meter mt-1.5" role="img" aria-label="Calories ' + fmt(day.mac.kcal) + ' of ' + fmt(tg.kcal) + '"><i style="width:' + Math.min(100, day.mac.kcal / tg.kcal * 100) + '%;background:' + (kLow ? '#D9982E' : '#154D8E') + '"></i></div></div>' +
+    '<div><p class="flex justify-between text-[13px]"><span>Protein</span><span class="mono">' + Math.round(day.mac.p) + ' / ' + Math.round(tg.p) + ' g</span></p><div class="mb-meter mt-1.5" role="img" aria-label="Protein ' + Math.round(day.mac.p) + ' of ' + Math.round(tg.p) + ' grams"><i style="width:' + Math.min(100, day.mac.p / tg.p * 100) + '%;background:#5B5A8C"></i></div></div></div>' +
+    (kLow ? '<div class="flex flex-wrap items-center justify-between gap-2 mt-3 rounded-2xl p-3" style="background:#FBF6EA"><p class="text-[13.5px]">Tip: add an Apple Cinnamon Oat Bar ($4.99) to close the gap, about 260 kcal <span class="mb-est">est.</span></p><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-oatbar>Add oat bar</button></div>' : '') +
+    (full ? '' : '<p class="text-[12.5px] text-slate mt-3">Lunch and dinner cover about 70% of your day. Breakfast and snacks are yours.</p>');
+  $('#meals').innerHTML = Object.keys(day.meals).map(slot => {
+    const m = day.meals[slot];
+    if (m.bf) {
+      const b = BFAST[m.key], img = P(b.ids[0]);
+      return '<article class="mb-meal" id="meal-' + slot + '"><img src="' + esc(JWC.img(img, 300)) + '" alt="' + esc(img.name) + '" loading="lazy" width="116" height="116"><div class="min-w-0"><p class="mb-eyebrow text-slate">Breakfast</p><h3 class="font-semibold text-[16px] mt-1 leading-snug">' + esc(b.name) + '</h3><p class="text-[13px] text-slate">Fixed portions, same every plan</p><div class="flex flex-wrap gap-x-3 gap-y-1.5 mt-2">' + macLine(m.mac) + '</div><div class="flex flex-wrap items-center justify-between gap-2 mt-2"><span class="mono text-[13px]">' + m2(m.alc) + '</span><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-swap="b" aria-label="Swap ' + DAYS[di] + ' breakfast">Swap</button></div></div></article>';
+    }
+    const pc = m.comp[0];
+    return '<article class="mb-meal" id="meal-' + slot + '"><img src="' + esc(JWC.img(pc.prod, 300)) + '" alt="' + esc(pc.prod.name) + '" loading="lazy" width="116" height="116"><div class="min-w-0"><p class="mb-eyebrow text-slate">' + MEALN[slot] + '</p>' +
+      '<h3 class="font-semibold text-[16px] mt-1 leading-snug">' + esc(pc.prod.name) + ' <span class="mono font-medium text-navy whitespace-nowrap">' + pc.g + ' g</span></h3>' +
+      '<p class="text-[13.5px] text-slate">' + m.comp.slice(1).map(c => '<span class="whitespace-nowrap">' + esc(c.prod.name) + ' <span class="mono">' + c.g + ' g</span></span>').join(' · ') + '</p>' +
+      '<div class="flex flex-wrap gap-x-3 gap-y-1.5 mt-2">' + macLine(m.mac) + '</div>' +
+      '<div class="flex flex-wrap items-center justify-between gap-2 mt-2"><span class="mono text-[12.5px] text-slate"><span class="whitespace-nowrap"><b class="text-ink text-[13.5px]">' + m2(m.alc) + '</b> standard</span> · <span class="whitespace-nowrap">' + m2(m.exact) + ' your grams</span></span><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-swap="' + slot + '" aria-label="Swap ' + DAYS[di] + ' ' + MEALN[slot].toLowerCase() + '">Swap</button></div></div></article>';
+  }).join('');
+  $('#fat-note').textContent = w.f < S.t.f * 0.85 ? 'Fat runs low because the week leans on lean proteins. ' + (allowed('salmon', S.prof) ? 'Salmon twice a week helps.' : 'Ground Turkey Breast or Boneless Chicken Thighs add a little more.') : "Macros are estimates from standard nutrition data until J&W's recipes are analyzed.";
+  drawSummary(w);
+}
+function summaryHtml(w) {
+  const full = S.prof.meals === 'full', size = autoSize(S.t.p), price = PRICES[S.prof.meals][size], over = w.alc - S.prof.budget;
+  const canSwap = BUDGET_SWAPS.some(s => weekHas(s[0]) && allowed(s[1], S.prof));
+  return '<p class="mb-eyebrow text-plum">Your week · summary</p>' +
+    '<p class="mt-3 text-[15px]">' + (full ? 'Protein average <b class="mono">' + Math.round(w.p) + ' g</b> a day (target ' + S.t.p + ')' : 'Protein from lunch and dinner: <b class="mono">' + Math.round(w.p) + ' g</b> a day (target ' + S.t.p + ' for the whole day)') + '</p>' +
+    '<p class="text-[13.5px] text-slate mt-1">Calories ' + (full ? '' : 'from lunch and dinner ') + 'average ' + fmt(w.kcal) + ' a day <span class="mb-est">est.</span></p>' +
+    '<div class="mt-4 space-y-2 text-[14.5px]"><div class="flex justify-between gap-3 border-b border-[#E3EAF3] pb-2"><span>À la carte, standard sizes</span><b class="mono">' + m2(w.alc) + '</b></div>' +
+    '<div class="flex justify-between gap-3 border-b border-[#E3EAF3] pb-2 text-slate"><span>At your exact grams</span><span class="mono">' + m2(w.exact) + '</span></div>' +
+    '<div class="flex justify-between gap-3"><span>Personal Macro Plan, ' + MODEN[S.prof.meals] + ' · ' + SIZEN[size] + ' <span class="mb-concept">Concept</span></span><b class="mono text-plum">$' + price + '</b></div><p class="text-[12.5px] text-slate">a week, weighed to your grams</p></div>' +
+    (over > 0 ? '<div class="mt-4 rounded-2xl p-3" style="background:#FBF6EA"><p class="text-[13.5px]"><b>Over your $' + S.prof.budget + ' budget by ' + m2(over) + '.</b></p>' + (canSwap ? '<button type="button" class="mb-btn mb-btn-line mb-btn-xs mt-2" data-budgetswap>Budget swap</button>' : '<p class="text-[12.5px] text-slate mt-1">Try Lunch &amp; Dinner, or raise the budget.</p>') + '</div>' : '<p class="mt-4 mb-ok">✓ Within your $' + S.prof.budget + ' budget</p>') +
+    '<div class="grid gap-2 mt-5"><button type="button" class="mb-btn mb-btn-navy" data-addweek>Add this week to cart</button><button type="button" class="mb-btn mb-btn-plum" data-makeplan>Make it my Personal Macro Plan</button></div>' +
+    '<p class="text-[12.5px] text-slate mt-3">Standard sizes are close to your grams, not exact. That\'s what the plan fixes.</p>' +
+    '<p class="mt-2 text-[13px]"><a class="mb-link !min-h-[40px]" href="01-goal-plan-builder.html">Want a standing order at 10% off? See Goal Plans (Prototype 1).</a></p>';
+}
+function weekHas(id) { return S.week.some(d => ['l', 'd'].some(s => ['p', 'c', 'v'].some(r => d[s][r] === id))); }
+function drawSummary(w) {
+  w = w || calcWeek();
+  $('#sum-desk').innerHTML = summaryHtml(w);
+  const body = $('#sheet-body'); body.innerHTML = summaryHtml(w);
+  $('#sheet-mini').innerHTML = '<b class="mono">P ' + Math.round(w.p) + ' g/day</b> · <span class="mono">' + m2(w.alc) + '</span> à la carte' + (w.alc > S.prof.budget ? ' · <span class="text-[#8A4A00] font-semibold">over budget</span>' : '');
+  const a = $('#plan-a-total'); if (a) a.textContent = m2(w.alc);
+  const f = $('#plans-foot'); if (f) f.textContent = "Concept pricing built from J&W's own per-ounce prices. Your week at exact grams is about $" + Math.round(w.exact) + ' à la carte. GTA premium meal prep runs $14 to $30 a meal.';
+}
+$('#day-tabs').addEventListener('click', e => { const b = e.target.closest('[data-day]'); if (!b) return; S.day = +b.dataset.day; save(); drawPlanner(); $('#day-tab-' + S.day).focus(); });
+$('#day-tabs').addEventListener('keydown', e => { if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return; e.preventDefault(); S.day = (S.day + (e.key === 'ArrowRight' ? 1 : 4)) % 5; save(); drawPlanner(); $('#day-tab-' + S.day).focus(); });
+
+/* swap sheet */
+function deltaTxt(v, unit, word) { const r = Math.round(v); if (Math.abs(v) < 2) return 'same ' + word; return (r > 0 ? '+' : '−') + Math.abs(r) + ' g ' + word; }
+function priceTxt(v) { if (Math.abs(v) < 0.005) return 'same price'; return '<span class="' + (v < 0 ? 'mb-delta-dn' : 'mb-delta-up') + '">' + (v < 0 ? '−' : '+') + m2(Math.abs(v)) + '</span>'; }
+function openSwap(slot, role) {
+  const di = S.day, day = calcDay(di), cur = day.meals[slot];
+  let opts;
+  if (slot === 'b') {
+    opts = Object.keys(BFAST).filter(k => k !== S.week[di].b && !BFAST[k].skip.some(s => S.prof.skips.indexOf(s) > -1)).map(k => {
+      const mac = bfMac(k), pr = bfPrice(k), im = P(BFAST[k].ids[0]);
+      return { key: k, name: BFAST[k].name, img: im, line: priceTxt(pr - cur.alc) + ' · ' + deltaTxt(mac.f - cur.mac.f, 'g', 'fat') + ' · ' + deltaTxt(mac.p - cur.mac.p, 'g', 'protein') + ', est.' };
+    });
+  } else {
+    role = role || 'p';
+    const ids = S.week[di][slot], other = S.week[di][slot === 'l' ? 'd' : 'l'];
+    opts = ROLE[role].filter(id => id !== ids[role] && id !== other[role] && allowed(id, S.prof) && P(id)).slice(0, 4).map(id => {
+      const n = Object.assign({}, ids); n[role] = id;
+      const nm = calcMeal(di, slot, n), c = nm.comp.filter(x => x.role === role)[0];
+      return { key: id, name: P(id).name + ' ' + c.g + ' g', img: P(id), line: priceTxt(nm.alc - cur.alc) + ' · ' + deltaTxt(nm.mac.f - cur.mac.f, 'g', 'fat') + ' · ' + deltaTxt(nm.mac.p - cur.mac.p, 'g', 'protein') + ', est.' };
+    });
+  }
+  const curName = slot === 'b' ? BFAST[S.week[di].b].name : cur.comp.map(c => c.prod.name + ' ' + c.g + ' g').join(' · ');
+  JWC.modal('<h3>Swap ' + DAYS[di] + ' ' + MEALN[slot].toLowerCase() + '</h3><p class="text-[13.5px] text-slate">Now: ' + esc(curName) + '</p>' +
+    (slot !== 'b' ? '<div class="mb-seg mt-3" role="group" aria-label="What to swap">' + [['p', 'Protein'], ['c', 'Carb'], ['v', 'Veg']].map(r => '<button type="button" data-role="' + r[0] + '" aria-pressed="' + (r[0] === role) + '">' + r[1] + '</button>').join('') + '</div>' : '') +
+    '<div class="mt-2">' + (opts.length ? opts.map(o => '<div class="mb-swapopt"><img src="' + esc(JWC.img(o.img, 160)) + '" alt="' + esc(o.img.name) + '" width="56" height="56"><div class="min-w-0"><b class="block text-[14.5px] leading-snug">' + esc(o.name) + '</b><span class="mono text-[12px] text-slate">' + o.line + '</span></div><button type="button" class="mb-btn mb-btn-navy mb-btn-xs" data-use="' + esc(o.key) + '">Use this</button></div>').join('') : '<p class="text-slate mt-3">No like-for-like options left with your skips.</p>') + '</div>' +
+    '<p class="text-[12.5px] text-slate mt-3">Prices are standard sizes, à la carte. Grams re-size to your target. Macros are estimates.</p><div class="mt-3"><button type="button" class="jwc-btn jwc-btn-line" data-close>Close</button></div>', root => {
+    $$('[data-role]', root).forEach(b => b.addEventListener('click', () => openSwap(slot, b.dataset.role)));
+    $$('[data-use]', root).forEach(b => b.addEventListener('click', () => {
+      const before = slot === 'b' ? BFAST[S.week[di].b].name : P(S.week[di][slot][role]).name;
+      if (slot === 'b') S.week[di].b = b.dataset.use; else S.week[di][slot][role] = b.dataset.use;
+      const after = slot === 'b' ? BFAST[b.dataset.use].name : P(b.dataset.use).name;
+      save(); JWC.closeAll(); drawPlanner(); drawLabelOut(false);
+      const card = $('#meal-' + slot); if (card) { card.classList.add('flash'); setTimeout(() => card.classList.remove('flash'), 1200); }
+      JWC.toast('Swapped: ' + before + ' → ' + after);
+    }));
+  });
+}
+function budgetSwap() {
+  const s = BUDGET_SWAPS.filter(x => weekHas(x[0]) && allowed(x[1], S.prof))[0];
+  if (!s) { JWC.toast('No more like-for-like savings. Try Lunch & Dinner.'); return; }
+  const before = calcWeek().alc;
+  S.week.forEach(d => ['l', 'd'].forEach(sl => ['p', 'c', 'v'].forEach(r => { if (d[sl][r] === s[0]) d[sl][r] = s[1]; })));
+  save(); drawPlanner();
+  JWC.toast('Budget swap: ' + P(s[0]).name + ' → ' + P(s[1]).name + ' saves ' + m2(before - calcWeek().alc));
+}
+function addWeekToCart() {
+  const w = calcWeek(), lines = {};
+  const add = (prod, v) => { const k = prod.id + '|' + v.label; if (!lines[k]) lines[k] = { id: prod.id, name: prod.name, variant: v.label, price: v.price, qty: 0, img: JWC.img(prod, 200), note: 'Coach-built week' }; lines[k].qty++; };
+  w.days.forEach(d => Object.values(d.meals).forEach(m => { if (m.bf) BFAST[m.key].ids.forEach(id => add(P(id), P(id).variants[0])); else m.comp.forEach(c => add(c.prod, c.nv)); }));
+  /* re-adding replaces the last coach-built week (e.g. after a swap) instead of doubling it */
+  const prev = JWC.cart.items(), kept = prev.filter(i => i.note !== 'Coach-built week'), replaced = kept.length < prev.length;
+  if (replaced) JWC.cart.save(kept);
+  let n = 0; Object.values(lines).forEach(l => { n += l.qty; JWC.cart.add(l, true); });
+  CHECKOUT.city = S.prof.city && S.prof.city !== 'pickup' ? S.prof.city : '';
+  JWC.toast((replaced ? 'Updated your cart: ' : 'Added ') + n + ' portions from your week · ' + m2(w.alc));
+  setSheet(false); JWC.cart.open();
+}
+
+/* ---------- personal label (Nutrition & Safety builds it from the week) ---------- */
+function labelLines(name, di, slot) {
+  const day = calcDay(di); if (!day.meals[slot]) slot = 'l';
+  const m = day.meals[slot];
+  const L = [['hd', 'J&W MEAL BUTLER · PERSONAL MACRO PLAN'], ['nm', 'FOR ' + name.toUpperCase()], ['sm', DAYS[di].toUpperCase() + ' · ' + MEALN[slot].toUpperCase()]];
+  if (m.bf) BFAST[m.key].ids.forEach(id => L.push(['', P(id).name + ' × 1']));
+  else m.comp.forEach(c => L.push(['', c.prod.name + ' ' + c.g + ' g']));
+  L.push(['mac', fmt(m.mac.kcal) + ' kcal · P ' + Math.round(m.mac.p) + ' g · C ' + Math.round(m.mac.c) + ' g · F ' + Math.round(m.mac.f) + ' g (est.)']);
+  L.push(['ok', m.bf ? 'Checked ' + BFAST[m.key].ids.length + ' of ' + BFAST[m.key].ids.length + (BFAST[m.key].ids.length === 1 ? ' item' : ' items') + ' ✓' : 'Weighed ' + m.comp[0].g + ' g · target ' + m.comp[0].g + ' g ✓']);
+  L.push(['sm', 'Packed at 2201 Brimley Rd, Scarborough']);
+  L.push(['sm', "Keep frozen. Heating steps print here from J&W's kitchen sheet."]);
+  return L;
+}
+function barcode(seed) {
+  let h = 7, x = 0, r = '', i = 0; for (const ch of seed) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  while (x < 260 && i++ < 200) { h = (Math.imul(h, 1103515245) + 12345) >>> 0; const w = 1 + (h >>> 29) % 3; if (i % 2) r += '<rect x="' + x + '" y="0" width="' + w + '" height="34"/>'; x += w + 1 + ((h >>> 26) % 2); }
+  return '<svg viewBox="0 0 ' + x + ' 34" preserveAspectRatio="none" class="w-full h-[34px]" aria-hidden="true"><g fill="#1F1B16">' + r + '</g></svg>';
+}
+function labelHtml(name, di, slot, anim) {
+  const L = labelLines(name, di, slot);
+  return '<div class="mb-label' + (anim ? ' mb-printing' : '') + '" aria-label="Personal label for ' + esc(name) + ', ' + DAYS[di] + ' ' + MEALN[slot] + '">' +
+    L.map((l, i) => '<span class="ln ' + l[0] + '" style="animation-delay:' + (anim ? 0.15 + i * 0.13 : 0) + 's">' + esc(l[1]) + '</span>').join('') +
+    '<span class="ln mt-2" style="animation-delay:' + (anim ? 0.15 + L.length * 0.13 : 0) + 's">' + barcode(name + di + slot) + '<span class="sm block text-center mt-1">JW-PMP-' + (1000 + (name.length * 37 + di * 11) % 9000) + '-' + DSHORT[di].toUpperCase() + slot.toUpperCase() + '</span></span></div>';
+}
+function labelName() { return (S.label.name || S.prof.name || 'Maria S.').slice(0, 24); }
+function drawLabelForm() {
+  const full = S.prof.meals === 'full'; if (!full && S.label.meal === 'b') S.label.meal = 'l';
+  $('#lb-name').value = S.label.name || '';
+  $('#lb-day').innerHTML = DSHORT.map((d, i) => '<button type="button" data-ld="' + i + '" aria-pressed="' + (S.label.day === i) + '">' + d + '</button>').join('');
+  $('#lb-meal').innerHTML = (full ? ['b', 'l', 'd'] : ['l', 'd']).map(k => '<button type="button" data-lm="' + k + '" aria-pressed="' + (S.label.meal === k) + '">' + MEALN[k] + '</button>').join('');
+}
+function drawLabelOut(anim) {
+  const out = $('#label-out');
+  if (!S.label.printed && !anim) { out.innerHTML = '<div class="rounded-b-xl border-2 border-dashed border-[#C9BFA8] text-center text-[#6B5F48] mono text-[13px] px-4 py-16 mt-2">Your label prints here.<br>Type your name and press Print my label.</div>'; return; }
+  out.innerHTML = labelHtml(labelName(), S.label.day, S.label.meal, anim && !RM);
+}
+$('#lb-day').addEventListener('click', e => { const b = e.target.closest('[data-ld]'); if (!b) return; S.label.day = +b.dataset.ld; save(); drawLabelForm(); $('[data-ld="' + S.label.day + '"]').focus(); if (S.label.printed) drawLabelOut(false); });
+$('#lb-meal').addEventListener('click', e => { const b = e.target.closest('[data-lm]'); if (!b) return; S.label.meal = b.dataset.lm; save(); drawLabelForm(); $('[data-lm="' + S.label.meal + '"]').focus(); if (S.label.printed) drawLabelOut(false); });
+/* keep what the shopper typed when they pick a day or meal before printing */
+$('#lb-name').addEventListener('input', e => { S.label.name = e.target.value.trim(); save(); });
+$('#label-form').addEventListener('submit', e => {
+  e.preventDefault(); S.label.name = $('#lb-name').value.trim() || S.prof.name || 'Maria S.'; S.label.printed = true; save();
+  const led = $('#printer-led'); led.innerHTML = '<i class="w-2 h-2 rounded-full bg-[#F2C46D] inline-block"></i>PRINTING';
+  drawLabelOut(true); setTimeout(() => { led.innerHTML = '<i class="w-2 h-2 rounded-full bg-[#9DE0BC] inline-block"></i>READY'; }, RM ? 0 : 1900);
+});
+
+/* ---------- plans ---------- */
+function drawPlans() {
+  const mode = S.pmp.mode || S.prof.meals, auto = autoSize(S.t.p), size = S.pmp.size || auto;
+  $('#pb-mode').innerHTML = ['ld', 'full'].map(k => '<button type="button" data-pm="' + k + '" aria-pressed="' + (mode === k) + '">' + MODEN[k] + '</button>').join('');
+  $('#pb-size').innerHTML = ['reg', 'plus', 'perf'].map(k => '<button type="button" data-ps="' + k + '" aria-pressed="' + (size === k) + '">' + SIZEN[k] + '<br><span class="mono text-[12px]">$' + PRICES[mode][k] + '</span></button>').join('');
+  $('#pb-price').textContent = '$' + PRICES[mode][size];
+  $('#pb-size-why').textContent = (size === auto ? 'Auto-picked' : 'Auto would pick ' + SIZEN[auto]) + ' from your ' + S.t.p + ' g protein a day: Regular up to 120 g, Plus 121–160 g, Performance over 160 g.';
+}
+$('#pb-mode').addEventListener('click', e => { const b = e.target.closest('[data-pm]'); if (!b) return; S.pmp.mode = b.dataset.pm; save(); drawPlans(); $('[data-pm="' + S.pmp.mode + '"]').focus(); });
+$('#pb-size').addEventListener('click', e => { const b = e.target.closest('[data-ps]'); if (!b) return; S.pmp.size = b.dataset.ps; save(); drawPlans(); $('[data-ps="' + S.pmp.size + '"]').focus(); });
+$('#pb-start').addEventListener('click', () => openJoin());
+
+const fmtD = d => d.toLocaleDateString('en-CA', { weekday: 'short', month: 'short', day: 'numeric' });
+function nextMondays() { const t = new Date(); t.setHours(12, 0, 0, 0); const mon = new Date(t); mon.setDate(t.getDate() + ((7 - t.getDay()) % 7) + 1); return [0, 1, 2].map(i => { const d = new Date(mon); d.setDate(mon.getDate() + 7 * i); return d; }); }
+function openJoin() {
+  const st = { mode: S.pmp.mode || S.prof.meals, size: S.pmp.size || autoSize(S.t.p), wk: 0, name: S.label.name || S.prof.name || '' }, mons = nextMondays();
+  JWC.modal('<h3>Join the Personal Macro Plan <span class="mb-concept">Concept</span></h3><p style="margin:0;color:#5A6377;font-size:13.5px">Sized to ' + fmt(S.t.kcal) + ' kcal · ' + S.t.p + ' g protein a day (est.). A person on our coach desk approves your plan before the first cook.</p>' +
+    '<div id="j-plan"></div>' +
+    '<p class="mb-lab" style="margin-top:16px">2 · Your label</p><div class="flex gap-2"><input class="mb-in" id="j-name" maxlength="24" autocomplete="off" aria-label="First name and last initial" placeholder="Maria S." value="' + esc(st.name) + '"><button type="button" class="mb-btn mb-btn-navy mb-btn-sm flex-none" id="j-print">Print my label</button></div><div id="j-label" class="mt-3"></div>' +
+    '<p class="mb-lab" style="margin-top:16px" id="j-w-l">3 · First week</p><div role="radiogroup" aria-labelledby="j-w-l">' + mons.map((d, i) => { const sun = new Date(d); sun.setDate(d.getDate() - 1); return '<label class="jwc-choice"><input type="radio" name="j-wk" value="' + i + '"' + (i === 0 ? ' checked' : '') + '><span><b>Week of ' + fmtD(d) + '</b><br><small style="color:#5A6377">Sunday cut-off ' + fmtD(sun) + ' · ' + (i === 0 ? 'soonest' : 'later start') + '</small></span></label>'; }).join('') + '</div>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="j-go">Continue</button></div><p style="font-size:12.5px;color:#5A6377;margin:8px 0 0">Demo: nothing is sent or charged. Skip or pause any week, no contract.</p>', root => {
+    const plan = $('#j-plan', root), auto = autoSize(S.t.p);
+    function drawPlan() {
+      plan.innerHTML = '<p class="mb-lab" style="margin-top:16px" id="j-m-l">1 · Meals and size</p><div class="mb-seg" role="group" aria-labelledby="j-m-l">' + ['ld', 'full'].map(k => '<button type="button" data-jm="' + k + '" aria-pressed="' + (st.mode === k) + '">' + MODEN[k] + '</button>').join('') + '</div>' +
+        '<div class="mb-seg mb-seg3 mt-2" role="group" aria-label="Plan size">' + ['reg', 'plus', 'perf'].map(k => '<button type="button" data-js="' + k + '" aria-pressed="' + (st.size === k) + '">' + SIZEN[k] + (k === auto ? ' · auto' : '') + '</button>').join('') + '</div>' +
+        '<p style="margin:10px 0 0"><b class="font-display" style="font-size:34px">$' + PRICES[st.mode][st.size] + '</b> a week · ' + (st.mode === 'full' ? 15 : 10) + ' meals weighed to your grams</p><p style="margin:2px 0 0;font-size:12.5px;color:#5A6377">' + SIZEN[auto] + ' fits ' + S.t.p + ' g protein a day (Regular up to 120 g, Plus 121–160 g, Performance over 160 g).</p>';
+      $$('[data-jm]', plan).forEach(b => b.addEventListener('click', () => { st.mode = b.dataset.jm; drawPlan(); $('[data-jm="' + st.mode + '"]', plan).focus(); }));
+      $$('[data-js]', plan).forEach(b => b.addEventListener('click', () => { st.size = b.dataset.js; drawPlan(); $('[data-js="' + st.size + '"]', plan).focus(); }));
+    }
+    drawPlan();
+    $('#j-print', root).addEventListener('click', () => {
+      st.name = $('#j-name', root).value.trim() || 'Maria S.'; S.label.name = st.name; S.label.printed = true; save();
+      $('#j-label', root).innerHTML = labelHtml(st.name, 1, 'l', !RM); drawLabelForm(); drawLabelOut(false);
+    });
+    $('#j-go', root).addEventListener('click', () => {
+      st.name = $('#j-name', root).value.trim() || st.name || 'Maria S.'; st.wk = +($('[name=j-wk]:checked', root) || { value: 0 }).value;
+      S.pmp = { mode: st.mode, size: st.size }; S.label.name = st.name;
+      if (st.mode !== S.prof.meals) { S.prof.meals = st.mode; drawPlanner(); drawLabelForm(); }
+      save(); drawPlans();
+      const price = PRICES[st.mode][st.size], first = mons[st.wk];
+      JWC.checkout({
+        title: 'Personal Macro Plan', city: S.prof.city && S.prof.city !== 'pickup' ? S.prof.city : '',
+        items: [{ id: 'concept-pmp-' + st.mode + '-' + st.size, name: 'Personal Macro Plan · ' + MODEN[st.mode] + ' · ' + SIZEN[st.size] + ' (Concept)', price: price, qty: 1, note: fmt(S.t.kcal) + ' kcal · ' + S.t.p + ' g protein · weighed to your grams' }],
+        subscription: { label: 'Personal Macro Plan, every week', discountPct: 0 },
+        note: 'First week ' + fmtD(first) + ' · label: ' + st.name,
+        onPlaced: order => {
+          S.member = { no: order.no, mode: st.mode, size: st.size, price: price, name: st.name, first: first.toISOString(), day: order.day, city: order.city, kcal: S.t.kcal, p: S.t.p, week: copy(S.week) };
+          save();
+          const fn = st.name.split(/\s+/)[0], pickup = !order.city || order.city === 'Pickup';
+          JWC.modal('<h3>Welcome, ' + esc(fn) + '.</h3><p style="margin:0 0 10px">' + (pickup ? 'Your first meals will be ready for pickup at 2201 Brimley Rd.' : /day$/.test(order.day || '') ? 'Your first meals arrive on the ' + esc(order.day) + ' route.' : 'Your first meals arrive by express delivery after the Sunday cut-off.') + '</p>' +
+            '<div class="mb-card" style="padding:14px;box-shadow:none;border:1px solid #DCE4EE"><p style="margin:0;font-size:14px"><b>' + esc(order.no) + '</b> · Personal Macro Plan · ' + MODEN[st.mode] + ' · ' + SIZEN[st.size] + ' · $' + price + ' a week</p><p style="margin:6px 0 0;font-size:13.5px;color:#5A6377">First week starts ' + fmtD(first) + '. ' + esc(AGENTS.macro) + ' drafts each check-in; a person on our coach desk approves it. Your first InBody scan (concept) is included.</p></div>' +
+            '<p style="font-size:12.5px;color:#5A6377;margin:10px 0 0">Demo: nothing was charged or sent. Switch to JW team view to see your plan land on the coach desk.</p>' +
+            '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Done</button><button type="button" class="jwc-btn jwc-btn-dark" id="w-scan">Book my first scan</button></div>', r2 => {
+            $('#w-scan', r2).addEventListener('click', () => openScan());
+          });
+        }
+      });
+    });
+  });
+}
+
+/* ---------- InBody scan booking ---------- */
+const hm = t => { const h = Math.floor(t / 60), m = t % 60; return (h > 12 ? h - 12 : h) + ':' + String(m).padStart(2, '0') + (h >= 12 ? ' pm' : ' am'); };
+function openDays(n) { const out = [], d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + 1); while (out.length < n) { if (d.getDay() !== 0) out.push(new Date(d)); d.setDate(d.getDate() + 1); } return out; }
+function openScan() {
+  const days = openDays(6), st = { d: 0, t: null };
+  const slots = day => { const sat = day.getDay() === 6, out = []; for (let t = (sat ? 600 : 540); t < (sat ? 960 : 1080); t += 15) out.push(t); return out; };
+  JWC.modal('<h3>Book an InBody scan <span class="mb-concept">Concept</span></h3><p style="margin:0;color:#5A6377;font-size:13.5px">Five minutes at 2201 Brimley Rd. Mon–Fri 9–6 · Sat 10–4 · Sunday closed.</p>' +
+    '<p class="mb-lab" style="margin-top:14px" id="s-d-l">Day</p><div class="flex flex-wrap gap-1.5" role="group" aria-labelledby="s-d-l" id="s-days"></div>' +
+    '<p class="mb-lab" style="margin-top:14px" id="s-t-l">15-minute slot</p><div id="s-times" role="group" aria-labelledby="s-t-l" class="grid grid-cols-3 sm:grid-cols-4 gap-1.5" style="max-height:200px;overflow-y:auto;padding:2px"></div>' +
+    '<label class="jwc-field" style="margin-top:14px"><span>Your name</span><input id="s-name" autocomplete="off" maxlength="30" value="' + esc(S.label.name || (S.source !== 'sample' ? S.prof.name : '') || '') + '"></label>' +
+    '<p style="margin:0;font-size:13px;color:#5A6377">' + (S.member ? '<b style="color:#1F5E41">You\'re a plan member: this scan is included.</b> ' : '') + 'Members: included. Everyone else: $25, paid at the counter. Demo: nothing is sent.</p>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="s-book" disabled>Book demo scan</button></div>', root => {
+    const dBox = $('#s-days', root), tBox = $('#s-times', root), book = $('#s-book', root);
+    function draw() {
+      dBox.innerHTML = days.map((d, i) => '<button type="button" class="mb-opt !min-h-[44px] !px-3 !text-[13.5px]" data-sd="' + i + '" aria-pressed="' + (st.d === i) + '">' + fmtD(d) + '</button>').join('');
+      tBox.innerHTML = slots(days[st.d]).map((t, i) => { const taken = ((st.d * 7 + i * 5) % 6 === 0); return '<button type="button" class="mb-opt !min-h-[40px] !px-2 !text-[13px]" data-st="' + t + '" aria-pressed="' + (st.t === t) + '"' + (taken ? ' disabled style="opacity:.4;text-decoration:line-through" aria-label="' + hm(t) + ', taken"' : '') + '>' + hm(t) + '</button>'; }).join('');
+      book.disabled = st.t == null;
+    }
+    dBox.addEventListener('click', e => { const b = e.target.closest('[data-sd]'); if (!b) return; st.d = +b.dataset.sd; st.t = null; draw(); $('[data-sd="' + st.d + '"]', root).focus(); });
+    tBox.addEventListener('click', e => { const b = e.target.closest('[data-st]'); if (!b || b.disabled) return; st.t = +b.dataset.st; draw(); $('[data-st="' + st.t + '"]', root).focus(); });
+    draw();
+    book.addEventListener('click', () => {
+      const name = $('#s-name', root).value.trim() || 'Walk-in', day = days[st.d];
+      listPush('scans', { date: day.toISOString(), day: fmtD(day), time: hm(st.t), mins: st.t, name: name, member: !!S.member, created: new Date().toISOString() });
+      drawMyScans();
+      JWC.modal('<h3>Scan booked</h3><p style="margin:0 0 8px">' + esc(name) + ' · ' + esc(fmtD(day)) + ' at ' + hm(st.t) + ' · 2201 Brimley Rd, Unit 1.</p><p style="margin:0;color:#5A6377;font-size:13.5px">' + (S.member ? 'Included with your plan.' : '$25, paid at the counter.') + ' Your coach uses the result to adjust your grams. Demo: nothing is sent.</p><div class="jwc-note"><span class="jwc-dot"></span><span>Switch to JW team view to see it on the scan list.</span></div><div style="margin-top:14px"><button type="button" class="jwc-btn jwc-btn-dark jwc-btn-block" data-close>Done</button></div>');
+      JWC.toast('Demo scan booked: ' + fmtD(day) + ' ' + hm(st.t));
+    });
+  });
+}
+function drawMyScans() { const a = listGet('scans'); $('#my-scans').innerHTML = a.length ? '<p class="text-[13.5px] font-semibold">Your demo bookings</p><ul class="mt-1 space-y-1">' + a.slice(0, 3).map(s => '<li class="mb-chip !bg-white">' + esc(s.day) + ' · ' + esc(s.time) + ' · ' + esc(s.name) + '</li>').join('') + '</ul>' : ''; }
+
+/* ---------- free 15-minute call ---------- */
+const WHO = { desk: ['Coach desk', 'Food, orders, Instagram and your plan'], rd: ['Partner registered dietitian', 'Health conditions, medications, GLP-1'] };
+const whoName = k => (WHO[k] || WHO.desk)[0]; /* older demo calls on this device may carry a retired key */
+function openCall(o) {
+  o = o || {}; const st = { who: WHO[o.who] ? o.who : 'desk', s: null }, reason = o.reason || 'General question';
+  const days = openDays(5).filter(d => d.getDay() !== 6).slice(0, 3), times = [600, 750, 900, 1035];
+  JWC.modal('<h3>Book a free 15-minute call</h3><p style="margin:0;color:#5A6377;font-size:13.5px">A person at J&amp;W calls you. ' + (o.who === 'rd' ? 'Health questions go to our partner registered dietitian.' : 'Pick who suits your question.') + '</p>' +
+    '<div role="radiogroup" aria-label="Who should call you" style="margin-top:10px">' + Object.keys(WHO).map(k => '<label class="jwc-choice"><input type="radio" name="c-who" value="' + k + '"' + (st.who === k ? ' checked' : '') + '><span><b>' + WHO[k][0] + '</b><br><small style="color:#5A6377">' + WHO[k][1] + '</small></span></label>').join('') + '</div>' +
+    '<p class="mb-lab" style="margin-top:12px" id="c-s-l">Time</p><div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" role="group" aria-labelledby="c-s-l" id="c-slots">' + days.map(d => times.map(t => '<button type="button" class="mb-opt !min-h-[44px] !px-2 !text-[12.5px] !leading-tight" data-cs="' + d.toISOString() + '|' + t + '" aria-pressed="false">' + fmtD(d) + '<br>' + hm(t) + '</button>').join('')).join('') + '</div>' +
+    '<label class="jwc-field" style="margin-top:12px"><span>Phone number</span><input id="c-phone" type="tel" inputmode="tel" autocomplete="off" placeholder="(416) 555-0123"></label><p id="c-err" role="alert" style="margin:0 0 4px;font-size:13px;color:#8E2F1E"></p><p style="margin:0;font-size:12.5px;color:#5A6377">Demo: nothing is sent. We don\'t save your number.</p>' +
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px"><button type="button" class="jwc-btn jwc-btn-line" data-close>Back</button><button type="button" class="jwc-btn jwc-btn-dark" id="c-go" disabled>Request my call</button></div>', root => {
+    const go = $('#c-go', root);
+    $('#c-slots', root).addEventListener('click', e => { const b = e.target.closest('[data-cs]'); if (!b) return; st.s = b.dataset.cs; $$('[data-cs]', root).forEach(x => x.setAttribute('aria-pressed', String(x === b))); go.disabled = false; });
+    go.addEventListener('click', () => {
+      const ph = $('#c-phone', root).value.trim(), dg = ph.replace(/\D/g, '');
+      if (ph && (dg.length < 10 || dg.length > 11 || /[a-z]/i.test(ph))) { $('#c-err', root).textContent = 'Please check the phone number, e.g. (416) 555-0123. Or leave it blank for this demo.'; $('#c-phone', root).focus(); return; }
+      st.who = ($('[name=c-who]:checked', root) || { value: 'desk' }).value;
+      const [iso, t] = st.s.split('|'), when = fmtD(new Date(iso)) + ' at ' + hm(+t);
+      listPush('calls', { who: st.who, when: when, reason: reason, created: new Date().toISOString(), status: 'Call booked' });
+      JWC.modal('<h3>Call requested</h3><p style="margin:0 0 8px">' + WHO[st.who][0] + ' · ' + esc(when) + ' · 15 minutes, free.</p><p style="margin:0;color:#5A6377;font-size:13.5px">' + (st.who === 'rd' ? 'Please keep taking anything your doctor has set until you talk.' : 'Bring your questions about food, orders or your plan.') + ' Demo: nothing is sent.</p><div class="jwc-note"><span class="jwc-dot"></span><span>In JW team view this request shows under escalations.</span></div><div style="margin-top:14px"><button type="button" class="jwc-btn jwc-btn-dark jwc-btn-block" data-close>Done</button></div>');
+      JWC.toast('Demo call requested with ' + WHO[st.who][0]);
+    });
+  });
+}
+
+/* ---------- Instagram DM demo (Butler Concierge starts the coach) ---------- */
+const DM = [
+  ['me', 'PLAN'],
+  ['coach', "Hi! I'm the J&W Meal Butler coach, an AI. A person at J&W checks anything personal. What's the goal: lose fat, build muscle, maintain, or eat well on a GLP-1?"],
+  ['me', 'lose fat. 86 kg, 6 ft, 35, gym 4x a week'],
+  ['coach', 'Got it. About 2,270 calories and 155 g of protein a day (estimate). Lunch and dinner, or the full day?'],
+  ['me', 'lunch and dinner. no fish pls'],
+  ['coach', 'Done: 10 meals, no fish, about 55 g of protein each. $139 a week on the Personal Macro Plan (Plus), or about $105 à la carte in our standard sizes.', true]
+];
+let dmTimer = [];
+function loadMarc() {
+  S.prof = copy(MARC); S.t = targets(MARC); S.week = buildWeek(MARC); S.source = 'dm'; S.day = 0; S.pmp = { mode: 'ld', size: null };
+  S.label.name = 'Marc L.'; if (S.label.meal === 'b') S.label.meal = 'l'; S.draft = copy(MARC); S.dt = copy(S.t); S.dtEdited = false; S.step = 8;
+  save(); drawIntake(); drawPlanner(); drawPlans(); drawLabelForm(); drawLabelOut(false); scrollTo('week');
+  JWC.toast("Marc's week loaded: 2,270 kcal · 155 g protein (est.), no fish");
+}
+function playDM() {
+  dmTimer.forEach(clearTimeout); dmTimer = [];
+  const th = $('#dm-thread'); th.innerHTML = '<p class="text-center text-[11.5px] text-[#666]">Today · demo thread</p>';
+  const add = (who, text, btn) => {
+    const m = document.createElement('div'); m.className = 'mb-dm ' + (who === 'me' ? 'me' : 'coach'); m.textContent = text;
+    if (btn) { const b = document.createElement('button'); b.type = 'button'; b.textContent = 'Open my week'; b.addEventListener('click', loadMarc); m.appendChild(document.createElement('br')); m.appendChild(b); }
+    th.appendChild(m); th.scrollTop = th.scrollHeight;
+  };
+  if (RM) { DM.forEach(x => add(x[0], x[1], x[2])); return; }
+  let t = 300;
+  DM.forEach(x => {
+    if (x[0] === 'coach') {
+      dmTimer.push(setTimeout(() => { const ty = document.createElement('div'); ty.className = 'mb-dm typing'; ty.textContent = 'typing…'; ty.id = 'dm-typing'; th.appendChild(ty); th.scrollTop = th.scrollHeight; }, t));
+      t += 1100;
+      dmTimer.push(setTimeout(() => { const ty = $('#dm-typing'); if (ty) ty.remove(); add(x[0], x[1], x[2]); }, t));
+    } else { dmTimer.push(setTimeout(() => add(x[0], x[1]), t)); }
+    t += 900;
+  });
+}
+$('#dm-play').addEventListener('click', () => { $('#dm-play').textContent = 'Replay the DM demo'; playDM(); });
+
+/* ---------- FAQ ---------- */
+const FAQ = [
+  ['Is the coach a real person?', 'The coach is an AI that knows our menu, prices and delivery routes. A person at J&W approves every Personal Macro Plan and every weekly change before it reaches you. Medical questions always go to a person.'],
+  ['How accurate are the macros?', "For now they're estimates from standard nutrition data. Before launch, J&W's recipes and cooked weights get analyzed and reviewed by a registered dietitian, and our top sellers get lab-tested (concept). Each portion is weighed, so the grams on your label are real."],
+  ['Can I use it on a GLP-1 medication?', "Yes. The coach plans smaller portions with more protein and fibre. Keep your prescriber involved; we don't change medical advice."],
+  ["What if I don't like something?", 'Tell the coach. It swaps like for like and shows you the price and macro change before you agree.'],
+  ['Can I skip a week?', 'Yes. Skip or pause any week before the Sunday cut-off. No contract, no cancellation fee.'],
+  ['How does delivery work?', 'Your plan comes frozen on your usual J&W route day at the normal route fee, or pick it up free at 2201 Brimley Rd.'],
+  ['What happens to my data?', 'We keep your answers to plan your food and nothing else. We never use your weight or health details for ads. Delete them any time.']
+];
+$('#faq-list').innerHTML = FAQ.map((f, i) => '<div class="bg-white rounded-[18px]"><h3><button type="button" aria-expanded="false" aria-controls="faq-' + i + '" id="faq-b-' + i + '">' + esc(f[0]) + '<i aria-hidden="true"></i></button></h3><div class="ans" id="faq-' + i + '" role="region" aria-labelledby="faq-b-' + i + '" hidden>' + esc(f[1]) + '</div></div>').join('');
+$('#faq-list').addEventListener('click', e => { const b = e.target.closest('button[aria-controls]'); if (!b) return; const on = b.getAttribute('aria-expanded') !== 'true'; b.setAttribute('aria-expanded', String(on)); document.getElementById(b.getAttribute('aria-controls')).hidden = !on; });
+
+/* ---------- mobile summary sheet ---------- */
+const sheet = $('#sheet'), sheetBtn = $('#sheet-toggle');
+function setSheet(open) { $('#sheet-body').hidden = !open; sheetBtn.setAttribute('aria-expanded', String(open)); sheetBtn.textContent = open ? 'Close' : 'Summary'; document.body.classList.toggle('mb-sheet-open', open); }
+sheetBtn.addEventListener('click', () => setSheet($('#sheet-body').hidden));
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(es => es.forEach(en => {
+    const on = en.isIntersecting && document.body.dataset.view !== 'team';
+    sheet.classList.toggle('on', on); document.body.classList.toggle('mb-sheet-on', on); if (!on) setSheet(false);
+  }), { rootMargin: '-35% 0px -35% 0px' }).observe($('#week'));
+}
+
+/* ---------- delegated actions ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-addweek],[data-makeplan],[data-budgetswap],[data-scan],[data-call],[data-swap],[data-oatbar]');
+  if (!t) return;
+  if (t.hasAttribute('data-addweek')) addWeekToCart();
+  else if (t.hasAttribute('data-makeplan')) { setSheet(false); openJoin(); }
+  else if (t.hasAttribute('data-budgetswap')) budgetSwap();
+  else if (t.hasAttribute('data-scan')) openScan();
+  else if (t.hasAttribute('data-call')) openCall({ who: t.dataset.who || 'desk', reason: t.dataset.reason || 'Asked for a person (FAQ card)' });
+  else if (t.hasAttribute('data-swap')) openSwap(t.dataset.swap);
+  else if (t.hasAttribute('data-oatbar')) { const p = P('oatmeal-breakfast-bars-baked-3oz-cooked-portioned-copy'); JWC.cart.add({ id: p.id, name: p.name, variant: p.variants[0].label, price: p.variants[0].price, qty: 1, img: JWC.img(p, 200), note: DAYS[S.day] + ' top-up' }); }
+});
+
+/* ---------- chat: spec rules, compiled with new RegExp(src, 'i') ---------- */
+function logChatEsc(reason) { listPush('esc', { when: new Date().toISOString(), src: 'Site chat (this demo)', reason: reason, status: 'Holding reply sent' }); }
+const RULES = [
+  { src: 'diabet|insulin|metformin|pregnan|breastfeed|kidney|renal|celiac|allerg|anaphyla|eating disorder|anorexi|bulimi|heart (condition|disease)|blood pressure',
+    reply: "Thanks for telling me. That one needs a person, not an AI. I'll pass it to our partner registered dietitian, who can call you within one business day for a free 15-minute chat. Please don't change anything your doctor has set until you've talked to them.",
+    action: { label: 'Book a free 15-minute call', run: () => openCall({ who: 'rd', reason: 'Chat: health condition' }) }, esc: 'Mentions a health condition' },
+  { src: 'glp|ozempic|wegovy|mounjaro|zepbound|saxenda|semaglutide|tirzepatide|appetite',
+    reply: "Plenty of people on a GLP-1 eat this way: when your appetite drops, protein per bite matters most. I'd plan four smaller meals, like 3oz Chicken Breast Tenders ($3.14) with 6oz broccoli, or a Lemon Chicken Rice Soup ($8.99, about 16 g protein, est.), and keep fibre up with Brussels sprouts and green beans. Please keep your prescriber in the loop. Want a free 15-minute call with our partner dietitian?",
+    action: { label: 'Book a free dietitian call', run: () => openCall({ who: 'rd', reason: 'Chat: GLP-1 medication question' }) } },
+  { src: 'how much.*(plan|week|coach)|price|cost|\\$|per week|afford',
+    reply: 'The coach is free. The Personal Macro Plan (concept prices, built from our own per-ounce prices) is $119, $139 or $159 a week for lunch and dinner, or $169, $189 or $219 for the full day, sized by your daily protein. Delivery is the normal route fee, or pick up free at Brimley Rd.',
+    action: { label: 'See the plans', run: () => { JWC.chat.close(); scrollTo('plans'); } } },
+  { src: '\\blabel|my name|\\bweigh(ed|ing)?\\b|to the gram|exact (grams|portion)',
+    reply: "On the Personal Macro Plan each portion is weighed to your grams, not our standard 4oz or 6oz. If your Monday lunch calls for 175 g of Chicken Breast Souvlaki, that's what goes in, give or take 5 g. Each meal gets a label with your name, the day, the grams and the macros (estimates).",
+    action: { label: 'Print a sample label', run: () => { JWC.chat.close(); scrollTo('label'); } } },
+  { src: '\\bscan|inbody|body ?fat (scan|test|measure)|body comp|muscle mass',
+    reply: "InBody scans are part of the concept: five minutes at 2201 Brimley Rd, Monday to Friday 9 to 6 or Saturday 10 to 4. They'd be included every four weeks on the Personal Macro Plan and $25 otherwise. Your coach uses the result to adjust your grams.",
+    action: { label: 'Book a scan', run: () => openScan() } },
+  { src: "\\bswap|don'?t (like|eat)|\\bhate\\b|\\binstead\\b|\\bno (fish|beef|pork|rice|eggs?)\\b",
+    reply: 'Easy. Tell me what you skip and I\'ll swap like for like and show you the change first. Example: Salmon Fillet 6oz ($10.85) to Haddock Loin 6oz ($8.25) saves $2.60 and about 20 g of fat, for 3 g less protein (est.). Tap Swap on any meal in your week to try it.' },
+  { src: '\\b(skip|pause|cancel|holiday|vacation|away|contract)',
+    reply: "Skip or pause any week before the Sunday cut-off, in your plan or just by telling me. No contract and no cancellation fee. Your grams and label stay saved for when you're back." },
+  { src: 'real person|\\ba person\\b|human|coach desk|staff|dietitian|nutritionist|call me|talk to',
+    reply: 'Happy to get you a person. Our coach desk can help with food, orders and your plan, and our partner registered dietitian handles health conditions and medications. The first 15-minute call is free. Use Book a free call on this page, or phone (416) 298-1350.',
+    action: { label: 'Book a free call', run: () => openCall({ who: 'desk', reason: 'Chat: asked for a person' }) } },
+  { src: 'instagram|\\bdm\\b|\\big\\b|\\binsta\\b',
+    reply: "DM the word PLAN to @jwfoods on Instagram. It's the same coach with the same numbers, and when your week is ready it sends a link that opens your plan on jwfoods.com.",
+    action: { label: 'Play the DM demo', run: () => { JWC.chat.close(); scrollTo('ig'); playDM(); } } },
+  { src: 'cut-? ?off|deadline|order by|last day to order',
+    reply: "Order by Sunday for next week's route delivery. The same Sunday cut-off applies to plan changes, skips and pauses, so nothing is cooked for you until you've had a chance to change it." },
+  { src: '\\b(lose|losing|cut(?![- ]?off)|cutting|fat loss|build|bulk(ing)?|gain|muscle|how much protein|calories|macros?|tdee)\\b',
+    reply: 'I start with your resting burn (the Mifflin-St Jeor formula), adjust for training days, then set the goal: about 20% under to lose fat, 10% over to build. Protein lands around 1.6 to 2.0 g per kg. Example: a 78 kg woman training 3 days gets about 1,610 kcal and 140 g of protein a day (estimate). Tap Start my plan to get yours in two minutes.',
+    action: { label: 'Start my plan', run: () => { JWC.chat.close(); scrollTo('numbers'); } } }
+];
+const CHAT_RULES = RULES.map(r => ({ match: new RegExp(r.src, 'i'), reply: () => { if (r.esc) logChatEsc(r.esc); return r.action ? { text: r.reply, action: r.action } : r.reply; } }));
+const CHECKOUT = { title: 'Your coach-built week', note: 'Coach-built week · Meal Butler AI Coach' };
+
+/* =================== JW TEAM VIEW (coach desk, sample week + live demo data) =================== */
+const DRAFTS = [
+  { id: 'replan', type: 'Re-plan after scan', who: 'Maria S.', agent: AGENTS.macro, text: '−1.6 kg in 4 weeks, body fat −1.1 points. Keep 1,610 kcal and 140 g protein. Thursday dinner Beef Flank Steak 195 g → Haddock Loin 255 g (−14 g fat).' },
+  { id: 'dev', type: 'New plan', who: 'Dev P.', agent: AGENTS.macro, text: '3,250 kcal, 185 g protein, Full Day · Performance $219. Covers his protein and about half his calories; suggest a daily Chicken Souvlaki Wrap ($5.99).' },
+  { id: 'esc', type: 'Escalation', who: 'Instagram DM (name hidden)', agent: AGENTS.nutrition, text: 'Mentions type 2 diabetes and metformin. Holding reply drafted; route to partner dietitian.', esc: true },
+  { id: 'dm', type: 'DM reply', who: 'Instagram DM · Whitby', agent: AGENTS.concierge, text: 'Yes, Whitby is on our Tuesday route ($20, $100 minimum). Order by Sunday.' },
+  { id: 'stock', type: 'Stock swap', who: '4 plans', agent: AGENTS.production, text: 'Honey Garlic Salmon short until Thursday; swap 4 plans to Salmon Fillet 6oz (−$0.15).' }
+];
+const ESC = [
+  ['Medical', 'Instagram DM (name hidden)', 'Type 2 diabetes and metformin', 'Partner dietitian'],
+  ['Medical', 'Site intake', 'Kidney disease ticked at the safety check', 'Partner dietitian · call Tue 10:00'],
+  ['Medical', 'Site chat', 'Pregnant, asking about protein', 'Partner dietitian'],
+  ['Allergy', 'Site intake', 'Shellfish allergy: confirm the allergen sheet', 'Meal Butler lead'],
+  ['Allergy', 'Instagram DM', 'Sesame: asks about the Teriyaki marinade', 'Meal Butler lead'],
+  ['Age check', 'Site intake', 'Under 18 ticked; parent call offered', 'Coach desk'],
+  ['Complaint', 'Instagram DM', 'Thursday delivery late to Oakville', 'Store lead']
+];
+const CLIENTS = [
+  ['Maria S.', 'Full Day Plus', '1,610 / 140', 'Wed GTA 2 · Scarborough', 'Mar 13', '−1.6 kg / 4 wk', 'wait', 'Re-plan waiting', 'replan'],
+  ['Dev P.', 'Full Day Performance', '3,250 / 185', 'Fri GTA 4 · Vaughan', 'new', '–', 'wait', 'Plan waiting', 'dev'],
+  ['Anita R.', 'Lunch & Dinner, GLP-1 mode', '1,580 / 135', 'Tue GTA 1 · Ajax', 'Mar 6', '−2.1 kg, muscle steady', 'ok', 'Active'],
+  ['Kevin T.', 'Lunch & Dinner Plus', '2,630 / 130', 'Sat pickup', 'Feb 27', '+0.4 kg', 'flag', 'Scan due'],
+  ['Priya N.', 'Full Day Regular', '1,750 / 110', 'Wed GTA 2 · Mississauga', 'Mar 10', '−0.9 kg', 'pause', 'Paused to Mar 29'],
+  ['Marc L.', 'Lunch & Dinner Plus', '2,270 / 155', 'Thu GTA 3 · Oakville', 'Mar 1', '−1.2 kg', 'ok', 'Active']
+];
+const PACK = {
+  Proteins: [['Chicken Breast Souvlaki', 72, 168], ['Greek Lemon Chicken Breast', 44, 165], ['Roasted Turkey Breast', 34, 170], ['Salmon Fillet', 30, 215], ['Beef Flank Steak', 28, 185], ['Teriyaki Chicken Breast', 28, 165], ['Haddock Loin', 24, 240]],
+  Carbs: [['White Basmati Rice', 84], ['Sweet Potato Chunks', 62], ['Quinoa', 36], ['Brown Basmati Rice', 30], ['Greek Lemon Potatoes', 28], ['Baked Potato', 20]],
+  Veg: [['Broccoli', 80], ['Green Beans', 70], ['Asparagus', 50], ['Brussels Sprouts', 30], ['Spinach', 30]],
+  Breakfast: [['Egg White Bites, Spinach & Feta', 70], ['Steel Cut Oats', 70]]
+};
+const ROUTESPLIT = [['Tue GTA 1', 4, 'Tuesday'], ['Wed GTA 2', 10, 'Wednesday'], ['Thu GTA 3', 3, 'Thursday'], ['Fri GTA 4', 5, 'Friday'], ['Sat pickup', 4, '']];
+const SCANS = [['10:00 am', 'Kevin T.', 'member'], ['10:15 am', 'Walk-in, first scan', '$25'], ['10:30 am', 'Maria S.', 'member'], ['11:00 am', 'Anita R.', 'member'], ['11:15 am', 'Walk-in', '$25']];
+const FUNNEL = [['Conversations', 186, 112, 74], ['Got their numbers', 104, 66, 38], ['Built a week', 61, 40, 21], ['Started a cart or plan', 27, 18, 9], ['Paid: 19 carts + 3 plans', 22, 15, 7]];
+let clientFilter = 'all', editing = null;
+const dstate = () => JWC.store.get('p6:drafts', {});
+const stChip = (cls, t) => '<span class="mb-st st-' + cls + '">' + esc(t) + '</span>';
+function demoOrders() { return JWC.orders().filter(o => o.proto === 6); }
+function isPlan(o) { return (o.items || []).some(i => String(i.id).indexOf('concept-pmp') === 0); }
+function liveDrafts() {
+  return demoOrders().filter(isPlan).map(o => { const it = o.items[0]; return { id: 'live-' + o.no, type: 'New plan · this demo', who: (o.note.split('label: ')[1] || 'Demo client'), agent: AGENTS.macro, text: it.name.replace(' (Concept)', '') + ' $' + it.price + '. ' + it.note + '. ' + o.note.split(' · ')[0] + ', ' + (o.city === 'Pickup' ? 'pickup at Brimley Rd' : (/day$/.test(o.day || '') ? o.day + ' route' : 'express delivery') + ' to ' + o.city) + '. Label name checked by ' + AGENTS.nutrition + '.', live: true }; });
+}
+function drawTeam() {
+  const ords = demoOrders(), plans = ords.filter(isPlan), carts = ords.filter(o => !isPlan(o)), scans = listGet('scans'), calls = listGet('calls'), escs = listGet('esc');
+  const ds = dstate(), all = liveDrafts().concat(DRAFTS), done = all.filter(d => ds[d.id] && (ds[d.id].st === 'approved' || ds[d.id].st === 'rejected')), wait = all.filter(d => done.indexOf(d) < 0);
+  const liveEsc = escs.length + calls.filter(c => c.who === 'rd').length;
+  /* KPIs */
+  const kpi = (l, v, s) => '<div class="mb-kpi"><small>' + l + '</small><b>' + v + '</b><span>' + s + '</span></div>';
+  $('#t-kpis').innerHTML = kpi('Conversations', '186', 'site 112 · Instagram 74') +
+    kpi('Carts built', String(19 + carts.length), JWC.money(2600 + carts.reduce((a, o) => a + o.subtotal, 0), 0) + ' in carts' + (carts.length ? ' · +' + carts.length + ' demo' : '')) +
+    kpi('Plan clients', String(29 + plans.length), (26 + (ds.dev && ds.dev.st === 'approved' ? 1 : 0) + plans.filter(o => ds['live-' + o.no] && ds['live-' + o.no].st === 'approved').length) + ' active · ' + (3 + plans.length) + ' new · 2 paused') +
+    kpi('Scans booked', String(12 + scans.length), scans.length ? '+' + scans.length + ' from this demo' : 'next 7 days') +
+    kpi('Escalated to a person', String(7 + liveEsc), '3 medical · 2 allergy · 1 age · 1 complaint' + (liveEsc ? ' · +' + liveEsc + ' demo' : '')) +
+    kpi('Reply time', '< 10 s', 'AI reply · human reply 3.2 h');
+  /* drafts */
+  const row = d => {
+    const s = ds[d.id] || {}, txt = s.text || d.text, fin = s.st === 'approved' || s.st === 'rejected';
+    return '<div class="mb-draft' + (d.esc ? ' esc' : '') + '" data-draft="' + esc(d.id) + '"><div class="flex flex-wrap items-center gap-2"><b class="text-[14.5px]">' + esc(d.type) + ' · ' + esc(d.who) + '</b><span class="mb-agent">' + esc(d.agent) + '</span>' + (d.live ? stChip('ok', 'Live') : '') +
+      (s.st === 'rd' ? stChip('plum', 'With dietitian') : '') + (s.st === 'approved' ? stChip('ok', 'Approved') : '') + (s.st === 'rejected' ? stChip('flag', 'Rejected') : '') + (s.text ? stChip('pause', 'Edited') : '') + '</div>' +
+      (editing === d.id ? '<label class="sr-only" for="ed-' + esc(d.id) + '">Edit draft</label><textarea class="mb-ta mt-2" id="ed-' + esc(d.id) + '">' + esc(txt) + '</textarea><div class="flex gap-2 mt-2"><button type="button" class="mb-btn mb-btn-navy mb-btn-xs" data-act="save">Save edit</button><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-act="cancel">Cancel</button></div>'
+        : '<p class="text-[14px] mt-2 leading-relaxed">“' + esc(txt) + '”</p>') +
+      (editing === d.id ? '' : fin ? '<div class="mt-2"><button type="button" class="mb-link text-[13.5px]" data-act="undo">Undo</button></div>' :
+        '<div class="flex flex-wrap gap-2 mt-3"><button type="button" class="mb-btn mb-btn-pine mb-btn-xs" data-act="approve">Approve</button><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-act="edit">Edit</button><button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-act="rd"' + (s.st === 'rd' ? ' disabled' : '') + '>Ask dietitian</button><button type="button" class="mb-btn mb-btn-line mb-btn-xs !text-brick" data-act="reject">Reject</button></div>') + '</div>';
+  };
+  $('#t-drafts').innerHTML = '<div class="flex flex-wrap items-center justify-between gap-2"><h3>Waiting for your OK</h3><span class="mb-chip">' + wait.length + ' waiting · ' + done.length + ' done today</span></div><p class="text-[13.5px] text-slate mt-1">AI drafts. Nothing reaches a client until a person on the coach desk or the partner dietitian approves it.</p>' +
+    '<div class="space-y-3 mt-4">' + (wait.length ? wait.map(row).join('') : '<p class="text-slate">All clear. Every draft is handled.</p>') + '</div>' +
+    (done.length ? '<h4 class="font-display font-bold text-[17px] mt-6">Done today</h4><div class="space-y-3 mt-2 opacity-90">' + done.map(row).join('') + '</div>' : '');
+  /* live from this demo */
+  $('#t-live').innerHTML = '<h3>Live from this demo</h3><p class="text-[13px] text-slate mt-1">Orders placed on this page, saved on this device.</p>' +
+    (ords.length ? '<ul class="mt-3 space-y-2">' + ords.slice(0, 8).map(o => '<li class="rounded-2xl p-3 bg-[#F0F7F2]"><div class="flex justify-between gap-2"><b class="mono text-[13px]">' + esc(o.no) + '</b><b class="mono text-[13px]">' + JWC.money(o.total, 2) + '</b></div><p class="text-[13px] mt-1">' + (isPlan(o) ? esc(o.items[0].name) : 'Coach-built week · ' + o.items.reduce((a, i) => a + i.qty, 0) + ' portions') + '</p><p class="text-[12px] text-slate mt-0.5">' + esc(o.city === 'Pickup' ? 'Pickup · Brimley Rd' : o.day + ' · ' + o.city) + ' · ' + new Date(o.when).toLocaleTimeString('en-CA', { hour: 'numeric', minute: '2-digit' }) + '</p></li>').join('') + '</ul>'
+      : '<p class="mt-3 text-[14px] rounded-2xl p-3 bg-[#F4F7FB]">No demo orders yet. In customer view, build a week and place a demo order, or join the plan.</p>') +
+    '<p class="text-[12.5px] text-slate mt-3">' + scans.length + ' scan' + (scans.length === 1 ? '' : 's') + ' · ' + calls.length + ' call request' + (calls.length === 1 ? '' : 's') + ' from this demo</p>';
+  /* economics */
+  const livePlan = plans.reduce((a, o) => a + o.subtotal, 0);
+  $('#t-econ').innerHTML = '<div class="flex justify-between items-center gap-2"><h3>Plan economics</h3><span class="mb-sample">Sample</span></div><p class="mono text-[14px] mt-3 leading-relaxed">26 active × $170 = <b>$4,420</b> this week<br>est. gross profit <b>$1,990</b><br>coach desk 5 h · pack time 2.3 h</p>' + (livePlan ? '<p class="text-[13px] mt-2 text-pine font-semibold">+ ' + JWC.money(livePlan, 0) + ' a week from plans joined in this demo</p>' : '') + '<p class="text-[12px] text-slate mt-2">Sample operating numbers, not J&amp;W data.</p>';
+  /* escalations */
+  const handled = JWC.store.get('p6:esch', {});
+  const escType = r => /pregnan|diabet|kidney|eating disorder|health condition/i.test(r) ? ['Medical', 'Partner dietitian'] : /allerg/i.test(r) ? ['Allergy', 'Meal Butler lead'] : /under 18/i.test(r) ? ['Age check', 'Coach desk'] : ['Medical', 'Partner dietitian'];
+  const liveRows = escs.map((e, i) => ['live-e' + i, escType(e.reason)[0], e.src, e.reason, escType(e.reason)[1], e.status, true]).concat(calls.map((c, i) => ['live-c' + i, c.who === 'rd' ? 'Medical' : 'Call', 'Call request (this demo)', c.reason + ' · ' + c.when, whoName(c.who), c.status, true]));
+  const rows = liveRows.concat(ESC.map((e, i) => ['s' + i, e[0], e[1], e[2], e[3], i === 1 ? 'Call booked' : 'Waiting', false]));
+  $('#t-esc').innerHTML = '<div class="flex flex-wrap justify-between items-center gap-2"><h3>Escalated to a person</h3><span class="mb-agent">' + esc(AGENTS.nutrition) + ' · safety triage</span></div><p class="text-[13px] text-slate mt-1">Medical, allergy, age and complaint messages stop the AI and wait for a person.</p>' +
+    '<div class="jwc-scroll-x mt-3"><table class="mb-tt"><thead><tr><th>Type</th><th>From</th><th>Summary</th><th>Routed to</th><th>Status</th></tr></thead><tbody>' + rows.map(r => '<tr' + (r[6] ? ' class="new"' : '') + '><td class="whitespace-nowrap">' + stChip(r[1] === 'Medical' ? 'flag' : r[1] === 'Complaint' ? 'wait' : 'plum', r[1]) + '</td><td>' + esc(r[2]) + '</td><td class="min-w-[200px]">' + esc(r[3]) + '</td><td>' + esc(r[4]) + '</td><td>' + (handled[r[0]] ? stChip('ok', 'Handled') : '<button type="button" class="mb-btn mb-btn-line mb-btn-xs" data-esc="' + r[0] + '">Mark handled</button><br><small class="text-slate">' + esc(r[5]) + '</small>') + '</td></tr>').join('') + '</tbody></table></div>';
+  /* scan list */
+  const arrived = JWC.store.get('p6:arr', {});
+  const srows = SCANS.map((s, i) => ['s' + i, s[0], s[1], s[2], false]).concat(scans.slice().reverse().map((s, i) => ['d' + i, s.day + ' ' + s.time, s.name, s.member ? 'member' : '$25', true]));
+  $('#t-scanlist').innerHTML = '<div class="flex justify-between items-center gap-2"><h3>Saturday scan list</h3><span class="mb-sample">Sample + demo</span></div><p class="text-[13px] text-slate mt-1">InBody at Brimley Rd · bookings from customer view are added below.</p><ul class="mt-3 divide-y divide-[#EEF2F7]">' +
+    srows.map(r => '<li class="flex items-center justify-between gap-2 py-2.5' + (r[4] ? ' bg-[#F0F7F2] -mx-2 px-2 rounded-xl' : '') + '"><div class="min-w-0"><b class="mono text-[13px]">' + esc(r[1]) + '</b> · <span class="text-[14px]">' + esc(r[2]) + '</span> ' + stChip(r[3] === 'member' ? 'plum' : 'pause', r[3]) + (r[4] ? ' ' + stChip('ok', 'Demo') : '') + '</div><button type="button" class="mb-btn mb-btn-xs ' + (arrived[r[0]] ? 'mb-btn-pine' : 'mb-btn-line') + '" data-arr="' + r[0] + '" aria-pressed="' + !!arrived[r[0]] + '">' + (arrived[r[0]] ? 'Checked in' : 'Check in') + '</button></li>').join('') + '</ul>';
+  drawPack(plans); drawClients(plans, ds); drawFunnel(); drawAgents(ords, scans, escs);
+}
+function memberWeekCounts() {
+  if (!S.member) return {};
+  const c = {}; (S.member.week || S.week).forEach(d => ['l', 'd'].forEach(sl => { const n = P(d[sl].p).name; c[n] = (c[n] || 0) + 1; }));
+  return c;
+}
+function drawPack(plans) {
+  const meals = plans.reduce((a, o) => a + (/Full Day/.test(o.items[0].name) ? 15 : 10), 0), ds = dstate(), mc = memberWeekCounts();
+  const onRoute = (o, r) => r[2] ? o.day === r[2] : o.city === 'Pickup', express = plans.filter(o => o.city !== 'Pickup' && !/day$/.test(o.day || '')).length;
+  const split = ROUTESPLIT.map(r => { const n = plans.filter(o => onRoute(o, r)).length; return [r[0], r[1] + n, n]; }).concat(express ? [['Express', express, express]] : []);
+  const prot = PACK.Proteins.map(p => [p[0], p[1] + (mc[p[0]] || 0), p[2], mc[p[0]] || 0]);
+  Object.keys(mc).forEach(n => { if (!prot.some(p => p[0] === n)) prot.push([n, mc[n], 165, mc[n]]); });
+  const tbl = (title, rows, head) => '<div class="min-w-0"><h4 class="font-semibold text-[14px] mb-1">' + title + '</h4><div class="jwc-scroll-x"><table class="mb-tt"><thead><tr>' + head.map(h => '<th>' + h + '</th>').join('') + '</tr></thead><tbody>' + rows + '</tbody></table></div></div>';
+  $('#t-pack').innerHTML = '<div class="flex flex-wrap justify-between items-start gap-3"><div><h3>Saturday weigh-and-pack · routes Mar 23–27</h3><p class="text-[13.5px] text-slate mt-1">' + (26 + plans.length) + ' active clients · ' + (330 + meals) + ' personal meals · ' + (330 + meals) + ' labels · ~' + (2.3 + meals * 0.007).toFixed(1) + ' h extra pack time' + (plans.length ? ' <b class="text-pine">(+' + meals + ' from this demo)</b>' : '') + '</p></div><div class="flex flex-wrap gap-2 items-center"><span class="mb-sample">Sample</span><span class="mb-agent">' + esc(AGENTS.production) + '</span></div></div>' +
+    (ds.stock && ds.stock.st === 'approved' ? '<p class="mt-3 mb-ok">✓ Stock swap approved: 4 plans move from Honey Garlic Salmon to Salmon Fillet 6oz</p>' : '') +
+    (ds.replan && ds.replan.st === 'approved' ? '<p class="mt-2 mb-ok">✓ Maria S. re-plan approved: Thursday dinner is now Haddock Loin 255 g</p>' : '') +
+    '<div class="grid md:grid-cols-2 xl:grid-cols-[2fr_1fr_1fr_1fr] gap-5 mt-4">' +
+    tbl('Proteins', prot.map(p => '<tr' + (p[3] ? ' class="new"' : '') + '><td>' + esc(p[0]) + (p[3] ? ' <small class="text-pine font-semibold">+' + p[3] + ' demo</small>' : '') + '</td><td class="n">' + p[1] + '</td><td class="n">' + p[2] + ' g</td><td class="n">' + (p[1] * p[2] / 1000).toFixed(1) + ' kg</td></tr>').join(''), ['Item', 'Portions', 'Avg', 'Total']) +
+    tbl('Carbs', PACK.Carbs.map(p => '<tr><td>' + esc(p[0]) + '</td><td class="n">' + p[1] + '</td></tr>').join(''), ['Item', 'Portions']) +
+    tbl('Veg', PACK.Veg.map(p => '<tr><td>' + esc(p[0]) + '</td><td class="n">' + p[1] + '</td></tr>').join(''), ['Item', 'Portions']) +
+    tbl('Breakfast', PACK.Breakfast.map(p => '<tr><td>' + esc(p[0]) + '</td><td class="n">' + p[1] + '</td></tr>').join(''), ['Item', 'Portions']) + '</div>' +
+    '<h4 class="font-semibold text-[14px] mt-6">Route split (clients per route day)</h4><div class="space-y-2 mt-2">' + split.map(r => '<div class="grid grid-cols-[96px_minmax(0,1fr)_64px] gap-3 items-center text-[13.5px]"><span>' + r[0] + '</span><div class="mb-hbar"><i style="width:' + (r[1] / 12 * 100) + '%;background:#154D8E"></i></div><span class="mono">' + r[1] + (r[2] ? ' <b class="text-pine">+' + r[2] + '</b>' : '') + '</span></div>').join('') + '</div>' +
+    '<div class="flex flex-wrap items-center justify-between gap-3 mt-5"><p class="text-[13px] text-slate">Drafted by the ' + esc(AGENTS.production) + ' at the Sunday cut-off. Kitchen lead signs off.</p><button type="button" class="mb-btn mb-btn-night mb-btn-sm" id="t-print">Print label run (demo)</button></div>';
+}
+function drawClients(plans, ds) {
+  const rows = plans.map(o => { const n = (o.note.split('label: ')[1] || 'Demo client'); return [n, o.items[0].name.replace('Personal Macro Plan · ', '').replace(' (Concept)', ''), o.items[0].note.split(' · ').slice(0, 2).join(' / ').replace(' kcal', '').replace(' g protein', ''), o.city === 'Pickup' ? 'Pickup · Brimley Rd' : (/day$/.test(o.day || '') ? o.day : 'Express') + ' · ' + o.city, 'new', '–', 'wait', 'Plan waiting', 'live-' + o.no, true]; }).concat(CLIENTS);
+  const status = r => { const d = r[8] && ds[r[8]]; if (d && d.st === 'approved') return ['ok', r[8] === 'replan' ? 'Active · re-planned' : 'Active']; if (d && d.st === 'rd') return ['plum', 'With dietitian']; return [r[6], r[7]]; };
+  const keep = r => { const s = status(r)[0]; return clientFilter === 'all' || (clientFilter === 'wait' && s === 'wait') || (clientFilter === 'ok' && s === 'ok') || (clientFilter === 'flag' && s === 'flag') || (clientFilter === 'pause' && s === 'pause'); };
+  $('#t-clients').innerHTML = '<div class="flex flex-wrap justify-between items-center gap-3"><div><h3>Clients</h3><p class="text-[13px] text-slate mt-1">Personal Macro Plan roster · <span class="mb-sample">Sample data</span></p></div><div class="mb-seg" role="group" aria-label="Filter clients">' + [['all', 'All'], ['wait', 'Waiting'], ['ok', 'Active'], ['flag', 'Scan due'], ['pause', 'Paused']].map(f => '<button type="button" data-cf="' + f[0] + '" aria-pressed="' + (clientFilter === f[0]) + '">' + f[1] + '</button>').join('') + '</div></div>' +
+    '<div class="jwc-scroll-x mt-3"><table class="mb-tt"><thead><tr><th>Client</th><th>Plan</th><th>Daily target</th><th>Route</th><th>Last scan</th><th>Trend</th><th>Status</th></tr></thead><tbody>' +
+    rows.filter(keep).map(r => { const s = status(r); return '<tr' + (r[9] ? ' class="new"' : '') + '><td><b>' + esc(r[0]) + '</b>' + (r[9] ? ' ' + stChip('ok', 'Demo') : '') + '</td><td>' + esc(r[1]) + '</td><td class="n">' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td class="n">' + esc(r[4]) + '</td><td>' + esc(r[5]) + '</td><td>' + stChip(s[0], s[1]) + '</td></tr>'; }).join('') + '</tbody></table></div>';
+}
+function drawFunnel() {
+  $('#t-funnel').innerHTML = '<div class="flex justify-between items-center gap-2"><h3>Funnel this week</h3><span class="mb-sample">Sample</span></div><p class="text-[13px] text-slate mt-1 flex gap-4"><span class="inline-flex items-center gap-1.5"><i class="mb-dot" style="background:#154D8E"></i>Site</span><span class="inline-flex items-center gap-1.5"><i class="mb-dot" style="background:#5B5A8C"></i>Instagram</span></p>' +
+    '<div class="space-y-3 mt-3">' + FUNNEL.map((f, i) => '<div><div class="flex justify-between text-[13.5px] gap-2"><span>' + f[0] + '</span><span class="mono">' + f[1] + (i ? ' · ' + Math.round(f[1] / 186 * 100) + '%' : '') + '</span></div><div class="mb-hbar mt-1" role="img" aria-label="' + f[0] + ': ' + f[2] + ' from the site, ' + f[3] + ' from Instagram" style="width:' + Math.max(8, f[1] / 186 * 100) + '%"><i style="width:' + (f[2] / f[1] * 100) + '%;background:#154D8E"></i><i style="width:' + (f[3] / f[1] * 100) + '%;background:#5B5A8C"></i></div></div>').join('') + '</div>';
+}
+function drawAgents(ords, scans, escs) {
+  const ds = dstate(), macroWait = liveDrafts().concat(DRAFTS).filter(d => d.agent === AGENTS.macro && !(ds[d.id] && (ds[d.id].st === 'approved' || ds[d.id].st === 'rejected'))).length;
+  const items = [
+    [AGENTS.macro, 'Drafted 14 plans and re-plans; ' + macroWait + (macroWait === 1 ? ' waits' : ' wait') + ' for the coach desk' + (ords.length ? '. ' + ords.length + ' demo order' + (ords.length > 1 ? 's' : '') + ' placed from coach-built weeks and plans' : '') + '.'],
+    [AGENTS.nutrition, 'Flagged the Korean BBQ marinade for a sugar check. Safety triage stopped ' + (7 + escs.length) + ' plans for a person.'],
+    [AGENTS.concierge, 'Answered 61 of 74 Instagram DMs without help (82%); started the coach on 9 PLAN messages.'],
+    [AGENTS.reorder, 'Processed 2 pauses before the cut-off (Priya N. paused to Mar 29). No charge changed without a reply.'],
+    [AGENTS.production, 'Weigh-and-pack sheet ready Sun 11:59 pm; drafted the Honey Garlic Salmon stock swap.' + (scans.length ? ' Added ' + scans.length + ' demo scan' + (scans.length > 1 ? 's' : '') + ' to the list.' : '')]
+  ];
+  $('#t-agents').innerHTML = '<h3>Agent activity</h3><ul class="mt-3 space-y-3">' + items.map(a => '<li><span class="mb-agent">' + esc(a[0]) + '</span><p class="text-[14px] mt-1 leading-relaxed">' + esc(a[1]) + '</p></li>').join('') + '</ul><p class="text-[13px] text-slate mt-4 rounded-2xl bg-[#F4F7FB] p-3">Agents draft, sort and forecast. Nothing reaches a client until someone at J&amp;W approves it.</p>';
+}
+const team = $('[data-team]');
+team.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.id === 't-money') { JWC.openMoney(); return; }
+  if (b.id === 't-print') { JWC.modal('<h3>Label run · Saturday 7:00 am</h3><p style="margin:0 0 12px;color:#5A6377;font-size:13.5px">' + (330 + demoOrders().filter(isPlan).reduce((a, o) => a + (/Full Day/.test(o.items[0].name) ? 15 : 10), 0)) + ' labels queued for the thermal printer, sorted by route day. Preview of the first label. Demo: nothing prints.</p><div style="max-width:340px;margin:0 auto">' + labelHtml(S.member ? S.member.name : 'Maria S.', 1, 'l', false) + '</div><div style="margin-top:16px"><button type="button" class="jwc-btn jwc-btn-dark jwc-btn-block" data-close>Done</button></div>'); JWC.toast('Label run queued (demo)'); return; }
+  if (b.dataset.cf) { clientFilter = b.dataset.cf; drawTeam(); $('[data-cf="' + clientFilter + '"]').focus(); return; }
+  if (b.dataset.esc) { const h = JWC.store.get('p6:esch', {}); h[b.dataset.esc] = 1; JWC.store.set('p6:esch', h); JWC.toast('Escalation marked handled'); drawTeam(); const nx = $('#t-esc [data-esc]'); if (nx) nx.focus(); return; }
+  if (b.dataset.arr) { const a = JWC.store.get('p6:arr', {}); a[b.dataset.arr] = !a[b.dataset.arr]; JWC.store.set('p6:arr', a); drawTeam(); $('[data-arr="' + b.dataset.arr + '"]').focus(); return; }
+  const row = b.closest('[data-draft]'); if (!row || !b.dataset.act) return;
+  const id = row.dataset.draft, ds = dstate(), d = liveDrafts().concat(DRAFTS).filter(x => x.id === id)[0], s = ds[id] || {}, act = b.dataset.act;
+  if (act === 'edit') { editing = id; drawTeam(); const ta = $('#ed-' + id); if (ta) ta.focus(); return; }
+  if (act === 'cancel') { editing = null; drawTeam(); return; }
+  if (act === 'save') { s.text = $('#ed-' + id).value.trim() || d.text; editing = null; ds[id] = s; JWC.store.set('p6:drafts', ds); JWC.toast('Draft edited · ' + d.who); drawTeam(); return; }
+  if (act === 'approve') { s.st = 'approved'; JWC.toast('Approved: ' + d.type + ' · ' + d.who + (d.esc ? ' · holding reply sent, dietitian notified' : ' · sent')); }
+  if (act === 'reject') { s.st = 'rejected'; JWC.toast('Rejected: back to ' + d.agent + ' with your note'); }
+  if (act === 'rd') { s.st = 'rd'; JWC.toast('Sent to the partner dietitian · ' + d.who); }
+  if (act === 'undo') { delete s.st; JWC.toast('Moved back to waiting'); }
+  ds[id] = s; JWC.store.set('p6:drafts', ds); drawTeam();
+  const nb = $('[data-draft="' + id + '"] button:not([disabled])'); if (nb) nb.focus(); /* keep keyboard focus on the row that moved */
+});
+
+/* ---------- boot ---------- */
+JWC.init({
+  n: 6,
+  teamNote: "The coach desk: AI drafts waiting for approval, safety escalations, the plan roster, Saturday's weigh-and-pack sheet with route split, the scan list and live demo orders.",
+  checkout: CHECKOUT,
+  chat: {
+    name: 'Ask the Butler · Coach',
+    role: AGENTS.macro + ' + ' + AGENTS.concierge + ' · AI, a person checks anything personal',
+    fabLabel: 'Ask the Butler',
+    greeting: "Hi, I'm the Meal Butler coach. Tell me your goal and I'll size a week of J&W portions to your numbers. I'm an AI; a person at J&W and our partner dietitian check anything personal or medical.",
+    suggestions: ['Build me a week to lose fat', "I'm on Ozempic. What should I eat?", "What's on the personal label?", 'How much is the Personal Macro Plan?', 'Can I book an InBody scan?'],
+    rules: CHAT_RULES,
+    fallback: "I'm not sure about that one yet. I stick to what J&W has approved: Meal Butler portions, prices, delivery days and your plan. Try asking for a week to lose fat, the Personal Macro Plan price or the Sunday cut-off. For anything else, our coach desk can help at (416) 298-1350."
+  }
+});
+if (S.step === 8 && !S.dt) S.dt = targets(S.draft);
+drawIntake(); drawPlanner(); drawPlans(); drawLabelForm(); drawLabelOut(false); drawMyScans(); drawTeam();
+document.addEventListener('jwc:order', drawTeam);
+document.addEventListener('p6:data', drawTeam);
+document.addEventListener('jwc:view', e => { if (e.detail === 'team') drawTeam(); else { sheet.classList.remove('on'); document.body.classList.remove('mb-sheet-on'); } });
+})();
+</script>
+</body>
+</html>
